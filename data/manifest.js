@@ -27,5 +27,6 @@ EI.files = [
   'data/readings/a2-p1-22.js',
   'data/readings/a2-p1-23.js',
   'data/readings/a2-p1-24.js',
-  'data/readings/a2-p1-25.js'
+  'data/readings/a2-p1-25.js',
+  'data/readings/a2-p1-26.js'
 ];

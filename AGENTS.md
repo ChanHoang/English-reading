@@ -34,7 +34,7 @@ CONTENT_GUIDE.md, DECISIONS.md                    chuẩn nội dung, nhật ký
 ## Quy trình một bài đọc
 
 1. Đọc file việc (`tasks/a2-p1-18.md`) hoặc issue: mã bài (`a2-p1-18`…), chủ đề, chuyện gợi ý, **danh sách từ mục tiêu đã phân sẵn** (chỉ đổi từ khi bắt buộc, và nói rõ lý do trong PR).
-2. Tra nguồn trước khi viết. Nếu chuyện không đủ hai nguồn cho các chi tiết chính thì báo trong issue, đề xuất chuyện khác, không viết.
+2. Nếu cần đổi từ mục tiêu, chọn trong `node tools/unused-words.js A2 --content` (từ chưa dùng của cấp đó). Tra nguồn trước khi viết. Nếu chuyện không đủ hai nguồn cho các chi tiết chính thì báo trong issue, đề xuất chuyện khác, không viết.
 3. Viết theo `CONTENT_GUIDE.md` mục 1–4: A2 600–800 từ, mỗi từ mục tiêu ở ít nhất hai câu, từ vượt cấp có trong `gloss`, chính tả Mỹ, dịch từng câu, số câu Practice theo độ khó của bài (không theo con số cố định).
 4. Từ mục tiêu mới khai báo **ngay đầu file bài đọc** bằng ``EI.words('A2', `…`)``. Trong `data/manifest.js`, chỉ bỏ `//` ở dòng đã đặt sẵn cho bài của bạn.
 5. Chạy và sửa đến khi đạt:

@@ -192,3 +192,57 @@ Từ mới của lô nằm ở `data/words-a2-02.js` (201 từ, mỗi bài một
 4. **Repo GitHub cũ.** `ChanHoang/English-Improve` đã có một dự án khác: bản trước, kiến trúc khác (một file `index.html` 31 MB, 5.943 từ, có flashcard và quiz), khoảng 280 MB, tự đồng bộ từ Google Drive, đang chạy ở chanhoang.github.io/English-Improve. Bản này không đẩy lên đó. Ngày 12/11/2026, bạn tạo repo mới `ChanHoang/English-reading`; mã nguồn đã đẩy lên nhánh `main`. Lần chạy CI đầu tiên trên GitHub: Content checker và End-to-end test đều đạt; Publish site lỗi vì Pages chưa bật (Settings → Pages → Source: GitHub Actions).
 
 **Lô kế tiếp đề xuất (bài 18–26):** 3 lịch sử (2 châu Âu Trung cổ + 1 vùng khác), 2 khoa học hoặc cơ thể, và mỗi chủ đề thiên nhiên, vũ trụ, kỹ thuật, đời sống 1 bài. Ứng viên Trung cổ cần xác minh trước: người Viking ở Bắc Mỹ (L’Anse aux Meadows, vòng gỗ cho năm 1021); sách Domesday năm 1086; “tấm thảm” Bayeux thật ra là tranh thêu; mộ thuyền Sutton Hoo; các phiên tòa xử động vật thời Trung cổ (con lợn ở Falaise năm 1386). Ứng viên khác: kênh đào Suez, thứ tự QWERTY, con chó Laika năm 1957, trận lụt mật đường ở Boston năm 1919.
+
+## 12. Lô A2 · Pass 1, bài 18–26 (2026-11-13)
+
+**Yêu cầu:** Claude tự viết lô 18–26 như lô trước (không giao cho AI khác), theo quy định chủ đề mới.
+
+| n | Bài | Chủ đề · vùng · thời kỳ | Từ | Từ mục tiêu | Practice (hiểu/từ/ngữ pháp) | Ước tính | Số nguồn |
+|---|---|---|---|---|---|---|---|
+| 18 | The Viking Village and the Storm on the Sun | history · Canada · 1021 | 613 | 19 | 25 (8/12/5) | 27 phút | 6 |
+| 19 | The Slowest Drop in the World | science · Úc · 1927–nay | 604 | 13 | 23 (7/11/5) | 25 phút | 5 |
+| 20 | The Elephants Who Call Each Other by Name | nature · Kenya · 2024 | 610 | 15 | 23 (7/11/5) | 25 phút | 2 |
+| 21 | The Tapestry That Is Not a Tapestry | history · Anh / Pháp · 1066–nay | 606 | 11 | 23 (8/10/5) | 24 phút | 4 |
+| 22 | The First Webcam Watched a Coffee Pot | engineering · Anh · 1991–2001 | 612 | 12 | 23 (8/11/4) | 25 phút | 3 |
+| 23 | Two Peach Baskets and Thirteen Rules | life · Mỹ · 1891 | 600 | 10 | 24 (8/11/5) | 25 phút | 3 |
+| 24 | One Twin in Space, One Twin on Earth | body · Mỹ / vũ trụ · 2015–2019 | 605 | 7 | 21 (7/10/4) | 23 phút | 2 |
+| 25 | The King Who Gave His People an Alphabet | history · Hàn Quốc · 1443 | 604 | 9 | 22 (8/10/4) | 23 phút | 3 |
+| 26 | A Hello in Vietnamese, Far Out in Space | space · vũ trụ · 1977–nay | 601 | 7 | 21 (7/10/4) | 23 phút | 4 |
+
+Tỷ lệ chủ đề: lịch sử 3 (2 bài châu Âu Trung cổ: Viking, Bayeux), mỗi chủ đề khác 1. `CONTENT_GUIDE.md` sửa lại câu chữ cho khớp: lịch sử nhiều nhất nhưng không quá một phần ba lô. Câu cũ “hơn chủ đề đứng thứ hai tối đa 1 bài” mâu thuẫn với chính ví dụ của nó.
+
+**Quyết định mới:**
+
+1. **Đổi hai bài so với kế hoạch.** Kế hoạch đầu có hiệu ứng Mpemba và tháp nghiêng Pisa. Đã tra nguồn cho cả hai, nhưng bỏ vì mỗi bài chỉ dùng được 6–8 từ A2 còn lại. Thay bằng bài webcam đầu tiên (Cambridge 1991) và bài bóng rổ (Springfield 1891), vì hai chuyện này có nhiều từ đời sống hơn (screen, laptop, app, coach, score…).
+2. **Số từ mục tiêu giảm mạnh và còn thấp hơn chuẩn.** Lô này có 7–19 từ mỗi bài (tổng 103), tỷ lệ từ mới 1,2–3,1%, trong khi chuẩn là 23–26 từ và 3,5–5%. Nguyên nhân: 348 từ nội dung A2 còn lại gần như chỉ thuộc đời sống hằng ngày (nhà cửa, đồ ăn, công việc, đi lại, giải trí, sức khỏe, công nghệ). Chúng không có chỗ tự nhiên trong chuyện lịch sử hay khoa học, và tôi không thêm chi tiết thiếu nguồn để nhét từ. Bù lại, từ của các bài trước được đánh dấu lại nhiều hơn ở đúng nghĩa. Mỗi bài vẫn 600–613 từ và 21–25 câu luyện, nên vẫn xong trong một lần ngồi (23–27 phút).
+3. **Công cụ mới `tools/unused-words.js`:** liệt kê từ của một cấp chưa có trong bộ từ. `CONTENT_GUIDE.md` thêm bước 0: xem danh sách này trước khi chọn chuyện.
+4. **Từ mới khai báo ngay đầu file bài đọc** (quy ước của mục 11), áp dụng cho cả 9 bài.
+5. **Công cụ kiểm tra:** thêm `toward`, `percent`, `flown` vào bảng quy đổi.
+6. **Chuyện có câu tiếng Việt (bài 26).** Câu chào tiếng Việt trên Đĩa Vàng chỉ đặt ở dòng dịch tiếng Việt. Trong câu tiếng Anh chỉ dùng bản dịch tiếng Anh của NASA, để công cụ kiểm tra không coi các chữ tiếng Việt là từ vượt cấp.
+
+**Chưa xác minh hoặc chỉ một nguồn** (chi tiết trong `note` của từng bài):
+
+- **Bài 20 (voi) và bài 24 (cặp song sinh) chỉ có hai nguồn.** Không mở được bài gốc trên nature.com và trang của NASA vì các trang này chặn truy cập tự động.
+- **Một số nguồn là trang phổ thông.** Today I Found Out (bài 23) là nguồn duy nhất cho tỉ số 1–0, chuyện trèo thang và giá 4,3 triệu đô.
+- **Chi tiết chỉ có một nguồn, tiêu biểu:**
+  - Bài 21: 627 nhân vật và hơn 700 con vật; khoản bảo đảm 800 triệu bảng.
+  - Bài 22: người mua là Spiegel Online.
+  - Bài 25: lời Jeong In-ji về “một buổi sáng, mười ngày”.
+  - Bài 26: tên người nói tiếng Việt (Trần Trọng Hải) và chi tiết giọng miền Nam.
+- **Kiến thức phổ thông, không lấy từ nguồn đã đọc:**
+  - Bài 26: Voyager 1 cách Trái Đất hơn 20 tỷ km; tín hiệu radio mất gần một ngày.
+  - Bài 25: cách ghép khối chữ Hangul.
+  - Bài 19: một số loại nhựa biến dạng chậm khi chịu tải lâu.
+- **Bài 21 (Bayeux) có chi tiết hiện tại:** tấm thêu đang ở Bảo tàng Anh từ 10/9/2026 đến 11/7/2027. Sau tháng 7/2027, phần “Right now” của bài sẽ cần sửa.
+
+**Độ phủ A2 · Pass 1 sau lô này:** 26 bài, 498 từ mục tiêu không lặp. Đã phủ 496 trên 867 mục A2 của bảng tham chiếu (57%). Còn 371 mục, trong đó 348 là từ nội dung.
+
+**Đề xuất cho lô 27 trở đi:** chọn chuyện có thật thuộc đời sống hằng ngày để dùng hết các từ còn lại. Ứng viên cần xác minh trước:
+- William Addis làm bàn chải đánh răng trong tù (khoảng năm 1780): prison, brush.
+- Trận khói mù ở London năm 1952: pollution, smoke.
+- Chuyến bay chở khách thương mại đầu tiên năm 1914: airline, passenger.
+- Tàu điện ngầm London năm 1863: railway, platform, passenger.
+- Chiếc xe đẩy siêu thị năm 1937: store.
+- Bức ảnh “selfie” đầu tiên năm 1839: photograph.
+
+Lịch sử Trung cổ châu Âu vẫn chiếm khoảng một nửa số bài lịch sử, nhưng nên chọn chuyện có nhiều từ đời sống (ăn uống, chợ, nghề nghiệp thời Trung cổ).

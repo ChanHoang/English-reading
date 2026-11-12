@@ -24,7 +24,7 @@ CONTENT_GUIDE.md, DECISIONS.md                    chuẩn nội dung, nhật ký
 
 ## Ràng buộc cứng (vi phạm = PR bị trả lại)
 
-1. Bài đọc là **sự thật đã xác minh**. Mỗi chi tiết chính có ít nhất **hai nguồn đáng tin** mà bạn **đã mở và đọc trong phiên này**. Không viết từ trí nhớ. Không bịa chi tiết, số liệu, lời thoại, cảm xúc nhân vật hay nguồn. Giai thoại phải nói rõ là giai thoại.
+1. Bài đọc là **sự thật**. Dựa trên ít nhất **một nguồn đáng tin** mà bạn **đã mở và đọc trong phiên này** (có nguồn thứ hai càng tốt); kiến thức phổ thông dùng được. Không bịa chuyện, chi tiết, số liệu, lời thoại, cảm xúc nhân vật hay nguồn. Giai thoại phải nói rõ là giai thoại.
 2. Không ghi “đã xác minh” cho thứ chưa xác minh. Chi tiết một nguồn hoặc kiến thức phổ thông ghi vào trường `note` của bài.
 3. Không flashcard, không bài kiểm tra rời, không bảng xếp hạng, không đồng hồ đếm ngược. Mọi câu hỏi gắn với một bài đọc hoặc một chủ điểm ngữ pháp.
 4. Mỗi bài học xong trong một lần ngồi: bài A2 ước tính 25–32 phút (cột `lesson` của công cụ kiểm tra).
@@ -44,7 +44,7 @@ CONTENT_GUIDE.md, DECISIONS.md                    chuẩn nội dung, nhật ký
    node tools/check-content.js              # toàn bộ: 0 error
    ```
    Kiểm thử giao diện (CI cũng chạy): `python3 -m http.server 8765 &` rồi `python3 tools/e2e-test.py`.
-6. Mở PR theo mẫu (`.github/pull_request_template.md`). Bắt buộc có **bảng chi tiết → nguồn**: mỗi chi tiết chính, nguồn nào nói, trích ngắn câu gốc. Đây là thứ quản lý dùng để duyệt.
+6. Mở PR theo mẫu (`.github/pull_request_template.md`). Bắt buộc có **bảng chi tiết → nguồn**: mỗi chi tiết chính, nguồn nào nói (hoặc “kiến thức phổ thông”), trích ngắn câu gốc. Đây là thứ quản lý dùng để duyệt.
 
 ## Không được làm (trừ khi issue yêu cầu rõ)
 

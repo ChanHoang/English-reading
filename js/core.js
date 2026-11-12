@@ -93,11 +93,11 @@ EI.fmtDay = n => EI.dayDate(n).toLocaleDateString('en-US', { month: 'short', day
 
 /* ---------- storage ---------- */
 const KEY = 'ei.v1';
-EI.TOPICS = { history: 'History', science: 'Science', engineering: 'Engineering & making', nature: 'Nature', body: 'Human body', space: 'Space', life: 'Everyday life' };
+EI.TOPICS = { history: 'History', science: 'Science', engineering: 'Engineering & making', nature: 'Nature', body: 'Human body & health', space: 'Space', life: 'Everyday life', work: 'Work & money', travel: 'Places & travel', food: 'Food & cooking', culture: 'Arts & media', sport: 'Sport', language: 'Words & language' };
 EI.blank = () => ({
   v: 1, created: EI.today(), lastExport: null, lastKind: null,
   settings: { theme: 'system', fs: 1, cap: 15, replayKey: 'Alt+R', voice: '', rate: 1, hl: true,
-    topics: { history: 6, science: 1, engineering: 1, nature: 1, body: 1, space: 1, life: 1 } },
+    topics: { history: 2, science: 1, engineering: 1, nature: 1, body: 1, space: 1, life: 1, work: 1, travel: 1, food: 1, culture: 1, sport: 1, language: 1 } },
   words: {}, gq: {}, lessons: {}, gram: {}, days: {}, errors: [], facts: [], sentences: [], scanned: {}, scores: {}, mine: {},
   cur: { v: 'today' }
 });

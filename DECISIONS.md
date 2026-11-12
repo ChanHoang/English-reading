@@ -1,0 +1,194 @@
+# DECISIONS — English Improve, giai đoạn 1
+
+Ngày: 2026-11-12. Ghi các quyết định đáng kể và mọi chỗ làm khác tài liệu yêu cầu, kèm lý do.
+
+## 1. Đã giao gì
+
+- Ứng dụng tĩnh đầy đủ: Today, Vocabulary, Grammar, Reading, Progress, Settings, Info; ôn cách quãng; âm thanh; nói theo; sao lưu; chạy offline và cài lên màn hình chính (khi mở qua https hoặc localhost).
+- 8 bài đọc A2 · Pass 1 (603–671 từ), mỗi bài có nguồn, bản dịch từng câu, luyện tập, bài viết ngắn, thẻ sự thật.
+- 194 từ A2 (từ mục tiêu của 8 bài), mỗi từ đủ: từ loại, phiên âm Mỹ, định nghĩa English–English, ví dụ, cụm từ, họ từ, nghĩa tiếng Việt, ghi chú, độ khó.
+- 16 bài ngữ pháp A2 (4–7 câu luyện mỗi bài).
+- `tools/check-content.js` (0 error), `tools/e2e-test.py` (56/56 đạt), `CONTENT_GUIDE.md`, `README.md`.
+
+## 2. Chỗ làm khác yêu cầu
+
+| # | Yêu cầu | Đã làm | Vì sao |
+|---|---|---|---|
+| 1 | Giai đoạn 1 có “bộ từ A2” | 194 từ, không phải toàn bộ A2 (bản tham chiếu có 867 mục từ mang nghĩa cấp A2) | Mỗi mục từ cần định nghĩa, ví dụ, ghi chú viết tay. Yêu cầu cấm lấp chỗ trống bằng nội dung viết vội. Từ đi vào bộ từ cùng lúc với bài đọc mang nó; khoảng 28 bài nữa sẽ phủ hết A2 · Pass 1. Info ghi rõ phần chưa có. |
+| 2 | “Lộ trình ngữ pháp A2” | 16 bài: các thì quá khứ, hiện tại hoàn thành, tương lai, bị động, mệnh đề quan hệ, so sánh, động từ khuyết thiếu, điều kiện loại 1, mạo từ, lượng từ, từ nối, to + V | Đủ để phủ mọi cấu trúc được tô trong 8 bài đọc. Chưa có: danh động từ/động từ nguyên mẫu, giới từ thời gian/nơi chốn, used to, câu hỏi đuôi, too/enough. Thêm ở lô sau. |
+| 3 | Từ mới chiếm khoảng 4–5% văn bản | Số từ mục tiêu ÷ số từ của bài = 3,6–4,3% | Hiểu “4–5%” là tỷ lệ từ mới khác nhau trên tổng số từ. Tính theo lượt xuất hiện thì là 8–12%, vì mỗi từ phải lặp lại ít nhất hai lần. Muốn lượt xuất hiện cũng chỉ 4–5% thì bài phải dài trên 1.100 từ, vượt khung A2 và khó xong trong một lần ngồi. Công cụ in cả hai con số. |
+| 4 | A2 600–800 từ | 603–671 từ | Nằm ở nửa dưới của khung để cả bài học giữ ở 18–21 phút. |
+| 5 | Nhóm 25–30 từ | 23–26 từ | Không ép thêm từ khi câu chuyện không cần. |
+| 6 | Dạng ôn thứ tư: “chọn câu diễn đạt lại đúng nghĩa” | Thay bằng “chọn đúng nghĩa của từ trong câu này” | Câu diễn đạt lại phải viết tay cho từng từ (194 × ít nhất 3 câu). Dạng thay thế vẫn nằm trong một câu có ngữ cảnh và vẫn khó hơn điền từ. Nên viết câu diễn đạt lại cho các từ độ khó 3 ở lô sau. |
+| 7 | Bấm vào bất kỳ từ nào để hiện nghĩa ngắn | Từ trong bộ từ: đủ nghĩa, phiên âm, nghe. Từ vượt cấp đã chú thích: nghĩa tiếng Việt, nghe. Từ A1 còn lại: nghe, bản dịch cả câu, liên kết Cambridge | Không có từ điển A1 đã kiểm chứng; không bịa nghĩa hàng loạt. |
+| 8 | Bấm giữ một câu để hiện bản dịch | Có (giữ khoảng nửa giây), và thêm nút “Tiếng Việt” trong bảng hiện ra khi bấm vào câu | Bấm giữ khó phát hiện và không dùng được bằng bàn phím. |
+| 9 | Phát bản thu Cambridge nếu xác minh được quyền | Không tích hợp; phát giọng máy en-US của trình duyệt, kèm liên kết mở đúng mục từ trên Cambridge | Không xác minh được quyền nhúng âm thanh của Cambridge. Nhãn nguồn âm thanh luôn hiện. |
+| 10 | Bản thu người thật cho bài đọc | Giọng máy en-US của trình duyệt, ghi rõ là giọng máy, tô sáng câu đang đọc | Chưa có bản thu có quyền sử dụng. |
+| 11 | “Tua” trong trình nghe | Tua theo câu (câu trước / câu sau), không tua theo giây | Giọng máy của trình duyệt không cho tua trong một câu. |
+| 12 | Xuất tiến độ bằng file | Tải file .json; đồng thời hiện nội dung sao lưu để sao chép | Một số trình xem (ví dụ trang nhúng) chặn tải file. Nhập nhận cả file lẫn đoạn chữ dán vào. |
+| 13 | Rà nhanh khi bắt đầu một cấp | Có nút “Quick scan” trong Vocabulary; không tự bật khi mở web lần đầu | Mục tiêu số một là mở web học được ngay. Trong bước Learn words của mỗi bài cũng có nút Known. |
+| 14 | Chỉnh tỷ lệ chủ đề | Trọng số 0–10 cho từng chủ đề trong Settings; mặc định lịch sử 6, sáu chủ đề còn lại mỗi chủ đề 1 | Bài kế tiếp được chọn sao cho tỷ lệ đã học tiến gần trọng số, và tránh ba bài liên tiếp cùng vùng. |
+
+## 3. Quyết định thiết kế
+
+**Kỹ thuật.** HTML, CSS và JavaScript thuần, không thư viện, không bước build. Lý do: mở được bằng cách bấm đúp `index.html`, sống lâu, phiên làm việc sau đọc được ngay. Nội dung nằm trong `data/`; thêm lô mới chỉ cần thêm file và một dòng trong `data/manifest.js`.
+
+**Today.** Một phiên = lượt ôn (tối đa 15 mục, chỉnh được 8–40) rồi một bài học. Sau một bài đọc, phiên kế tiếp gợi ý một bài ngữ pháp ngắn (ưu tiên chủ điểm vừa gặp trong bài đọc) để từ mới không dồn quá nhanh; khi lượng ôn đến hạn vượt hai lần giới hạn cũng gợi ý ngữ pháp thay cho bài đọc mới. Bài đang dở luôn được ưu tiên.
+
+**Thời gian ước tính của bài đọc** = 8 giây mỗi từ mục tiêu + thời gian đọc ở 85 từ/phút + 35 giây mỗi câu luyện + 2 phút viết. Kết quả 18–21 phút. Đây là ước tính, chưa đo trên người học thật.
+
+**Ôn cách quãng.**
+- Lịch: cuối buổi → 1 → 3 → 7 → 14 → 30 → 60 → 120 ngày, đúng như tài liệu.
+- Mỗi từ có hệ số riêng nhân vào khoảng cách: từ độ khó 3 bắt đầu ở 0,8; độ khó 1 ở 1,25; mỗi lần sai nhân 0,85 (sàn 0,5); mỗi lần đúng nhân 1,03 (trần 1,6).
+- Từ độ khó 1 trả lời đúng thì bỏ qua mốc 1 ngày và mốc 7 ngày.
+- “Cuối buổi”: sau bài đọc có lượt Quick recall gồm tối đa 8 từ khó nhất (ưu tiên từ vừa làm sai trong Practice). Các từ còn lại đến hạn ngay hôm đó và xuất hiện trong Today. Giới hạn 8 để cuối buổi không kéo dài.
+- Thứ tự ưu tiên khi lượng ôn dồn lại: mức quá hạn so với khoảng cách của từ (từ khoảng cách ngắn mà quá hạn lâu là từ sắp quên nhất), cộng thêm cho từ đã sai nhiều.
+- Từ sai từ 3 lần trở lên là “từ khó”: lần ôn kế chuyển sang dạng chọn nghĩa trong câu, phần giải thích hiện thêm cụm từ đi kèm và ghi chú.
+- Câu ngữ pháp làm sai vào hàng ôn với cùng lịch; đúng qua mốc 30 ngày thì ra khỏi hàng ôn.
+- Trạng thái: Learning (mốc cuối buổi và 1 ngày), Familiar (3–7), Strong (14–30), Mastered (60–120).
+- Từ của bài khác xuất hiện đúng nghĩa trong bài vừa học được ghi “met in a story” và tăng nhẹ hệ số.
+
+**Không có điểm số.** Tiến độ trong bài chỉ là hàng chấm. Bài viết và bài nói theo tự so với mẫu.
+
+**Luyện tập linh hoạt.** 9–14 câu mỗi bài đọc; lý do của từng bài ghi trong `practiceNote` và hiện trong Info. Sai một điểm thì chèn thêm đúng một câu về điểm đó.
+
+**Chính tả Mỹ** (behavior, traveler, realize), vì phiên âm và giọng đọc là Mỹ.
+
+**Nói theo.** Bản thu chỉ nằm trong bộ nhớ của trang, mất khi đóng bảng. Cần trình duyệt cho phép micro (https hoặc localhost).
+
+**Phím nghe lại** mặc định Alt+R; chọn Alt+R, R, Space hoặc Off trong Settings.
+
+## 4. Những gì CHƯA xác minh
+
+1. **Cấp độ từ.** 194 từ được đối chiếu ngày 2026-11-12 với một bản sao Oxford 3000/5000 do bên thứ ba đăng trên GitHub (`tyypgzl/Oxford-5000-words`), theo đúng từ loại. Chưa đối chiếu với danh sách chính thức của Oxford University Press. Info ghi đúng như vậy. `tools/cefr-reference.json` rút từ cùng nguồn và chỉ dùng cho công cụ kiểm tra.
+2. **Phiên âm** so với cùng nguồn trên, chưa so với từ điển chính thức.
+3. **Độ khó của từ** là ước tính của người viết.
+4. **Bản dịch tiếng Việt** (nghĩa từ, từng câu trong bài, giải thích) do AI soạn, chưa có người hiệu đính.
+5. **Nguồn bài đọc.** Mỗi bài có ít nhất hai nguồn và đã được đối chiếu lại lần hai sau khi viết; lần đối chiếu đó sửa khoảng 30 chi tiết (ví dụ: bỏ “vài giờ sau”, “cọc đốn từ cây lớn”, “ăn bằng nĩa” ở Mỹ năm 1966, “còn giữ được căn nhà”). Tuy vậy vẫn có những chi tiết chỉ nằm ở một nguồn hoặc là kiến thức phổ thông; chúng được liệt kê trong `note` của từng bài và hiện trong Info. Hai bài dùng Wikipedia làm một trong các nguồn (Bạch Đằng) hoặc một trang tổng hợp phổ thông (History Hit cho Mansa Musa).
+6. **Âm thanh.** Chưa thử với tai người: bộ kiểm thử chỉ xác nhận lệnh phát được gọi. Chất lượng giọng tùy thiết bị. Micro chưa thử.
+7. **Thiết bị thật.** Kiểm thử chạy trên Chromium giả lập máy tính và Pixel 7. Chưa thử trên iPhone/Safari, chưa thử thao tác cài lên màn hình chính trên điện thoại thật.
+
+## 5. Tự kiểm theo mục nghiệm thu
+
+| Mục | Kết quả |
+|---|---|
+| Mở web là học được ngay từ Today, xong trong một lần ngồi | Đạt (ước tính 18–21 phút) |
+| Mỗi bài có nguồn trong Info, mọi từ mục tiêu xuất hiện đúng nghĩa | Đạt: 194/194 từ có mặt ở ít nhất hai câu |
+| Số câu luyện khác nhau giữa các bài | Đạt: 11, 12, 10, 14, 13, 11, 9, 11 |
+| Không có thẻ lật hay bài kiểm tra rời | Đạt |
+| Đổi ngày thì từ đến hạn đúng lịch; sai thì về mốc đầu | Đạt (thử +1, +2, +40 ngày) |
+| Tắt giữa chừng, mở lại đúng bài đúng bước | Đạt |
+| Xuất, xóa, nhập lại khôi phục đủ, kể cả lịch ôn | Đạt (Replace và Merge) |
+| Dùng được trên điện thoại và khi mất mạng | Đạt trên giả lập; xem mục 4.7 |
+| `DECISIONS.md` và `CONTENT_GUIDE.md` | Có |
+
+Còn một cảnh báo của công cụ kiểm tra được giữ có chủ ý: “position” trong câu “Anyone would be nervous in that position” mang nghĩa “hoàn cảnh”, khác nghĩa mục tiêu “vị trí”, nên không đánh dấu.
+
+## 6. Lô kế tiếp nên là gì
+
+1. **A2 · Pass 1, bài 9–16** (khoảng 190 từ nữa). Chủ đề còn thiếu: đời sống, khoa học; lịch sử châu Á ngoài Việt Nam, châu Mỹ Latinh. Ứng viên cần xác minh trước khi nhận: lịch Gregory “mất” mười ngày năm 1582; con tàu Vasa chìm ngay chuyến đầu năm 1628; kênh đào Suez; vì sao bàn phím có thứ tự QWERTY; giấc ngủ của cá heo; đợt dịch nhảy múa năm 1518.
+2. Bài ngữ pháp còn thiếu ở mục 2 và câu diễn đạt lại cho các từ độ khó 3.
+3. Đối chiếu cấp độ từ với danh sách chính thức của Oxford.
+4. Nhờ một người Việt giỏi tiếng Anh đọc lại bản dịch của 8 bài đầu.
+5. Sau khi A2 · Pass 1 đủ bộ từ: Pass 2 (chia lại nhóm, chuyện mới), rồi B1.
+
+## 7. Việc cần bạn
+
+Để dùng trên điện thoại và cài lên màn hình chính, web phải nằm ở một địa chỉ https. Việc đó cần một tài khoản lưu trữ web tĩnh của bạn (GitHub Pages, Netlify, Cloudflare Pages đều có gói miễn phí). Đây là điểm dừng theo quy tắc “cần tài khoản”.
+
+## 8. Cập nhật 2026-11-12 (theo phản hồi đầu tiên của bạn)
+
+Các mục dưới đây **thay thế** những chỗ tương ứng ở mục 1–5.
+
+| Yêu cầu của bạn | Đã làm |
+|---|---|
+| Bấm Start ở Today thì vào một bài đọc | Start mở thẳng bài đọc của hôm nay (bài đang dở, nếu không thì bài mới). Bài ngữ pháp không còn chen vào Today; chỉ khi đã học hết bài đọc mới gợi ý ngữ pháp hoặc đọc lại bài có điểm thấp nhất. |
+| Các nút bước (Learn words / Read & listen / Practice) bấm được để lùi hoặc tiến | Bấm được, đi theo mọi hướng, vị trí trong từng bước được giữ. |
+| Practice đầy đủ hơn: hiểu bài, từ vựng của bài, ngữ pháp | Practice là một bài kiểm tra ba phần: **Understanding the story** (6–10 câu), **Vocabulary of this story** (cả 23–26 từ mục tiêu được hỏi trong chính bài đọc, dạng “The story with gaps”, cộng các câu về từ dễ nhầm), **Grammar of this story** (4–7 câu). Tổng 25–34 mục mỗi bài. |
+| Có chấm điểm, hiện điểm cạnh tên bài | Mỗi câu 1 điểm, cần gợi ý thì nửa điểm, mỗi chỗ trống 1 điểm. Điểm phần trăm hiện cạnh tên bài trong danh sách Reading, trong bài, ở Today (điểm trung bình) và trong Progress (lần gần nhất, cao nhất, số lần làm, điểm từng phần). Làm lại được. |
+| Tìm từ vựng bằng tiếng Việt | Ô tìm kiếm có lựa chọn English / Tiếng Việt; gõ có dấu hay không dấu đều được (“ky su” ra “engineer”). |
+
+**Thay đổi kéo theo, do tôi quyết định:**
+
+1. **Ràng buộc cứng số 3 được nới theo lời bạn.** Bản yêu cầu gốc cấm điểm số; yêu cầu mới của bạn có chấm điểm, nên tôi làm theo yêu cầu mới. Chỉ Practice của bài đọc được chấm. Ôn cách quãng, bài ngữ pháp, bài viết và nói theo vẫn không có điểm. Vẫn không có thẻ lật, bảng xếp hạng, đồng hồ đếm ngược.
+2. **Thêm bước “Grammar” giữa Read & listen và Practice.** Bước này tự dựng từ dữ liệu sẵn có: mỗi cấu trúc chính của bài có cách dùng, công thức và các câu lấy từ chính bài đọc. Lý do: Practice giờ hỏi ngữ pháp có tính điểm, nên cần chỗ xem lại trước khi làm. Bỏ qua được bằng nút “Go to practice”.
+3. **Lượt ôn chuyển xuống cuối bài.** Vì Start phải vào thẳng bài đọc, các từ đến hạn được hỏi trong “Quick recall” ở cuối bài (từ khó nhất của bài vừa học cộng từ cũ đến hạn, trong giới hạn mỗi ngày). Today vẫn có nút “Review now” để ôn trước nếu muốn.
+4. **Câu luyện thêm khi sai không tính điểm.** Sai một từ thì thêm một câu mới với từ đó; sai một cấu trúc thì thêm một câu khác của bài ngữ pháp tương ứng.
+5. **Bài học dài hơn: ước tính 28–32 phút** (trước là 18–21 phút), vì Practice tăng từ 9–14 lên 25–34 mục. Con số này vẫn là ước tính. Nó chạm vào ràng buộc “xong trong một lần ngồi”; vị trí được lưu ở mọi bước, nhưng nếu bạn thấy quá dài thì cần chọn: rút bớt Practice, hoặc cho phép làm Practice vào hôm sau.
+
+**Tự kiểm sau cập nhật:** `tools/e2e-test.py` 62/62 đạt, `tools/check-content.js` 0 lỗi. Số mục kiểm tra theo bài (hiểu bài / từ vựng / ngữ pháp): 27 (8/14/5), 29 (8/14/7), 27 (8/15/4), 34 (9/18/7), 32 (10/17/5), 29 (9/14/6), 25 (6/14/5), 30 (10/15/5).
+
+## 9. Cập nhật 2026-11-12 (theo phản hồi thứ hai của bạn)
+
+**Bạn quyết định:** làm đề xuất 1 và 3; không làm đề xuất 2 (nghe lại cách quãng) và 4 (câu hỏi dừng chân giữa bài); giữ nguyên độ dài bài học; bỏ yêu cầu về số phút học mỗi ngày.
+
+| Việc | Đã làm |
+|---|---|
+| Thêm từ bất kỳ vào hàng ôn khi đọc | Bấm một từ trong bài, chọn “Add to my review”. Từ có trong bộ từ thì vào hàng ôn như từ mục tiêu. Từ ngoài bộ từ được lưu thành “từ của riêng bạn” kèm đúng câu trong bài, và được ôn theo cùng lịch 1 → 3 → 7 … ngày bằng ba dạng luân phiên: điền từ vào câu đó, nghe câu rồi gõ từ, tự viết một câu (không lặp một dạng hai lần liên tiếp). Xem và gỡ ở Progress → My words. |
+| Kể lại bằng giọng nói | Ở bước cuối sau Practice có khối “Or tell it out loud”: thu âm, nghe lại mình, nghe bài mẫu. Không chấm điểm; bản thu chỉ nằm trong bộ nhớ của trang. |
+| Bỏ yêu cầu về thời lượng | Ràng buộc cứng số 4 (“xong trong một lần ngồi”) bị bỏ khỏi `CONTENT_GUIDE.md`. Bài đọc giữ 28–32 phút. Thời gian ước tính vẫn hiện để biết trước, không còn là giới hạn. Giới hạn số mục ôn mỗi ngày vẫn mặc định 15 để lượng ôn dồn lại được chia nhỏ, và có thêm lựa chọn “No limit” trong Settings. |
+
+**Giới hạn cần biết của “từ của riêng bạn”:**
+
+- Từ ngoài bộ từ không có định nghĩa tiếng Anh hay phiên âm. Phần giải thích khi ôn là nghĩa tiếng Việt ngắn (nếu từ đó đã được chú thích trong bài) và bản dịch cả câu. Tôi không tự sinh nghĩa hàng loạt cho các từ này.
+- Mỗi từ chỉ có một ngữ cảnh: câu mà bạn đã bấm. Dạng từ được giữ nguyên như trong câu (ví dụ “melting”, không quy về “melt”).
+- Thu âm cần trình duyệt cho phép micro, tức là web chạy qua https hoặc localhost. Trang xuất bản trên claude.ai chặn micro, nên ở đó chỉ nghe được bài mẫu.
+
+**Tự kiểm:** `tools/e2e-test.py` 68/68 đạt (thêm 6 phép kiểm cho hai tính năng mới), `tools/check-content.js` 0 lỗi. Việc thu âm thật qua micro chưa được thử; bộ kiểm thử chỉ xác nhận các nút có mặt và bài mẫu hiện ra.
+
+## 10. Lô A2 · Pass 1, bài 9–17 (2026-11-12)
+
+**Yêu cầu:** viết lô bài kế tiếp (8–10 bài) cho lượt đang dở, đúng `CONTENT_GUIDE.md`, tự động hoàn toàn. Đã viết 9 bài, mỗi bài chạy `node tools/check-content.js <id>` đến khi 0 lỗi, 0 cảnh báo.
+
+| n | Bài | Chủ đề · vùng · thời kỳ | Từ | Từ mục tiêu | Practice (hiểu/từ/ngữ pháp) | Ước tính | Nguồn |
+|---|---|---|---|---|---|---|---|
+| 9 | The Warship That Sank on Its First Day | history · Thụy Điển · 1628 | 746 | 24 | 27 (8/12/7) | 31 phút | Bảo tàng Vasa (2 trang), Britannica, The World, Smithsonian |
+| 10 | Half Asleep, Half Awake | nature · đại dương · hiện nay | 710 | 24 | 27 (9/12/6) | 30 phút | Scientific American, Live Science, National Geographic |
+| 11 | The Farmers Who Dug for Water and Found an Army | history · Trung Quốc · 210 TCN / 1974 | 720 | 22 | 27 (9/11/7) | 30 phút | Britannica, National Geographic (2 bài), World History Encyclopedia |
+| 12 | The Doctor Who Asked Doctors to Wash Their Hands | science · Áo · 1847 | 761 | 23 | 28 (9/12/7) | 31 phút | James Lind Library, Embryo Project (ASU), Wikipedia |
+| 13 | The Olympic Race With a Car, a Dog and Some Apples | life · Mỹ · 1904 | 748 | 23 | 25 (8/11/6) | 29 phút | Smithsonian, HISTORY |
+| 14 | The Year February Had 30 Days | history · châu Âu · 1582–1923 | 783 | 23 | 28 (9/13/6) | 31 phút | Britannica (2 trang), timeanddate (2 trang), Tøndering, Mental Floss (2 bài), Snopes, Historic UK, History of Parliament |
+| 15 | The Doctor in the Hut (Yersin) | history · Việt Nam / Hồng Kông · 1894 | 738 | 21 | 27 (9/12/6) | 30 phút | Britannica, J. Military & Veterans’ Health, SCMP, Whonamedit, Victorian Web |
+| 16 | The Dog Walk That Gave Us Velcro | engineering · Thụy Sĩ · 1941–1955 | 661 | 21 | 24 (7/12/5) | 28 phút | National Inventors Hall of Fame, Lemelson-MIT, Velcro Companies, HookandLoop |
+| 17 | The Lost City That Was Never Lost | history · Peru · 1450 / 1911 | 624 | 20 | 26 (9/12/5) | 27 phút | UNESCO, Yale News, Andina, History Today, EBSCO, History Collection |
+
+Từ mới của lô nằm ở `data/words-a2-02.js` (201 từ, mỗi bài một mục `# ---- <id>`).
+
+**Quyết định mới:**
+
+1. **Khôi phục ràng buộc cứng số 4 (“xong trong một lần ngồi”).** Ở mục 9, tôi đã bỏ cả ràng buộc này, trong khi bạn chỉ yêu cầu bỏ giới hạn số phút học mỗi ngày. Đó là tôi hiểu quá tay. `CONTENT_GUIDE.md` nay ghi lại: không giới hạn phút mỗi ngày, nhưng mỗi bài (Learn words → Read & listen → Grammar → Practice) phải làm xong trong một buổi, A2 ước tính 25–32 phút. Cả 17 bài A2 nằm trong khoảng 25–32 phút.
+2. **Số câu Practice theo độ khó, không theo con số cố định.** Từ 24 đến 28 câu. Mỗi bài ghi lý do trong `practiceNote`. Ví dụ: bài lịch (14) có quy tắc năm nhuận và nhiều mốc năm nên có câu áp dụng quy tắc và câu nối năm với nước; bài Yersin (15) dồn câu từ vựng vào các từ chức năng khó (while, whose, among, against); bài Velcro (16) ngữ pháp đơn giản nên chỉ 5 câu ngữ pháp.
+3. **Số từ mục tiêu thấp hơn chuẩn.** `CONTENT_GUIDE.md` yêu cầu 23–26 từ mỗi bài, tỷ lệ từ mới 3,5–5%. Lô này có 20–24 từ mỗi bài, tỷ lệ 2,8–3,4% (8 bài đầu: 3,6–4,3%). Lý do: các bài dài hơn (620–790 từ, để kể đủ sự thật), và với ba bài cuối (15–17) tôi không tìm được thêm từ A2 khớp tự nhiên với chuyện mà không phải thêm chi tiết thiếu nguồn. Kho A2 chưa dùng vẫn còn 474 mục (446 là từ nội dung), nên đây không phải do hết từ. Bù lại, các từ của bài trước xuất hiện lại đúng nghĩa đều được đánh dấu `{…}` (ôn nhẹ trong ngữ cảnh). Nếu bạn muốn giữ đúng 3,5%, lô sau cần bài ngắn hơn (600–650 từ) hoặc nhóm từ khác.
+4. **Giai thoại ghi rõ là giai thoại.** “One report says…” (Yersin trả tiền cho hai lính canh — chỉ SCMP ghi; sách phổ thông kể là thủy thủ), “There is an old story…” (quần của Carvajal bị cắt — Smithsonian ghi “legend has it”), “People say…” (Carvajal thua xúc xắc — “reportedly”), bạo loạn “Give us our eleven days” (bốn nguồn nói có lẽ không có thật). Không đưa vào: câu “ngày 30/2 duy nhất trong lịch sử” (Mental Floss, có nguồn khác nhắc ngày 30/2 ở Liên Xô), nguyên văn lời đùa của Franklin (hai nguồn trích hai câu khác nhau), tên Jan Mashiani (chỉ trong chú thích ảnh), tuổi 11 của cậu bé ở Machu Picchu (một nguồn).
+5. **Sửa nhỏ trong ứng dụng:** khi bấm một từ không đánh dấu mà bài có `gloss` cho nó, nghĩa trong câu hiện trước, mục từ điển hiện sau kèm lời nhắc. Lý do: “World’s Fair” (hội chợ) trước đây hiện nghĩa “fair = công bằng”; “waved” (vẫy tay) hiện nghĩa “wave = sóng”. Giới hạn: nút “Add to my review” trên từ đó vẫn thêm mục từ điển, không thêm nghĩa trong câu. Đã ghi cách dùng vào `CONTENT_GUIDE.md` mục 2.
+6. **Công cụ kiểm tra:** thêm các dạng chính tả Mỹ còn thiếu (color, favorite, neighbor, center, meters, liters, kilometer…) vào bảng quy đổi về dạng Anh của bảng tham chiếu.
+7. **Ghi chú cấp độ từ** ở `data/words-a2.js` không còn ghi “194 từ”, mà áp dụng cho mọi từ A2 ở cả hai file.
+8. `sw.js`: tăng tên bộ nhớ đệm lên `english-improve-v4` để máy đã mở web tải dữ liệu mới.
+
+**Chỗ các nguồn lệch nhau (chi tiết đầy đủ trong `note` của từng bài, hiện ở Info):** số người chết trên tàu Vasa (khoảng 30 hay 30–50); số tượng đất nung (khoảng 7.000 hay 8.000); tỷ lệ tử vong ở hai khoa sản của Semmelweis (ba nguồn ba con số — bài theo James Lind Library); quãng đường Lorz ngồi ô tô (10 hay 11 dặm), táo hỏng hay táo xanh, một hay nhiều con chó; năm bằng sáng chế Thụy Sĩ của Velcro được cấp (1954 hay 1955 — bài không nêu); chuyến đi của de Mestral (rừng hay dãy Alps — bài viết “mountains”); tên gia đình ở Machu Picchu (Recharte hay Richarte); ngày mất của Yersin trên Whonamedit tự mâu thuẫn (bài theo Britannica).
+
+**Kiểm thử:** `tools/check-content.js` 0 lỗi; còn 9 cảnh báo cũ có chủ ý (“position” ở bài 7, danh từ “half” ở bài 10 — từ mục tiêu là trạng từ). `tools/e2e-test.py` 68/68 đạt. Thêm một phép thử riêng: bấm “Fair” trong bài 13 hiện “hội chợ (World’s Fair)” trước, không lỗi JavaScript.
+
+**Độ phủ hiện tại của A2 · Pass 1:** 17 bài, 395 từ mục tiêu khác nhau, không từ nào lặp trong lượt. Bảng tham chiếu có 867 mục A2; đã phủ 393 mục (45%) cộng 2 từ viết kiểu Mỹ (behavior, traveler). Còn 474 mục chưa dùng, trong đó 28 chỉ là từ chức năng (his, may, shall…), thường được học qua ngữ pháp hơn là làm từ mục tiêu.
+
+**Chưa xác minh (bổ sung cho mục 4):**
+
+- Mỗi bài liệt kê trong `note` các chi tiết chỉ có một nguồn hoặc là kiến thức phổ thông. Đáng chú ý: Yersin lập trường y Hà Nội năm 1902, cây cao su và ký ninh (một nguồn mỗi chi tiết); Simond và bọ chét năm 1898 (một nguồn); Velcro dùng trên Apollo 11 và trên giày cuối thập niên 1960 (chỉ trang của công ty Velcro); độ cao 2.430 m và khoảng 200 công trình ở Machu Picchu (chỉ UNESCO); nhiều thành phố Việt Nam có đường Yersin (kiến thức phổ thông).
+- Bài 13 chỉ có hai nguồn; nhiều chi tiết nhỏ (bảy ngọn đồi, bốn bác sĩ và một giờ, chuyện Garcia) chỉ có ở Smithsonian.
+- Một số nguồn là trang phổ thông hoặc trang của bên liên quan: Wikipedia (bài 12), History Collection (bài 17), HookandLoop và Velcro Companies (bài 16, đều là bên bán hàng). Mỗi chi tiết chính vẫn có thêm ít nhất một nguồn khác.
+- Bản dịch tiếng Việt, định nghĩa, ví dụ và ghi chú của 201 từ mới do AI soạn, chưa có người hiệu đính. Phiên âm lấy từ cùng nguồn với bảng tham chiếu, đổi /əʊ/ thành /oʊ/ theo giọng Mỹ, và sửa tay vài chỗ theo cách đọc Mỹ phổ biến (catch /kætʃ/, against /əˈɡenst/).
+- Chưa đọc lại lô này bằng một người khác hoặc một tác tử độc lập.
+- Giới hạn đã biết của bản xuất bản trên claude.ai: trình xem chặn việc tải tệp, nên nút xuất dữ liệu (tệp sao lưu) không hoạt động ở đó. Bản chạy từ thư mục `english-improve` (hoặc sau này trên GitHub Pages/Netlify) không bị giới hạn này.
+
+**Lô kế tiếp đề xuất:** A2 · Pass 1, bài 18–26 (khoảng 200 từ nữa). Chủ đề còn ít: body, space, nature; châu Phi ngoài Mali, Trung Đông, Đông Nam Á ngoài Việt Nam. Ứng viên cần xác minh trước: kênh đào Suez; thứ tự QWERTY của bàn phím; đợt “dịch nhảy múa” năm 1518; con chó Laika bay vào vũ trụ năm 1957; trận lụt mật đường ở Boston năm 1919; vụ nổ Tunguska năm 1908. Khi Pass 1 đủ khoảng 860 từ thì sang Pass 2.
+
+## 11. Cập nhật 2026-11-12 (theo phản hồi thứ ba của bạn)
+
+**Bạn yêu cầu:** thích chuyện lịch sử châu Âu thời Trung cổ; lịch sử chỉ cần nhỉnh hơn các chủ đề khác một chút; áp dụng cho các bài sau, 17 bài hiện có giữ nguyên. Đưa dự án lên GitHub để AI khác làm, Claude đóng vai trò quản lý.
+
+1. **Tỷ lệ chủ đề (từ bài 18).** `CONTENT_GUIDE.md` không còn ghi “khoảng một nửa là lịch sử”. Quy định mới: trong mỗi lô, số bài lịch sử nhiều hơn chủ đề đứng thứ hai tối đa 1 bài (lô 9 bài: 3 lịch sử, các chủ đề khác 1–2). Khoảng một nửa số bài lịch sử là châu Âu Trung cổ (thế kỷ 5–15). 17 bài đầu có 9 bài lịch sử; không sửa.
+2. **Chuẩn bị cho làm việc song song.** Thêm `AGENTS.md` (luật cho AI làm việc; `CLAUDE.md` và `GEMINI.md` trỏ về đây), CI chạy công cụ kiểm tra và kiểm thử giao diện trên mọi PR (`.github/workflows/check.yml`), xuất bản GitHub Pages khi merge (`.github/workflows/pages.yml`), mẫu issue và PR. Để các PR không sửa chung một file: từ bài 18, từ mục tiêu mới khai báo ngay đầu file bài đọc; `data/manifest.js` có sẵn một dòng bị chú thích cho mỗi bài của lô, người viết chỉ bỏ `//`. Đã thử: chuyển phần từ của bài 17 vào file bài đọc thì công cụ kiểm tra vẫn 0 lỗi.
+3. **Người làm không sửa `DECISIONS.md`.** Quyết định và chỗ lệch nguồn ghi trong mô tả PR; quản lý ghi vào đây khi merge. Mỗi PR bài đọc phải có bảng “chi tiết → nguồn” có trích câu gốc, để việc duyệt không phải tra lại từ đầu.
+4. **Repo GitHub cũ.** `ChanHoang/English-Improve` đã có một dự án khác: bản trước, kiến trúc khác (một file `index.html` 31 MB, 5.943 từ, có flashcard và quiz), khoảng 280 MB, tự đồng bộ từ Google Drive, đang chạy ở chanhoang.github.io/English-Improve. Bản này chưa được đẩy lên đó; chờ bạn chọn repo.
+
+**Lô kế tiếp đề xuất (bài 18–26):** 3 lịch sử (2 châu Âu Trung cổ + 1 vùng khác), 2 khoa học hoặc cơ thể, và mỗi chủ đề thiên nhiên, vũ trụ, kỹ thuật, đời sống 1 bài. Ứng viên Trung cổ cần xác minh trước: người Viking ở Bắc Mỹ (L’Anse aux Meadows, vòng gỗ cho năm 1021); sách Domesday năm 1086; “tấm thảm” Bayeux thật ra là tranh thêu; mộ thuyền Sutton Hoo; các phiên tòa xử động vật thời Trung cổ (con lợn ở Falaise năm 1386). Ứng viên khác: kênh đào Suez, thứ tự QWERTY, con chó Laika năm 1957, trận lụt mật đường ở Boston năm 1919.

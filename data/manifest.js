@@ -1,0 +1,23 @@
+/* List of content files. To add a batch: put the new file in data/ and add its path here. No code changes needed. */
+EI.files = [
+  'data/words-a2.js',
+  'data/words-a2-02.js',
+  'data/grammar-a2.js',
+  'data/readings/a2-p1-01.js',
+  'data/readings/a2-p1-02.js',
+  'data/readings/a2-p1-03.js',
+  'data/readings/a2-p1-04.js',
+  'data/readings/a2-p1-05.js',
+  'data/readings/a2-p1-06.js',
+  'data/readings/a2-p1-07.js',
+  'data/readings/a2-p1-08.js',
+  'data/readings/a2-p1-09.js',
+  'data/readings/a2-p1-10.js',
+  'data/readings/a2-p1-11.js',
+  'data/readings/a2-p1-12.js',
+  'data/readings/a2-p1-13.js',
+  'data/readings/a2-p1-14.js',
+  'data/readings/a2-p1-15.js',
+  'data/readings/a2-p1-16.js',
+  'data/readings/a2-p1-17.js'
+];

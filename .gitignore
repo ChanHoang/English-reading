@@ -1,0 +1,9 @@
+dist/
+node_modules/
+__pycache__/
+shots/
+*.log
+.DS_Store
+Thumbs.db
+.env
+.env.*

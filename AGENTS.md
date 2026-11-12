@@ -19,8 +19,8 @@ CONTENT_GUIDE.md, DECISIONS.md                    chuẩn nội dung, nhật ký
 
 ## Vai trò
 
-- **Quản lý** (Claude, trong Project “English improve” của chủ dự án): chia việc thành issue, phân từ mục tiêu, duyệt PR, ghi `DECISIONS.md`, merge.
-- **Người làm** (bạn): nhận **một issue**, làm trên **một nhánh**, mở **một PR**. Không tự mở việc ngoài issue.
+- **Quản lý** (Claude, trong Project “English improve” của chủ dự án): chia việc, phân từ mục tiêu, duyệt PR, ghi `DECISIONS.md`. Việc được giao dưới dạng file `tasks/<mã việc>.md` trên nhánh `main` (hoặc một issue có cùng nội dung).
+- **Người làm** (bạn): nhận **một việc**, làm trên **một nhánh**, mở **một PR**. Không tự mở việc ngoài danh sách. Khi xong, ghi `Status: done (PR #…)` ở đầu file việc trong chính PR đó.
 
 ## Ràng buộc cứng (vi phạm = PR bị trả lại)
 
@@ -33,7 +33,7 @@ CONTENT_GUIDE.md, DECISIONS.md                    chuẩn nội dung, nhật ký
 
 ## Quy trình một bài đọc
 
-1. Đọc issue: mã bài (`a2-p1-18`…), chủ đề, chuyện gợi ý, **danh sách từ mục tiêu đã phân sẵn** (chỉ đổi từ khi bắt buộc, và nói rõ lý do trong PR).
+1. Đọc file việc (`tasks/a2-p1-18.md`) hoặc issue: mã bài (`a2-p1-18`…), chủ đề, chuyện gợi ý, **danh sách từ mục tiêu đã phân sẵn** (chỉ đổi từ khi bắt buộc, và nói rõ lý do trong PR).
 2. Tra nguồn trước khi viết. Nếu chuyện không đủ hai nguồn cho các chi tiết chính thì báo trong issue, đề xuất chuyện khác, không viết.
 3. Viết theo `CONTENT_GUIDE.md` mục 1–4: A2 600–800 từ, mỗi từ mục tiêu ở ít nhất hai câu, từ vượt cấp có trong `gloss`, chính tả Mỹ, dịch từng câu, số câu Practice theo độ khó của bài (không theo con số cố định).
 4. Từ mục tiêu mới khai báo **ngay đầu file bài đọc** bằng ``EI.words('A2', `…`)``. Trong `data/manifest.js`, chỉ bỏ `//` ở dòng đã đặt sẵn cho bài của bạn.

@@ -353,3 +353,13 @@ Lịch sử Trung cổ châu Âu vẫn chiếm khoảng một nửa số bài l�
 - Gói miễn phí giới hạn 1.000 lần ghi/ngày cho cả tài khoản. Khoảng 12 lần ghi mỗi giờ cho mỗi người đang học, nên đủ cho dưới 5 người.
 
 **Trạng thái (13/11/2026, 13:30):** Worker đã cài ở `https://ei-sync.chanhoang226.workers.dev`; `/health` trả `{"ok":true,"kv":true}`. `EI.SYNC_URL` đã điền, thẻ Sync đã hiện trên GitHub Pages. Từ môi trường của quản lý không gọi được tới workers.dev (mạng bị chặn), nên lần thử tạo mã và nhập mã với máy chủ thật do chủ dự án làm trên hai máy.
+
+## 15. Giọng đọc AI tạo sẵn (Kokoro) (2026-11-14)
+
+- **Không dùng âm thanh của Cambridge** hay từ điển khác: điều khoản API của Cambridge cấm lưu bản sao, và muốn dùng trong ứng dụng phải ký thỏa thuận riêng.
+- **Dùng Kokoro-82M** (Apache-2.0), tạo sẵn MP3 cho bài đọc và từ vựng; giọng trình duyệt chỉ còn làm dự phòng. Lý do: cùng giọng trên mọi máy, nghe được offline, không tốn phí theo lượt nghe, không cần khóa API.
+- **Giọng:** `af_heart` (điểm A, cao nhất trong bảng chấm của tác giả Kokoro) và `af_bella` (A-). Chọn ngẫu nhiên nhưng ổn định theo từng bài đọc và từng mục từ. Giọng nam tốt nhất chỉ đạt C+, nên không dùng. Chủ dự án đã nghe mẫu và chọn cả hai giọng.
+- **Ngắt dài hơn:** 0,45 s sau dấu phẩy, 0,55 s sau `;` `:` `—`, 0,9 s cuối câu. Không ngắt trong số (`3,000`) hay sau viết tắt (`St.`).
+- **Ngoại lệ quy tắc “không file nhị phân lớn”:** cho phép thư mục `audio/`, MP3 đơn kênh 48 kbps, dự kiến khoảng 100 MB. Phải dừng lại báo nếu vượt 200 MB.
+- **Nhãn trung thực:** web ghi rõ là “AI voice (Kokoro)”, không để người học nghĩ là giọng người thật.
+- **Giao việc:** cho Gemini qua file `tasks/audio-kokoro.md`. Quản lý duyệt PR theo các mục “Kiểm tra chất lượng” trong file đó.

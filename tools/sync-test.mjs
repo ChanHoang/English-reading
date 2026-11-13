@@ -12,7 +12,11 @@ const call = async (method, p, body, origin = O) => {
 let pass = 0, fail = 0;
 const ok = (name, cond, extra) => { if (cond) pass++; else fail++; console.log((cond ? 'PASS  ' : 'FAIL  ') + name + (cond || extra === undefined ? '' : '  — ' + JSON.stringify(extra))); };
 
-let r = await call('GET', '/v1/s/' + code);
+let r = await call('GET', '/health', null, '');
+ok('health check works without an origin and sees the KV binding', r.s === 200 && r.d.kv === true, r);
+r = await worker.fetch(new Request('http://w/health'), {});
+ok('health check reports a missing KV binding', (await r.json()).kv === false);
+r = await call('GET', '/v1/s/' + code);
 ok('unknown code -> 404', r.s === 404, r);
 r = await call('GET', '/v1/s/0123456789ABCDEI');
 ok('malformed code (letter I) -> 404', r.s === 404, r);

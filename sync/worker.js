@@ -3,6 +3,7 @@
 //   GET    /v1/s/<code>  -> 200 {rev, at, state} | 404 not found | 410 deleted
 //   PUT    /v1/s/<code>  body {base, state}; accepted only if base equals the stored rev (else 409 + stored copy)
 //   DELETE /v1/s/<code>  -> leaves a "deleted" marker so other devices stop syncing
+//   GET    /health       -> {ok, kv}: kv is true when the KV namespace is bound as SYNC (setup check)
 // Free plan: KV allows 1,000 writes a day for the whole account, so the app writes only when progress changed.
 const CODE = /^[0-9A-HJKMNP-TV-Z]{16}$/;
 const MAX = 1024 * 1024;              // 1 MB of progress per code
@@ -17,6 +18,7 @@ export default {
     const okOrigin = allowed.includes(origin);
     const cors = okOrigin ? { 'access-control-allow-origin': origin, 'access-control-allow-methods': 'GET, PUT, DELETE', 'access-control-allow-headers': 'content-type', 'access-control-max-age': '86400', vary: 'origin' } : { vary: 'origin' };
     const json = (status, body) => new Response(JSON.stringify(body), { status, headers: { 'content-type': 'application/json', 'cache-control': 'no-store', ...cors } });
+    if (new URL(request.url).pathname === '/health') return json(200, { ok: true, kv: !!(env.SYNC && env.SYNC.get) });   // setup check, no data
     if (request.method === 'OPTIONS') return new Response(null, { status: okOrigin ? 204 : 403, headers: cors });
     if (!okOrigin) return json(403, { error: 'origin_not_allowed' });
 

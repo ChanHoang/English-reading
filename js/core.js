@@ -348,7 +348,7 @@ EI.importState = (o, mode) => {
    No accounts: a random 16-character code is the key on a small Cloudflare Worker (sync/worker.js).
    Progress stays in this browser first; the online copy is merged with the same rules as Import → Merge.
    Settings, the open screen and backup dates stay per device. */
-EI.SYNC_URL = '';   // address of the deployed Worker, e.g. 'https://ei-sync.<name>.workers.dev' (empty = sync hidden)
+EI.SYNC_URL = 'https://ei-sync.chanhoang226.workers.dev';   // the deployed Worker (empty = sync hidden)
 (function () {
   const Y = EI.sync = {}, CK = 'ei.sync', AL = '0123456789ABCDEFGHJKMNPQRSTVWXYZ';
   const FIELDS = ['created', 'words', 'gq', 'lessons', 'scores', 'gram', 'days', 'facts', 'sentences', 'errors', 'scanned', 'mine'];

@@ -352,4 +352,4 @@ Lịch sử Trung cổ châu Âu vẫn chiếm khoảng một nửa số bài l�
 - Workers KV có độ trễ lan truyền giữa các vùng. Nhờ ghi kèm phiên bản và luôn gộp (không xóa), độ trễ đó chỉ làm chậm một lượt đồng bộ, không làm mất dữ liệu.
 - Gói miễn phí giới hạn 1.000 lần ghi/ngày cho cả tài khoản. Khoảng 12 lần ghi mỗi giờ cho mỗi người đang học, nên đủ cho dưới 5 người.
 
-**Chưa xong:** chủ dự án cần tạo tài khoản Cloudflare và cài Worker theo `sync/README.md`, rồi gửi địa chỉ Worker để điền vào `EI.SYNC_URL`.
+**Trạng thái (13/11/2026, 13:30):** Worker đã cài ở `https://ei-sync.chanhoang226.workers.dev`; `/health` trả `{"ok":true,"kv":true}`. `EI.SYNC_URL` đã điền, thẻ Sync đã hiện trên GitHub Pages. Từ môi trường của quản lý không gọi được tới workers.dev (mạng bị chặn), nên lần thử tạo mã và nhập mã với máy chủ thật do chủ dự án làm trên hai máy.

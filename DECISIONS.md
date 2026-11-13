@@ -246,3 +246,78 @@ Tỷ lệ chủ đề: lịch sử 3 (2 bài châu Âu Trung cổ: Viking, Bayeu
 - Bức ảnh “selfie” đầu tiên năm 1839: photograph.
 
 Lịch sử Trung cổ châu Âu vẫn chiếm khoảng một nửa số bài lịch sử, nhưng nên chọn chuyện có nhiều từ đời sống (ăn uống, chợ, nghề nghiệp thời Trung cổ).
+
+
+## 13. Lô A2 · Pass 1, bài 27–54: phủ hết từ A2 (2026-11-13)
+
+**Yêu cầu (13/11/2026):** viết tiếp đến khi phủ hết từ A2; mở rộng thể loại bài đọc để dễ dùng từ mục tiêu; kiểm soát nguồn không cần quá chặt, nhưng không được bịa; không hỏi quyền truy cập web, trang nào không vào được thì bỏ qua.
+
+| n | Bài | Chủ đề · vùng · thời kỳ | Từ | Từ mục tiêu | Practice (hiểu/từ/ngữ pháp) | Ước tính | Số nguồn |
+|---|---|---|---|---|---|---|---|
+| 27 | Is It a Lorry or a Truck? | language · Britain & USA · 1783 · nay | 795 | 28 | 27 (9/12/6) | 32 phút | 3 |
+| 28 | Four Days of Work, Five Days of Pay | work · Britain · 2022–2024 | 726 | 28 | 27 (8/12/7) | 30 phút | 3 |
+| 29 | The Day the Mona Lisa Disappeared | history · France & Italy · 1911–1914 | 778 | 25 | 24 (8/10/6) | 29 phút | 2 |
+| 30 | Eleven Days Without Agatha Christie | culture · England · 1926 | 698 | 22 | 26 (8/12/6) | 29 phút | 2 |
+| 31 | One Day, Two Concerts, the Whole World | culture · England & USA · 1985 | 682 | 18 | 25 (8/11/6) | 27 phút | 2 |
+| 32 | The President and the Bear | history · USA & Germany · 1902–1906 | 613 | 12 | 24 (8/10/6) | 25 phút | 2 |
+| 33 | A Hundred Years in a Bowl of Pho | food · Vietnam · 1900s · nay | 652 | 18 | 25 (8/11/6) | 27 phút | 2 |
+| 34 | The King Who Built a Fairy-Tale Castle | travel · Germany · 1869–1892 | 622 | 15 | 23 (8/9/6) | 25 phút | 2 |
+| 35 | What the Iceman’s Body Tells Us | body · Italy & Austria · khoảng 3300 TCN | 613 | 14 | 25 (8/11/6) | 26 phút | 1 |
+| 36 | From a Penny Stamp to a Christmas Text | life · Britain · 1840 · 1992 | 605 | 13 | 23 (8/9/6) | 24 phút | 2 |
+| 37 | Did Einstein Fail Math? | science · Germany & Switzerland · 1895–1935 | 625 | 14 | 24 (8/10/6) | 25 phút | 2 (chưa mở) |
+| 38 | The First Train Under a City | engineering · England · 1863 · nay | 609 | 12 | 23 (8/9/6) | 24 phút | 1 |
+| 39 | Marie Curie and Her Little Vans | science · Poland & France · 1867–1934 | 601 | 10 | 24 (8/10/6) | 25 phút | 2 |
+| 40 | The First Space Travelers Were Not People | space · USA & Soviet Union · 1947–1998 | 606 | 9 | 24 (8/10/6) | 25 phút | 1 |
+| 41 | A Park on Top of a Volcano | travel · USA · 1872 · nay | 600 | 11 | 24 (8/10/6) | 25 phút | 1 |
+| 42 | The Town With 45 Kinds of Rubbish | life · Japan · 1997 · nay | 629 | 9 | 25 (8/11/6) | 25 phút | 4 |
+| 43 | The Little Man Who Made the World Laugh | culture · England & USA · 1889–1977 | 614 | 10 | 25 (8/11/6) | 25 phút | 1 |
+| 44 | A Hotel Room the Size of a Bed | travel · Japan · 1979 · nay | 604 | 9 | 23 (8/9/6) | 24 phút | 1 |
+| 45 | How Do You Say Hello? | life · World · nay | 614 | 10 | 25 (8/11/6) | 25 phút | 1 |
+| 46 | Cash, Cards and Tips | work · USA & World · 1950 · nay | 607 | 9 | 23 (8/9/6) | 24 phút | 2 |
+| 47 | Eleven Days of Snow and Ice | sport · France · 1924 | 604 | 8 | 24 (8/10/6) | 24 phút | 1 |
+| 48 | Sports Words at the Office | language · USA & Britain · nay | 616 | 6 | 21 (8/8/5) | 22 phút | 1 |
+| 49 | A Diary in the Back House | history · Netherlands · 1942–1947 | 605 | 6 | 23 (8/9/6) | 23 phút | 1 |
+| 50 | Old Stories Inside Everyday Words | language · England & USA · 1540 · nay | 627 | 7 | 25 (9/10/6) | 25 phút | 6 |
+| 51 | The First Airline | travel · Florida, USA · 1914 | 618 | 4 | 26 (11/8/7) | 24 phút | 3 |
+| 52 | The Red Carpet | culture · Greece & USA · 458 BC · nay | 619 | 5 | 25 (10/9/6) | 24 phút | 2 |
+| 53 | Two Wheels, Three Wheels | engineering · Germany · 1885–1888 | 613 | 4 | 24 (9/9/6) | 23 phút | 5 |
+| 54 | Home Words at Work | language · English at work · nay | 624 | 12 | 27 (9/12/6) | 26 phút | 2 |
+
+**Quyết định mới:**
+
+1. **Nới quy tắc nguồn từ bài 27.** Mỗi bài dựa trên ít nhất **một** nguồn đáng tin đã mở và đọc trong phiên; kiến thức phổ thông dùng được nhưng phải ghi trong `note`. Bài 1–26 vẫn theo chuẩn cũ (hai nguồn). Đã sửa `CONTENT_GUIDE.md` (quy tắc 1, bước 2), `AGENTS.md` (ràng buộc 1) và công cụ kiểm tra (`needs at least one source`). Trang Info trong app nói rõ hai mức này.
+2. **Thêm chủ đề.** `EI.TOPICS` thêm work, travel, food, culture, sport, language. Mặc định: lịch sử 2, mỗi chủ đề khác 1. Có thêm thể loại **bài giải thích có thật**: nghĩa và nguồn gốc từ (27, 48, 50, 54), phong tục (45), cách trả tiền (46), địa điểm (34, 41, 44). Bài giải thích không có cốt truyện, nên phần hiểu bài là chọn nghĩa đúng trong ngữ cảnh.
+3. **Cờ `unchecked`.** Bài 37 (Einstein) viết khi công cụ đọc web bị giới hạn. Nội dung là các sự kiện được ghi chép rộng rãi, chưa mở nguồn trong phiên. Bài có `unchecked: true`, và app hiện dòng “sources not opened yet” thay cho ngày kiểm tra.
+4. **Số từ mục tiêu giảm dần.** Bài 27–28 có 28 từ; bài 47–53 chỉ còn 4–8 từ. Đây là các từ khó đặt vào chuyện. Không nhét từ bằng chi tiết thiếu nguồn: bài vẫn 600–800 từ, các từ của bài trước được đánh dấu lại ở đúng nghĩa.
+5. **Mười bài ước tính 22–24 phút**, dưới chuẩn 25–32: 36, 38, 44, 46–49, 51–53. Công cụ không cảnh báo mức này. Vẫn xong trong một lần ngồi, nhưng nếu muốn đúng chuẩn thì cần thêm 1–2 câu luyện mỗi bài.
+6. **Sửa bài 42 (Kamikatsu).** Bản cũ có ba câu không nguồn nào nói: lò đốt lớn mới quá đắt, không có xe chở rác, phân loại vất vả với người già. Đã đọc thêm World Economic Forum và zwtk.jp, rồi sửa: chính phủ coi khí thải dioxin là không an toàn; người không có xe nhờ thị trấn đến lấy rác; tình nguyện viên giúp người già không có xe. WEF còn nói người dân thấy phân loại “không khó đến thế”.
+7. **Công cụ:**
+   - `check-content.js` thêm `jewelry`, `math`, `organisation`, `anymore` vào bảng quy đổi.
+   - `e2e-test.py` đổi từ khóa tìm `disc` thành `discover`. Bài 37 thêm từ `discussion`, nên từ khóa cũ trả về 3 dòng thay vì 2.
+   - `sw.js` lên `english-improve-v6`.
+
+**Tỷ lệ chủ đề.** Lô này: language 4, culture 4, travel 4, history 3, life 3, work 2, science 2, engineering 2, còn lại mỗi chủ đề 1. Trong lô, lịch sử không còn đứng đầu, vì phải chọn chuyện theo từ còn lại. Tính cả 54 bài, lịch sử vẫn nhiều nhất: 15 bài, các chủ đề đứng sau có 4–5 bài. Ba bài lịch sử của lô (Mona Lisa 1911, gấu Teddy 1902, Anne Frank 1942) không có bài nào thuộc châu Âu Trung cổ, trái với ưu tiên trong `CONTENT_GUIDE.md` (khoảng một nửa số bài lịch sử). Lý do: các từ còn lại là từ đời sống hiện đại. Lô tiếp theo nên bù lại.
+
+**Chưa xác minh hoặc chỉ một nguồn** (chi tiết trong `note` của từng bài):
+
+- **Bài 37:** chưa mở nguồn nào trong phiên (cờ `unchecked`).
+- **Mười bài chỉ dựa trên một nguồn:** 35, 38, 40, 41, 43, 44, 45, 47, 48, 49. Ở các bài khác, nhiều chi tiết cũng chỉ có một nguồn; `note` ghi rõ nguồn nào nói gì.
+- **Chi tiết mà các nguồn nói khác nhau** đã được viết chung chung:
+  - Bài 51: ngày chuyến bay cuối cùng (27/4 hay 5/5/1914); người mua vé đầu tiên là cựu thị trưởng St. Petersburg theo IATA và Space.com (Vintage Aviation News ghi Tampa).
+  - Bài 52: năm phát sóng màu.
+  - Bài 53: dung tích và công suất động cơ.
+- **Kiến thức phổ thông, không lấy từ nguồn đã đọc** (tiêu biểu):
+  - Bài 27: các cặp từ Anh/Mỹ.
+  - Bài 50: nguồn gốc từ lemon.
+  - Bài 51: chuyến bay Hà Nội – TP.HCM khoảng hai giờ.
+  - Bài 52: diễn viên trao giải; thảm đỏ đón tổng thống.
+  - Bài 53: cách gọi “mô tô chạy xăng đầu tiên”.
+  - Bài 54: phần lớn các nghĩa thông dụng (paper jam, a real headache, Lovely!, for good…).
+
+**Độ phủ A2 · Pass 1 sau lô này:** 54 bài, 846 từ mục tiêu không lặp. `node tools/unused-words.js A2 --content` báo 0 mục còn lại: toàn bộ 867 mục A2 của bảng tham chiếu đã được phủ hoặc là từ chức năng được lọc ra.
+
+**Đề xuất tiếp theo:**
+- Pass 2 của A2: ôn lại từ đã học trong chuyện mới, ưu tiên các từ chỉ xuất hiện ở bài có mật độ từ thấp.
+- Hoặc bắt đầu B1.
+- Bổ sung câu luyện cho mười bài dưới 25 phút.
+- Mở nguồn cho bài 37 khi có dịp.

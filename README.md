@@ -1,6 +1,6 @@
 # English Improve
 
-Website tự học tiếng Anh A2–C1 cho người Việt, học qua những câu chuyện có thật. Hiện có: toàn bộ ứng dụng, 17 bài đọc A2 · Pass 1, 395 từ A2, 16 bài ngữ pháp A2.
+Website tự học tiếng Anh A2–C1 cho người Việt, học qua những câu chuyện có thật. Hiện có: toàn bộ ứng dụng, 54 bài đọc A2 · Pass 1 (phủ hết từ A2 của bảng tham chiếu), 846 từ A2, 16 bài ngữ pháp A2.
 
 ## Mở web
 

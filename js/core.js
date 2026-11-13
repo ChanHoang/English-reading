@@ -96,7 +96,7 @@ const KEY = 'ei.v1';
 EI.TOPICS = { history: 'History', science: 'Science', engineering: 'Engineering & making', nature: 'Nature', body: 'Human body & health', space: 'Space', life: 'Everyday life', work: 'Work & money', travel: 'Places & travel', food: 'Food & cooking', culture: 'Arts & media', sport: 'Sport', language: 'Words & language' };
 EI.blank = () => ({
   v: 1, created: EI.today(), lastExport: null, lastKind: null,
-  settings: { theme: 'system', fs: 1, cap: 15, replayKey: 'Alt+R', voice: '', rate: 1, hl: true,
+  settings: { theme: 'system', fs: 1, cap: 15, replayKey: 'Alt+R', voice: '', vsrc: 'ai', rate: 1, hl: true,
     topics: { history: 2, science: 1, engineering: 1, nature: 1, body: 1, space: 1, life: 1, work: 1, travel: 1, food: 1, culture: 1, sport: 1, language: 1 } },
   words: {}, gq: {}, lessons: {}, gram: {}, days: {}, errors: [], facts: [], sentences: [], scanned: {}, scores: {}, mine: {},
   cur: { v: 'today' }
@@ -439,26 +439,68 @@ EI.SYNC_URL = 'https://ei-sync.chanhoang226.workers.dev';   // the deployed Work
   };
 })();
 
+/* ---------- recorded AI voice: file name for a text (same function in tools/audio-items.js) ---------- */
+EI.audioKey = str => {   // cyrb53 hash, base 36
+  let h1 = 0xdeadbeef, h2 = 0x41c6ce57;
+  for (let i = 0, ch; i < str.length; i++) { ch = str.charCodeAt(i); h1 = Math.imul(h1 ^ ch, 2654435761); h2 = Math.imul(h2 ^ ch, 1597334677); }
+  h1 = Math.imul(h1 ^ (h1 >>> 16), 2246822507); h1 ^= Math.imul(h2 ^ (h2 >>> 13), 3266489909);
+  h2 = Math.imul(h2 ^ (h2 >>> 16), 2246822507); h2 ^= Math.imul(h1 ^ (h1 >>> 13), 3266489909);
+  return (4294967296 * (2097151 & h2) + (h1 >>> 0)).toString(36);
+};
+
 /* ---------- audio (browser speech; label it honestly) ---------- */
-const A = EI.audio = { ok: typeof speechSynthesis !== 'undefined' && typeof SpeechSynthesisUtterance !== 'undefined', voices: [] };
+const A = EI.audio = { tts: typeof speechSynthesis !== 'undefined' && typeof SpeechSynthesisUtterance !== 'undefined', voices: [] };
+// Recorded AI voice: audio/<EI.audioKey(text)>.mp3 made by tools/make-audio.py; audio/index.js lists them (key -> 'h:xxxx').
+const VNAME = { h: 'Heart', b: 'Bella' };
+A.rec = () => !EI.inlined && EI.S.settings.vsrc !== 'browser' && typeof fetch === 'function' && typeof Audio !== 'undefined' && !!EI.audioIndex && Object.keys(EI.audioIndex).length > 0;
+A.fileFor = text => { if (!A.rec()) return null; const k = EI.audioKey(String(text || '').trim()), v = EI.audioIndex[k]; return v ? { url: 'audio/' + k + '.mp3?v=' + v.slice(2), voice: v[0] } : null; };
+Object.defineProperty(A, 'ok', { get: () => A.tts || A.rec() });
 A.init = () => {
-  if (!A.ok) return;
+  if (!A.tts) return;
   const f = () => { A.voices = speechSynthesis.getVoices().filter(v => /^en[-_]US/i.test(v.lang)); };
   f(); try { speechSynthesis.addEventListener('voiceschanged', f); } catch (e) { /* older browsers */ }
 };
 A.voice = () => A.voices.find(v => v.name === EI.S.settings.voice) || A.voices.find(v => /Google US|Samantha|Aria|Jenny|Ava|Zira/i.test(v.name)) || A.voices[0] || null;
-A.label = () => !A.ok ? 'No speech voice on this device' : 'Machine voice (browser, en-US)' + (A.voice() ? ' · ' + A.voice().name : '');
-A.say = (text, opt) => {
-  opt = opt || {};
-  if (!A.ok) { opt.onend && opt.onend(false); return; }
+A.label = text => {
+  const f = text ? A.fileFor(text) : null;
+  if (f) return 'AI voice (Kokoro · ' + VNAME[f.voice] + ')';
+  if (!text && A.rec()) return 'AI voice (Kokoro: Heart, Bella)' + (A.tts ? ' · browser voice for other text' : '');
+  return !A.tts ? 'No speech voice on this device' : 'Machine voice (browser, en-US)' + (A.voice() ? ' · ' + A.voice().name : '');
+};
+let el = null, seq = 0, blobUrl = null;
+const SILENT = 'data:audio/wav;base64,UklGRiQAAABXQVZFZm10IBAAAAABAAEAQB8AAEAfAAABAAgAZGF0YQAAAAA=';
+const speak = (text, opt, done) => {
+  if (!A.tts) { done(false); return; }
   speechSynthesis.cancel();
-  const u = new SpeechSynthesisUtterance(text), v = A.voice(), t0 = Date.now();
+  const u = new SpeechSynthesisUtterance(text), v = A.voice();
   u.lang = 'en-US'; if (v) u.voice = v; u.rate = opt.rate || EI.S.settings.rate || 1;
-  let fin = false;
-  const done = ok => { if (fin) return; fin = true; EI.log('a', Math.min(120, (Date.now() - t0) / 1000)); opt.onend && opt.onend(ok); };
   u.onend = () => done(true); u.onerror = () => done(false);
   A.cur = u; // keep a reference so the browser does not drop the utterance early
   speechSynthesis.speak(u);
 };
-A.stop = () => { if (A.ok) speechSynthesis.cancel(); };
+A.say = (text, opt) => {
+  opt = opt || {};
+  const my = ++seq, t0 = Date.now();
+  let fin = false;
+  const done = ok => { if (fin || my !== seq) return; fin = true; EI.log('a', Math.min(120, (Date.now() - t0) / 1000)); opt.onend && opt.onend(ok); };
+  if (A.tts) speechSynthesis.cancel();
+  const f = A.fileFor(text);
+  if (!f) { speak(text, opt, done); return; }
+  // one media element, started inside the tap so phones allow later plays; the file comes as a blob (no range requests)
+  if (!el) el = new Audio();
+  try { el.pause(); } catch (e) { /* ignore */ }
+  if (!el.dataset || !el.dataset.unlocked) { el.src = SILENT; el.play().then(() => { el.dataset.unlocked = '1'; }).catch(() => {}); }
+  fetch(f.url).then(r => { if (!r.ok) throw new Error('audio ' + r.status); return r.blob(); }).then(b => {
+    if (my !== seq) return;
+    if (blobUrl) URL.revokeObjectURL(blobUrl);
+    blobUrl = URL.createObjectURL(b);
+    el.onended = () => done(true);
+    el.onerror = () => { if (my === seq) speak(text, opt, done); };
+    el.src = blobUrl; el.playbackRate = opt.rate || EI.S.settings.rate || 1;
+    try { el.preservesPitch = true; el.webkitPreservesPitch = true; } catch (e) { /* ignore */ }
+    A.playing = f;
+    return el.play();
+  }).catch(() => { if (my === seq) speak(text, opt, done); });
+};
+A.stop = () => { seq++; if (el) try { el.pause(); } catch (e) { /* ignore */ } if (A.tts) speechSynthesis.cancel(); };
 })();

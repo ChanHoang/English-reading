@@ -5,7 +5,7 @@
 const fs = require('fs'), path = require('path'), vm = require('vm');
 const root = path.join(__dirname, '..'), rd = f => fs.readFileSync(path.join(root, f), 'utf8'), frag = process.argv.includes('--fragment');
 const ctx = { EI: {} }; vm.createContext(ctx); vm.runInContext(rd('data/manifest.js'), ctx);
-const js = [rd('js/core.js'), 'EI.inlined = true;', rd('data/manifest.js'), ...ctx.EI.files.map(rd), rd('js/ui.js')].join('\n;\n');
+const js = [rd('js/core.js'), 'EI.inlined = true;', rd('data/manifest.js'), ...ctx.EI.files.filter(f => !f.startsWith('audio/')).map(rd), rd('js/ui.js')].join('\n;\n');
 if (/<\/script/i.test(js)) throw new Error('a data file contains </script>');
 const head = '<title>English Improve</title>\n<meta name="claude:viewport-fit-sides" content="cover">\n<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Literata:opsz,wght@7..72,400;7..72,600&display=swap">\n<style>\n' + rd('css/app.css') + '\n</style>';
 const body = '<div id="app"><p class="boot">Loading English Improve…</p></div>\n<div id="sheet" hidden></div>\n<div id="modal" hidden></div>\n<script>\n' + js + '\n</script>';

@@ -1,0 +1,23 @@
+{
+  "_note": "Spoken-text fixes for tools/make-audio.py: [regex, replacement], applied in order to the text sent to the voice only. The text on screen does not change. Add a line when a word is read wrongly.",
+  "rules": [
+    ["\\bSt\\. (?=[A-Z])", "Saint "],
+    ["\\b(Gustav|Ludwig|Elizabeth|Albert) II\\b", "\\1 the Second"],
+    ["\\bGregory XIII\\b", "Gregory the Thirteenth"],
+    ["\\bHotel WHY\\b", "Hotel Why"],
+    ["\\bGD&T\\b", "G D and T"],
+    ["\\s&\\s", " and "],
+    ["–(?=\\d)", "minus "],
+    ["°C\\b", " degrees Celsius"],
+    ["£([\\d,.]+)( million| billion)?", "\\1\\2 pounds"],
+    ["\\$([\\d,.]+)( million| billion)?", "\\1\\2 dollars"],
+    ["\\b(\\d+) p\\.m\\.", "\\1 P M"],
+    ["\\b(\\d+) a\\.m\\.", "\\1 A M"],
+    ["\\bMs\\. ", "Miz "],
+    ["\\bCOVID\\b", "Covid"],
+    ["\\bOK\\b", "okay"],
+    ["\\b(\\d+) BC\\b", "\\1 B C"],
+    ["\\bPPAP\\b", "P P A P"],
+    ["\\b(FAI|CMM|QC|TV|DNA|DVD|JFK|BBC|YMCA|UK|UN|US|MSOP)\\b", "<spell>\\1</spell>"]
+  ]
+}

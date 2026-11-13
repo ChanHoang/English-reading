@@ -1,4 +1,4 @@
-Status: open
+Status: done by Claude in the manager session (2026-11-14), not handed to Gemini. Differences from the plan below: files are named by a hash of the text (`audio/<EI.audioKey(text)>.mp3`), not by reading/paragraph/sentence, so every place that plays a text finds its file without code changes; the index is `audio/index.js` (key → voice + version) and the build record is `audio/manifest.json`.
 
 # Việc: giọng đọc AI (Kokoro) cho bài đọc và từ vựng
 

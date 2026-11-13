@@ -157,7 +157,7 @@ with sync_playwright() as pw:
     ok('Grammar lesson marked done', s3['gram']['past-simple'].get('done'))
     # ---- vocabulary
     p.evaluate("() => EIui.go({v:'vocab', lv:'A2', per:20, pg:1})"); p.wait_for_selector('#vq')
-    p.fill('#vq', 'disc'); ok('Vocabulary search filters the list', p.locator('.wrow').count() == 2, p.locator('.wrow').count())
+    p.fill('#vq', 'discover'); ok('Vocabulary search filters the list', p.locator('.wrow').count() == 2, p.locator('.wrow').count())
     p.select_option('#vsl', 'vi'); p.fill('#vq', 'ky su')
     ok('Search by Vietnamese meaning works, with or without accents', p.locator('.wrow').count() == 1 and 'engineer' in p.inner_text('.wrow') and 'kỹ sư' in p.inner_text('.wrow'), p.locator('.wrow').count())
     shot(p, '09-vocabulary-vi-search')

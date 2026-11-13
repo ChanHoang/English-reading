@@ -344,6 +344,101 @@ EI.importState = (o, mode) => {
   S.created = Math.min(S.created, inc.created || S.created);
 };
 
+/* ---------- sync between devices (optional) ----------
+   No accounts: a random 16-character code is the key on a small Cloudflare Worker (sync/worker.js).
+   Progress stays in this browser first; the online copy is merged with the same rules as Import → Merge.
+   Settings, the open screen and backup dates stay per device. */
+EI.SYNC_URL = '';   // address of the deployed Worker, e.g. 'https://ei-sync.<name>.workers.dev' (empty = sync hidden)
+(function () {
+  const Y = EI.sync = {}, CK = 'ei.sync', AL = '0123456789ABCDEFGHJKMNPQRSTVWXYZ';
+  const FIELDS = ['created', 'words', 'gq', 'lessons', 'scores', 'gram', 'days', 'facts', 'sentences', 'errors', 'scanned', 'mine'];
+  const ls = (k, v) => { try { if (v === undefined) return localStorage.getItem(k); if (v === null) localStorage.removeItem(k); else localStorage.setItem(k, v); } catch (e) { /* storage blocked */ } return null; };
+  Y.url = () => (ls('ei.syncUrl') || EI.SYNC_URL || '').replace(/\/+$/, '');   // ei.syncUrl: override for tests
+  Y.available = () => !EI.inlined && !!Y.url() && typeof fetch === 'function' && !!(window.crypto && crypto.getRandomValues);
+  Y.cfg = () => { try { return JSON.parse(ls(CK)) || {}; } catch (e) { return {}; } };
+  Y.setCfg = c => ls(CK, c ? JSON.stringify(c) : null);
+  Y.on = () => Y.available() && !!Y.cfg().code;
+  Y.newCode = () => { const b = new Uint8Array(16); crypto.getRandomValues(b); return Array.from(b, x => AL[x & 31]).join(''); };
+  Y.clean = s => String(s || '').toUpperCase().replace(/[\s-]/g, '').replace(/[IL]/g, '1').replace(/O/g, '0');
+  Y.valid = c => /^[0-9A-HJKMNP-TV-Z]{16}$/.test(c);
+  Y.show = c => String(c || '').replace(/(.{4})(?=.)/g, '$1-');
+  Y.payload = () => { const o = {}; FIELDS.forEach(k => { o[k] = EI.S[k]; }); return o; };
+  // order-free fingerprint: the same progress gives the same text on every device, so nothing is written twice
+  const canon = v => v === null || typeof v !== 'object' ? JSON.stringify(v === undefined ? null : v)
+    : Array.isArray(v) ? '[' + v.map(canon).sort().join(',') + ']'
+    : '{' + Object.keys(v).filter(k => v[k] !== undefined).sort().map(k => JSON.stringify(k) + ':' + canon(v[k])).join(',') + '}';
+  Y.canon = canon;
+  const req = async (method, code, body, keepalive) => {
+    const res = await fetch(Y.url() + '/v1/s/' + code, { method, cache: 'no-store', keepalive: !!keepalive, headers: body ? { 'content-type': 'application/json' } : {}, body: body ? JSON.stringify(body) : undefined });
+    let data = null; try { data = await res.json(); } catch (e) { /* no body */ }
+    return { status: res.status, data };
+  };
+  const note = (c, err, status) => { c.err = err; c.errStatus = status || null; Y.setCfg(c); return { ok: false, why: err }; };
+  const gone = () => { Y.setCfg(null); return { ok: false, why: 'deleted' }; };
+  let busy = null;
+  // opt.create: an unknown code is created (new code); otherwise an unknown code is an error (joining)
+  Y.run = opt => busy || (busy = runOnce(opt || {}).finally(() => { busy = null; }));
+  async function runOnce(opt) {
+    const c = Y.cfg();
+    if (!c.code || !Y.available()) return { ok: false, why: 'off' };
+    if (navigator.onLine === false) return note(c, 'offline');
+    try {
+      let r = await req('GET', c.code);
+      if (r.status === 410) return gone();
+      if (r.status === 404 && opt.create) r = { status: 200, data: { rev: '', state: null } };
+      if (r.status === 404) return note(c, 'not_found');
+      if (r.status !== 200 || !r.data) return note(c, 'error', r.status);
+      for (let i = 0; i < 3; i++) {
+        const remote = r.data, had = canon(Y.payload());
+        if (remote.state && remote.state.words) EI.importState({ state: remote.state }, 'merge');
+        const mine = Y.payload(), h = canon(mine);
+        let rev = remote.rev || '';
+        if (!remote.state || h !== canon(remote.state)) {
+          const p = await req('PUT', c.code, { base: rev, state: mine });
+          if (p.status === 409 && p.data) { r = p; continue; }
+          if (p.status === 410) return gone();
+          if (p.status !== 200 || !p.data) return note(c, 'error', p.status);
+          rev = p.data.rev;
+        }
+        EI.save();
+        Object.assign(c, { rev, hash: h, at: Date.now(), err: null, errStatus: null }); Y.setCfg(c);
+        return { ok: true, changed: had !== h };
+      }
+      return note(c, 'busy');
+    } catch (e) { return note(c, 'network'); }
+  }
+  Y.create = () => { Y.setCfg({ code: Y.newCode() }); return Y.run({ create: true }); };
+  Y.join = async code => {
+    const prev = Y.cfg(); Y.setCfg({ code });
+    const r = await Y.run({});
+    if (!r.ok && r.why !== 'deleted') Y.setCfg(prev.code ? prev : null);
+    return r;
+  };
+  Y.stop = () => Y.setCfg(null);
+  Y.remove = async () => {
+    const c = Y.cfg(); if (!c.code) return { ok: true };
+    try { const r = await req('DELETE', c.code); if (r.status !== 200) return { ok: false, why: 'error' }; } catch (e) { return { ok: false, why: 'network' }; }
+    Y.setCfg(null); return { ok: true };
+  };
+  Y.dirty = () => { const c = Y.cfg(); return !!c.code && canon(Y.payload()) !== c.hash; };
+  // when the tab is hidden or closed: send the changes without waiting (keepalive allows about 64 KB)
+  Y.flush = () => {
+    const c = Y.cfg(); if (!c.code || !Y.available() || busy) return;
+    const mine = Y.payload(), h = canon(mine); if (h === c.hash) return;
+    const body = { base: c.rev || '', state: mine }; if (JSON.stringify(body).length > 60000) return;
+    req('PUT', c.code, body, true).then(p => { if (p.status === 200 && p.data) { const n = Y.cfg(); if (n.code === c.code) { Object.assign(n, { rev: p.data.rev, hash: h, at: Date.now(), err: null }); Y.setCfg(n); } } }).catch(() => {});
+  };
+  // automatic sync: on open, when the tab comes back, when the network returns, and every 5 minutes if something changed
+  Y.start = (onDone, paused) => {
+    if (!Y.available()) return;
+    const go = force => { if (!Y.cfg().code || (paused && paused()) || (!force && !Y.dirty())) return; Y.run().then(r => onDone && onDone(r)); };
+    go(true);
+    window.addEventListener('online', () => go(true));
+    document.addEventListener('visibilitychange', () => { if (document.visibilityState === 'hidden') Y.flush(); else if (Date.now() - (Y.cfg().at || 0) > 60000) go(true); });
+    setInterval(() => { if (document.visibilityState === 'visible') go(false); }, 5 * 60 * 1000);
+  };
+})();
+
 /* ---------- audio (browser speech; label it honestly) ---------- */
 const A = EI.audio = { ok: typeof speechSynthesis !== 'undefined' && typeof SpeechSynthesisUtterance !== 'undefined', voices: [] };
 A.init = () => {

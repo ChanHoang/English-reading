@@ -321,3 +321,35 @@ Lịch sử Trung cổ châu Âu vẫn chiếm khoảng một nửa số bài l�
 - Hoặc bắt đầu B1.
 - Bổ sung câu luyện cho mười bài dưới 25 phút.
 - Mở nguồn cho bài 37 khi có dịp.
+
+
+## 14. Đồng bộ giữa các máy bằng mã, không có tài khoản (2026-11-13)
+
+**Yêu cầu:** đồng bộ tiến độ khi học trên nhiều thiết bị. Bản dùng chính là GitHub Pages, dưới 5 người học.
+
+**Quyết định:**
+
+1. **Không làm hệ thống tài khoản.** Với dưới 5 người, tài khoản (email + mật khẩu, Supabase hay Firebase) buộc phải lưu dữ liệu cá nhân và thêm SDK, trái hai ràng buộc gốc. Thay vào đó dùng **mã đồng bộ** 16 ký tự ngẫu nhiên (80 bit, bảng chữ Crockford base32, không có I, L, O, U). Mã là khóa duy nhất trên máy chủ.
+2. **Máy chủ:** một Cloudflare Worker (`sync/worker.js`) không phụ thuộc thư viện, lưu trong Workers KV. Ba lệnh GET/PUT/DELETE trên `/v1/s/<mã>`.
+   - **Ghi kèm phiên bản:** máy gửi `base` là phiên bản nó đã đọc; nếu bản lưu đã khác thì máy chủ trả 409 kèm bản mới.
+   - **Xóa để lại dấu:** xóa thì để lại dấu “deleted” (410) trong 90 ngày, để các máy khác tự ngừng.
+   - **Giới hạn:** tối đa 1 MB mỗi mã; mã không ghi gì trong khoảng 13 tháng sẽ tự hết hạn.
+   - **Trang được phép:** chỉ nhận yêu cầu từ `https://chanhoang.github.io`; đổi bằng biến `ALLOWED_ORIGINS`.
+3. **Trình duyệt vẫn là bản chính** (học offline như cũ). Đồng bộ = đọc bản trực tuyến → gộp bằng đúng quy tắc Import → Merge → ghi lại nếu khác.
+   - So sánh bằng “dấu vân tay” không phụ thuộc thứ tự, nên hai máy đã giống nhau thì không ghi thêm.
+   - Đồng bộ khi mở web, khi quay lại tab, khi có mạng lại, 5 phút một lần nếu có thay đổi, và bằng nút Sync now. Khi đóng tab, máy gửi nhanh thay đổi nếu dữ liệu dưới 60 KB.
+   - Không đồng bộ khi đang làm dở một bài học, để không đổi dữ liệu giữa chừng.
+4. **Không đồng bộ** cài đặt, màn hình đang mở, ngày xuất file. Erase all progress cũng ngừng đồng bộ trên máy đó (bản trực tuyến không bị xóa).
+5. **Ẩn khi chưa cài:** thẻ Sync chỉ hiện khi `EI.SYNC_URL` (trong `js/core.js`) có địa chỉ Worker. Bản một file trên claude.ai không có đồng bộ, vì trang ở đó không được gọi máy chủ ngoài.
+6. **Service worker** không lưu cache các yêu cầu `/v1/s/`. Cache lên `english-improve-v7`.
+7. **Kiểm thử:**
+   - `tools/sync-test.mjs`: 13 kiểm tra cho Worker, với KV giả.
+   - `tools/e2e-test.py`: thêm 9 kiểm tra hai “máy” trình duyệt, chạy Worker thật trên máy qua `tools/sync-dev-server.mjs` (tạo mã, nhập mã sai và đúng, gộp tiến độ hai chiều, cài đặt không bị đồng bộ, xóa bản trực tuyến).
+   - CI chạy cả hai.
+
+**Đánh đổi đã chấp nhận:**
+- Ai có mã thì đọc và sửa được tiến độ của người đó. Đây là dữ liệu học, không nhạy cảm.
+- Workers KV có độ trễ lan truyền giữa các vùng. Nhờ ghi kèm phiên bản và luôn gộp (không xóa), độ trễ đó chỉ làm chậm một lượt đồng bộ, không làm mất dữ liệu.
+- Gói miễn phí giới hạn 1.000 lần ghi/ngày cho cả tài khoản. Khoảng 12 lần ghi mỗi giờ cho mỗi người đang học, nên đủ cho dưới 5 người.
+
+**Chưa xong:** chủ dự án cần tạo tài khoản Cloudflare và cài Worker theo `sync/README.md`, rồi gửi địa chỉ Worker để điền vào `EI.SYNC_URL`.

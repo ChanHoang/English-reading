@@ -80,7 +80,7 @@ function listHTML() {
     return '<h2>Today</h2><p class="m muted">' + new Date().toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric' }) + '</p>' +
       '<div class="stat"><b class="num">' + p.dueAll + '</b><span>words due for review</span></div><p class="eyebrow">Last three weeks</p>' + calHTML(21); }
   if (v === 'progress') return '<h2>Progress</h2>' + [['p-week', 'This week'], ['p-score', 'Practice scores'], ['p-cover', 'Coverage'], ['p-mem', 'Memory'], ['p-cal', 'Study days'], ['p-err', 'Mistakes'], ['p-facts', 'Fact collection'], ['p-mine', 'My words'], ['p-sent', 'My sentences']].map(x => jump(x[0], x[1])).join('');
-  if (v === 'settings') return '<h2>Settings</h2>' + [['s-look', 'Display'], ['s-study', 'Study'], ['s-audio', 'Audio'], ['s-topics', 'Topic mix'], ['s-data', 'Backup']].map(x => jump(x[0], x[1])).join('');
+  if (v === 'settings') return '<h2>Settings</h2>' + [['s-look', 'Display'], ['s-study', 'Study'], ['s-audio', 'Audio'], ['s-topics', 'Topic mix'], ...(EI.sync.available() ? [['s-sync', 'Sync']] : []), ['s-data', 'Backup']].map(x => jump(x[0], x[1])).join('');
   if (v === 'info') return '<h2>Info</h2>' + [['i-how', 'How to use'], ['i-srs', 'How review works'], ['i-data', 'Data sources'], ['i-src', 'Sources for each story'], ['i-audio', 'Audio'], ['i-missing', 'Not available yet']].map(x => jump(x[0], x[1])).join('');
   return '';
 }
@@ -111,7 +111,7 @@ function calHTML(n) {
 function vToday() {
   const p = EI.plan(), st = EI.streak(), ls = p.lesson, t = EI.today();
   const inMem = Object.values(S.words).filter(r => r.s === 'srs').length;
-  const lastX = S.lastExport == null ? S.created : S.lastExport, needBackup = Object.keys(S.lessons).length && t - lastX >= 14;
+  const lastX = S.lastExport == null ? S.created : S.lastExport, needBackup = Object.keys(S.lessons).length && t - lastX >= 14 && !(EI.sync.on() && Date.now() - (EI.sync.cfg().at || 0) < 7 * 864e5);
   const sc = Object.values(S.scores), avg = sc.length ? Math.round(sc.reduce((a, x) => a + x.last, 0) / sc.length) : null;
   let h = '<div class="ph"><p class="eyebrow">' + new Date().toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric' }) + '</p><h1>Today</h1></div>';
   h += '<section class="card"><h2>' + (ls ? (ls.kind === 'reading' ? (ls.again ? 'Read again' : ls.resume ? 'Continue your story' : 'Today’s story') : 'Today’s grammar') + ' · about ' + ls.mins + ' min' : 'Nothing new to study') + '</h2>';
@@ -639,12 +639,40 @@ function vSettings() {
   h += '<section class="card" id="s-study"><h2>Study</h2><label class="f">Reviews per day, at most' + sel('set-cap', [[8, '8 (about 2 min)'], [15, '15 (about 5 min)'], [25, '25 (about 8 min)'], [40, '40 (about 12 min)'], [9999, 'No limit']], st.cap) + '</label><p class="vi">Giới hạn này giữ cho lượt ôn không lấn bài học. Khi nghỉ lâu, lượng ôn dồn lại được chia ra nhiều ngày, ưu tiên từ sắp quên nhất.</p></section>';
   h += '<section class="card" id="s-audio"><h2>Audio</h2><p class="audiolabel">Current source: ' + esc(EI.audio.label()) + '</p><label class="f">Voice (en-US voices on this device)' + sel('set-voice', [['', 'Automatic'], ...EI.audio.voices.map(v => [v.name, v.name])], st.voice) + '</label><label class="f">Key to hear the sentence again (while reading)' + sel('set-key', [['Alt+R', 'Alt+R'], ['R', 'R'], ['Space', 'Space'], ['Off', 'Off']], st.replayKey) + '</label><div class="rowg"><button class="btn" data-a="say" data-t="This is the voice you will hear in English Improve.">' + ic('phones') + 'Test the voice</button></div></section>';
   h += '<section class="card" id="s-topics"><h2>Topic mix</h2><p class="vi">Số càng lớn, chủ đề đó càng được gợi ý nhiều. Mặc định: lịch sử 2, mỗi chủ đề khác 1 (lịch sử nhỉnh hơn một chút). Đặt 0 để tạm không gợi ý một chủ đề.</p>' + Object.keys(EI.TOPICS).map(k => '<div class="mrow"><span>' + EI.TOPICS[k] + '</span><input type="number" min="0" max="10" data-topic="' + k + '" value="' + st.topics[k] + '" aria-label="' + EI.TOPICS[k] + ' weight"></div>').join('') + '</section>';
+  if (EI.sync.available()) h += syncCard();
   h += '<section class="card" id="s-data"><h2>Backup</h2><p class="vi">Tiến độ chỉ lưu trong trình duyệt này. Hãy xuất file định kỳ, nhất là trước khi đổi máy hoặc xóa dữ liệu trình duyệt.' + (S.lastExport != null ? ' Lần xuất gần nhất: ' + EI.fmtDay(S.lastExport) + '.' : ' Bạn chưa xuất lần nào.') + '</p><div class="rowg"><button class="btn primary" data-a="export">Export progress</button><button class="btn" data-a="importOpen">Import progress</button><button class="btn" data-a="resetAsk">Erase all progress</button></div>' +
     '<p class="vi">Cài lên màn hình chính: mở web bằng Chrome/Edge/Safari qua địa chỉ https, chọn “Add to Home screen / Install app”. Sau lần tải đầu, web mở được khi mất mạng.</p></section>';
   return page(h);
 }
 function modal(h) { const m = $('#modal'); m.innerHTML = '<div class="dialog" role="dialog">' + h + '</div>'; m.hidden = false; }
 A.closeModal = () => { const m = $('#modal'); m.hidden = true; m.innerHTML = ''; };
+
+/* ---------- sync between devices ---------- */
+const SYNC_ERR = { offline: 'Máy đang mất mạng. Sẽ đồng bộ khi có mạng lại.', network: 'Không kết nối được máy chủ đồng bộ. Sẽ thử lại sau.', not_found: 'Không tìm thấy mã này. Kiểm tra lại từng ký tự.', busy: 'Hai máy vừa đồng bộ cùng lúc. Bấm Sync now để thử lại.', error: 'Máy chủ đồng bộ báo lỗi.', deleted: 'Bản trực tuyến đã bị xóa từ một máy khác, nên máy này đã ngừng đồng bộ. Tiến độ trên máy này vẫn còn.' };
+const syncWhen = ms => new Date(ms).toLocaleString('vi-VN', { hour: '2-digit', minute: '2-digit', day: '2-digit', month: '2-digit' });
+function syncCard() {
+  const c = EI.sync.cfg();
+  let h = '<section class="card" id="s-sync"><h2>Sync between devices</h2>';
+  if (!c.code) return h + '<p class="vi">Học trên nhiều máy (điện thoại, máy tính công ty, máy ở nhà) mà tiến độ vẫn là một. Không cần tài khoản hay email: máy đầu tiên tạo một <b>mã đồng bộ</b>, các máy khác nhập mã đó.</p><p class="vi">Ai có mã thì xem và sửa được tiến độ học của bạn, nên đừng gửi mã cho người khác. Mỗi người học dùng một mã riêng.</p><div class="rowg"><button class="btn primary" data-a="syncCreate">Create a sync code</button><button class="btn" data-a="syncJoinOpen">I have a code</button></div></section>';
+  h += '<p>Sync code: <code class="num" id="sycode">' + esc(EI.sync.show(c.code)) + '</code> <button class="btn ghost" data-a="syncCopy">Copy</button></p>';
+  h += '<p class="vi">' + (c.err ? '<span style="color:var(--bad)">' + esc(SYNC_ERR[c.err] || SYNC_ERR.error) + (c.errStatus ? ' (HTTP ' + c.errStatus + ')' : '') + '</span> ' : '') + (c.at ? 'Lần đồng bộ gần nhất: ' + syncWhen(c.at) + '.' : 'Chưa đồng bộ lần nào.') + ' Máy tự đồng bộ khi mở web, khi quay lại web và khoảng 5 phút một lần nếu có thay đổi. Nhập mã này ở máy khác để học tiếp ở đó.</p>';
+  return h + '<div class="rowg"><button class="btn primary" data-a="syncNow">Sync now</button><button class="btn" data-a="syncStopAsk">Stop syncing on this device</button><button class="btn" data-a="syncDelAsk">Delete the online copy</button></div></section>';
+}
+const syncShow = (r, okMsg) => { if (S.cur.v === 'settings' || S.cur.v === 'today' || S.cur.v === 'progress') render(); if (r.ok) toast(okMsg); else if (r.why !== 'off') toast(r.why === 'deleted' ? 'The online copy was deleted.' : 'Sync failed — see Settings.'); };
+A.syncCreate = d => { toast('Creating a sync code…'); EI.sync.create().then(r => syncShow(r, 'Sync code created. Enter it on your other devices.')); };
+A.syncJoinOpen = () => modal('<h2>Use a sync code</h2><p class="vi">Nhập mã 16 ký tự đã tạo trên máy khác (không phân biệt hoa thường, có hay không có dấu gạch đều được). Tiến độ trên máy này sẽ được <b>gộp</b> với bản trực tuyến, không mất gì.</p><input id="sycin" autocomplete="off" spellcheck="false" placeholder="XXXX-XXXX-XXXX-XXXX" maxlength="24"><p id="syce" class="small" style="color:var(--bad)"></p><div class="rowg"><button class="btn primary" data-a="syncJoin">Connect</button><button class="btn" data-a="closeModal">Cancel</button></div>');
+A.syncJoin = () => {
+  const code = EI.sync.clean($('#sycin').value), e = $('#syce');
+  if (!EI.sync.valid(code)) { e.textContent = 'Mã gồm 16 ký tự chữ và số (không có I, L, O, U). Kiểm tra lại.'; return; }
+  e.textContent = 'Connecting…';
+  EI.sync.join(code).then(r => { if (!r.ok) { e.textContent = SYNC_ERR[r.why] || SYNC_ERR.error; return; } A.closeModal(); syncShow(r, 'Connected. Progress from both devices is merged.'); });
+};
+A.syncNow = () => { toast('Syncing…'); EI.sync.run().then(r => syncShow(r, 'Synced.')); };
+A.syncCopy = () => { const t = EI.sync.show(EI.sync.cfg().code); (navigator.clipboard ? navigator.clipboard.writeText(t) : Promise.reject()).then(() => toast('Code copied.'), () => toast('Select the code and copy it by hand.')); };
+A.syncStopAsk = () => modal('<h2>Stop syncing on this device?</h2><p class="vi">Máy này giữ nguyên tiến độ hiện có nhưng không gửi và nhận thay đổi nữa. Bản trực tuyến và các máy khác không bị ảnh hưởng. Muốn đồng bộ lại thì nhập lại mã.</p><div class="rowg"><button class="btn" data-a="syncStopDo">Stop syncing</button><button class="btn primary" data-a="closeModal">Keep syncing</button></div>');
+A.syncStopDo = () => { EI.sync.stop(); A.closeModal(); render(); toast('Sync stopped on this device.'); };
+A.syncDelAsk = () => modal('<h2>Delete the online copy?</h2><p class="vi">Xóa tiến độ đang lưu trên máy chủ đồng bộ. Tiến độ trong trình duyệt của từng máy vẫn còn. Các máy khác đang dùng mã này sẽ tự ngừng đồng bộ ở lần kết nối sau. Không hoàn tác được.</p><div class="rowg"><button class="btn" data-a="syncDelDo">Delete online copy</button><button class="btn primary" data-a="closeModal">Cancel</button></div>');
+A.syncDelDo = () => EI.sync.remove().then(r => { A.closeModal(); render(); toast(r.ok ? 'Online copy deleted. This device no longer syncs.' : 'Could not reach the sync server. Nothing was deleted.'); });
 A.export = () => {
   const txt = EI.exportText(); S.lastExport = EI.today(); EI.save();
   const name = 'english-improve-backup-' + new Date().toISOString().slice(0, 10) + '.json';
@@ -665,8 +693,8 @@ A.importRead = async () => {
   } catch (e) { const el = $('#ime'); if (el) el.textContent = e.message || 'This file could not be read.'; }
 };
 A.importDo = d => { EI.importState(pending, d.m); S = EI.S; pending = null; EI.save(); A.closeModal(); go({ v: 'progress' }); toast(d.m === 'merge' ? 'Backup merged.' : 'Progress replaced from the backup.'); };
-A.resetAsk = () => modal('<h2>Erase all progress?</h2><p class="vi">Xóa toàn bộ tiến độ, lịch ôn, câu đã lưu và cài đặt trên trình duyệt này. Không hoàn tác được. Hãy Export trước nếu bạn còn muốn giữ.</p><div class="rowg"><button class="btn" data-a="resetDo">Erase everything</button><button class="btn primary" data-a="closeModal">Keep my progress</button></div>');
-A.resetDo = () => { try { localStorage.removeItem('ei.v1'); } catch (e) { /* ignore */ } EI.load(); S = EI.S; A.closeModal(); go({ v: 'today' }); toast('All progress erased.'); };
+A.resetAsk = () => modal('<h2>Erase all progress?</h2><p class="vi">Xóa toàn bộ tiến độ, lịch ôn, câu đã lưu và cài đặt trên trình duyệt này. Không hoàn tác được. Hãy Export trước nếu bạn còn muốn giữ.' + (EI.sync.on() ? ' Máy này cũng ngừng đồng bộ; bản trực tuyến và các máy khác không bị xóa.' : '') + '</p><div class="rowg"><button class="btn" data-a="resetDo">Erase everything</button><button class="btn primary" data-a="closeModal">Keep my progress</button></div>');
+A.resetDo = () => { try { localStorage.removeItem('ei.v1'); } catch (e) { /* ignore */ } EI.sync.stop(); EI.load(); S = EI.S; A.closeModal(); go({ v: 'today' }); toast('All progress erased.'); };
 
 /* ================= Info ================= */
 function vInfo() {
@@ -744,6 +772,8 @@ function boot() {
   const c = S.cur || {}; // reopen exactly where the learner left off
   if ((c.v === 'reading' && c.rid && !EI.rById(c.rid)) || (c.v === 'grammar' && c.gid && !EI.gById(c.gid)) || (c.v === 'vocab' && c.w && !EI.W[c.w]) || !c.v) S.cur = { v: 'today' };
   render();
+  EI.sync.start(r => { if (r.ok && r.changed && ['today', 'progress'].includes(S.cur.v)) render(); else if (S.cur.v === 'settings') render(); },
+    () => { const L = S.cur.v === 'reading' && S.cur.rid && S.lessons[S.cur.rid]; return !!(L && !L.doneDay) || !!run; });
   setTimeout(() => { if (EI.audio.ok && $('.audiolabel, .player .lab')) render(); }, 700); // voices load late in some browsers
   if (!EI.inlined && 'serviceWorker' in navigator && /^https?:$/.test(location.protocol)) {
     navigator.serviceWorker.register('sw.js').then(() => navigator.serviceWorker.ready).then(reg => {

@@ -14,6 +14,8 @@ data/readings/<level>-p<pass>-<nn>.js             mỗi bài đọc một file
 tools/check-content.js                            kiểm tra nội dung — phải 0 error
 tools/tag-targets.js                              tìm từ mục tiêu chưa đánh dấu
 tools/e2e-test.py                                 kiểm thử giao diện (Playwright)
+tools/sync-test.mjs, tools/sync-dev-server.mjs   kiểm thử và chạy thử máy chủ đồng bộ
+sync/worker.js, sync/README.md                    máy chủ đồng bộ (Cloudflare Worker + KV) và cách cài
 CONTENT_GUIDE.md, DECISIONS.md                    chuẩn nội dung, nhật ký quyết định
 ```
 

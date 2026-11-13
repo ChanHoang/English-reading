@@ -228,6 +228,47 @@ with sync_playwright() as pw:
     except Exception: off = False
     ok('Offline: the app reopens on the same story after the first load', off and m.evaluate("() => EI.R.length") >= 8)
     ok('No JavaScript errors on phone', not merr, merr[:3])
-    ph.close(); b.close()
+    ph.close()
+
+    # ---- sync between two devices (local copy of sync/worker.js on port 8787)
+    import subprocess, os, time, urllib.request, urllib.error
+    srv = subprocess.Popen(['node', os.path.join(os.path.dirname(os.path.abspath(__file__)), 'sync-dev-server.mjs'), '8787'], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+    try:
+        for _ in range(60):
+            try: urllib.request.urlopen('http://localhost:8787/'); break
+            except urllib.error.HTTPError: break          # the server answers (403): it is up
+            except Exception: time.sleep(0.1)
+        devs = []
+        for _ in range(2):
+            cx = b.new_context(viewport={'width': 1280, 'height': 860}); cx.add_init_script("localStorage.setItem('ei.syncUrl', 'http://localhost:8787')")
+            pg = cx.new_page(); er = []; pg.on('pageerror', lambda x, er=er: er.append(str(x))); pg.goto(URL); pg.wait_for_selector('.shell'); devs.append((cx, pg, er))
+        (ca, A_, ea), (cb, B_, eb) = devs
+        w0, w1, f0 = A_.evaluate("() => [Object.keys(EI.W)[0], Object.keys(EI.W)[1], EI.R[0].id]")
+        A_.evaluate("([w, f]) => { EI.setKnown(w, true); EI.S.facts.push(f); EI.save(); }", [w0, f0])
+        B_.evaluate("w => { EI.setKnown(w, true); EI.save(); }", w1)
+        A_.evaluate("() => EIui.go({ v: 'settings' })"); A_.wait_for_selector('#s-sync')
+        ok('Sync: Settings shows the sync card when a sync server is set', A_.locator('[data-a=syncCreate]').count() == 1)
+        A_.click('[data-a=syncCreate]'); A_.wait_for_selector('#sycode', timeout=8000)
+        code = A_.inner_text('#sycode').strip()
+        ok('Sync: device A creates a 16-character code shown as XXXX-XXXX-XXXX-XXXX', re.fullmatch(r'[0-9A-HJKMNP-TV-Z]{4}(-[0-9A-HJKMNP-TV-Z]{4}){3}', code), code)
+        B_.evaluate("() => EIui.go({ v: 'settings' })"); B_.wait_for_selector('#s-sync'); B_.click('[data-a=syncJoinOpen]')
+        B_.fill('#sycin', 'abcd'); B_.click('[data-a=syncJoin]')
+        ok('Sync: a malformed code is refused with a message', 'Mã gồm 16 ký tự' in B_.inner_text('#syce'))
+        B_.fill('#sycin', code.replace('-', '').lower()); B_.click('[data-a=syncJoin]'); B_.wait_for_selector('#sycode', timeout=8000)
+        got = B_.evaluate("([w0, w1, f]) => [EI.status(w0), EI.status(w1), EI.S.facts.includes(f)]", [w0, w1, f0])
+        ok('Sync: device B joins with the code (lower case, no dashes) and gets A’s progress merged with its own', got == ['Known', 'Known', True], got)
+        A_.click('[data-a=syncNow]'); A_.wait_for_function("() => !EI.sync.cfg().err && EI.S.words[%s] && EI.status(%s) === 'Known'" % (repr(w1), repr(w1)), timeout=8000)
+        ok('Sync: device A receives B’s progress with Sync now', A_.evaluate("w => EI.status(w)", w1) == 'Known')
+        same = A_.evaluate("() => EI.sync.canon(EI.sync.payload())") == B_.evaluate("() => EI.sync.canon(EI.sync.payload())")
+        ok('Sync: both devices end with the same progress', same)
+        ok('Sync: settings stay per device (not part of the synced data)', 'settings' not in A_.evaluate("() => Object.keys(EI.sync.payload())"))
+        B_.click('[data-a=syncDelAsk]'); B_.click('[data-a=syncDelDo]'); B_.wait_for_selector('[data-a=syncCreate]', timeout=8000)
+        A_.click('[data-a=syncNow]'); A_.wait_for_function("() => !EI.sync.cfg().code", timeout=8000)
+        ok('Sync: after one device deletes the online copy, the other stops syncing and keeps its progress', A_.evaluate("w => EI.status(w)", w0) == 'Known' and A_.locator('[data-a=syncCreate]').count() == 1)
+        ok('No JavaScript errors during sync', not ea and not eb, (ea + eb)[:3])
+        ca.close(); cb.close()
+    finally:
+        srv.terminate()
+    b.close()
 print(f'\n{sum(res)}/{len(res)} checks passed')
 sys.exit(0 if all(res) else 1)

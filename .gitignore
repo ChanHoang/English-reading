@@ -7,3 +7,5 @@ shots/
 Thumbs.db
 .env
 .env.*
+tools/.kokoro/
+audio/*.part.mp3

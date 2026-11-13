@@ -56,5 +56,6 @@ EI.files = [
   'data/readings/a2-p1-51.js',
   'data/readings/a2-p1-52.js',
   'data/readings/a2-p1-53.js',
-  'data/readings/a2-p1-54.js'
+  'data/readings/a2-p1-54.js',
+  'audio/index.js'
 ];

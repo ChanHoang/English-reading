@@ -362,4 +362,8 @@ Lịch sử Trung cổ châu Âu vẫn chiếm khoảng một nửa số bài l�
 - **Ngắt dài hơn:** 0,45 s sau dấu phẩy, 0,55 s sau `;` `:` `—`, 0,9 s cuối câu. Không ngắt trong số (`3,000`) hay sau viết tắt (`St.`).
 - **Ngoại lệ quy tắc “không file nhị phân lớn”:** cho phép thư mục `audio/`, MP3 đơn kênh 48 kbps, dự kiến khoảng 100 MB. Phải dừng lại báo nếu vượt 200 MB.
 - **Nhãn trung thực:** web ghi rõ là “AI voice (Kokoro)”, không để người học nghĩ là giọng người thật.
-- **Giao việc:** cho Gemini qua file `tasks/audio-kokoro.md`. Quản lý duyệt PR theo các mục “Kiểm tra chất lượng” trong file đó.
+- **Người làm:** chủ dự án đổi ý, giao cho Claude làm luôn trong phiên quản lý (không dùng Gemini). File việc `tasks/audio-kokoro.md` vẫn giữ làm đặc tả.
+- **Cách đặt tên file:** theo băm của chính câu chữ (`audio/<EI.audioKey(text)>.mp3`, hàm cyrb53 dùng chung cho app và công cụ), nên mọi chỗ phát âm thanh (bài đọc, từ, câu ví dụ, luyện nghe, chính tả, shadowing) tự tìm được file mà không phải sửa từng chỗ. Câu trùng nhau chỉ có một file.
+- **Phát:** một thẻ `<audio>` dùng chung, mở khóa bằng âm lặng ngay trong lần chạm đầu (điện thoại chặn phát tự động), tải file thành blob để tránh yêu cầu Range qua service worker; tốc độ phát theo cài đặt, giữ cao độ. Lỗi tải → giọng trình duyệt.
+- **Service worker:** file âm thanh nằm trong cache riêng `ei-audio-v1`, không bị xóa khi app cập nhật; tải khi nghe lần đầu, không tải trước.
+- **Công cụ:** `tools/audio-items.js` (danh sách câu và giọng), `tools/make-audio.py` (tạo, chỉ làm lại phần thay đổi, `--check`, `--shard k/n` để chạy song song), `tools/audio-lexicon.json` (sửa cách đọc: viết tắt, số La Mã, °C, £/$, p.m.). Mô hình tải về `tools/.kokoro/`, không commit.

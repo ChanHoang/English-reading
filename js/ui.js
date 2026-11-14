@@ -16,7 +16,7 @@ const ICON = {
   eye: '<path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/>',
   mic: '<rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/>',
   star: '<path d="M12 3l2.7 5.6 6.1.8-4.5 4.3 1.1 6.1L12 16.9 6.6 19.8l1.1-6.1L3.2 9.4l6.1-.8z"/>',
-  x: '<path d="M6 6l12 12M18 6L6 18"/>', check: '<path d="M5 12l5 5 9-10"/>', back: '<path d="M15 5l-7 7 7 7"/>',
+  x: '<path d="M6 6l12 12M18 6L6 18"/>', check: '<path d="M5 12l5 5 9-10"/>', back: '<path d="M15 5l-7 7 7 7"/>', fwd: '<path d="M9 5l7 7-7 7"/>',
   gear: '<path d="M4 6h8M18 6h2M4 12h2M12 12h8M4 18h10M20 18h0"/><circle cx="15" cy="6" r="2.2"/><circle cx="9" cy="12" r="2.2"/><circle cx="17" cy="18" r="2.2"/>',
   info: '<circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7.5v.5"/>',
   today: '<circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M5 5l1.5 1.5M17.5 17.5L19 19M19 5l-1.5 1.5M6.5 17.5L5 19"/>',
@@ -34,6 +34,23 @@ const lev = (a, b) => { const d = Array.from({ length: a.length + 1 }, (_, i) =>
 const toast = m => { clearTimeout(toastT); let t = $('.toast'); if (!t) { t = document.createElement('div'); t.className = 'toast'; document.body.appendChild(t); } t.textContent = m; toastT = setTimeout(() => t.remove(), 2600); };
 const mark = (plain, surf) => { const i = plain.indexOf(surf); return i < 0 ? esc(plain) : esc(plain.slice(0, i)) + '<b>' + esc(surf) + '</b>' + esc(plain.slice(i + surf.length)); };
 const camb = w => 'https://dictionary.cambridge.org/dictionary/english/' + encodeURIComponent(String(w).toLowerCase().replace(/ /g, '-'));
+/* Cambridge does not allow its pages inside another site, so it opens in a small separate window (a normal tab on phones) */
+const cambA = (w, t) => '<a href="' + camb(w) + '" target="_blank" rel="noopener" data-a="camPop" data-w="' + esc(w) + '">' + (t || 'Cambridge Dictionary') + '</a>';
+
+/* ================= back / forward (browser history: the arrows, the browser buttons and the phone’s back gesture all work) ================= */
+let NAVI = 0, NAVMAX = 0;
+function snap() { const c = S.cur, L = c.v === 'reading' && c.rid && S.lessons[c.rid]; return { cur: JSON.parse(JSON.stringify(c)), stage: L ? L.stage : null }; }
+function pushNav() { try { NAVI++; NAVMAX = NAVI; history.pushState({ ei: snap(), i: NAVI }, ''); } catch (e) {} paintNav(); }
+function paintNav() { document.querySelectorAll('[data-a="navBack"]').forEach(b => { b.disabled = NAVI <= 0; }); document.querySelectorAll('[data-a="navFwd"]').forEach(b => { b.disabled = NAVI >= NAVMAX; }); }
+const navHTML = () => '<span class="navarrows"><button class="btn icon ghost" data-a="navBack" aria-label="Go back"' + (NAVI <= 0 ? ' disabled' : '') + '>' + ic('back') + '</button><button class="btn icon ghost" data-a="navFwd" aria-label="Go forward"' + (NAVI >= NAVMAX ? ' disabled' : '') + '>' + ic('fwd') + '</button></span>';
+window.addEventListener('popstate', e => {
+  const st = e.state && e.state.ei; if (!st || !S) return;
+  NAVI = e.state.i || 0; NAVMAX = Math.max(NAVMAX, NAVI);
+  EI.audio.stop(); P.on = false; closeSheet(); run = null; runs.clear(); viOpen = false; openVi = new Set();
+  S.cur = st.cur; const L = S.cur.v === 'reading' && S.cur.rid && S.lessons[S.cur.rid];
+  if (L && st.stage) { let g = st.stage; if (['practice', 'write', 'done'].includes(g)) g = L.pst || g; if (g === 'predict' && L.guess != null) g = 'learn'; L.stage = g; }
+  EI.save(); render(); const m = $('#main'); if (m && !(L && L.stage === 'read' && L.scroll)) m.scrollTop = 0;
+});
 
 /* ================= shell ================= */
 function applyTheme() {
@@ -43,7 +60,7 @@ function applyTheme() {
 }
 function go(cur) {
   EI.audio.stop(); P.on = false; closeSheet(); S.cur = cur; run = null; runs.clear(); viOpen = false; openVi = new Set();
-  EI.save(); render(); const m = $('#main'); if (m) m.scrollTop = 0;
+  EI.save(); render(); const m = $('#main'); if (m) m.scrollTop = 0; pushNav();
 }
 function keep() { /* re-render without losing the scroll position (show/hide meaning, Known…) */
   const m = $('#main'), l = $('.list'), mt = m ? m.scrollTop : 0, lt = l ? l.scrollTop : 0;
@@ -60,11 +77,11 @@ function render() {
   const canBack = (v === 'vocab' && c.w) || (v === 'grammar' && c.gid) || (v === 'reading' && c.rid) || v === 'scan' || v === 'settings' || v === 'info';
   $('#app').innerHTML =
     '<div class="shell' + (noList ? ' no-list' : '') + (detail ? ' detail' : '') + (focus ? ' focus' : '') + '">' +
-    '<header class="topbar">' + (canBack ? '<button class="btn icon ghost" data-a="back" aria-label="Back">' + ic('back') + '</button>' : '') +
-      '<div class="brand">English <span>Improve</span></div>' +
+    '<header class="topbar">' + (canBack ? '<button class="btn ghost small" data-a="back" aria-label="Up to the list">List</button>' : '') +
+      '<div class="brand">English <span>Improve</span></div>' + navHTML() +
       '<button class="btn icon ghost" data-a="go" data-v="settings" aria-label="Settings">' + ic('gear') + '</button>' +
       '<button class="btn icon ghost" data-a="go" data-v="info" aria-label="Info">' + ic('info') + '</button><span class="ver" title="Version of the app">' + EI.VERSION + '</span></header>' +
-    '<nav class="rail" aria-label="Main menu"><div class="brand">English <span>Improve</span></div>' +
+    '<nav class="rail" aria-label="Main menu"><div class="brand">English <span>Improve</span></div>' + navHTML() +
       NAV.map(([k, t]) => '<button class="nav' + (sec === k ? ' on' : '') + '" data-a="go" data-v="' + k + '">' + ic(k) + t + '</button>').join('') +
       '<div class="grow"></div>' +
       '<button class="nav' + (v === 'settings' ? ' on' : '') + '" data-a="go" data-v="settings">' + ic('gear') + 'Settings</button>' +
@@ -73,7 +90,7 @@ function render() {
     '<main class="main" id="main">' + mainHTML() + '</main>' +
     '<nav class="tabs" aria-label="Main menu">' + NAV.map(([k, t]) => '<button class="tab' + (sec === k ? ' on' : '') + '" data-a="go" data-v="' + k + '">' + ic(k) + t + '</button>').join('') + '</nav></div>';
   const L = v === 'reading' && c.rid && S.lessons[c.rid];
-  if (L && L.stage === 'read') { const m = $('#main'); if (L.scroll) m.scrollTop = L.scroll; m.onscroll = () => { L.scroll = m.scrollTop; }; paintPlayer(); }
+  if (L && L.stage === 'read') { const m = $('#main'); if (L.scroll) m.scrollTop = L.scroll; m.onscroll = () => { L.scroll = m.scrollTop; }; paintPlayer(); if (sh) drawSheet(); }
   const inp = $('#ans'); if (inp && !inp.disabled && !matchMedia('(max-width:820px)').matches) inp.focus();
 }
 function listHTML() {
@@ -120,10 +137,10 @@ function vToday() {
   const lastX = S.lastExport == null ? S.created : S.lastExport, needBackup = Object.keys(S.lessons).length && t - lastX >= 14 && !EI.sync.on();   // with sync on, the online copy covers this; the file stays optional
   const sc = Object.values(S.scores), avg = sc.length ? Math.round(sc.reduce((a, x) => a + x.last, 0) / sc.length) : null;
   let h = '<div class="ph"><p class="eyebrow">' + new Date().toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric' }) + '</p><h1>Today</h1></div>';
-  h += '<section class="card"><h2>' + (ls ? (ls.kind === 'reading' ? (ls.again ? 'Read again' : ls.resume ? 'Continue your story' : 'Today’s story') : 'Today’s grammar') + ' · about ' + ls.mins + ' min' : 'Nothing new to study') + '</h2>';
+  h += '<section class="card"><h2>' + (ls ? (ls.kind === 'reading' ? (ls.again ? 'Read again' : ls.resume ? 'Continue your story' : 'Today’s story') : 'Today’s grammar') : 'Nothing new to study') + '</h2>';
   if (ls) h += '<p class="def">' + esc(ls.title) + '</p>' + (ls.kind === 'reading' ? '<p class="vi">Learn words → Read &amp; listen → Grammar in this story → Practice (có chấm điểm). ' + (ls.again ? 'Đây là bài có điểm thấp nhất của bạn; đọc lại và làm lại phần Practice.' : 'Thoát giữa chừng vẫn được lưu đúng bước.') + '</p>' : '');
   else h += '<p class="vi">Bạn đã học hết nội dung hiện có. Lô bài mới sẽ được thêm sau — xem Info.</p>';
-  h += '<p class="vi">' + (p.dueAll ? '<b>' + p.dueAll + ' từ đến hạn ôn.</b> Chúng được hỏi ở cuối bài đọc (Quick recall), hoặc bấm Review now để ôn ngay (khoảng ' + Math.max(1, Math.round(p.rev.length * 0.3)) + ' phút cho ' + p.rev.length + ' mục).' : 'Hôm nay không có từ nào đến hạn ôn.') + '</p>';
+  h += '<p class="vi">' + (p.dueAll ? '<b>' + p.dueAll + ' từ đến hạn ôn.</b> Chúng được hỏi ở cuối bài đọc (Quick recall), hoặc bấm Review now để ôn ngay (' + p.rev.length + ' mục).' : 'Hôm nay không có từ nào đến hạn ôn.') + '</p>';
   h += '<div class="rowg">' + (ls ? '<button class="btn primary" data-a="start">' + ic('play') + 'Start</button>' : '') + (p.rev.length ? '<button class="btn" data-a="review">Review now (' + p.rev.length + ')</button>' : '') +
     '<button class="btn" data-a="go" data-v="reading">Choose another story</button></div></section>';
   h += '<section class="stats"><div class="stat"><b>' + st.n + '</b><span>days in a row</span></div><div class="stat"><b>' + Object.keys(S.lessons).filter(EI.lessonDone).length + ' / ' + EI.R.length + '</b><span>stories finished</span></div><div class="stat"><b>' + (avg == null ? '–' : avg + '%') + '</b><span>average practice score</span></div><div class="stat"><b>' + inMem + '</b><span>words in your memory plan</span></div></section>';
@@ -327,7 +344,7 @@ function vWord(e) {
   const r = S.words[e.w], st = EI.status(e.w);
   let h = '<div class="ph"><p class="eyebrow">' + e.level + ' · ' + esc(e.pos) + '</p><div class="word-h"><h1>' + esc(e.w) + '</h1><span class="ipa">' + esc(e.ipa) + '</span>' +
     '<button class="btn icon" data-a="say" data-t="' + esc(e.w) + '" aria-label="Hear the word">' + ic('phones') + '</button><span class="chip"><i class="st ' + st + '"></i>' + st + '</span></div>' +
-    '<p class="audiolabel">' + esc(EI.audio.label()) + ' · <a href="' + camb(e.w) + '" target="_blank" rel="noopener">Open “' + esc(e.w) + '” in Cambridge Dictionary</a> (human US recording)</p></div>';
+    '<p class="audiolabel">' + esc(EI.audio.label()) + ' · ' + cambA(e.w, 'Open “' + esc(e.w) + '” in Cambridge Dictionary') + ' (human US recording)</p></div>';
   h += '<p class="def">' + esc(e.def) + '</p><p class="exq">' + mark(e.exPlain, e.exSurf) + ' <button class="btn icon ghost" data-a="say" data-t="' + esc(e.exPlain) + '" aria-label="Hear the example">' + ic('phones') + '</button></p>';
   h += '<dl class="kv">' + (e.col.length ? '<dt>Often with</dt><dd>' + esc(e.col.join(' · ')) + '</dd>' : '') + (e.fam ? '<dt>Word family</dt><dd>' + esc(e.fam) + '</dd>' : '') +
     '<dt>Difficulty</dt><dd>' + ['', 'easier', 'medium', 'harder'][e.diff] + ' <span class="muted small">(estimate)</span></dd></dl>';
@@ -361,14 +378,14 @@ function lGrammar() {
   for (const lv of LV) {
     const gs = EI.G.filter(g => g.level === lv);
     h += '<p class="eyebrow">' + lv + ' path</p>' + (gs.length ? gs.map(g => { const st = S.gram[g.id];
-      return '<button class="li' + (S.cur.gid === g.id ? ' on' : '') + '" data-a="gram" data-id="' + g.id + '"><span class="t">' + esc(g.title) + '</span><span class="m"><span>' + esc(g.vi) + '</span><span>~' + (g.mins || 8) + ' min</span>' + (st ? '<span class="chip">' + (st.done ? 'done ✓' : 'in progress') + '</span>' : '') + '</span></button>'; }).join('') : '<p class="vi">Chưa có.</p>');
+      return '<button class="li' + (S.cur.gid === g.id ? ' on' : '') + '" data-a="gram" data-id="' + g.id + '"><span class="t">' + esc(g.title) + '</span><span class="m"><span>' + esc(g.vi) + '</span>' + (st ? '<span class="chip">' + (st.done ? 'done ✓' : 'in progress') + '</span>' : '') + '</span></button>'; }).join('') : '<p class="vi">Chưa có.</p>');
   }
   return h;
 }
 A.gram = d => go({ v: 'grammar', gid: d.id });
 function vGram(g) {
   const st = S.gram[g.id] || { i: 0 };
-  let h = '<div class="ph"><p class="eyebrow">Grammar · ' + g.level + '</p><h1>' + esc(g.title) + '</h1><p class="muted">' + esc(g.vi) + ' · about ' + (g.mins || 8) + ' min</p></div>';
+  let h = '<div class="ph"><p class="eyebrow">Grammar · ' + g.level + '</p><h1>' + esc(g.title) + '</h1><p class="muted">' + esc(g.vi) + '</p></div>';
   h += '<section class="plain"><h2>When to use it</h2><ul class="steps">' + g.use.map(u => '<li class="vi">' + esc(u) + '</li>').join('') + '</ul></section>';
   h += '<section class="plain"><h2>Form</h2><div class="scrollx"><table class="gtable">' + g.forms.map(f => '<tr><th>' + esc(f[0]) + '</th><td><span class="formula">' + esc(f[1]) + '</span><br>' + esc(f[2]) + '<br><span class="vi">' + esc(f[3]) + '</span></td></tr>').join('') + '</table></div></section>';
   h += '<section class="plain"><h2>Examples</h2><ul class="exl">' + g.ex.map(x => '<li>' + esc(x[0]) + '<span>' + esc(x[1]) + (x[2] && EI.rById(x[2]) ? ' · from “' + esc(EI.rById(x[2]).title) + '”' : '') + '</span></li>').join('') + '</ul></section>';
@@ -391,16 +408,19 @@ function lReading() {
   const c = S.cur;
   let h = '<h2>Reading</h2><div class="rowg">' + LV.map(l => '<button class="chip' + (c.level === l ? ' on' : '') + '" data-a="level" data-l="' + l + '">' + l + '</button>').join('') + '</div>';
   if (!c.level) return h + '<p class="vi">Chọn một cấp độ để xem các lượt (pass) và danh sách bài.</p>';
-  for (const pass of [1, 2]) {
+  const cr = c.rid && EI.rById(c.rid), pass = c.pass || (cr && cr.level === c.level ? cr.pass : 1);
+  h += '<div class="rowg">' + [1, 2].map(n => '<button class="chip' + (pass === n ? ' on' : '') + '" data-a="pass" data-n="' + n + '">Pass ' + n + ' <span class="muted small num">' + EI.R.filter(r => r.level === c.level && r.pass === n).length + '</span></button>').join('') + '</div>';
+  {
     const rs = EI.R.filter(r => r.level === c.level && r.pass === pass);
     h += '<p class="eyebrow">' + c.level + ' · Pass ' + pass + '</p>';
     h += rs.length ? rs.map(r => { const L = S.lessons[r.id];
-      return '<button class="li' + (c.rid === r.id ? ' on' : '') + '" data-a="openR" data-id="' + r.id + '"><span class="t">' + esc(r.title) + '</span><span class="m"><span>' + EI.TOPICS[r.topic] + '</span><span>' + esc(r.era) + '</span><span class="num">' + r.wc + ' words</span><span class="num">~' + r.est + ' min</span>' + (S.scores[r.id] ? '<span class="chip score">' + S.scores[r.id].last + '%</span>' : '') + (L && (L.doneDay || L.stage !== 'predict') ? '<span class="chip">' + (L.doneDay ? 'done ✓' : 'in progress') + '</span>' : '') + '</span></button>'; }).join('')
+      return '<button class="li' + (c.rid === r.id ? ' on' : '') + '" data-a="openR" data-id="' + r.id + '"><span class="t">' + esc(r.title) + '</span><span class="m"><span>' + EI.TOPICS[r.topic] + '</span><span>' + esc(r.era) + '</span>' + (S.scores[r.id] ? '<span class="chip score">' + S.scores[r.id].last + '%</span>' : '') + (L && (L.doneDay || L.stage !== 'predict') ? '<span class="chip">' + (L.doneDay ? 'done ✓' : 'in progress') + '</span>' : '') + '</span></button>'; }).join('')
       : '<p class="vi">Chưa có bài cho lượt này.</p>';
   }
   return h;
 }
-A.level = d => { S.cur = { v: 'reading', level: d.l }; EI.save(); render(); };
+A.level = d => go({ v: 'reading', level: d.l });
+A.pass = d => { S.cur.pass = +d.n; EI.save(); keep(); };
 const STAGES = [['learn', 'Learn words'], ['read', 'Read & listen'], ['gram', 'Grammar'], ['practice', 'Practice']];
 const SEC = { c: 'Understanding the story', w: 'Vocabulary of this story', g: 'Grammar of this story' };
 const freshSc = () => ({ c: [0, 0], w: [0, 0], g: [0, 0] });
@@ -424,21 +444,21 @@ function vLesson(r) {
   let h = '<div class="ph"><p class="eyebrow">' + r.level + ' · Pass ' + r.pass + ' · ' + EI.TOPICS[r.topic] + ' · ' + esc(r.era) + '</p><h1>' + esc(r.title) + '</h1>' +
     '<div class="stages" role="tablist" aria-label="Lesson steps">' + STAGES.map(s => '<button role="tab" aria-selected="' + (s[0] === sKey) + '" class="' + (s[0] === sKey ? 'on' : '') + '" data-a="stage" data-s="' + s[0] + '">' + s[1] + '</button>').join('') + '</div></div>';
   if (L.stage === 'predict') {
-    h += '<section class="card"><h2>Before you read</h2><p>' + esc(r.predict.q) + '</p><div class="opts">' + r.predict.o.map((o, i) => '<button class="btn opt" data-a="guess" data-i="' + i + '">' + esc(o) + '</button>').join('') + '</div><p class="vi">Đoán nhanh thôi, không tính đúng sai. Đoán trước giúp bạn đọc có mục đích. Cả bài học mất khoảng ' + r.est + ' phút; bạn có thể dừng ở bất kỳ bước nào và quay lại sau.</p></section>';
+    h += '<section class="card"><h2>Before you read</h2><p>' + esc(r.predict.q) + '</p><div class="opts">' + r.predict.o.map((o, i) => '<button class="btn opt" data-a="guess" data-i="' + i + '">' + esc(o) + '</button>').join('') + '</div><p class="vi">Đoán nhanh thôi, không tính đúng sai. Đoán trước giúp bạn đọc có mục đích. Bạn có thể dừng ở bất kỳ bước nào và quay lại sau.</p></section>';
   } else if (L.stage === 'learn') {
     h += '<p class="vi">' + (r.pass === 2 ? 'Ôn lại ' + r.targets.length + ' từ bạn đã gặp ở Pass 1, lần này trong một chuyện mới. Từ nào biết chắc rồi thì bấm Known.' : 'Xem lướt ' + r.targets.length + ' từ mục tiêu. Chưa cần thuộc: bạn sẽ gặp lại từng từ trong câu chuyện. Từ nào biết chắc rồi thì bấm Known.') + '</p><section class="card">' + r.targets.map(w => {
       const e = EI.W[w]; if (!e) return '';
       if (EI.status(w) === 'Known') return '<div class="lw known"><div class="rowg"><b>' + esc(w) + '</b><span class="chip">Known</span><button class="btn ghost" data-a="lKnown" data-w="' + esc(w) + '">undo</button></div></div>';
-      return '<div class="lw"><div class="rowg"><b class="def">' + esc(w) + '</b><span class="small muted">' + esc(e.pos) + '</span><span class="ipa">' + esc(e.ipa) + '</span><button class="btn icon ghost" data-a="say" data-t="' + esc(w) + '" aria-label="Hear the word">' + ic('phones') + '</button><button class="btn ghost" style="margin-left:auto" data-a="lKnown" data-w="' + esc(w) + '">Known</button></div>' +
+      return '<div class="lw"><div class="rowg"><b class="def">' + esc(w) + '</b><span class="small muted">' + esc(e.pos) + '</span><span class="ipa">' + esc(e.ipa) + '</span><button class="btn icon ghost" data-a="say" data-t="' + esc(w) + '" aria-label="Hear the word">' + ic('phones') + '</button><span class="small">' + cambA(w, 'Cambridge') + '</span><button class="btn ghost" style="margin-left:auto" data-a="lKnown" data-w="' + esc(w) + '">Known</button></div>' +
         '<p>' + esc(e.def) + '</p><p class="exq">' + mark(e.exPlain, e.exSurf) + '</p>' + (openVi.has(w) ? '<div class="vibox"><b>' + esc(e.vi) + '</b> <button class="btn ghost small" data-a="lViHide" data-w="' + esc(w) + '">Hide meaning</button></div>' : '<div><button class="btn ghost" data-a="lVi" data-w="' + esc(w) + '">Show Vietnamese meaning</button></div>') + '</div>'; }).join('') + '</section>' +
       '<p class="audiolabel">' + esc(EI.audio.label()) + '</p><div class="rowg"><button class="btn primary" data-a="stage" data-s="read">Start reading</button></div>';
   } else if (L.stage === 'read') {
     const c = S.cur;
     h += '<div class="tools"><button class="chip' + (S.settings.hl ? ' on' : '') + '" data-a="tHl">Target words</button><button class="chip' + (c.gr ? ' on' : '') + '" data-a="tGr">Grammar</button><button class="chip' + (c.veil ? ' on' : '') + '" data-a="tVeil">' + ic('phones') + ' first, text after</button><button class="chip' + (c.focus ? ' on' : '') + '" data-a="tFocus">Focus</button></div>' +
-      '<p class="vi">Bấm vào một từ để xem nghĩa và nghe. Bấm giữ một câu để xem bản dịch tiếng Việt.</p>' +
+      '<p class="vi">Bấm vào một từ để xem nghĩa và nghe; bấm vào một câu để nghe và xem bản dịch. Khi đang phát, bấm vào câu nào thì đọc ngay từ câu đó. Bấm giữ một câu để hiện bản dịch ngay dưới câu.</p>' +
       '<article class="reader' + (S.settings.hl ? ' hl' : '') + (c.gr ? ' gr' : '') + (c.veil ? ' veil' : '') + '" id="reader">' + readerHTML(r) + '</article>' +
       '<div class="rowg"><button class="btn primary" data-a="stage" data-s="gram">Next: grammar in this story</button><button class="btn" data-a="stage" data-s="practice">Go to practice</button></div>';
-    return page(h) + playerHTML();
+    return '<div class="rdgrid"><aside class="side" id="side" aria-label="Word and sentence">' + SIDE0 + '</aside>' + page(h) + '</div>' + playerHTML();
   } else if (L.stage === 'gram') {
     const ids = [...new Set((r.grammar || []).map(x => x[0]))].filter(id => EI.gById(id));
     h += '<p class="vi">Các cấu trúc chính của bài, giải thích bằng chính câu trong bài. Phần Practice sẽ hỏi về những cấu trúc này.</p>' + ids.map(id => {
@@ -479,7 +499,7 @@ function vLesson(r) {
     h += scoreCard(r) + (miss.length ? '<section class="card"><h3>Words to look at again</h3><div class="rowg">' + miss.map(w => '<button class="chip" data-a="word" data-w="' + esc(w) + '">' + esc(w) + '</button>').join('') + '</div></section>' : '') +
       '<section class="fact"><p class="eyebrow">Added to your fact collection</p><p>' + esc(r.fact.card) + '</p></section>' +
       '<section class="card"><h2>One more true detail</h2><p class="reader" style="font-size:1.05em">' + esc(r.fact.bonus) + '</p></section>';
-    if (q.length) h += '<section class="card"><h3>Quick recall before you go</h3><p class="vi">Ta quên nhanh nhất trong 24 giờ đầu. Lượt này gồm ' + q.length + ' mục (khoảng ' + Math.max(1, Math.round(q.length * 0.3)) + ' phút): các từ khó nhất của bài này và những từ của bài trước đã đến hạn ôn.</p><div class="rowg"><button class="btn primary" data-a="recall" data-id="' + r.id + '">Start quick recall</button></div></section>';
+    if (q.length) h += '<section class="card"><h3>Quick recall before you go</h3><p class="vi">Ta quên nhanh nhất trong 24 giờ đầu. Lượt này gồm ' + q.length + ' mục: các từ khó nhất của bài này và những từ của bài trước đã đến hạn ôn.</p><div class="rowg"><button class="btn primary" data-a="recall" data-id="' + r.id + '">Start quick recall</button></div></section>';
     h += '<div class="rowg">' + (nr ? '<button class="btn" data-a="openR" data-id="' + nr.id + '">Next story: ' + esc(nr.title) + '</button>' : '') + '<button class="btn" data-a="retake">Take the practice again</button><button class="btn ghost" data-a="go" data-v="today">Back to Today</button></div>';
   }
   return page(h);
@@ -516,7 +536,7 @@ A.stage = d => {
   EI.audio.stop(); P.on = false; S.cur.focus = false; closeSheet();
   if (s === 'practice') { s = L.pst || 'practice'; if (s === 'practice' && !L.q) newTest(r, L); }
   L.stage = s; if (s === 'practice' || s === 'write' || s === 'done') L.pst = s;
-  run = null; EI.save(); render(); if (!(s === 'read' && L.scroll)) $('#main').scrollTop = 0;
+  run = null; EI.save(); render(); if (!(s === 'read' && L.scroll)) $('#main').scrollTop = 0; pushNav();
 };
 A.retake = () => { const r = EI.rById(S.cur.rid), L = S.lessons[r.id]; newTest(r, L); L.stage = L.pst = 'practice'; run = null; EI.save(); render(); $('#main').scrollTop = 0; };
 A.tHl = (d, el) => { S.settings.hl = !S.settings.hl; EI.save(); $('#reader').classList.toggle('hl', S.settings.hl); el.classList.toggle('on', S.settings.hl); };
@@ -596,16 +616,21 @@ A.pAgain = () => { P.start = 0; speakIdx(P.on); };
 /* ----- word / sentence sheet ----- */
 function openSheet(si, j) {
   const r = EI.rById(S.cur.rid), o = r.S[si];
-  sh = { r, o, j, t: j == null ? null : o.tk[j], vi: false, viW: false, shadow: false };
+  sh = { r, o, j, t: j == null ? null : o.tk[j], vi: !!(sh && sh.vi), viW: false, shadow: false };
   if (rec.owner !== 'sheet') { rec.url = null; rec.owner = 'sheet'; }
-  rec.err = ''; P.i = si; P.rid = r.id; P.touched = true; paintPlayer(); drawSheet();
+  rec.err = '';
+  const jump = P.on && (P.rid !== r.id || P.i !== si);   // playing: go straight to the sentence that was tapped
+  P.i = si; P.rid = r.id; P.touched = true; P.start = 0;
+  if (jump) speakIdx(true); else paintPlayer();
+  drawSheet();
 }
-function closeSheet() { sh = null; const s = $('#sheet'); if (s) { s.hidden = true; s.innerHTML = ''; } if (rec.on && rec.mr) rec.mr.stop(); }
+const SIDE0 = '<p class="small muted vi">Bấm vào một từ để xem nghĩa, nghe và tra từ điển; bấm vào một câu để nghe và xem bản dịch. Nội dung hiện ở khung này.</p>';
+function closeSheet() { sh = null; const s = $('#sheet'); if (s) { s.hidden = true; s.innerHTML = ''; } const sd = $('#side'); if (sd) sd.innerHTML = SIDE0; if (rec.on && rec.mr) rec.mr.stop(); }
 function glossOf(r, t) { const g = r.gloss || {}, k = t.toLowerCase(); return g[k] || g[k.replace(/(es|s|ed|d|ing)$/, '')] || g[k.replace(/(s|d)$/, '')] || null; }
 function drawSheet() {
   if (!sh) return;
-  const { r, o, t } = sh; let h = '<div class="sheet" role="dialog" aria-label="Word and sentence">';
-  h += '<div class="rowg"><span class="grow" style="flex:1"></span><button class="btn icon ghost" data-a="closeSheet" aria-label="Close">' + ic('x') + '</button></div>';
+  const { r, o, t } = sh; let h = '';
+  const close = '<div class="rowg"><span class="grow" style="flex:1"></span><button class="btn icon ghost" data-a="closeSheet" aria-label="Close">' + ic('x') + '</button></div>';
   if (t) {
     const lem = t.lem || EI.lemma(t.t), e = lem && EI.W[lem], g0 = !t.tg && glossOf(r, t.t), gl = !e && g0, ctx = e && g0;   // ctx: untagged word whose meaning in this story differs from the list entry (World’s Fair vs fair = công bằng)
     h += '<div class="rowg"><span class="sw">' + esc(t.t) + '</span>' + (e ? '<span class="ipa">' + esc(e.ipa) + '</span>' : '') + '<button class="btn icon" data-a="say" data-t="' + esc(e ? e.w : t.t) + '" aria-label="Hear the word">' + ic('phones') + '</button></div>';
@@ -614,12 +639,13 @@ function drawSheet() {
       (sh.viW ? '<div class="vibox"><b>' + esc(e.vi) + '</b> <button class="btn ghost small" data-a="shViHide">Hide meaning</button></div>' : '<div><button class="btn" data-a="shViW">Show Vietnamese meaning</button></div>') +
       (t.tg ? '' : '<p class="small muted">' + (ctx ? 'Trên đây là nghĩa thường gặp của <b>' + esc(e.w) + '</b>; trong câu này từ mang nghĩa khác (xem ô phía trên).' : 'Nghĩa trong từ điển của từ này; trong câu có thể khác đôi chút — xem bản dịch câu.') + '</p>');
     else h += gl ? '<p class="vibox">' + esc(gl) + '</p>' : '<p class="vi">Chưa có mục cho từ này. Xem bản dịch cả câu bên dưới, hoặc mở từ điển.</p>';
-    h += '<p class="audiolabel">' + esc(EI.audio.label()) + ' · <a href="' + camb(e ? e.w : t.t) + '" target="_blank" rel="noopener">Cambridge Dictionary</a>' + (e ? ' · <a href="#" data-a="word" data-w="' + esc(e.w) + '">full entry</a>' : '') + '</p>';
+    h += '<p class="audiolabel">' + esc(EI.audio.label()) + ' · ' + cambA(e ? e.w : t.t) + (e ? ' · <a href="#" data-a="word" data-w="' + esc(e.w) + '">full entry</a>' : '') + '</p>';
     const mk = t.t.toLowerCase(), stt = e ? EI.status(e.w) : null;   // any word can go into the review plan, with this sentence as its context
     if (e) h += stt === 'New' ? '<div><button class="btn" data-a="shAdd">' + ic('star') + 'Add to my review</button></div>' : '<p class="small muted"><i class="st ' + stt + '"></i> ' + (stt === 'Known' ? 'Marked as Known' : 'In your review plan · ' + stt) + '</p>';
     else h += S.mine[mk] ? '<div class="rowg"><span class="chip">In your review plan ✓</span><button class="btn ghost" data-a="shRm">remove</button></div>' : '<div><button class="btn" data-a="shAdd">' + ic('star') + 'Add to my review</button></div>';
     if (t.g && EI.gById(t.g)) h += '<div><button class="btn" data-a="gram" data-id="' + t.g + '">Grammar here: ' + esc(EI.gById(t.g).title) + '</button></div>';
   }
+  const cut = h.length;
   h += '<p class="exq">' + esc(o.plain) + '</p>' + (sh.vi ? '<p class="viline">' + esc(o.vi) + '</p>' : '');
   const saved = S.sentences.some(x => x.kind === 'saved' && x.en === o.plain);
   h += '<div class="rowg"><button class="btn icon" data-a="shSay" aria-label="Hear this sentence">' + ic('phones') + '</button><button class="btn' + (sh.vi ? ' on' : '') + '" data-a="shVi">Tiếng Việt</button>' +
@@ -627,8 +653,19 @@ function drawSheet() {
   if (sh.shadow) h += '<div class="note"><p class="vi">Nghe câu, tự thu giọng mình, rồi nghe hai bản liền nhau để so. Bản thu chỉ nằm trong bộ nhớ của trang này, không lưu và không gửi đi đâu. Không chấm điểm.</p>' +
     (rec.err ? '<p class="small" style="color:var(--bad)">' + esc(rec.err) + '</p>' : '') +
     '<div class="rowg"><button class="btn" data-a="recToggle">' + ic('mic') + (rec.on ? 'Stop recording' : rec.url ? 'Record again' : 'Record') + '</button>' + (rec.url && !rec.on ? '<button class="btn primary" data-a="recCompare">' + ic('play') + 'Model, then me</button>' : '') + '</div></div>';
-  const s = $('#sheet'); s.innerHTML = h + '</div>'; s.hidden = false;
+  const side = $('#side'), s = $('#sheet');
+  if (side && side.offsetParent) {   // wide screen: the empty space beside the story holds it (word on top, sentence below)
+    side.innerHTML = (cut ? '<section class="card sidecard">' + close + h.slice(0, cut) + '</section><section class="card sidecard">' : '<section class="card sidecard">' + close) + h.slice(cut) + '</section>';
+    s.hidden = true; s.innerHTML = ''; return;
+  }
+  s.innerHTML = '<div class="sheet" role="dialog" aria-label="Word and sentence">' + close + h + '</div>'; s.hidden = false;
 }
+A.camPop = d => { const u = camb(d.w), W = 520, H = Math.min(760, screen.availHeight - 60);
+  const w = window.open(u, 'cambridge', 'popup=yes,width=' + W + ',height=' + H + ',left=' + Math.max(0, screen.availWidth - W - 40) + ',top=40');
+  if (w) { try { w.opener = null; } catch (e) {} w.focus(); } else window.open(u, '_blank', 'noopener'); };
+window.addEventListener('resize', () => { if (sh) drawSheet(); });   // side panel <-> pop-up when the window changes size
+A.navBack = () => history.back();
+A.navFwd = () => history.forward();
 A.closeSheet = closeSheet;
 A.shAdd = () => { const lem = sh.t.lem || EI.lemma(sh.t.t), e = lem && EI.W[lem]; if (e) EI.enroll(e.w, EI.today()); else EI.addMine(sh.r, sh.o.i, sh.j); EI.save(); drawSheet(); toast('Added. You will meet this word again in your reviews, inside this sentence.'); };
 A.shRm = () => { delete S.mine[sh.t.t.toLowerCase()]; EI.save(); drawSheet(); };
@@ -853,6 +890,8 @@ function boot() {
   const c = S.cur || {}; // reopen exactly where the learner left off
   if ((c.v === 'reading' && c.rid && !EI.rById(c.rid)) || (c.v === 'grammar' && c.gid && !EI.gById(c.gid)) || (c.v === 'vocab' && c.w && !EI.W[c.w]) || !c.v) S.cur = { v: 'today' };
   render();
+  try { const hs = history.state; if (hs && hs.ei) { NAVI = hs.i || 0; NAVMAX = NAVI; history.replaceState({ ei: snap(), i: NAVI }, ''); } else history.replaceState({ ei: snap(), i: 0 }, ''); } catch (e) {}
+  paintNav();
   EI.sync.start(r => { if (r.ok && r.changed && ['today', 'progress'].includes(S.cur.v)) keep(); else if (S.cur.v === 'settings') keep(); },
     () => { const L = S.cur.v === 'reading' && S.cur.rid && S.lessons[S.cur.rid]; return !!(L && !L.doneDay) || !!run; });
   setTimeout(() => { if (EI.audio.ok && $('.audiolabel, .player .lab')) keep(); }, 700);   // voices load late in some browsers; keep() so the page does not jump to the top

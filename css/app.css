@@ -50,8 +50,11 @@ button,input,select,textarea{font:inherit;color:inherit}
 .nav.on{background:var(--soft);color:var(--ink);font-weight:600}
 .nav.on .ic{color:var(--accent)}
 .rail .grow{flex:1}
+.navarrows{display:flex;gap:.2rem}
+.rail .navarrows{padding:0 .3rem .6rem}
+.navarrows .btn:disabled{opacity:.35;cursor:default}
 .list{border-right:1px solid var(--line);overflow:auto;padding:1rem .8rem;display:flex;flex-direction:column;gap:.7rem;background:var(--bg)}
-.main{overflow:auto;position:relative;min-width:0}
+.main{overflow:auto;position:relative;min-width:0;container-type:inline-size}
 .page{max-width:46rem;margin:0 auto;padding-block:1.4rem 6rem;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));display:flex;flex-direction:column;gap:1.1rem}
 .ph{display:flex;flex-direction:column;gap:.25rem}
 .topbar{display:none}
@@ -115,7 +118,16 @@ label.f{display:flex;flex-direction:column;gap:.25rem;font-size:.9em;font-weight
 .scan label{display:flex;gap:.45rem;align-items:center;padding:.4rem .5rem;border:1px solid var(--line);border-radius:.45rem;background:var(--surface);cursor:pointer}
 
 /* reading */
-.reader{font-family:var(--font-read);font-size:1.16em;line-height:1.75;max-width:38rem}
+.reader{font-family:var(--font-read);font-size:1.16em;line-height:1.75}
+.rdgrid .page{max-width:50rem}
+.side{display:none}
+.sidecard{gap:.55rem}
+.sidecard .sw{font-family:var(--font-read);font-size:1.4em;font-weight:600}
+@container (min-width:66rem){
+  .rdgrid{display:grid;grid-template-columns:minmax(15rem,20rem) minmax(0,48rem);gap:1.5rem;justify-content:center;padding-left:max(16px,env(safe-area-inset-left,0px))}
+  .rdgrid .page{margin:0;padding-left:0}
+  .side{display:flex;flex-direction:column;gap:.8rem;position:sticky;top:1rem;align-self:start;margin-top:1.4rem;max-height:calc(100dvh - 9rem);overflow:auto}
+}
 .reader p{margin:0 0 1.1em}
 .sn{border-radius:.2rem;cursor:pointer;-webkit-user-select:none;user-select:none;-webkit-touch-callout:none}
 .sn.now{background:color-mix(in srgb,var(--accent) 16%,transparent)}
@@ -229,3 +241,4 @@ span.blank{cursor:default;font-weight:600;color:var(--ink)}
   .gtable th{width:6rem}
 }
 @media (prefers-reduced-motion:no-preference){ .sheet{animation:up .18s ease-out} @keyframes up{from{transform:translateY(20px)}} }
+.chip.on .muted{color:inherit;opacity:.75}

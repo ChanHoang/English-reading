@@ -136,7 +136,7 @@ EI.grammar({ id: 'modals-deduction', n: 7, level: 'B1', title: 'Must, might, can
     { t: 'mc', q: 'He has worked for 14 hours. He ______ be very tired.', o: [['must', 'Đúng: gần như chắc chắn, có bằng chứng.'], ['can’t', 'Sai nghĩa: ngược lại.'], ['mustn’t', 'Sai: mustn’t là cấm, không phải suy đoán.']], a: 0 },
     { t: 'mc', q: 'That ______ be our part — our parts are black, not white.', o: [['can’t', 'Đúng: chắc chắn không phải.'], ['mustn’t', 'Sai: mustn’t là cấm.'], ['might', 'Sai: có bằng chứng rõ, không phải “có thể”.']], a: 0 },
     { t: 'mc', q: 'I’m not sure where the gauge is. It ______ be in the cabinet.', o: [['might', 'Đúng: không chắc.'], ['must', 'Sai: người nói không chắc.'], ['can’t', 'Sai nghĩa.']], a: 0 },
-    { t: 'error', q: 'The machine is quiet. It must is off.', wrong: 'is', fix: 'be', why: 'must + V nguyên mẫu: must be.' },
+    { t: 'error', q: 'The machine makes no sound. It must is off.', wrong: 'is', fix: 'be', why: 'must + V nguyên mẫu: must be.' },
     { t: 'gap', q: 'Nobody is answering the phone. They ______ (might / have) lunch now.', a: 'might be having', why: 'Suy đoán việc đang diễn ra: might be + V-ing.' },
     { t: 'order', a: 'He must be very tired.', why: 'must + be + tính từ.' }
   ] });

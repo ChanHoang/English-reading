@@ -163,3 +163,159 @@ EI.grammar({ id: 'passive-tenses', n: 8, level: 'B1', title: 'Passive in differe
     { t: 'order', a: 'The report will be sent on Friday.', why: 'S + will be + V3 + thời gian.' },
     { t: 'write', q: 'Make it passive: “Someone has changed the drawing.”', model: 'The drawing has been changed.', why: 'has been + V3; người làm không quan trọng nên bỏ by someone.', okLabel: 'Mine matches', badLabel: 'Mine was different' }
   ] });
+
+/* Group 2 (v0.4). */
+EI.grammar({ id: 'third-conditional', n: 9, level: 'B1', title: 'Third conditional', vi: 'Câu điều kiện loại 3', mins: 9,
+  use: ['Điều KHÔNG xảy ra trong quá khứ và kết quả tưởng tượng của nó: If we had checked the drawing, we would have found the mistake (thật ra chúng tôi đã không kiểm tra).', 'Hay dùng để nói tiếc nuối hoặc rút kinh nghiệm sau một sự cố.', 'could have / might have thay cho would have khi kết quả chỉ là có thể: If the pilot had turned back, the plane might have crashed.'],
+  forms: [
+    ['Affirmative', 'If + S + had + V3, S + would have + V3', 'If the operator had cleaned the probe, the results would have been correct.', 'Cả hai vế đều nói về quá khứ.'],
+    ['Negative', 'If + S + hadn’t + V3, S + wouldn’t have + V3', 'If it hadn’t rained, the match wouldn’t have stopped.', 'Phủ định ở vế nào thì thêm not ở vế đó.'],
+    ['Question', 'What would + S + have + V3 + if …?', 'What would you have done if the CMM had broken?', ''],
+    ['Possible result', 'If + S + had + V3, S + could/might have + V3', 'If we had sent the parts earlier, they might have arrived on time.', 'could have = đã có thể; might have = có lẽ đã.']
+  ],
+  ex: [['If I had known about the meeting, I would have come.', 'Nếu tôi biết về cuộc họp thì tôi đã đến (nhưng tôi không biết).'], ['If the tank had been tested, the disaster might not have happened.', 'Nếu bồn chứa được kiểm tra, có lẽ thảm họa đã không xảy ra.']],
+  errors: [['If I would have known, I would have helped.', 'If I had known, I would have helped.', 'Không dùng would trong vế if: If + had + V3.'], ['If he had came earlier, he would have seen it.', 'If he had come earlier, he would have seen it.', 'Sau had dùng V3: come – came – come.'], ['If we had left on time, we would catch the train.', 'If we had left on time, we would have caught the train.', 'Kết quả trong quá khứ: would have + V3.']],
+  note: '6 câu: hai vế đều lùi về quá khứ; lỗi hay gặp là đặt would vào vế if.',
+  q: [
+    { t: 'mc', q: 'If we ______ the mold temperature, the parts would have been better.', o: [['had checked', 'Đúng: vế if loại 3 dùng had + V3.'], ['would have checked', 'Sai: không dùng would trong vế if.'], ['checked', 'Sai: đây là loại 2, không hợp với “would have been”.']], a: 0 },
+    { t: 'mc', q: 'If she had studied, she ______ the exam.', o: [['would have passed', 'Đúng: kết quả tưởng tượng trong quá khứ.'], ['would pass', 'Sai: đó là loại 2 (hiện tại).'], ['had passed', 'Sai: vế chính cần would have.']], a: 0 },
+    { t: 'gap', q: 'If the driver ______ (see) the ice, he would have stopped.', a: 'had seen', why: 'Vế if: had + V3.' },
+    { t: 'error', q: 'If they had took a taxi, they would have arrived earlier.', wrong: 'took', fix: 'taken', why: 'take – took – taken: sau had dùng V3.' },
+    { t: 'order', a: 'If I had known, I would have told you.', why: 'If + had + V3, S + would have + V3.' },
+    { t: 'write', q: 'Write a third conditional: “The gauge was not calibrated. The results were wrong.”', model: 'If the gauge had been calibrated, the results would not have been wrong.', why: 'Đảo nghĩa sự thật quá khứ: had been + V3, would not have + V3.', okLabel: 'Mine matches', badLabel: 'Mine was different' }
+  ] });
+
+EI.grammar({ id: 'relative-non-defining', n: 10, level: 'B1', title: 'Relative clauses with commas', vi: 'Mệnh đề quan hệ không xác định', mins: 9,
+  use: ['Thêm thông tin phụ về một người hoặc vật ĐÃ rõ là ai, cái gì: My manager, who is from Japan, speaks good English. Bỏ mệnh đề đi câu vẫn đủ nghĩa.', 'Luôn có dấu phẩy và KHÔNG dùng that: Hanoi, which is the capital, … (không viết “Hanoi, that is …”).', 'whose = của người/vật đó; where = ở nơi đó; which ở cuối câu có thể chỉ cả ý trước: The parts passed, which made the customer happy.'],
+  forms: [
+    ['People', 'N, who + V …,', 'Mr. Lam, who checks every FAI report, is very careful.', 'who thay cho người.'],
+    ['Things', 'N, which + V …,', 'The CMM, which cost 200,000 dollars, is in the clean room.', 'which thay cho vật; không dùng that.'],
+    ['Possession', 'N, whose + N …,', 'Marie Curie, whose husband was also a scientist, won two Nobel Prizes.', 'whose + danh từ.'],
+    ['Place', 'N, where + S + V …,', 'Da Nang, where my brother lives, has a beautiful beach.', 'where = in/at which.'],
+    ['Whole idea', '…, which + V', 'The delivery was late, which made the customer angry.', 'which chỉ cả mệnh đề trước.']
+  ],
+  ex: [['Gustave Eiffel, who built the tower, also made the frame of the Statue of Liberty.', 'Gustave Eiffel, người xây ngọn tháp, cũng làm bộ khung của tượng Nữ thần Tự do.'], ['The report, which has twelve pages, is ready.', 'Bản báo cáo, dài mười hai trang, đã xong.']],
+  errors: [['Hanoi, that is the capital, is very old.', 'Hanoi, which is the capital, is very old.', 'Mệnh đề có dấu phẩy không dùng that.'], ['My sister who lives in Hue is a teacher.', 'My sister, who lives in Hue, is a teacher.', 'Nếu tôi chỉ có một chị gái, thông tin là phụ: cần dấu phẩy.'], ['The man, who his car was stolen, called the police.', 'The man, whose car was stolen, called the police.', 'Sở hữu: whose + danh từ, không dùng who his.']],
+  note: '6 câu: dấu phẩy, không dùng that, phân biệt who/which/whose/where.',
+  q: [
+    { t: 'mc', q: 'Ho Chi Minh City, ______ is the biggest city in Vietnam, is very busy.', o: [['which', 'Đúng: vật/nơi, mệnh đề có dấu phẩy.'], ['that', 'Sai: không dùng that sau dấu phẩy.'], ['who', 'Sai: who chỉ người.']], a: 0 },
+    { t: 'mc', q: 'Our supplier, ______ factory is in Thailand, sent the samples late.', o: [['whose', 'Đúng: sở hữu (nhà máy của nhà cung cấp).'], ['who', 'Sai: cần nghĩa “của”.'], ['which', 'Sai: không thay cho người mang nghĩa sở hữu.']], a: 0 },
+    { t: 'gap', q: 'Hoi An, ______ we spent our holiday, is beautiful at night.', a: 'where', why: 'Nơi chốn + mệnh đề có chủ ngữ riêng (we spent): where.' },
+    { t: 'error', q: 'The mold, that was made in China, needs a repair.', wrong: 'that', fix: 'which', why: 'Mệnh đề có dấu phẩy: which, không dùng that.' },
+    { t: 'mc', q: 'The parts passed the test, ______ made everyone happy.', o: [['which', 'Đúng: which chỉ cả ý phía trước.'], ['that', 'Sai: không dùng that sau dấu phẩy.'], ['what', 'Sai: what không dùng làm đại từ quan hệ sau danh từ/mệnh đề.']], a: 0 },
+    { t: 'write', q: 'Join with “who”: “Anna is our new engineer. She speaks three languages.”', model: 'Anna, who speaks three languages, is our new engineer.', why: 'Thông tin phụ về Anna nằm giữa hai dấu phẩy.', okLabel: 'Mine matches', badLabel: 'Mine was different' }
+  ] });
+
+EI.grammar({ id: 'wish', n: 11, level: 'B1', title: 'I wish …', vi: 'Câu ước với wish / if only', mins: 8,
+  use: ['Ước điều KHÁC với hiện tại: wish + quá khứ đơn (were): I wish I had more time (thật ra tôi không có).', 'Tiếc về quá khứ: wish + quá khứ hoàn thành: I wish I had checked the drawing (thật ra tôi đã không kiểm tra).', 'Muốn người khác thay đổi hành động (thường là phàn nàn): wish + would: I wish the machine would stop making that noise. If only = I wish nhưng mạnh hơn.'],
+  forms: [
+    ['Present', 'S + wish + S + V2 (were)', 'I wish I lived closer to work.', 'Ước cho hiện tại: lùi một thì.'],
+    ['Past', 'S + wish + S + had + V3', 'She wishes she had studied English earlier.', 'Tiếc điều đã (không) xảy ra.'],
+    ['Complaint', 'S + wish + S + would + V', 'I wish the supplier would answer my emails.', 'Không dùng would khi nói về chính mình: không nói “I wish I would …”.'],
+    ['If only', 'If only + S + V2 / had + V3', 'If only I had saved the file!', 'Mạnh hơn I wish.']
+  ],
+  ex: [['I wish I could speak English like a native speaker.', 'Ước gì tôi nói tiếng Anh như người bản xứ.'], ['He wishes he hadn’t sent that email.', 'Anh ấy ước mình đã không gửi email đó.']],
+  errors: [['I wish I have a car.', 'I wish I had a car.', 'Ước cho hiện tại: lùi về quá khứ đơn.'], ['I wish I didn’t eat so much yesterday.', 'I wish I hadn’t eaten so much yesterday.', 'Tiếc về quá khứ: had + V3.'], ['I wish I would be taller.', 'I wish I were taller.', 'Không dùng would cho chính mình; dùng were.']],
+  note: '5 câu: ba dạng wish theo thời gian, và wish + would khi phàn nàn.',
+  q: [
+    { t: 'mc', q: 'I don’t have enough time. I wish I ______ more time.', o: [['had', 'Đúng: ước cho hiện tại, lùi về quá khứ đơn.'], ['have', 'Sai: sau wish phải lùi thì.'], ['will have', 'Sai: không dùng will sau wish.']], a: 0 },
+    { t: 'mc', q: 'I didn’t check the report. I wish I ______ it.', o: [['had checked', 'Đúng: tiếc về quá khứ.'], ['checked', 'Sai: đó là ước cho hiện tại.'], ['would check', 'Sai: would dùng để phàn nàn về người khác.']], a: 0 },
+    { t: 'gap', q: 'The music is so loud. I wish my neighbor ______ turn it down.', a: 'would', why: 'Muốn người khác thay đổi hành động: wish + would.' },
+    { t: 'error', q: 'She wishes she can speak Japanese.', wrong: 'can', fix: 'could', why: 'Sau wish lùi thì: can → could.' },
+    { t: 'write', q: 'Write a wish: you are not at the beach now.', model: 'I wish I were at the beach now.', why: 'Hiện tại trái sự thật: wish + were.', okLabel: 'Mine matches', badLabel: 'Mine was different' }
+  ] });
+
+EI.grammar({ id: 'future-continuous-perfect', n: 12, level: 'B1', title: 'Will be doing and will have done', vi: 'Tương lai tiếp diễn và tương lai hoàn thành', mins: 8,
+  use: ['will be + V-ing: việc ĐANG diễn ra tại một thời điểm trong tương lai: At 10 a.m. tomorrow, I will be measuring the new parts.', 'will have + V3: việc sẽ XONG trước một thời điểm trong tương lai: By Friday, we will have finished the FAI report. Thường đi với by + thời điểm.', 'Không nhầm với will + V (quyết định, dự đoán chung) đã học ở A2.'],
+  forms: [
+    ['Continuous', 'S + will be + V-ing', 'This time next week, we will be flying to Japan.', 'Hành động đang diễn ra ở một mốc tương lai.'],
+    ['Perfect', 'S + will have + V3', 'By the end of the year, I will have worked here for five years.', 'Xong trước mốc tương lai.'],
+    ['Negative', 'S + won’t be + V-ing / won’t have + V3', 'He won’t have finished the report by 5 p.m.', ''],
+    ['Question', 'Will + S + be + V-ing? / Will + S + have + V3?', 'Will you be using the CMM this afternoon?', 'Hỏi lịch sự về kế hoạch của người khác.']
+  ],
+  ex: [['Don’t call at nine; I will be driving to work.', 'Đừng gọi lúc chín giờ; khi đó tôi đang lái xe đi làm.'], ['By 2030, the company will have opened three new factories.', 'Đến năm 2030, công ty sẽ mở xong ba nhà máy mới.']],
+  errors: [['At 8 p.m. tonight I will watch the match.', 'At 8 p.m. tonight I will be watching the match.', 'Việc đang diễn ra tại một mốc tương lai: will be + V-ing.'], ['By Friday I will finish the report.', 'By Friday I will have finished the report.', 'Xong trước mốc “by Friday”: will have + V3.'], ['I will have went home by then.', 'I will have gone home by then.', 'Sau will have dùng V3.']],
+  note: '5 câu: phân biệt will be + V-ing (đang) và will have + V3 (đã xong) quanh một mốc tương lai.',
+  q: [
+    { t: 'mc', q: 'At 3 p.m. tomorrow, we ______ the customer’s parts.', o: [['will be measuring', 'Đúng: đang làm tại một mốc tương lai.'], ['will have measured', 'Sai nghĩa: đó là “đã xong”.'], ['measure', 'Sai: thiếu dấu hiệu tương lai.']], a: 0 },
+    { t: 'mc', q: 'By next Monday, the toolmaker ______ the mold.', o: [['will have repaired', 'Đúng: xong trước mốc “by next Monday”.'], ['will be repairing', 'Sai nghĩa: đang sửa, chưa chắc xong.'], ['has repaired', 'Sai: không nói về tương lai.']], a: 0 },
+    { t: 'gap', q: 'Don’t visit at noon; I ______ (have) lunch.', a: 'will be having', why: 'Đang làm tại một thời điểm tương lai: will be + V-ing.' },
+    { t: 'error', q: 'By June, she will have pass all her exams.', wrong: 'pass', fix: 'passed', why: 'will have + V3 (passed).' },
+    { t: 'write', q: 'Say what will be finished: you will send the report before 5 p.m.', model: 'By 5 p.m., I will have sent the report.', why: 'By + mốc tương lai, will have + V3.', okLabel: 'Mine matches', badLabel: 'Mine was different' }
+  ] });
+
+EI.grammar({ id: 'so-such', n: 13, level: 'B1', title: 'So and such', vi: 'so và such (… that)', mins: 7,
+  use: ['so + tính từ / trạng từ: The test was so difficult. Thêm that để nói kết quả: It was so cold that the water froze.', 'such + (a/an) + (tính từ) + danh từ: It was such a long day. They are such good friends.', 'so much / so many + danh từ: There were so many people that we couldn’t move.'],
+  forms: [
+    ['so', 'so + adj/adv (+ that …)', 'The part was so small that we used a microscope.', 'Sau so không có danh từ.'],
+    ['such', 'such a/an + adj + N (số ít)', 'It was such a strange noise that everyone stopped.', 'Danh từ số ít đếm được cần a/an.'],
+    ['such (plural)', 'such + adj + N (số nhiều/không đếm được)', 'They make such good coffee.', 'Không có a/an.'],
+    ['so many / much', 'so many + N số nhiều; so much + N không đếm được', 'We had so much work that we stayed late.', '']
+  ],
+  ex: [['The wave was so strong that it pushed a truck into a building.', 'Con sóng mạnh đến mức đẩy một chiếc xe tải vào một tòa nhà.'], ['It was such a small mistake, but it cost a lot of money.', 'Đó là một lỗi rất nhỏ, nhưng tốn rất nhiều tiền.']],
+  errors: [['It was so a long meeting.', 'It was such a long meeting.', 'Có danh từ (meeting): dùng such a.'], ['She is such kind.', 'She is so kind.', 'Chỉ có tính từ: dùng so.'], ['There were such many people.', 'There were so many people.', 'so many + danh từ số nhiều.']],
+  note: '5 câu: có danh từ thì dùng such, chỉ có tính từ thì dùng so.',
+  q: [
+    { t: 'mc', q: 'The CMM program was ______ complicated that it took two days to write.', o: [['so', 'Đúng: so + tính từ + that.'], ['such', 'Sai: sau such cần danh từ.'], ['such a', 'Sai: không có danh từ đếm được số ít.']], a: 0 },
+    { t: 'mc', q: 'It was ______ good idea that the boss used it at once.', o: [['such a', 'Đúng: such a + tính từ + danh từ số ít.'], ['so', 'Sai: có danh từ idea.'], ['so a', 'Sai: không có cấu trúc so a.']], a: 0 },
+    { t: 'gap', q: 'There were ______ many mistakes that we sent the report back.', a: 'so', why: 'so many + danh từ số nhiều.' },
+    { t: 'error', q: 'The weather was such bad that the flight was cancelled.', wrong: 'such', fix: 'so', why: 'Chỉ có tính từ (bad): dùng so.' },
+    { t: 'write', q: 'Join with “so … that”: “The box was very heavy. I couldn’t lift it.”', model: 'The box was so heavy that I couldn’t lift it.', why: 'so + tính từ + that + kết quả.', okLabel: 'Mine matches', badLabel: 'Mine was different' }
+  ] });
+
+EI.grammar({ id: 'question-tags', n: 14, level: 'B1', title: 'Question tags', vi: 'Câu hỏi đuôi', mins: 7,
+  use: ['Thêm “đuôi” ngắn vào cuối câu để hỏi lại hoặc mong người nghe đồng ý: You checked the drawing, didn’t you?', 'Câu khẳng định → đuôi phủ định; câu phủ định → đuôi khẳng định. Đuôi dùng trợ động từ của câu và đại từ.', 'Giọng xuống ở đuôi: chỉ mong đồng ý. Giọng lên: thật sự hỏi.'],
+  forms: [
+    ['be', 'S + be …, be + not + S?', 'The report is ready, isn’t it?', 'Dùng lại be.'],
+    ['Simple', 'S + V …, don’t/doesn’t/didn’t + S?', 'She works on Saturdays, doesn’t she?', 'Không có trợ động từ thì mượn do/does/did.'],
+    ['Negative sentence', 'S + aux + not …, aux + S?', 'You haven’t sent it yet, have you?', 'Câu phủ định → đuôi khẳng định.'],
+    ['Special', 'I am …, aren’t I? / Let’s …, shall we?', 'Let’s start the meeting, shall we?', 'Hai trường hợp đặc biệt.']
+  ],
+  ex: [['You’re the new engineer, aren’t you?', 'Anh là kỹ sư mới phải không?'], ['The parts didn’t pass, did they?', 'Các chi tiết đã không đạt, đúng không?']],
+  errors: [['You like coffee, isn’t it?', 'You like coffee, don’t you?', 'Đuôi phải hợp với động từ và chủ ngữ của câu, không dùng “isn’t it” cho mọi câu.'], ['He can swim, can he?', 'He can swim, can’t he?', 'Câu khẳng định → đuôi phủ định.'], ['Nobody called, didn’t they?', 'Nobody called, did they?', 'Nobody mang nghĩa phủ định → đuôi khẳng định.']],
+  note: '5 câu: đổi khẳng định/phủ định và mượn do/does/did.',
+  q: [
+    { t: 'mc', q: 'The customer approved the samples, ______?', o: [['didn’t they', 'Đúng: quá khứ đơn khẳng định → didn’t + they.'], ['did they', 'Sai: câu khẳng định cần đuôi phủ định.'], ['isn’t it', 'Sai: không hợp với động từ approved.']], a: 0 },
+    { t: 'mc', q: 'You haven’t seen my caliper, ______?', o: [['have you', 'Đúng: câu phủ định → đuôi khẳng định.'], ['haven’t you', 'Sai: hai vế cùng phủ định.'], ['did you', 'Sai: câu dùng have.']], a: 0 },
+    { t: 'gap', q: 'She is coming to the meeting, ______ she?', a: 'isn’t', why: 'be khẳng định → isn’t.' },
+    { t: 'error', q: 'He works in the QC room, does he?', wrong: 'does', fix: 'doesn’t', why: 'Câu khẳng định với động từ thường (works): đuôi phủ định doesn’t he.' },
+    { t: 'mc', q: 'I’m late again, ______?', o: [['aren’t I', 'Đúng: trường hợp đặc biệt của I am.'], ['amn’t I', 'Sai: không có dạng này.'], ['am I', 'Sai: câu khẳng định cần đuôi phủ định.']], a: 0 }
+  ] });
+
+EI.grammar({ id: 'too-enough', n: 15, level: 'B1', title: 'Too and enough', vi: 'too và enough', mins: 7,
+  use: ['too + tính từ = quá mức (thường là xấu): The part is too long. Thêm to + V để nói việc không làm được: It is too heavy to lift.', 'tính từ + enough = đủ: The light isn’t bright enough. enough đứng SAU tính từ nhưng TRƯỚC danh từ: enough time, enough samples.', 'Thêm for + người: The text is too difficult for me.'],
+  forms: [
+    ['too', 'too + adj/adv (+ for sb) (+ to V)', 'The hole is too small for this pin.', 'Không nói “too much small”.'],
+    ['enough + adj', 'adj/adv + enough (+ to V)', 'He is old enough to drive.', 'enough đứng sau tính từ.'],
+    ['enough + noun', 'enough + N', 'We don’t have enough samples for the test.', 'enough đứng trước danh từ.'],
+    ['too much/many', 'too much + N không đếm được; too many + N số nhiều', 'There are too many mistakes in this report.', '']
+  ],
+  ex: [['The wall was too thin to hold the weight.', 'Vách quá mỏng để chịu được sức nặng.'], ['Is the room warm enough for the measurement?', 'Phòng có đủ ấm để đo không?']],
+  errors: [['The box is enough big.', 'The box is big enough.', 'enough đứng sau tính từ.'], ['It is too much hot today.', 'It is too hot today.', 'too + tính từ, không thêm much.'], ['We don’t have time enough.', 'We don’t have enough time.', 'enough đứng trước danh từ.']],
+  note: '5 câu: vị trí của enough và nghĩa “quá … đến mức không” của too.',
+  q: [
+    { t: 'mc', q: 'This gauge is not ______ for such a small tolerance.', o: [['accurate enough', 'Đúng: tính từ + enough.'], ['enough accurate', 'Sai: enough đứng sau tính từ.'], ['too accurate', 'Sai nghĩa.']], a: 0 },
+    { t: 'mc', q: 'The coffee is ______ hot to drink.', o: [['too', 'Đúng: too + tính từ + to V = quá … nên không.'], ['enough', 'Sai vị trí và sai nghĩa.'], ['so', 'Sai: so … to không phải cấu trúc này.']], a: 0 },
+    { t: 'gap', q: 'We have ______ time to finish the report today.', a: 'enough', why: 'enough đứng trước danh từ time.' },
+    { t: 'error', q: 'There are too much parts on the table.', wrong: 'much', fix: 'many', why: 'parts đếm được số nhiều: too many.' },
+    { t: 'write', q: 'Rewrite with “too … to”: “The box is very heavy. I can’t carry it.”', model: 'The box is too heavy to carry.', why: 'too + tính từ + to V.', okLabel: 'Mine matches', badLabel: 'Mine was different' }
+  ] });
+
+EI.grammar({ id: 'causative-have', n: 16, level: 'B1', title: 'Have something done', vi: 'Nhờ / thuê người khác làm: have / get something done', mins: 7,
+  use: ['Người khác làm việc đó cho mình (mình nhờ hoặc trả tiền): I had my car repaired (thợ sửa, không phải tôi).', 'Cấu trúc: have + vật + V3. Trong văn nói hay dùng get: We got the mold checked.', 'Cũng dùng cho việc xấu xảy ra với mình: She had her bag stolen.'],
+  forms: [
+    ['Present', 'S + have/has + O + V3', 'We have our gauges calibrated every year.', 'Một công ty ngoài hiệu chuẩn.'],
+    ['Past', 'S + had + O + V3', 'He had his hair cut yesterday.', ''],
+    ['Future', 'S + will have / is going to have + O + V3', 'I am going to have the drawing translated.', ''],
+    ['get', 'S + get + O + V3', 'You should get your eyes tested.', 'Thân mật hơn have.']
+  ],
+  ex: [['The company had the tank painted brown.', 'Công ty cho sơn bồn chứa màu nâu.'], ['We need to get the CMM repaired before Monday.', 'Chúng ta cần cho sửa máy CMM trước thứ Hai.']],
+  errors: [['I repaired my car at the garage.', 'I had my car repaired at the garage.', 'Nếu thợ sửa chứ không phải bạn: have + O + V3.'], ['She had cut her hair.', 'She had her hair cut.', 'Trật tự: have + tân ngữ + V3.'], ['We have the parts measure every week.', 'We have the parts measured every week.', 'Sau tân ngữ dùng V3 (measured).']],
+  note: '5 câu: trật tự have + vật + V3, và nghĩa “người khác làm cho mình”.',
+  q: [
+    { t: 'mc', q: 'We don’t calibrate the gauges ourselves; we ______ by an outside lab.', o: [['have them calibrated', 'Đúng: have + O + V3.'], ['have calibrated them', 'Sai nghĩa: như thể chính mình làm.'], ['have them calibrate', 'Sai: cần V3.']], a: 0 },
+    { t: 'mc', q: 'She ______ her phone stolen on the bus.', o: [['had', 'Đúng: việc xấu xảy ra với mình: have + O + V3.'], ['did', 'Sai cấu trúc.'], ['made', 'Sai nghĩa.']], a: 0 },
+    { t: 'gap', q: 'I need to ______ my glasses repaired.', a: 'get', why: 'get + O + V3 (văn nói); have cũng đúng.' },
+    { t: 'error', q: 'We had the report translate into Chinese.', wrong: 'translate', fix: 'translated', why: 'have + O + V3.' },
+    { t: 'write', q: 'Say that a technician will repair your laptop tomorrow.', model: 'I am going to have my laptop repaired tomorrow.', why: 'be going to have + O + V3.', okLabel: 'Mine matches', badLabel: 'Mine was different' }
+  ] });

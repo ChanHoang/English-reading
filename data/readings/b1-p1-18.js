@@ -90,7 +90,7 @@ EI.reading({
       ["Among the real {leaves=leaf}, the {pinned=pin} paper figures looked real enough to fool a famous writer, but they were too flat to move.", "Giữa những chiếc lá thật, những hình giấy được ghim trông đủ thật để lừa một nhà văn nổi tiếng, nhưng chúng quá phẳng để có thể chuyển động."],
       ["It was {embarrassing} for many experts who had believed them.", "Điều đó thật đáng xấu hổ với nhiều chuyên gia từng tin chúng."],
       ["It was also {embarrassing} for the two women themselves.", "Nó cũng đáng ngượng với chính hai người phụ nữ."],
-      ["Even as old women, they felt {embarrassed} that a game from their childhood had gone so far.", "Ngay cả khi đã già, họ vẫn thấy ngượng vì một trò chơi thời thơ ấu đã đi xa đến vậy."]
+      ["Even as old women, they felt {embarrassed} that a game from their {childhood} had gone so far.", "Ngay cả khi đã già, họ vẫn thấy ngượng vì một trò chơi thời thơ ấu đã đi xa đến vậy."]
     ],
     [
       ["One part of the story is still not clear.", "Một phần của câu chuyện vẫn chưa rõ ràng."],

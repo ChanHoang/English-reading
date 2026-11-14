@@ -18,8 +18,8 @@ EI.reading({
       ["The match made almost 500 pounds for a hospital for wounded {soldiers=soldier}.", "Trận đấu thu được gần 500 bảng Anh cho một bệnh viện chăm sóc thương binh."],
       ["For the workers, the team was also a {social} group, and it made them friends.", "Với các nữ công nhân, đội bóng còn là một nhóm giao lưu, và giúp họ trở thành bạn bè."],
       ["The team was a {hit} with the {public}, and soon they played all over the country.", "Đội bóng gây được tiếng vang với công chúng, và chẳng bao lâu họ đá khắp đất nước."],
-      ["They were fast and {physical} players, and they could {score} {goals=goal} {against} almost anyone.", "Họ là những cầu thủ nhanh và mạnh mẽ, và họ có thể ghi bàn vào lưới gần như bất kỳ ai."],
-      ["Their star, Lily Parr, joined the team as a teenager, and some say that she {scored=score} about 1,000 {goals=goal} in her life.", "Ngôi sao của đội, Lily Parr, vào đội khi còn là thiếu nữ, và có người nói bà ghi khoảng 1.000 bàn trong đời."]
+      ["They were fast and {physical} players, and they could {score} goals {against} almost anyone.", "Họ là những cầu thủ nhanh và mạnh mẽ, và họ có thể ghi bàn vào lưới gần như bất kỳ ai."],
+      ["Their star, Lily Parr, joined the team as a teenager, and some say that she {scored=score} about 1,000 goals in her life.", "Ngôi sao của đội, Lily Parr, vào đội khi còn là thiếu nữ, và có người nói bà ghi khoảng 1.000 bàn trong đời."]
     ],
     [
       ["On December 26, 1920, the Dick, Kerr Ladies played at Goodison Park, the stadium of Everton, in Liverpool.", "Ngày 26 tháng 12 năm 1920, đội Dick, Kerr Ladies đá ở Goodison Park, sân vận động của Everton, tại Liverpool."],
@@ -56,7 +56,7 @@ EI.reading({
       ["A {male} or a {female} player can also get {hurt} in the {ankle} after a bad fall on the {ground}.", "Cầu thủ nam hay nữ cũng có thể bị đau ở mắt cá chân sau một cú ngã xấu xuống mặt sân."],
       ["Only the goalkeeper can {throw} the ball in the game, and she must often {jump} high to catch it.", "Chỉ thủ môn được ném bóng trong trận, và cô ấy thường phải bật nhảy cao để bắt bóng."],
       ["Good {training} helps: strong legs {protect} the {knee} and the {ankle}.", "Tập luyện tốt giúp ích: đôi chân khỏe bảo vệ đầu gối và mắt cá chân."],
-      ["So the next time you see a woman {score} a {goal} and the {public} {shout=shout} with happiness, remember Preston, Lily Parr and the team that was too good.", "Vậy lần tới khi bạn thấy một cầu thủ nữ ghi bàn và công chúng reo hò sung sướng, hãy nhớ đến Preston, Lily Parr và đội bóng quá giỏi ấy."],
+      ["So the next time you see a woman {score} a goal and the {public} {shout=shout} with happiness, remember Preston, Lily Parr and the team that was too good.", "Vậy lần tới khi bạn thấy một cầu thủ nữ ghi bàn và công chúng reo hò sung sướng, hãy nhớ đến Preston, Lily Parr và đội bóng quá giỏi ấy."],
       ["Their story shows that a sport is for everyone who wants to be {active}, and that it is never too late to change an unfair rule in {society}.", "Câu chuyện của họ cho thấy thể thao dành cho mọi người muốn vận động, và không bao giờ là quá muộn để thay đổi một quy định bất công trong xã hội."],
       ["Many players were never {hurt}; they were only stopped.", "Nhiều cầu thủ chưa bao giờ bị thương; họ chỉ bị ngăn cản."]
     ]

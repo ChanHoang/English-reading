@@ -10,7 +10,7 @@ EI.reading({
       ["Those {marks=mark} show the tones, and a change of tone can change the meaning of a word: “ma,” “má” and “mả” are {particular} words with {specific} meanings.", "Những dấu đó cho biết thanh điệu, và đổi thanh có thể đổi nghĩa của từ: “ma”, “má” và “mả” là những từ riêng với nghĩa cụ thể."],
       ["Today, this is the {usual} way to write Vietnamese, and its name is Quốc ngữ.", "Ngày nay, đây là cách viết tiếng Việt thông thường, và tên của nó là chữ Quốc ngữ."],
       ["The {term} means “{national} language,” but it {refers=refer} to the writing {system}, not to the language {itself}.", "Thuật ngữ này có nghĩa là “tiếng nói của quốc gia”, nhưng nó chỉ hệ thống chữ viết, không phải chính ngôn ngữ."],
-      ["Four hundred years ago, educated Vietnamese people {mostly} wrote with Chinese {characters=character}, or with chữ Nôm.", "Bốn trăm năm trước, người Việt có học chủ yếu viết bằng chữ Hán, hoặc chữ Nôm."],
+      ["Four hundred years ago, educated Vietnamese people {mostly} wrote with Chinese characters, or with chữ Nôm.", "Bốn trăm năm trước, người Việt có học chủ yếu viết bằng chữ Hán, hoặc chữ Nôm."],
       ["So where did the Latin letters come from?", "Vậy những chữ cái Latin đến từ đâu?"]
     ],
     [
@@ -46,10 +46,10 @@ EI.reading({
     ],
     [
       ["Today, Vietnamese children learn the alphabet in their first year at school, and many {already} know some letters before they start.", "Ngày nay, trẻ em Việt Nam học bảng chữ cái từ năm đầu tiên đi học, và nhiều em đã biết vài chữ trước khi đi học."],
-      ["Learning about 30 letters and a few tone {marks=mark} is faster than learning thousands of {characters=character}, and that is one reason why so many people can read.", "Học khoảng 30 chữ cái và vài dấu thanh nhanh hơn học hàng nghìn chữ Hán, và đó là một lý do khiến rất nhiều người biết đọc."],
+      ["Learning about 30 letters and a few tone {marks=mark} is faster than learning thousands of characters, and that is one reason why so many people can read.", "Học khoảng 30 chữ cái và vài dấu thanh nhanh hơn học hàng nghìn chữ Hán, và đó là một lý do khiến rất nhiều người biết đọc."],
       ["Students write an {essay} for school, people write a {diary} at night, and a {leader} writes a {speech} for a big day, all in the same letters.", "Học sinh viết bài luận ở trường, người ta viết nhật ký vào buổi tối, và một vị lãnh đạo viết bài phát biểu cho một ngày trọng đại, tất cả bằng cùng những chữ cái ấy."],
       ["When a foreigner learns Vietnamese, the tones are still the hardest part to {pronounce}, {especially} the difference between “hỏi” and “ngã,” and people in the north and the south {pronounce} some tones {differently}.", "Khi người nước ngoài học tiếng Việt, thanh điệu vẫn là phần khó phát âm nhất, đặc biệt là sự khác nhau giữa dấu hỏi và dấu ngã, và người miền Bắc, miền Nam phát âm một số thanh khác nhau."],
-      ["But the letters are a good {guide}: once you know the rules, you can read a {variety} of {texts=text}, from a short {diary} to a long {essay}.", "Nhưng chữ cái là một người dẫn đường tốt: khi đã biết quy tắc, bạn có thể đọc nhiều loại văn bản, từ trang nhật ký ngắn đến bài luận dài."],
+      ["But the letters are a good {guide}: once you know the rules, you can read a {variety} of texts, from a short {diary} to a long {essay}.", "Nhưng chữ cái là một người dẫn đường tốt: khi đã biết quy tắc, bạn có thể đọc nhiều loại văn bản, từ trang nhật ký ngắn đến bài luận dài."],
       ["There is a great {variety} of sounds in Vietnamese, and a {specific} {mark} for each tone.", "Tiếng Việt có rất nhiều âm, và mỗi thanh có một dấu riêng."],
       ["{Among} all the languages of East Asia, Vietnamese is {unusual}: it is the main one that people write with Latin letters.", "Trong các ngôn ngữ ở Đông Á, tiếng Việt khác thường: đó là ngôn ngữ chính được viết bằng chữ cái Latin."],
       ["{Although} its history is long and not {simple}, every time you write a {speech}, read an {introduction}, or see a {term} in a dictionary, you are using a {particular} {system} that started with a few priests and a {printer} in Rome.", "Dù lịch sử của nó dài và không đơn giản, mỗi lần bạn viết bài phát biểu, đọc lời giới thiệu, hay thấy một thuật ngữ trong từ điển, bạn đang dùng một hệ thống đặc biệt bắt đầu từ vài linh mục và một nhà in ở Rome."],

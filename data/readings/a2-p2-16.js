@@ -14,9 +14,9 @@ EI.reading({
       ["It was one of the biggest {disasters=disaster} in the history of volcanoes.", "Đó là một trong những thảm họa lớn nhất trong lịch sử núi lửa."]
     ],
     [
-      ["The explosion sent ash and {gas} high into the {sky}.", "Vụ nổ đẩy tro và khí lên cao trên bầu trời."],
-      ["Ash fell for weeks, and a thin {cloud} of {gas} spread around the world, high above the weather.", "Tro rơi suốt nhiều tuần, và một lớp mây khí mỏng lan ra khắp thế giới, ở trên cao hơn cả các hiện tượng thời tiết."],
-      ["This {cloud} stopped some of the sunlight, and the world’s {climate} became colder, by about 3 {degrees=degree}.", "Lớp mây này chặn bớt ánh nắng, và khí hậu thế giới lạnh đi khoảng 3 độ."],
+      ["The explosion sent ash and gas high into the {sky}.", "Vụ nổ đẩy tro và khí lên cao trên bầu trời."],
+      ["Ash fell for weeks, and a thin {cloud} of gas spread around the world, high above the weather.", "Tro rơi suốt nhiều tuần, và một lớp mây khí mỏng lan ra khắp thế giới, ở trên cao hơn cả các hiện tượng thời tiết."],
+      ["This {cloud} stopped some of the sunlight, and the world’s {climate} became colder, by about 3 degrees.", "Lớp mây này chặn bớt ánh nắng, và khí hậu thế giới lạnh đi khoảng 3 độ."],
       ["{Strange} colors {appeared=appear} in the evening {sky}: in London, people saw very red sunsets in the summer of 1815.", "Những màu sắc lạ xuất hiện trên bầu trời buổi tối: ở London, người ta thấy hoàng hôn đỏ rực vào mùa hè năm 1815."]
     ],
     [

@@ -39,7 +39,7 @@ EI.reading({
       ["By 2013, there were more than six {billion} {mobile} subscriptions in the world.", "Đến năm 2013, thế giới có hơn sáu tỷ thuê bao di động."]
     ],
     [
-      ["In many {developing=develop} countries, there were not many phone lines in houses.", "Ở nhiều nước đang phát triển, nhà ở không có nhiều đường dây điện thoại."],
+      ["In many developing countries, there were not many phone lines in houses.", "Ở nhiều nước đang phát triển, nhà ở không có nhiều đường dây điện thoại."],
       ["{Instead} of building lines to every house, companies built {mobile} {networks=network}.", "Thay vì kéo dây đến từng nhà, các công ty xây mạng di động."],
       ["For many people, the {mobile} phone became their first and only phone, and they could call from {anywhere} in their village.", "Với nhiều người, điện thoại di động trở thành chiếc điện thoại đầu tiên và duy nhất, và họ có thể gọi từ bất cứ đâu trong làng."],
       ["Now, a cheap {smartphone} or {tablet} is a small {digital} computer, {connected} to the internet {everywhere} you go.", "Giờ đây, một chiếc điện thoại thông minh hay máy tính bảng rẻ tiền là một máy tính kỹ thuật số nhỏ, kết nối internet ở mọi nơi bạn đến."],
@@ -50,7 +50,7 @@ EI.reading({
       ["Many people {chat} online for hours, and some write a {profile} that is not true.", "Nhiều người trò chuyện trên mạng hàng giờ, và có người viết hồ sơ cá nhân không đúng sự thật."],
       ["A small {error} in an {app} can stop a bank or a shop for a day.", "Một lỗi nhỏ trong ứng dụng có thể làm ngừng hoạt động một ngân hàng hay cửa hàng cả ngày."],
       ["And people sometimes {text} while they walk across the street, without looking.", "Và đôi khi người ta vừa nhắn tin vừa băng qua đường mà không nhìn."],
-      ["Cooper himself walked across a street during his famous call, and later he {joked=joke} about it in a radio interview.", "Chính Cooper cũng băng qua đường trong cuộc gọi nổi tiếng của mình, và sau này ông nói đùa về chuyện đó trong một cuộc phỏng vấn trên đài."]
+      ["Cooper himself walked across a street during his famous call, and later he joked about it in a radio interview.", "Chính Cooper cũng băng qua đường trong cuộc gọi nổi tiếng của mình, và sau này ông nói đùa về chuyện đó trong một cuộc phỏng vấn trên đài."]
     ],
     [
       ["When your phone rings and you {reply} to a message in a second, remember the brick: 35 minutes of {talk}, ten hours of charging, and one very {surprised} man at Bell Labs.", "Khi điện thoại của bạn đổ chuông và bạn trả lời tin nhắn trong một giây, hãy nhớ đến “cục gạch”: 35 phút nói chuyện, mười giờ sạc, và một người đàn ông rất bất ngờ ở Bell Labs."],

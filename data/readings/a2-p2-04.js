@@ -22,7 +22,7 @@ EI.reading({
     ],
     [
       ["Silver did not stop.", "Silver không bỏ cuộc."],
-      ["He showed the glue to {colleagues=colleague} and {talked=talk} about it at meetings and seminars {inside} the company.", "Ông giới thiệu loại keo với đồng nghiệp và nói về nó trong các buổi họp, hội thảo trong công ty."],
+      ["He showed the glue to {colleagues=colleague} and talked about it at meetings and seminars {inside} the company.", "Ông giới thiệu loại keo với đồng nghiệp và nói về nó trong các buổi họp, hội thảo trong công ty."],
       ["He had a few ideas for its {use}: for example, a {board} for short notices that you could change every day.", "Ông có vài ý tưởng về công dụng của nó: chẳng hạn, một tấm bảng cho các thông báo ngắn mà bạn có thể thay mỗi ngày."],
       ["But none of his ideas became a product.", "Nhưng không ý tưởng nào trở thành sản phẩm."],
       ["What {sort} of product could it be?", "Nó có thể là loại sản phẩm gì?"],
@@ -33,7 +33,7 @@ EI.reading({
       ["Art Fry, another scientist at 3M, went to one of Silver’s seminars.", "Art Fry, một nhà khoa học khác ở 3M, đã dự một buổi hội thảo của Silver."],
       ["Fry was not a {professional} singer, but he sang in his church choir every week.", "Fry không phải ca sĩ chuyên nghiệp, nhưng tuần nào ông cũng hát trong dàn hợp xướng nhà thờ."],
       ["He put small pieces of paper in it to mark the songs in his book, and they often fell out.", "Ông kẹp những mẩu giấy nhỏ vào để đánh dấu các bài hát trong cuốn sách, và chúng hay rơi ra."],
-      ["In the early 1970s, during a long {talk} in church, he had an idea: a {bit} of Silver’s glue could keep the papers in the book.", "Đầu những năm 1970, trong một bài giảng dài ở nhà thờ, ông nảy ra ý tưởng: một chút keo của Silver có thể giữ những mẩu giấy trong sách."],
+      ["In the early 1970s, during a long talk in church, he had an idea: a {bit} of Silver’s glue could keep the papers in the book.", "Đầu những năm 1970, trong một bài giảng dài ở nhà thờ, ông nảy ra ý tưởng: một chút keo của Silver có thể giữ những mẩu giấy trong sách."],
       ["Now the {weak} glue had a {purpose}.", "Giờ thì loại keo yếu đã có mục đích."]
     ],
     [
@@ -50,7 +50,7 @@ EI.reading({
       ["In 1977, 3M tried selling the notes, with the name “Press ’n Peel,” in a few big cities.", "Năm 1977, 3M thử bán những mẩu giấy này với tên “Press ’n Peel” ở vài thành phố lớn."],
       ["People did not {react} well, and the company almost stopped.", "Mọi người không hưởng ứng nhiều, và công ty suýt dừng lại."],
       ["Then 3M made a different {decision}.", "Rồi 3M đưa ra một quyết định khác."],
-      ["In 1978, it gave {free} notes to people in one city, Boise, so they could try them.", "Năm 1978, công ty phát miễn phí giấy nhớ cho người dân ở một thành phố, Boise, để họ dùng thử."],
+      ["In 1978, it gave free notes to people in one city, Boise, so they could try them.", "Năm 1978, công ty phát miễn phí giấy nhớ cho người dân ở một thành phố, Boise, để họ dùng thử."],
       ["This time, people {reacted=react} very differently: about 90 percent of them said that they would buy the notes.", "Lần này, mọi người phản ứng rất khác: khoảng 90 phần trăm nói họ sẽ mua."],
       ["That {decision} saved the product.", "Quyết định đó đã cứu sản phẩm."]
     ],

@@ -6,7 +6,7 @@ EI.reading({
   targets: ['can', 'oven', 'boil', 'recipe', 'sauce', 'beef', 'bean', 'nut', 'jam', 'lemon', 'biscuit', 'chef', 'cook', 'taste', 'smell', 'fresh', 'oil', 'fat', 'quantity', 'quality', 'store', 'prize', 'contain'],
   text: [
     [
-      ["Today, almost any {store} sells {beans=bean}, {fish} in {oil}, tomato {sauce} or {beef} in a {can}.", "Ngày nay, gần như cửa hàng nào cũng bán đậu, cá ngâm dầu, sốt cà chua hay thịt bò đóng hộp."],
+      ["Today, almost any {store} sells {beans=bean}, fish in {oil}, tomato {sauce} or {beef} in a {can}.", "Ngày nay, gần như cửa hàng nào cũng bán đậu, cá ngâm dầu, sốt cà chua hay thịt bò đóng hộp."],
       ["The food inside is ready to eat, and it stays good for years.", "Thức ăn bên trong ăn được ngay, và để được nhiều năm."],
       ["You open it, {heat} it a little, and dinner is ready.", "Bạn mở ra, hâm nóng một chút, là có bữa tối."],
       ["But two hundred years ago, nobody knew how to do this.", "Nhưng hai trăm năm trước, không ai biết cách làm việc này."]
@@ -23,7 +23,7 @@ EI.reading({
       ["He was a {chef}, and he also made {sweets=sweet} and drinks in Paris.", "Ông là một đầu bếp, và còn làm bánh kẹo và đồ uống ở Paris."],
       ["He did not go to school for long, and he did not know much science, but he knew food very well.", "Ông không đi học được lâu, và không biết nhiều về khoa học, nhưng ông rất hiểu về thức ăn."],
       ["For about 14 years, he tried one idea after another.", "Trong khoảng 14 năm, ông thử hết ý tưởng này đến ý tưởng khác."],
-      ["His {final} {method} was {simple}.", "Phương pháp cuối cùng của ông rất đơn giản."],
+      ["His final {method} was {simple}.", "Phương pháp cuối cùng của ông rất đơn giản."],
       ["He put food in {thick} glass bottles, closed them with a cork, wire and wax, and then put the bottles in water and {boiled=boil} them for some time.", "Ông cho thức ăn vào chai thủy tinh dày, đậy bằng nút bần, dây thép và sáp, rồi đặt các chai vào nước và đun sôi một thời gian."],
       ["He did not use an {oven}; the hot water did the work.", "Ông không dùng lò nướng; nước sôi đã làm việc đó."],
       ["Each kind of food needed a different time in the water, so he wrote a {recipe} for each one.", "Mỗi loại thức ăn cần một thời gian khác nhau trong nước, nên ông viết công thức riêng cho từng loại."]
@@ -48,7 +48,7 @@ EI.reading({
       ["Today, every {cook} at home and every {chef} in a restaurant uses food from a {can} or a jar sometimes.", "Ngày nay, mọi người nấu ăn ở nhà và mọi đầu bếp nhà hàng đôi khi đều dùng thực phẩm đóng hộp hoặc đóng lọ."],
       ["A good {cook} may make {jam} at home with Appert’s idea: {boil} the fruit with sugar, put it in clean jars, close them and {heat} them in water.", "Một người nấu ăn giỏi có thể tự làm mứt ở nhà theo ý tưởng của Appert: nấu trái cây với đường, cho vào lọ sạch, đậy kín và đun lọ trong nước."],
       ["Some people add a little {lemon} juice to help the {jam}.", "Có người cho thêm chút nước cốt chanh để mứt ngon hơn."],
-      ["In a big {store}, there are {canned=can} {beans=bean}, {nuts=nut}, {fish} in {oil}, soup and {sauce} on long shelves.", "Trong một cửa hàng lớn, có đậu, hạt, cá ngâm dầu, súp và sốt đóng hộp trên những dãy kệ dài."],
+      ["In a big {store}, there are {canned=can} {beans=bean}, {nuts=nut}, fish in {oil}, soup and {sauce} on long shelves.", "Trong một cửa hàng lớn, có đậu, hạt, cá ngâm dầu, súp và sốt đóng hộp trên những dãy kệ dài."],
       ["A {can} may {contain} {beef} with a little {fat}, or {biscuits=biscuit} for a long trip.", "Một hộp có thể chứa thịt bò với chút mỡ, hay bánh quy cho chuyến đi dài."],
       ["Of course, {fresh} food often {tastes=taste} better, and many people prefer it.", "Tất nhiên, thức ăn tươi thường ngon hơn, và nhiều người thích nó hơn."],
       ["But when you need a large {quantity} of {safe} food that does not need an {oven} or a {fridge}, a {can} is still the answer.", "Nhưng khi cần một lượng lớn thức ăn an toàn mà không cần lò nướng hay tủ lạnh, đồ hộp vẫn là câu trả lời."],

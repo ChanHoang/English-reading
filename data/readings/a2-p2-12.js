@@ -20,7 +20,7 @@ EI.reading({
     [
       ["For nine days, nobody knew if the boys were {alive} or {lost} forever.", "Suốt chín ngày, không ai biết các cậu bé còn sống hay đã mất tích mãi mãi."],
       ["Families were at the cave, {worried} and afraid, and people around the world followed the news.", "Các gia đình có mặt ở cửa hang, lo lắng và sợ hãi, và người dân khắp thế giới theo dõi tin tức."],
-      ["The cave is long and {dark}, with {narrow} parts where a person can only move on hands and {knees=knee}, between walls of {rock}.", "Hang dài và tối, có những đoạn hẹp mà người ta chỉ có thể bò bằng tay và đầu gối, giữa những vách đá."],
+      ["The cave is long and dark, with {narrow} parts where a person can only move on hands and {knees=knee}, between walls of {rock}.", "Hang dài và tối, có những đoạn hẹp mà người ta chỉ có thể bò bằng tay và đầu gối, giữa những vách đá."],
       ["Some parts were full of water, so only divers could {enter} them.", "Một số đoạn ngập đầy nước, nên chỉ thợ lặn mới vào được."],
       ["Thai Navy divers came, and later cave divers from other countries joined them.", "Thợ lặn Hải quân Thái Lan đến, và sau đó thợ lặn hang động từ các nước khác cùng tham gia."]
     ],
@@ -54,7 +54,7 @@ EI.reading({
       ["In the hospital, they got food, {medicine} and a lot of {sleep}, and {fortunately}, a week later, all of them could leave.", "Ở bệnh viện, các em được ăn uống, dùng thuốc và ngủ thật nhiều, và may mắn là một tuần sau, tất cả đều được xuất viện."],
       ["The families did not have to {worry} any more.", "Các gia đình không còn phải lo lắng nữa."],
       ["But Thailand did not forget Saman Kunan; for many people, he is a {hero}.", "Nhưng Thái Lan không quên Saman Kunan; với nhiều người, anh là một người hùng."],
-      ["{Unfortunately}, the rescue was not free: the water from the pumps went onto {farms=farm} near the cave, and more than 100 farmers saw their crops go under water.", "Đáng tiếc là cuộc giải cứu cũng có cái giá: nước từ máy bơm chảy vào các nông trại gần hang, và hơn 100 nông dân thấy hoa màu của mình chìm trong nước."],
+      ["{Unfortunately}, the rescue was not free: the water from the pumps went onto farms near the cave, and more than 100 farmers saw their crops go under water.", "Đáng tiếc là cuộc giải cứu cũng có cái giá: nước từ máy bơm chảy vào các nông trại gần hang, và hơn 100 nông dân thấy hoa màu của mình chìm trong nước."],
       ["Today, Tham Luang is a place that many visitors want to see, and its {stone} walls and {underground} rooms are famous.", "Ngày nay, Tham Luang là nơi nhiều du khách muốn đến, và vách đá cùng những khoang ngầm của nó đã trở nên nổi tiếng."],
       ["People who {enter} a cave today often check the weather first, because rain can change a cave in one hour.", "Người vào hang ngày nay thường xem thời tiết trước, vì mưa có thể làm thay đổi một hang động chỉ trong một giờ."],
       ["If you ever go into a cave, be {careful}, tell someone {outside} where you are, and do not {worry} about missing a little fun: the cave will still be there next time.", "Nếu bạn có lần vào hang, hãy cẩn thận, báo cho ai đó ở bên ngoài biết bạn ở đâu, và đừng lo bỏ lỡ chút vui: lần sau hang vẫn còn đó."],

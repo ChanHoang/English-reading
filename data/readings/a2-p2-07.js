@@ -13,13 +13,13 @@ EI.reading({
       ["As {director}, Burnham had to say yes or no to every big plan.", "Là người phụ trách, Burnham phải đồng ý hay từ chối mọi kế hoạch lớn."]
     ],
     [
-      ["George Ferris was a 33-year-old {engineer} from Pittsburgh, and his company {checked=check} the steel for the fair.", "George Ferris là một kỹ sư 33 tuổi đến từ Pittsburgh, và công ty của ông kiểm tra thép cho hội chợ."],
+      ["George Ferris was a 33-year-old {engineer} from Pittsburgh, and his company checked the steel for the fair.", "George Ferris là một kỹ sư 33 tuổi đến từ Pittsburgh, và công ty của ông kiểm tra thép cho hội chợ."],
       ["He worked with steel {structures=structure} for {bridges=bridge}, and he had a {bright} idea: an {enormous} {wheel} that could carry people up into the {sky}.", "Ông làm việc với kết cấu thép cho cầu, và ông có một ý tưởng sáng tạo: một vòng quay khổng lồ có thể đưa người lên trời."],
       ["He drew it quickly, and the design was a bit like a bicycle {wheel}.", "Ông vẽ nó rất nhanh, và thiết kế trông hơi giống một bánh xe đạp."],
       ["At first, Burnham said no; in his opinion, the {structure} was “too fragile.”", "Lúc đầu, Burnham từ chối; theo ông, kết cấu này “quá mỏng manh”."],
       ["But the {designer} did not stop.", "Nhưng nhà thiết kế không bỏ cuộc."],
       ["He was an {engineer}, not a {businessman}, but now he had to find money like one.", "Ông là kỹ sư, không phải doanh nhân, nhưng giờ ông phải đi tìm tiền như một doanh nhân."],
-      ["Ferris paid 25,000 dollars of his own money for safety studies, and other {engineers=engineer} {supported=support} his plan.", "Ferris tự bỏ 25.000 đô la cho các nghiên cứu an toàn, và các kỹ sư khác ủng hộ kế hoạch của ông."],
+      ["Ferris paid 25,000 dollars of his own money for safety studies, and other {engineers=engineer} supported his plan.", "Ferris tự bỏ 25.000 đô la cho các nghiên cứu an toàn, và các kỹ sư khác ủng hộ kế hoạch của ông."],
       ["Local {businessmen=businessman} gave the money for the whole project, about 400,000 dollars, and in December 1892, the fair said yes.", "Các doanh nhân địa phương góp tiền cho cả dự án, khoảng 400.000 đô la, và tháng 12 năm 1892, hội chợ đồng ý."]
     ],
     [
@@ -38,7 +38,7 @@ EI.reading({
       ["From far away, people saw a {round} shape above the fair, like a big {circle}.", "Từ xa, du khách thấy một hình tròn trên hội chợ, như một vòng tròn hoàn hảo."],
       ["A {ride} cost 50 cents, the same as a ticket to the fair, and it took 20 minutes.", "Một lượt đi giá 50 xu, bằng giá vé vào hội chợ, và kéo dài 20 phút."],
       ["At the {top}, people could take a long {look} at the city and Lake Michigan.", "Trên đỉnh, mọi người có thể ngắm thật lâu thành phố và hồ Michigan."],
-      ["At night, more than 3,000 lights made the {round} {wheel} {bright} and {attractive} against the {dark} {sky}.", "Ban đêm, hơn 3.000 bóng đèn làm vòng quay tròn sáng rực và hấp dẫn trên nền trời tối."],
+      ["At night, more than 3,000 lights made the {round} {wheel} {bright} and {attractive} against the dark {sky}.", "Ban đêm, hơn 3.000 bóng đèn làm vòng quay tròn sáng rực và hấp dẫn trên nền trời tối."],
       ["In 19 weeks, more than 1.4 million people paid for a {ride}.", "Trong 19 tuần, hơn 1,4 triệu người đã trả tiền để đi."],
       ["For most of them, it was a new {experience}: they had never seen their city from so high.", "Với hầu hết họ, đó là một trải nghiệm mới: họ chưa bao giờ nhìn thành phố mình từ trên cao như thế."]
     ],
@@ -58,8 +58,8 @@ EI.reading({
       ["Cities {advertise=advertise} them to tourists on a {poster} or in an {advertisement} online.", "Các thành phố quảng bá chúng với du khách trên áp phích hay trong mẩu quảng cáo trên mạng."],
       ["Some companies pay to put their names on a famous {wheel}, because {advertising} there is seen by millions of people.", "Một số công ty trả tiền để đặt tên mình trên một vòng quay nổi tiếng, vì quảng cáo ở đó được hàng triệu người nhìn thấy."],
       ["The next time you see an {advertisement} or a {poster} for a city with a big {wheel}, take a {look}.", "Lần tới khi bạn thấy một mẩu quảng cáo hay áp phích về một thành phố có vòng quay lớn, hãy nhìn kỹ."],
-      ["If the {ride} is {fun}, you can thank a {designer} who did not {accept} “too fragile” as an answer, and who wanted to {advertise} his country’s {engineering=engineer} to the world.", "Nếu chuyến đi trông vui, bạn có thể cảm ơn một nhà thiết kế không chấp nhận câu trả lời “quá mỏng manh”, và muốn quảng bá ngành kỹ thuật của đất nước mình với thế giới."],
-      ["It was a {major} moment for {engineering=engineer}, and an {experience} that people still love.", "Đó là một khoảnh khắc quan trọng của ngành kỹ thuật, và là một trải nghiệm mà người ta vẫn yêu thích."]
+      ["If the {ride} is {fun}, you can thank a {designer} who did not {accept} “too fragile” as an answer, and who wanted to {advertise} his country’s engineering to the world.", "Nếu chuyến đi trông vui, bạn có thể cảm ơn một nhà thiết kế không chấp nhận câu trả lời “quá mỏng manh”, và muốn quảng bá ngành kỹ thuật của đất nước mình với thế giới."],
+      ["It was a {major} moment for engineering, and an {experience} that people still love.", "Đó là một khoảnh khắc quan trọng của ngành kỹ thuật, và là một trải nghiệm mà người ta vẫn yêu thích."]
     ]
   ],
   gloss: { 'world’s': 'của thế giới (world’s fair = hội chợ thế giới)', fair: 'hội chợ; công bằng', 'chicago’s': 'của Chicago', turn: 'lượt', novel: 'mới lạ', daring: 'táo bạo', unique: 'có một không hai', steel: 'thép', bicycle: 'xe đạp', fragile: 'mỏng manh, dễ vỡ', safety: 'sự an toàn', project: 'dự án', axle: 'trục (bánh xe)', weighed: 'nặng', tons: 'tấn', feet: 'feet (1 foot ≈ 30 cm)', steam: 'hơi nước', horsepower: 'mã lực', investors: 'nhà đầu tư', court: 'tòa án', dynamite: 'thuốc nổ', amusement: 'giải trí (amusement park = khu vui chơi)', tourists: 'du khách', 'country’s': 'của đất nước', design: 'thiết kế', lights: 'bóng đèn', shape: 'hình dạng' },

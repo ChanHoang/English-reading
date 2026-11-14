@@ -31,7 +31,7 @@ EI.reading({
       ["The marathon was on September 10, 1960, and 69 {athletes=athlete} from 35 countries {competed=compete} in it.", "Cuộc thi marathon diễn ra ngày 10 tháng 9 năm 1960, và 69 vận động viên từ 35 quốc gia tranh tài."],
       ["It started at 5:30 in the evening to {avoid} the worst of the heat, and the {finish} was after sunset.", "Cuộc đua bắt đầu lúc 5 giờ 30 chiều để tránh lúc nóng nhất, và về đích sau khi mặt trời lặn."],
       ["Near the end, the {runners=runner} went {along} the Appian Way, an {ancient} Roman road.", "Gần cuối, các vận động viên chạy dọc đường Appia, một con đường La Mã cổ."],
-      ["It was {dark}, so hundreds of Italian {soldiers=soldier} held torches next to the road.", "Trời đã tối, nên hàng trăm người lính Ý cầm đuốc đứng dọc con đường."],
+      ["It was dark, so hundreds of Italian {soldiers=soldier} held torches next to the road.", "Trời đã tối, nên hàng trăm người lính Ý cầm đuốc đứng dọc con đường."],
       ["The {finish} was at the Arch of Constantine, near the Colosseum.", "Đích đến là Khải hoàn môn Constantine, gần Đấu trường La Mã."]
     ],
     [

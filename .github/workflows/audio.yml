@@ -1,0 +1,67 @@
+name: Make audio
+
+# After new content reaches main, make the recorded AI voice (Kokoro-82M, voice af_heart) for every new sentence,
+# word and example, commit it to main, then publish the site again.
+# A push made with GITHUB_TOKEN does not start other workflows, so this job starts "Publish site" itself.
+
+on:
+  push:
+    branches: [main]
+    paths: ['data/**', 'tools/audio-items.js', 'tools/audio-lexicon.json', 'tools/make-audio.py']
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  actions: write
+
+concurrency:
+  group: audio
+  cancel-in-progress: false
+
+jobs:
+  audio:
+    runs-on: ubuntu-latest
+    timeout-minutes: 300
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Anything to make?
+        id: need
+        run: |
+          if python3 tools/make-audio.py --check; then echo "make=no" >> "$GITHUB_OUTPUT"; else echo "make=yes" >> "$GITHUB_OUTPUT"; fi
+      - name: Kokoro model files (cached)
+        if: steps.need.outputs.make == 'yes'
+        uses: actions/cache@v4
+        with:
+          path: tools/.kokoro
+          key: kokoro-model-v1.0
+      - name: Install
+        if: steps.need.outputs.make == 'yes'
+        run: |
+          sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
+          pip install kokoro-onnx==0.6.1 soundfile numpy
+      - name: Make audio
+        if: steps.need.outputs.make == 'yes'
+        run: |
+          python3 tools/make-audio.py
+          python3 tools/make-audio.py --check
+          node tools/check-content.js
+      - name: Commit and publish
+        if: steps.need.outputs.make == 'yes'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add audio
+          if git diff --cached --quiet; then echo "no change"; exit 0; fi
+          git commit -m "Add recorded AI voice for new texts (Kokoro, Heart)"
+          for i in 1 2 3; do git pull --rebase -q origin main && git push -q origin HEAD:main && break; sleep 5; done
+          gh workflow run pages.yml --ref main

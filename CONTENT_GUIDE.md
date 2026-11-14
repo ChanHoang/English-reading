@@ -32,7 +32,7 @@ Pass 2 cho người học gặp lại từ của cấp đó trong **chuyện m�
 3. **Mã bài** `a2-p2-NN`, `pass: 2`, `n: NN`. Dòng trong `data/manifest.js` đã đặt sẵn, chỉ bỏ `//` ở dòng của bài mình.
 4. **Từ mục tiêu không trùng** giữa các bài Pass 2 (công cụ kiểm tra báo lỗi). Từ đã là mục tiêu của bài Pass 2 khác mà xuất hiện lại đúng nghĩa thì vẫn bọc `{…}` như một lần gặp lại nhẹ.
 5. Các quy định về độ dài, mật độ từ, Practice, nguồn và thời lượng 25–32 phút **giống Pass 1**. Phần Practice có thể dựa vào việc người học đã gặp từ một lần: câu hỏi từ vựng nên hỏi từ trong ngữ cảnh mới, không lặp lại câu ví dụ của mục từ.
-6. Không tạo file âm thanh; quản lý chạy `tools/make-audio.py` sau khi merge.
+6. Không tạo file âm thanh. Khi bài vào `main`, workflow “Make audio” (`.github/workflows/audio.yml`) tự tạo giọng đọc (Kokoro, giọng Heart), commit vào `main` rồi đăng lại web.
 
 ## 2. File từ vựng — `data/words-<level>.js`
 

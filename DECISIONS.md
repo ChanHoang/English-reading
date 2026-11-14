@@ -387,3 +387,8 @@ Lịch sử Trung cổ châu Âu vẫn chiếm khoảng một nửa số bài l�
 - 4 đợt × 6 bài. Một bài = một nhánh = một PR. `data/manifest.js` có dòng đặt sẵn cho từng bài, xen dòng chú thích để các PR song song merge không xung đột (đã thử bằng git).
 - Quy định Pass 2: `CONTENT_GUIDE.md` mục 1b. App đã chạy được bài Pass 2 (thử bằng một bài giả): danh sách, Learn words, Practice chia phần, Coverage.
 - v0.1.2: bước Learn words của bài Pass 2 ghi “Ôn lại … từ đã gặp ở Pass 1”.
+
+## 18. Giọng Heart cho mọi nội dung mới; GitHub tự tạo giọng đọc (2026-11-14)
+
+- **Chủ dự án:** “từ nay về sau hãy lấy giọng heart”. Mọi câu, từ và câu ví dụ **mới** dùng `af_heart`. 4.049 file đã có giữ nguyên giọng (Heart 1.974, Bella 2.075); chủ dự án đã quyết định không tạo lại (09:29 cùng ngày). `tools/audio-items.js` lấy giọng của file đã có trong `audio/manifest.json`, còn lại là Heart. Hệ quả: nếu sửa một câu của bài Pass 1 đang đọc bằng Bella, câu đó sẽ đọc bằng Heart.
+- **Không giao việc tạo âm thanh cho ChatGPT.** Lý do: mỗi PR sẽ sửa cùng `audio/index.js` (một dòng dài) và `audio/manifest.json`, nên các PR làm song song chắc chắn xung đột; mỗi phiên phải tải mô hình 350 MB. Thay vào đó, workflow `.github/workflows/audio.yml` chạy trên GitHub sau mỗi lần nội dung vào `main`: kiểm tra (`make-audio.py --check`), nếu thiếu thì cài Kokoro (mô hình được cache), tạo file, kiểm tra lại, commit vào `main` bằng `github-actions[bot]`, rồi chạy lại “Publish site” (commit bằng GITHUB_TOKEN không tự kích hoạt workflow khác). Không ai phải làm tay.

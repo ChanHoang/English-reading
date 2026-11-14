@@ -103,7 +103,6 @@ EI.reading({
     ['reported-speech', 'He said that they were only going to do this once'],
     ['passive-tenses', 'The main system opened in 1865 and was finished in 1875'],
     ['gerund-infinitive', 'Instead of letting the old sewers flow into the Thames'],
-    ['modals-deduction', 'and an unpleasant surprise is always possible'],
     ['comparatives', 'more than twice as many as when he started']
   ],
   practiceNote: 'Bài về “Mùi hôi lớn” ở London (mùa hè 1858) và hệ thống cống của Joseph Bazalgette: sáu đường cống chặn dọc sông, 318 triệu viên gạch, xi măng Portland, đường ống được nhân đôi kích thước. Phần hiểu bài hỏi vì sao sông hôi, phản ứng của Quốc hội, cách hệ thống hoạt động, và bài học kỹ thuật. Từ vựng: kỹ thuật – công trình (engineering, pipe, pressure, flow, surface, require, reliable, expand, growth, treatment, waste, chemical), đánh giá (impressive, horrible, unpleasant, essential, generous, achievement). Ngữ pháp: quá khứ hoàn thành, câu tường thuật, bị động, instead of + V-ing.',

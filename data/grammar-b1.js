@@ -127,9 +127,10 @@ EI.grammar({ id: 'modals-deduction', n: 7, level: 'B1', title: 'Must, might, can
     ['Sure (yes)', 'S + must + V', 'He has worked all night. He must be tired.', ''],
     ['Possible', 'S + might / may / could + V', 'This book could sell for 35 million dollars.', 'Ba từ gần nghĩa nhau khi suy đoán.'],
     ['Sure (no)', 'S + can’t + V', 'It can’t be 30 °C outside — it’s snowing.', ''],
-    ['Continuous', 'S + must / might + be + V-ing', 'She isn’t answering. She might be driving.', 'Suy đoán việc đang xảy ra.']
+    ['Continuous', 'S + must / might + be + V-ing', 'She isn’t answering. She might be driving.', 'Suy đoán việc đang xảy ra.'],
+    ['Past', 'S + must / might / can’t + have + V3', 'The pieces might have belonged to a bishop.', 'Suy đoán về việc đã xảy ra trong quá khứ.']
   ],
-  ex: [['Today, a complete copy of one book could sell for more than 35 million dollars.', 'Ngày nay, một bản trọn vẹn của một cuốn sách có thể bán được hơn 35 triệu đô la.', 'b1-p1-01'], ['The reading is 0.5 mm too big; the probe might be dirty.', 'Kết quả đo lớn hơn 0,5 mm; có thể đầu dò bị bẩn.']],
+  ex: [['Today, a complete copy of one book could sell for more than 35 million dollars.', 'Ngày nay, một bản trọn vẹn của một cuốn sách có thể bán được hơn 35 triệu đô la.', 'b1-p1-01'], ['The reading is 0.5 mm too big; the probe might be dirty.', 'Kết quả đo lớn hơn 0,5 mm; có thể đầu dò bị bẩn.'], ['They might have belonged to a trader, a local leader, a prince or a bishop.', 'Chúng có thể đã thuộc về một thương nhân, một thủ lĩnh địa phương, một hoàng tử hay một giám mục.', 'b1-p1-07']],
   errors: [['He mustn’t be at home — his car is not here.', 'He can’t be at home — his car is not here.', 'Suy đoán phủ định dùng can’t; mustn’t nghĩa là “không được phép”.'], ['She must to be tired.', 'She must be tired.', 'Sau must không có to.'], ['It might is broken.', 'It might be broken.', 'Sau might là V nguyên mẫu: be.']],
   note: '6 câu: ba mức chắc chắn và lỗi mustn’t / can’t.',
   q: [

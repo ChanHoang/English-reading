@@ -110,8 +110,7 @@ EI.reading({
     ['passive-tenses', 'more than 28,000 buildings had been destroyed'],
     ['reported-speech', 'officials said that about 500 people had died in the city'],
     ['modals-deduction', 'much more of the city might have burned'],
-    ['gerund-infinitive', 'The telephone and telegraph stopped working too'],
-    ['second-conditional', 'if there was nothing left to burn, the fire would stop']
+    ['gerund-infinitive', 'The telephone and telegraph stopped working too']
   ],
   practiceNote: 'Bài về trận động đất San Francisco ngày 18/4/1906: rung lắc chưa đến một phút, nhưng đám cháy kéo dài khoảng bốn ngày mới là thứ phá hủy thành phố; ống nước vỡ, thuốc nổ gây thêm cháy, tình nguyện viên chặn được lửa; số người chết được tính lại thành hơn 3.000. Từ vựng: thảm họa (earthquake, explosion, explode, emergency, injured, dust, safety), mức độ (total, totally, hardly, impact), thành phố (block, port, property, historic). Ngữ pháp: quá khứ hoàn thành, bị động quá khứ hoàn thành, câu tường thuật, might have + V3.',
   practice: [

@@ -51,7 +51,7 @@ EI.reading({
       ["John Snow, born in 1813, had seen cholera for the first time in 1832, when he was a 19-year-old student.", "John Snow, sinh năm 1813, lần đầu thấy bệnh tả năm 1832, khi còn là một sinh viên 19 tuổi."],
       ["He noticed that the illness started in the stomach and the intestines, not in the lungs.", "Ông để ý rằng bệnh bắt đầu ở dạ dày và ruột, không phải ở phổi."],
       ["If people {breathed=breathe} the disease in, why did it begin in the stomach?", "Nếu người ta hít bệnh vào, sao bệnh lại bắt đầu ở dạ dày?"],
-      ["To him, it was more likely that people swallowed something, probably in their water.", "Với ông, nhiều khả năng hơn là người ta đã nuốt phải thứ gì đó, có lẽ trong nước uống."],
+      ["To him, people must have swallowed something, probably in their water.", "Với ông, hẳn là người ta đã nuốt phải thứ gì đó, có lẽ trong nước uống."],
       ["He was {convinced=convince} that water, not air, was the answer.", "Ông tin chắc rằng nước, chứ không phải không khí, mới là câu trả lời."],
       ["In 1849, he wrote about this idea, but most doctors {rejected=reject} it.", "Năm 1849, ông viết về ý tưởng này, nhưng phần lớn bác sĩ bác bỏ nó."]
     ],
@@ -108,8 +108,7 @@ EI.reading({
   grammar: [
     ['past-perfect', 'had seen cholera for the first time in 1832'],
     ['passive-tenses', 'the effect on the water supply was immediate'],
-    ['second-conditional', 'If people breathed the disease in, why did it begin in the stomach?'],
-    ['modals-deduction', 'it was more likely that people swallowed something'],
+    ['modals-deduction', 'people must have swallowed something'],
     ['gerund-infinitive', 'persuaded them to take the handle off the pump'],
     ['used-to', 'they almost never drank water from the pump']
   ],
@@ -136,7 +135,7 @@ EI.reading({
     { t: 'mc', k: 'g:past-perfect', q: 'By September 10, more than 500 people ______.', o: [['had died', 'Đúng: trước một mốc quá khứ (September 10).'], ['have died', 'Sai: chuyện quá khứ.'], ['had die', 'Sai: cần V3.']], a: 0, why: 'By + mốc quá khứ → had + V3.', ref: 'more than 500 people had died' },
     { t: 'mc', k: 'g:passive-tenses', q: 'One family even had Broad Street water ______ to their house.', o: [['delivered', 'Đúng: have something done = nhờ/cho người làm (nghĩa bị động).'], ['deliver', 'Sai: cần V3.'], ['delivering', 'Sai: nước không tự giao.']], a: 0, why: 'have + vật + V3.', ref: 'had Broad Street water delivered to their house' },
     { t: 'error', k: 'g:gerund-infinitive', q: 'He persuaded them taking the handle off the pump.', wrong: 'taking', fix: 'to take', why: 'persuade somebody to + V.', ref: 'persuaded them to take the handle off the pump' },
-    { t: 'mc', k: 'g:second-conditional', q: 'If people ______ the disease in, why did it begin in the stomach?', o: [['breathed', 'Đúng: điều giả định trái với suy luận của Snow.'], ['would breathe', 'Sai: không dùng would trong vế if.'], ['breathe', 'Chưa đúng ở đây: câu đặt giả thiết trong quá khứ.']], a: 0, why: 'If + quá khứ đơn.', ref: 'If people breathed the disease in' }
+    { t: 'mc', k: 'g:modals-deduction', q: 'To Snow, people ______ something, probably in their water.', o: [['must have swallowed', 'Đúng: suy đoán gần như chắc chắn về việc đã xảy ra.'], ['must swallowed', 'Sai: sau must dùng have + V3 hoặc V nguyên mẫu.'], ['can’t have swallowed', 'Sai nghĩa: Snow tin là họ đã nuốt phải.']], a: 0, why: 'must have + V3 = hẳn là đã.', ref: 'people must have swallowed something' },
   ],
   extra: [],
   write: { vi: 'Viết 3–5 câu tiếng Anh về một lần bạn điều tra nguyên nhân của một lỗi (ví dụ một kích thước NG lặp lại). Bạn đã chứng minh nguyên nhân thế nào? Cố dùng các từ dưới đây.', use: ['investigate', 'theory', 'prove', 'conclusion', 'examine'], model: 'Last month, many parts were too short. My first theory was that the gauge was wrong, but the CMM data proved that it was correct. We investigated the mold and examined each cavity. Our conclusion was simple: cavity 3 was too hot.' },

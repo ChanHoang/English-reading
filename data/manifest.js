@@ -57,5 +57,54 @@ EI.files = [
   'data/readings/a2-p1-52.js',
   'data/readings/a2-p1-53.js',
   'data/readings/a2-p1-54.js',
+  // ---- A2 · Pass 2 (v0.2). Mỗi bài một dòng, có dòng chú thích xen giữa để các PR song song không xung đột.
+  // a2-p2-01 (tasks/a2-p2-01.md): bỏ // ở dòng dưới khi thêm bài
+  //'data/readings/a2-p2-01.js',
+  // a2-p2-02 (tasks/a2-p2-02.md): bỏ // ở dòng dưới khi thêm bài
+  //'data/readings/a2-p2-02.js',
+  // a2-p2-03 (tasks/a2-p2-03.md): bỏ // ở dòng dưới khi thêm bài
+  //'data/readings/a2-p2-03.js',
+  // a2-p2-04 (tasks/a2-p2-04.md): bỏ // ở dòng dưới khi thêm bài
+  //'data/readings/a2-p2-04.js',
+  // a2-p2-05 (tasks/a2-p2-05.md): bỏ // ở dòng dưới khi thêm bài
+  //'data/readings/a2-p2-05.js',
+  // a2-p2-06 (tasks/a2-p2-06.md): bỏ // ở dòng dưới khi thêm bài
+  //'data/readings/a2-p2-06.js',
+  // a2-p2-07 (tasks/a2-p2-07.md): bỏ // ở dòng dưới khi thêm bài
+  //'data/readings/a2-p2-07.js',
+  // a2-p2-08 (tasks/a2-p2-08.md): bỏ // ở dòng dưới khi thêm bài
+  //'data/readings/a2-p2-08.js',
+  // a2-p2-09 (tasks/a2-p2-09.md): bỏ // ở dòng dưới khi thêm bài
+  //'data/readings/a2-p2-09.js',
+  // a2-p2-10 (tasks/a2-p2-10.md): bỏ // ở dòng dưới khi thêm bài
+  //'data/readings/a2-p2-10.js',
+  // a2-p2-11 (tasks/a2-p2-11.md): bỏ // ở dòng dưới khi thêm bài
+  //'data/readings/a2-p2-11.js',
+  // a2-p2-12 (tasks/a2-p2-12.md): bỏ // ở dòng dưới khi thêm bài
+  //'data/readings/a2-p2-12.js',
+  // a2-p2-13 (tasks/a2-p2-13.md): bỏ // ở dòng dưới khi thêm bài
+  //'data/readings/a2-p2-13.js',
+  // a2-p2-14 (tasks/a2-p2-14.md): bỏ // ở dòng dưới khi thêm bài
+  //'data/readings/a2-p2-14.js',
+  // a2-p2-15 (tasks/a2-p2-15.md): bỏ // ở dòng dưới khi thêm bài
+  //'data/readings/a2-p2-15.js',
+  // a2-p2-16 (tasks/a2-p2-16.md): bỏ // ở dòng dưới khi thêm bài
+  //'data/readings/a2-p2-16.js',
+  // a2-p2-17 (tasks/a2-p2-17.md): bỏ // ở dòng dưới khi thêm bài
+  //'data/readings/a2-p2-17.js',
+  // a2-p2-18 (tasks/a2-p2-18.md): bỏ // ở dòng dưới khi thêm bài
+  //'data/readings/a2-p2-18.js',
+  // a2-p2-19 (tasks/a2-p2-19.md): bỏ // ở dòng dưới khi thêm bài
+  //'data/readings/a2-p2-19.js',
+  // a2-p2-20 (tasks/a2-p2-20.md): bỏ // ở dòng dưới khi thêm bài
+  //'data/readings/a2-p2-20.js',
+  // a2-p2-21 (tasks/a2-p2-21.md): bỏ // ở dòng dưới khi thêm bài
+  //'data/readings/a2-p2-21.js',
+  // a2-p2-22 (tasks/a2-p2-22.md): bỏ // ở dòng dưới khi thêm bài
+  //'data/readings/a2-p2-22.js',
+  // a2-p2-23 (tasks/a2-p2-23.md): bỏ // ở dòng dưới khi thêm bài
+  //'data/readings/a2-p2-23.js',
+  // a2-p2-24 (tasks/a2-p2-24.md): bỏ // ở dòng dưới khi thêm bài
+  //'data/readings/a2-p2-24.js',
   'audio/index.js'
 ];

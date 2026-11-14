@@ -23,6 +23,17 @@ Tài liệu này đủ để một phiên làm việc khác viết lô sau đún
 9. **Cập nhật** `data/manifest.js` (bỏ `//` ở dòng đã đặt sẵn cho bài, xem mục 2), mục “Not available yet” tự cập nhật theo dữ liệu.
 10. **Làm việc qua GitHub:** một bài = một nhánh = một PR, theo `AGENTS.md`. Không sửa `DECISIONS.md` (quản lý ghi khi merge); quyết định và chỗ lệch nguồn ghi trong mô tả PR.
 
+## 1b. Pass 2 (lượt thứ hai của một cấp; A2 · Pass 2 = v0.2)
+
+Pass 2 cho người học gặp lại từ của cấp đó trong **chuyện mới**. Khác Pass 1 ở các điểm sau, còn lại giữ nguyên mục 1, 3, 4, 7:
+
+1. **Không có từ mới.** Từ mục tiêu là từ đã có trong `data/words-<cấp>*.js`, do quản lý phân sẵn trong file việc (`tasks/a2-p2-NN.md`). File bài **không** có phần `EI.words(…)` ở đầu và **không** sửa mục từ nào. Dùng từ đúng nghĩa và từ loại của mục từ; nếu câu chuyện cần nghĩa khác thì không đánh dấu `{…}` và ghi vào `gloss` như mọi từ khác nghĩa.
+2. **Chuyện mới.** Không kể lại một chuyện đã có ở Pass 1 (xem `grep -h "title:" data/readings/*.js` và trường `fact`). Cùng một chủ đề rộng (ví dụ thể thao) thì được.
+3. **Mã bài** `a2-p2-NN`, `pass: 2`, `n: NN`. Dòng trong `data/manifest.js` đã đặt sẵn, chỉ bỏ `//` ở dòng của bài mình.
+4. **Từ mục tiêu không trùng** giữa các bài Pass 2 (công cụ kiểm tra báo lỗi). Từ đã là mục tiêu của bài Pass 2 khác mà xuất hiện lại đúng nghĩa thì vẫn bọc `{…}` như một lần gặp lại nhẹ.
+5. Các quy định về độ dài, mật độ từ, Practice, nguồn và thời lượng 25–32 phút **giống Pass 1**. Phần Practice có thể dựa vào việc người học đã gặp từ một lần: câu hỏi từ vựng nên hỏi từ trong ngữ cảnh mới, không lặp lại câu ví dụ của mục từ.
+6. Không tạo file âm thanh; quản lý chạy `tools/make-audio.py` sau khi merge.
+
 ## 2. File từ vựng — `data/words-<level>.js`
 
 ```js

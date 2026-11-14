@@ -377,3 +377,13 @@ Lịch sử Trung cổ châu Âu vẫn chiếm khoảng một nửa số bài l�
 - **Trình phát:** thanh thời lượng của cả bài (tổng độ dài các câu; độ dài file lấy từ `audio/index.js`, giọng trình duyệt thì ước tính và ghi “~”), kéo để nhảy tới câu và đúng giây trong câu. Đổi tốc độ khi đang phát file thì đọc tiếp; giọng trình duyệt không đổi tốc độ giữa chừng được nên đọc lại câu đó. Pause rồi Play đọc tiếp từ chỗ dừng.
 - **Practice chia phần:** mỗi phần (Understanding the story, Vocabulary, Grammar) hiện hết câu hỏi một lúc, trả lời theo thứ tự nào cũng được; câu thêm sau khi sai (không chấm điểm) nằm cuối phần đang làm. Phải trả lời hết một phần mới sang phần sau. Tiến độ làm dở của phiên bản cũ (mỗi câu một trang) được làm lại từ đầu bài luyện.
 - **Sao lưu:** không bỏ. Đồng bộ không thay được file sao lưu: lỗi hoặc thao tác xóa trên một máy sẽ được chép sang mọi máy, và bản trên mạng hết hạn sau 400 ngày không dùng. Khi đã bật đồng bộ thì không còn nhắc sao lưu; nút Export/Import vẫn ở Settings.
+
+## 17. v0.2 (A2 · Pass 2) giao cho ChatGPT (2026-11-14)
+
+- Chủ dự án đã nối ChatGPT với GitHub và giao v0.2 cho ChatGPT. Quản lý (Claude) chia việc, duyệt và merge PR, tạo giọng đọc.
+- **24 bài** (`a2-p2-01` … `24`), không thêm từ. Từ được phân: 594 từ A2 chỉ mới gặp ở một bài Pass 1, mỗi từ thuộc đúng một bài, 23–26 từ một bài, nhóm theo chủ đề của chuyện gợi ý. 65 từ còn lại (từ chức năng, chính tả Anh) ở `tasks/a2-p2-spare.md`. Lộ trình cũ ghi “khoảng 20 bài”; tăng lên 24 để phủ gần hết số từ mới gặp một lần.
+- Chuyện gợi ý đã đối chiếu với tiêu đề 54 bài Pass 1 để không trùng (bỏ Semmelweis, bóng rổ, Mona Lisa, tin nhắn đầu tiên, tàu điện ngầm London, Bertha Benz, Diners Club vì Pass 1 đã kể). Chưa tra nguồn cho chuyện gợi ý; người làm phải tra.
+- Chủ đề: lịch sử 2 bài (cả hai thời Trung cổ châu Âu: chiếc nĩa, Magna Carta), còn lại xen sport, body, food, work, travel, engineering, nature, science, culture, language, space, life. Châu Á 5 bài (có Việt Nam: chữ Quốc ngữ), châu Phi 2.
+- 4 đợt × 6 bài. Một bài = một nhánh = một PR. `data/manifest.js` có dòng đặt sẵn cho từng bài, xen dòng chú thích để các PR song song merge không xung đột (đã thử bằng git).
+- Quy định Pass 2: `CONTENT_GUIDE.md` mục 1b. App đã chạy được bài Pass 2 (thử bằng một bài giả): danh sách, Learn words, Practice chia phần, Coverage.
+- v0.1.2: bước Learn words của bài Pass 2 ghi “Ôn lại … từ đã gặp ở Pass 1”.

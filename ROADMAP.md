@@ -10,7 +10,7 @@ Số bài và số từ của các giai đoạn chưa làm là **ước tính** 
 | Phiên bản | Giai đoạn | Nội dung | Trạng thái |
 |---|---|---|---|
 | v0.1 | A2 · Pass 1 | 54 bài đọc, 846 từ A2, 16 bài ngữ pháp A2, đồng bộ bằng mã, giọng AI Kokoro | Xong |
-| v0.2 | A2 · Pass 2 | Khoảng 20 chuyện mới **không thêm từ mới**: gặp lại từ A2 trong ngữ cảnh khác, ưu tiên từ ít xuất hiện | Kế tiếp |
+| v0.2 | A2 · Pass 2 | 24 chuyện mới **không thêm từ mới**: 594 từ A2 mới gặp một lần được gặp lại trong ngữ cảnh khác (giao cho ChatGPT, `tasks/v0.2.md`) | Đang làm |
 | v0.3 | B1 · Pass 1, phần 1 | Khoảng 16 bài (800–1.000 từ/bài), khoảng 370 từ B1, ngữ pháp B1 nhóm 1 | Chưa làm |
 | v0.4 | B1 · Pass 1, phần 2 | Khoảng 15 bài, khoảng 370 từ B1 còn lại: đủ bộ từ B1; ngữ pháp B1 nhóm 2 | Chưa làm |
 | v0.5 | B1 · Pass 2 | Khoảng 15 chuyện mới ôn từ B1, không thêm từ | Chưa làm |
@@ -27,3 +27,4 @@ Sau v1.0 (tùy chọn): Pass 2 cho B2 và C1, theo cùng cách đánh số (v1.1
 
 - **v0.1** (2026-11-14): A2 · Pass 1 đủ bộ từ; đồng bộ giữa các máy; giọng AI Kokoro (Heart, Bella).
 - **v0.1.1** (2026-11-14): Learn words và trang từ giữ nguyên chỗ đang xem khi bấm Show meaning hoặc Known, thêm nút Hide meaning; trình phát có thanh thời lượng kéo được, đổi tốc độ không đọc lại từ đầu câu, Pause rồi Play đọc tiếp từ chỗ dừng; Practice chia theo phần (Understanding, Vocabulary, Grammar), mỗi phần hiện hết câu hỏi; nhắc sao lưu không còn hiện khi đã bật đồng bộ; hiện số phiên bản cạnh Info.
+- **v0.1.2** (2026-11-14): chuẩn bị v0.2: 24 file việc A2 · Pass 2 cho ChatGPT (`tasks/`), quy định Pass 2 trong `CONTENT_GUIDE.md` mục 1b; bước Learn words của bài Pass 2 ghi “Ôn lại … từ đã gặp ở Pass 1”.

@@ -3,7 +3,7 @@ EI.reading({
   title: 'Glasses for a Telescope',
   topic: 'space', era: '1990–1993', year: 1990, region: 'USA / space',
   predict: { q: 'Năm 1990, kính thiên văn Hubble chụp những bức ảnh đầu tiên từ không gian. Vấn đề là gì?', o: ['Ảnh bị mờ vì gương mài sai một chút', 'Kính không mở được', 'Pin hết sau một ngày'] },
-  targets: ['mirror', 'repair', 'moon', 'control', 'land', 'position', 'task', 'photograph', 'scene', 'unit', 'quietly', 'continue', 'involve', 'consider', 'matter', 'recent', 'recently', 'chance', 'suppose', 'review', 'mind', 'double', 'tip'],
+  targets: ['mirror', 'repair', 'moon', 'control', 'land', 'position', 'task', 'photograph', 'scene', 'unit', 'quietly', 'continue', 'involve', 'consider', 'matter', 'recent', 'recently', 'chance', 'suppose', 'review', 'mind', 'double', 'progress'],
   text: [
     [
       ["On April 24, 1990, the Hubble Space Telescope went into space.", "Ngày 24 tháng 4 năm 1990, kính thiên văn không gian Hubble được đưa lên vũ trụ."],
@@ -34,6 +34,7 @@ EI.reading({
       ["The engineers had to {consider} every {chance}.", "Các kỹ sư phải cân nhắc mọi khả năng."],
       ["They could not change the big {mirror}, but they could put new small {mirrors=mirror} in front of the instruments, like glasses for an eye.", "Họ không thể thay chiếc gương lớn, nhưng có thể đặt những chiếc gương nhỏ mới trước các thiết bị, như kính đeo cho mắt."],
       ["They also built a new camera with the right shape inside it.", "Họ cũng làm một chiếc máy ảnh mới có sẵn hình dạng đúng bên trong."],
+      ["Over three years, the work made good {progress}.", "Trong ba năm, công việc tiến triển tốt."],
       ["The scientists did not stop working: they {continued=continue} to study the stars with the blurry pictures.", "Các nhà khoa học không ngừng làm việc: họ tiếp tục nghiên cứu các vì sao bằng những bức ảnh mờ."]
     ],
     [
@@ -54,12 +55,12 @@ EI.reading({
     [
       ["If you measure things at work, keep this story in {mind}.", "Nếu bạn đo đạc trong công việc, hãy ghi nhớ câu chuyện này."],
       ["{Suppose} that your measuring tool is wrong: then every part that you check will look good, and every part will be wrong.", "Giả sử dụng cụ đo của bạn sai: khi đó mọi chi tiết bạn kiểm tra đều trông đạt, và mọi chi tiết đều sai."],
-      ["Here is a {tip} from Hubble: check the tool that checks, and {review} your results in a second, different way.", "Đây là một lời khuyên từ Hubble: hãy kiểm tra cả dụng cụ dùng để kiểm tra, và xem lại kết quả bằng một cách thứ hai, khác đi."],
+      ["Hubble teaches us this: check the tool that checks, and {review} your results in a second, different way.", "Hubble dạy chúng ta điều này: hãy kiểm tra cả dụng cụ dùng để kiểm tra, và xem lại kết quả bằng một cách thứ hai, khác đi."],
       ["Do not just {suppose} that a tool is right because it is new.", "Đừng chỉ cho rằng một dụng cụ đúng vì nó còn mới."],
       ["Did someone move or {repair} the tool {recently}? Check it again, and look at your {recent} results again too.", "Gần đây có ai di chuyển hay sửa dụng cụ không? Hãy kiểm tra lại nó, và xem lại cả những kết quả gần đây của bạn."],
       ["A second test may {double} the work, but it can {save} a lot of money.", "Một lần kiểm tra thứ hai có thể làm công việc tăng gấp đôi, nhưng có thể tiết kiệm được rất nhiều tiền."],
       ["Small numbers {matter}: 1.3 millimeters in the wrong {position} made a 1.5-billion-dollar telescope blurry.", "Những con số nhỏ rất quan trọng: 1,3 mi-li-mét sai vị trí đã làm một chiếc kính thiên văn 1,5 tỷ đô la bị mờ."],
-      ["Another {tip}: when something goes wrong, do not {hide} it, and {continue} to look for a {solution}.", "Một lời khuyên nữa: khi có gì đó sai, đừng che giấu, và hãy tiếp tục tìm giải pháp."],
+      ["And when something goes wrong, do not {hide} it: {continue} to look for a {solution}, because slow {progress} is still {progress}.", "Và khi có gì đó sai, đừng che giấu: hãy tiếp tục tìm giải pháp, vì tiến bộ chậm vẫn là tiến bộ."],
       ["The Hubble team did that, and they turned a big mistake into a famous {chance} to show what people can do.", "Nhóm Hubble đã làm như vậy, và họ biến một sai lầm lớn thành một cơ hội nổi tiếng để cho thấy con người có thể làm được gì."],
       ["Today, when we see a beautiful {scene} from deep space, few people {consider} the small lens that was in the wrong place, or the {task} of the astronauts who {repaired=repair} it, but the engineers in that {unit} of NASA keep the story in {mind}.", "Ngày nay, khi ngắm một cảnh đẹp từ vũ trụ sâu thẳm, ít ai nghĩ đến chiếc thấu kính nhỏ nằm sai chỗ, hay nhiệm vụ của các phi hành gia đã sửa nó, nhưng các kỹ sư trong đơn vị đó của NASA vẫn ghi nhớ câu chuyện."],
       ["They also {photograph} every part of a new telescope many times before it flies, and the {review} {involves=involve} more than one team.", "Họ cũng chụp ảnh mọi bộ phận của một kính thiên văn mới nhiều lần trước khi phóng, và việc xem xét lại có sự tham gia của nhiều nhóm."]

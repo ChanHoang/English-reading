@@ -59,7 +59,7 @@ EI.files = [
   'data/readings/a2-p1-54.js',
   // ---- A2 · Pass 2 (v0.2). Mỗi bài một dòng, có dòng chú thích xen giữa để các PR song song không xung đột.
   // a2-p2-01 (tasks/a2-p2-01.md): bỏ // ở dòng dưới khi thêm bài
-  //'data/readings/a2-p2-01.js',
+  'data/readings/a2-p2-01.js',
   // a2-p2-02 (tasks/a2-p2-02.md): bỏ // ở dòng dưới khi thêm bài
   //'data/readings/a2-p2-02.js',
   // a2-p2-03 (tasks/a2-p2-03.md): bỏ // ở dòng dưới khi thêm bài

@@ -397,3 +397,9 @@ Lịch sử Trung cổ châu Âu vẫn chiếm khoảng một nửa số bài l�
 
 - Thử giao bài `a2-p2-01` cho Codex: lần đầu Codex bị chặn Internet nên dừng đúng quy định; lần sau viết được bài (theo Codex: 603 từ, 23 từ mục tiêu, kiểm tra đạt) nhưng không đẩy được lên GitHub (403) và giao diện Codex của chủ dự án không có nút tạo PR. Bài đó chưa lên repo và không dùng.
 - Chủ dự án: “Hãy bỏ qua việc này. Sau này bạn sẽ làm những việc này.” Claude viết 24 bài v0.2 theo `tasks/a2-p2-*.md` khi chủ dự án yêu cầu. Các file việc, danh sách từ và quy định Pass 2 giữ nguyên.
+
+## 20. Bài a2-p2-01 (Abebe Bikila), v0.1.3 (2026-11-14)
+
+- Bài Pass 2 đầu tiên, Claude viết để chủ dự án xem thử trước khi làm tiếp. 679 từ, 23 từ mục tiêu (bỏ `track` vì mục từ là “vết, dấu vết”, không phải đường chạy; bỏ `goal`, `crowded` vì không có nguồn cho câu tự nhiên), ước tính 30 phút, 28 câu luyện.
+- Nguồn: World Athletics (chính), Wikipedia (Abebe Bikila; Obelisk of Axum), Britannica. Bỏ câu “trước cuộc đua hầu như không ai biết tên anh” vì không nguồn nào đã đọc nói vậy. Không dùng cụm “người châu Phi da đen đầu tiên giành vàng” (nguồn đã đọc chỉ nói “người Ethiopia đầu tiên”).
+- Số phiên bản: bài Pass 2 không thêm từ mới, nên theo quy tắc của chủ dự án là tăng số thứ ba (v0.1.3). Đủ 24 bài thì lên v0.2.

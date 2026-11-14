@@ -46,8 +46,8 @@ EI.reading({
     [
       ["In the {novel}, Victor Frankenstein is the main {character}, but he is not really a {hero}.", "Trong tiểu thuyết, Victor Frankenstein là nhân vật chính, nhưng anh ta không hẳn là một người hùng."],
       ["He makes the creature and then runs away from it, and the creature, alone and sad, becomes dangerous.", "Anh ta tạo ra sinh vật rồi bỏ chạy khỏi nó, và sinh vật ấy, cô đơn và buồn bã, trở nên nguy hiểm."],
-      ["The book is {scary}, but it also asks a {serious} {question}: what do we owe to the things that we make?", "Cuốn sách đáng sợ, nhưng nó cũng đặt ra một câu hỏi nghiêm túc: chúng ta nợ gì những thứ mà chúng ta tạo ra?"],
-      ["Many people know the creature only from {films=film}, with green {skin} and a {flat} head, but that {image} and {appearance} come from the movies, not from the book.", "Nhiều người chỉ biết sinh vật ấy qua phim, với làn da xanh và cái đầu phẳng, nhưng hình ảnh và ngoại hình đó đến từ phim, không phải từ sách."],
+      ["The book is {scary}, but it also asks a {serious} question: what do we owe to the things that we make?", "Cuốn sách đáng sợ, nhưng nó cũng đặt ra một câu hỏi nghiêm túc: chúng ta nợ gì những thứ mà chúng ta tạo ra?"],
+      ["Many people know the creature only from films, with green {skin} and a {flat} head, but that {image} and {appearance} come from the movies, not from the book.", "Nhiều người chỉ biết sinh vật ấy qua phim, với làn da xanh và cái đầu phẳng, nhưng hình ảnh và ngoại hình đó đến từ phim, không phải từ sách."],
       ["Also, in the book, the creature has no name; Frankenstein is the name of the scientist.", "Còn nữa, trong sách sinh vật không có tên; Frankenstein là tên của nhà khoa học."],
       ["I will not tell you the {ending}, but it is not a happy one.", "Tôi sẽ không kể đoạn kết, nhưng đó không phải một kết thúc có hậu."]
     ],
@@ -57,7 +57,7 @@ EI.reading({
       ["Today, scientists study volcanoes and the {climate} together, and they know that one eruption can change the weather on every {continent}.", "Ngày nay, các nhà khoa học nghiên cứu núi lửa cùng với khí hậu, và họ biết một vụ phun trào có thể thay đổi thời tiết ở mọi châu lục."],
       ["When you travel {abroad} or meet {foreign} visitors, remember that the world is {connected}, sometimes in {strange} ways.", "Khi bạn ra nước ngoài hay gặp du khách nước ngoài, hãy nhớ rằng thế giới được kết nối với nhau, đôi khi theo những cách kỳ lạ."],
       ["Every {storm}, every {cloud} and every red sunset in the {sky} has a story, and sometimes the story becomes {fiction}.", "Mỗi cơn bão, mỗi đám mây và mỗi buổi hoàng hôn đỏ trên bầu trời đều có một câu chuyện, và đôi khi câu chuyện ấy trở thành truyện hư cấu."],
-      ["For Mary Shelley, a cold summer was not only a {fear}; it was the start of a {dream}, a {character} and a {series} of books, {films=film} and plays that will not end soon.", "Với Mary Shelley, một mùa hè lạnh không chỉ là nỗi sợ; đó là khởi đầu của một giấc mơ, một nhân vật, và một loạt sách, phim, kịch chưa thể sớm kết thúc."],
+      ["For Mary Shelley, a cold summer was not only a {fear}; it was the start of a {dream}, a {character} and a {series} of books, films and plays that will not end soon.", "Với Mary Shelley, một mùa hè lạnh không chỉ là nỗi sợ; đó là khởi đầu của một giấc mơ, một nhân vật, và một loạt sách, phim, kịch chưa thể sớm kết thúc."],
       ["She is a true {hero} of {fiction}, and her book has a {strange} {birth}: it started with a volcano.", "Bà là một người hùng thực sự của văn chương hư cấu, và cuốn sách của bà có một sự ra đời kỳ lạ: nó bắt đầu từ một ngọn núi lửa."],
       ["Many writers would love an {ending} like that for their own story.", "Nhiều nhà văn hẳn sẽ thích một đoạn kết như thế cho câu chuyện của chính mình."]
     ]

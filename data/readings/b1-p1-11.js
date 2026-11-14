@@ -41,9 +41,9 @@ EI.reading({
       ["Everything was normal for about two minutes.", "Mọi thứ bình thường trong khoảng hai phút."],
       ["Then, less than 900 meters above the ground, the plane flew into a large group of Canada geese.", "Rồi, ở độ cao chưa đến 900 mét, máy bay bay thẳng vào một đàn ngỗng Canada lớn."],
       ["Birds hit the front of the plane and went into both engines under the {wings=wing}.", "Chim đập vào phía trước máy bay và lao vào cả hai động cơ dưới cánh."],
-      ["There were loud bangs, and both engines lost almost all of their power.", "Có những tiếng nổ lớn, và cả hai động cơ gần như mất hết lực đẩy."],
+      ["There were loud noises, and both engines lost almost all of their power.", "Có những tiếng nổ lớn, và cả hai động cơ gần như mất hết lực đẩy."],
       ["Scientists later studied bird remains from the engines and {confirmed=confirm} that they came from Canada geese.", "Các nhà khoa học sau đó nghiên cứu xác chim trong động cơ và xác nhận rằng chúng là ngỗng Canada."],
-      ["For the passengers, it was a {frightening} moment: they could smell burning and see smoke from the engines.", "Với hành khách, đó là một khoảnh khắc đáng sợ: họ ngửi thấy mùi khét và thấy khói từ động cơ."]
+      ["For the passengers, it was {frightening}: they could smell burning and see smoke from the engines.", "Với hành khách, đó là một khoảnh khắc đáng sợ: họ ngửi thấy mùi khét và thấy khói từ động cơ."]
     ],
     [
       ["The two pilots had to do many things in a {hurry}.", "Hai phi công phải làm nhiều việc trong vội vã."],
@@ -59,7 +59,7 @@ EI.reading({
     [
       ["The plane passed over the George Washington Bridge at only about 270 meters.", "Máy bay bay qua cầu George Washington ở độ cao chỉ khoảng 270 mét."],
       ["Then the captain spoke to the passengers: “This is the captain. Brace for impact.”", "Rồi cơ trưởng nói với hành khách: “Cơ trưởng đây. Chuẩn bị va chạm.”"],
-      ["The flight attendants shouted instructions, and the passengers {fastened=fasten} their seat belts tightly.", "Các tiếp viên hét to hướng dẫn, và hành khách thắt chặt dây an toàn."],
+      ["The flight attendants shouted instructions, and the passengers {fastened=fasten} their seat belts.", "Các tiếp viên hét to hướng dẫn, và hành khách thắt chặt dây an toàn."],
       ["In every {row}, people {bent=bend} forward and put their heads down, as the safety card shows.", "Ở mọi hàng ghế, mọi người cúi người về phía trước và gục đầu xuống, như tấm thẻ an toàn hướng dẫn."],
       ["The attendants told them to {bend} forward and stay down, and they checked that every belt was {fastened=fasten}.", "Các tiếp viên bảo họ cúi người về phía trước và giữ nguyên tư thế, và kiểm tra rằng mọi dây an toàn đều đã được thắt."],
       ["Some of them had never looked at the safety card before, but now they read it very {seriously}.", "Có người chưa bao giờ xem tấm thẻ an toàn, nhưng giờ họ đọc nó rất nghiêm túc."],
@@ -70,10 +70,10 @@ EI.reading({
     [
       ["The water was about 5 °C, and most people were not {dressed} for it.", "Nước khoảng 5 °C, và phần lớn mọi người không mặc đủ ấm cho cái lạnh đó."],
       ["The back of the plane was damaged, and water began to {flood} the cabin from the back.", "Phần đuôi máy bay bị hư hại, và nước bắt đầu tràn vào khoang từ phía sau."],
-      ["The passengers in the back {rows=row} felt the icy water first, and for them it was {frightening}.", "Hành khách ở những hàng ghế sau cảm nhận làn nước băng giá đầu tiên, và với họ điều đó thật đáng sợ."],
+      ["The passengers in the back {rows=row} felt the cold water first, and for them it was {frightening}.", "Hành khách ở những hàng ghế sau cảm nhận làn nước băng giá đầu tiên, và với họ điều đó thật đáng sợ."],
       ["People left the plane in a {hurry}, but most of them helped each other.", "Mọi người vội vã rời máy bay, nhưng phần lớn đã giúp đỡ nhau."],
       ["So people left through the front doors and the doors over the {wings=wing}.", "Vì vậy mọi người thoát ra qua các cửa phía trước và các cửa trên cánh."],
-      ["Some stood on the {wings=wing} in the icy water, and others climbed into rafts.", "Một số người đứng trên cánh trong làn nước băng giá, những người khác leo lên xuồng hơi."],
+      ["Some stood on the {wings=wing} in the very cold water, and others climbed into rafts.", "Một số người đứng trên cánh trong làn nước băng giá, những người khác leo lên xuồng hơi."],
       ["Some passengers were wearing only light clothes, because they were {dressed} for an airport and a warm plane, not for a river in winter.", "Một số hành khách chỉ mặc quần áo mỏng, vì họ ăn mặc để đi sân bay và ngồi máy bay ấm áp, chứ không phải để xuống một dòng sông giữa mùa đông."],
       ["The first ferry arrived only 3 minutes and 40 seconds after the landing, and soon more boats came.", "Chiếc phà đầu tiên đến chỉ 3 phút 40 giây sau khi máy bay đáp xuống, và ngay sau đó nhiều thuyền khác tới."],
       ["As the water continued to {flood} the plane, Sullenberger walked through the cabin to check that nobody was left inside.", "Khi nước tiếp tục tràn vào máy bay, Sullenberger đi dọc khoang để kiểm tra rằng không còn ai bên trong."],
@@ -87,18 +87,18 @@ EI.reading({
     [
       ["Later, the National Transportation Safety Board (NTSB) studied the accident for many months.", "Sau đó, Ủy ban An toàn Giao thông Quốc gia Mỹ (NTSB) nghiên cứu vụ tai nạn suốt nhiều tháng."],
       ["The {intention} of the NTSB is not to blame people but to make flying safer.", "Mục đích của NTSB không phải là đổ lỗi cho ai mà là làm cho việc bay an toàn hơn."],
-      ["Some people asked whether the pilots should have tried to reach an airport, so the NTSB had to {judge} the decision carefully.", "Có người hỏi liệu các phi công có nên cố về sân bay không, nên NTSB phải đánh giá quyết định đó một cách cẩn thận."],
+      ["Some people asked whether the pilots should have tried to reach an airport, so the NTSB had to {judge} the decision.", "Có người hỏi liệu các phi công có nên cố về sân bay không, nên NTSB phải đánh giá quyết định đó một cách cẩn thận."],
       ["Its {analysis} included computer tests in flight simulators.", "Phân tích của họ bao gồm cả các bài thử bằng máy mô phỏng bay."],
       ["The tests showed that if the plane had tried to reach LaGuardia or the airport in New Jersey, it would have crashed, possibly in the city.", "Các bài thử cho thấy nếu máy bay cố về LaGuardia hoặc sân bay ở New Jersey, nó đã rơi, có thể là xuống thành phố."],
       ["After a long {analysis}, the NTSB {concluded=conclude} that the decision to land on the river was the right one.", "Sau một quá trình phân tích dài, NTSB kết luận rằng quyết định đáp xuống sông là đúng."],
       ["It also {concluded=conclude} that turning on the extra power unit at once had helped.", "Họ cũng kết luận rằng việc bật ngay bộ nguồn phụ đã giúp ích."],
       ["The checklist that Skiles used was written for engine problems at a much greater height; {therefore}, one of the NTSB’s {recommendations=recommendation} was a new checklist for losing both engines at a low height.", "Danh sách kiểm tra mà Skiles dùng được viết cho sự cố động cơ ở độ cao lớn hơn nhiều; vì vậy, một trong những khuyến nghị của NTSB là một danh sách kiểm tra mới cho trường hợp mất cả hai động cơ ở độ cao thấp."],
-      ["Other {recommendations=recommendation} were about safety equipment and training.", "Các khuyến nghị khác liên quan đến thiết bị an toàn và huấn luyện."]
+      ["Other {recommendations=recommendation} were about safety training.", "Các khuyến nghị khác liên quan đến thiết bị an toàn và huấn luyện."]
     ],
     [
       ["Sullenberger became famous, and in 2016, Tom Hanks played him in the film Sully.", "Sullenberger trở nên nổi tiếng, và năm 2016, Tom Hanks đóng vai ông trong bộ phim Sully."],
       ["The plane was taken out of the river within days, and since 2011 it has been in a museum in Charlotte, the city that it never reached.", "Chiếc máy bay được kéo khỏi sông trong vòng vài ngày, và từ năm 2011 nó nằm trong một bảo tàng ở Charlotte, thành phố mà nó chưa bao giờ đến được."],
-      ["On important anniversaries, survivors meet there, and on one such {occasion}, in 2019, they lifted their glasses at 3:31 p.m., the exact time of the landing.", "Vào những dịp kỷ niệm quan trọng, những người sống sót gặp nhau ở đó, và trong một dịp như vậy, năm 2019, họ nâng ly lúc 3 giờ 31 chiều, đúng thời điểm hạ cánh."],
+      ["On important anniversaries, survivors meet there, and on one such {occasion}, in 2019, they lifted their glasses at 3:31 p.m., the time of the landing.", "Vào những dịp kỷ niệm quan trọng, những người sống sót gặp nhau ở đó, và trong một dịp như vậy, năm 2019, họ nâng ly lúc 3 giờ 31 chiều, đúng thời điểm hạ cánh."],
       ["For many of them, it is an {occasion} to say how {grateful} they are.", "Với nhiều người, đó là dịp để nói rằng họ biết ơn đến nhường nào."],
       ["One passenger said that in the air, all he could think about were the things he would miss; after that day, he decided to spend more time with his family.", "Một hành khách kể rằng trên không, tất cả những gì ông nghĩ đến là những điều ông sẽ bỏ lỡ; sau ngày đó, ông quyết định dành nhiều thời gian hơn cho gia đình."],
       ["The landing was not {perfectly} {smooth}, and nobody can say that everything went {perfectly}.", "Cú hạ cánh không hoàn toàn êm, và không ai có thể nói mọi thứ đều hoàn hảo."],
@@ -131,7 +131,7 @@ EI.reading({
     { t: 'match', k: 'w:set-hudson', q: 'Match the words with their meanings.', pairs: [['row', 'a line of seats next to each other'], ['wing', 'a long, flat part on the side of a plane'], ['analysis', 'the careful study of something'], ['grateful', 'feeling thanks']], why: 'row = hàng ghế; wing = cánh; analysis = sự phân tích; grateful = biết ơn.', ref: 'In every row, people bent forward' },
     { t: 'mc', k: 'w:therefore', q: 'The checklist was written for a much greater height; ______, the NTSB recommended a new one.', o: ['therefore', 'perfectly', 'seriously'], a: 0, why: 'therefore = vì vậy.', ref: 'therefore, one of the NTSB’s recommendations' },
     { t: 'mc', k: 'w:dressed', q: 'Most people were not ______ for the cold water.', o: ['dressed', 'experienced', 'frightening'], a: 0, why: 'be dressed for = ăn mặc phù hợp cho.', ref: 'most people were not dressed for it' },
-    { t: 'mc', k: 'w:fasten', q: 'The passengers ______ their seat belts tightly.', o: ['fastened', 'flooded', 'concluded'], a: 0, why: 'fasten a seat belt = thắt dây an toàn.', ref: 'the passengers fastened their seat belts tightly' },
+    { t: 'mc', k: 'w:fasten', q: 'The passengers ______ their seat belts.', o: ['fastened', 'flooded', 'concluded'], a: 0, why: 'fasten a seat belt = thắt dây an toàn.', ref: 'the passengers fastened their seat belts' },
     { t: 'mc', k: 'g:past-perfect', q: 'Some of them ______ at the safety card before.', o: [['had never looked', 'Đúng: trước thời điểm đó họ chưa từng xem.'], ['have never looked', 'Sai: chuyện năm 2009.'], ['never look', 'Sai thì.']], a: 0, why: 'had never + V3.', ref: 'Some of them had never looked at the safety card before' },
     { t: 'mc', k: 'g:gerund-infinitive', q: 'It concluded that ______ on the extra power unit at once had helped.', o: [['turning', 'Đúng: V-ing làm chủ ngữ.'], ['turn', 'Sai: chủ ngữ không dùng V nguyên mẫu.'], ['turned', 'Sai: cần danh động từ.']], a: 0, why: 'V-ing làm chủ ngữ của mệnh đề.', ref: 'turning on the extra power unit at once had helped' },
     { t: 'error', k: 'g:reported-speech', q: 'One passenger said that all he can think about were the things he would miss.', wrong: 'can', fix: 'could', why: 'Câu tường thuật quá khứ: can → could.', ref: 'all he could think about were the things he would miss' },

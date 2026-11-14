@@ -392,3 +392,8 @@ Lịch sử Trung cổ châu Âu vẫn chiếm khoảng một nửa số bài l�
 
 - **Chủ dự án:** “từ nay về sau hãy lấy giọng heart”. Mọi câu, từ và câu ví dụ **mới** dùng `af_heart`. 4.049 file đã có giữ nguyên giọng (Heart 1.974, Bella 2.075); chủ dự án đã quyết định không tạo lại (09:29 cùng ngày). `tools/audio-items.js` lấy giọng của file đã có trong `audio/manifest.json`, còn lại là Heart. Hệ quả: nếu sửa một câu của bài Pass 1 đang đọc bằng Bella, câu đó sẽ đọc bằng Heart.
 - **Không giao việc tạo âm thanh cho ChatGPT.** Lý do: mỗi PR sẽ sửa cùng `audio/index.js` (một dòng dài) và `audio/manifest.json`, nên các PR làm song song chắc chắn xung đột; mỗi phiên phải tải mô hình 350 MB. Thay vào đó, workflow `.github/workflows/audio.yml` chạy trên GitHub sau mỗi lần nội dung vào `main`: kiểm tra (`make-audio.py --check`), nếu thiếu thì cài Kokoro (mô hình được cache), tạo file, kiểm tra lại, commit vào `main` bằng `github-actions[bot]`, rồi chạy lại “Publish site” (commit bằng GITHUB_TOKEN không tự kích hoạt workflow khác). Không ai phải làm tay.
+
+## 19. Bỏ ChatGPT, Claude làm v0.2 (2026-11-14)
+
+- Thử giao bài `a2-p2-01` cho Codex: lần đầu Codex bị chặn Internet nên dừng đúng quy định; lần sau viết được bài (theo Codex: 603 từ, 23 từ mục tiêu, kiểm tra đạt) nhưng không đẩy được lên GitHub (403) và giao diện Codex của chủ dự án không có nút tạo PR. Bài đó chưa lên repo và không dùng.
+- Chủ dự án: “Hãy bỏ qua việc này. Sau này bạn sẽ làm những việc này.” Claude viết 24 bài v0.2 theo `tasks/a2-p2-*.md` khi chủ dự án yêu cầu. Các file việc, danh sách từ và quy định Pass 2 giữ nguyên.

@@ -10,7 +10,7 @@ Số bài và số từ của các giai đoạn chưa làm là **ước tính** 
 | Phiên bản | Giai đoạn | Nội dung | Trạng thái |
 |---|---|---|---|
 | v0.1 | A2 · Pass 1 | 54 bài đọc, 846 từ A2, 16 bài ngữ pháp A2, đồng bộ bằng mã, giọng AI Kokoro | Xong |
-| v0.2 | A2 · Pass 2 | 24 chuyện mới **không thêm từ mới**: 594 từ A2 mới gặp một lần được gặp lại trong ngữ cảnh khác (giao cho ChatGPT, `tasks/v0.2.md`) | Đang làm |
+| v0.2 | A2 · Pass 2 | 24 chuyện mới **không thêm từ mới**: 594 từ A2 mới gặp một lần được gặp lại trong ngữ cảnh khác (Claude làm, `tasks/v0.2.md`) | Đang làm |
 | v0.3 | B1 · Pass 1, phần 1 | Khoảng 16 bài (800–1.000 từ/bài), khoảng 370 từ B1, ngữ pháp B1 nhóm 1 | Chưa làm |
 | v0.4 | B1 · Pass 1, phần 2 | Khoảng 15 bài, khoảng 370 từ B1 còn lại: đủ bộ từ B1; ngữ pháp B1 nhóm 2 | Chưa làm |
 | v0.5 | B1 · Pass 2 | Khoảng 15 chuyện mới ôn từ B1, không thêm từ | Chưa làm |

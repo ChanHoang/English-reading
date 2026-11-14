@@ -853,9 +853,9 @@ function boot() {
   const c = S.cur || {}; // reopen exactly where the learner left off
   if ((c.v === 'reading' && c.rid && !EI.rById(c.rid)) || (c.v === 'grammar' && c.gid && !EI.gById(c.gid)) || (c.v === 'vocab' && c.w && !EI.W[c.w]) || !c.v) S.cur = { v: 'today' };
   render();
-  EI.sync.start(r => { if (r.ok && r.changed && ['today', 'progress'].includes(S.cur.v)) render(); else if (S.cur.v === 'settings') render(); },
+  EI.sync.start(r => { if (r.ok && r.changed && ['today', 'progress'].includes(S.cur.v)) keep(); else if (S.cur.v === 'settings') keep(); },
     () => { const L = S.cur.v === 'reading' && S.cur.rid && S.lessons[S.cur.rid]; return !!(L && !L.doneDay) || !!run; });
-  setTimeout(() => { if (EI.audio.ok && $('.audiolabel, .player .lab')) render(); }, 700); // voices load late in some browsers
+  setTimeout(() => { if (EI.audio.ok && $('.audiolabel, .player .lab')) keep(); }, 700);   // voices load late in some browsers; keep() so the page does not jump to the top
   if (!EI.inlined && 'serviceWorker' in navigator && /^https?:$/.test(location.protocol)) {
     navigator.serviceWorker.register('sw.js').then(() => navigator.serviceWorker.ready).then(reg => {
       const urls = ['./', 'index.html', 'css/app.css', 'js/core.js', 'js/ui.js', 'data/manifest.js', 'manifest.webmanifest', 'icons/icon-192.png', 'icons/icon-512.png', ...EI.files];

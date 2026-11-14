@@ -35,7 +35,7 @@ EI.reading({
       ["He {led=lead} the {race} for most of the way, but near the end he was getting very {weak}.", "Anh dẫn đầu cuộc đua gần như suốt chặng, nhưng gần cuối thì ngày càng kiệt sức."],
       ["About 11 kilometers before the {finish}, his {trainers} gave him strychnine, a poison, mixed with egg whites.", "Khoảng 11 ki-lô-mét trước vạch đích, những người huấn luyện cho anh uống strychnine, một chất độc, trộn với lòng trắng trứng."],
       ["Later they gave him more strychnine and some brandy.", "Sau đó họ cho anh uống thêm strychnine và một ít rượu brandy."],
-      ["He was still {leading}, but at the end his {trainers} had to carry him when he {passed} the {finish} line.", "Anh vẫn dẫn đầu, nhưng đến cuối, những người huấn luyện phải khiêng anh khi anh qua vạch đích."],
+      ["He was still {leading=lead}, but at the end his {trainers} had to carry him when he {passed} the {finish} line.", "Anh vẫn dẫn đầu, nhưng đến cuối, những người huấn luyện phải khiêng anh khi anh qua vạch đích."],
       ["It took four doctors and an hour before he felt well enough to leave.", "Phải mất bốn bác sĩ và một tiếng đồng hồ anh mới đủ khỏe để rời đi."]
     ],
     [

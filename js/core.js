@@ -3,7 +3,7 @@
 'use strict';
 const EI = window.EI = { W: {}, R: [], G: [], files: [], meta: {} };
 // version: v0.<roadmap stage>.<small fix> — see ROADMAP.md (stage 1 = A2 Pass 1)
-EI.VERSION = 'v0.2.1';
+EI.VERSION = 'v0.2.2';
 
 /* ---------- data registry (data files call these) ---------- */
 // Word table: one word per line, fields separated by "|":
@@ -98,7 +98,7 @@ const KEY = 'ei.v1';
 EI.TOPICS = { history: 'History', science: 'Science', engineering: 'Engineering & making', nature: 'Nature', body: 'Human body & health', space: 'Space', life: 'Everyday life', work: 'Work & money', travel: 'Places & travel', food: 'Food & cooking', culture: 'Arts & media', sport: 'Sport', language: 'Words & language' };
 EI.blank = () => ({
   v: 1, created: EI.today(), lastExport: null, lastKind: null,
-  settings: { theme: 'system', fs: 1, cap: 15, replayKey: 'Alt+R', voice: '', vsrc: 'ai', rate: 1, hl: true,
+  settings: { theme: 'system', fs: 1, cap: 15, replayKey: 'Alt+R', keys: null, seek: 5, voice: '', vsrc: 'ai', rate: 1, hl: true,
     topics: { history: 2, science: 1, engineering: 1, nature: 1, body: 1, space: 1, life: 1, work: 1, travel: 1, food: 1, culture: 1, sport: 1, language: 1 } },
   words: {}, gq: {}, lessons: {}, gram: {}, days: {}, errors: [], facts: [], sentences: [], scanned: {}, scores: {}, mine: {},
   cur: { v: 'today' }
@@ -110,6 +110,10 @@ EI.load = () => {
   EI.S = Object.assign(b, s || {});
   EI.S.settings = Object.assign(EI.blank().settings, (s && s.settings) || {});
   EI.S.settings.topics = Object.assign(EI.blank().settings.topics, (s && s.settings && s.settings.topics) || {});
+  if (!EI.S.settings.keys) {   // keyboard shortcuts are chosen by the learner; the old fixed "hear again" key carries over
+    const k = EI.S.settings.replayKey;
+    EI.S.settings.keys = k === 'Alt+R' ? { again: { code: 'KeyR', alt: 1, label: 'Alt+R' } } : k === 'R' ? { again: { code: 'KeyR', label: 'R' } } : k === 'Space' ? { again: { code: 'Space', label: 'Space' } } : {};
+  }
 };
 EI.save = () => { try { localStorage.setItem(KEY, JSON.stringify(EI.S)); return true; } catch (e) { return false; } };
 EI.day = () => { const t = EI.today(), D = EI.S.days; return D[t] || (D[t] = { t: 0, r: 0, l: 0, w: 0, a: 0 }); };

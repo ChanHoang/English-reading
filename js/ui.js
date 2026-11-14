@@ -59,7 +59,7 @@ function applyTheme() {
   root.style.setProperty('--fs', st.fs);
 }
 function go(cur) {
-  EI.audio.stop(); P.on = false; closeSheet(); S.cur = cur; run = null; runs.clear(); viOpen = false; openVi = new Set();
+  EI.audio.stop(); P.on = false; closeSheet(); keyCap = null; S.cur = cur; run = null; runs.clear(); viOpen = false; openVi = new Set();
   EI.save(); render(); const m = $('#main'); if (m) m.scrollTop = 0; pushNav();
 }
 function keep() { /* re-render without losing the scroll position (show/hide meaning, Known…) */
@@ -590,6 +590,9 @@ function playerHTML() {
     '<button class="btn icon" id="pplay" data-a="pPlay" aria-label="Play or pause">' + ic('play') + '</button>' +
     '<button class="btn icon" data-a="pNext" aria-label="Next sentence">' + ic('next') + '</button>' +
     '<button class="btn icon" data-a="pAgain" aria-label="Hear this sentence again">' + ic('again') + '</button>' +
+    '<span class="pseekg"><button class="btn small" data-a="pBack" aria-label="Go back ' + step() + ' seconds">−' + step() + 's</button>' +
+    '<select id="pstep" aria-label="How far back or forward">' + STEPS.map(x => '<option value="' + x + '"' + (step() === x ? ' selected' : '') + '>' + x + ' s</option>').join('') + '</select>' +
+    '<button class="btn small" data-a="pFwd" aria-label="Go forward ' + step() + ' seconds">+' + step() + 's</button></span>' +
     '<select id="prate" aria-label="Speed">' + [0.5, 0.75, 1, 1.25, 1.5, 2].map(x => '<option value="' + x + '"' + (S.settings.rate === x ? ' selected' : '') + '>' + x + '×</option>').join('') + '</select>' +
     '<span class="lab">' + esc(EI.audio.label()) + '</span></div></div>';
 }
@@ -612,6 +615,19 @@ A.pPlay = () => { if (!EI.audio.ok) { toast('This device has no speech voice.');
 A.pPrev = () => { P.i--; P.start = 0; speakIdx(P.on); };
 A.pNext = () => { P.i++; P.start = 0; speakIdx(P.on); };
 A.pAgain = () => { P.start = 0; speakIdx(P.on); };
+/* back / forward by a few seconds of the story (the length is chosen in the player); with the browser voice it lands on a sentence start */
+const STEPS = [2, 3, 5, 10, 15, 30], step = () => (S && S.settings.seek) || 5;
+function seekBy(d) { const r = EI.rById(S.cur.rid); if (!r) return; const T = track(r), x = heardAt(r) + d * (S.settings.rate || 1); seekTo(Math.max(0, Math.min(T.total - 0.05, x))); }
+A.pBack = () => seekBy(-step());
+A.pFwd = () => seekBy(step());
+/* keyboard shortcuts: the learner presses the key they want for each action (Settings → Audio) */
+const KEYACT = [['play', 'Play / pause'], ['back', 'Go back (seconds chosen in the player)'], ['fwd', 'Go forward (seconds chosen in the player)'], ['again', 'Hear the sentence again']];
+let keyCap = null;   // the action waiting for a key press
+const keyLabel = e => { const c = e.code, base = c === 'Space' ? 'Space' : /^Key[A-Z]$/.test(c) ? c.slice(3) : /^Digit\d$/.test(c) ? c.slice(5) : { ArrowLeft: '←', ArrowRight: '→', ArrowUp: '↑', ArrowDown: '↓' }[c] || (e.key && e.key.length === 1 ? e.key.toUpperCase() : e.key || c);
+  return (e.ctrlKey ? 'Ctrl+' : '') + (e.altKey ? 'Alt+' : '') + (e.shiftKey ? 'Shift+' : '') + (e.metaKey ? 'Cmd+' : '') + base; };
+const keyHit = (k, e) => k && k.code === e.code && !!k.alt === e.altKey && !!k.ctrl === e.ctrlKey && !!k.shift === e.shiftKey && !!k.meta === e.metaKey;
+A.keySet = d => { keyCap = d.k; keep(); };
+A.keyClear = d => { delete S.settings.keys[d.k]; keyCap = null; EI.save(); keep(); };
 
 /* ----- word / sentence sheet ----- */
 function openSheet(si, j) {
@@ -736,7 +752,8 @@ function vSettings() {
   let h = '<div class="ph"><h1>Settings</h1></div>';
   h += '<section class="card" id="s-look"><h2>Display</h2><label class="f">Theme' + sel('set-theme', [['system', 'Follow the device'], ['light', 'Light'], ['dark', 'Dark']], st.theme) + '</label><label class="f">Text size' + sel('set-fs', [[0.9, 'Small'], [1, 'Normal'], [1.15, 'Large'], [1.3, 'Extra large']], st.fs) + '</label><p class="vi">Chế độ đọc tập trung (Focus) bật ngay trong bài đọc.</p></section>';
   h += '<section class="card" id="s-study"><h2>Study</h2><label class="f">Reviews per day, at most' + sel('set-cap', [[8, '8 (about 2 min)'], [15, '15 (about 5 min)'], [25, '25 (about 8 min)'], [40, '40 (about 12 min)'], [9999, 'No limit']], st.cap) + '</label><p class="vi">Giới hạn này giữ cho lượt ôn không lấn bài học. Khi nghỉ lâu, lượng ôn dồn lại được chia ra nhiều ngày, ưu tiên từ sắp quên nhất.</p></section>';
-  h += '<section class="card" id="s-audio"><h2>Audio</h2><p class="audiolabel">Current source: ' + esc(EI.audio.label()) + '</p>' + (EI.audioIndex && !EI.inlined ? '<label class="f">Voice source' + sel('set-vsrc', [['ai', 'AI voice: Kokoro Heart & Bella (recommended)'], ['browser', 'Browser voice of this device']], st.vsrc || 'ai') + '</label><p class="vi">Giọng AI là file âm thanh tạo sẵn bằng mô hình Kokoro-82M, giống nhau trên mọi máy và nghe được khi mất mạng sau lần nghe đầu. Đây là giọng máy, không phải người thật. Câu bạn tự viết vẫn dùng giọng của trình duyệt.</p>' : '') + '<label class="f">Browser voice (en-US voices on this device)' + sel('set-voice', [['', 'Automatic'], ...EI.audio.voices.map(v => [v.name, v.name])], st.voice) + '</label><label class="f">Key to hear the sentence again (while reading)' + sel('set-key', [['Alt+R', 'Alt+R'], ['R', 'R'], ['Space', 'Space'], ['Off', 'Off']], st.replayKey) + '</label><div class="rowg"><button class="btn" data-a="say" data-t="This is the voice you will hear in English Improve.">' + ic('phones') + 'Test the voice</button></div></section>';
+  h += '<section class="card" id="s-audio"><h2>Audio</h2><p class="audiolabel">Current source: ' + esc(EI.audio.label()) + '</p>' + (EI.audioIndex && !EI.inlined ? '<label class="f">Voice source' + sel('set-vsrc', [['ai', 'AI voice: Kokoro Heart & Bella (recommended)'], ['browser', 'Browser voice of this device']], st.vsrc || 'ai') + '</label><p class="vi">Giọng AI là file âm thanh tạo sẵn bằng mô hình Kokoro-82M, giống nhau trên mọi máy và nghe được khi mất mạng sau lần nghe đầu. Đây là giọng máy, không phải người thật. Câu bạn tự viết vẫn dùng giọng của trình duyệt.</p>' : '') + '<label class="f">Browser voice (en-US voices on this device)' + sel('set-voice', [['', 'Automatic'], ...EI.audio.voices.map(v => [v.name, v.name])], st.voice) + '</label><h3>Keyboard shortcuts (while reading)</h3><p class="vi">Bấm “Set key” rồi nhấn phím bạn muốn (có thể kèm Ctrl, Alt, Shift). Esc để hủy. Phím chỉ có tác dụng ở bước Read &amp; listen, khi bạn không gõ chữ vào ô nào. Số giây lùi/tiến chọn ngay trên thanh phát.</p>' +
+    KEYACT.map(([k, t]) => { const v = (st.keys || {})[k]; return '<div class="mrow keyrow"><span>' + esc(t) + '</span><span class="rowg"><span class="chip num">' + (keyCap === k ? 'Press a key…' : v ? esc(v.label) : 'none') + '</span><button class="btn small' + (keyCap === k ? ' on' : '') + '" data-a="keySet" data-k="' + k + '">Set key</button>' + (v ? '<button class="btn ghost small" data-a="keyClear" data-k="' + k + '">Clear</button>' : '') + '</span></div>'; }).join('') + '<div class="rowg"><button class="btn" data-a="say" data-t="This is the voice you will hear in English Improve.">' + ic('phones') + 'Test the voice</button></div></section>';
   h += '<section class="card" id="s-topics"><h2>Topic mix</h2><p class="vi">Số càng lớn, chủ đề đó càng được gợi ý nhiều. Mặc định: lịch sử 2, mỗi chủ đề khác 1 (lịch sử nhỉnh hơn một chút). Đặt 0 để tạm không gợi ý một chủ đề.</p>' + Object.keys(EI.TOPICS).map(k => '<div class="mrow"><span>' + EI.TOPICS[k] + '</span><input type="number" min="0" max="10" data-topic="' + k + '" value="' + st.topics[k] + '" aria-label="' + EI.TOPICS[k] + ' weight"></div>').join('') + '</section>';
   if (EI.sync.available()) h += syncCard();
   h += '<section class="card" id="s-data"><h2>Backup file</h2><p class="vi">' + (EI.sync.on() ? 'Đồng bộ đang bật nên tiến độ đã có bản trên mạng; file sao lưu không bắt buộc. Nên xuất một file trước khi làm việc lớn (xóa dữ liệu, dùng thử Replace): đồng bộ chép cả lỗi sang mọi máy, còn file thì không đổi.' : 'Tiến độ chỉ lưu trong trình duyệt này. Hãy bật Sync ở trên, hoặc xuất file định kỳ, nhất là trước khi đổi máy hoặc xóa dữ liệu trình duyệt.') + (S.lastExport != null ? ' Lần xuất gần nhất: ' + EI.fmtDay(S.lastExport) + '.' : ' Bạn chưa xuất lần nào.') + '</p><div class="rowg"><button class="btn primary" data-a="export">Export progress</button><button class="btn" data-a="importOpen">Import progress</button><button class="btn" data-a="resetAsk">Erase all progress</button></div>' +
@@ -863,12 +880,22 @@ document.addEventListener('change', e => {
   else if (t.id === 'set-cap') st.cap = +t.value;
   else if (t.id === 'set-voice') st.voice = t.value;
   else if (t.id === 'set-vsrc') { st.vsrc = t.value; EI.save(); render(); return; }
-  else if (t.id === 'set-key') st.replayKey = t.value;
+  else if (t.id === 'pstep') { st.seek = +t.value; const b = $('[data-a=pBack]'), f = $('[data-a=pFwd]'); if (b) b.textContent = '−' + st.seek + 's'; if (f) f.textContent = '+' + st.seek + 's'; }
   else if (t.dataset.topic) st.topics[t.dataset.topic] = Math.max(0, Math.min(10, +t.value || 0));
   else return;
   EI.save();
 });
 document.addEventListener('keydown', e => {
+  if (keyCap) {   // recording a shortcut
+    if (['Shift', 'Control', 'Alt', 'Meta'].includes(e.key)) return;
+    e.preventDefault(); e.stopPropagation();
+    if (e.key !== 'Escape') {
+      const k = { code: e.code, label: keyLabel(e) }; if (e.altKey) k.alt = 1; if (e.ctrlKey) k.ctrl = 1; if (e.shiftKey) k.shift = 1; if (e.metaKey) k.meta = 1;
+      const ks = S.settings.keys || (S.settings.keys = {}); for (const a in ks) if (keyHit(ks[a], e)) delete ks[a];   // one key, one action
+      ks[keyCap] = k; EI.save();
+    }
+    keyCap = null; keep(); return;
+  }
   const tag = (e.target.tagName || '').toLowerCase(), typing = tag === 'input' || tag === 'textarea' || tag === 'select';
   if (e.key === 'Enter' && tag === 'input' && e.target.hasAttribute('data-ans')) {
     e.preventDefault(); const mr = runOf(e.target);
@@ -878,8 +905,9 @@ document.addEventListener('keydown', e => {
   if (e.key === 'Escape') { if (sh) closeSheet(); else A.closeModal(); return; }
   const L = S.cur.v === 'reading' && S.cur.rid && S.lessons[S.cur.rid];
   if (!L || L.stage !== 'read' || typing) return;
-  const k = S.settings.replayKey, hit = (k === 'Alt+R' && e.altKey && e.code === 'KeyR') || (k === 'R' && !e.altKey && !e.ctrlKey && !e.metaKey && e.code === 'KeyR') || (k === 'Space' && e.code === 'Space');
-  if (hit) { e.preventDefault(); speakIdx(P.on); }
+  const ks = S.settings.keys || {}, act = KEYACT.map(x => x[0]).find(a => keyHit(ks[a], e)); if (!act) return;
+  e.preventDefault();
+  if (act === 'play') A.pPlay(); else if (act === 'back') A.pBack(); else if (act === 'fwd') A.pFwd(); else speakIdx(P.on);
 });
 setInterval(() => { if (document.visibilityState === 'visible' && S) { EI.log('t', 15); EI.save(); } }, 15000);
 

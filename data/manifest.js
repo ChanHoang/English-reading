@@ -99,7 +99,7 @@ EI.files = [
   // a2-p2-20 (tasks/a2-p2-20.md): bỏ // ở dòng dưới khi thêm bài
   'data/readings/a2-p2-20.js',
   // a2-p2-21 (tasks/a2-p2-21.md): bỏ // ở dòng dưới khi thêm bài
-  //'data/readings/a2-p2-21.js',
+  'data/readings/a2-p2-21.js',
   // a2-p2-22 (tasks/a2-p2-22.md): bỏ // ở dòng dưới khi thêm bài
   //'data/readings/a2-p2-22.js',
   // a2-p2-23 (tasks/a2-p2-23.md): bỏ // ở dòng dưới khi thêm bài

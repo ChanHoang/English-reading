@@ -28,7 +28,7 @@ volunteer|n|/ˌvɑːlənˈtɪr/|a person who offers to do a job without being pa
 EI.reading({
   id: 'b1-p1-06', level: 'B1', pass: 1, n: 6,
   title: 'Forty Seconds and Four Days',
-  topic: 'disasters', era: '1906', year: 1906, region: 'United States',
+  topic: 'nature', era: '1906', year: 1906, region: 'United States',
   predict: { q: 'Năm 1906, một trận động đất lớn đánh vào San Francisco. Theo bạn, điều gì phá hủy thành phố nhiều nhất?', o: ['Đám cháy sau trận động đất', 'Bản thân sự rung lắc', 'Sóng thần từ biển'] },
   targets: ['announce', 'block', 'dust', 'earthquake', 'effort', 'emergency', 'explode', 'explosion', 'frightened', 'guard', 'hardly', 'historic', 'impact', 'injured', 'measure', 'occur', 'port', 'previously', 'property', 'safety', 'sudden', 'total', 'totally', 'volunteer'],
   text: [

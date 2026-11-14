@@ -26,7 +26,7 @@ wing|n|/wɪŋ/|one of the two long, flat parts on the sides of a plane or a bird
 EI.reading({
   id: 'b1-p1-11', level: 'B1', pass: 1, n: 11,
   title: 'Two Hundred Seconds over New York',
-  topic: 'transport', era: '2009', year: 2009, region: 'United States',
+  topic: 'travel', era: '2009', year: 2009, region: 'United States',
   predict: { q: 'Năm 2009, một máy bay chở 155 người đâm phải đàn ngỗng và mất cả hai động cơ ngay trên New York. Phi công đã làm gì?', o: ['Hạ cánh xuống sông Hudson', 'Quay về sân bay', 'Bay ra biển'] },
   targets: ['analysis', 'bend', 'conclude', 'confirm', 'dressed', 'experienced', 'fasten', 'flood', 'frightening', 'grateful', 'hurry', 'intention', 'judge', 'occasion', 'perfectly', 'properly', 'recommendation', 'row', 'seriously', 'smooth', 'therefore', 'wing'],
   text: [

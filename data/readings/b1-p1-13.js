@@ -26,7 +26,7 @@ wonder|v|/ˈwʌndər/|to think about something because you want to know more abo
 EI.reading({
   id: 'b1-p1-13', level: 'B1', pass: 1, n: 13,
   title: 'Vague but Exciting',
-  topic: 'technology', era: '1989–1994', year: 1989, region: 'Switzerland',
+  topic: 'science', era: '1989–1994', year: 1989, region: 'Switzerland',
   predict: { q: 'Năm 1989, Tim Berners-Lee viết đề xuất về một hệ thống thông tin mà sau này trở thành World Wide Web. Sếp của ông đã ghi gì lên bản đề xuất?', o: ['“Mơ hồ nhưng thú vị”', '“Quá đắt”', '“Không cần thiết”'] },
   targets: ['access', 'advanced', 'basic', 'charge', 'click', 'commercial', 'contact', 'content', 'development', 'directly', 'file', 'global', 'issue', 'keyboard', 'label', 'management', 'simply', 'software', 'standard', 'summary', 'type', 'wonder'],
   text: [

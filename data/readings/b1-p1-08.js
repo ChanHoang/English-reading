@@ -26,7 +26,7 @@ worldwide|adv|/ˌwɜːrldˈwaɪd/|in all parts of the world|The company sells it
 EI.reading({
   id: 'b1-p1-08', level: 'B1', pass: 1, n: 8,
   title: 'The Dog Who Waited at Shibuya',
-  topic: 'animals', era: '1923–1935', year: 1925, region: 'Japan',
+  topic: 'life', era: '1923–1935', year: 1925, region: 'Japan',
   predict: { q: 'Năm 1925, chủ của chú chó Hachikō qua đời đột ngột. Hachikō tiếp tục ra ga Shibuya chờ ông bao lâu?', o: ['Gần 10 năm', 'Khoảng một tháng', 'Chỉ một ngày'] },
   targets: ['attraction', 'ceremony', 'donate', 'emotion', 'familiar', 'fur', 'generation', 'gentle', 'hunt', 'meanwhile', 'native', 'queue', 'release', 'remind', 'respect', 'sight', 'spot', 'statue', 'stranger', 'tail', 'version', 'worldwide'],
   text: [

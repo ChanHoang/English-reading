@@ -23,7 +23,9 @@ remain|v|/rɪˈmeɪn/|to still be in the same place or in the same state; to be 
 survive|v|/sərˈvaɪv/|to continue to live or to exist, especially after something dangerous or difficult|Only a few photos of the first factory {survived}.|survive a fire; survive an accident; survive for years|sống sót; còn tồn tại|2||survivor (n); survival (n)
 damage|n|/ˈdæmɪdʒ/|something bad that happens to a thing, so that it is broken, weaker or less useful|The fall did not cause any {damage} to the gauge.|cause damage; serious damage; damage to something|sự hư hại, thiệt hại|2|Không đếm được: much damage, không dùng a damage.|damage (v)
 decade|n|/ˈdekeɪd/|a period of ten years|The machine has worked well for a {decade}.|a decade ago; for decades; the last decade|thập kỷ (mười năm)|1|Nhấn âm đầu /ˈdekeɪd/.|
-`);
+`, {
+  note: 'Cấp độ B1 của mọi từ B1 (khai báo ở đầu mỗi file bài đọc B1), theo đúng từ loại, đã được đối chiếu bằng công cụ kiểm tra (lần gần nhất ngày 2026-11-15) với cùng bản sao danh sách Oxford 3000/5000 do bên thứ ba đăng trên GitHub (tyypgzl/Oxford-5000-words), CHƯA đối chiếu với bản PDF chính thức của Oxford University Press. Phiên âm Mỹ của từ B1 do Claude viết, CHƯA so với nguồn ngoài. Từ chỉ có cách viết Anh trong danh sách (analyse, neighbourhood, queue…) được tránh hoặc dùng đúng như danh sách và có ghi chú.'
+});
 EI.reading({
   id: 'b1-p1-01', level: 'B1', pass: 1, n: 1,
   title: 'The Book That Made Its Maker Poor',

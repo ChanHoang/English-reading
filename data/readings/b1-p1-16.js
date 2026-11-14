@@ -24,7 +24,7 @@ yard|n|/jɑːrd/|an area of land next to a building, often with a hard surface, 
 EI.reading({
   id: 'b1-p1-16', level: 'B1', pass: 1, n: 16,
   title: 'The Sweet Wave',
-  topic: 'disasters', era: '1919', year: 1919, region: 'United States',
+  topic: 'history', era: '1919', year: 1919, region: 'United States',
   predict: { q: 'Ngày 15/1/1919, một bồn chứa khổng lồ ở Boston vỡ, và một “con sóng” cao khoảng 8 mét tràn qua các con phố. Sóng đó là gì?', o: ['Mật mía', 'Nước biển', 'Dầu mỏ'] },
   targets: ['alcohol', 'alcoholic', 'bomb', 'heating', 'horror', 'illegal', 'import', 'ingredient', 'innocent', 'legal', 'mild', 'mud', 'responsibility', 'responsible', 'roll', 'rule', 'stick', 'substance', 'warm', 'yard'],
   text: [

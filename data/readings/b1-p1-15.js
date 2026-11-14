@@ -25,7 +25,7 @@ tight|adj|/taɪt/|fixed so that it cannot move, with very little space; also wit
 EI.reading({
   id: 'b1-p1-15', level: 'B1', pass: 1, n: 15,
   title: 'Fifteen Minutes on Top of the World',
-  topic: 'travel', era: '1953', year: 1953, region: 'Nepal',
+  topic: 'sport', era: '1953', year: 1953, region: 'Nepal',
   predict: { q: 'Ngày 29/5/1953, Edmund Hillary và Tenzing Norgay trở thành những người đầu tiên lên đỉnh Everest. Họ ở trên đỉnh bao lâu?', o: ['Khoảng 15 phút', 'Khoảng một ngày', 'Khoảng một tuần'] },
   targets: ['announcement', 'belief', 'chain', 'eastern', 'fitness', 'flag', 'hang', 'headline', 'heavily', 'lay', 'leading', 'nation', 'northern', 'photographer', 'political', 'proud', 'religion', 'rope', 'sharp', 'shoot', 'tight'],
   text: [

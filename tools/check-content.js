@@ -123,6 +123,7 @@ for (const r of EI.R) {
   }
   const dup = r.targets.filter((w, i) => r.targets.indexOf(w) !== i); if (dup.length) E(r.id, 'duplicate targets: ' + dup);
   EI.R.filter(x => x !== r && x.level === r.level && x.pass === r.pass).forEach(x => { const sh = x.targets.filter(w => r.targets.includes(w)); if (sh.length && x.id < r.id) E(r.id, 'targets also used in ' + x.id + ': ' + sh); });
+  if (!EI.TOPICS[r.topic]) E(r.id, 'topic not in EI.TOPICS: ' + r.topic);
   (r.grammar || []).forEach(([gid, ph]) => { if (!EI.gById(gid)) E(r.id, 'grammar id not found: ' + gid); if (!r.S.some(o => o.plain.toLowerCase().includes(ph.toLowerCase()))) E(r.id, 'grammar phrase not in text: ' + ph); });
   r.practice.forEach((it, i) => checkItem(r.id + ' practice ' + (i + 1), it, r));
   (r.extra || []).forEach((it, i) => checkItem(r.id + ' extra ' + (i + 1), it, r));

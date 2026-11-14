@@ -1,5 +1,5 @@
 /* English Improve service worker: offline after the first load (stale-while-revalidate). */
-const CACHE = 'english-improve-v16', AUDIO = 'ei-audio-v1';   // recorded voice files live in their own cache, kept across app updates
+const CACHE = 'english-improve-v17', AUDIO = 'ei-audio-v1';   // recorded voice files live in their own cache, kept across app updates
 self.addEventListener('install', () => self.skipWaiting());
 self.addEventListener('activate', e => e.waitUntil(
   caches.keys().then(ks => Promise.all(ks.filter(k => k !== CACHE && k !== AUDIO).map(k => caches.delete(k)))).then(() => self.clients.claim())

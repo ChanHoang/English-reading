@@ -28,7 +28,7 @@ worth|adj|/wɜːrθ/|having a value of a particular amount of money|This old wat
 EI.reading({
   id: 'b1-p1-07', level: 'B1', pass: 1, n: 7,
   title: 'The Chessmen in the Sand',
-  topic: 'art', era: 'c. 1150–1200; 1831; 2019', year: 1831, region: 'Scotland',
+  topic: 'culture', era: 'c. 1150–1200; 1831; 2019', year: 1831, region: 'Scotland',
   predict: { q: 'Năm 2019, một quân cờ nhỏ bằng ngà, từng được mua với giá 5 bảng Anh và cất trong ngăn kéo suốt hơn 50 năm, được đem bán đấu giá. Theo bạn, nó bán được bao nhiêu?', o: ['Hơn 700.000 bảng', 'Khoảng 5.000 bảng', 'Không ai mua'] },
   targets: ['attract', 'battle', 'bite', 'bury', 'clue', 'divide', 'enemy', 'exhibition', 'identity', 'magic', 'mystery', 'originally', 'possibly', 'previous', 'relative', 'royal', 'sand', 'sculpture', 'servant', 'set', 'tiny', 'unlikely', 'weapon', 'worth'],
   text: [

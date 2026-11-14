@@ -109,7 +109,7 @@ EI.files = [
   // a2-p2-25: thêm sau v0.2 cho các từ A2 còn gặp một lần
   'data/readings/a2-p2-25.js',
   // a2-p2-26: thêm sau v0.2 cho các từ A2 còn gặp một lần
-  //'data/readings/a2-p2-26.js',
+  'data/readings/a2-p2-26.js',
   // a2-p2-27: thêm sau v0.2 cho các từ A2 còn gặp một lần
   //'data/readings/a2-p2-27.js',
   // a2-p2-28: thêm sau v0.2 cho các từ A2 còn gặp một lần

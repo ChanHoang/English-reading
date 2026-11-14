@@ -116,5 +116,38 @@ EI.files = [
   'data/readings/a2-p2-28.js',
   // a2-p2-29: thêm sau v0.2 cho các từ A2 còn gặp một lần
   'data/readings/a2-p2-29.js',
+  'data/grammar-b1.js',
+  // b1-p1-01 (tasks/v0.3.md)
+  'data/readings/b1-p1-01.js',
+  // b1-p1-02 (tasks/v0.3.md)
+  //'data/readings/b1-p1-02.js',
+  // b1-p1-03 (tasks/v0.3.md)
+  //'data/readings/b1-p1-03.js',
+  // b1-p1-04 (tasks/v0.3.md)
+  //'data/readings/b1-p1-04.js',
+  // b1-p1-05 (tasks/v0.3.md)
+  //'data/readings/b1-p1-05.js',
+  // b1-p1-06 (tasks/v0.3.md)
+  //'data/readings/b1-p1-06.js',
+  // b1-p1-07 (tasks/v0.3.md)
+  //'data/readings/b1-p1-07.js',
+  // b1-p1-08 (tasks/v0.3.md)
+  //'data/readings/b1-p1-08.js',
+  // b1-p1-09 (tasks/v0.3.md)
+  //'data/readings/b1-p1-09.js',
+  // b1-p1-10 (tasks/v0.3.md)
+  //'data/readings/b1-p1-10.js',
+  // b1-p1-11 (tasks/v0.3.md)
+  //'data/readings/b1-p1-11.js',
+  // b1-p1-12 (tasks/v0.3.md)
+  //'data/readings/b1-p1-12.js',
+  // b1-p1-13 (tasks/v0.3.md)
+  //'data/readings/b1-p1-13.js',
+  // b1-p1-14 (tasks/v0.3.md)
+  //'data/readings/b1-p1-14.js',
+  // b1-p1-15 (tasks/v0.3.md)
+  //'data/readings/b1-p1-15.js',
+  // b1-p1-16 (tasks/v0.3.md)
+  //'data/readings/b1-p1-16.js',
   'audio/index.js'
 ];

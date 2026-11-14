@@ -106,5 +106,15 @@ EI.files = [
   'data/readings/a2-p2-23.js',
   // a2-p2-24 (tasks/a2-p2-24.md): bỏ // ở dòng dưới khi thêm bài
   'data/readings/a2-p2-24.js',
+  // a2-p2-25: thêm sau v0.2 cho các từ A2 còn gặp một lần
+  'data/readings/a2-p2-25.js',
+  // a2-p2-26: thêm sau v0.2 cho các từ A2 còn gặp một lần
+  //'data/readings/a2-p2-26.js',
+  // a2-p2-27: thêm sau v0.2 cho các từ A2 còn gặp một lần
+  //'data/readings/a2-p2-27.js',
+  // a2-p2-28: thêm sau v0.2 cho các từ A2 còn gặp một lần
+  //'data/readings/a2-p2-28.js',
+  // a2-p2-29: thêm sau v0.2 cho các từ A2 còn gặp một lần
+  //'data/readings/a2-p2-29.js',
   'audio/index.js'
 ];

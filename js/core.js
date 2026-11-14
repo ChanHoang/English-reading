@@ -3,7 +3,7 @@
 'use strict';
 const EI = window.EI = { W: {}, R: [], G: [], files: [], meta: {} };
 // version: v0.<roadmap stage>.<small fix> — see ROADMAP.md (stage 1 = A2 Pass 1)
-EI.VERSION = 'v0.1.3';
+EI.VERSION = 'v0.2';
 
 /* ---------- data registry (data files call these) ---------- */
 // Word table: one word per line, fields separated by "|":

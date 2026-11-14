@@ -2,6 +2,8 @@
 (function () {
 'use strict';
 const EI = window.EI = { W: {}, R: [], G: [], files: [], meta: {} };
+// version: v0.<roadmap stage>.<small fix> — see ROADMAP.md (stage 1 = A2 Pass 1)
+EI.VERSION = 'v0.1.1';
 
 /* ---------- data registry (data files call these) ---------- */
 // Word table: one word per line, fields separated by "|":
@@ -453,7 +455,9 @@ const A = EI.audio = { tts: typeof speechSynthesis !== 'undefined' && typeof Spe
 // Recorded AI voice: audio/<EI.audioKey(text)>.mp3 made by tools/make-audio.py; audio/index.js lists them (key -> 'h:xxxx').
 const VNAME = { h: 'Heart', b: 'Bella' };
 A.rec = () => !EI.inlined && EI.S.settings.vsrc !== 'browser' && typeof fetch === 'function' && typeof Audio !== 'undefined' && !!EI.audioIndex && Object.keys(EI.audioIndex).length > 0;
-A.fileFor = text => { if (!A.rec()) return null; const k = EI.audioKey(String(text || '').trim()), v = EI.audioIndex[k]; return v ? { url: 'audio/' + k + '.mp3?v=' + v.slice(2), voice: v[0] } : null; };
+A.fileFor = text => { if (!A.rec()) return null; const k = EI.audioKey(String(text || '').trim()), v = EI.audioIndex[k]; if (!v) return null; const p = v.split(':'); return { url: 'audio/' + k + '.mp3?v=' + p[1], voice: p[0], dur: p[2] ? +p[2] / 10 : null }; };
+// length in seconds at 1×: from the file list when there is a file, otherwise a guess for the browser voice (about 2.6 words a second)
+A.dur = text => { const f = A.fileFor(text); if (f && f.dur) return { s: f.dur, est: false }; const n = String(text || '').split(/\s+/).filter(Boolean).length; return { s: 0.5 + n / 2.6, est: true }; };
 Object.defineProperty(A, 'ok', { get: () => A.tts || A.rec() });
 A.init = () => {
   if (!A.tts) return;
@@ -485,6 +489,7 @@ A.say = (text, opt) => {
   const done = ok => { if (fin || my !== seq) return; fin = true; EI.log('a', Math.min(120, (Date.now() - t0) / 1000)); opt.onend && opt.onend(ok); };
   if (A.tts) speechSynthesis.cancel();
   const f = A.fileFor(text);
+  A.playing = null;
   if (!f) { speak(text, opt, done); return; }
   // one media element, started inside the tap so phones allow later plays; the file comes as a blob (no range requests)
   if (!el) el = new Audio();
@@ -497,10 +502,15 @@ A.say = (text, opt) => {
     el.onended = () => done(true);
     el.onerror = () => { if (my === seq) speak(text, opt, done); };
     el.src = blobUrl; el.playbackRate = opt.rate || EI.S.settings.rate || 1;
+    if (opt.start > 0) el.addEventListener('loadedmetadata', () => { if (my === seq) try { el.currentTime = Math.min(opt.start, (el.duration || opt.start + 1) - 0.05); } catch (e) { /* ignore */ } }, { once: true });
     try { el.preservesPitch = true; el.webkitPreservesPitch = true; } catch (e) { /* ignore */ }
     A.playing = f;
     return el.play();
   }).catch(() => { if (my === seq) speak(text, opt, done); });
 };
+// change speed while a file plays, without starting again (the browser voice cannot do this: returns false)
+A.setRate = r => { if (el && A.playing && !el.paused && !el.ended) { el.playbackRate = r; return true; } return false; };
+// seconds already heard in the current file (null for the browser voice)
+A.pos = () => (el && A.playing && !el.paused && isFinite(el.currentTime) ? el.currentTime : null);
 A.stop = () => { seq++; if (el) try { el.pause(); } catch (e) { /* ignore */ } if (A.tts) speechSynthesis.cancel(); };
 })();

@@ -1,0 +1,29 @@
+# ROADMAP — lộ trình hoàn thiện bộ từ vựng và bài đọc
+
+Số phiên bản: **v0.<giai đoạn>.<lần sửa>**
+- Số thứ hai tăng khi xong một **giai đoạn nội dung** (thêm bài đọc và từ mới) trong bảng dưới.
+- Số thứ ba tăng với mỗi lần sửa hoặc thêm tính năng **không thêm từ vựng hay bài đọc** (ví dụ v0.1.1, v0.1.2…). Sang giai đoạn mới thì số thứ ba về 0 (v0.2 = v0.2.0).
+- Phiên bản hiện ở cạnh nút Info trên web (`EI.VERSION` trong `js/core.js`).
+
+Số bài và số từ của các giai đoạn chưa làm là **ước tính** từ danh sách Oxford 3000/5000 theo cấp (B1 khoảng 740 từ, B2 khoảng 1.370, C1 khoảng 1.310), khoảng 24 từ mục tiêu mỗi bài. Mỗi giai đoạn gồm cả giọng đọc AI cho bài và từ mới.
+
+| Phiên bản | Giai đoạn | Nội dung | Trạng thái |
+|---|---|---|---|
+| v0.1 | A2 · Pass 1 | 54 bài đọc, 846 từ A2, 16 bài ngữ pháp A2, đồng bộ bằng mã, giọng AI Kokoro | Xong |
+| v0.2 | A2 · Pass 2 | Khoảng 20 chuyện mới **không thêm từ mới**: gặp lại từ A2 trong ngữ cảnh khác, ưu tiên từ ít xuất hiện | Kế tiếp |
+| v0.3 | B1 · Pass 1, phần 1 | Khoảng 16 bài (800–1.000 từ/bài), khoảng 370 từ B1, ngữ pháp B1 nhóm 1 | Chưa làm |
+| v0.4 | B1 · Pass 1, phần 2 | Khoảng 15 bài, khoảng 370 từ B1 còn lại: đủ bộ từ B1; ngữ pháp B1 nhóm 2 | Chưa làm |
+| v0.5 | B1 · Pass 2 | Khoảng 15 chuyện mới ôn từ B1, không thêm từ | Chưa làm |
+| v0.6 | B2 · Pass 1, phần 1 | Khoảng 19 bài (1.000–1.300 từ/bài), khoảng 460 từ B2, ngữ pháp B2 nhóm 1 | Chưa làm |
+| v0.7 | B2 · Pass 1, phần 2 | Khoảng 19 bài, khoảng 460 từ B2 | Chưa làm |
+| v0.8 | B2 · Pass 1, phần 3 | Khoảng 19 bài, khoảng 450 từ B2 còn lại: đủ bộ từ B2; ngữ pháp B2 nhóm 2 | Chưa làm |
+| v0.9 | C1 · Pass 1, phần 1 | Khoảng 18 bài (1.300–1.600 từ/bài), khoảng 440 từ C1 | Chưa làm |
+| v0.10 | C1 · Pass 1, phần 2 | Khoảng 18 bài, khoảng 440 từ C1 | Chưa làm |
+| v1.0 | C1 · Pass 1, phần 3 | Khoảng 18 bài, khoảng 430 từ C1 còn lại: **đủ bộ từ A2–C1** | Chưa làm |
+
+Sau v1.0 (tùy chọn): Pass 2 cho B2 và C1, theo cùng cách đánh số (v1.1, v1.2…).
+
+## Nhật ký phiên bản
+
+- **v0.1** (2026-11-14): A2 · Pass 1 đủ bộ từ; đồng bộ giữa các máy; giọng AI Kokoro (Heart, Bella).
+- **v0.1.1** (2026-11-14): Learn words và trang từ giữ nguyên chỗ đang xem khi bấm Show meaning hoặc Known, thêm nút Hide meaning; trình phát có thanh thời lượng kéo được, đổi tốc độ không đọc lại từ đầu câu, Pause rồi Play đọc tiếp từ chỗ dừng; Practice chia theo phần (Understanding, Vocabulary, Grammar), mỗi phần hiện hết câu hỏi; nhắc sao lưu không còn hiện khi đã bật đồng bộ; hiện số phiên bản cạnh Info.

@@ -17,6 +17,7 @@ tools/e2e-test.py                                 kiểm thử giao diện (Play
 tools/sync-test.mjs, tools/sync-dev-server.mjs   kiểm thử và chạy thử máy chủ đồng bộ
 sync/worker.js, sync/README.md                    máy chủ đồng bộ (Cloudflare Worker + KV) và cách cài
 CONTENT_GUIDE.md, DECISIONS.md                    chuẩn nội dung, nhật ký quyết định
+ROADMAP.md                                        lộ trình và số phiên bản (EI.VERSION trong js/core.js)
 ```
 
 ## Vai trò

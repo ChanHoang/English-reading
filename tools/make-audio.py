@@ -100,14 +100,21 @@ def to_mp3(a, sr, path):
     subprocess.run(['ffmpeg', '-y', '-loglevel', 'error', '-f', 'wav', '-i', 'pipe:0', '-ac', '1', '-ar', str(sr), '-b:a', BITRATE, path + '.part.mp3'], input=buf.getvalue(), check=True)
     os.replace(path + '.part.mp3', path)
 
+def mp3_len(path):
+    r = subprocess.run(['ffprobe', '-v', 'error', '-show_entries', 'format=duration', '-of', 'csv=p=0', path], capture_output=True, text=True, check=True)
+    return round(float(r.stdout.strip()), 2)
+
 def write_index(man, shard=None):
     if shard is not None:   # parallel run: each process keeps its own part; a normal run merges them
         with open(os.path.join(AUDIO, f'manifest.part{shard}.json'), 'w') as f:
             json.dump(man, f, ensure_ascii=False)
         return
-    idx = {k: v['v'] + ':' + v['h'][:4] for k, v in sorted(man.items())}
+    for k, v in man.items():   # length in seconds, for the player's time bar (older records had none)
+        if 'd' not in v and os.path.exists(os.path.join(AUDIO, k + '.mp3')):
+            v['d'] = mp3_len(os.path.join(AUDIO, k + '.mp3'))
+    idx = {k: v['v'] + ':' + v['h'][:4] + (':' + str(round(v['d'] * 10)) if 'd' in v else '') for k, v in sorted(man.items())}
     with open(os.path.join(AUDIO, 'index.js'), 'w') as f:
-        f.write('// Made by tools/make-audio.py: texts with a recorded AI voice (Kokoro-82M). key = EI.audioKey(text); value = voice (h = af_heart, b = af_bella), a colon, then a version.\n')
+        f.write('// Made by tools/make-audio.py: texts with a recorded AI voice (Kokoro-82M). key = EI.audioKey(text); value = voice (h = af_heart, b = af_bella), version, length in tenths of a second, joined by colons.\n')
         f.write('EI.audioIndex = ' + json.dumps(idx, separators=(',', ':')) + ';\n')
     with open(os.path.join(AUDIO, 'manifest.json'), 'w') as f:
         json.dump(man, f, ensure_ascii=False, indent=0, sort_keys=True)
@@ -155,7 +162,7 @@ def main():
         w = want[key]
         a, sr = render(k, w['s'], w['v'], w['t'])
         to_mp3(a, sr, os.path.join(AUDIO, key + '.mp3'))
-        man[key] = {'v': w['v'], 'h': w['h'], 't': w['t']} | ({'s': w['s']} if w['s'] != w['t'] else {})
+        man[key] = {'v': w['v'], 'h': w['h'], 't': w['t'], 'd': round(len(a) / sr, 2)} | ({'s': w['s']} if w['s'] != w['t'] else {})
         if n % 25 == 0 or n == len(todo):
             write_index(man, shard)
             el = time.time() - t0

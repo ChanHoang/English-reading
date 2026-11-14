@@ -368,3 +368,12 @@ Lịch sử Trung cổ châu Âu vẫn chiếm khoảng một nửa số bài l�
 - **Service worker:** file âm thanh nằm trong cache riêng `ei-audio-v1`, không bị xóa khi app cập nhật; tải khi nghe lần đầu, không tải trước.
 - **Công cụ:** `tools/audio-items.js` (danh sách câu và giọng), `tools/make-audio.py` (tạo, chỉ làm lại phần thay đổi, `--check`, `--shard k/n` để chạy song song), `tools/audio-lexicon.json` (sửa cách đọc: viết tắt, số La Mã, °C, £/$, p.m.). Mô hình tải về `tools/.kokoro/`, không commit.
 - **Kết quả (2026-11-14):** 4.049 file (câu bài đọc, từ, câu ví dụ; câu trùng chỉ một file), 106 MB; Heart 1.974, Bella 2.075. Tạo bằng hai tiến trình song song, khoảng 2 giờ. Đo trên file: ngắt sau dấu phẩy khoảng 0,5 s, cuối câu khoảng 0,93 s. Kiểm thử 84/84, `make-audio.py --check` sạch. Chưa có người nghe hết: chủ dự án nghe và báo chỗ đọc sai để thêm vào `tools/audio-lexicon.json`, rồi chạy lại `make-audio.py` (chỉ tạo lại câu bị đổi).
+
+## 16. Sửa giao diện v0.1.1 và cách đánh số phiên bản (2026-11-14)
+
+- **Số phiên bản:** `v0.<giai đoạn>.<lần sửa>`, theo `ROADMAP.md`. Giai đoạn = một lô bài đọc và từ mới; lần sửa = thay đổi không thêm từ hay bài. Hiện cạnh nút Info (`EI.VERSION`). A2 · Pass 1 là v0.1; bản sửa này là v0.1.1.
+- **Lộ trình:** v0.2 A2 Pass 2, v0.3–v0.4 B1, v0.5 B1 Pass 2, v0.6–v0.8 B2, v0.9–v1.0 C1. Số bài, số từ là ước tính từ danh sách Oxford.
+- **Giữ chỗ đang xem:** Show meaning, Hide meaning, Known (Learn words, trang từ) và trả lời câu hỏi trong Practice không còn cuộn về đầu trang.
+- **Trình phát:** thanh thời lượng của cả bài (tổng độ dài các câu; độ dài file lấy từ `audio/index.js`, giọng trình duyệt thì ước tính và ghi “~”), kéo để nhảy tới câu và đúng giây trong câu. Đổi tốc độ khi đang phát file thì đọc tiếp; giọng trình duyệt không đổi tốc độ giữa chừng được nên đọc lại câu đó. Pause rồi Play đọc tiếp từ chỗ dừng.
+- **Practice chia phần:** mỗi phần (Understanding the story, Vocabulary, Grammar) hiện hết câu hỏi một lúc, trả lời theo thứ tự nào cũng được; câu thêm sau khi sai (không chấm điểm) nằm cuối phần đang làm. Phải trả lời hết một phần mới sang phần sau. Tiến độ làm dở của phiên bản cũ (mỗi câu một trang) được làm lại từ đầu bài luyện.
+- **Sao lưu:** không bỏ. Đồng bộ không thay được file sao lưu: lỗi hoặc thao tác xóa trên một máy sẽ được chép sang mọi máy, và bản trên mạng hết hạn sau 400 ngày không dùng. Khi đã bật đồng bộ thì không còn nhắc sao lưu; nút Export/Import vẫn ở Settings.

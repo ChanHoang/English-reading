@@ -10,36 +10,38 @@ SHOTS = sys.argv[2] if len(sys.argv) > 2 else None
 res = []
 def ok(name, cond, extra=''):
     res.append(bool(cond)); print(('PASS  ' if cond else 'FAIL  ') + name + (('  — ' + str(extra)) if extra and not cond else ''))
-def cur(p): return p.evaluate("""() => { const r = EIui.cur(); return r ? {t: r.it.t, a: r.it.a, o: r.it.o ? r.it.o.length : 0, wrong: r.it.wrong, q: r.it.q || '', n: r.words ? r.words.length : 0,
+def cur(p): return p.evaluate("""() => { const r = EIui.cur(); return r ? {sig: r.sig || '', t: r.it.t, a: r.it.a, o: r.it.o ? r.it.o.length : 0, wrong: r.it.wrong, q: r.it.q || '', n: r.words ? r.words.length : 0,
     pairs: r.it.pairs ? r.it.pairs.length : 0, k: r.it.k || '', fu: !!r.it.fu, sec: EI.sec(r.it), cz: r.it.chunk ? r.it.chunk.blanks.map(b => b.lem) : null, bank: r.bank || null} : null }""")
 def answer(p, right=True):
-    it = cur(p); t = it['t']
+    it = cur(p); t = it['t']; Q = '.qcard[data-q="' + it['sig'] + '"] '
     if t == 'mc':
-        p.click(f'.opt[data-i="{it["a"] if right else (it["a"] + 1) % it["o"]}"]')
+        p.click(Q + f'.opt[data-i="{it["a"] if right else (it["a"] + 1) % it["o"]}"]')
     elif t == 'gap':
         a = it['a'][0] if isinstance(it['a'], list) else it['a']
-        p.fill('#ans', a if right else 'zzzz'); p.click('[data-a=check]')
+        p.fill(Q + '[data-ans]', a if right else 'zzzz'); p.click(Q + '[data-a=check]')
     elif t == 'dict':
-        p.fill('#ans', it['a'] if right else 'completely different words here now'); p.click('[data-a=check]')
+        p.fill(Q + '[data-ans]', it['a'] if right else 'completely different words here now'); p.click(Q + '[data-a=check]')
     elif t == 'order':
-        for k in (range(it['n']) if right else reversed(range(it['n']))): p.click(f'[data-a=sel][data-i="{k}"]')
-        p.click('[data-a=check]')
+        for k in (range(it['n']) if right else reversed(range(it['n']))): p.click(Q + f'[data-a=sel][data-i="{k}"]')
+        p.click(Q + '[data-a=check]')
     elif t == 'error':
         words = it['q'].split(' '); norm = lambda s: re.sub(r"[^a-z0-9' ]", '', s.lower())
         idx = [i for i, w in enumerate(words) if norm(w) == norm(it['wrong'])]
-        p.click(f'.etok[data-i="{idx[-1] if right else (idx[-1] + 1) % len(words)}"]')
+        p.click(Q + f'.etok[data-i="{idx[-1] if right else (idx[-1] + 1) % len(words)}"]')
     elif t == 'match':
-        for i in range(it['pairs']): p.select_option(f'select[data-m="{i}"]', str(i if right else (i + 1) % it['pairs']))
-        p.click('[data-a=check]')
+        for i in range(it['pairs']): p.select_option(Q + f'select[data-m="{i}"]', str(i if right else (i + 1) % it['pairs']))
+        p.click(Q + '[data-a=check]')
     elif t == 'cloze':
         picks = list(it['cz'])
         if not right: picks[0] = [w for w in it['bank'] if w not in it['cz']][0]     # one wrong gap
-        for w in picks: p.click(f'[data-a=czPick][data-w="{w}"]')
-        p.click('[data-a=check]')
+        for w in picks: p.click(Q + f'[data-a=czPick][data-w="{w}"]')
+        p.click(Q + '[data-a=check]')
     elif t == 'write':
-        p.fill('#ans', 'This is my own sentence.'); p.click('[data-a=showModel]'); p.click('[data-a=self][data-r="ok"]' if right else '[data-a=self]:not([data-r="ok"])')
+        p.fill(Q + '[data-ans]', 'This is my own sentence.'); p.click(Q + '[data-a=showModel]'); p.click(Q + ('[data-a=self][data-r="ok"]' if right else '[data-a=self]:not([data-r="ok"])'))
     return it
-def nxt(p): p.click('[data-a=next]')
+def nxt(p):   # single-question views have Continue; story practice shows a whole part and a Next part button when it is done
+    if p.locator('[data-a=next]').count(): p.click('[data-a=next]')
+    elif p.locator('[data-a=nextPart]').count(): p.click('[data-a=nextPart]')
 def state(p): return p.evaluate("() => JSON.parse(localStorage.getItem('ei.v1'))")
 def shot(p, name):
     if SHOTS: p.screenshot(path=f'{SHOTS}/{name}.png')
@@ -47,7 +49,9 @@ def finish_test(p, right=True):
     seen = []
     while p.locator('.qcard').count() and not p.locator('#wr').count() and len(seen) < 80:
         it = cur(p)
-        if it is None: break
+        if it is None:
+            if p.locator('[data-a=nextPart]').count(): nxt(p); continue
+            break
         seen.append(it); answer(p, right); nxt(p)
     return seen
 
@@ -67,10 +71,20 @@ with sync_playwright() as pw:
     p.click('[data-a=guess] >> nth=0'); p.wait_for_selector('.lw')
     ok('Learn words lists every target word', p.locator('.lw').count() == len(R['targets']), p.locator('.lw').count())
     ok('Vietnamese meaning is hidden until asked', p.locator('.lw .vibox').count() == 0)
-    p.click('.lw [data-a=lVi] >> nth=0'); ok('Show Vietnamese meaning works', p.locator('.lw .vibox').count() == 1)
+    top = lambda: p.evaluate("() => document.querySelector('#main').scrollTop")
+    p.locator('.lw [data-a=lVi] >> nth=-1').scroll_into_view_if_needed(); y0 = top()
+    p.click('.lw [data-a=lVi] >> nth=-1'); ok('Show Vietnamese meaning works', p.locator('.lw .vibox').count() == 1)
+    ok('Showing a meaning does not jump back to the top', y0 > 0 and abs(top() - y0) < 5, (y0, top()))
+    p.click('.lw [data-a=lViHide]'); ok('Hide meaning button closes it again', p.locator('.lw .vibox').count() == 0)
+    p.locator('.lw [data-a=lKnown] >> nth=3').scroll_into_view_if_needed(); y1 = top(); p.click('.lw [data-a=lKnown] >> nth=3')
+    ok('Known keeps the scroll position', abs(top() - y1) < 5, (y1, top())); p.click('.lw.known [data-a=lKnown]')
     p.click('.stages [data-s=read]'); p.wait_for_selector('#reader')
     ok('Reader shows target words highlighted', p.locator('#reader.hl .tk.tg').count() >= len(R['targets']))
-    ok('Compact one-row player is present with an audio source label', p.locator('.player').count() == 1 and 'voice' in p.inner_text('.player .lab').lower())
+    ok('Compact player is present with an audio source label', p.locator('.player').count() == 1 and 'voice' in p.inner_text('.player .lab').lower())
+    ok('Player shows a time bar: time heard / total, and can be moved', p.locator('#pseek').count() == 1 and re.match(r'^0:00 / ~?\d+:\d\d$', p.inner_text('#ptime')) and float(p.get_attribute('#pseek', 'max')) > 30, p.inner_text('#ptime'))
+    p.evaluate("() => { const b = document.querySelector('#pseek'); b.value = b.max / 2; b.dispatchEvent(new Event('change', {bubbles: true})); }")
+    ok('Moving the time bar goes to the sentence at that time', p.evaluate("() => document.querySelector('.sn.now') && +document.querySelector('.sn.now').dataset.si > 3"))
+    ok('Version is shown next to Info', p.locator('.rail .ver').inner_text().startswith('v0.'))
     p.click('#reader .tk.tg >> nth=0'); p.wait_for_selector('.sheet')
     ok('Tapping a word opens meaning, IPA and a listen button', p.locator('.sheet .def').count() == 1 and p.locator('.sheet .ipa').count() == 1 and p.locator('.sheet [data-a=say]').count() == 1)
     p.click('[data-a=shSave]'); ok('Sentence saved to My sentences', len([s for s in state(p)['sentences'] if s['kind'] == 'saved']) == 1)
@@ -90,8 +104,12 @@ with sync_playwright() as pw:
     p.click('.stages [data-s=practice]'); p.wait_for_selector('.qcard')
     ok('Step buttons move back and forward between Learn words, Read, Grammar and Practice', back1 and back2 and p.locator('.stages .on').inner_text() == 'Practice')
     # ---- practice: scored test in three parts
-    first = answer(p, right=False)
+    nq = p.locator('.qcard').count()
+    ok('Practice shows a whole part at once (several questions), with the parts listed', nq >= 3 and p.locator('.parts .chip').count() >= 2 and 'Understanding the story' in p.inner_text('.parts'), nq)
+    p.locator('.qcard >> nth=0').scroll_into_view_if_needed(); p.locator('.qcard >> nth=-1').scroll_into_view_if_needed(); p.locator('.qcard >> nth=0').scroll_into_view_if_needed(); y0 = p.evaluate("() => document.querySelector('#main').scrollTop")
+    first = answer(p, right=False); y1 = p.evaluate("() => document.querySelector('#main').scrollTop")
     ok('A wrong answer shows the explanation', p.locator('.fb.bad').count() == 1)
+    ok('Answering a question keeps the page where it was', abs(y1 - y0) < 5, (y0, y1))
     shot(p, '03-practice-feedback'); nxt(p); second = answer(p); nxt(p)
     pi = state(p)['lessons'][rid]['pi']; sig_q = cur(p)['q']
     p.close(); p = ctx.new_page(); p.on('pageerror', lambda e: errs.append(str(e))); p.clock.install(time=T0); p.goto(URL); p.wait_for_selector('.qcard')
@@ -100,7 +118,8 @@ with sync_playwright() as pw:
     while cur(p)['t'] != 'cloze': seen.append(answer(p)); nxt(p)
     shot(p, '04-story-with-gaps')
     n0 = len(state(p)['lessons'][rid]['q']); cz = answer(p, right=False); shot(p, '05-gaps-feedback'); seen.append(cz)
-    ok('Story with gaps: a wrong word adds one unscored extra item for that word', len(state(p)['lessons'][rid]['q']) == n0 + 1 and state(p)['lessons'][rid]['q'][state(p)['lessons'][rid]['pi'] + 2].startswith('Fw:'))
+    Ls = state(p)['lessons'][rid]
+    ok('Story with gaps: a wrong word adds one unscored extra item for that word, in the same part', len(Ls['q']) == n0 + 1 and any(x.startswith('Fw:') for x in Ls['q'][Ls['pi']:]) and p.locator('.eyebrow.fu').count() == 1)
     nxt(p); seen += finish_test(p)
     secs = [x['sec'] for x in seen if not x['fu']]
     ok('Practice has three parts in order: understanding, vocabulary, grammar', ''.join(sorted(set(secs), key=secs.index)) == 'cwg' and secs == sorted(secs, key='cwg'.index), secs)

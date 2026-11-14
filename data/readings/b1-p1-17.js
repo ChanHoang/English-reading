@@ -1,0 +1,149 @@
+EI.words('B1', `
+# ---- b1-p1-17 The Night the Martians Did Not Land
+ad|n|/æd/|a short film, picture or text that tries to make people buy something; short for advertisement|I saw an {ad} for a new phone on TV.|a TV ad; put an ad in a newspaper; ad money|quảng cáo|2|ad là cách nói ngắn của advertisement.|advertise (v)
+confused|adj|/kənˈfjuːzd/|not able to think clearly or to understand something|I was {confused} by the two different drawings.|confused about something; feel confused|bối rối, lúng túng|2|confused (cảm thấy) khác confusing (gây bối rối).|confuse (v)
+editor|n|/ˈedɪtər/|a person who is in charge of a newspaper or a magazine, or who checks and corrects texts|The {editor} decided to put the story on the front page.|a newspaper editor; the editor of a magazine|biên tập viên, tổng biên tập|2||edit (v)
+entertain|v|/ˌentərˈteɪn/|to interest and please people, for example with a show or a story|The clown {entertained} the children for an hour.|entertain an audience; entertain guests|giải trí, mua vui|2||entertainment (n)
+entertainment|n|/ˌentərˈteɪnmənt/|films, music, shows and other things that interest and please people|Television is a cheap form of {entertainment}.|a form of entertainment; the entertainment industry|sự giải trí|2||entertain (v)
+episode|n|/ˈepɪsoʊd/|one part of a story on radio or television; the parts are shown or played at different times|I watched the last {episode} of the series.|the first/last episode; an episode of a show|tập (phim, chương trình)|2||
+excitement|n|/ɪkˈsaɪtmənt/|the feeling of being very happy and interested about something|The children could not sleep because of the {excitement}.|great excitement; with excitement|sự phấn khích, náo nức|2||excited (adj)
+imaginary|adj|/ɪˈmædʒɪneri/|existing only in your mind, not real|The story is about an {imaginary} country.|an imaginary friend; an imaginary world|tưởng tượng, không có thật|2||imagine (v)
+impression|n|/ɪmˈpreʃn/|an idea or a feeling that you have about somebody or something|My first {impression} of the new supplier was good.|a good/bad impression; make an impression; give the impression that …|ấn tượng|2||
+live|adj|/laɪv/|(for a show) seen or heard at the same time as it happens, not recorded|The match is shown {live} on TV.|a live show; a live broadcast; live music|trực tiếp|2|Tính từ live phát âm /laɪv/, khác động từ live /lɪv/.|live (adv)
+obviously|adv|/ˈɑːbviəsli/|in a way that is easy to see or understand; clearly|He was {obviously} tired after the night shift.|obviously wrong; quite obviously|rõ ràng, hiển nhiên|2||obvious (adj)
+performance|n|/pərˈfɔːrməns/|the act of acting, singing or playing music in front of people; also how well somebody or something works|Her {performance} in the film was excellent.|a live performance; give a performance; the performance of a machine|màn trình diễn; hiệu suất|2||perform (v)
+pretend|v|/prɪˈtend/|to behave as if something is true when it is not|He {pretended} to be ill so that he could stay at home.|pretend to do something; pretend that …|giả vờ|2||
+producer|n|/prəˈduːsər/|a person who organizes the making of a film, a show or a record; also a company that makes goods|The {producer} found the money for the film.|a film producer; a TV producer; a major producer of rice|nhà sản xuất|2||produce (v)
+quote|v|/kwoʊt/|to repeat the exact words that somebody said or wrote|The newspaper {quoted} the manager’s words.|quote somebody; quote from a book|trích dẫn|2|quote cũng là danh từ: lời trích dẫn.|quote (n)
+script|n|/skrɪpt/|the written words of a film, a play or a radio or TV show|The actors read the {script} before the first day.|write a script; a film script|kịch bản|2||
+sensible|adj|/ˈsensəbl/|able to make good decisions based on reason|It was {sensible} to check the parts again.|a sensible decision; a sensible person|khôn ngoan, hợp lý|2|sensible (hợp lý) khác sensitive (nhạy cảm).|
+setting|n|/ˈsetɪŋ/|the place and time where the events of a story happen|The {setting} of the film is Hanoi in the 1990s.|the setting of a story; a beautiful setting|bối cảnh|2||
+silly|adj|/ˈsɪli/|not sensible; a little stupid|It was a {silly} mistake.|a silly question; don’t be silly|ngớ ngẩn, dại dột|1||
+studio|n|/ˈstuːdioʊ/|a room where radio or TV programs are made or music is recorded; also a room where an artist works|The band recorded the song in a small {studio}.|a radio/TV studio; a recording studio|phòng thu, trường quay|2||
+upset|adj|/ʌpˈset/|unhappy or worried because something bad has happened|She was {upset} when she lost her bag.|upset about something; get upset|buồn bực, lo lắng|2|upset cũng là động từ: làm ai buồn.|upset (v)
+`);
+EI.reading({
+  id: 'b1-p1-17', level: 'B1', pass: 1, n: 17,
+  title: 'The Night the Martians Did Not Land',
+  topic: 'culture', era: '1938', year: 1938, region: 'United States',
+  predict: { q: 'Năm 1938, một chương trình radio kể rằng người sao Hỏa đang tấn công nước Mỹ. Báo chí hôm sau viết rằng cả nước hoảng loạn. Theo bạn, thật sự có bao nhiêu người hoảng loạn?', o: ['Ít hơn nhiều so với báo chí viết', 'Hàng triệu người bỏ nhà chạy trốn', 'Không ai nghe chương trình'] },
+  targets: ['ad', 'confused', 'editor', 'entertain', 'entertainment', 'episode', 'excitement', 'imaginary', 'impression', 'live', 'obviously', 'performance', 'pretend', 'producer', 'quote', 'script', 'sensible', 'setting', 'silly', 'studio', 'upset'],
+  text: [
+    [
+      ["In 1938, there was no television in most American homes.", "Năm 1938, phần lớn các gia đình Mỹ chưa có ti vi."],
+      ["The radio was the center of {entertainment}: families sat around it in the evening and listened to music, news, comedy and plays.", "Radio là trung tâm giải trí: các gia đình ngồi quanh nó vào buổi tối để nghe nhạc, tin tức, hài kịch và kịch."],
+      ["Every show was {live}, so the actors and the band performed in a {studio} at the same moment that people heard them at home.", "Mọi chương trình đều phát trực tiếp, nên diễn viên và ban nhạc biểu diễn trong phòng thu đúng vào lúc mọi người ở nhà nghe thấy họ."],
+      ["Because the shows were {live}, the actors could not stop and start again if they made a mistake.", "Vì các chương trình phát trực tiếp, diễn viên không thể dừng lại làm lại nếu mắc lỗi."]
+    ],
+    [
+      ["Radio plays were a very popular form of {entertainment}, and one of these shows was The Mercury Theatre on the Air on the CBS network.", "Kịch radio là một hình thức giải trí rất được ưa chuộng, và một trong những chương trình đó là The Mercury Theatre on the Air trên mạng lưới CBS."],
+      ["Its star was Orson Welles, who was only 23 but already famous in New York theater.", "Ngôi sao của nó là Orson Welles, khi đó mới 23 tuổi nhưng đã nổi tiếng trong giới sân khấu New York."],
+      ["Each week, the show turned a famous book into a radio play, and Welles was the director, the main actor and, with John Houseman, one of its {producers=producer}.", "Mỗi tuần, chương trình chuyển thể một cuốn sách nổi tiếng thành kịch radio, và Welles vừa là đạo diễn, diễn viên chính, vừa là một trong những nhà sản xuất cùng John Houseman."],
+      ["As {producers=producer}, Welles and Houseman chose the books, but the show did not have a big audience, and most {episodes=episode} were heard by only a small number of people.", "Là nhà sản xuất, Welles và Houseman chọn sách, nhưng chương trình không có nhiều khán thính giả, và phần lớn các tập chỉ có một số ít người nghe."],
+      ["On Sunday evening, October 30, 1938, the night before Halloween, the {episode} was The War of the Worlds, a novel by H. G. Wells about an attack from Mars.", "Tối Chủ nhật ngày 30 tháng 10 năm 1938, đêm trước lễ Halloween, tập phát sóng là The War of the Worlds, một tiểu thuyết của H. G. Wells về cuộc tấn công từ sao Hỏa."]
+    ],
+    [
+      ["The writer Howard Koch had written the {script} in about a week, and he had changed the book’s {setting}.", "Nhà biên kịch Howard Koch đã viết kịch bản trong khoảng một tuần, và ông đã thay đổi bối cảnh của cuốn sách."],
+      ["Instead of England in the 1890s, the story now happened in 1938, in a small real town in New Jersey called Grover’s Mill, but the attack was of course {imaginary}.", "Thay vì nước Anh những năm 1890, câu chuyện giờ diễn ra vào năm 1938, ở một thị trấn nhỏ có thật ở New Jersey tên là Grover’s Mill, nhưng cuộc tấn công tất nhiên là tưởng tượng."],
+      ["The real {setting} made the story feel close to home for American listeners.", "Bối cảnh có thật khiến câu chuyện có cảm giác rất gần gũi với thính giả Mỹ."],
+      ["The {script} also used a smart idea: the show {pretended=pretend} to be a normal evening of dance music, and then “news” started to interrupt the music.", "Kịch bản còn dùng một ý tưởng khéo léo: chương trình giả vờ là một buổi tối nhạc khiêu vũ bình thường, rồi “tin tức” bắt đầu cắt ngang tiếng nhạc."],
+      ["A reporter described strange explosions on Mars, then a large object that had fallen near Grover’s Mill, and then strange creatures that came out of it.", "Một phóng viên mô tả những vụ nổ lạ trên sao Hỏa, rồi một vật thể lớn rơi xuống gần Grover’s Mill, rồi những sinh vật bước ra từ đó."],
+      ["Actors {pretended=pretend} to be scientists, soldiers and government officials.", "Các diễn viên giả làm nhà khoa học, binh lính và quan chức chính phủ."],
+      ["In the {studio}, simple sounds, such as a jar being opened slowly, became the sounds of a machine from Mars.", "Trong phòng thu, những âm thanh đơn giản, như tiếng một chiếc lọ được mở từ từ, trở thành âm thanh của một cỗ máy từ sao Hỏa."],
+      ["The bulletins sounded so real that, in the words of one newspaper, they were given exactly like real news.", "Các bản tin nghe thật đến mức, theo lời một tờ báo, chúng được phát đúng như tin thật."]
+    ],
+    [
+      ["It was an excellent {performance}.", "Đó là một màn trình diễn xuất sắc."],
+      ["Welles himself gave a strong {performance} as a scientist called Professor Pierson.", "Chính Welles có màn thể hiện ấn tượng trong vai một nhà khoa học tên là Giáo sư Pierson."],
+      ["But the Martians were {imaginary}, and the show said so.", "Nhưng người sao Hỏa là tưởng tượng, và chương trình đã nói rõ như vậy."],
+      ["There was a warning at the beginning, and there were more warnings later that it was only a play.", "Có lời cảnh báo ở đầu chương trình, và sau đó còn có thêm nhiều lời cảnh báo rằng đó chỉ là một vở kịch."],
+      ["At the end, Welles told listeners that it was the Mercury Theatre’s way of saying “Boo!” for Halloween.", "Cuối chương trình, Welles nói với thính giả rằng đó là cách đoàn Mercury Theatre nói “Hù!” nhân dịp Halloween."],
+      ["The show only wanted to {entertain} people.", "Chương trình chỉ muốn mua vui cho mọi người."],
+      ["A {sensible} listener who heard the whole show had no reason to be afraid.", "Một thính giả tỉnh táo nghe trọn chương trình thì chẳng có lý do gì để sợ."]
+    ],
+    [
+      ["Some listeners turned on the radio in the middle, missed the warnings and became {confused}.", "Một số thính giả bật radio giữa chừng, bỏ lỡ các lời cảnh báo và trở nên bối rối."],
+      ["If they had heard the beginning, they would have known that it was a play.", "Nếu họ nghe phần đầu, họ đã biết đó là một vở kịch."],
+      ["The bulletins were made to sound real, so it is easy to understand why a {confused} listener might believe them.", "Các bản tin được làm để nghe như thật, nên dễ hiểu vì sao một thính giả đang bối rối có thể tin chúng."],
+      ["Some of them called the police or the newspapers, and some were really {upset}.", "Một số người gọi cảnh sát hoặc tòa báo, và một số thật sự hoảng hốt."],
+      ["In the following days, many angry and {upset} listeners wrote letters to the government.", "Những ngày sau đó, nhiều thính giả tức giận và bực bội đã viết thư cho chính phủ."],
+      ["The next morning, the newspapers were full of the story.", "Sáng hôm sau, báo chí đầy ắp câu chuyện này."],
+      ["Their headlines gave the {impression} that the whole country had panicked.", "Các dòng tít của họ tạo ấn tượng rằng cả nước đã hoảng loạn."],
+      ["Reporters {quoted=quote} frightened listeners, and stories about people running into the streets spread across the country.", "Phóng viên trích lời những thính giả sợ hãi, và chuyện người ta chạy ra đường lan khắp cả nước."],
+      ["Welles met reporters and said sorry; he said that he had not expected anyone to believe the story.", "Welles gặp báo chí và xin lỗi; ông nói rằng ông không ngờ có ai lại tin câu chuyện."]
+    ],
+    [
+      ["But was there really a national panic?", "Nhưng liệu có thật sự xảy ra hoảng loạn trên toàn quốc?"],
+      ["Many people who study history now say no.", "Nhiều người nghiên cứu lịch sử ngày nay nói là không."],
+      ["On the night of the show, a ratings company called C. E. Hooper telephoned 5,000 homes, and only 2 percent of them were listening to Welles.", "Ngay tối hôm đó, một công ty đo lượng người nghe tên là C. E. Hooper gọi điện đến 5.000 hộ gia đình, và chỉ 2 phần trăm trong số đó đang nghe Welles."],
+      ["Most people were listening to a much more popular show on another network, with the comedian Edgar Bergen and his puppet Charlie McCarthy.", "Phần lớn mọi người đang nghe một chương trình nổi tiếng hơn nhiều ở một mạng lưới khác, với danh hài Edgar Bergen và con rối Charlie McCarthy của ông."],
+      ["Some CBS stations did not even play The War of the Worlds that night.", "Một số đài của CBS thậm chí không phát The War of the Worlds tối hôm đó."],
+      ["Researchers later checked hospitals in New York, but they could not find a single person who had needed a doctor because of the show.", "Sau này các nhà nghiên cứu kiểm tra các bệnh viện ở New York, nhưng không tìm được một người nào phải điều trị vì chương trình."]
+    ],
+    [
+      ["So why did the newspapers make the story so big?", "Vậy vì sao báo chí lại làm câu chuyện to đến thế?"],
+      ["One reason is money.", "Một lý do là tiền."],
+      ["During the Great Depression, companies had moved much of their {ad} money from newspapers to radio, so newspapers were losing money.", "Trong thời kỳ Đại Khủng hoảng, các công ty đã chuyển nhiều tiền quảng cáo từ báo in sang radio, nên báo chí đang thua lỗ."],
+      ["For a newspaper {editor}, the story was a chance to show that radio news could not be believed.", "Với một tổng biên tập báo, câu chuyện là cơ hội để cho thấy tin tức trên radio không đáng tin."],
+      ["If radio was dangerous, perhaps companies would buy {ads=ad} in newspapers again.", "Nếu radio nguy hiểm, có lẽ các công ty sẽ quay lại mua quảng cáo trên báo."],
+      ["{Obviously}, not every {editor} thought like this, but the idea of a nation in panic was good for selling papers.", "Rõ ràng không phải tổng biên tập nào cũng nghĩ như vậy, nhưng ý tưởng về một quốc gia hoảng loạn giúp bán báo rất chạy."]
+    ],
+    [
+      ["In 1940, a researcher, Hadley Cantril, wrote a book which said that about one million people had been frightened, and the book made the {impression} of a great panic even stronger.", "Năm 1940, một nhà nghiên cứu, Hadley Cantril, viết một cuốn sách nói rằng khoảng một triệu người đã sợ hãi, và cuốn sách càng làm ấn tượng về một cơn hoảng loạn lớn mạnh thêm."],
+      ["But his survey was done six weeks after the show, and he himself said that his number for the audience was much higher than any other number.", "Nhưng cuộc khảo sát của ông được thực hiện sáu tuần sau chương trình, và chính ông thừa nhận con số khán thính giả của ông cao hơn nhiều so với mọi con số khác."],
+      ["Today, it seems {sensible} to say that some people were afraid, but most listeners {obviously} knew that it was a play.", "Ngày nay, có vẻ hợp lý khi nói rằng một số người đã sợ, nhưng phần lớn thính giả rõ ràng biết đó là một vở kịch."],
+      ["The government did not punish CBS or Welles, but the networks agreed not to use fake news bulletins in plays again.", "Chính phủ không phạt CBS hay Welles, nhưng các mạng lưới đồng ý không dùng bản tin giả trong kịch nữa."]
+    ],
+    [
+      ["The {excitement} around the show made Welles even more famous, and a few years later, he made the film Citizen Kane.", "Sự náo động quanh chương trình khiến Welles càng nổi tiếng, và vài năm sau, ông làm bộ phim Citizen Kane."],
+      ["He continued to {entertain} people in films and on the radio for the rest of his life.", "Ông tiếp tục mang lại niềm vui cho khán giả qua phim ảnh và radio suốt quãng đời còn lại."],
+      ["Even today, articles about that night often {quote} the old headlines.", "Ngay cả ngày nay, các bài viết về đêm đó vẫn thường trích lại những dòng tít cũ."],
+      ["The story of the “panic” became a famous example of the power of the media.", "Câu chuyện về “cơn hoảng loạn” trở thành một ví dụ nổi tiếng về sức mạnh của truyền thông."],
+      ["It is a little {silly} that the most famous part of the story is not really true.", "Thật hơi buồn cười khi phần nổi tiếng nhất của câu chuyện lại không hẳn là thật."],
+      ["It is not {silly}, however, to learn from it: when a story causes great {excitement}, it is worth asking who is telling it, and why.", "Tuy nhiên, rút ra bài học từ nó thì không hề ngớ ngẩn: khi một câu chuyện gây náo động lớn, đáng để hỏi ai đang kể nó, và vì sao."]
+    ]
+  ],
+  gloss: { jar: 'cái lọ', professor: 'giáo sư', comedy: 'hài kịch', plays: 'vở kịch', play: 'vở kịch', actors: 'diễn viên', actor: 'diễn viên', musicians: 'nhạc công', performed: 'biểu diễn', network: 'mạng lưới (đài)', networks: 'mạng lưới (đài)', theater: 'sân khấu', director: 'đạo diễn', halloween: 'lễ Halloween', novel: 'tiểu thuyết', clever: 'khéo léo', interrupt: 'cắt ngang', reporter: 'phóng viên', reporters: 'phóng viên', explosions: 'vụ nổ', creatures: 'sinh vật', officials: 'quan chức', bulletins: 'bản tin', listeners: 'thính giả', headlines: 'tít báo', panicked: 'hoảng loạn', panic: 'sự hoảng loạn', national: 'toàn quốc', historians: 'nhà sử học', ratings: 'số đo lượng người nghe', comedian: 'danh hài', puppet: 'con rối', stations: 'đài phát', researchers: 'nhà nghiên cứu', researcher: 'nhà nghiên cứu', treated: 'được điều trị', depression: 'khủng hoảng kinh tế', trusted: 'được tin tưởng', survey: 'cuộc khảo sát', audience: 'khán thính giả', punish: 'phạt', fake: 'giả', media: 'truyền thông', martians: 'người sao Hỏa' },
+  grammar: [
+    ['third-conditional', 'If they had heard the beginning, they would have known that it was a play'],
+    ['relative-non-defining', 'Its star was Orson Welles, who was only 23 but already famous in New York theater'],
+    ['so-such', 'The bulletins sounded so real that'],
+    ['past-perfect', 'companies had moved much of their ad money from newspapers to radio'],
+    ['passive-tenses', 'his survey was done six weeks after the show']
+  ],
+  practiceNote: 'Bài về chương trình radio “The War of the Worlds” của Orson Welles (30/10/1938): kịch radio giả làm bản tin về người sao Hỏa đổ bộ New Jersey; báo chí hôm sau viết về “cơn hoảng loạn toàn quốc”, nhưng nhiều nhà sử học ngày nay cho rằng hoảng loạn bị thổi phồng. Từ vựng: phát thanh và giải trí (live, studio, episode, script, setting, performance, producer, entertain, entertainment), báo chí (editor, ad, quote, impression), cảm xúc và đánh giá (confused, upset, excitement, sensible, silly, obviously, imaginary, pretend, apologize). Ngữ pháp: câu điều kiện loại 3, mệnh đề quan hệ có dấu phẩy, so … that.',
+  practice: [
+    { t: 'mc', k: 'c:main', q: 'What is the main idea of the story?', o: ['A 1938 radio play about Martians was reported as causing a national panic, but the panic was much smaller than the newspapers said.', 'Martians really landed in New Jersey in 1938.', 'Orson Welles went to prison because of a radio play.'], a: 0, why: 'Báo chí thổi phồng; phần lớn thính giả biết đó là kịch.', ref: 'Many people who study history now say no' },
+    { t: 'mc', k: 'c:format', q: 'Why did the play sound like real news?', o: ['It pretended to be an evening of dance music that was interrupted by news bulletins.', 'Real reporters read it.', 'It was recorded in New Jersey.'], a: 0, why: 'Giả làm nhạc khiêu vũ rồi bị “tin tức” cắt ngang.', ref: 'the show pretended to be a normal evening of dance music' },
+    { t: 'mc', k: 'c:warnings', q: 'Did the show tell listeners that it was a play?', o: ['Yes, at the beginning and later too.', 'No, never.', 'Only the next day.'], a: 0, why: 'Có cảnh báo ở đầu và nhiều lần sau đó.', ref: 'There was a warning at the beginning' },
+    { t: 'mc', k: 'c:hooper', q: 'What did the C. E. Hooper survey show?', o: ['Only 2 percent of the homes called were listening to Welles.', 'Most homes were listening to Welles.', 'Nobody had a radio.'], a: 0, why: 'Chỉ 2% trong 5.000 hộ.', ref: 'only 2 percent of them were listening to Welles' },
+    { t: 'mc', k: 'c:why-papers', q: 'Why might newspapers have made the story bigger?', o: ['They were losing ad money to radio.', 'Welles paid them.', 'The government asked them to.'], a: 0, why: 'Tiền quảng cáo chuyển sang radio.', ref: 'companies had moved much of their ad money from newspapers to radio' },
+    { t: 'mc', k: 'c:infer', q: 'What is the lesson at the end of the story?', o: ['Ask who is telling an exciting story, and why.', 'Never listen to the radio.', 'Plays should not be about Mars.'], a: 0, why: 'Câu kết khuyên hỏi ai kể và vì sao.', ref: 'it is worth asking who is telling it, and why' },
+    { t: 'mc', k: 'c:tf', q: 'True or false? “Researchers found many people in New York hospitals because of the show.”', o: ['True', 'False'], a: 1, why: 'Sai: họ không tìm được một người nào.', ref: 'they could not find a single person' },
+    { t: 'order', k: 'c:sequence', a: 'The show only wanted to entertain people.', why: 'only đứng trước động từ; to + V sau want.', ref: 'The show only wanted to entertain people' },
+    { t: 'dict', k: 'c:listen', a: 'One reason is money.', why: 'One reason (số ít) + is.' },
+    { t: 'mc', k: 'w:live', q: 'Every show was ______, so actors performed at the same moment that people heard them.', o: ['live', 'silly', 'imaginary'], a: 0, why: 'live = phát trực tiếp.', ref: 'Every show was live' },
+    { t: 'mc', k: 'w:setting', q: 'The writer had changed the book’s ______: the story now happened in New Jersey in 1938.', o: ['setting', 'script', 'studio'], a: 0, why: 'setting = bối cảnh (nơi và thời gian).', ref: 'had changed the book’s setting' },
+    { t: 'mc', k: 'w:pretend', q: 'Actors ______ to be scientists, soldiers and officials.', o: ['pretended', 'apologized', 'quoted'], a: 0, why: 'pretend to be = giả làm.', ref: 'Actors pretended to be scientists' },
+    { t: 'mc', k: 'w:imaginary', q: 'The Martians were ______, and the show said so.', o: ['imaginary', 'live', 'sensible'], a: 0, why: 'imaginary = tưởng tượng.', ref: 'the Martians were imaginary' },
+    { t: 'gap', k: 'w:quote', q: 'Reporters ______ frightened listeners in their stories.', a: ['quoted'], why: 'quote = trích lời; quá khứ quoted.', ref: 'Reporters quoted frightened listeners' },
+    { t: 'match', k: 'w:set-radio', q: 'Match the words with their meanings.', pairs: [['episode', 'one part of a radio or TV story'], ['script', 'the written words of a play or show'], ['studio', 'a room where radio shows are made'], ['editor', 'a person in charge of a newspaper']], why: 'episode = tập; script = kịch bản; studio = phòng thu; editor = tổng biên tập.', ref: 'the episode was The War of the Worlds' },
+    { t: 'mc', k: 'w:impression', q: 'Their headlines gave the ______ that the whole country had panicked.', o: ['impression', 'excitement', 'performance'], a: 0, why: 'give the impression that = tạo ấn tượng rằng.', ref: 'gave the impression that the whole country had panicked' },
+    { t: 'mc', k: 'w:confused', q: 'Some listeners missed the warnings and became ______.', o: ['confused', 'sensible', 'live'], a: 0, why: 'confused = bối rối.', ref: 'became confused' },
+    { t: 'mc', k: 'w:sensible', q: 'It seems ______ to say that some people were afraid, but most knew it was a play.', o: ['sensible', 'silly', 'upset'], a: 0, why: 'sensible = hợp lý.', ref: 'it seems sensible to say' },
+    { t: 'mc', k: 'g:third-conditional', q: 'If they had heard the beginning, they ______ that it was a play.', o: [['would have known', 'Đúng: kết quả tưởng tượng trong quá khứ.'], ['would know', 'Sai: đó là loại 2.'], ['had known', 'Sai: vế chính cần would have + V3.']], a: 0, why: 'If + had + V3, would have + V3.', ref: 'they would have known that it was a play' },
+    { t: 'mc', k: 'g:relative-non-defining', q: 'Its star was Orson Welles, ______ was only 23.', o: [['who', 'Đúng: người, mệnh đề có dấu phẩy.'], ['that', 'Sai: không dùng that sau dấu phẩy.'], ['which', 'Sai: which chỉ vật.']], a: 0, why: 'N, who + V.', ref: 'Orson Welles, who was only 23' },
+    { t: 'error', k: 'g:so-such', q: 'The bulletins sounded such real that people believed them.', wrong: 'such', fix: 'so', why: 'Chỉ có tính từ (real): so + adj + that.', ref: 'The bulletins sounded so real that' },
+    { t: 'mc', k: 'g:passive-tenses', q: 'His survey ______ six weeks after the show.', o: [['was done', 'Đúng: bị động quá khứ đơn.'], ['did', 'Sai: khảo sát không tự làm.'], ['has been done', 'Sai: có mốc quá khứ.']], a: 0, why: 'was + V3.', ref: 'his survey was done six weeks after the show' }
+  ],
+  extra: [],
+  write: { vi: 'Viết 3–5 câu tiếng Anh về một tin đồn ở công ty bạn (ví dụ về lỗi hàng, đổi khách hàng) mà sau này hóa ra không đúng. Cố dùng các từ dưới đây.', use: ['impression', 'confused', 'upset', 'obviously', 'sensible'], model: 'Last year, an email gave the impression that our biggest customer was leaving. Many workers were confused and upset. But the email was obviously old. The sensible thing was to ask the manager, and she said that the customer was staying.' },
+  fact: { card: 'Tối Chủ nhật 30/10/1938, chương trình The Mercury Theatre on the Air của CBS phát vở kịch radio The War of the Worlds do Orson Welles đạo diễn và dẫn chuyện, chuyển thể từ tiểu thuyết của H. G. Wells. Vở kịch giả làm bản tin cắt ngang chương trình nhạc. Báo chí hôm sau viết về “hoảng loạn toàn quốc”, nhưng khảo sát qua điện thoại của C. E. Hooper ngay tối đó cho thấy chỉ khoảng 2% trong 5.000 hộ đang nghe Welles; các nhà nghiên cứu không tìm thấy bệnh viện nào ở New York có ca liên quan.',
+    bonus: 'The War of the Worlds was on at the same time as a much more popular NBC show with Edgar Bergen and his puppet Charlie McCarthy.', bonusSrc: 'Library of Congress — Page from the Past: War of the Worlds' },
+  sources: [
+    { t: 'Slate — The Myth of the War of the Worlds Panic', u: 'https://www.slate.com/articles/arts/history/2013/10/orson_welles_war_of_the_worlds_panic_myth_the_infamous_radio_broadcast_did.single.html' },
+    { t: 'Library of Congress Blog — Page from the Past: War of the Worlds', u: 'https://blogs.loc.gov/loc/2016/10/lcm-page-from-the-past-war-of-the-worlds/' }
+  ],
+  note: 'Slate: phát tối Chủ nhật 30/10/1938 trên CBS, chương trình Mercury Theatre on the Air dựng cảnh người sao Hỏa xâm lược; các “bản tin” giả được phát “đúng như tin thật” (bài viết “theo lời một tờ báo”, câu này Slate trích từ báo chí thời đó); cùng giờ với Chase and Sanborn Hour của NBC (Edgar Bergen); C. E. Hooper gọi 5.000 hộ, chỉ 2% nói đang nghe kịch radio hoặc Welles, không ai nói đang nghe bản tin; một số đài trực thuộc CBS (như WEEI ở Boston) không phát; báo chí mất tiền quảng cáo vào tay radio trong thời Đại Khủng hoảng và thổi phồng hoảng loạn để cho thấy radio không đáng tin; sách The Invasion From Mars (1940) của Hadley Cantril ước tính khoảng 1 triệu người “sợ hãi”, dựa trên khảo sát sáu tuần sau, và chính Cantril thừa nhận con số khán giả cao hơn hơn 100% so với mọi số đo khác; sáu bệnh viện ở New York không có hồ sơ ca nào; FCC chỉ đạt thỏa thuận không chính thức là không dùng bản tin giả nữa, CBS và Welles không bị phạt. Library of Congress: Welles đạo diễn và dẫn chuyện bản chuyển thể tiểu thuyết của H. G. Wells; mạng CBS; chương trình đối đầu Chase and Sanborn Hour với Edgar Bergen và Charlie McCarthy; dùng bản tin và lời kể nhân chứng; có nhiều lời cảnh báo về tính hư cấu; một số thính giả tin một thị trấn nhỏ ở New Jersey bị tấn công; gọi hoảng loạn hàng loạt là “huyền thoại”; khảo sát 5.000 hộ, khoảng 2% nghe và phần lớn biết là hư cấu; báo chí giật tít, như San Francisco Chronicle ngày 31/10/1938; có giả thuyết báo chí muốn hạ uy tín radio. Kiến thức phổ thông (thêm): Koch viết kịch bản trong khoảng một tuần; chương trình không có nhà tài trợ và ít người nghe trước đêm đó; hiệu ứng âm thanh trong phòng thu (tiếng mở nắp lọ làm tiếng tàu sao Hỏa mở ra); Welles đóng vai Giáo sư Pierson; FCC nhận nhiều thư phàn nàn của thính giả; Welles tiếp tục làm phim và radio suốt đời. Kiến thức phổ thông: năm 1938 phần lớn gia đình Mỹ chưa có ti vi, chương trình radio phát trực tiếp; Welles 23 tuổi, nổi tiếng ở sân khấu New York; John Houseman cùng sáng lập và sản xuất; mỗi tuần chuyển thể một tác phẩm văn học; kịch bản do Howard Koch viết, chuyển bối cảnh sang Grover’s Mill, New Jersey, năm 1938; tiểu thuyết gốc lấy bối cảnh nước Anh cuối thế kỷ 19; cuối chương trình Welles nói đó là cách Mercury Theatre nói “Boo!” nhân Halloween; sáng hôm sau Welles họp báo và xin lỗi, nói ông không ngờ người ta tin; một số thính giả gọi cảnh sát và tòa báo; Welles làm phim Citizen Kane năm 1941. Câu “diễn viên không thể làm lại nếu mắc lỗi”, “bối cảnh có thật khiến câu chuyện gần gũi”, “thính giả tỉnh táo nghe trọn chương trình không có lý do để sợ”, “dễ hiểu vì sao người bối rối có thể tin”, “các bài viết ngày nay vẫn trích tít cũ”, câu “nếu họ nghe phần đầu, họ đã biết đó là kịch”, “không phải tổng biên tập nào cũng nghĩ vậy” và hai câu kết là nhận xét của bài.',
+  verified: '2026-11-15'
+});

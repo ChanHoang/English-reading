@@ -1,0 +1,144 @@
+EI.words('B1', `
+# ---- b1-p1-21 Two Immigrants and a Pair of Pants
+ban|v|/bæn/|to say officially that something is not allowed|The factory has {banned} smoking in all buildings.|ban something; be banned from doing something|cấm|2|ban cũng là danh từ: a ban on something.|ban (n)
+client|n|/ˈklaɪənt/|a person who pays for a service, for example from a lawyer or a bank|The tailor made a suit for his {client}.|a regular client; meet a client|khách hàng (dịch vụ)|2|client thường dùng cho dịch vụ; customer cho cửa hàng.|
+costume|n|/ˈkɑːstuːm/|the clothes that an actor wears in a film or a play, or clothes typical of a place or a time|The actors wore {costumes} from the 1800s.|a film costume; a national costume|trang phục (diễn, truyền thống)|2||
+cotton|n|/ˈkɑːtn/|a soft material made from the white hair of a plant, used for making cloth|This shirt is made of {cotton}.|100% cotton; a cotton shirt|bông, vải bông|1||
+export|v|/ɪkˈspɔːrt/|to sell goods to another country|Vietnam {exports} rice and coffee.|export goods to …; exported products|xuất khẩu|2|Danh từ export nhấn âm đầu: /ˈekspɔːrt/.|export (n); import (v)
+forever|adv|/fərˈevər/|for all future time|The new law changed the city {forever}.|last forever; change forever|mãi mãi|1||
+hire|v|/ˈhaɪər/|to give somebody a job; also to pay to use something for a short time|The company {hired} three new engineers.|hire somebody; hire a car|thuê (người, đồ)|2||
+immigrant|n|/ˈɪmɪɡrənt/|a person who has come to live in a country from another country|Many {immigrants} came to the city to find work.|an immigrant from …; immigrant workers|người nhập cư|2||immigration (n)
+leather|n|/ˈleðər/|material made from the skin of animals, used for making shoes, bags and so on|These shoes are made of {leather}.|a leather bag; real leather|da (thuộc)|2||
+mine|n|/maɪn/|a deep hole in the ground where people take out coal, gold and so on|His grandfather worked in a coal {mine}.|a gold/coal mine; work in a mine|mỏ|2||miner (n)
+nail|n|/neɪl/|a thin, pointed piece of metal that you push into wood to join things; also the hard part at the end of a finger|He used two {nails} to fix the board.|hammer a nail; a fingernail|cái đinh; móng tay|2||
+needle|n|/ˈniːdl/|a thin, pointed piece of metal with a hole at one end, used to make or fix clothes|She used a {needle} and thread to fix the shirt.|a needle and thread; a sewing needle|cây kim (khâu)|2||
+profession|n|/prəˈfeʃn/|a type of job that needs special training or skill|Teaching is a difficult {profession}.|the medical profession; by profession|nghề nghiệp|2|by profession = về nghề nghiệp.|professional (adj)
+smart|adj|/smɑːrt/|(for clothes or people) clean and looking good; also intelligent|You look very {smart} in that suit.|smart clothes; a smart idea|bảnh bao, lịch sự; thông minh|2||
+successfully|adv|/səkˈsesfəli/|in a way that achieves what you wanted|The new mold was {successfully} tested.|successfully complete something|thành công|2||successful (adj)
+uncomfortable|adj|/ʌnˈkʌmftəbl/|not feeling or making you feel relaxed or nice in your body|These shoes are {uncomfortable}.|uncomfortable clothes; feel uncomfortable|không thoải mái, khó chịu|2||comfortable (adj)
+western|adj|/ˈwestərn/|in or from the part of a country where the sun goes down; also connected with films about life in the old American West|We visited the {western} part of the country.|western Europe; a Western film|(ở) phía tây; (phim) cao bồi miền Tây|1|a Western = phim cao bồi.|west (n)
+young|n|/jʌŋ/|people who are not old, as a group|Music is very important to the {young}.|the young; the young and the old|giới trẻ (the young)|2|the young luôn đi với the và động từ số nhiều.|young (adj)
+youth|n|/juːθ/|young people as a group; also the time of life when you are young|The city has many clubs for {youth}.|youth culture; in his youth|tuổi trẻ, thanh niên|2||
+`);
+EI.reading({
+  id: 'b1-p1-21', level: 'B1', pass: 1, n: 21,
+  title: 'Two Immigrants and a Pair of Pants',
+  topic: 'work', era: '1853–1890s', year: 1873, region: 'United States',
+  predict: { q: 'Quần jean nổi tiếng của Levi Strauss được cấp bằng sáng chế năm 1873. Ai đã nghĩ ra ý tưởng gắn đinh tán kim loại vào quần?', o: ['Một thợ may ở Nevada', 'Chính Levi Strauss', 'Một người thợ mỏ'] },
+  targets: ['ban', 'client', 'costume', 'cotton', 'export', 'forever', 'hire', 'immigrant', 'leather', 'mine', 'nail', 'needle', 'profession', 'smart', 'successfully', 'uncomfortable', 'western', 'young', 'youth'],
+  text: [
+    [
+      ["Jeans are perhaps the most popular pants in the world.", "Quần jean có lẽ là loại quần phổ biến nhất thế giới."],
+      ["Students, farmers, engineers and pop stars all wear them.", "Học sinh, nông dân, kỹ sư và ngôi sao nhạc pop đều mặc chúng."],
+      ["But jeans did not begin as fashion.", "Nhưng quần jean không bắt đầu như một món thời trang."],
+      ["They began as work clothes for miners in the American West, and they were the idea of two {immigrants=immigrant}.", "Chúng bắt đầu là quần áo lao động cho thợ mỏ ở miền Tây nước Mỹ, và là ý tưởng của hai người nhập cư."]
+    ],
+    [
+      ["The first was Levi Strauss.", "Người thứ nhất là Levi Strauss."],
+      ["He was born in Bavaria, in what is now Germany, in 1829, and he came to the United States in 1847, when he was 18.", "Ông sinh ở Bavaria, nay thuộc nước Đức, năm 1829, và đến Mỹ năm 1847, khi 18 tuổi."],
+      ["Like many {immigrants=immigrant}, he started a small business selling cloth and other goods.", "Như nhiều người nhập cư khác, ông mở một cửa hàng nhỏ bán vải và các mặt hàng khác."],
+      ["In 1853, he moved to San Francisco.", "Năm 1853, ông chuyển đến San Francisco."],
+      ["A few years earlier, gold had been found in California, and thousands of people had come to dig for it in the {western} hills.", "Vài năm trước đó, người ta đã tìm thấy vàng ở California, và hàng nghìn người đã kéo đến đào vàng ở những ngọn đồi miền tây."],
+      ["Strauss sold cloth, clothes and other goods to the shops that served the miners and the towns around the gold {mines=mine}.", "Strauss bán vải, quần áo và các mặt hàng khác cho các cửa hàng phục vụ thợ mỏ và những thị trấn quanh các mỏ vàng."],
+      ["Work in a {mine} was hard and dirty, and clothes did not last long there.", "Làm việc trong mỏ vất vả và bẩn thỉu, và quần áo ở đó không bền được lâu."]
+    ],
+    [
+      ["The second man was Jacob Davis.", "Người thứ hai là Jacob Davis."],
+      ["He was born in Riga, Latvia, in 1831, and he came to the United States in 1854.", "Ông sinh ở Riga, Latvia, năm 1831, và đến Mỹ năm 1854."],
+      ["He was a tailor by {profession}, and he had a small shop in Reno, Nevada.", "Ông là thợ may, và có một cửa hàng nhỏ ở Reno, bang Nevada."],
+      ["In his {profession}, he made not only clothes but also tents and other things from heavy cloth.", "Trong nghề của mình, ông không chỉ may quần áo mà còn làm lều và những thứ khác từ vải dày."],
+      ["He bought much of that heavy cloth from Levi Strauss, so he was one of Strauss’s {clients=client}.", "Ông mua phần lớn số vải dày đó từ Levi Strauss, nên ông là một trong những khách hàng của Strauss."]
+    ],
+    [
+      ["Work pants at that time wore out quickly.", "Quần lao động thời đó mau rách."],
+      ["Miners carried heavy tools and rocks in their pockets, and the pockets often tore away from the pants.", "Thợ mỏ đựng dụng cụ và đá nặng trong túi, và túi quần thường bị rách toạc khỏi quần."],
+      ["According to the story that Davis told later, one of his {clients=client}, a woman, asked him to make some pants for her husband, a woodcutter, that would not fall apart.", "Theo câu chuyện Davis kể lại sau này, một khách hàng của ông, một người phụ nữ, nhờ ông may cho chồng bà, một thợ đốn củi, chiếc quần không bị bung rách."],
+      ["Davis worked with his {needle} as usual, but he also added something new.", "Davis vẫn khâu bằng kim như thường lệ, nhưng ông còn thêm một thứ mới."],
+      ["At the weak points, such as the corners of the pockets, he put small copper rivets, short pieces of metal a little like {nails=nail}, which he also used on horse blankets.", "Ở những điểm yếu, như các góc túi, ông gắn những chiếc đinh tán nhỏ bằng đồng, những mẩu kim loại ngắn hơi giống cái đinh, loại ông cũng dùng cho chăn ngựa."],
+      ["A {needle} and thread alone could not hold the pockets, but the rivets could.", "Chỉ kim và chỉ thì không giữ nổi túi quần, nhưng đinh tán thì làm được."],
+      ["Unlike a {nail}, a rivet is pressed flat at both ends, so it cannot come out.", "Khác với cái đinh, đinh tán được dập bẹt ở cả hai đầu, nên không thể tuột ra."]
+    ],
+    [
+      ["Davis {successfully} sold the new pants in Reno, and soon other workers wanted them too.", "Davis bán thành công chiếc quần mới ở Reno, và chẳng mấy chốc những người lao động khác cũng muốn có."],
+      ["Davis knew that the idea was valuable, and he wanted to protect it with a patent.", "Davis biết ý tưởng này có giá trị, và ông muốn bảo vệ nó bằng một bằng sáng chế."],
+      ["But a patent cost money, and he did not have enough.", "Nhưng bằng sáng chế tốn tiền, và ông không có đủ."],
+      ["In 1872, he wrote a letter to Strauss and asked him to become his partner.", "Năm 1872, ông viết thư cho Strauss và đề nghị ông này trở thành đối tác."],
+      ["Strauss agreed, and on May 20, 1873, the two men {successfully} received patent number 139,121 for work pants with rivets.", "Strauss đồng ý, và ngày 20 tháng 5 năm 1873, hai người đã thành công nhận bằng sáng chế số 139.121 cho quần lao động có đinh tán."],
+      ["Strauss then {hired=hire} Davis to manage the production in San Francisco, and Davis moved there with his family.", "Sau đó Strauss thuê Davis quản lý việc sản xuất ở San Francisco, và Davis chuyển đến đó cùng gia đình."],
+      ["The company also {hired=hire} many workers, often women, to sew the pants.", "Công ty còn thuê nhiều công nhân, thường là phụ nữ, để may quần."]
+    ],
+    [
+      ["The company soon made the pants from denim, a strong {cotton} cloth that was usually blue.", "Công ty sớm làm quần bằng vải denim, một loại vải bông chắc chắn thường có màu xanh."],
+      ["{Cotton} denim was already popular for work clothes because it was cheap and strong.", "Vải bông denim vốn đã được ưa chuộng làm quần áo lao động vì rẻ và bền."],
+      ["People did not call them jeans yet: they were called “waist overalls,” because workers often wore them over their other clothes.", "Người ta chưa gọi chúng là quần jean: chúng được gọi là “waist overalls”, vì công nhân thường mặc chúng bên ngoài quần áo khác."],
+      ["In 1886, the company added a {leather} label with a picture of two horses that were trying to pull a pair of pants apart.", "Năm 1886, công ty thêm một nhãn da có hình hai con ngựa đang cố kéo toạc một chiếc quần."],
+      ["The {leather} label told buyers that the pants were too strong to tear.", "Tấm nhãn da cho người mua biết rằng chiếc quần quá chắc để có thể rách."],
+      ["By the 1890s, the pants had a number, 501, which is still used today.", "Đến những năm 1890, chiếc quần có một con số, 501, đến nay vẫn còn dùng."],
+      ["In 1906, the great San Francisco earthquake and fire destroyed the company’s offices and most of its early records.", "Năm 1906, trận động đất và hỏa hoạn lớn ở San Francisco phá hủy văn phòng công ty và phần lớn hồ sơ thời kỳ đầu."]
+    ],
+    [
+      ["New jeans were hard and {uncomfortable} at first, but they became softer as people wore them.", "Quần jean mới lúc đầu cứng và khó chịu, nhưng mềm dần khi người ta mặc."],
+      ["For a miner, a pair that was a little {uncomfortable} but lasted for years was much better than a soft pair that tore in a week.", "Với một thợ mỏ, một chiếc quần hơi khó chịu nhưng bền nhiều năm tốt hơn nhiều so với một chiếc mềm mà rách sau một tuần."],
+      ["For decades, jeans were clothes for work, not for town.", "Suốt nhiều thập kỷ, quần jean là quần áo đi làm, không phải để dạo phố."],
+      ["Then, in the 1930s, cowboys in Hollywood {Western=western} films wore them, and jeans became part of the cowboy {costume}.", "Rồi vào những năm 1930, các chàng cao bồi trong phim miền Tây của Hollywood mặc chúng, và quần jean trở thành một phần của trang phục cao bồi."],
+      ["Many people who had never seen a cow wanted the same {costume}.", "Nhiều người chưa từng thấy con bò nào cũng muốn có bộ trang phục y như vậy."]
+    ],
+    [
+      ["In the 1950s, jeans became a sign of {youth}.", "Vào những năm 1950, quần jean trở thành biểu tượng của tuổi trẻ."],
+      ["Film stars wore them, and the {young} saw them as a sign of freedom.", "Các ngôi sao điện ảnh mặc chúng, và giới trẻ coi chúng là dấu hiệu của tự do."],
+      ["Some American schools even {banned=ban} jeans, because teachers thought that they were not {smart} enough for school.", "Một số trường ở Mỹ thậm chí cấm mặc quần jean, vì giáo viên cho rằng chúng không đủ lịch sự cho trường học."],
+      ["Of course, when schools {banned=ban} them, the {young} wanted them even more.", "Tất nhiên, khi trường học cấm, giới trẻ lại càng muốn có chúng."],
+      ["In the 1960s and 1970s, students who were against the war wore jeans, and in the Soviet Union, where they were hard to get, {youth} groups wanted them very much.", "Trong những năm 1960 và 1970, sinh viên phản đối chiến tranh mặc quần jean, và ở Liên Xô, nơi rất khó mua, các nhóm thanh niên khao khát có chúng."]
+    ],
+    [
+      ["Today, jeans are made in many countries and {exported=export} all over the world, including from factories in Vietnam.", "Ngày nay, quần jean được sản xuất ở nhiều nước và xuất khẩu đi khắp thế giới, kể cả từ các nhà máy ở Việt Nam."],
+      ["Many companies {export} jeans, and many offices now accept them as {smart} enough for work.", "Nhiều công ty xuất khẩu quần jean, và nhiều văn phòng nay chấp nhận chúng là đủ lịch sự để đi làm."],
+      ["The two {immigrants=immigrant}, a businessman and a tailor, changed the way that people dress {forever}.", "Hai người nhập cư, một doanh nhân và một thợ may, đã thay đổi mãi mãi cách con người ăn mặc."],
+      ["A small copper rivet at the corner of a pocket may not last {forever}, but the idea has lasted for more than 150 years.", "Một chiếc đinh tán đồng nhỏ ở góc túi có thể không tồn tại mãi mãi, nhưng ý tưởng ấy đã tồn tại hơn 150 năm."]
+    ]
+  ],
+  gloss: { waist: 'thắt lưng, eo', buyers: 'người mua', jeans: 'quần jean', fashion: 'thời trang', miners: 'thợ mỏ', miner: 'thợ mỏ', bavaria: 'xứ Bavaria (Đức)', dig: 'đào', tailor: 'thợ may', wagon: 'xe ngựa (chở hàng)', covers: 'tấm phủ, mui', pockets: 'túi quần', pocket: 'túi quần', tore: 'rách', tear: 'rách', woodcutter: 'thợ đốn củi', copper: 'đồng (kim loại)', rivets: 'đinh tán', rivet: 'đinh tán', blankets: 'chăn', thread: 'chỉ (khâu)', pressed: 'bị dập', patent: 'bằng sáng chế', partner: 'đối tác', production: 'sản xuất', sew: 'may, khâu', denim: 'vải denim', overalls: 'quần yếm, quần bảo hộ', label: 'nhãn', earthquake: 'động đất', records: 'hồ sơ', stiff: 'cứng', decades: 'thập kỷ', cowboys: 'cao bồi', cowboy: 'cao bồi', hollywood: 'Hollywood', symbol: 'biểu tượng', freedom: 'tự do', protested: 'phản đối', soviet: 'Xô viết', union: 'liên bang', businessman: 'doanh nhân', according: 'theo', valuable: 'có giá trị' },
+  grammar: [
+    ['too-enough', 'teachers thought that they were not smart enough for school'],
+    ['relative-non-defining', 'in the Soviet Union, where they were hard to get'],
+    ['past-perfect', 'A few years earlier, gold had been found in California'],
+    ['passive-tenses', 'jeans are made in many countries and exported all over the world'],
+    ['comparatives', 'was much better than a soft pair that tore in a week']
+  ],
+  practiceNote: 'Bài về sự ra đời của quần jean: thợ may Jacob Davis (sinh ở Riga) gắn đinh tán đồng vào những điểm yếu của quần lao động; ông và Levi Strauss (sinh ở Bavaria) nhận bằng sáng chế ngày 20/5/1873; từ quần của thợ mỏ, jean thành trang phục cao bồi, biểu tượng tuổi trẻ và món hàng xuất khẩu toàn cầu. Từ vựng: may mặc (cloth, cotton, leather, needle, nail, costume, smart, uncomfortable), công việc (profession, client, hire, mine, export, successfully, immigrant), xã hội (youth, the young, ban, western, forever). Ngữ pháp: enough sau tính từ, too … to, mệnh đề quan hệ với where, bị động quá khứ hoàn thành.',
+  practice: [
+    { t: 'mc', k: 'c:main', q: 'What is the main idea of the story?', o: ['Jeans began as strong work pants made by two immigrants, and later they became popular all over the world.', 'Jeans were first made as clothes for film stars.', 'Levi Strauss was a miner who invented jeans.'], a: 0, why: 'Quần lao động có đinh tán của hai người nhập cư, sau thành phổ biến toàn cầu.', ref: 'They began as work clothes for miners in the American West' },
+    { t: 'mc', k: 'c:idea', q: 'Whose idea was it to put rivets on the pants?', o: ['Jacob Davis, a tailor in Reno', 'Levi Strauss', 'A miner in California'], a: 0, why: 'Davis gắn đinh tán vào các điểm yếu.', ref: 'he put small copper rivets' },
+    { t: 'mc', k: 'c:why-rivets', q: 'Why did work pants need rivets?', o: ['The pockets often tore away when miners carried heavy things.', 'Rivets made the pants look smart.', 'The law required them.'], a: 0, why: 'Túi quần hay bị rách toạc vì đựng đồ nặng.', ref: 'the pockets often tore away from the pants' },
+    { t: 'mc', k: 'c:partner', q: 'Why did Davis ask Strauss to be his partner?', o: ['He did not have enough money for a patent.', 'He wanted to stop working.', 'Strauss was his brother.'], a: 0, why: 'Bằng sáng chế tốn tiền, ông không đủ.', ref: 'a patent cost money, and he did not have enough' },
+    { t: 'mc', k: 'c:label', q: 'What did the leather label with two horses tell buyers?', o: ['The pants were too strong to tear.', 'The pants were made for horse riders.', 'The pants were cheap.'], a: 0, why: 'Hai con ngựa không kéo rách nổi quần.', ref: 'the pants were too strong to tear' },
+    { t: 'mc', k: 'c:infer', q: 'Why did some young people want jeans even more when schools banned them?', o: ['Jeans were a sign of freedom, and the ban made them more exciting.', 'Jeans became cheaper.', 'Teachers wore them too.'], a: 0, why: 'Jean là dấu hiệu của tự do; bị cấm càng hấp dẫn.', ref: 'the young saw them as a sign of freedom' },
+    { t: 'mc', k: 'c:tf', q: 'True or false? “At first, jeans were called waist overalls.”', o: ['True', 'False'], a: 0, why: 'Đúng: chưa gọi là jean.', ref: 'they were called “waist overalls,”' },
+    { t: 'order', k: 'c:sequence', a: 'Work pants at that time wore out quickly.', why: 'wear out (quá khứ wore out) = mòn rách.', ref: 'Work pants at that time wore out quickly' },
+    { t: 'dict', k: 'c:listen', a: 'The first was Levi Strauss.', why: 'The first (người thứ nhất) + was.' },
+    { t: 'mc', k: 'w:profession', q: 'He was a tailor by ______.', o: ['profession', 'costume', 'youth'], a: 0, why: 'by profession = về nghề nghiệp.', ref: 'He was a tailor by profession' },
+    { t: 'mc', k: 'w:client', q: 'He bought cloth from Levi Strauss, so he was one of Strauss’s ______.', o: ['clients', 'immigrants', 'mines'], a: 0, why: 'client = khách hàng (của dịch vụ, nhà cung cấp).', ref: 'he was one of Strauss’s clients' },
+    { t: 'mc', k: 'w:hire', q: 'Strauss then ______ Davis to manage the production.', o: ['hired', 'banned', 'exported'], a: 0, why: 'hire = thuê (người làm).', ref: 'Strauss then hired Davis' },
+    { t: 'mc', k: 'w:uncomfortable', q: 'New jeans were hard and ______ at first.', o: ['uncomfortable', 'smart', 'western'], a: 0, why: 'uncomfortable = khó chịu, không thoải mái.', ref: 'New jeans were hard and uncomfortable at first' },
+    { t: 'gap', k: 'w:costume', q: 'Jeans became part of the cowboy ______.', a: ['costume'], why: 'costume = trang phục (diễn).', ref: 'part of the cowboy costume' },
+    { t: 'match', k: 'w:set-jeans', q: 'Match the words with their meanings.', pairs: [['cotton', 'soft material from a plant, used for cloth'], ['leather', 'material made from the skin of animals'], ['needle', 'a thin piece of metal used for sewing'], ['mine', 'a deep hole where people dig for gold or coal']], why: 'cotton = vải bông; leather = da; needle = kim; mine = mỏ.', ref: 'a strong cotton cloth' },
+    { t: 'mc', k: 'w:youth', q: 'In the 1950s, jeans became a sign of ______.', o: ['youth', 'profession', 'cloth'], a: 0, why: 'youth = tuổi trẻ.', ref: 'jeans became a sign of youth' },
+    { t: 'mc', k: 'w:ban', q: 'Some American schools even ______ jeans.', o: ['banned', 'hired', 'exported'], a: 0, why: 'ban = cấm.', ref: 'Some American schools even banned jeans' },
+    { t: 'mc', k: 'w:export', q: 'Jeans are made in many countries and ______ all over the world.', o: ['exported', 'banned', 'hired'], a: 0, why: 'export = xuất khẩu.', ref: 'exported all over the world' },
+    { t: 'mc', k: 'g:too-enough', q: 'Teachers thought that jeans were not ______ for school.', o: [['smart enough', 'Đúng: tính từ + enough.'], ['enough smart', 'Sai: enough đứng sau tính từ.'], ['too smart', 'Sai nghĩa.']], a: 0, why: 'adj + enough.', ref: 'they were not smart enough for school' },
+    { t: 'error', k: 'g:too-enough', q: 'The pants were enough strong to carry heavy rocks.', wrong: 'enough', fix: '(strong) enough', why: 'enough đứng sau tính từ: strong enough.', ref: 'too strong to tear' },
+    { t: 'mc', k: 'g:relative-non-defining', q: 'In the Soviet Union, ______ jeans were hard to get, young people wanted them.', o: [['where', 'Đúng: nơi chốn, sau đó có chủ ngữ riêng (jeans).'], ['which', 'Sai: cần nghĩa “ở đó”.'], ['that', 'Sai: không dùng that sau dấu phẩy.']], a: 0, why: 'N (nơi), where + S + V.', ref: 'in the Soviet Union, where they were hard to get' },
+    { t: 'mc', k: 'g:past-perfect', q: 'A few years earlier, gold ______ in California.', o: [['had been found', 'Đúng: bị động, xảy ra trước năm 1853.'], ['had found', 'Sai: vàng không tự tìm.'], ['has been found', 'Sai: chuyện quá khứ.']], a: 0, why: 'had been + V3.', ref: 'gold had been found in California' }
+  ],
+  extra: [],
+  write: { vi: 'Viết 3–5 câu tiếng Anh về một thay đổi nhỏ trên sản phẩm (ví dụ thêm gân, đổi vật liệu) giúp nó bền hơn. Cố dùng các từ dưới đây.', use: ['successfully', 'client', 'profession', 'hire', 'forever'], model: 'One of our clients said that a plastic clip often broke. In my profession, we look at the weak points first. We added a small rib to the clip and successfully tested it. The customer was happy and hired our company for a new project. One small change can improve a product forever.' },
+  fact: { card: 'Jacob Davis, thợ may ở Reno (Nevada), sinh ở Riga năm 1831, gắn đinh tán đồng vào các điểm yếu của quần lao động. Ông mua vải từ Levi Strauss, doanh nhân sinh ở Bavaria năm 1829, có cửa hàng bán buôn ở San Francisco. Năm 1872, Davis viết thư đề nghị Strauss hợp tác; ngày 20/5/1873, họ nhận bằng sáng chế số 139.121. Quần ban đầu gọi là “waist overalls”, sau làm bằng vải denim; đến những năm 1890 mang số 501.',
+    bonus: 'The 1873 patent for riveted work pants was patent number 139,121.', bonusSrc: 'Levi Strauss & Co. — Jacob Davis: 6 Things You (Probably) Didn’t Know' },
+  sources: [
+    { t: 'Levi Strauss & Co. — Jacob Davis: 6 Things You (Probably) Didn’t Know About the Inventor of the Blue Jean', u: 'https://levistrauss.com/2015/10/08/jacob-davis-6-things-you-probably-didnt-know-about-the-inventor-of-the-blue-jean' },
+    { t: 'Smithsonian Magazine — After 150 Years, Levi’s 501 Blue Jeans Are Still Kicking', u: 'https://www.smithsonianmag.com/smart-news/levis-jeans-150-years-180982241/' },
+    { t: 'History.com — Levi Strauss patents copper-riveted jeans (May 20, 1873)', u: 'https://www.history.com/this-day-in-history/levi-strauss-patents-copper-riveted-jeans' }
+  ],
+  note: 'Levi Strauss & Co.: Jacob Davis sinh ở Riga, Latvia, năm 1831, nhập cư Mỹ năm 1854; thợ may ở Reno, Nevada, cửa hàng trên phố Virginia; thường làm lều và mui xe ngựa; nghĩ ra quần có đinh tán ở Reno, chia sẻ ý tưởng với Levi Strauss, nhà cung cấp vải của ông ở San Francisco, đề nghị Strauss làm đối tác bằng sáng chế và giúp sản xuất lớn; bằng sáng chế số 139.121 cấp ngày 20/5/1873. Smithsonian: năm 1871 Davis thêm đinh tán kim loại vào quần thợ mỏ để không bị rách; bằng sáng chế ngày 20/5/1873 với tài trợ của Levi Strauss, người nhập cư gốc Đức có cửa hàng hàng khô ở San Francisco; quảng cáo là “waist overalls” vì thường mặc bên ngoài; công ty chuyển sang vải denim; đến những năm 1890 mang số lô 501; người mặc đầu tiên là thợ mỏ và lao động chân tay; phim cao bồi thập niên 1930 làm jean phổ biến; thập niên 1960–1970 người biểu tình phản chiến mặc jean; người Liên Xô muốn có jean dù chính quyền không ưa. History.com: Strauss sinh năm 1829 ở Buttenheim, Bavaria, di cư sang Mỹ năm 1847, bán hàng khô ở bờ Đông, đến San Francisco năm 1853; năm 1872 Davis, một khách hàng, viết thư cho Strauss về việc thêm đinh tán đồng vào điểm yếu như đường may túi; Strauss lo thủ tục bằng sáng chế, bắt đầu sản xuất lớn và giao Davis quản lý sản xuất; sau chuyển từ vải bạt sang denim xanh dày. (History.com còn kể Strauss tự may quần bằng vải bạt cho thợ mỏ; bài không dùng chi tiết này vì không có nguồn thứ hai.) Kiến thức phổ thông: cơn sốt vàng California (vàng được tìm thấy năm 1848); túi quần thợ mỏ hay rách vì đựng đồ nặng; câu chuyện người phụ nữ nhờ may quần cho chồng là thợ đốn củi (Davis kể trong thư gửi Strauss; bài ghi “theo câu chuyện Davis kể lại”); đinh tán Davis dùng cho chăn ngựa; Davis không đủ tiền phí bằng sáng chế (thường được ghi là 68 đô-la; bài không ghi số tiền); Davis chuyển đến San Francisco; công ty thuê nhiều thợ may, thường là phụ nữ; nhãn da hình hai con ngựa thêm vào năm 1886; trận động đất và hỏa hoạn năm 1906 phá hủy văn phòng và phần lớn hồ sơ của công ty; jean mới cứng, mềm dần khi mặc; thập niên 1950 jean thành biểu tượng tuổi trẻ, một số trường ở Mỹ cấm mặc jean; Việt Nam là một nước sản xuất và xuất khẩu quần jean. Câu “nhiều người chưa thấy con bò nào cũng muốn có trang phục đó”, “khi trường cấm, giới trẻ càng muốn” và câu kết là nhận xét của bài.',
+  verified: '2026-11-15'
+});

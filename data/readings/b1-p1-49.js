@@ -1,0 +1,114 @@
+EI.words('B1', `
+# ---- b1-p1-49 The White Sails of Sydney
+cream~adj|adj|/kriːm/|having a color between white and light yellow|She wore a {cream} dress to the wedding.|a cream shirt/wall; cream-colored|màu kem|2|cream (n) = kem (A1).|cream (n)
+sail~n|n|/seɪl/|a large piece of strong cloth on a boat that catches the wind and moves the boat along|The boat had two white {sails}.|put up the sails; a boat with sails|cánh buồm|2|sail (v) = đi thuyền buồm, đi tàu (A2).|sail (v), sailor (n)
+`);
+EI.reading({
+  id: 'b1-p1-49', level: 'B1', pass: 1, n: 49,
+  title: 'The White Sails of Sydney',
+  topic: 'engineering', era: '1954–2008', year: 1973, region: 'Australia',
+  predict: { q: 'Kiến trúc sư Jørn Utzon thiết kế Nhà hát Opera Sydney. Ông có được thấy công trình hoàn thành không?', o: ['Không, ông rời Úc năm 1966 và không bao giờ quay lại', 'Có, ông cắt băng khánh thành năm 1973', 'Có, ông sống ở đó đến cuối đời'] },
+  targets: ['cream~adj', 'sail~n'],
+  text: [
+    [
+      ["Look at Sydney Harbour on a bright day, and you will see many small boats with white {sails=sail~n}.", "Hãy nhìn cảng Sydney vào một ngày nắng, bạn sẽ thấy nhiều chiếc thuyền nhỏ căng buồm trắng."],
+      ["Near the water stands a building whose roofs look like more {sails=sail~n}, as if a ship has stopped there for a while.", "Gần mặt nước là một tòa nhà có những mái trông như thêm những cánh buồm, như thể một con tàu dừng lại ở đó một lúc."],
+      ["This is the Sydney Opera House, one of the most famous buildings in the world.", "Đó là Nhà hát Opera Sydney, một trong những tòa nhà nổi tiếng nhất thế giới."],
+      ["But the man who designed it never saw it finished.", "Nhưng người thiết kế nó chưa bao giờ thấy nó hoàn thành."]
+    ],
+    [
+      ["The story began in 1954, when the leader of the state of New South Wales, Joseph Cahill, agreed with a music director, Eugene Goossens, that Sydney needed a great place for music and plays.", "Câu chuyện bắt đầu năm 1954, khi người đứng đầu bang New South Wales, Joseph Cahill, đồng ý với nhạc trưởng Eugene Goossens rằng Sydney cần một nơi tuyệt vời cho âm nhạc và sân khấu."],
+      ["The government held an international competition for the design.", "Chính quyền tổ chức một cuộc thi thiết kế quốc tế."],
+      ["Design number 218 came from Jørn Utzon, a young architect from Denmark who was not well known outside his country.", "Thiết kế số 218 đến từ Jørn Utzon, một kiến trúc sư trẻ người Đan Mạch ít được biết đến bên ngoài đất nước mình."],
+      ["There is a famous story that one of the judges, the American architect Eero Saarinen, found it among the designs that had already been rejected.", "Có một chuyện nổi tiếng kể rằng một giám khảo, kiến trúc sư người Mỹ Eero Saarinen, đã tìm thấy nó trong đống thiết kế đã bị loại."],
+      ["It may be only a story, but Saarinen loved the design and said, “So many opera houses look like boots. Utzon has solved the problem.”", "Có thể đó chỉ là chuyện kể, nhưng Saarinen rất thích thiết kế này và nói: “Biết bao nhà hát opera trông như những chiếc ủng. Utzon đã giải quyết được vấn đề.”"],
+      ["In January 1957, Utzon was named the winner, at the age of 38.", "Tháng 1 năm 1957, Utzon được công bố là người thắng cuộc, khi ông 38 tuổi."]
+    ],
+    [
+      ["In July 1957, the government planned to spend $7 million and to finish the building by December 1963.", "Tháng 7 năm 1957, chính quyền dự định chi 7 triệu đô la và hoàn thành tòa nhà trước tháng 12 năm 1963."],
+      ["Work started in 1959, but there was a big problem: nobody knew how to build the roofs.", "Công việc bắt đầu năm 1959, nhưng có một vấn đề lớn: không ai biết cách xây những mái nhà."],
+      ["In Utzon’s first drawings, every shell had a different shape, so the workers could not use the same forms again and again, and the costs went up.", "Trong bản vẽ đầu tiên của Utzon, mỗi vỏ mái có một hình dạng khác nhau, nên thợ xây không thể dùng đi dùng lại cùng một khuôn, và chi phí tăng lên."],
+      ["For about three years, Utzon and the engineers in London tried to find an answer.", "Trong khoảng ba năm, Utzon và các kỹ sư ở London cố tìm lời giải."],
+      ["Then one evening, in his office in Denmark, Utzon was putting the shells of a large model on top of each other, and he saw that they could all come from one shape: a ball.", "Rồi một buổi tối, trong văn phòng ở Đan Mạch, Utzon đang xếp chồng các vỏ mái của một mô hình lớn lên nhau, và ông nhận ra tất cả có thể lấy từ một hình duy nhất: một quả cầu."],
+      ["If every shell was a piece of the same ball, they could be made from the same kind of parts.", "Nếu mỗi vỏ mái là một mảnh của cùng một quả cầu, chúng có thể được làm từ cùng một loại chi tiết."],
+      ["Some people say that he showed this idea by cutting four {sail=sail~n}-like pieces from an orange, but the Opera House itself calls the orange story a myth.", "Có người kể ông minh họa ý tưởng này bằng cách cắt bốn miếng hình cánh buồm từ một quả cam, nhưng chính Nhà hát Opera gọi chuyện quả cam là huyền thoại."],
+      ["Today, every roof shell is a piece of one ball with a radius of 75.2 meters.", "Ngày nay, mỗi vỏ mái là một mảnh của một quả cầu có bán kính 75,2 mét."],
+      ["In the end, the roofs were built from 2,194 concrete pieces, and some of them weighed 15 tons each.", "Cuối cùng, các mái được xây từ 2.194 khối bê tông, và một số khối nặng tới 15 tấn mỗi khối."]
+    ],
+    [
+      ["The roofs are covered with 1,056,006 tiles, and the highest point is 67 meters above the sea.", "Các mái được phủ 1.056.006 viên ngói, và điểm cao nhất cao 67 mét so với mặt biển."],
+      ["A Swedish company, Höganäs, spent three years making the tiles, and Utzon took the idea for their look from Japanese bowls.", "Một công ty Thụy Điển, Höganäs, mất ba năm để làm ngói, và Utzon lấy ý tưởng cho vẻ ngoài của chúng từ những chiếc bát Nhật Bản."],
+      ["The tiles come in two colors: a shiny white and a soft {cream=cream~adj}.", "Ngói có hai màu: trắng bóng và kem dịu."],
+      ["The {cream=cream~adj} tiles are not shiny, and together with the white ones they make V shapes across the roofs.", "Những viên màu kem không bóng, và cùng với những viên màu trắng, chúng tạo thành họa tiết hình chữ V trên khắp các mái."],
+      ["From far away, you do not see the separate tiles; you only see white {sails=sail~n} shining in the sun.", "Từ xa, bạn không thấy từng viên ngói; bạn chỉ thấy những cánh buồm trắng lấp lánh dưới nắng."]
+    ],
+    [
+      ["But the costs kept rising, and the work was years late.", "Nhưng chi phí cứ tăng, và công việc trễ nhiều năm."],
+      ["In 1965, a new government came in, and the new minister for public works, Davis Hughes, did not like the way Utzon managed the project.", "Năm 1965, một chính quyền mới lên nắm quyền, và tân bộ trưởng công chính Davis Hughes không thích cách Utzon quản lý dự án."],
+      ["He stopped the money, and Utzon could not pay his staff.", "Ông cắt tiền, và Utzon không trả được lương cho nhân viên."],
+      ["On February 28, 1966, after Hughes refused to pay money that was owed to him, Utzon offered to leave the project, and Hughes accepted at once.", "Ngày 28 tháng 2 năm 1966, sau khi Hughes từ chối trả khoản tiền nợ ông, Utzon xin rời dự án, và Hughes chấp nhận ngay lập tức."],
+      ["Architects and artists came out onto the streets of Sydney and asked for him to come back, but it was no use.", "Các kiến trúc sư và nghệ sĩ xuống đường ở Sydney đòi ông quay lại, nhưng vô ích."],
+      ["In April 1966, Utzon left Australia with his family, and he never returned.", "Tháng 4 năm 1966, Utzon rời nước Úc cùng gia đình, và không bao giờ trở lại."]
+    ],
+    [
+      ["Other architects finished the inside, and they changed many of Utzon’s plans.", "Những kiến trúc sư khác hoàn thiện phần bên trong, và họ thay đổi nhiều kế hoạch của Utzon."],
+      ["On October 20, 1973, Queen Elizabeth II opened the building, ten years late.", "Ngày 20 tháng 10 năm 1973, Nữ hoàng Elizabeth II khánh thành tòa nhà, trễ mười năm."],
+      ["It had cost $102 million, which was 14 times the first plan.", "Nó tốn 102 triệu đô la, gấp 14 lần dự tính ban đầu."],
+      ["In her speech, the Queen said, “I understand that its construction has not been totally without problems.”", "Trong bài phát biểu, Nữ hoàng nói: “Tôi hiểu rằng việc xây dựng nó không phải hoàn toàn không có vấn đề.”"],
+      ["The first show in the building, a few weeks earlier, was the opera War and Peace by Prokofiev.", "Buổi diễn đầu tiên trong tòa nhà, vài tuần trước đó, là vở opera Chiến tranh và Hòa bình của Prokofiev."],
+      ["Sixty thousand balloons went up into the sky, but Utzon was not there, and some writers say that his name was not even mentioned.", "Sáu mươi nghìn quả bóng bay được thả lên trời, nhưng Utzon không có mặt, và một số tác giả nói tên ông thậm chí không được nhắc đến."]
+    ],
+    [
+      ["Many years later, the story had a kinder ending.", "Nhiều năm sau, câu chuyện có một kết thúc dịu dàng hơn."],
+      ["In 1999, the Opera House asked Utzon to write the design rules for all future changes to the building.", "Năm 1999, Nhà hát Opera nhờ Utzon viết các nguyên tắc thiết kế cho mọi thay đổi sau này của tòa nhà."],
+      ["In 2003, he won the Pritzker Prize, the most famous prize for architects, and in 2004 a room in the building was named the Utzon Room.", "Năm 2003, ông đoạt giải Pritzker, giải thưởng nổi tiếng nhất của ngành kiến trúc, và năm 2004 một căn phòng trong tòa nhà được đặt tên là Phòng Utzon."],
+      ["He said that this gave him “the greatest pleasure and satisfaction.”", "Ông nói điều này mang lại cho ông “niềm vui và sự mãn nguyện lớn nhất”."],
+      ["In 2007, UNESCO made the Opera House a World Heritage Site, and Utzon died the next year, at the age of 90.", "Năm 2007, UNESCO công nhận Nhà hát Opera là Di sản Thế giới, và Utzon mất năm sau đó, thọ 90 tuổi."],
+      ["In 2013, the {sails=sail~n} even became a screen for a light show, when ships from many countries came to Sydney.", "Năm 2013, những cánh buồm còn trở thành màn chiếu cho một buổi trình diễn ánh sáng, khi tàu từ nhiều nước đến Sydney."],
+      ["Today, nearly 11 million people visit it every year to see the white and {cream=cream~adj} {sails=sail~n} that he imagined but never saw.", "Ngày nay, gần 11 triệu người đến thăm mỗi năm để ngắm những cánh buồm trắng và kem mà ông đã hình dung nhưng chưa bao giờ được thấy."]
+    ]
+  ],
+  gloss: { harbour: 'cảng (Sydney Harbour)', opera: 'opera, nhạc kịch', director: 'nhạc trưởng; giám đốc', competition: 'cuộc thi', architect: 'kiến trúc sư', architects: 'kiến trúc sư', judges: 'giám khảo', rejected: 'bị loại', boots: 'ủng, bốt', shell: 'vỏ', shells: 'vỏ (mái)', tons: 'tấn', engineers: 'kỹ sư', concrete: 'bê tông', tiles: 'ngói, gạch ốp', bowls: 'bát', shiny: 'bóng, sáng bóng', minister: 'bộ trưởng', owed: 'nợ', construction: 'việc xây dựng', balloons: 'bóng bay', satisfaction: 'sự hài lòng, mãn nguyện', radius: 'bán kính', unesco: 'UNESCO', heritage: 'di sản', myth: 'huyền thoại' },
+  grammar: [
+    ['passive-tenses', 'the roofs were built from 2,194 concrete pieces'],
+    ['past-perfect', 'among the designs that had already been rejected'],
+    ['reported-speech', 'He said that this gave him'],
+    ['second-conditional', 'If every shell was a piece of the same ball, they could be made from the same kind of parts'],
+    ['relative-non-defining', 'Jørn Utzon, a young architect from Denmark who was not well known outside his country']
+  ],
+  practiceNote: 'Bài về Nhà hát Opera Sydney: năm 1957 kiến trúc sư Đan Mạch Jørn Utzon thắng cuộc thi; mái hình vỏ khó xây, ông tìm ra “giải pháp hình cầu”; 1.056.006 viên ngói màu trắng bóng và kem mờ; năm 1966 ông rời dự án sau tranh cãi với bộ trưởng Davis Hughes và không bao giờ trở lại; khánh thành năm 1973, trễ mười năm, tốn gấp 14 lần; sau này được vinh danh (1999, 2003, 2004). Từ vựng: sail (cánh buồm), cream (màu kem). Ngữ pháp: bị động, quá khứ hoàn thành bị động, câu tường thuật, câu điều kiện loại 2 (nếu… thì có thể…), cụm đồng vị và mệnh đề quan hệ.',
+  practice: [
+    { t: 'mc', k: 'c:main', q: 'What is the main idea of the story?', o: ['Jørn Utzon designed the famous Sydney Opera House, but he left before it was finished and never saw it.', 'The Sydney Opera House was finished early and cheaply.', 'The Queen designed the Sydney Opera House.'], a: 0, why: 'Utzon thiết kế nhưng rời đi và chưa bao giờ thấy nó hoàn thành.', ref: 'the man who designed it never saw it finished' },
+    { t: 'mc', k: 'c:problem', q: 'What was the big problem when work started?', o: ['Nobody knew how to build the roofs.', 'There was no money at all.', 'The harbour was too small.'], a: 0, why: 'Không ai biết cách xây mái.', ref: 'nobody knew how to build the roofs' },
+    { t: 'mc', k: 'c:solution', q: 'What was Utzon’s answer to the roof problem?', o: ['Every shell could be a piece of the same ball.', 'He made the roofs flat.', 'He used metal sails.'], a: 0, why: 'Mỗi vỏ mái là một mảnh của cùng một quả cầu.', ref: 'they could all come from one shape: a ball' },
+    { t: 'mc', k: 'c:orange', q: 'What does the Opera House say about the orange story?', o: ['It is a myth.', 'It is completely true.', 'It happened in Sydney.'], a: 0, why: 'Nhà hát gọi chuyện quả cam là huyền thoại.', ref: 'the Opera House itself calls the orange story a myth' },
+    { t: 'mc', k: 'c:infer', q: 'Why did Utzon leave the project?', o: ['The new minister stopped the money and would not pay what was owed to him.', 'He wanted to build a building in Denmark.', 'The Queen asked him to leave.'], a: 0, why: 'Bộ trưởng cắt tiền và không trả khoản nợ.', ref: 'after Hughes refused to pay money that was owed to him' },
+    { t: 'mc', k: 'c:tf', q: 'True or false? “The building cost more than the first plan.”', o: ['True', 'False'], a: 0, why: 'Đúng: 102 triệu đô la, gấp 14 lần.', ref: 'It had cost $102 million, which was 14 times the first plan' },
+    { t: 'mc', k: 'c:later', q: 'What happened in 2004?', o: ['A room in the building was named the Utzon Room.', 'Utzon visited Sydney.', 'The building was closed.'], a: 0, why: 'Phòng Utzon được đặt tên năm 2004.', ref: 'in 2004 a room in the building was named the Utzon Room' },
+    { t: 'order', k: 'c:sequence', a: 'Work started in 1959, but there was a big problem.', why: 'but = nhưng.', ref: 'Work started in 1959, but there was a big problem' },
+    { t: 'dict', k: 'c:listen', a: 'But the costs kept rising, and the work was years late.', why: 'keep rising = cứ tăng mãi; years late = trễ nhiều năm.' },
+    { t: 'mc', k: 'w:sail~n', q: 'You will see many small boats with white ______.', o: ['sails', 'tiles', 'shells'], a: 0, why: 'sail = cánh buồm.', ref: 'many small boats with white sails' },
+    { t: 'mc', k: 'w:cream~adj', q: 'The tiles come in two colors: a shiny white and a soft ______.', o: ['cream', 'sail', 'orange'], a: 0, why: 'cream (adj) = màu kem.', ref: 'a shiny white and a soft cream' },
+    { t: 'gap', k: 'w:cream~adj', q: 'The ______ tiles are not shiny.', a: ['cream'], why: 'cream (adj) = màu kem.', ref: 'The cream tiles are not shiny' },
+    { t: 'gap', k: 'w:sail~n', q: 'From far away, you only see white ______ shining in the sun.', a: ['sails'], why: 'sail → sails.', ref: 'you only see white sails shining in the sun' },
+    { t: 'match', k: 'w:set-opera', q: 'Match the words with their meanings.', pairs: [['sail', 'cloth on a boat that catches the wind'], ['cream', 'a color between white and light yellow'], ['architect', 'a person who designs buildings'], ['tile', 'a flat square piece that covers a roof or wall']], why: 'sail = cánh buồm; cream = màu kem; architect = kiến trúc sư; tile = viên ngói.', ref: 'The roofs are covered with 1,056,006 tiles' },
+    { t: 'mc', k: 'g:passive-tenses', q: 'In the end, the roofs ______ from 2,194 concrete pieces.', o: [['were built', 'Đúng: bị động quá khứ.'], ['built', 'Sai: mái không tự xây.'], ['have building', 'Sai dạng.']], a: 0, why: 'was/were + V3.', ref: 'the roofs were built from 2,194 concrete pieces' },
+    { t: 'mc', k: 'g:second-conditional', q: 'If every shell ______ a piece of the same ball, they could be made from the same kind of parts.', o: [['was', 'Đúng: điều kiện loại 2, If + quá khứ đơn.'], ['will be', 'Sai: không dùng will trong mệnh đề if.'], ['is being', 'Sai dạng.']], a: 0, why: 'If + V2, could + V.', ref: 'If every shell was a piece of the same ball' },
+    { t: 'error', k: 'g:past-perfect', q: 'Saarinen found it among the designs that have already been rejected.', wrong: 'have', fix: 'had', why: 'Việc bị loại xảy ra trước khi Saarinen tìm thấy: had been + V3.', ref: 'that had already been rejected' },
+    { t: 'mc', k: 'g:reported-speech', q: 'Utzon said that this ______ him “the greatest pleasure and satisfaction.”', o: [['gave', 'Đúng: lùi thì sau said.'], ['gives', 'Sai: phải lùi thì.'], ['giving', 'Sai: thiếu động từ chia.']], a: 0, why: 'said that + quá khứ.', ref: 'He said that this gave him' }
+  ],
+  extra: [],
+  write: { vi: 'Viết 3–5 câu tiếng Anh mô tả màu sắc và bề mặt của một chi tiết nhựa (ví dụ trong báo cáo ngoại quan). Cố dùng các từ dưới đây.', use: ['cream', 'shiny', 'sail', 'pattern'], model: 'The T2 cover is cream, but the drawing asks for white. The top surface is shiny, and the side has a texture pattern. The rib looks like a small sail, and it is too thin near the gate.' },
+  fact: { card: 'Kiến trúc sư Đan Mạch Jørn Utzon thắng cuộc thi thiết kế Nhà hát Opera Sydney năm 1957. Mái hình vỏ khó xây đến mức mất khoảng ba năm mới tìm ra “giải pháp hình cầu”; mái phủ 1.056.006 viên ngói Höganäs màu trắng bóng và kem mờ. Năm 1966, sau tranh cãi với bộ trưởng Davis Hughes, Utzon rời dự án và không bao giờ quay lại Úc. Tòa nhà khánh thành ngày 20/10/1973, trễ mười năm và tốn 102 triệu đô la, gấp 14 lần dự tính; năm 2007 trở thành Di sản Thế giới.',
+    bonus: 'At the opening in 1973, the Queen said: “I understand that its construction has not been totally without problems.”', bonusSrc: 'Classical Music (BBC Music Magazine) — Sydney Opera House history' },
+  sources: [
+    { t: 'Sydney Opera House — The spherical solution', u: 'https://www.sydneyoperahouse.com/our-story/the-spherical-solution' },
+    { t: 'National Museum of Australia — Defining Moments: Sydney Opera House', u: 'https://nma.gov.au/defining-moments/resources/sydney-opera-house' },
+    { t: 'Structurae — Sydney Opera House', u: 'https://structurae.net/en/structures/sydney-opera-house' },
+    { t: 'Classical Music — Sydney Opera House history', u: 'https://www.classical-music.com/features/articles/sydney-opera-house-history-how-it-became-one-of-the-worlds-most-iconic-opera-houses/' },
+    { t: 'Mental Floss — The Sydney Opera House’s Architect Never Saw His Design Completed', u: 'https://www.mentalfloss.com/culture/architecture/sydney-opera-houses-architect-never-saw-his-design-completed' },
+    { t: 'Smithsonian Magazine — He Designed the Sydney Opera House… But Wasn’t Even Invited to its Opening', u: 'https://www.smithsonianmag.com/smart-news/architect-sydney-opera-house-wasnt-invited-opening-180956175/' }
+  ],
+  note: 'National Museum of Australia: năm 1954 Thủ hiến Joseph Cahill đồng ý với nhạc trưởng Eugene Goossens rằng Sydney cần một nhà hát lớn, năm sau công bố cuộc thi quốc tế; giai thoại Eero Saarinen tìm thấy bài dự thi số 218 của Utzon trong đống bị loại; tháng 1/1957 công bố Utzon thắng; tháng 7/1957 chính quyền cam kết 7 triệu đô la, dự kiến xong tháng 12/1963; sau bầu cử tháng 5/1965, Davis Hughes làm Bộ trưởng Công chính, cắt tiền khiến Utzon không trả được lương nhân viên; ngày 28/2/1966 Utzon xin từ chức sau khi Hughes từ chối trả 103.000 đô la nợ ông (Mental Floss ghi 100.000), Hughes chấp nhận ngay; kiến trúc sư, nghệ sĩ, công đoàn biểu tình; Utzon rời Sydney ngày 28/4/1966, không bao giờ trở lại hay thấy tòa nhà hoàn thành; nhóm của kiến trúc sư chính phủ Ted Farmer hoàn thiện nội thất và thay đổi nhiều; khánh thành 20/10/1973, trễ 10 năm, 102 triệu đô la, gấp 14 lần; NMA viết Utzon minh họa “giải pháp hình cầu” bằng cách cắt bốn miếng hình cánh buồm từ một quả cam, nhưng trang của Nhà hát Opera gọi chuyện quả cam là “myth” — bài nêu cả hai; 2.194 khối bê tông đúc sẵn, mỗi khối 15 tấn. Sydney Opera House (The spherical solution): bản vẽ đầu “structurally unsound”, mỗi vỏ khác nhau nên không dùng lại được khuôn; kỹ sư Arup & Partners ở London; từ 1958 đến cuối 1961 chưa có lời giải; Utzon nhận ra khi xếp chồng các vỏ của mô hình lớn ở văn phòng Hellebæk; Yellow Book nộp tháng 1/1962; viên ngói 120 mm vuông, đất sét pha đá nghiền, Höganäs mất ba năm, bề mặt lấy cảm hứng từ bát gốm Nhật; tổng 1.056.006 viên; trang này nói đến “sail-like silhouette”. Structurae cũng ghi các vỏ là phần của mặt cầu bán kính 75,2 m. Tuổi 38 của Utzon khi thắng cuộc tính từ năm sinh 1918 (kiến thức phổ thông). Structurae: ngói “glossy white and matte cream” xếp theo họa tiết chữ V; công trình bắt đầu năm 1959; các mảnh nặng tới 15 tấn; điểm cao nhất của mái 67 m trên mực nước biển; ngày 5/10/2013 “cánh buồm” làm màn chiếu cho buổi trình diễn ánh sáng nhân Duyệt binh Hạm đội Quốc tế. Classical Music cũng ghi: buổi diễn đầu tiên là vở “War and Peace” của Prokofiev ngày 28/9/1973. Classical Music: cuộc thi “launched in 1956” (NMA nói công bố một năm sau 1954, tức khoảng 1955 — bài không nêu năm cuộc thi); xây dựng bắt đầu 1959; câu của Nữ hoàng “I understand that its construction has not been totally without problems”; 60.000 quả bóng bay; gần 11 triệu khách mỗi năm; UNESCO 2007; Classical Music nói Utzon từ chối lời mời dự lễ khánh thành, còn Mental Floss và Smithsonian nói ông không được mời và tên ông không được nhắc — bài viết “Utzon was not there, and some writers say that his name was not even mentioned”. Mental Floss: câu của Saarinen “So many opera houses look like boots… Utzon has solved the problem”; năm 1999 Nhà hát mời Utzon xây dựng nguyên tắc thiết kế cho các lần cải tạo; năm 2004 phòng tiếp tân đổi tên thành Utzon Room, ông nói điều này “gives me the greatest pleasure and satisfaction”; giải Pritzker năm 2003; ông mất năm 2008 (thọ 90 tuổi — kiến thức phổ thông, sinh năm 1918). Kiến thức phổ thông: cảng Sydney có nhiều thuyền buồm; giải Pritzker là giải kiến trúc nổi tiếng nhất. Câu “như thể một con tàu dừng lại ở đó” và “từ xa bạn chỉ thấy những cánh buồm trắng” là nhận xét của bài.',
+  verified: '2026-11-15'
+});

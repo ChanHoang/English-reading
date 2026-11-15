@@ -1,0 +1,131 @@
+EI.words('B1', `
+# ---- b1-p1-36 The Dance of the Bees
+analyze|v|/ˈænəlaɪz/|to look at or think about something carefully in order to understand it|We {analyzed} the data from all five cavities.|analyze data/results/a problem|phân tích|2|Chính tả Anh: analyse.|analysis (n)
+bee|n|/biː/|a small flying animal that makes a sweet food from flowers|A {bee} landed on the flower.|a honey bee; a swarm of bees|con ong|2||
+colored|adj|/ˈkʌlərd/|having a color or colors; not black, white or gray|She bought some {colored} pens.|colored paper/glass/lights|có màu|2|Chính tả Anh: coloured.|color (n)
+diagram|n|/ˈdaɪəɡræm/|a simple drawing that uses lines to show how something works or where something is|The {diagram} shows how the machine works.|draw a diagram; a diagram of something|sơ đồ, biểu đồ|2||
+direct~adv|adv|/dəˈrekt/|in a straight line, without stopping or going another way|The flight goes {direct} to Tokyo.|fly/go direct to …|thẳng, trực tiếp|2|direct (adj) = trực tiếp (A2).|direct (adj)
+empty~v|v|/ˈempti/|to remove everything that is inside something|Please {empty} the box before you throw it away.|empty a bin/box/glass|làm rỗng, đổ hết ra|2|empty (adj) = trống rỗng (A2).|empty (adj)
+except~conj|conjunction|/ɪkˈsept/|used with “that” before a statement that makes what you said before not completely true|The two parts are the same, {except} that one is longer.|except that …; except when …|ngoại trừ (việc)|2|except (preposition) = trừ (A2).|
+experiment~v|v|/ɪkˈsperɪment/|to do a scientific test to find out something, or to try new ideas|They {experimented} with new materials.|experiment on/with something|thí nghiệm, thử nghiệm|2|experiment (n) = cuộc thí nghiệm (A2).|experiment (n)
+indirect|adj|/ˌɪndəˈrekt/|not done or said in a direct, simple way; happening as a result of something else|He gave me an {indirect} answer.|an indirect way/effect/route|gián tiếp|2||direct (adj)
+level~adj|adj|/ˈlevl/|flat, with no part higher than another|Put the gauge on a {level} table.|a level surface; level ground|phẳng, ngang bằng|2|level (n) = mức, cấp độ (A2).|level (n)
+plus|preposition|/plʌs/|and also; added to|Two {plus} two is four.|A plus B|cộng, thêm vào|2||
+relate|v|/rɪˈleɪt/|to show or make a connection between two things|It is hard to {relate} the results to the process.|relate A to B|liên hệ, liên kết|2||related (adj)
+shake~n|n|/ʃeɪk/|a quick movement from side to side or up and down|He gave the bottle a {shake}.|a shake of the head/hand; give something a shake|cái lắc, sự rung|2|shake (v) = lắc (A2).|shake (v)
+till|conjunction, preposition|/tɪl/|until|The shop is open {till} 10 p.m.|till + time; till + clause|cho đến khi|2|till = until (thân mật hơn).|
+touch~n|n|/tʌtʃ/|the sense that you use to feel things with your skin; also the act of touching|The cloth is soft to the {touch}.|the sense of touch; by touch; a light touch|xúc giác, sự chạm|2|touch (v) = chạm (A2).|touch (v)
+whenever|conjunction|/wenˈevər/|at any time that; every time that|Call me {whenever} you need help.|whenever + clause|bất cứ khi nào, mỗi khi|2||
+`);
+EI.reading({
+  id: 'b1-p1-36', level: 'B1', pass: 1, n: 36,
+  title: 'The Dance of the Bees',
+  topic: 'nature', era: '1910s–1973', year: 1973, region: 'Austria / Germany',
+  predict: { q: 'Khi một con ong tìm thấy hoa có mật, nó báo cho các con ong khác bằng cách nào?', o: ['Nhảy một điệu nhảy trong tổ', 'Bay vòng quanh tổ', 'Phát ra âm thanh lớn'] },
+  targets: ['analyze', 'bee', 'colored', 'diagram', 'direct~adv', 'empty~v', 'except~conj', 'experiment~v', 'indirect', 'level~adj', 'plus', 'relate', 'shake~n', 'till', 'touch~n', 'whenever'],
+  text: [
+    [
+      ["Karl von Frisch was born in Vienna, Austria, on November 20, 1886.", "Karl von Frisch sinh ở Vienna, Áo, ngày 20 tháng 11 năm 1886."],
+      ["His uncle, Sigmund Exner, was an expert on how insects see, and young Karl became interested in animals early.", "Chú của ông, Sigmund Exner, là chuyên gia về cách côn trùng nhìn, và cậu bé Karl sớm say mê động vật."],
+      ["He first studied medicine, but he changed to biology and finished his doctorate in Munich, Germany, in 1910.", "Ông học y trước, nhưng chuyển sang sinh học và hoàn thành bằng tiến sĩ ở Munich, Đức, năm 1910."],
+      ["He loved to {experiment=experiment~v}, and he {experimented=experiment~v} with fish first: he played a whistle {whenever} he gave them food, and soon the fish came to the whistle even with no food, so he showed that fish can hear.", "Ông rất thích làm thí nghiệm, và ông thí nghiệm với cá trước: mỗi lần cho cá ăn, ông thổi còi, và chẳng bao lâu cá bơi đến khi nghe tiếng còi dù không có thức ăn, nhờ đó ông chứng minh cá có thể nghe."],
+      ["Then he turned to the honey {bee}.", "Rồi ông chuyển sang nghiên cứu ong mật."]
+    ],
+    [
+      ["At that time, many scientists believed that {bees=bee} could not see colors.", "Thời đó, nhiều nhà khoa học tin rằng ong không nhìn thấy màu sắc."],
+      ["To test this, he {experimented=experiment~v} with paper cards.", "Để kiểm tra điều này, ông làm thí nghiệm với những tấm thẻ giấy."],
+      ["Von Frisch put a {colored} card, for example a blue one, among many gray cards, with a small dish of sugar water on it.", "Von Frisch đặt một tấm thẻ có màu, ví dụ màu xanh lam, giữa nhiều tấm thẻ màu xám, trên đó có một đĩa nhỏ nước đường."],
+      ["The {bees=bee} learned to fly to the {colored} card.", "Đàn ong học được cách bay đến tấm thẻ có màu."],
+      ["Later he {emptied=empty~v} the dish, but the {bees=bee} still came to the blue card and not to the gray ones.", "Sau đó ông đổ hết đĩa nước, nhưng đàn ong vẫn bay đến thẻ xanh chứ không đến thẻ xám."],
+      ["Even when he {emptied=empty~v} every dish and moved the cards around, they chose the blue card, so they could really see its color.", "Ngay cả khi ông đổ hết mọi đĩa và đổi chỗ các tấm thẻ, chúng vẫn chọn thẻ xanh, nên chúng thật sự nhìn thấy màu của nó."]
+    ],
+    [
+      ["Von Frisch noticed something else.", "Von Frisch còn nhận ra một điều khác."],
+      ["{Whenever} one {bee} found the sugar water, many more {bees=bee} from the same hive soon arrived.", "Mỗi khi một con ong tìm ra nước đường, chẳng bao lâu nhiều con ong khác cùng tổ cũng bay đến."],
+      ["How did they know?", "Làm sao chúng biết?"],
+      ["To find out, he built a hive with a glass wall, so that he could watch the {bees=bee} on the honeycomb.", "Để tìm hiểu, ông làm một cái tổ có vách kính, để có thể quan sát ong trên tầng sáp."],
+      ["He saw that a {bee} that came back with food danced on the comb, and other {bees=bee} followed her.", "Ông thấy một con ong mang thức ăn về sẽ nhảy múa trên tầng sáp, và các con ong khác đi theo nó."],
+      ["Inside the dark hive, the other {bees=bee} could not see the dance well, so they followed it by {touch=touch~n}.", "Trong tổ tối, các con ong khác không nhìn rõ điệu nhảy, nên chúng theo dõi nó bằng xúc giác."],
+      ["{Bees=bee} have a very good sense of {touch=touch~n}, and they also smelled the flowers on the dancer’s body.", "Ong có xúc giác rất tốt, và chúng còn ngửi thấy mùi hoa trên mình con ong đang nhảy."]
+    ],
+    [
+      ["Von Frisch spent many years trying to {analyze} the dances.", "Von Frisch dành nhiều năm cố gắng phân tích các điệu nhảy."],
+      ["When the food was close, the {bee} danced in small circles, first to the right and then to the left.", "Khi thức ăn ở gần, con ong nhảy theo những vòng tròn nhỏ, lúc sang phải, lúc sang trái."],
+      ["When the food was far away, she danced a different dance: she ran in a straight line and moved her body from side to side in quick {shakes=shake~n}, then circled back and did it again.", "Khi thức ăn ở xa, nó nhảy một điệu khác: chạy theo một đường thẳng và lắc thân từ bên này sang bên kia thật nhanh, rồi vòng lại và làm lại lần nữa."],
+      ["Each {shake=shake~n} was small, but together they made a clear message.", "Mỗi cái lắc đều nhỏ, nhưng gộp lại thành một thông điệp rõ ràng."],
+      ["When von Frisch {analyzed=analyze} his notes, he found that the straight run gave the direction of the food.", "Khi phân tích ghi chép của mình, von Frisch thấy rằng đường chạy thẳng chỉ hướng của thức ăn."]
+    ],
+    [
+      ["But the message is {indirect}.", "Nhưng thông điệp này là gián tiếp."],
+      ["The {bees=bee} dance on a wall of comb that stands up, so they cannot point {direct=direct~adv} at the food.", "Ong nhảy trên vách sáp dựng đứng, nên chúng không thể chỉ thẳng vào chỗ thức ăn."],
+      ["Instead, they {relate=relate} the direction of the food to the sun: if the food is 40 degrees to the left of the sun, the straight run goes 40 degrees to the left of “up.”", "Thay vào đó, chúng liên hệ hướng của thức ăn với mặt trời: nếu thức ăn lệch 40 độ về bên trái mặt trời, đường chạy thẳng sẽ lệch 40 độ về bên trái hướng “lên trên”."],
+      ["A simple {diagram} in a school book shows this well: an arrow for the sun, an arrow for the food and the angle between them.", "Một sơ đồ đơn giản trong sách giáo khoa cho thấy rõ điều này: một mũi tên chỉ mặt trời, một mũi tên chỉ thức ăn và góc giữa chúng."],
+      ["In the same {diagram}, the length of the straight run shows how far to fly.", "Trong cùng sơ đồ ấy, chiều dài đường chạy thẳng cho biết phải bay xa bao nhiêu."],
+      ["Von Frisch measured that for food at about 200 meters the run lasted about half a second, and for food at 4,500 meters it lasted about four seconds.", "Von Frisch đo được rằng với thức ăn cách khoảng 200 mét, đường chạy kéo dài khoảng nửa giây, còn với thức ăn cách 4.500 mét thì khoảng bốn giây."],
+      ["Direction {plus} distance tells a {bee} exactly where to go.", "Hướng cộng khoảng cách cho con ong biết chính xác phải đi đâu."],
+      ["The smell {plus} the dance tells it what flower to look for.", "Mùi hương cộng điệu nhảy cho nó biết phải tìm loài hoa nào."],
+      ["After following the dance, the new {bees=bee} could fly almost {direct=direct~adv} to the food.", "Sau khi theo dõi điệu nhảy, những con ong mới có thể bay gần như thẳng tới chỗ thức ăn."]
+    ],
+    [
+      ["The sun moves across the sky, so the dance changes through the day too.", "Mặt trời di chuyển trên bầu trời, nên điệu nhảy cũng thay đổi trong ngày."],
+      ["A dance in the afternoon looks like a dance in the morning, {except=except~conj} that the angle is different.", "Điệu nhảy buổi chiều trông giống điệu nhảy buổi sáng, ngoại trừ việc góc nhảy khác đi."],
+      ["Von Frisch also found that {bees=bee} can see light in a special way, so they can find the sun even when clouds cover part of the sky.", "Von Frisch còn phát hiện ong có thể nhìn ánh sáng theo một cách đặc biệt, nên chúng tìm được mặt trời ngay cả khi mây che một phần bầu trời."],
+      ["Different types of honey {bees=bee} dance in almost the same way, {except=except~conj} that each type has its own small differences, like dialects of a language.", "Các giống ong mật khác nhau nhảy gần như giống nhau, ngoại trừ việc mỗi giống có những khác biệt nhỏ riêng, giống như phương ngữ của một ngôn ngữ."],
+      ["Some scientists did not believe him; one group said that {bees=bee} found food only by smell.", "Một số nhà khoa học không tin ông; một nhóm cho rằng ong tìm thức ăn chỉ nhờ mùi."],
+      ["He answered with another test: he turned the comb so that it was {level=level~adj}, like a table.", "Ông đáp lại bằng một thí nghiệm khác: ông xoay tầng sáp để nó nằm ngang, như mặt bàn."],
+      ["On the {level=level~adj} comb, the dancers could see the sky, and their straight runs pointed straight at the food.", "Trên tầng sáp nằm ngang, những con ong nhảy múa có thể nhìn thấy bầu trời, và đường chạy thẳng của chúng chỉ thẳng về phía thức ăn."]
+    ],
+    [
+      ["Von Frisch taught at the University of Munich {till} the Second World War, when his institute was destroyed.", "Von Frisch giảng dạy ở Đại học Munich cho đến Chiến tranh thế giới thứ hai, khi viện nghiên cứu của ông bị phá hủy."],
+      ["It opened again in 1950, and he led it {till} he stopped teaching in 1958.", "Viện mở cửa lại năm 1950, và ông lãnh đạo nó cho đến khi thôi giảng dạy năm 1958."],
+      ["In 1973, he shared the Nobel Prize with two other scientists who studied animal behavior, Konrad Lorenz and Nikolaas Tinbergen.", "Năm 1973, ông cùng nhận giải Nobel với hai nhà khoa học khác nghiên cứu hành vi động vật, Konrad Lorenz và Nikolaas Tinbergen."],
+      ["In 1955, his book about the dances, The Dancing Bees, came out in English.", "Năm 1955, cuốn sách của ông về các điệu nhảy, The Dancing Bees (Những con ong nhảy múa), ra mắt bằng tiếng Anh."],
+      ["He died in Munich in 1982, at the age of 95.", "Ông mất ở Munich năm 1982, thọ 95 tuổi."],
+      ["His work had an {indirect} effect too: it showed many people that small animals can share information in a clever way.", "Công trình của ông còn có một tác động gián tiếp: nó cho nhiều người thấy rằng những con vật nhỏ bé có thể chia sẻ thông tin một cách thông minh."],
+      ["Today, scientists still {relate=relate} his discoveries to new questions, for example how {bees=bee} find food in cities.", "Ngày nay, các nhà khoa học vẫn liên hệ những phát hiện của ông với các câu hỏi mới, chẳng hạn ong tìm thức ăn ở thành phố như thế nào."]
+    ]
+  ],
+  gloss: { von: '(chữ trong tên người Đức, Áo)', honey: 'mật ong', arrow: 'mũi tên', insects: 'côn trùng', doctorate: 'bằng tiến sĩ', whistle: 'cái còi', honeycomb: 'tầng tổ ong (bằng sáp)', comb: 'tầng tổ ong (bằng sáp)', hive: 'tổ ong', dancer: 'con ong đang nhảy', dancers: 'những con ong đang nhảy', angle: 'góc', degrees: 'độ', dialects: 'phương ngữ', institute: 'viện nghiên cứu', behavior: 'hành vi', discoveries: 'phát hiện' },
+  grammar: [
+    ['relative-non-defining', 'His uncle, Sigmund Exner, was an expert on how insects see'],
+    ['gerund-infinitive', 'Von Frisch spent many years trying to analyze the dances'],
+    ['passive-tenses', 'his institute was destroyed'],
+    ['reported-speech', 'one group said that bees found food only by smell']
+  ],
+  practiceNote: 'Bài về Karl von Frisch và “ngôn ngữ” của ong: thí nghiệm thẻ màu cho thấy ong nhìn được màu; trong tổ có vách kính, ông thấy ong tìm được mật nhảy múa: vòng tròn khi thức ăn ở gần, chạy thẳng kèm lắc thân khi thức ăn ở xa; góc của đường chạy so với hướng “lên” bằng góc của thức ăn so với mặt trời, độ dài đường chạy cho biết khoảng cách; ông nhận giải Nobel năm 1973. Từ vựng: khoa học (analyze, experiment, diagram, relate, colored, level, indirect, direct), cơ thể và chuyển động (shake, touch, bee, empty), từ chức năng (whenever, till, plus, except that). Ngữ pháp: mệnh đề quan hệ có dấu phẩy, spend + time + V-ing, bị động, câu tường thuật.',
+  practice: [
+    { t: 'mc', k: 'c:main', q: 'What is the main idea of the story?', o: ['Karl von Frisch showed that bees can see colors and that they tell other bees where food is by dancing.', 'Karl von Frisch taught bees to make more honey.', 'Bees find food only by smell.'], a: 0, why: 'Ong nhìn được màu và báo vị trí thức ăn bằng điệu nhảy.', ref: 'the straight run gave the direction of the food' },
+    { t: 'mc', k: 'c:fish', q: 'How did von Frisch show that fish can hear?', o: ['The fish came to a whistle even when there was no food.', 'He put the fish in colored water.', 'He played music to them.'], a: 0, why: 'Cá bơi đến khi nghe còi dù không có thức ăn.', ref: 'the fish came to the whistle even with no food' },
+    { t: 'mc', k: 'c:color', q: 'Why did the bees still come to the blue card when the dish was empty?', o: ['They had learned its color.', 'They could smell the sugar.', 'The card was warm.'], a: 0, why: 'Chúng đã nhớ màu của thẻ.', ref: 'they could really see its color' },
+    { t: 'mc', k: 'c:dark', q: 'How did bees follow the dance inside the dark hive?', o: ['By touch, and by smelling the flowers on the dancer', 'By looking at the sun', 'By listening to music'], a: 0, why: 'Bằng xúc giác và mùi hoa.', ref: 'they followed it by touch' },
+    { t: 'mc', k: 'c:distance', q: 'What shows how far the food is?', o: ['The length of the straight run', 'The color of the bee', 'The number of circles'], a: 0, why: 'Độ dài đường chạy thẳng.', ref: 'the length of the straight run shows how far to fly' },
+    { t: 'mc', k: 'c:infer', q: 'Why does the angle of the dance change during the day?', o: ['Because the sun moves across the sky', 'Because the bees get tired', 'Because the flowers move'], a: 0, why: 'Mặt trời di chuyển.', ref: 'The sun moves across the sky, so the dance changes through the day too' },
+    { t: 'mc', k: 'c:tf', q: 'True or false? “All scientists believed von Frisch at once.”', o: ['True', 'False'], a: 1, why: 'Sai: một số nhà khoa học không tin ông.', ref: 'Some scientists did not believe him' },
+    { t: 'order', k: 'c:sequence', a: 'Then he turned to the honey bee.', why: 'turn to = chuyển sang.', ref: 'Then he turned to the honey bee' },
+    { t: 'dict', k: 'c:listen', a: 'But the message is indirect.', why: 'indirect /ˌɪndəˈrekt/.' },
+    { t: 'mc', k: 'w:colored', q: 'He put a ______ card among many gray cards.', o: ['colored', 'level', 'indirect'], a: 0, why: 'colored = có màu.', ref: 'Von Frisch put a colored card' },
+    { t: 'mc', k: 'w:empty~v', q: 'Later he ______ the dish, but the bees still came to the blue card.', o: ['emptied', 'related', 'analyzed'], a: 0, why: 'empty (v) = đổ hết ra.', ref: 'Later he emptied the dish' },
+    { t: 'mc', k: 'w:whenever', q: '______ one bee found the sugar water, many more bees soon arrived.', o: ['Whenever', 'Till', 'Plus'], a: 0, why: 'whenever = mỗi khi.', ref: 'Whenever one bee found the sugar water' },
+    { t: 'gap', k: 'w:analyze', q: 'Von Frisch spent many years trying to ______ the dances.', a: ['analyze'], why: 'analyze = phân tích.', ref: 'trying to analyze the dances' },
+    { t: 'match', k: 'w:set-bee', q: 'Match the words with their meanings.', pairs: [['diagram', 'a simple drawing that shows how something works'], ['level', 'flat, with no part higher than another'], ['shake', 'a quick movement from side to side'], ['touch', 'the sense you use to feel things with your skin']], why: 'diagram = sơ đồ; level = phẳng ngang; shake = cái lắc; touch = xúc giác.', ref: 'On the level comb, the dancers could see the sky' },
+    { t: 'mc', k: 'w:relate', q: 'Bees ______ the direction of the food to the sun.', o: ['relate', 'empty', 'shake'], a: 0, why: 'relate A to B = liên hệ A với B.', ref: 'they relate the direction of the food to the sun' },
+    { t: 'mc', k: 'w:except~conj', q: 'A dance in the afternoon looks like a dance in the morning, ______ that the angle is different.', o: ['except', 'plus', 'till'], a: 0, why: 'except that = ngoại trừ việc.', ref: 'except that the angle is different' },
+    { t: 'mc', k: 'w:direct~adv', q: 'After following the dance, the new bees could fly almost ______ to the food.', o: ['direct', 'indirect', 'level'], a: 0, why: 'direct (adv) = thẳng.', ref: 'the new bees could fly almost direct to the food' },
+    { t: 'gap', k: 'w:till', q: 'He taught at the University of Munich ______ the Second World War.', a: ['till', 'until'], why: 'till = until.', ref: 'Von Frisch taught at the University of Munich till the Second World War' },
+    { t: 'mc', k: 'g:relative-non-defining', q: 'His uncle, Sigmund Exner, ______ an expert on how insects see.', o: [['was', 'Đúng: “Sigmund Exner” chỉ là phần chen giữa; chủ ngữ là His uncle.'], ['who was', 'Sai: câu sẽ thiếu động từ chính.'], ['which was', 'Sai: which chỉ vật.']], a: 0, why: 'Cụm chen giữa hai dấu phẩy không thay đổi động từ chính.', ref: 'His uncle, Sigmund Exner, was an expert' },
+    { t: 'mc', k: 'g:gerund-infinitive', q: 'Von Frisch spent many years ______ to analyze the dances.', o: [['trying', 'Đúng: spend + thời gian + V-ing.'], ['to try', 'Sai: spend không đi với to V.'], ['try', 'Sai dạng.']], a: 0, why: 'spend time + V-ing.', ref: 'Von Frisch spent many years trying' },
+    { t: 'error', k: 'g:passive-tenses', q: 'During the war, his institute was destroy.', wrong: 'destroy', fix: 'destroyed', why: 'Bị động: was + V3.', ref: 'his institute was destroyed' },
+    { t: 'mc', k: 'g:reported-speech', q: 'One group said that bees ______ food only by smell.', o: [['found', 'Đúng: lùi thì sau said.'], ['find', 'Sai: cần lùi thì về quá khứ.'], ['will find', 'Sai thì.']], a: 0, why: 'said that + quá khứ.', ref: 'one group said that bees found food only by smell' }
+  ],
+  extra: [],
+  write: { vi: 'Viết 3–5 câu tiếng Anh về một lần bạn phân tích dữ liệu đo và tìm ra mối liên hệ. Cố dùng các từ dưới đây.', use: ['analyze', 'relate', 'diagram', 'whenever', 'except'], model: 'Last week I analyzed the flatness data of a cover. I drew a simple diagram of the mold and the measuring points. Whenever the mold temperature went up, the flatness got worse. I could relate almost all the results to temperature, except that cavity 4 was always a little different.' },
+  fact: { card: 'Karl von Frisch (1886–1982), nhà động vật học người Áo, chứng minh ong nhìn được màu bằng thí nghiệm thẻ màu và nước đường. Với tổ ong có vách kính, ông phát hiện ong tìm được thức ăn sẽ nhảy múa: vòng tròn khi thức ăn ở gần; chạy thẳng kèm lắc thân khi thức ăn ở xa. Góc của đường chạy so với hướng thẳng đứng bằng góc của thức ăn so với mặt trời; đường chạy kéo dài từ khoảng 0,5 giây (200 m) đến khoảng 4 giây (4.500 m). Năm 1973 ông cùng Konrad Lorenz và Nikolaas Tinbergen nhận giải Nobel.',
+    bonus: 'In his Nobel lecture, von Frisch wrote: “I also harbored doubts in the beginning.”', bonusSrc: 'Karl von Frisch — Nobel lecture “Decoding the language of the bee” (1973)' },
+  sources: [
+    { t: 'Karl von Frisch — Nobel lecture “Decoding the language of the bee” (1973)', u: 'https://www.nobelprize.org/uploads/2018/06/frisch-lecture.pdf' },
+    { t: 'NobelPrize.org — Karl von Frisch: Facts', u: 'https://www.nobelprize.org/prizes/medicine/1973/frisch/facts/' },
+    { t: 'New World Encyclopedia — Karl von Frisch', u: 'https://www.newworldencyclopedia.org/entry/Karl_von_Frisch' }
+  ],
+  note: 'Bài giảng Nobel: bắt đầu nghiên cứu “some 60 years ago”; thí nghiệm màu: một tờ giấy màu đặt giữa các tờ giấy xám, trên có đĩa siro đường, ong được huấn luyện nhận ra màu; ong mang thức ăn về nhảy để gọi ong khác: chạy vòng tròn nhỏ lần lượt sang phải và sang trái (điệu nhảy vòng); điệu “tail-wagging” (lắc đuôi): đường chạy thẳng chỉ hướng, góc so với phương thẳng đứng bằng góc so với mặt trời (ví dụ 40º bên trái); góc thay đổi trong ngày theo mặt trời; khoảng cách 200–4.500 m tương ứng đường chạy khoảng 0,5–4 giây; ong theo dõi bị hút bởi mùi của nguồn thức ăn trên mình con ong nhảy; ong nhìn được ánh sáng phân cực, mây làm rối điệu nhảy; ông có nghi ngờ lúc đầu và kiểm tra lại với tổ ong bình thường; nhóm của A. M. Wenner cho rằng ong chỉ dùng khứu giác, ông bác bỏ bằng thí nghiệm tầng sáp nằm ngang; cách chuyển từ điệu vòng sang điệu lắc khác nhau theo từng giống ong. NobelPrize.org: sinh ngày 20/11/1886 ở Vienna, mất ngày 12/6/1982 ở Munich; giải Nobel Sinh lý học hoặc Y học 1973, chia ba. New World Encyclopedia: chú là Sigmund Exner, chuyên gia về thị giác côn trùng; học y năm 1905, chuyển sang động vật học, tiến sĩ ở Munich năm 1910; thí nghiệm cho cá ăn kèm tiếng còi, cá phản ứng với tiếng còi dù không có thức ăn; huấn luyện ong đến vật màu xanh có nước đường, bỏ nước đường đi ong vẫn đến; dùng tổ có tầng sáp bằng kính; dạy ở Munich từ năm 1925 đến khi Thế chiến II bắt đầu; viện bị phá hủy trong chiến tranh, mở lại năm 1950 do ông làm giám đốc, thôi dạy năm 1958; sách “Dancing Bees” (bản tiếng Anh 1955); cùng Konrad Lorenz và Nikolaas Tinbergen nhận giải Nobel năm 1973; mất ngày 12/6/1982 ở Munich. Khác biệt: thời gian lắc theo khoảng cách — bài giảng Nobel cho 0,5–4 giây cho 200–4.500 m, New World Encyclopedia ghi khoảng 75 mili giây mỗi 100 m — bài dùng số liệu của bài giảng Nobel. Kiến thức phổ thông: tổ ong tối; ong theo dõi điệu nhảy bằng xúc giác; tầng sáp trong tổ dựng đứng; sơ đồ điệu nhảy trong sách giáo khoa; giữa những năm đầu thế kỷ 20 nhiều người tin ong mù màu (bài giảng ám chỉ quan điểm của Karl von Hess). Bài diễn đạt “ánh sáng phân cực” là “see light in a special way”. Các câu “mỗi cái lắc nhỏ nhưng gộp lại thành thông điệp rõ ràng”, “hướng cộng khoảng cách cho biết chính xác nơi cần đến”, “công trình có tác động gián tiếp”, “các nhà khoa học vẫn liên hệ phát hiện của ông với câu hỏi mới” là nhận xét của bài.',
+  verified: '2026-11-15'
+});

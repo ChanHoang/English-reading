@@ -1,0 +1,145 @@
+EI.words('B1', `
+# ---- b1-p1-23 The Biggest Diamond Went by Post
+arrival|n|/əˈraɪvl/|the act of coming to a place|We are waiting for the {arrival} of the new machine.|on arrival; the arrival of something; arrival time|sự đến, sự tới nơi|2||arrive (v)
+cut|n|/kʌt/|an opening or a mark in a surface made with something sharp|There is a small {cut} on the edge of the part.|make a cut; a deep cut|vết cắt, đường cắt|1|cut cũng là động từ: cut – cut – cut.|cut (v)
+departure|n|/dɪˈpɑːrtʃər/|the act of leaving a place|The {departure} of the flight was late.|departure time; before departure|sự khởi hành, sự rời đi|2||depart (v)
+destination|n|/ˌdestɪˈneɪʃn/|the place where somebody or something is going|The parcel reached its {destination} two days later.|a final destination; a popular destination|nơi đến, điểm đến|2||
+diamond|n|/ˈdaɪəmənd/|a very hard, clear stone that is very valuable and is used in jewelry|Her ring has a small {diamond}.|a diamond ring; a rough diamond|kim cương|2||
+highlight|n|/ˈhaɪlaɪt/|the best or most interesting part of something|The {highlight} of the trip was the visit to Ha Long Bay.|the highlight of something|điểm nổi bật, phần hay nhất|2|highlight cũng là động từ: làm nổi bật.|highlight (v)
+location|n|/loʊˈkeɪʃn/|a place where something is or happens|The new factory has a good {location} near the port.|a good location; the exact location|vị trí, địa điểm|2||located (adj)
+operation|n|/ˌɑːpəˈreɪʃn/|a planned piece of work that needs a lot of skill or people; also a medical treatment in which a doctor cuts the body|Moving the big mold was a difficult {operation}.|a rescue operation; a heart operation|chiến dịch, công việc lớn; ca phẫu thuật|2||operate (v)
+percentage|n|/pərˈsentɪdʒ/|an amount shown as a part of 100|What {percentage} of the parts failed?|a high/small percentage; the percentage of something|tỷ lệ phần trăm|2||percent (n)
+powerful|adj|/ˈpaʊərfl/|having a lot of power or influence; also very strong|He was the most {powerful} man in the country.|a powerful country; a powerful machine|quyền lực, mạnh mẽ|2||power (n)
+prince|n|/prɪns/|the son of a king or a queen|The {prince} became king when his mother died.|the Prince of Wales; a young prince|hoàng tử|1||princess (n)
+private|adj|/ˈpraɪvət/|belonging to one person or group, not for everybody|This is a {private} road.|private property; a private company; in private|riêng, tư nhân|2||privately (adv)
+represent|v|/ˌreprɪˈzent/|to be a sign of something; also to speak or act for somebody|The red color {represents} danger.|represent something; represent a company|tượng trưng cho; đại diện|2||representative (n)
+resource|n|/ˈriːsɔːrs/|something useful that a country, a company or a person has, such as land, oil or money|Vietnam has many natural {resources}.|natural resources; human resources|tài nguyên, nguồn lực|2|human resources (HR) = nhân sự.|
+security|n|/sɪˈkjʊrəti/|the things that are done to keep a person, a building or a country safe|{Security} at the airport is very strict.|airport security; a security guard; for security reasons|an ninh, sự bảo vệ|2||secure (adj)
+shine|v|/ʃaɪn/|to give out or reflect bright light|The sun was {shining}.|shine brightly; the sun shines|chiếu sáng, lấp lánh|1|shine – shone – shone.|shiny (adj)
+still|adj|/stɪl/|not moving|Please keep {still} while I take the photo.|keep/stay still; still water|đứng yên, bất động|2|Khác trạng từ still (vẫn).|
+vote|v|/voʊt/|to show which person or idea you choose, for example in an election|The workers {voted} for a shorter lunch break.|vote for/against something; vote on something|bỏ phiếu|2|vote cũng là danh từ: lá phiếu.|vote (n)
+`);
+EI.reading({
+  id: 'b1-p1-23', level: 'B1', pass: 1, n: 23,
+  title: 'The Biggest Diamond Went by Post',
+  topic: 'history', era: '1905–1908', year: 1905, region: 'South Africa',
+  predict: { q: 'Năm 1905, viên kim cương thô lớn nhất từng được tìm thấy phải được đưa từ Nam Phi sang Anh. Người ta gửi viên thật bằng cách nào?', o: ['Gửi bưu điện trong một hộp bình thường', 'Trên tàu chiến có lính canh', 'Do nhà vua tự mang về'] },
+  targets: ['arrival', 'cut', 'departure', 'destination', 'diamond', 'highlight', 'location', 'operation', 'percentage', 'powerful', 'prince', 'private', 'represent', 'resource', 'security', 'shine', 'still', 'vote'],
+  text: [
+    [
+      ["South Africa is rich in natural {resources=resource}, especially gold and {diamonds=diamond}.", "Nam Phi giàu tài nguyên thiên nhiên, đặc biệt là vàng và kim cương."],
+      ["One of its most important {diamond} mines was the Premier Mine, about 40 kilometers east of Pretoria.", "Một trong những mỏ kim cương quan trọng nhất của nước này là mỏ Premier, cách Pretoria khoảng 40 ki-lô-mét về phía đông."],
+      ["It belonged to Thomas Cullinan, a man who had built houses before he became a mine owner.", "Nó thuộc về Thomas Cullinan, người từng xây nhà trước khi trở thành chủ mỏ."],
+      ["For him, the land itself was his most valuable {resource}.", "Với ông, chính mảnh đất là tài nguyên quý giá nhất."]
+    ],
+    [
+      ["In January 1905, the mine manager, Frederick Wells, was checking the mine about five or six meters under the ground.", "Tháng 1 năm 1905, quản lý mỏ, Frederick Wells, đang kiểm tra mỏ ở độ sâu khoảng năm, sáu mét dưới mặt đất."],
+      ["Suddenly, he saw something {shine} in the wall above him.", "Bỗng ông thấy một vật lấp lánh trên vách mỏ phía trên đầu."],
+      ["He climbed up and took it out.", "Ông trèo lên và lấy nó ra."],
+      ["It was a {diamond}, and it was very big: it weighed 3,106 carats, or about 621 grams, a little more than half a kilogram.", "Đó là một viên kim cương, và nó khổng lồ: nặng 3.106 carat, tức khoảng 621 gam, hơn nửa ki-lô-gam một chút."],
+      ["Some stories say that a worker saw it first and told Wells, but nobody can be sure.", "Một số câu chuyện kể rằng một công nhân thấy nó trước và báo cho Wells, nhưng không ai chắc chắn được."],
+      ["It was the largest rough {diamond} of such high quality that anyone had ever found, more than three times bigger than the record before it.", "Đó là viên kim cương thô đạt chất lượng đá quý lớn nhất từng được tìm thấy, lớn hơn kỷ lục trước đó hơn ba lần."],
+      ["It was named the Cullinan, after the mine’s owner.", "Nó được đặt tên là Cullinan, theo tên chủ mỏ."]
+    ],
+    [
+      ["Now there was a problem: how could such a valuable stone travel safely to London, the center of the {diamond} trade?", "Giờ có một vấn đề: làm sao một viên đá quý như vậy có thể đến London, trung tâm buôn bán kim cương, một cách an toàn?"],
+      ["Everybody knew about it, so {security} was very important.", "Ai cũng biết về nó, nên an ninh là điều rất quan trọng."],
+      ["The owners planned a smart {operation}.", "Các chủ sở hữu lên kế hoạch cho một chiến dịch khéo léo."],
+      ["A copy of the {diamond} was put on a ship, with police officers on board to guard it.", "Một bản sao của viên kim cương được đặt lên tàu hơi nước, với cảnh sát trên tàu để canh giữ."],
+      ["Everyone watched the ship’s {departure}, and newspapers wrote about the dangerous trip.", "Mọi người theo dõi tàu khởi hành, và báo chí viết về chuyến đi nguy hiểm."],
+      ["In contrast, the {departure} of the real stone was quiet, and nobody watched it.", "Ngược lại, viên đá thật rời đi lặng lẽ, và chẳng ai để ý."],
+      ["Meanwhile, the real {diamond} was sent to England by ordinary post, in a simple box.", "Trong khi đó, viên kim cương thật được gửi sang Anh bằng đường bưu điện thông thường, trong một chiếc hộp bình thường."],
+      ["The trick worked: the box reached its {destination} safely, and nobody tried to steal it.", "Mẹo này hiệu quả: chiếc hộp đến nơi an toàn, và không ai tìm cách đánh cắp nó."],
+      ["The ship with the copy also arrived at its {destination}, and its {arrival} was watched just as carefully.", "Con tàu chở bản sao cũng tới nơi, và việc nó cập bến cũng được theo dõi kỹ không kém."]
+    ],
+    [
+      ["For two years, nobody bought the stone.", "Suốt hai năm, không ai mua viên đá."],
+      ["Then, in 1907, the government of the Transvaal, a British colony in South Africa, decided to buy it and give it to King Edward VII.", "Rồi năm 1907, chính quyền Transvaal, một thuộc địa của Anh ở Nam Phi, quyết định mua nó và tặng cho Vua Edward VII."],
+      ["Its leaders asked the members of their parliament to {vote} on the idea, and most of them {voted=vote} for it.", "Các nhà lãnh đạo đề nghị các thành viên quốc hội bỏ phiếu cho ý tưởng này, và phần lớn đã bỏ phiếu tán thành."],
+      ["It was strange for a parliament to {vote} on a birthday gift.", "Một quốc hội bỏ phiếu về một món quà sinh nhật là chuyện lạ."],
+      ["Only a few years earlier, Britain and the Transvaal had fought a war, so the gift {represented=represent} a new friendship.", "Chỉ vài năm trước đó, Anh và Transvaal đã đánh nhau trong một cuộc chiến, nên món quà tượng trưng cho một tình hữu nghị mới."],
+      ["At that time, Britain was the most {powerful} country in the world.", "Thời đó, Anh là quốc gia quyền lực nhất thế giới."],
+      ["Edward, who had been the {Prince=prince} of Wales for almost 60 years before he became king, was now king.", "Edward, người từng là Hoàng tử xứ Wales gần 60 năm trước khi lên ngôi, giờ đã là vua."],
+      ["As a {prince}, he had waited a very long time for the crown.", "Khi còn là hoàng tử, ông đã chờ ngôi vua rất lâu."],
+      ["He received the {diamond} as a birthday gift in November 1907, when he turned 66.", "Ông nhận viên kim cương làm quà sinh nhật vào tháng 11 năm 1907, khi tròn 66 tuổi."]
+    ],
+    [
+      ["The rough stone had to be split and polished.", "Viên đá thô phải được tách và đánh bóng."],
+      ["The job went to the Asscher company in Amsterdam, one of the best {diamond} companies in the world.", "Công việc được giao cho công ty Asscher ở Amsterdam, một trong những xưởng cắt kim cương giỏi nhất thế giới."],
+      ["Again, {security} was important, and after its {arrival} in Amsterdam in January 1908, the {diamond} was studied for weeks.", "Một lần nữa, an ninh rất quan trọng, và sau khi tới Amsterdam vào tháng 1 năm 1908, viên kim cương được nghiên cứu suốt nhiều tuần."],
+      ["The stone had a weak point inside it, and Joseph Asscher planned to split it there.", "Viên đá có một điểm yếu bên trong, và Joseph Asscher định tách nó ra ở chỗ đó."],
+      ["First he made a small {cut} in the surface, and then the stone was held {still} while he placed a steel blade in the {cut}.", "Đầu tiên ông tạo một vết cắt nhỏ trên bề mặt, rồi viên đá được giữ yên trong khi ông đặt một lưỡi thép vào vết cắt."],
+      ["One wrong {cut} could destroy a stone worth a lot of money.", "Chỉ một vết cắt sai có thể phá hủy một viên đá đáng giá rất nhiều tiền."],
+      ["Everybody in the room stood {still}, and he hit the blade.", "Mọi người trong phòng đứng yên, và ông gõ vào lưỡi thép."],
+      ["The blade broke, but the {diamond} did not.", "Lưỡi thép gãy, nhưng viên kim cương thì không."],
+      ["With a second, larger blade, the stone split exactly where he had planned.", "Với lưỡi thép thứ hai, lớn hơn, viên đá tách ra đúng chỗ ông đã định."],
+      ["A popular story says that Asscher fainted after this, but nobody has proved it.", "Một câu chuyện phổ biến kể rằng Asscher ngất xỉu sau đó, nhưng chưa ai xác nhận được."]
+    ],
+    [
+      ["The whole {operation} went on until September 1908.", "Công việc cắt kéo dài đến tháng 9 năm 1908."],
+      ["The result was nine large stones and about 96 small ones.", "Kết quả là chín viên lớn và khoảng 96 viên nhỏ."],
+      ["Together they weighed about 1,056 carats, so a large {percentage} of the original stone, about two-thirds, was lost as dust and small pieces.", "Tổng cộng chúng nặng khoảng 1.056 carat, nên một tỷ lệ lớn của viên đá ban đầu, khoảng hai phần ba, đã mất đi dưới dạng bụi và mảnh vụn."],
+      ["That {percentage} may sound terrible, but it is normal when a rough {diamond} is turned into perfect stones that {shine}.", "Tỷ lệ đó nghe có vẻ khủng khiếp, nhưng là bình thường khi một viên kim cương thô được biến thành những viên đá hoàn hảo lấp lánh rực rỡ."],
+      ["The largest stone, Cullinan I, weighs 530.2 carats and is called the Great Star of Africa.", "Viên lớn nhất, Cullinan I, nặng 530,2 carat và được gọi là Ngôi sao Vĩ đại của châu Phi."],
+      ["It was placed in the Royal Sceptre, and the second largest, Cullinan II, was placed in the Imperial State Crown.", "Nó được gắn vào Quyền trượng Hoàng gia, và viên lớn thứ hai, Cullinan II, được gắn vào Vương miện Hoàng gia."]
+    ],
+    [
+      ["Today, these two stones are on show with the other crown jewels at the Tower of London.", "Ngày nay, hai viên này được trưng bày cùng các báu vật hoàng gia khác ở Tháp London."],
+      ["For many visitors, they are the {highlight} of the visit.", "Với nhiều du khách, chúng là điểm nổi bật nhất của chuyến tham quan."],
+      ["For them, the stones {represent} the long history of the British kings and queens.", "Với họ, những viên đá tượng trưng cho lịch sử lâu dài của các vua và nữ hoàng Anh."],
+      ["Asscher kept the small stones as payment, and the other large stones became the {private} property of the British royal family.", "Asscher giữ những viên nhỏ làm tiền công, và các viên lớn còn lại trở thành tài sản riêng của hoàng gia Anh."],
+      ["They are kept in a {private} collection and are only rarely shown to the public.", "Chúng được giữ trong một bộ sưu tập riêng và rất hiếm khi được trưng bày cho công chúng."],
+      ["The mine is working today, and in 2003, 100 years after it opened, its name was changed to the Cullinan Diamond Mine.", "Mỏ vẫn đang hoạt động, và năm 2003, tròn 100 năm sau khi mở, nó được đổi tên thành mỏ kim cương Cullinan."],
+      ["The {location} has not changed, and visitors can now go down into the mine.", "Vị trí của mỏ không thay đổi, và du khách giờ có thể xuống tham quan bên trong."]
+    ],
+    [
+      ["In the end, the most famous part of the story is not the size of the stone but the trick.", "Rốt cuộc, phần nổi tiếng nhất của câu chuyện không phải kích thước viên đá mà là mẹo gửi hàng."],
+      ["The safest {location} for the world’s biggest {diamond} was not a ship full of guards, but an ordinary box among thousands of letters.", "Nơi an toàn nhất cho viên kim cương lớn nhất thế giới không phải một con tàu đầy lính gác, mà là một chiếc hộp bình thường giữa hàng nghìn lá thư."],
+      ["Even the most {powerful} king in the world could not find a safer place than the post office.", "Ngay cả vị vua quyền lực nhất thế giới cũng không tìm được nơi nào an toàn hơn bưu điện."],
+      ["The {highlight} of the {operation} was its simple idea: sometimes the best {security} is to look totally normal.", "Điểm sáng của chiến dịch là ý tưởng đơn giản của nó: đôi khi cách bảo vệ tốt nhất là trông thật bình thường."]
+    ]
+  ],
+  gloss: { steel: 'thép', gift: 'món quà', mines: 'mỏ', mine: 'mỏ', owner: 'chủ', owners: 'chủ sở hữu', builder: 'thợ xây', valuable: 'quý giá', manager: 'quản lý', enormous: 'khổng lồ', weighed: 'nặng', carats: 'carat (đơn vị khối lượng đá quý)', grams: 'gam', rough: 'thô (chưa cắt)', gem: 'đá quý', quality: 'chất lượng', record: 'kỷ lục', trade: 'buôn bán', clever: 'khéo léo', steamship: 'tàu hơi nước', detectives: 'thám tử', guard: 'canh giữ', guards: 'lính gác', ordinary: 'thông thường', plain: 'đơn giản, bình thường', trick: 'mẹo', steal: 'đánh cắp', colony: 'thuộc địa', parliament: 'quốc hội', members: 'thành viên', polished: 'được đánh bóng', cutters: 'thợ cắt', split: 'tách ra', surface: 'bề mặt', blade: 'lưỡi dao', fainted: 'ngất xỉu', confirmed: 'xác nhận', original: 'ban đầu', dust: 'bụi', brightly: 'rực rỡ', sceptre: 'quyền trượng', imperial: '(thuộc) hoàng đế, hoàng gia', crown: 'vương miện', jewels: 'đồ trang sức quý', royal: 'hoàng gia', property: 'tài sản', collection: 'bộ sưu tập', rarely: 'hiếm khi', completely: 'hoàn toàn' },
+  grammar: [
+    ['relative-non-defining', 'Edward, who had been the Prince of Wales for almost 60 years before he became king'],
+    ['passive-tenses', 'the real diamond was sent to England by ordinary post'],
+    ['past-perfect', 'the stone split exactly where he had planned'],
+    ['so-such', 'how could such a valuable stone travel safely to London'],
+    ['modals-deduction', 'That percentage may sound terrible']
+  ],
+  practiceNote: 'Bài về viên kim cương Cullinan: tìm thấy tháng 1/1905 ở mỏ Premier (Nam Phi), nặng 3.106 carat; viên thật được gửi sang Anh bằng bưu điện thường trong khi một bản sao đi tàu có thám tử canh; năm 1907 chính quyền Transvaal tặng Vua Edward VII; năm 1908 công ty Asscher ở Amsterdam cắt thành 9 viên lớn và khoảng 96 viên nhỏ. Từ vựng: kim cương và mỏ (diamond, resource, shine, cut, percentage, location, still), an ninh và vận chuyển (security, operation, departure, arrival, destination), quyền lực (prince, powerful, vote, represent, private, highlight). Ngữ pháp: mệnh đề quan hệ có dấu phẩy, bị động, such + danh từ.',
+  practice: [
+    { t: 'mc', k: 'c:main', q: 'What is the main idea of the story?', o: ['The biggest rough diamond ever found was sent to England by ordinary post and later cut into famous crown jewels.', 'The Cullinan diamond was stolen on a ship in 1905.', 'Thomas Cullinan cut the diamond himself.'], a: 0, why: 'Gửi bằng bưu điện thường, sau được cắt thành báu vật hoàng gia.', ref: 'the real diamond was sent to England by ordinary post' },
+    { t: 'mc', k: 'c:found', q: 'How did Frederick Wells find the diamond?', o: ['He saw something shine in the wall of the mine.', 'He bought it from a worker.', 'He found it in a river.'], a: 0, why: 'Thấy vật lấp lánh trên vách mỏ.', ref: 'he saw something shine in the wall above him' },
+    { t: 'mc', k: 'c:trick', q: 'What was on the steamship?', o: ['A copy of the diamond, guarded by police officers', 'The real diamond', 'Nothing at all'], a: 0, why: 'Bản sao, có thám tử canh.', ref: 'A copy of the diamond was put on a ship' },
+    { t: 'mc', k: 'c:gift', q: 'Why was the gift to King Edward VII important?', o: ['It represented a new friendship after a war between Britain and the Transvaal.', 'The king had paid for it.', 'It was his first diamond.'], a: 0, why: 'Tượng trưng cho tình hữu nghị mới sau chiến tranh.', ref: 'the gift represented a new friendship' },
+    { t: 'mc', k: 'c:cut', q: 'What happened the first time Asscher hit the blade?', o: ['The blade broke, but the diamond did not.', 'The diamond broke into small pieces.', 'He fainted.'], a: 0, why: 'Lưỡi thép gãy, viên đá nguyên vẹn.', ref: 'The blade broke, but the diamond did not' },
+    { t: 'mc', k: 'c:infer', q: 'Why was a large percentage of the stone lost?', o: ['Cutting a rough diamond into perfect stones always removes a lot of it.', 'Thieves took part of it.', 'It broke on the ship.'], a: 0, why: 'Mất nhiều là bình thường khi cắt thành viên hoàn hảo.', ref: 'it is normal when a rough diamond is turned into perfect stones' },
+    { t: 'mc', k: 'c:tf', q: 'True or false? “We know for sure that Asscher fainted after he split the diamond.”', o: ['True', 'False'], a: 1, why: 'Sai: đó là câu chuyện phổ biến chưa được xác nhận.', ref: 'nobody has proved it' },
+    { t: 'order', k: 'c:sequence', a: 'The blade broke, but the diamond did not.', why: 'Hai mệnh đề nối bằng but; did not thay cho did not break.', ref: 'The blade broke, but the diamond did not' },
+    { t: 'dict', k: 'c:listen', a: 'For two years, nobody bought the stone.', why: 'For + khoảng thời gian; nobody + động từ khẳng định.' },
+    { t: 'mc', k: 'w:resource', q: 'South Africa is rich in natural ______.', o: ['resources', 'locations', 'operations'], a: 0, why: 'natural resources = tài nguyên thiên nhiên.', ref: 'rich in natural resources' },
+    { t: 'mc', k: 'w:security', q: 'Everybody knew about the stone, so ______ was very important.', o: ['security', 'percentage', 'departure'], a: 0, why: 'security = an ninh.', ref: 'so security was very important' },
+    { t: 'mc', k: 'w:destination', q: 'The box reached its ______ safely.', o: ['destination', 'departure', 'highlight'], a: 0, why: 'destination = nơi đến.', ref: 'the box reached its destination safely' },
+    { t: 'mc', k: 'w:vote', q: 'Leaders asked the members of their parliament to ______ on the idea.', o: ['vote', 'shine', 'represent'], a: 0, why: 'vote on = bỏ phiếu về.', ref: 'to vote on the idea' },
+    { t: 'gap', k: 'w:still', q: 'Everybody in the room stood ______, and he hit the blade.', a: ['still'], why: 'stand still = đứng yên.', ref: 'Everybody in the room stood still' },
+    { t: 'match', k: 'w:set-diamond', q: 'Match the words with their meanings.', pairs: [['departure', 'the act of leaving a place'], ['arrival', 'the act of coming to a place'], ['powerful', 'having a lot of power'], ['private', 'belonging to one person or group']], why: 'departure = sự khởi hành; arrival = sự đến; powerful = quyền lực; private = riêng.', ref: 'Everyone watched the ship’s departure' },
+    { t: 'mc', k: 'w:percentage', q: 'A large ______ of the original stone was lost.', o: ['percentage', 'location', 'resource'], a: 0, why: 'percentage = tỷ lệ phần trăm.', ref: 'a large percentage of the original stone' },
+    { t: 'mc', k: 'w:highlight', q: 'For many visitors, the two stones are the ______ of the visit.', o: ['highlight', 'operation', 'cut'], a: 0, why: 'highlight = điểm nổi bật.', ref: 'they are the highlight of the visit' },
+    { t: 'mc', k: 'w:operation', q: 'The whole ______ went on until September 1908.', o: ['operation', 'arrival', 'security'], a: 0, why: 'operation = công việc lớn, chiến dịch.', ref: 'The whole operation went on until September 1908' },
+    { t: 'mc', k: 'g:relative-non-defining', q: 'Edward, ______ had been the Prince of Wales for almost 60 years, was now king.', o: [['who', 'Đúng: người, mệnh đề có dấu phẩy.'], ['that', 'Sai: không dùng that sau dấu phẩy.'], ['which', 'Sai: which chỉ vật.']], a: 0, why: 'N, who + V.', ref: 'Edward, who had been the Prince of Wales' },
+    { t: 'mc', k: 'g:passive-tenses', q: 'The real diamond ______ to England by ordinary post.', o: [['was sent', 'Đúng: bị động quá khứ.'], ['sent', 'Sai: viên đá không tự gửi.'], ['has been sent', 'Sai: chuyện năm 1905.']], a: 0, why: 'was + V3.', ref: 'the real diamond was sent to England' },
+    { t: 'error', k: 'g:so-such', q: 'How could so a valuable stone travel safely to London?', wrong: 'so', fix: 'such (a valuable stone)', why: 'Có danh từ (stone): such a + tính từ + danh từ.', ref: 'how could such a valuable stone travel safely' },
+    { t: 'mc', k: 'g:past-perfect', q: 'The stone split exactly where he ______.', o: [['had planned', 'Đúng: kế hoạch có trước lúc viên đá tách.'], ['has planned', 'Sai: chuyện quá khứ.'], ['planning', 'Sai dạng.']], a: 0, why: 'had + V3.', ref: 'exactly where he had planned' }
+  ],
+  extra: [],
+  write: { vi: 'Viết 3–5 câu tiếng Anh về cách công ty bạn gửi mẫu FAI quan trọng cho khách hàng. Có biện pháp an toàn nào? Cố dùng các từ dưới đây.', use: ['security', 'destination', 'arrival', 'departure', 'private'], model: 'When we send FAI samples to a customer, security is important. Each box has a label with the part number and the destination. We email the customer before the departure of the truck. After the arrival of the samples, the customer sends a short reply. We never send private drawings in the same box.' },
+  fact: { card: 'Tháng 1/1905, quản lý mỏ Frederick Wells phát hiện viên kim cương Cullinan nặng 3.106 carat (khoảng 621 g) ở mỏ Premier, gần Pretoria (Nam Phi). Một bản sao được đưa lên tàu hơi nước có thám tử canh, còn viên thật được gửi sang Anh bằng bưu điện. Năm 1907, chính quyền Transvaal tặng viên kim cương cho Vua Edward VII nhân sinh nhật 66 tuổi. Năm 1908, công ty Asscher ở Amsterdam cắt nó thành 9 viên lớn và khoảng 96 viên nhỏ; Cullinan I (530,2 carat) gắn trên Quyền trượng Hoàng gia, Cullinan II (317,4 carat) trên Vương miện Hoàng gia.',
+    bonus: 'About two-thirds of the Cullinan’s original weight was lost when it was cut into polished stones.', bonusSrc: 'EARTH Magazine — January 26, 1905: The world’s largest gem-quality diamond is unearthed' },
+  sources: [
+    { t: 'EARTH Magazine — January 26, 1905: The world’s largest gem-quality diamond is unearthed', u: 'https://www.earthmagazine.org/article/january-26-1905-worlds-largest-gem-quality-diamond-unearthed/' },
+    { t: 'History.com — World’s largest diamond found', u: 'https://www.history.com/this-day-in-history/january-25/worlds-largest-diamond-found' }
+  ],
+  note: 'EARTH Magazine: tìm thấy ngày 26/1/1905 ở mỏ Premier, khoảng 40 km về phía đông Pretoria; quản lý mỏ Frederick Wells thường được ghi công, nhưng các lời kể khác nhau, có chuyện kể một công nhân báo cho ông; nặng 3.106,75 carat (621 g), viên kim cương thô chất lượng đá quý lớn nhất từng thấy, vượt viên Excelsior 972 carat (bài viết “lớn hơn kỷ lục trước hơn ba lần”); Thomas Cullinan, thợ xây trở thành người tìm mỏ, là chủ mỏ; tháng 2/1905 trưng bày ở Johannesburg rồi gửi sang Anh: một bản sao đi tàu hơi nước, viên thật gửi bằng bưu kiện; năm 1907 chính quyền Transvaal mua và tặng Vua Edward VII nhân sinh nhật lần thứ 66 vào tháng 11; công ty I. J. Asscher ở Amsterdam nhận đá tháng 1/1908; lưỡi thép thứ nhất gãy, lưỡi thứ hai lớn hơn tách viên đá theo vết nứt bên trong; chuyện Asscher ngất là chưa được xác nhận; cắt đến tháng 9/1908; 9 viên lớn (Cullinan I–IX) và khoảng 96 viên nhỏ, tổng khoảng 1.055,9 carat, mất khoảng hai phần ba; Cullinan I 530,2 carat, “Great Star of Africa”, trên Quyền trượng Hoàng gia; Cullinan II 317,4 carat trên Vương miện Hoàng gia; trưng bày ở Tháp London; Asscher giữ các viên nhỏ, các viên còn lại về hoàng gia; năm 2003 mỏ đổi tên thành Cullinan Diamond Mine và vẫn hoạt động. History.com: ngày 25/1/1905 (nguồn khác ghi 26/1; bài viết “tháng 1 năm 1905”); Wells phát hiện ở độ sâu khoảng 18 feet (khoảng 5,5 m, bài viết “năm, sáu mét”), thấy ánh sáng lóe lên trên vách; 3.106 carat; tàu chở bản sao có thám tử, viên thật đi trong hộp đơn giản (History.com nói Edward cho gửi bản sao, nhưng theo EARTH việc gửi diễn ra năm 1905, trước khi viên đá được tặng nhà vua; bài viết “các chủ sở hữu lên kế hoạch”); Asscher nghiên cứu viên đá sáu tháng (EARTH: đá đến tháng 1, cắt đến tháng 9; bài viết “nghiên cứu nhiều tuần”); Cullinan I, II, III trưng bày ở Tháp London. Kiến thức phổ thông: đầu thế kỷ 20 Anh là cường quốc mạnh nhất thế giới; Nam Phi giàu vàng và kim cương; London là trung tâm buôn bán kim cương; báo chí đưa tin về chuyến tàu; Chiến tranh Boer (1899–1902) giữa Anh và các nước cộng hòa Boer, trong đó có Transvaal; quốc hội Transvaal bỏ phiếu chấp thuận việc mua (theo đề xuất của Thủ tướng Louis Botha); Edward VII là Hoàng tử xứ Wales gần 60 năm trước khi lên ngôi năm 1901; người thợ khía một vết nhỏ trên đá trước khi tách; viên đá được giữ cố định khi tách; các viên khác là tài sản riêng của hoàng gia, hiếm khi trưng bày; du khách có thể tham quan mỏ Cullinan. Câu “không ai tìm cách đánh cắp”, “mọi người trong phòng đứng yên” và đoạn kết là nhận xét của bài.',
+  verified: '2026-11-15'
+});

@@ -1,0 +1,119 @@
+EI.words('B1', `
+# ---- b1-p1-47 The Brown Candy Test
+clause|n|/klɔːz/|a part of an official written agreement or a law that says what somebody must or must not do|A {clause} in the contract says that the work must finish by May.|a clause in a contract; add/include a clause|điều khoản|2|Trong ngữ pháp, clause còn là mệnh đề.|
+drum|n|/drʌm/|a musical instrument that you play by hitting it with sticks or with your hands|He plays the {drums} in a band.|play the drums; a drum kit|cái trống|2||drummer (n)
+extra~n|n|/ˈekstrə/|a thing that is added to something usual and that often costs more|The hotel room was cheap, but the {extras} were expensive.|optional extras|thứ thêm, khoản thêm|2|extra (adj) = thêm (A1).|extra (adj)
+indoor|adj|/ˈɪndɔːr/|happening, used or placed inside a building|The school has an {indoor} pool.|an indoor pool/arena/game|trong nhà|2|Trái nghĩa: outdoor.|indoors (adv)
+repair~n|n|/rɪˈper/|work that you do to fix something that is broken or damaged|The road is closed for {repairs}.|need repair; make repairs; repairs to something|việc sửa chữa|2|repair (v) = sửa chữa (A2).|repair (v)
+`);
+EI.reading({
+  id: 'b1-p1-47', level: 'B1', pass: 1, n: 47,
+  title: 'The Brown Candy Test',
+  topic: 'work', era: '1972–2020', year: 1982, region: 'United States',
+  predict: { q: 'Ban nhạc rock Van Halen ghi trong hợp đồng: “Không được có kẹo M&M màu nâu ở hậu trường.” Theo bạn, vì sao?', o: ['Để kiểm tra xem bên tổ chức có đọc kỹ hợp đồng không', 'Vì ca sĩ bị dị ứng màu nâu', 'Vì kẹo nâu đắt hơn'] },
+  targets: ['clause', 'drum', 'extra~n', 'indoor', 'repair~n'],
+  text: [
+    [
+      ["In 1982, the American rock band Van Halen went on a world tour.", "Năm 1982, ban nhạc rock Mỹ Van Halen đi lưu diễn vòng quanh thế giới."],
+      ["Like most big bands, they sent each concert hall a long contract, with a list of things that the hall had to give them.", "Giống hầu hết các ban nhạc lớn, họ gửi cho mỗi nơi tổ chức một bản hợp đồng dài, kèm danh sách những thứ nơi đó phải cung cấp."],
+      ["This list is called a rider, and Van Halen’s rider was very long.", "Danh sách này gọi là rider, và rider của Van Halen rất dài."],
+      ["In the part about snacks, there was a strange line: “M&M’s (WARNING: ABSOLUTELY NO BROWN ONES).”", "Trong phần về đồ ăn vặt có một dòng lạ: “Kẹo M&M (CẢNH BÁO: TUYỆT ĐỐI KHÔNG CÓ VIÊN MÀU NÂU).”"],
+      ["Another {clause}, number 126, said: “There will be no brown M&M’s in the backstage area, upon pain of forfeiture of the show, with full compensation.”", "Một điều khoản khác, số 126, ghi: “Không được có kẹo M&M màu nâu ở khu vực hậu trường; nếu vi phạm, buổi diễn bị hủy và phải bồi thường đầy đủ.”"],
+      ["In simple words, the {clause} meant this: if the band found brown candies backstage, they did not have to play, and they would still get all their money.", "Nói đơn giản, điều khoản đó nghĩa là: nếu ban nhạc tìm thấy kẹo màu nâu ở hậu trường, họ có thể hủy buổi diễn mà vẫn nhận đủ tiền."]
+    ],
+    [
+      ["For years, people told this story as an example of rock stars who had too much money and behaved badly.", "Nhiều năm liền, người ta kể chuyện này như một ví dụ về những ngôi sao nhạc rock lắm tiền và cư xử tệ."],
+      ["The {clause} was real, but the reason for it was very different.", "Điều khoản đó có thật, nhưng lý do của nó thì rất khác."]
+    ],
+    [
+      ["The band began with two brothers, Eddie and Alex Van Halen, who were born in Amsterdam.", "Ban nhạc bắt đầu từ hai anh em Eddie và Alex Van Halen, sinh ra ở Amsterdam."],
+      ["Their family moved from the Netherlands to southern California in the 1960s.", "Gia đình họ chuyển từ Hà Lan đến miền nam California vào những năm 1960."],
+      ["Later, the brothers’ family name, Van Halen, became the name of their band.", "Về sau, họ của hai anh em, Van Halen, trở thành tên ban nhạc."],
+      ["At first, Eddie played the {drums=drum} and Alex played the guitar, but later they changed instruments.", "Lúc đầu, Eddie chơi trống còn Alex chơi ghi-ta, nhưng sau đó họ đổi nhạc cụ cho nhau."],
+      ["So in Van Halen, Eddie played the guitar, Alex played the {drums=drum}, Michael Anthony played the bass, and David Lee Roth was the singer.", "Vì vậy trong Van Halen, Eddie chơi ghi-ta, Alex chơi trống, Michael Anthony chơi bass, còn David Lee Roth là ca sĩ."],
+      ["Their first album came out in 1978, and it sold more than 10 million copies in the United States alone.", "Album đầu tiên của họ ra năm 1978 và bán hơn 10 triệu bản chỉ riêng ở Mỹ."],
+      ["Eddie became famous for new ways of playing the guitar.", "Eddie nổi tiếng với những cách chơi ghi-ta mới."],
+      ["In 1984, their song “Jump” made them some of the biggest stars in the world.", "Năm 1984, bài hát “Jump” biến họ thành một trong những ngôi sao lớn nhất thế giới."],
+      ["Soon after that, Roth left the band to sing on his own, and a new singer, Sammy Hagar, joined them.", "Không lâu sau, Roth rời ban nhạc để hát riêng, và một ca sĩ mới, Sammy Hagar, gia nhập."],
+      ["With Hagar, Van Halen made three albums that went to number one between 1986 and 1991.", "Cùng Hagar, Van Halen làm ba album đứng đầu bảng xếp hạng từ năm 1986 đến 1991."]
+    ],
+    [
+      ["Their shows were huge.", "Các buổi diễn của họ rất lớn."],
+      ["David Lee Roth later wrote that the band often arrived with nine big trucks of equipment, when most bands came with three trucks at the most.", "David Lee Roth sau này viết rằng ban nhạc thường đến với chín xe tải lớn chở thiết bị, trong khi phần lớn ban nhạc khác chỉ có nhiều nhất ba xe."],
+      ["The stage used about 850 lights.", "Sân khấu dùng khoảng 850 ngọn đèn."],
+      ["All this equipment was very heavy, so the contract was not only about {extras=extra~n} like food and drinks.", "Tất cả thiết bị này rất nặng, nên hợp đồng không chỉ nói về những thứ thêm như đồ ăn, thức uống."],
+      ["Most of it was technical: it explained how much weight the floor had to carry, how big the doors had to be, and much more.", "Phần lớn hợp đồng là kỹ thuật: nó ghi rõ sàn phải chịu được bao nhiêu trọng lượng, cửa phải rộng bao nhiêu, và nhiều thứ khác."],
+      ["Roth wrote that in some {indoor} halls, the roof beams could not carry the weight of the lights, and some doors were too small for the equipment.", "Roth viết rằng ở một số hội trường trong nhà, xà mái không chịu nổi sức nặng của dàn đèn, và có những cánh cửa quá nhỏ so với thiết bị."]
+    ],
+    [
+      ["So why the candy?", "Vậy tại sao lại là kẹo?"],
+      ["In his book Crazy from the Heat, Roth explained that the line about brown M&M’s was “just as a little test.”", "Trong cuốn sách Crazy from the Heat, Roth giải thích rằng dòng về kẹo M&M nâu “chỉ là một bài kiểm tra nhỏ”."],
+      ["The candy line was put in the middle of the long contract, among the {extras=extra~n} and the technical parts, where it was easy to miss.", "Dòng về kẹo được giấu ở giữa bản hợp đồng dài, lẫn giữa những thứ thêm và các phần kỹ thuật."],
+      ["If there were brown candies in the bowl, the people at the hall must not have read the contract carefully.", "Nếu trong bát có kẹo nâu, hẳn là người ở nơi tổ chức đã không đọc kỹ hợp đồng."],
+      ["Then the band’s team checked the whole show again, because they were sure to find a technical mistake.", "Khi đó đội của ban nhạc kiểm tra lại toàn bộ buổi diễn, vì chắc chắn họ sẽ tìm ra một lỗi kỹ thuật."],
+      ["Roth said that such mistakes could be “life-threatening.”", "Roth nói những lỗi như vậy có thể “đe dọa tính mạng”."],
+      ["Years later, in 2012, when he had come back to the band for a new album and tour, he told the story again in a video.", "Nhiều năm sau, năm 2012, khi đã quay lại ban nhạc cho một album và chuyến lưu diễn mới, ông kể lại câu chuyện trong một video."],
+      ["One music website says that the rule was about safety, with a little “rock star ridiculousness” too.", "Một trang web âm nhạc nói quy định này là vì an toàn, kèm thêm một chút “sự lố bịch kiểu ngôi sao nhạc rock”."]
+    ],
+    [
+      ["Roth told one story from Pueblo, Colorado.", "Roth kể một chuyện ở Pueblo, bang Colorado."],
+      ["The band played in an {indoor} sports hall at a university, which had a new rubber floor for basketball.", "Ban nhạc diễn ở một nhà thi đấu trong nhà của một trường đại học, nơi có sàn cao su mới để chơi bóng rổ."],
+      ["The people there had not checked the weight of the stage.", "Người ở đó đã không kiểm tra trọng lượng của sân khấu."],
+      ["They had a beautiful new floor, but nobody had thought about what nine trucks of equipment would do to it.", "Họ có một sàn mới rất đẹp, nhưng không ai nghĩ xem chín xe tải thiết bị sẽ làm gì với nó."],
+      ["Roth found brown M&M’s backstage, and he was so angry that he broke things in the dressing room and kicked a hole in the door, which later needed {repair=repair~n}.", "Roth phát hiện kẹo M&M nâu ở hậu trường, và ông tức giận đến mức đập phá đồ trong phòng thay đồ và đá thủng cánh cửa, thứ sau đó phải sửa."],
+      ["He called it “twelve thousand dollars’ worth of fun.”", "Ông gọi đó là “trò vui trị giá mười hai nghìn đô la”."],
+      ["But the real problem was the stage: it was so heavy that it sank into the floor and caused about $80,000 of damage.", "Nhưng vấn đề thật sự là sân khấu: nó nặng đến mức lún xuống sàn và gây thiệt hại khoảng 80.000 đô la."],
+      ["The floor was too damaged for a simple {repair=repair~n}, and the whole floor had to be replaced.", "Sàn hỏng quá nặng, không thể sửa đơn giản, và phải thay toàn bộ."],
+      ["Newspapers later wrote that the band had caused $85,000 of damage backstage, and many readers thought that it was all because of the candy.", "Báo chí sau đó viết rằng ban nhạc đã gây thiệt hại 85.000 đô la ở hậu trường, và nhiều độc giả nghĩ tất cả là vì kẹo."]
+    ],
+    [
+      ["If the people in Pueblo had read the contract carefully, the floor would not have been damaged.", "Nếu người ở Pueblo đọc kỹ hợp đồng, sàn đã không bị hỏng."],
+      ["Today, the brown candy test is a famous lesson for people in business: a small detail can show whether someone has checked the big things.", "Ngày nay, bài kiểm tra kẹo nâu là một bài học nổi tiếng trong kinh doanh: một chi tiết nhỏ có thể cho thấy ai đó đã kiểm tra những việc lớn hay chưa."],
+      ["Van Halen joined the Rock and Roll Hall of Fame in 2007, and Eddie Van Halen died in 2020.", "Van Halen được vinh danh ở Đại sảnh Danh vọng Rock and Roll năm 2007, và Eddie Van Halen mất năm 2020."],
+      ["But many people who have never heard a Van Halen song know the story of the brown M&M’s.", "Nhưng nhiều người chưa từng nghe một bài nào của Van Halen vẫn biết chuyện kẹo M&M nâu."]
+    ]
+  ],
+  gloss: { rock: 'nhạc rock', tour: 'chuyến lưu diễn', contract: 'hợp đồng', 'm&m’s': 'kẹo sô-cô-la M&M', warning: 'cảnh báo', absolutely: 'tuyệt đối', backstage: 'hậu trường', forfeiture: 'sự mất quyền, sự hủy bỏ', compensation: 'tiền bồi thường', candies: 'kẹo', candy: 'kẹo', behaved: 'cư xử', guitar: 'đàn ghi-ta', instruments: 'nhạc cụ', bass: 'đàn bass', album: 'album', copies: 'bản (đĩa)', trucks: 'xe tải', equipment: 'thiết bị', technical: '(thuộc) kỹ thuật', beams: 'xà, dầm', bowl: 'cái bát', rubber: 'cao su', basketball: 'bóng rổ', kicked: 'đá', sank: 'lún, chìm (quá khứ của sink)', damage: 'thiệt hại', damaged: 'bị hư hỏng', replaced: 'được thay thế', detail: 'chi tiết', 'life-threatening': 'đe dọa tính mạng', rider: 'bản yêu cầu kèm hợp đồng (rider)', snacks: 'đồ ăn vặt', ridiculousness: 'sự lố bịch', website: 'trang web' },
+  grammar: [
+    ['third-conditional', 'If the people in Pueblo had read the contract carefully, the floor would not have been damaged'],
+    ['modals-deduction', 'the people at the hall must not have read the contract carefully'],
+    ['reported-speech', 'Roth said that such mistakes could be'],
+    ['so-such', 'it was so heavy that it sank into the floor'],
+    ['passive-tenses', 'the whole floor had to be replaced']
+  ],
+  practiceNote: 'Bài về điều khoản “không có kẹo M&M nâu” trong hợp đồng lưu diễn năm 1982 của ban nhạc Van Halen: không phải thói ngôi sao mà là một bài kiểm tra xem bên tổ chức có đọc kỹ bản hợp đồng kỹ thuật dài hay không; chuyện ở Pueblo (Colorado), sân khấu nặng làm lún sàn, thiệt hại khoảng 80.000 đô la. Từ vựng: hợp đồng (clause, extras), âm nhạc (drum), công trình (indoor, repair). Ngữ pháp: câu điều kiện loại 3, must have + V3 (suy đoán quá khứ), câu tường thuật, so … that, bị động với have to.',
+  practice: [
+    { t: 'mc', k: 'c:main', q: 'What is the main idea of the story?', o: ['The “no brown M&M’s” clause was a test to see if people had read Van Halen’s contract carefully.', 'Van Halen hated brown candy.', 'Van Halen never had problems on tour.'], a: 0, why: 'Điều khoản là bài kiểm tra việc đọc kỹ hợp đồng.', ref: 'the line about brown M&M’s was “just as a little test.”' },
+    { t: 'mc', k: 'c:meaning', q: 'What could the band do if they found brown candies?', o: ['Not play the show and still get all their money', 'Ask for more candy', 'Play a shorter show'], a: 0, why: 'Không diễn mà vẫn nhận đủ tiền.', ref: 'they did not have to play, and they would still get all their money' },
+    { t: 'mc', k: 'c:trucks', q: 'How many trucks did the band often arrive with?', o: ['Nine', 'Three', 'Twelve'], a: 0, why: 'Chín xe tải; ban nhạc khác thường tối đa ba xe.', ref: 'nine big trucks of equipment' },
+    { t: 'mc', k: 'c:contract', q: 'What was most of the contract about?', o: ['Technical things like weight and doors', 'Food and drinks', 'The songs they would play'], a: 0, why: 'Phần lớn là kỹ thuật.', ref: 'Most of it was technical' },
+    { t: 'mc', k: 'c:infer', q: 'Why did brown candies make the band check the whole show again?', o: ['They showed that the hall had probably missed other parts of the contract too.', 'Brown candies were dangerous to eat.', 'The band wanted a reason to leave early.'], a: 0, why: 'Có kẹo nâu nghĩa là bên tổ chức không đọc kỹ, nên có thể có lỗi kỹ thuật.', ref: 'they were sure to find a technical mistake' },
+    { t: 'mc', k: 'c:tf', q: 'True or false? “In Pueblo, most of the damage was caused by the candy.”', o: ['True', 'False'], a: 1, why: 'Sai: thiệt hại chính do sân khấu nặng làm lún sàn.', ref: 'But the real problem was the stage' },
+    { t: 'mc', k: 'c:lesson', q: 'What lesson do business people take from the story?', o: ['A small detail can show whether someone has checked the big things.', 'Never eat candy at work.', 'Contracts should be short.'], a: 0, why: 'Chi tiết nhỏ cho thấy việc lớn đã được kiểm tra chưa.', ref: 'a small detail can show whether someone has checked the big things' },
+    { t: 'order', k: 'c:sequence', a: 'So why the candy?', why: 'Câu hỏi rút gọn: Vậy tại sao lại là kẹo?', ref: 'So why the candy?' },
+    { t: 'dict', k: 'c:listen', a: 'Their shows were huge.', why: 'huge = rất lớn.' },
+    { t: 'mc', k: 'w:clause', q: 'Another ______, number 126, said that there would be no brown M&M’s backstage.', o: ['clause', 'drum', 'repair'], a: 0, why: 'clause = điều khoản.', ref: 'Another clause, number 126, said' },
+    { t: 'mc', k: 'w:drum', q: 'Alex Van Halen played the ______.', o: ['drums', 'clauses', 'extras'], a: 0, why: 'play the drums = chơi trống.', ref: 'Alex played the drums' },
+    { t: 'gap', k: 'w:indoor', q: 'The band played in an ______ sports hall at a university.', a: ['indoor'], why: 'indoor = trong nhà.', ref: 'The band played in an indoor sports hall' },
+    { t: 'mc', k: 'w:repair~n', q: 'The floor was too damaged for a simple ______.', o: ['repair', 'clause', 'drum'], a: 0, why: 'repair (n) = việc sửa chữa.', ref: 'too damaged for a simple repair' },
+    { t: 'match', k: 'w:set-contract', q: 'Match the words with their meanings.', pairs: [['clause', 'a part of a contract'], ['extras', 'things added that often cost more'], ['indoor', 'inside a building'], ['drum', 'an instrument you hit with sticks']], why: 'clause = điều khoản; extras = thứ thêm; indoor = trong nhà; drum = trống.', ref: 'the contract was not only about extras like food and drinks' },
+    { t: 'mc', k: 'w:extra~n', q: 'The contract was not only about ______ like food and drinks.', o: ['extras', 'drums', 'repairs'], a: 0, why: 'extras (n) = những thứ thêm.', ref: 'not only about extras like food and drinks' },
+    { t: 'gap', k: 'w:clause', q: 'The ______ was real, but the reason for it was very different.', a: ['clause'], why: 'clause = điều khoản.', ref: 'The clause was real' },
+    { t: 'mc', k: 'g:third-conditional', q: 'If the people in Pueblo ______ the contract carefully, the floor would not have been damaged.', o: [['had read', 'Đúng: điều kiện loại 3, If + had + V3.'], ['read', 'Sai: thiếu had.'], ['would read', 'Sai: không dùng would trong mệnh đề if.']], a: 0, why: 'If + had V3, would have V3.', ref: 'If the people in Pueblo had read the contract carefully' },
+    { t: 'mc', k: 'g:modals-deduction', q: 'There were brown candies, so the people at the hall ______ have read the contract carefully.', o: [['must not', 'Đúng: suy đoán chắc chắn về quá khứ (phủ định).'], ['should', 'Sai nghĩa: should have = lẽ ra nên.'], ['will not', 'Sai: không dùng will not have cho suy đoán quá khứ ở đây.']], a: 0, why: 'must (not) have + V3 = hẳn là (đã không).', ref: 'must not have read the contract carefully' },
+    { t: 'error', k: 'g:so-such', q: 'The stage was such heavy that it sank into the floor.', wrong: 'such', fix: 'so', why: 'so + tính từ + that; such + danh từ.', ref: 'it was so heavy that it sank into the floor' },
+    { t: 'mc', k: 'g:passive-tenses', q: 'The whole floor had to ______.', o: [['be replaced', 'Đúng: bị động sau have to.'], ['replace', 'Sai: sàn không tự thay.'], ['replacing', 'Sai dạng.']], a: 0, why: 'have to be + V3.', ref: 'the whole floor had to be replaced' }
+  ],
+  extra: [],
+  write: { vi: 'Viết 3–5 câu tiếng Anh về một chi tiết nhỏ trong bản vẽ hoặc PPAP mà nếu bỏ sót có thể gây lỗi lớn. Cố dùng các từ dưới đây.', use: ['clause', 'repair', 'indoor', 'extra'], model: 'Our customer contract has a clause about the color of the parts. If the supplier misses it, the parts need repair or new tooling. We keep the samples in an indoor room at 23 °C. Extra checks cost time, but they save money later.' },
+  fact: { card: 'Bản hợp đồng lưu diễn năm 1982 của Van Halen có điều khoản số 126: “There will be no brown M&M’s in the backstage area…”. Theo David Lee Roth (sách “Crazy from the Heat”, 1997), đó là bài kiểm tra: hợp đồng kỹ thuật rất dài (chín xe tải thiết bị), nếu thấy kẹo nâu thì bên tổ chức hẳn chưa đọc kỹ, đội của ban nhạc sẽ kiểm tra lại toàn bộ vì lỗi kỹ thuật có thể nguy hiểm đến tính mạng. Ở Pueblo, Colorado, sân khấu nặng làm lún sàn bóng rổ mới, gây thiệt hại khoảng 80.000 đô la.',
+    bonus: 'David Lee Roth called the brown M&M’s line “just as a little test.”', bonusSrc: 'Snopes — Brown Out (quoting Crazy from the Heat, 1997)' },
+  sources: [
+    { t: 'Snopes — Brown Out: Van Halen and brown M&M’s', u: 'https://www.snopes.com/fact-check/brown-out/' },
+    { t: 'Ultimate Classic Rock — David Lee Roth Explains Van Halen’s ‘No Brown M&M’s’ Rule', u: 'https://ultimateclassicrock.com/david-lee-roth-van-halen-brown-mms-rule/' },
+    { t: 'NPR — The Truth About Van Halen And Those Brown M&Ms (2012)', u: 'https://www.npr.org/sections/therecord/2012/02/14/146880432/the-truth-about-van-halen-and-those-brown-m-ms' },
+    { t: 'Britannica — Van Halen', u: 'https://www.britannica.com/topic/Van-Halen' }
+  ],
+  note: 'Snopes: bản rider của chuyến lưu diễn thế giới năm 1982, trong mục “Munchies”, có dòng “M&M’s (WARNING: ABSOLUTELY NO BROWN ONES)”; điều 126: “There will be no brown M&M’s in the backstage area, upon pain of forfeiture of the show, with full compensation”; điều khoản có thật nhưng động cơ phổ biến thì không; Roth (Crazy from the Heat, 1997): rider dài và kỹ thuật, dòng kẹo là “just as a little test”, nếu thấy kẹo nâu thì đội sẽ “line-check the entire production”; ban nhạc thường đến với “nine eighteen-wheeler trucks” trong khi chuẩn là “three trucks, max”; có xà mái không chịu được trọng lượng, cửa quá nhỏ; lỗi có thể “life-threatening”; ở Pueblo, Colorado, nhà thi đấu đại học có sàn bóng rổ cao su mới, bên tổ chức không kiểm tra yêu cầu trọng lượng; Roth thấy kẹo nâu, đập phá phòng thay đồ và đá thủng cửa, gọi là “twelve thousand dollars’ worth of fun”; sân khấu “sank through their floor”, gây “eighty thousand dollars’ worth of damage”, cả sàn phải thay; báo chí đưa tin “eighty-five thousand dollars’ worth of damage to the backstage area”. Ultimate Classic Rock: Roth nói đó là bài kiểm tra an toàn; sân khấu dùng 850 ngọn đèn; dòng kẹo được đặt ngẫu nhiên giữa bản hợp đồng dài. NPR (2012): điều khoản có thật, là “an ingenious, curiously skewed… safety measure”. NPR cũng ghi Roth kể chuyện trong video khi đã quay lại ban nhạc cho album và chuyến lưu diễn mới. Ultimate Classic Rock cũng dùng cụm “rock star ridiculousness”. Britannica: Roth rời ban nhạc không lâu sau thành công của album 1984 để hát solo; Sammy Hagar thay thế, cùng ban nhạc làm ba album đứng đầu bảng xếp hạng từ 1986 đến 1991; Eddie nổi tiếng với cách dùng cần rung và kỹ thuật nhấn dây; Eddie (ghi-ta) và Alex (trống) sinh ở Amsterdam, gia đình chuyển tới miền nam California những năm 1960, hai anh em từng đổi nhạc cụ cho nhau; Michael Anthony (bass), David Lee Roth (hát); album đầu (1978) bán hơn 10 triệu bản ở Mỹ; album 1984 có “Jump”; vào Đại sảnh Danh vọng Rock and Roll năm 2007; Eddie mất ngày 6/10/2020. Bài viết “one roof beams” cho “girders” và “a little test” cho cả câu của Roth; câu “cửa sau đó phải sửa” là suy ra từ việc cửa bị đá thủng. Kiến thức phổ thông: ban nhạc lấy họ của hai anh em làm tên; nhà thi đấu có sàn bóng rổ là công trình trong nhà. Câu điều kiện “nếu người ở Pueblo đọc kỹ hợp đồng, sàn đã không hỏng” và bài học kinh doanh là nhận xét của bài (nhiều bài viết kinh doanh, ví dụ NBC News, dùng chuyện này làm bài học).',
+  verified: '2026-11-15'
+});

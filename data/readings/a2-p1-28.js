@@ -46,7 +46,7 @@ EI.reading({
     ],
     [
       ["The test ran from June to December 2022.", "Cuộc thử nghiệm diễn ra từ tháng 6 đến tháng 12 năm 2022."],
-      ["It {involved} 61 {organizations=organization}, from companies in financial {services=service} and online shopping to a small fish-and-{chip} shop.", "Nó có sự tham gia của 61 tổ chức, từ các công ty dịch vụ tài chính và bán hàng trực tuyến đến một tiệm cá và khoai tây chiên nhỏ."],
+      ["It {involved=involve} 61 {organizations=organization}, from companies in financial {services=service} and online shopping to a small fish-and-{chip} shop.", "Nó có sự tham gia của 61 tổ chức, từ các công ty dịch vụ tài chính và bán hàng trực tuyến đến một tiệm cá và khoai tây chiên nhỏ."],
       ["An {organization} called 4 Day Week Global {organized=organize} it, and researchers from the University of Cambridge and Boston College studied the results.", "Một tổ chức tên là 4 Day Week Global tổ chức cuộc thử nghiệm, và các nhà nghiên cứu của Đại học Cambridge và Boston College nghiên cứu kết quả."],
       ["The idea was simple: 100 {percent=per cent} of the {pay} for 80 {percent=per cent} of the time, and 100 {percent=per cent} of the work.", "Ý tưởng rất đơn giản: 100 phần trăm tiền lương cho 80 phần trăm thời gian, và vẫn 100 phần trăm khối lượng công việc."],
       ["Each {employer} made its own {choice} about how to do it.", "Mỗi bên sử dụng lao động tự chọn cách làm của mình."]

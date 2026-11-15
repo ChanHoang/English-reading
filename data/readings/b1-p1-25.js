@@ -1,0 +1,156 @@
+EI.words('B1', `
+# ---- b1-p1-25 Three Hundred Miles for Work
+accommodation|n|/əˌkɑːməˈdeɪʃn/|a place to live, stay or sleep|The hotel offers cheap {accommodation} for students.|find accommodation; cheap accommodation|chỗ ở|2|Tiếng Anh Mỹ hay dùng số nhiều: accommodations.|accommodate (v)
+cheerful|adj|/ˈtʃɪrfl/|happy, and showing it in the way you behave|She is always {cheerful} in the morning.|a cheerful smile; stay cheerful|vui vẻ|2||cheer (v)
+coal|n|/koʊl/|a hard black material from under the ground that people burn to make heat|The town grew because of its {coal} mines.|a coal mine; burn coal|than đá|2||
+complaint|n|/kəmˈpleɪnt/|something that you say or write when you are not happy about something|We received a {complaint} from the customer about the parts.|make a complaint; a complaint about something|lời phàn nàn, khiếu nại|2|Trong QC: customer complaint = khiếu nại của khách hàng.|complain (v)
+determine|v|/dɪˈtɜːrmɪn/|to find out the facts about something; also to decide something|The test will {determine} whether the part is OK.|determine whether/how/what; determine the cause|xác định; quyết định|2|Hay gặp: determine the root cause.|determined (adj)
+disappointed|adj|/ˌdɪsəˈpɔɪntɪd/|sad because something was not as good as you hoped, or did not happen|I was {disappointed} with the test results.|disappointed with/about something; disappointed that …|thất vọng|2|Người cảm thấy: disappointed; sự việc gây ra: disappointing.|disappoint (v)
+disappointing|adj|/ˌdɪsəˈpɔɪntɪŋ/|not as good as you hoped|The first results were {disappointing}.|a disappointing result; disappointing news|đáng thất vọng|2||disappoint (v)
+due|adj|/duː/|expected or planned for a particular time; with “to”, because of|The report is {due} on Friday.|due to do something; due on/at …; due to something|đến hạn, dự kiến; (due to) do, vì|2|due to = because of.|
+employment|n|/ɪmˈplɔɪmənt/|work that you are paid for; also the situation when people have jobs|It is hard to find {employment} in a small town.|find employment; full employment|việc làm, sự có việc làm|2||employ (v)
+fairly|adv|/ˈferli/|more than a little, but not very|The test was {fairly} easy.|fairly good/easy/quickly|khá, tương đối|2|fairly nhẹ hơn very.|fair (adj)
+fixed|adj|/fɪkst/|already decided and not changing|We work {fixed} hours, from 8 to 5.|fixed hours; a fixed price; a fixed plan|cố định|2||fix (v)
+frequently|adv|/ˈfriːkwəntli/|often|He {frequently} checks the machine.|frequently asked questions|thường xuyên|2||frequent (adj)
+intend|v|/ɪnˈtend/|to have a plan or a wish to do something|I {intend} to finish the report today.|intend to do something; intend something to be …|định, có ý định|2||intention (n)
+involved|adj|/ɪnˈvɑːlvd/|taking part in something; being part of something|Three departments are {involved} in the project.|be/get involved in something|tham gia, có liên quan|2||involve (v)
+length|n|/leŋθ/|how long something is, from one end to the other|Measure the {length} of the part.|the length of something; 10 meters in length|chiều dài|2||long (adj)
+living|n|/ˈlɪvɪŋ/|money that you earn to buy the things you need|He makes a {living} as a driver.|make/earn a living; for a living|kế sinh nhai|2|What do you do for a living? = Bạn làm nghề gì?|live (v)
+local|n|/ˈloʊkl/|a person who lives in a particular place|The {locals} are very friendly.|the locals; ask a local|người dân địa phương|2|Danh từ, thường ở số nhiều: the locals.|local (adj)
+neither|adv|/ˈniːðər/|used with “nor” to say that two things are both not true|{Neither} John nor Mary came to the meeting.|neither … nor …; me neither|không … cũng không|2||
+nor|adv, conjunction|/nɔːr/|used after “neither” or “not” to add another thing that is also not true|He can neither read {nor} write.|neither … nor …|cũng không|2||
+organized|adj|/ˈɔːrɡənaɪzd/|planned and arranged well; working well and in order|She is a very {organized} person.|well organized; an organized group|có tổ chức, ngăn nắp|2||organize (v)
+planning|n|/ˈplænɪŋ/|the act of making plans for something|Good {planning} saves time.|careful planning; in the planning stage|việc lập kế hoạch|2||plan (v)
+though|adv, conjunction|/ðoʊ/|but; even if; also used at the end of a sentence to mean “however”|{Though} it was late, she kept working.|even though; …, though.|mặc dù; tuy nhiên|2|Đứng cuối hoặc giữa câu (adv): It was hard, though.|although
+unemployed|adj|/ˌʌnɪmˈplɔɪd/|without a job|He has been {unemployed} for six months.|the unemployed; unemployed workers|thất nghiệp|2||employ (v)
+unemployment|n|/ˌʌnɪmˈplɔɪmənt/|the situation when people want a job but cannot find one; also the number of people without a job|{Unemployment} is low in this city.|high unemployment; unemployment benefit|nạn thất nghiệp; tỷ lệ thất nghiệp|2||employment (n)
+`);
+EI.reading({
+  id: 'b1-p1-25', level: 'B1', pass: 1, n: 25,
+  title: 'Three Hundred Miles for Work',
+  topic: 'work', era: '1930s', year: 1936, region: 'England',
+  predict: { q: 'Năm 1936, 200 người đàn ông thất nghiệp ở thị trấn Jarrow (Anh) đi bộ gần 300 dặm đến London. Họ muốn gì?', o: ['Việc làm cho thị trấn', 'Đất để làm nông', 'Tiền thưởng chiến tranh'] },
+  targets: ['accommodation', 'cheerful', 'coal', 'complaint', 'determine', 'disappointed', 'disappointing', 'due', 'employment', 'fairly', 'fixed', 'frequently', 'intend', 'involved', 'length', 'living', 'local', 'neither', 'nor', 'organized', 'planning', 'though', 'unemployed', 'unemployment'],
+  text: [
+    [
+      ["Jarrow is a small town on the River Tyne, in the north-east of England.", "Jarrow là một thị trấn nhỏ bên sông Tyne, ở vùng đông bắc nước Anh."],
+      ["In the early 1800s, {coal} mines brought the first workers there, and in 1821 about 3,500 people lived in the town.", "Đầu những năm 1800, các mỏ than đưa những người công nhân đầu tiên đến đây, và năm 1821 thị trấn có khoảng 3.500 người."],
+      ["{Coal} started the town, but ships made it big.", "Than đá khai sinh ra thị trấn, nhưng tàu thủy mới làm nó lớn mạnh."],
+      ["In 1851, Palmer’s shipyard opened, and by 1891 the town had 35,000 people.", "Năm 1851, xưởng đóng tàu Palmer’s mở cửa, và đến năm 1891 thị trấn đã có 35.000 người."],
+      ["In about eighty years, the shipyard built around 1,000 ships, and for most families it was the main source of {employment}.", "Trong khoảng tám mươi năm, xưởng đóng khoảng 1.000 con tàu, và với phần lớn các gia đình, đó là nguồn việc làm chính."],
+      ["Ships gave thousands of men a {living}.", "Tàu thủy nuôi sống hàng nghìn người đàn ông."]
+    ],
+    [
+      ["Then the world changed.", "Rồi thế giới thay đổi."],
+      ["After the Wall Street Crash of 1929, there were no new orders for ships, and in 1934 the shipyard closed.", "Sau cuộc khủng hoảng Phố Wall năm 1929, không còn đơn đặt hàng tàu mới, và năm 1934 xưởng đóng tàu đóng cửa."],
+      ["{Unemployment} in Jarrow rose to more than 70 percent.", "Tỷ lệ thất nghiệp ở Jarrow tăng lên hơn 70 phần trăm."],
+      ["Before the shipyard closed, about 8,000 people had jobs in the town.", "Trước khi xưởng đóng cửa, khoảng 8.000 người có việc làm ở thị trấn."],
+      ["In 1936, the town’s member of parliament, Ellen Wilkinson, told Parliament that only 100 men now had work, and only for a short time.", "Năm 1936, nghị sĩ của thị trấn, Ellen Wilkinson, nói trước Quốc hội rằng lúc đó chỉ 100 người có việc, và chỉ là việc tạm thời."],
+      ["Thousands of {unemployed} men had no way to earn a {living}.", "Hàng nghìn người đàn ông thất nghiệp không có cách nào kiếm sống."],
+      ["Families lived in crowded, poor houses, and health was getting worse.", "Các gia đình sống trong những ngôi nhà chật chội, tồi tàn, và sức khỏe ngày càng xấu đi."]
+    ],
+    [
+      ["Ellen Wilkinson had once worked for women’s right to vote, and she had won the seat for Jarrow in the 1935 election.", "Ellen Wilkinson từng làm việc cho phong trào đòi quyền bầu cử của phụ nữ, và bà giành ghế nghị sĩ của Jarrow trong cuộc bầu cử năm 1935."],
+      ["In 1936, she and a group of workers met Walter Runciman, a member of the government, to ask for help.", "Năm 1936, bà và một nhóm công nhân gặp Walter Runciman, một thành viên chính phủ, để xin giúp đỡ."],
+      ["His answer was short: “Jarrow must work out its own salvation.”", "Câu trả lời của ông rất ngắn: “Jarrow phải tự tìm đường cứu mình.”"],
+      ["In other words, the town had to save itself.", "Nói cách khác, thị trấn phải tự cứu lấy mình."],
+      ["The answer pushed the town into action, and its leaders decided to take their {complaint} to London on foot.", "Câu trả lời đó thúc thị trấn hành động, và những người đứng đầu quyết định đi bộ mang lời khiếu nại của mình đến London."]
+    ],
+    [
+      ["The idea came from two town leaders, Billy Thompson and David Riley, and people from politics, business and the churches were {involved} in the {planning}.", "Ý tưởng đến từ hai người đứng đầu thị trấn, Billy Thompson và David Riley, và những người trong giới chính trị, kinh doanh và nhà thờ đều tham gia lập kế hoạch."],
+      ["The {planning} was careful.", "Việc lập kế hoạch rất cẩn thận."],
+      ["About 1,200 men wanted to go, but only 200 could.", "Khoảng 1.200 người muốn đi, nhưng chỉ 200 người được đi."],
+      ["Doctors examined every man to {determine} whether he was fit enough for a long walk.", "Bác sĩ khám từng người để xác định xem anh ta có đủ sức khỏe cho một chặng đi bộ dài hay không."],
+      ["The total {length} of the route was nearly 300 miles (about 480 kilometers).", "Tổng chiều dài tuyến đường là gần 300 dặm (khoảng 480 ki-lô-mét)."],
+      ["The organizers also had to {determine} the route and the places to stop.", "Những người tổ chức cũng phải xác định tuyến đường và các điểm dừng."],
+      ["In the end, there was a {fixed} plan of 21 stops, with five days of rest on Sundays.", "Cuối cùng, có một kế hoạch cố định gồm 21 điểm dừng, với năm ngày nghỉ vào các Chủ nhật."],
+      ["A walk of this {length} needed strong boots, so each man got new soles for his boots, two pairs of socks and a coat to keep out the rain.", "Một chặng đi dài như vậy cần giày ống chắc chắn, nên mỗi người được thay đế giày mới, hai đôi tất và một chiếc áo khoác che mưa."],
+      ["An old bus followed them with cooking supplies and tents.", "Một chiếc xe buýt cũ đi theo họ, chở đồ nấu ăn và lều."],
+      ["David Riley {intended=intend} the march to be different from other “hunger marches” of the time, so he called it the “Jarrow Crusade.”", "David Riley muốn cuộc tuần hành khác với những “cuộc tuần hành đói” khác thời đó, nên ông gọi nó là “Cuộc thập tự chinh Jarrow”."],
+      ["The organizers even sent their plans to the London police, to show that the march would be peaceful and {organized}.", "Những người tổ chức còn gửi kế hoạch cho cảnh sát London, để cho thấy cuộc tuần hành sẽ ôn hòa và có tổ chức."]
+    ],
+    [
+      ["The marchers left Jarrow on Monday, October 5, 1936, and their first stop, Chester-le-Street, was {fairly} close: only 12 miles away.", "Những người tuần hành rời Jarrow vào thứ Hai, ngày 5 tháng 10 năm 1936, và điểm dừng đầu tiên, Chester-le-Street, khá gần: chỉ cách 12 dặm."],
+      ["The times were {fixed} too: every morning, the men were ready at 8:45.", "Giờ giấc cũng cố định: sáng nào các ông cũng sẵn sàng lúc 8 giờ 45."],
+      ["Many of them walked in an {organized} way, like soldiers: 50 minutes of walking, then 10 minutes of rest.", "Nhiều người đi theo cách có tổ chức, như lính: đi 50 phút, rồi nghỉ 10 phút."],
+      ["Each day’s walk was {fairly} short, about 14 miles on average, but they did it again and again for almost four weeks.", "Mỗi chặng trong ngày khá ngắn, trung bình khoảng 14 dặm, nhưng họ đi lặp đi lặp lại như thế gần bốn tuần."],
+      ["A mouth organ band played on the road and kept the men {cheerful}, and Ellen Wilkinson, who walked parts of the route with them, led some of the songs.", "Một ban nhạc kèn harmonica chơi trên đường và giữ cho mọi người vui vẻ, và Ellen Wilkinson, người đi bộ cùng họ ở một số đoạn đường, đã bắt nhịp vài bài hát."],
+      ["Music and songs were a {cheerful} part of the long days.", "Âm nhạc và tiếng hát là phần vui vẻ của những ngày dài."],
+      ["The marchers {frequently} stopped to hold public meetings about Jarrow and other poor areas.", "Những người tuần hành thường xuyên dừng lại để tổ chức các buổi họp công khai về Jarrow và những vùng nghèo khác."],
+      ["Newspapers {frequently} wrote about them, and they called the men the “Jarrow Crusaders.”", "Báo chí thường xuyên viết về họ, và gọi những người đàn ông này là “Đoàn thập tự chinh Jarrow”."]
+    ],
+    [
+      ["In town after town, ordinary people got {involved}.", "Ở hết thị trấn này đến thị trấn khác, người dân bình thường cũng tham gia giúp đỡ."],
+      ["At every stop, {locals=local} offered the marchers food, clothes and, usually, {accommodation} for the night.", "Ở mỗi điểm dừng, người dân địa phương mời những người tuần hành đồ ăn, quần áo và thường là cả chỗ ngủ qua đêm."],
+      ["Many men had their boots repaired for free.", "Nhiều người được sửa giày ống miễn phí."],
+      ["In Barnsley, the {locals=local} even heated the public baths for them, and medical students looked after the men who got ill.", "Ở Barnsley, người dân địa phương còn làm nóng nhà tắm công cộng cho họ, và sinh viên y khoa chăm sóc những người bị ốm."],
+      ["Some nights, {though}, there was no {accommodation}, and the men slept in churchyards.", "Tuy vậy, có những đêm không có chỗ ở, và họ ngủ trong sân nhà thờ."]
+    ],
+    [
+      ["The marchers {intended=intend} to reach London before Parliament was {due} to open on November 3, and they arrived on October 31.", "Những người tuần hành định đến London trước ngày Quốc hội dự kiến khai mạc, 3 tháng 11, và họ đến nơi ngày 31 tháng 10."],
+      ["They carried a petition with about 11,000 signatures from people in Jarrow, in an oak box with gold letters.", "Họ mang theo một bản kiến nghị có khoảng 11.000 chữ ký của người dân Jarrow, đựng trong một chiếc hộp gỗ sồi khắc chữ vàng."],
+      ["The {complaint} in the petition was simple: the town needed work.", "Lời khiếu nại trong bản kiến nghị rất đơn giản: thị trấn cần việc làm."],
+      ["Many people knew about the march {due} to the newspapers, but on November 1 only a small crowd came to their meeting in Hyde Park.", "Nhiều người biết đến cuộc tuần hành nhờ báo chí, nhưng ngày 1 tháng 11 chỉ một đám đông nhỏ đến buổi họp của họ ở công viên Hyde Park."],
+      ["The Prime Minister, Stanley Baldwin, refused to meet them; reports said that he was “too busy.”", "Thủ tướng Stanley Baldwin từ chối gặp họ; theo các tin tức, ông “quá bận”."],
+      ["On November 4, Ellen Wilkinson gave the petition to Parliament, but the discussion was short.", "Ngày 4 tháng 11, Ellen Wilkinson trao bản kiến nghị cho Quốc hội, nhưng cuộc thảo luận rất ngắn."],
+      ["{Neither} Baldwin {nor} his government offered any help.", "Cả Baldwin lẫn chính phủ của ông đều không đưa ra bất kỳ sự giúp đỡ nào."],
+      ["Worse, the men lost their {unemployment} benefit.", "Tệ hơn, những người đàn ông bị mất tiền trợ cấp thất nghiệp."]
+    ],
+    [
+      ["The men went home by train, {disappointed}, although the people of Jarrow welcomed them as heroes.", "Những người đàn ông về nhà bằng tàu hỏa trong thất vọng, dù người dân Jarrow chào đón họ như những người hùng."],
+      ["It is easy to understand why they were {disappointed}.", "Thật dễ hiểu vì sao họ thất vọng."],
+      ["In the short term, the result was {disappointing}: the march brought {neither} new jobs {nor} new factories.", "Trước mắt, kết quả thật đáng thất vọng: cuộc tuần hành không mang lại việc làm mới, cũng không mang lại nhà máy mới."],
+      ["For men who had walked 300 miles, it was a {disappointing} end.", "Với những người đã đi bộ 300 dặm, đó là một cái kết đáng thất vọng."],
+      ["Some new work came later: a ship-breaking yard opened in 1938, and a steelworks in 1939.", "Một ít việc làm mới đến sau đó: một xưởng phá dỡ tàu mở năm 1938, và một nhà máy thép năm 1939."],
+      ["But real {employment} for most people came back only with the Second World War, when Britain needed workers again.", "Nhưng việc làm thực sự cho đa số người dân chỉ quay lại cùng Chiến tranh thế giới thứ hai, khi nước Anh lại cần công nhân."],
+      ["Even {though} the march did not save the town, it helped to change how many British people thought about {unemployed} workers.", "Dù cuộc tuần hành không cứu được thị trấn, nó đã góp phần thay đổi cách nhiều người Anh nghĩ về người lao động thất nghiệp."],
+      ["Ellen Wilkinson later became the first woman Minister of Education, and today a statue of the marchers stands in Jarrow.", "Ellen Wilkinson sau này trở thành nữ Bộ trưởng Giáo dục đầu tiên, và ngày nay một bức tượng những người tuần hành đứng ở Jarrow."]
+    ]
+  ],
+  gloss: { shipyard: 'xưởng đóng tàu', parliament: 'quốc hội', salvation: 'sự cứu rỗi, lối thoát', marchers: 'người tuần hành', soles: 'đế giày', hunger: 'cái đói', organ: '(mouth organ) kèn harmonica', churchyards: 'sân nhà thờ', petition: 'bản kiến nghị', signatures: 'chữ ký', oak: 'gỗ sồi', steelworks: 'nhà máy thép' },
+  grammar: [
+    ['relative-non-defining', 'Ellen Wilkinson, who walked parts of the route with them, led some of the songs'],
+    ['too-enough', 'fit enough for a long walk'],
+    ['causative-have', 'Many men had their boots repaired for free'],
+    ['reported-speech', 'told Parliament that only 100 men now had work'],
+    ['past-perfect', 'For men who had walked 300 miles']
+  ],
+  practiceNote: 'Bài về cuộc tuần hành Jarrow năm 1936: xưởng đóng tàu Palmer’s đóng cửa năm 1934, thất nghiệp hơn 70%; 200 người đàn ông được chọn (sau khi khám sức khỏe) đi bộ gần 300 dặm từ ngày 5/10 đến 31/10/1936, mang bản kiến nghị khoảng 11.000 chữ ký; Thủ tướng Baldwin từ chối gặp, chính phủ không giúp. Từ vựng: việc làm (employment, unemployment, unemployed, living, complaint), kế hoạch (planning, organized, fixed, determine, intend, due, length, fairly, frequently), con người và cảm xúc (locals, involved, accommodation, cheerful, disappointed, disappointing), liên từ (though, neither … nor). Ngữ pháp: have + vật + V3, tính từ + enough, mệnh đề quan hệ có dấu phẩy, câu tường thuật, quá khứ hoàn thành.',
+  practice: [
+    { t: 'mc', k: 'c:main', q: 'What is the main idea of the story?', o: ['In 1936, 200 unemployed men from Jarrow walked nearly 300 miles to London to ask for work, but the government did not help.', 'The men from Jarrow walked to London and got new jobs at once.', 'Jarrow’s shipyard built 1,000 ships in one year.'], a: 0, why: 'Tuần hành đòi việc làm; chính phủ không giúp.', ref: 'Neither Baldwin nor his government offered any help' },
+    { t: 'mc', k: 'c:why', q: 'Why did so many people in Jarrow have no work?', o: ['The shipyard closed in 1934.', 'The coal mines opened.', 'The men did not want to work.'], a: 0, why: 'Xưởng đóng tàu đóng cửa năm 1934.', ref: 'in 1934 the shipyard closed' },
+    { t: 'mc', k: 'c:runciman', q: 'What did Walter Runciman’s answer mean?', o: ['The town had to save itself.', 'The government would build a new shipyard.', 'The men should go to London.'], a: 0, why: 'Thị trấn phải tự cứu mình.', ref: 'the town had to save itself' },
+    { t: 'mc', k: 'c:choose', q: 'Why did doctors examine every man?', o: ['To find out if he was fit enough for a long walk', 'To give him new boots', 'To find a job for him'], a: 0, why: 'Để xem có đủ sức khỏe không.', ref: 'Doctors examined every man' },
+    { t: 'mc', k: 'c:help', q: 'What did locals usually give the marchers?', o: ['Food, clothes and a place to sleep', 'Money and train tickets', 'New jobs'], a: 0, why: 'Đồ ăn, quần áo, chỗ ngủ.', ref: 'offered the marchers food, clothes' },
+    { t: 'mc', k: 'c:petition', q: 'What did the petition ask for?', o: ['Work for the town', 'A new church', 'Free food'], a: 0, why: 'Thị trấn cần việc làm.', ref: 'the town needed work' },
+    { t: 'mc', k: 'c:infer', q: 'Why did the organizers send their plans to the London police?', o: ['To show that the march would be peaceful and organized', 'To ask the police to walk with them', 'To stop the march'], a: 0, why: 'Cho thấy cuộc tuần hành ôn hòa, có tổ chức.', ref: 'to show that the march would be peaceful and organized' },
+    { t: 'mc', k: 'c:tf', q: 'True or false? “The march brought new jobs to Jarrow at once.”', o: ['True', 'False'], a: 1, why: 'Sai: trước mắt không có việc làm mới.', ref: 'the march brought neither new jobs nor new factories' },
+    { t: 'order', k: 'c:sequence', a: 'Many men had their boots repaired for free.', why: 'have + vật + V3.', ref: 'Many men had their boots repaired for free' },
+    { t: 'dict', k: 'c:listen', a: 'Unemployment in Jarrow rose to more than 70 percent.', why: 'rose = quá khứ của rise.' },
+    { t: 'mc', k: 'w:living', q: 'Ships gave thousands of men a ______.', o: ['living', 'length', 'complaint'], a: 0, why: 'a living = kế sinh nhai.', ref: 'Ships gave thousands of men a living' },
+    { t: 'mc', k: 'w:determine', q: 'Doctors examined every man to ______ whether he was fit enough.', o: ['determine', 'intend', 'offer'], a: 0, why: 'determine whether = xác định xem.', ref: 'to determine whether he was fit enough' },
+    { t: 'mc', k: 'w:fixed', q: 'In the end, there was a ______ plan of 21 stops.', o: ['fixed', 'cheerful', 'disappointed'], a: 0, why: 'fixed = cố định.', ref: 'there was a fixed plan of 21 stops' },
+    { t: 'gap', k: 'w:fairly', q: 'Their first stop was ______ close: only 12 miles away.', a: ['fairly'], why: 'fairly = khá.', ref: 'was fairly close' },
+    { t: 'match', k: 'w:set-work', q: 'Match the words with their meanings.', pairs: [['unemployed', 'without a job'], ['employment', 'work that you are paid for'], ['accommodation', 'a place to live, stay or sleep'], ['complaint', 'something you say when you are not happy about something']], why: 'unemployed = thất nghiệp; employment = việc làm; accommodation = chỗ ở; complaint = lời khiếu nại.', ref: 'Thousands of unemployed men had no way to earn a living' },
+    { t: 'mc', k: 'w:local', q: 'At every stop, ______ offered the marchers food.', o: ['locals', 'organizers', 'candidates'], a: 0, why: 'locals = người dân địa phương.', ref: 'locals offered the marchers food' },
+    { t: 'mc', k: 'w:due', q: 'They wanted to reach London before Parliament was ______ to open.', o: ['due', 'fixed', 'involved'], a: 0, why: 'be due to do = dự kiến sẽ.', ref: 'before Parliament was due to open' },
+    { t: 'mc', k: 'w:disappointing', q: 'In the short term, the result was ______.', o: ['disappointing', 'disappointed', 'cheerful'], a: 0, why: 'Sự việc gây thất vọng: -ing; người cảm thấy: -ed.', ref: 'the result was disappointing' },
+    { t: 'gap', k: 'w:neither', q: '______ Baldwin nor his government offered any help.', a: ['Neither', 'neither'], why: 'neither … nor = không … cũng không.', ref: 'Neither Baldwin nor his government offered any help' },
+    { t: 'mc', k: 'g:causative-have', q: 'Many men had their boots ______ for free.', o: [['repaired', 'Đúng: have + vật + V3.'], ['repair', 'Sai: cần V3.'], ['repairing', 'Sai dạng.']], a: 0, why: 'have something done.', ref: 'Many men had their boots repaired for free' },
+    { t: 'error', k: 'g:too-enough', q: 'Doctors examined every man to see whether he was fit enough to walking 300 miles.', wrong: 'walking', fix: 'walk', why: 'Tính từ + enough + to + V nguyên mẫu.', ref: 'fit enough for a long walk' },
+    { t: 'mc', k: 'g:relative-non-defining', q: 'Ellen Wilkinson, ______ walked parts of the route with them, led some of the songs.', o: [['who', 'Đúng: người, mệnh đề có dấu phẩy.'], ['which', 'Sai: which chỉ vật.'], ['where', 'Sai: where chỉ nơi chốn.']], a: 0, why: 'N, who + V.', ref: 'Ellen Wilkinson, who walked parts of the route with them' },
+    { t: 'mc', k: 'g:past-perfect', q: 'For men who ______ 300 miles, it was a disappointing end.', o: [['had walked', 'Đúng: việc xảy ra trước cái kết.'], ['have walked', 'Sai: chuyện quá khứ.'], ['walk', 'Sai thì.']], a: 0, why: 'had + V3.', ref: 'For men who had walked 300 miles' }
+  ],
+  extra: [],
+  write: { vi: 'Viết 3–5 câu tiếng Anh về một lần bạn lập kế hoạch cho một việc lớn (một chuyến đi, một đợt đo FAI…). Cố dùng các từ dưới đây.', use: ['planning', 'fixed', 'determine', 'involved', 'accommodation'], model: 'Last month, our team went to a customer’s factory for a mold trial. Three people were involved in the planning. First, we had to determine which parts to measure and which gauges to bring. The schedule was fixed, so we booked accommodation near the factory two weeks before the trip.' },
+  fact: { card: 'Xưởng đóng tàu Palmer’s ở Jarrow (mở năm 1851, đóng khoảng 1.000 con tàu) đóng cửa năm 1934, thất nghiệp lên hơn 70%. Ngày 5/10/1936, 200 người đàn ông (chọn từ khoảng 1.200 người tình nguyện, đã khám sức khỏe) rời Jarrow, đi gần 300 dặm qua 21 điểm dừng và đến London ngày 31/10. Họ mang bản kiến nghị khoảng 11.000 chữ ký trong hộp gỗ sồi. Thủ tướng Stanley Baldwin từ chối gặp; ngày 4/11 Ellen Wilkinson trao kiến nghị cho Quốc hội, nhưng chính phủ không nhượng bộ.',
+    bonus: 'A second-hand bus followed the marchers with cooking supplies, blankets and tents.', bonusSrc: 'The National Archives — Planning the Jarrow Crusade' },
+  sources: [
+    { t: 'Historic England (Heritage Calling) — The story of the Jarrow March', u: 'https://heritagecalling.com/2021/10/04/the-story-of-the-jarrow-march/' },
+    { t: 'The National Archives — Planning the Jarrow Crusade', u: 'https://www.nationalarchives.gov.uk/explore-the-collection/stories/planning-the-jarrow-crusade/' },
+    { t: 'TUC 150 — The Jarrow March', u: 'https://tuc150.tuc.org.uk/stories/the-jarrow-march/' },
+    { t: 'Historic UK — Jarrow March', u: 'https://historic-uk.com/HistoryUK/HistoryofBritain/Jarrow-March' }
+  ],
+  note: 'TUC 150: mỏ than đưa công nhân đến đầu những năm 1800, dân số 3.500 năm 1821; xưởng Palmer’s hạ thủy chiếc tàu đầu tiên năm 1852, dân số 35.000 năm 1891; không còn đơn hàng, xưởng đóng cửa, thất nghiệp khoảng 70% vào năm 1932; Ellen Wilkinson từng làm việc có lương cho Liên hiệp các Hội Quyền bầu cử của Phụ nữ, thắng ghế năm 1935; năm 1936 Walter Runciman (Chủ tịch Ủy ban Thương mại) nói “Jarrow must work out its own salvation”; lãnh đạo chính trị, kinh doanh, tôn giáo lên kế hoạch; chọn 200 người khỏe từ 1.200 người tình nguyện; đến nơi đúng lúc Quốc hội khai mạc ngày 3/11; ban nhạc kèn harmonica; báo chí đặt tên “Jarrow crusaders”; họp công khai dọc đường; ở mỗi điểm dừng được mời đồ ăn, quần áo, sửa giày và thường có chỗ ngủ; Barnsley làm nóng nhà tắm công cộng; sinh viên y khoa chữa cho người ốm; kiến nghị 11.000 chữ ký trong hộp gỗ sồi chữ vàng; chính sách không đổi, thất nghiệp kéo dài đến Thế chiến II; Wilkinson sau làm Bộ trưởng Giáo dục. National Archives: ý tưởng của thị trưởng Billy Thompson và chủ tịch hội đồng David Riley; báo kế hoạch cho Cảnh sát London; khoảng 1.200 người tình nguyện, chọn 200, qua khám sức khỏe; mỗi người được huy hiệu, áo chống mưa, hai đôi tất, đế giày mới; xe buýt cũ chở đồ nấu ăn, chăn, lều; tập trung 8:45 mỗi sáng; gần 300 dặm, 21 điểm dừng định trước, năm ngày nghỉ vào Chủ nhật; điểm đầu Chester-le-Street cách 12 dặm; thỉnh thoảng ngủ trong sân nhà thờ; thất nghiệp hơn 75% sau khi xưởng đóng cửa năm 1934; chính phủ không nhượng bộ; người tuần hành bị mất trợ cấp thất nghiệp. Heritage Calling: 200 người do hội đồng chọn, khám sức khỏe để đủ sức đi; trước khi đóng cửa có 8.000 người làm việc; Wilkinson nói trước Quốc hội chỉ còn 100 người làm theo một chương trình tạm thời; đi kiểu nhà binh 50 phút, nghỉ 10 phút; David Riley muốn tên “Jarrow Crusade” để phân biệt với các cuộc tuần hành đói khác; Wilkinson bắt nhịp vài bài hát; ngày 1/11 ít người dự buổi biểu tình ở Hyde Park Corner; Baldwin “quá bận”; Wilkinson trao kiến nghị ngày 4/11; về nhà bằng tàu hỏa, được đón như anh hùng; năm 1938 có xưởng phá dỡ tàu, năm 1939 nhà máy thép; cuộc tuần hành góp phần đổi thái độ xã hội; tượng đồng ở Jarrow. Historic UK: Palmer’s thành lập năm 1851, đóng khoảng 1.000 tàu trong tám mươi năm, đóng cửa năm 1934; Baldwin từ chối gặp; thảo luận ở Hạ viện ngắn; những người tuần hành trở về chán nản; kiến nghị hơn 11.000 chữ ký. Khác biệt giữa các nguồn: số chữ ký là 12.000 (Heritage Calling) hay hơn 11.000 (Historic UK, TUC) — bài dùng “khoảng 11.000”; tỷ lệ thất nghiệp khoảng 70% (TUC, năm 1932) hay hơn 75% (National Archives, sau năm 1934) — bài dùng “hơn 70 phần trăm”; TUC ghi nhầm năm khởi hành là 1932; thời gian đi là 25 hay 26 ngày tùy nguồn; Heritage Calling ghi “Minister for Education”, tên chức vụ năm 1945 là Minister of Education (kiến thức phổ thông); xưởng mở năm 1851 (Historic UK) còn tàu đầu tiên hạ thủy năm 1852 (TUC). “Trung bình khoảng 14 dặm mỗi ngày” là phép tính của bài (khoảng 300 dặm chia 21 chặng). Kiến thức phổ thông: Jarrow ở bên sông Tyne, vùng đông bắc nước Anh; khủng hoảng Phố Wall năm 1929. Các câu “than khai sinh thị trấn, tàu làm nó lớn”, “câu trả lời thúc thị trấn hành động”, “âm nhạc là phần vui vẻ”, “dễ hiểu vì sao họ thất vọng”, “một cái kết đáng thất vọng” là nhận xét của bài.',
+  verified: '2026-11-15'
+});

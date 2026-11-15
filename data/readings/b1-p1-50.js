@@ -1,0 +1,113 @@
+EI.words('B1', `
+# ---- b1-p1-50 Tall, Grande, Venti
+apologize|v|/əˈpɑːlədʒaɪz/|to say that you are sorry for doing something wrong or for causing a problem|He {apologized} for being late.|apologize (to somebody) for something|xin lỗi|2|Anh viết apologise.|apology (n)
+medium~adj|adj|/ˈmiːdiəm/|in the middle between two sizes or amounts; not large and not small|I’d like a {medium} pizza, please.|medium size; of medium height|cỡ vừa, trung bình|2||
+tip~v|v|/tɪp/|to give somebody an extra amount of money to thank them for a service|Do you {tip} taxi drivers in your country?|tip somebody; tip well|cho tiền boa|2|tip (n) = tiền boa; mẹo (A2).|tip (n)
+`);
+EI.reading({
+  id: 'b1-p1-50', level: 'B1', pass: 1, n: 50,
+  title: 'Tall, Grande, Venti',
+  topic: 'food', era: '1971–2018', year: 1987, region: 'United States',
+  predict: { q: 'Ở Starbucks, cốc “grande” (tiếng Ý nghĩa là “lớn”) thực ra là cỡ nào?', o: ['Cỡ vừa', 'Cỡ lớn nhất', 'Cỡ nhỏ nhất'] },
+  targets: ['apologize', 'medium~adj', 'tip~v'],
+  text: [
+    [
+      ["Walk into a Starbucks almost anywhere in the world, and you may hear a customer ask for a “grande.”", "Bước vào một quán Starbucks gần như ở bất cứ đâu trên thế giới, bạn có thể nghe một khách hàng gọi một ly “grande”."],
+      ["In Italian, grande means “large,” but at Starbucks it is not the biggest cup.", "Trong tiếng Ý, grande nghĩa là “lớn”, nhưng ở Starbucks đó không phải là cốc to nhất."],
+      ["A tall is the usual small size, a grande is the {medium=medium~adj} size, and a venti is bigger.", "Tall là cỡ nhỏ thông thường, grande là cỡ vừa, còn venti thì lớn hơn."],
+      ["Why does a coffee company from Seattle use Italian words, and why is “large” {medium=medium~adj}?", "Tại sao một công ty cà phê ở Seattle lại dùng từ tiếng Ý, và tại sao “lớn” lại là cỡ vừa?"],
+      ["The answer is a story about beans, a trip to Italy and a few cups.", "Câu trả lời là một câu chuyện về hạt cà phê, một chuyến đi Ý và vài chiếc cốc."]
+    ],
+    [
+      ["On March 30, 1971, three friends, Jerry Baldwin, Gordon Bowker and Zev Siegl, opened a small shop near Pike Place Market in Seattle.", "Ngày 30 tháng 3 năm 1971, ba người bạn Jerry Baldwin, Gordon Bowker và Zev Siegl mở một cửa hàng nhỏ gần chợ Pike Place ở Seattle."],
+      ["It sold coffee beans, tea, spices and coffee machines, but it did not sell cups of coffee; customers could only try small free samples.", "Cửa hàng bán hạt cà phê, trà, gia vị và máy pha cà phê, nhưng không bán cà phê pha sẵn; khách chỉ được nếm thử một ít miễn phí."],
+      ["Bowker found the name by chance: he saw a town called “Starbo” on an old map, and, as he said, “I immediately connected it to the character in Moby Dick,” the famous novel about a ship.", "Bowker tìm ra cái tên một cách tình cờ: ông thấy một thị trấn tên “Starbo” trên một tấm bản đồ cũ, và như ông kể, “Tôi lập tức liên tưởng đến nhân vật trong Moby Dick”, cuốn tiểu thuyết nổi tiếng về một con tàu."],
+      ["The character, Starbuck, works on that ship.", "Nhân vật đó, Starbuck, làm việc trên con tàu ấy."],
+      ["The logo, which Terry Heckler designed, was a sea woman with two tails, and the owners liked to think that she called customers in.", "Biểu tượng do Terry Heckler vẽ là một nàng tiên cá có hai đuôi, và những người chủ thích nghĩ rằng nàng gọi khách hàng bước vào."],
+      ["It has been changed three times since then, in 1987, 1992 and 2011.", "Từ đó đến nay nó đã được thay đổi ba lần, vào các năm 1987, 1992 và 2011."],
+      ["The beans came at first from Alfred Peet, who had a coffee company in California, and he taught Baldwin how to roast them dark.", "Ban đầu hạt cà phê được lấy từ Alfred Peet, người có một công ty cà phê ở California, và ông dạy Baldwin cách rang đậm."]
+    ],
+    [
+      ["In September 1982, the company hired a young man, Howard Schultz, to lead its marketing, although the owners had first decided not to hire him.", "Tháng 9 năm 1982, công ty thuê một chàng trai trẻ, Howard Schultz, phụ trách tiếp thị, dù lúc đầu những người chủ đã quyết định không thuê ông."],
+      ["The next year, he went to a show for coffee businesses in Italy, and there he drank his first latte.", "Năm sau, ông đến một hội chợ ngành cà phê ở Ý, và tại đó ông uống ly latte đầu tiên trong đời."],
+      ["He loved the coffee bars of Italy, where people stood and talked over a small cup of espresso.", "Ông mê những quán cà phê ở Ý, nơi người ta đứng trò chuyện bên một tách espresso nhỏ."],
+      ["Back in Seattle, he said that Starbucks sold great beans but did not serve coffee by the cup.", "Trở về Seattle, ông nói rằng Starbucks bán hạt cà phê tuyệt vời nhưng lại không bán cà phê theo ly."],
+      ["In May 1984, Starbucks opened a store with an espresso bar in the center of Seattle.", "Tháng 5 năm 1984, Starbucks mở một cửa hàng có quầy espresso ở trung tâm Seattle."],
+      ["Not everyone remembers it in the same way: Baldwin later said that one Starbucks store was already selling coffee by the cup before that.", "Không phải ai cũng nhớ giống nhau: Baldwin sau này nói một cửa hàng Starbucks đã bán cà phê theo ly từ trước đó."]
+    ],
+    [
+      ["In 1986, Schultz left and started his own coffee company, Il Giornale, and Starbucks put $150,000 into it.", "Năm 1986, Schultz nghỉ việc và lập công ty cà phê riêng, Il Giornale, và Starbucks góp 150.000 đô la vào đó."],
+      ["Like the bars in Italy, Il Giornale sold coffee in three sizes: short, tall and grande.", "Giống các quán ở Ý, Il Giornale bán cà phê theo ba cỡ: short, tall và grande."],
+      ["In 1987, Bowker sold his part of Starbucks, and Baldwin decided to sell the rest and keep Peet’s, which Starbucks had bought in 1984.", "Năm 1987, Bowker bán phần của mình ở Starbucks, còn Baldwin quyết định bán phần còn lại và giữ Peet’s, công ty mà Starbucks đã mua năm 1984."],
+      ["That same year, Schultz and a group of investors bought Starbucks for $3.8 million, and the Italian names came with him.", "Một năm sau, năm 1987, Schultz và một nhóm nhà đầu tư mua lại Starbucks với giá 3,8 triệu đô la, và những cái tên tiếng Ý đi theo ông."]
+    ],
+    [
+      ["At first, a short was 8 ounces, a tall was 12 and a grande was 16.", "Lúc đầu, short là 8 ao-xơ, tall là 12 và grande là 16."],
+      ["Then, in the 1990s, Starbucks added a bigger cup, the venti, which means “twenty” in Italian: 20 ounces for hot drinks and 24 for cold ones.", "Rồi những năm 1990, Starbucks thêm một cốc lớn hơn, venti, nghĩa là “hai mươi” trong tiếng Ý: 20 ao-xơ cho đồ uống nóng và 24 cho đồ lạnh."],
+      ["The short slowly disappeared from the menu, so the tall became the usual small size, and the grande moved to the middle.", "Cỡ short dần biến mất khỏi thực đơn, nên tall trở thành cỡ nhỏ thông thường, còn grande chuyển xuống giữa."],
+      ["That is why, if you want a {medium=medium~adj} coffee at Starbucks, you ask for a grande.", "Đó là lý do nếu bạn muốn một ly cà phê cỡ vừa ở Starbucks, bạn gọi grande."],
+      ["There is also a tiny demi cup of 3 ounces for espresso.", "Ngoài ra còn có cốc demi bé xíu 3 ao-xơ dành cho espresso."],
+      ["In 2011, an even bigger cup, the trenta, Italian for “thirty,” came to the United States.", "Năm 2011, một cốc còn lớn hơn, trenta, tiếng Ý nghĩa là “ba mươi”, xuất hiện ở Mỹ."]
+    ],
+    [
+      ["Coffee shops in America also brought a question that many visitors find difficult: should you {tip=tip~v}?", "Các quán cà phê ở Mỹ cũng mang lại một câu hỏi mà nhiều du khách thấy khó: có nên cho tiền boa không?"],
+      ["At Starbucks, there is often a tip jar near the counter, and the company has faced court cases about how the money in the jar is shared among workers.", "Ở Starbucks thường có một hũ tiền boa gần quầy, và công ty từng vướng các vụ kiện về cách chia tiền trong hũ cho nhân viên."],
+      ["When Starbucks added tipping to its phone app, customers could {tip=tip~v} 50 cents, $1 or $2 up to two hours after they paid.", "Khi Starbucks thêm tính năng tiền boa vào ứng dụng điện thoại, khách có thể boa 50 xu, 1 hoặc 2 đô la trong vòng hai giờ sau khi thanh toán."],
+      ["At that time, it worked in about 7,000 of the company’s own stores, and about one in ten purchases was made with a phone.", "Khi đó tính năng này có ở khoảng 7.000 cửa hàng do công ty sở hữu, và khoảng một trong mười giao dịch được thực hiện bằng điện thoại."],
+      ["The company said that the money went to the workers in cash, like their other tips.", "Công ty nói số tiền này được trả cho nhân viên bằng tiền mặt, giống các khoản tiền boa khác."],
+      ["Some customers are happy to {tip=tip~v} for friendly service, but others feel that they already pay enough for their coffee.", "Một số khách vui vẻ boa cho sự phục vụ thân thiện, nhưng số khác thấy họ đã trả đủ tiền cho ly cà phê."]
+    ],
+    [
+      ["Big companies make mistakes too, and sometimes they have to {apologize}.", "Các công ty lớn cũng mắc sai lầm, và đôi khi họ phải xin lỗi."],
+      ["In April 2018, two Black men were quietly waiting to meet someone in a Starbucks in Philadelphia.", "Tháng 4 năm 2018, hai người đàn ông da đen đang lặng lẽ chờ gặp một người trong một quán Starbucks ở Philadelphia."],
+      ["One of them asked to use the bathroom before he had bought anything, and workers called the police, who arrested the two men.", "Một người hỏi đi nhà vệ sinh trước khi mua gì, và nhân viên gọi cảnh sát, cảnh sát đã bắt hai người."],
+      ["Starbucks {apologized=apologize}, and its leader, Kevin Johnson, met the two men and promised to make changes so that it would never happen again.", "Starbucks đã xin lỗi, và người đứng đầu công ty, Kevin Johnson, gặp hai người và hứa sẽ thay đổi để chuyện này không bao giờ lặp lại."],
+      ["But the company did not only {apologize}: on the afternoon of May 29, it closed more than 8,000 of its stores in the United States to train its workers against unfair treatment of people because of their race.", "Nhưng công ty không chỉ xin lỗi: chiều ngày 29 tháng 5, họ đóng cửa hơn 8.000 cửa hàng ở Mỹ để đào tạo nhân viên chống đối xử bất công với người khác vì chủng tộc."],
+      ["Stores that were not owned by the company received the training materials later.", "Những cửa hàng không do công ty sở hữu nhận tài liệu đào tạo sau đó."],
+      ["Howard Schultz said, “We will learn from our mistakes.”", "Howard Schultz nói: “Chúng tôi sẽ học từ những sai lầm của mình.”"]
+    ]
+  ],
+  gloss: { grande: 'grande (tiếng Ý: lớn)', venti: 'venti (tiếng Ý: hai mươi)', trenta: 'trenta (tiếng Ý: ba mươi)', beans: 'hạt (cà phê)', spices: 'gia vị', samples: 'mẫu thử', immediately: 'ngay lập tức', novel: 'tiểu thuyết', logo: 'biểu tượng (logo)', tails: 'đuôi', marketing: 'tiếp thị', latte: 'cà phê latte', espresso: 'cà phê espresso', investors: 'nhà đầu tư', ounces: 'ao-xơ (khoảng 28 ml)', menu: 'thực đơn', jar: 'cái hũ, lọ', counter: 'quầy', app: 'ứng dụng', tipping: 'việc cho tiền boa', bathroom: 'nhà vệ sinh', arrested: 'bắt giữ', unfair: 'bất công', treatment: 'sự đối xử', race: 'chủng tộc', bowker: 'Bowker (tên riêng)', roast: 'rang', purchases: 'lần mua hàng', demi: 'demi (cỡ cốc rất nhỏ)', tiny: 'bé xíu' },
+  grammar: [
+    ['reported-speech', 'he said that Starbucks sold great beans'],
+    ['past-perfect', 'before he had bought anything'],
+    ['relative-non-defining', 'the venti, which means “twenty” in Italian'],
+    ['passive-tenses', 'how the money in the jar is shared among workers'],
+    ['second-conditional', 'if you want a medium coffee at Starbucks, you ask for a grande']
+  ],
+  practiceNote: 'Bài về Starbucks: cửa hàng đầu tiên năm 1971 ở Seattle chỉ bán hạt cà phê; tên lấy từ nhân vật Starbuck trong Moby Dick; Howard Schultz đến Ý năm 1983, mê quán espresso, lập Il Giornale năm 1986 với cỡ short, tall, grande, rồi mua Starbucks năm 1987; vì sao grande (“lớn”) lại là cỡ vừa; chuyện tiền boa; năm 2018 công ty xin lỗi sau vụ bắt người ở Philadelphia và đóng hơn 8.000 cửa hàng để đào tạo. Từ vựng: medium, tip (v), apologize. Ngữ pháp: câu tường thuật, quá khứ hoàn thành, mệnh đề which bổ sung, bị động hiện tại, câu điều kiện.',
+  practice: [
+    { t: 'mc', k: 'c:main', q: 'What is the main idea of the story?', o: ['Starbucks grew from a small bean shop, took its cup names from Italy, and has also had to learn from mistakes.', 'Starbucks was started in Italy.', 'Starbucks only sells large cups of coffee.'], a: 0, why: 'Từ cửa hàng hạt cà phê, tên cỡ ly từ Ý, và cũng phải học từ sai lầm.', ref: 'The answer is a story about beans, a trip to Italy and a few cups' },
+    { t: 'mc', k: 'c:first', q: 'What did the first Starbucks shop sell?', o: ['Coffee beans, tea, spices and machines', 'Cups of espresso', 'Cakes and sandwiches'], a: 0, why: 'Hạt cà phê, trà, gia vị và máy; không bán ly cà phê.', ref: 'It sold coffee beans, tea, spices and coffee machines' },
+    { t: 'mc', k: 'c:name', q: 'Where does the name Starbucks come from?', o: ['A character in the novel Moby Dick', 'The name of a founder', 'A street in Seattle'], a: 0, why: 'Nhân vật Starbuck trong Moby Dick.', ref: 'I immediately connected it to the character in Moby Dick' },
+    { t: 'mc', k: 'c:italy', q: 'What did Howard Schultz love in Italy?', o: ['The coffee bars, where people stood and talked over espresso', 'The football', 'The large cups of coffee'], a: 0, why: 'Các quán espresso ở Ý.', ref: 'He loved the coffee bars of Italy' },
+    { t: 'mc', k: 'c:infer', q: 'Why did the grande become the medium size?', o: ['The short disappeared and the bigger venti was added.', 'Italians drink small coffees.', 'Schultz did not like large cups.'], a: 0, why: 'Short biến mất, thêm venti, nên grande nằm giữa.', ref: 'the grande moved to the middle' },
+    { t: 'mc', k: 'c:tf', q: 'True or false? “Everyone agrees about when Starbucks first sold coffee by the cup.”', o: ['True', 'False'], a: 1, why: 'Sai: Baldwin nhớ khác Schultz.', ref: 'Not everyone remembers it in the same way' },
+    { t: 'mc', k: 'c:2018', q: 'What did Starbucks do after the problem in Philadelphia?', o: ['It apologized and closed more than 8,000 stores for training.', 'It closed the Philadelphia store forever.', 'It did nothing.'], a: 0, why: 'Xin lỗi và đóng hơn 8.000 cửa hàng để đào tạo.', ref: 'it closed more than 8,000 of its stores' },
+    { t: 'order', k: 'c:sequence', a: 'The character, Starbuck, works on that ship.', why: 'character = nhân vật.', ref: 'The character, Starbuck, works on that ship' },
+    { t: 'dict', k: 'c:listen', a: 'Big companies make mistakes too.', why: 'make mistakes = mắc sai lầm.' },
+    { t: 'mc', k: 'w:medium~adj', q: 'If you want a ______ coffee at Starbucks, you ask for a grande.', o: ['medium', 'tip', 'short'], a: 0, why: 'medium = cỡ vừa.', ref: 'if you want a medium coffee at Starbucks' },
+    { t: 'mc', k: 'w:tip~v', q: 'Customers could ______ 50 cents, $1 or $2 in the app.', o: ['tip', 'apologize', 'serve'], a: 0, why: 'tip (v) = cho tiền boa.', ref: 'customers could tip 50 cents, $1 or $2' },
+    { t: 'gap', k: 'w:apologize', q: 'Big companies make mistakes too, and sometimes they have to ______.', a: ['apologize'], why: 'apologize = xin lỗi.', ref: 'sometimes they have to apologize' },
+    { t: 'match', k: 'w:set-coffee', q: 'Match the words with their meanings.', pairs: [['medium', 'in the middle between small and large'], ['tip', 'to give extra money to thank someone'], ['apologize', 'to say that you are sorry'], ['sample', 'a small amount to try']], why: 'medium = cỡ vừa; tip = cho tiền boa; apologize = xin lỗi; sample = mẫu thử.', ref: 'customers could only try small free samples' },
+    { t: 'gap', k: 'w:tip~v', q: 'Some customers are happy to ______ for friendly service.', a: ['tip'], why: 'tip (v) = boa.', ref: 'Some customers are happy to tip for friendly service' },
+    { t: 'mc', k: 'w:apologize', q: 'Starbucks ______, and its leader met the two men.', o: ['apologized', 'tipped', 'served'], a: 0, why: 'apologize → apologized.', ref: 'Starbucks apologized' },
+    { t: 'mc', k: 'g:reported-speech', q: 'Schultz said that Starbucks ______ great beans but did not serve coffee by the cup.', o: [['sold', 'Đúng: lùi thì sells → sold.'], ['sells', 'Sai: phải lùi thì sau said.'], ['selling', 'Sai: thiếu động từ chia.']], a: 0, why: 'said that + quá khứ.', ref: 'he said that Starbucks sold great beans' },
+    { t: 'mc', k: 'g:past-perfect', q: 'One of them asked to use the bathroom before he ______ anything.', o: [['had bought', 'Đúng: quá khứ hoàn thành sau before.'], ['has bought', 'Sai thì.'], ['buys', 'Sai thì.']], a: 0, why: 'before + had V3 (nhấn mạnh việc chưa xảy ra).', ref: 'before he had bought anything' },
+    { t: 'error', k: 'g:relative-non-defining', q: 'Starbucks added the venti, that means “twenty” in Italian.', wrong: 'that', fix: 'which', why: 'Sau dấu phẩy dùng which, không dùng that.', ref: 'the venti, which means “twenty” in Italian' },
+    { t: 'mc', k: 'g:passive-tenses', q: 'There were court cases about how the money in the jar ______ among workers.', o: [['is shared', 'Đúng: bị động hiện tại.'], ['shares', 'Sai: tiền không tự chia.'], ['is sharing', 'Sai dạng.']], a: 0, why: 'is/are + V3.', ref: 'how the money in the jar is shared among workers' }
+  ],
+  extra: [],
+  write: { vi: 'Viết 3–5 câu tiếng Anh (email ngắn) xin lỗi khách hàng vì gửi báo cáo FAI trễ, và nói rõ bạn sẽ làm gì. Cố dùng các từ dưới đây.', use: ['apologize', 'medium', 'tip'], model: 'Dear Ms. Park, I apologize for sending the FAI report one day late. Two medium-sized cavities needed extra measuring on the CMM. We have changed our plan, so this will not happen again. A useful tip from our team: please check the second page for the new datum.' },
+  fact: { card: 'Starbucks mở cửa hàng đầu tiên ngày 30/3/1971 gần chợ Pike Place, Seattle, ban đầu chỉ bán hạt cà phê, trà và gia vị. Tên lấy từ nhân vật Starbuck trong tiểu thuyết Moby Dick. Howard Schultz đến Ý năm 1983, lập Il Giornale năm 1986 với cỡ short, tall, grande, rồi mua Starbucks năm 1987. Khi cỡ short biến mất và venti (20 ao-xơ) được thêm vào những năm 1990, grande (16 ao-xơ, tiếng Ý là “lớn”) trở thành cỡ vừa.',
+    bonus: 'After the arrests in Philadelphia in 2018, Howard Schultz said: “We will learn from our mistakes.”', bonusSrc: 'WBEZ / NPR — Starbucks Closing 8,000 Stores For An Afternoon For Racial-Bias Education (2018)' },
+  sources: [
+    { t: 'HistoryLink — Starbucks: The Early Years', u: 'https://historylink.org/file/20292' },
+    { t: 'Food Republic — The Reason Starbucks Doesn’t Call Its Coffee Sizes Small, Medium, Or Large', u: 'https://www.foodrepublic.com/1508125/reason-behind-starbucks-coffee-size-name' },
+    { t: 'The Takeout — Here’s Why Starbucks Cup Sizes Aren’t The Usual Small, Medium, And Large', u: 'https://www.thetakeout.com/1863818/how-starbucks-cup-sizes-were-named/' },
+    { t: 'NBC News — Starbucks Adds Digital Tipping Option to Mobile Payment App', u: 'https://www.nbcnews.com/business/consumer/starbucks-adds-digital-tipping-option-mobile-payment-app-n51091' },
+    { t: 'WBEZ (NPR) — Starbucks Closing 8,000 Stores For An Afternoon For Racial-Bias Education (2018)', u: 'https://wbez.org/news/2018/04/17/starbucks-closing-8-000-stores-for-an-afternoon-for-racial-bias-education' }
+  ],
+  note: 'HistoryLink: Jerry Baldwin, Gordon Bowker và Zev Siegl mở cửa hàng đầu tiên ngày 30/3/1971 ở một mặt bằng thuê gần chợ Pike Place, Seattle; bán hạt cà phê, trà, gia vị, dụng cụ pha; không bán cà phê pha sẵn, chỉ cho nếm thử; Bowker thấy thị trấn “Starbo” trên một bản đồ khai mỏ cũ, câu “I immediately connected it to the character in Moby Dick”; Terry Heckler thiết kế logo nàng tiên cá hai đuôi, những người chủ coi đó là nàng siren gọi khách, logo được sửa năm 1987, 1992 và 2011; Alfred Peet (Peet’s, Berkeley, California) cung cấp hạt ban đầu và dạy Baldwin cách rang đậm; Starbucks mua Peet’s ngày 1/10/1984 với 3,8 triệu đô la; việc thuê Schultz gây tranh cãi, ban đầu các chủ đã quyết định không thuê; năm 1987 Bowker bán phần, Baldwin bán Starbucks và giữ Peet’s; Schultz được thuê tháng 9/1982 làm giám đốc tiếp thị; năm 1983 dự một hội chợ thương mại ở Ý và uống ly latte đầu tiên, rồi thúc đẩy quầy espresso vì Starbucks bán hạt tốt nhưng không bán cà phê theo ly; tháng 5/1984 mở cửa hàng có quầy espresso ở trung tâm Seattle; Baldwin phản bác lời Schultz, nói cửa hàng ở khu U District đã bán cà phê theo ly; tháng 1/1986 Schultz lập công ty riêng (HistoryLink viết “Il Giornali”, các nguồn khác viết “Il Giornale”), Starbucks góp 150.000 đô la; năm 1987 Schultz và nhóm nhà đầu tư mua Starbucks với 3,8 triệu đô la. Food Republic: demi 3 ao-xơ cho espresso; short 8 ao-xơ, tall 12, grande 16, venti 20 (nóng) và 24 (lạnh), trenta 30; Schultz đến Ý năm 1983, Il Giornale bán short, tall, grande; venti, trenta là số đếm tiếng Ý; grande là từ tiếng Ý nghĩa “lớn”; tall nay là cỡ nhỏ tiêu chuẩn. The Takeout: venti xuất hiện những năm 1990 khi cỡ short dần bị bỏ; trenta ra mắt ở Mỹ năm 2011; Schultz áp dụng tên kiểu Ý khi mua Starbucks năm 1987. Việc grande là “cỡ vừa” là suy ra từ thứ tự tall – grande – venti (Food Republic nói tall là cỡ nhỏ tiêu chuẩn). NBC News: tính năng có ở khoảng 7.000 trong khoảng 11.000 cửa hàng ở Mỹ (các cửa hàng do công ty sở hữu); khoảng một phần mười giao dịch được thực hiện bằng thiết bị di động; khách dùng ứng dụng có thể boa 50 xu, 1 hoặc 2 đô la trong vòng hai giờ sau giao dịch; tiền boa trả cho nhân viên bằng tiền mặt; Starbucks từng bị kiện về cách chia tiền trong hũ boa; có khách vui vẻ boa vì được phục vụ thân thiện, có khách thấy đã trả đủ. WBEZ (NPR, 17/4/2018): hai người đàn ông da đen bị bắt ở một quán Starbucks tại Philadelphia khi đang “quietly waiting to meet someone”; nhân viên gọi 911 sau khi một người, chưa mua gì, xin đi nhà vệ sinh rồi ở lại; Starbucks xin lỗi; CEO Kevin Johnson gặp hai người và hứa thay đổi để chuyện này không bao giờ lặp lại; chiều 29/5 đóng hơn 8.000 cửa hàng do công ty sở hữu để “racial-bias education”; các cửa hàng nhượng quyền nhận tài liệu đào tạo sau; câu của Howard Schultz “We will learn from our mistakes”. Kiến thức phổ thông: Moby Dick là tiểu thuyết về một con tàu săn cá voi, Starbuck là phó thuyền trưởng; một ao-xơ chất lỏng khoảng 30 ml. Câu “câu trả lời là một câu chuyện về hạt cà phê…” và “các công ty lớn cũng mắc sai lầm” là nhận xét của bài.',
+  verified: '2026-11-15'
+});

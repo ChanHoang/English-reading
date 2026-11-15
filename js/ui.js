@@ -33,7 +33,7 @@ const lev = (a, b) => { const d = Array.from({ length: a.length + 1 }, (_, i) =>
   for (let i = 1; i <= a.length; i++) for (let j = 1; j <= b.length; j++) d[i][j] = Math.min(d[i - 1][j] + 1, d[i][j - 1] + 1, d[i - 1][j - 1] + (a[i - 1] === b[j - 1] ? 0 : 1)); return d[a.length][b.length]; };
 const toast = m => { clearTimeout(toastT); let t = $('.toast'); if (!t) { t = document.createElement('div'); t.className = 'toast'; document.body.appendChild(t); } t.textContent = m; toastT = setTimeout(() => t.remove(), 2600); };
 const mark = (plain, surf) => { const i = plain.indexOf(surf); return i < 0 ? esc(plain) : esc(plain.slice(0, i)) + '<b>' + esc(surf) + '</b>' + esc(plain.slice(i + surf.length)); };
-const camb = w => 'https://dictionary.cambridge.org/dictionary/english/' + encodeURIComponent(String(w).toLowerCase().replace(/ /g, '-'));
+const camb = w => 'https://dictionary.cambridge.org/dictionary/english/' + encodeURIComponent(EI.hw(w).toLowerCase().replace(/ /g, '-'));
 /* Cambridge does not allow its pages inside another site, so it opens in a small separate window (a normal tab on phones) */
 const cambA = (w, t) => '<a href="' + camb(w) + '" target="_blank" rel="noopener" data-a="camPop" data-w="' + esc(w) + '">' + (t || 'Cambridge Dictionary') + '</a>';
 
@@ -216,7 +216,7 @@ function fbHTML() {
   if (it.why) h += '<p class="vi">' + esc(it.why) + '</p>';
   if (it.ref && ctx.r) { const s = ctx.r.S.find(o => o.plain.includes(it.ref)); if (s) h += '<p class="small muted">In the story:</p><blockquote>' + esc(s.plain) + '</blockquote>'; }
   const w = it.rv && it.rv.w && EI.W[it.rv.w];
-  if (w && (it.hard || r === 'bad')) h += '<div class="note"><b>' + esc(w.w) + '</b> ' + esc(w.ipa) + ' — ' + esc(w.def) + (w.col.length ? '<br><span class="muted">Often with:</span> ' + esc(w.col.join(' · ')) : '') + (w.note ? '<br><span class="vi">' + esc(w.note) + '</span>' : '') + (it.hard ? '<br><span class="vi">Từ khó: lần tới sẽ dùng cách hỏi khác và câu khác.</span>' : '') + '</div>';
+  if (w && (it.hard || r === 'bad')) h += '<div class="note"><b>' + esc(w.hw) + '</b> ' + esc(w.ipa) + ' — ' + esc(w.def) + (w.col.length ? '<br><span class="muted">Often with:</span> ' + esc(w.col.join(' · ')) : '') + (w.note ? '<br><span class="vi">' + esc(w.note) + '</span>' : '') + (it.hard ? '<br><span class="vi">Từ khó: lần tới sẽ dùng cách hỏi khác và câu khác.</span>' : '') + '</div>';
   return h + (run.multi ? '' : '<button class="btn primary" data-a="next">Continue</button>') + '</div>';
 }
 function finish(res) {
@@ -335,16 +335,16 @@ function lVocab() {
 function vRows() {
   const c = S.cur, all = vFilter(), per = c.per || 20, pages = Math.max(1, Math.ceil(all.length / per)), pg = Math.min(pages, Math.max(1, c.pg || 1));
   if (!Object.values(EI.W).some(e => e.level === (c.lv || 'A2'))) return '<p class="vi">Chưa có bộ từ ' + (c.lv) + '. Xem Info → Not available yet.</p>';
-  return '<p class="small muted">' + all.length + ' words</p>' + all.slice((pg - 1) * per, pg * per).map(e => '<button class="wrow' + (c.w === e.w ? ' on' : '') + '" data-a="word" data-w="' + esc(e.w) + '"><i class="st ' + EI.status(e.w) + '"></i><b>' + esc(e.w) + '</b><span class="pos">' + esc(c.sl === 'vi' && (c.q || '').trim() ? e.vi : e.pos) + '</span></button>').join('') +
+  return '<p class="small muted">' + all.length + ' words</p>' + all.slice((pg - 1) * per, pg * per).map(e => '<button class="wrow' + (c.w === e.w ? ' on' : '') + '" data-a="word" data-w="' + esc(e.w) + '"><i class="st ' + EI.status(e.w) + '"></i><b>' + esc(e.hw) + '</b><span class="pos">' + esc(c.sl === 'vi' && (c.q || '').trim() ? e.vi : e.pos) + '</span></button>').join('') +
     '<div class="pager">Page <input type="number" id="vpg" min="1" max="' + pages + '" value="' + pg + '" aria-label="Page number"> of ' + pages + ' · <select id="vper" aria-label="Words per page">' + [20, 50, 100].map(n => '<option' + (per === n ? ' selected' : '') + '>' + n + '</option>').join('') + '</select> per page</div>';
 }
 A.vlevel = d => { S.cur.lv = d.l; S.cur.pg = 1; EI.save(); render(); };
 A.word = d => go(Object.assign({}, S.cur, { v: 'vocab', w: d.w }));
 function vWord(e) {
   const r = S.words[e.w], st = EI.status(e.w);
-  let h = '<div class="ph"><p class="eyebrow">' + e.level + ' · ' + esc(e.pos) + '</p><div class="word-h"><h1>' + esc(e.w) + '</h1><span class="ipa">' + esc(e.ipa) + '</span>' +
-    '<button class="btn icon" data-a="say" data-t="' + esc(e.w) + '" aria-label="Hear the word">' + ic('phones') + '</button><span class="chip"><i class="st ' + st + '"></i>' + st + '</span></div>' +
-    '<p class="audiolabel">' + esc(EI.audio.label()) + ' · ' + cambA(e.w, 'Open “' + esc(e.w) + '” in Cambridge Dictionary') + ' (human US recording)</p></div>';
+  let h = '<div class="ph"><p class="eyebrow">' + e.level + ' · ' + esc(e.pos) + '</p><div class="word-h"><h1>' + esc(e.hw) + '</h1><span class="ipa">' + esc(e.ipa) + '</span>' +
+    '<button class="btn icon" data-a="say" data-t="' + esc(e.hw) + '" aria-label="Hear the word">' + ic('phones') + '</button><span class="chip"><i class="st ' + st + '"></i>' + st + '</span></div>' +
+    '<p class="audiolabel">' + esc(EI.audio.label()) + ' · ' + cambA(e.w, 'Open “' + esc(e.hw) + '” in Cambridge Dictionary') + ' (human US recording)</p></div>';
   h += '<p class="def">' + esc(e.def) + '</p><p class="exq">' + mark(e.exPlain, e.exSurf) + ' <button class="btn icon ghost" data-a="say" data-t="' + esc(e.exPlain) + '" aria-label="Hear the example">' + ic('phones') + '</button></p>';
   h += '<dl class="kv">' + (e.col.length ? '<dt>Often with</dt><dd>' + esc(e.col.join(' · ')) + '</dd>' : '') + (e.fam ? '<dt>Word family</dt><dd>' + esc(e.fam) + '</dd>' : '') +
     '<dt>Difficulty</dt><dd>' + ['', 'easier', 'medium', 'harder'][e.diff] + ' <span class="muted small">(estimate)</span></dd></dl>';
@@ -368,7 +368,7 @@ A.openR = d => { const r = EI.rById(d.id); go({ v: 'reading', level: r.level, ri
 function vScan() {
   const lv = S.cur.lv || 'A2', ws = Object.values(EI.W).filter(e => e.level === lv).sort((a, b) => a.w.localeCompare(b.w));
   return page('<div class="ph"><p class="eyebrow">Vocabulary · ' + lv + '</p><h1>Quick scan</h1></div><p class="vi">Đánh dấu những từ bạn đã biết chắc (hiểu nghĩa và dùng được). Chúng sẽ được lướt qua trong bài đọc và không vào hàng ôn. Có thể bỏ đánh dấu bất cứ lúc nào.</p>' +
-    '<div class="scan">' + ws.map(e => '<label><input type="checkbox" data-scan="' + esc(e.w) + '"' + (EI.status(e.w) === 'Known' ? ' checked' : '') + '> ' + esc(e.w) + '</label>').join('') + '</div>' +
+    '<div class="scan">' + ws.map(e => '<label><input type="checkbox" data-scan="' + esc(e.w) + '"' + (EI.status(e.w) === 'Known' ? ' checked' : '') + '> ' + esc(e.hw) + '</label>').join('') + '</div>' +
     '<div class="rowg"><button class="btn primary" data-a="go" data-v="vocab">Done</button></div>');
 }
 
@@ -448,8 +448,8 @@ function vLesson(r) {
   } else if (L.stage === 'learn') {
     h += '<p class="vi">' + (r.pass === 2 ? 'Ôn lại ' + r.targets.length + ' từ bạn đã gặp ở Pass 1, lần này trong một chuyện mới. Từ nào biết chắc rồi thì bấm Known.' : 'Xem lướt ' + r.targets.length + ' từ mục tiêu. Chưa cần thuộc: bạn sẽ gặp lại từng từ trong câu chuyện. Từ nào biết chắc rồi thì bấm Known.') + '</p><section class="card">' + r.targets.map(w => {
       const e = EI.W[w]; if (!e) return '';
-      if (EI.status(w) === 'Known') return '<div class="lw known"><div class="rowg"><b>' + esc(w) + '</b><span class="chip">Known</span><button class="btn ghost" data-a="lKnown" data-w="' + esc(w) + '">undo</button></div></div>';
-      return '<div class="lw"><div class="rowg"><b class="def">' + esc(w) + '</b><span class="small muted">' + esc(e.pos) + '</span><span class="ipa">' + esc(e.ipa) + '</span><button class="btn icon ghost" data-a="say" data-t="' + esc(w) + '" aria-label="Hear the word">' + ic('phones') + '</button><span class="small">' + cambA(w, 'Cambridge') + '</span><button class="btn ghost" style="margin-left:auto" data-a="lKnown" data-w="' + esc(w) + '">Known</button></div>' +
+      if (EI.status(w) === 'Known') return '<div class="lw known"><div class="rowg"><b>' + esc(e.hw) + '</b><span class="chip">Known</span><button class="btn ghost" data-a="lKnown" data-w="' + esc(w) + '">undo</button></div></div>';
+      return '<div class="lw"><div class="rowg"><b class="def">' + esc(e.hw) + '</b><span class="small muted">' + esc(e.pos) + '</span><span class="ipa">' + esc(e.ipa) + '</span><button class="btn icon ghost" data-a="say" data-t="' + esc(e.hw) + '" aria-label="Hear the word">' + ic('phones') + '</button><span class="small">' + cambA(w, 'Cambridge') + '</span><button class="btn ghost" style="margin-left:auto" data-a="lKnown" data-w="' + esc(w) + '">Known</button></div>' +
         '<p>' + esc(e.def) + '</p><p class="exq">' + mark(e.exPlain, e.exSurf) + '</p>' + (openVi.has(w) ? '<div class="vibox"><b>' + esc(e.vi) + '</b> <button class="btn ghost small" data-a="lViHide" data-w="' + esc(w) + '">Hide meaning</button></div>' : '<div><button class="btn ghost" data-a="lVi" data-w="' + esc(w) + '">Show Vietnamese meaning</button></div>') + '</div>'; }).join('') + '</section>' +
       '<p class="audiolabel">' + esc(EI.audio.label()) + '</p><div class="rowg"><button class="btn primary" data-a="stage" data-s="read">Start reading</button></div>';
   } else if (L.stage === 'read') {
@@ -496,7 +496,7 @@ function vLesson(r) {
         : '<div class="rowg"><button class="btn primary" data-a="wShow">Compare with a model</button></div>') + '</section>';
   } else {
     const nr = EI.nextReading(), q = recallQ(r), miss = Object.keys(L.miss || {});
-    h += scoreCard(r) + (miss.length ? '<section class="card"><h3>Words to look at again</h3><div class="rowg">' + miss.map(w => '<button class="chip" data-a="word" data-w="' + esc(w) + '">' + esc(w) + '</button>').join('') + '</div></section>' : '') +
+    h += scoreCard(r) + (miss.length ? '<section class="card"><h3>Words to look at again</h3><div class="rowg">' + miss.map(w => '<button class="chip" data-a="word" data-w="' + esc(w) + '">' + esc(EI.hw(w)) + '</button>').join('') + '</div></section>' : '') +
       '<section class="fact"><p class="eyebrow">Added to your fact collection</p><p>' + esc(r.fact.card) + '</p></section>' +
       '<section class="card"><h2>One more true detail</h2><p class="reader" style="font-size:1.05em">' + esc(r.fact.bonus) + '</p></section>';
     if (q.length) h += '<section class="card"><h3>Quick recall before you go</h3><p class="vi">Ta quên nhanh nhất trong 24 giờ đầu. Lượt này gồm ' + q.length + ' mục: các từ khó nhất của bài này và những từ của bài trước đã đến hạn ôn.</p><div class="rowg"><button class="btn primary" data-a="recall" data-id="' + r.id + '">Start quick recall</button></div></section>';
@@ -517,7 +517,7 @@ function resolveQ(r, ref) {
   if (ref[0] === 'z') return { t: 'cloze', k: 'w:cloze', chunk: EI.cloze(r)[+ref.slice(1)], head: 'The story with gaps' };
   if (ref[0] === 'g') { const x = EI.gItem(ref); return Object.assign({}, x.it, { k: 'g:' + x.g.id, head: 'Grammar · ' + x.g.title }); }
   const w = ref.slice(2), e = EI.W[w], s = EI.sentsOf(w).filter(x => x.kind === 'x')[0]; // 'w:word' -> a new sentence with this word
-  return { t: 'gap', k: ref, head: 'One more with this word', q: s.cloze, a: [s.surf, w], why: e.w + ' — ' + e.def };
+  return { t: 'gap', k: ref, head: 'One more with this word', q: s.cloze, a: [s.surf, e.hw], why: e.hw + ' — ' + e.def };
 }
 function readerHTML(r) {
   let p = -1, h = '';
@@ -649,11 +649,11 @@ function drawSheet() {
   const close = '<div class="rowg"><span class="grow" style="flex:1"></span><button class="btn icon ghost" data-a="closeSheet" aria-label="Close">' + ic('x') + '</button></div>';
   if (t) {
     const lem = t.lem || EI.lemma(t.t), e = lem && EI.W[lem], g0 = !t.tg && glossOf(r, t.t), gl = !e && g0, ctx = e && g0;   // ctx: untagged word whose meaning in this story differs from the list entry (World’s Fair vs fair = công bằng)
-    h += '<div class="rowg"><span class="sw">' + esc(t.t) + '</span>' + (e ? '<span class="ipa">' + esc(e.ipa) + '</span>' : '') + '<button class="btn icon" data-a="say" data-t="' + esc(e ? e.w : t.t) + '" aria-label="Hear the word">' + ic('phones') + '</button></div>';
+    h += '<div class="rowg"><span class="sw">' + esc(t.t) + '</span>' + (e ? '<span class="ipa">' + esc(e.ipa) + '</span>' : '') + '<button class="btn icon" data-a="say" data-t="' + esc(e ? e.hw : t.t) + '" aria-label="Hear the word">' + ic('phones') + '</button></div>';
     if (ctx) h += '<p class="small muted">Nghĩa trong câu này:</p><p class="vibox">' + esc(ctx) + '</p>';
-    if (e) h += (e.w !== t.t.toLowerCase() ? '<p class="small muted">form of <b>' + esc(e.w) + '</b> · ' + esc(e.pos) + '</p>' : '<p class="small muted">' + esc(e.pos) + '</p>') + '<p class="def">' + esc(e.def) + '</p>' +
+    if (e) h += (e.hw !== t.t.toLowerCase() ? '<p class="small muted">form of <b>' + esc(e.hw) + '</b> · ' + esc(e.pos) + '</p>' : '<p class="small muted">' + esc(e.pos) + '</p>') + '<p class="def">' + esc(e.def) + '</p>' +
       (sh.viW ? '<div class="vibox"><b>' + esc(e.vi) + '</b> <button class="btn ghost small" data-a="shViHide">Hide meaning</button></div>' : '<div><button class="btn" data-a="shViW">Show Vietnamese meaning</button></div>') +
-      (t.tg ? '' : '<p class="small muted">' + (ctx ? 'Trên đây là nghĩa thường gặp của <b>' + esc(e.w) + '</b>; trong câu này từ mang nghĩa khác (xem ô phía trên).' : 'Nghĩa trong từ điển của từ này; trong câu có thể khác đôi chút — xem bản dịch câu.') + '</p>');
+      (t.tg ? '' : '<p class="small muted">' + (ctx ? 'Trên đây là nghĩa thường gặp của <b>' + esc(e.hw) + '</b>; trong câu này từ mang nghĩa khác (xem ô phía trên).' : 'Nghĩa trong từ điển của từ này; trong câu có thể khác đôi chút — xem bản dịch câu.') + '</p>');
     else h += gl ? '<p class="vibox">' + esc(gl) + '</p>' : '<p class="vi">Chưa có mục cho từ này. Xem bản dịch cả câu bên dưới, hoặc mở từ điển.</p>';
     h += '<p class="audiolabel">' + esc(EI.audio.label()) + ' · ' + cambA(e ? e.w : t.t) + (e ? ' · <a href="#" data-a="word" data-w="' + esc(e.w) + '">full entry</a>' : '') + '</p>';
     const mk = t.t.toLowerCase(), stt = e ? EI.status(e.w) : null;   // any word can go into the review plan, with this sentence as its context

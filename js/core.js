@@ -8,12 +8,15 @@ EI.VERSION = 'v0.4';
 /* ---------- data registry (data files call these) ---------- */
 // Word table: one word per line, fields separated by "|":
 // word | pos | ipa (US) | English definition | example with {word} marked | collocations; separated; by ; | Vietnamese | difficulty 1-3 | note (vi) | family
+// A second sense of a word that already has an entry (or of an A1 word) uses a sense key: “award~v”, “that~adv”.
+// The key is used for marking ({awarded=award~v}), progress and targets; the headword shown to the learner is the part before “~”.
+EI.hw = w => String(w).split('~')[0];
 EI.words = (level, table, meta) => {
   table.split('\n').forEach(line => {
     line = line.trim();
     if (!line || line[0] === '#') return;
     const [w, pos, ipa, def, ex, col, vi, diff, note, fam] = line.split('|').map(x => x.trim());
-    EI.W[w] = { w, pos, ipa, def, ex, vi, level, diff: +diff || 2, note: note || '', fam: fam || '',
+    EI.W[w] = { w, hw: EI.hw(w), pos, ipa, def, ex, vi, level, diff: +diff || 2, note: note || '', fam: fam || '',
       col: col ? col.split(';').map(x => x.trim()).filter(Boolean) : [], sents: [], rids: [] };
   });
   if (meta) EI.meta[level] = meta;
@@ -57,7 +60,7 @@ EI.index = () => {
   for (const e of Object.values(EI.W)) {
     const tk = EI.toks(e.ex || '');
     e.exPlain = tk.map(t => t.t).join('');
-    e.exSurf = (tk.find(t => t.tg) || { t: e.w }).t;
+    e.exSurf = (tk.find(t => t.tg) || { t: e.hw }).t;
     e.exCloze = clozeOf(tk);
   }
   for (const r of EI.R) {
@@ -230,14 +233,14 @@ EI.reviewItem = key => {
   const s = ss[from[rec.h.length % from.length]], rv = { key, ty, si: ss.indexOf(s), w };
   const hard = rec.lap >= 3;
   if (ty === 'A' || ty === 'B' || ty === 'C')
-    return { t: 'gap', q: s.cloze, a: [s.surf, w], why: e.w + ' — ' + e.def, rv, hard, audio: ty === 'C' ? s.plain : null,
+    return { t: 'gap', q: s.cloze, a: [s.surf, e.hw], why: e.hw + ' — ' + e.def, rv, hard, audio: ty === 'C' ? s.plain : null,
       head: ty === 'A' ? 'From “' + s.title + '” · type the missing word' : ty === 'B' ? 'A new sentence · type the missing word' : 'Listen, then type the missing word' };
   if (ty === 'D') {
-    const others = Object.values(EI.W).filter(x => x.w !== w).sort((a, b) => (b.pos === e.pos) - (a.pos === e.pos) || hash(a.w + w) - hash(b.w + w)).slice(0, 2);
+    const others = Object.values(EI.W).filter(x => x.hw !== e.hw).sort((a, b) => (b.pos === e.pos) - (a.pos === e.pos) || hash(a.w + w) - hash(b.w + w)).slice(0, 2);
     const o = [e.def, ...others.map(x => x.def)], ord = [0, 1, 2].sort((a, b) => hash(o[a] + rec.h.length) - hash(o[b] + rec.h.length));
-    return { t: 'mc', q: s.plain, mark: s.surf, sub: 'In this sentence, “' + s.surf + '” means…', o: ord.map(i => o[i]), a: ord.indexOf(0), why: e.w + ' — ' + e.def, rv, hard, head: 'Meaning in context', fixed: true };
+    return { t: 'mc', q: s.plain, mark: s.surf, sub: 'In this sentence, “' + s.surf + '” means…', o: ord.map(i => o[i]), a: ord.indexOf(0), why: e.hw + ' — ' + e.def, rv, hard, head: 'Meaning in context', fixed: true };
   }
-  return { t: 'write', q: 'Write your own sentence with “' + w + '”.', model: e.exPlain, self: true, rv, hard, head: 'Use the word' };
+  return { t: 'write', q: 'Write your own sentence with “' + e.hw + '”.', model: e.exPlain, self: true, rv, hard, head: 'Use the word' };
 };
 function hash(s) { let h = 7; for (let i = 0; i < s.length; i++) h = (h * 31 + s.charCodeAt(i)) >>> 0; return h; }
 EI.hash = hash;

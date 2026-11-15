@@ -12,5 +12,5 @@ const voiceOf = () => 'h';
 const out = [], seen = new Set();
 const add = (text, voice, src) => { text = String(text || '').trim(); if (!text || seen.has(text)) return; seen.add(text); const key = ctx.EI.audioKey(text); out.push({ key, text, voice: (made[key] && made[key].v) || voice, src }); };
 ctx.EI.R.forEach(r => { const v = voiceOf('r:' + r.id); r.S.forEach(o => add(o.plain, v, r.id + ' ' + o.p + '-' + o.s)); });
-Object.values(ctx.EI.W).forEach(e => { const v = voiceOf('w:' + e.w); add(e.w, v, 'word ' + e.w); add(e.exPlain, v, 'example ' + e.w); });
+Object.values(ctx.EI.W).forEach(e => { const v = voiceOf('w:' + e.w); add(e.hw, v, 'word ' + e.w); add(e.exPlain, v, 'example ' + e.w); });
 process.stdout.write(JSON.stringify(out));

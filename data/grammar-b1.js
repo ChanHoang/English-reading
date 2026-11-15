@@ -173,7 +173,7 @@ EI.grammar({ id: 'third-conditional', n: 9, level: 'B1', title: 'Third condition
     ['Question', 'What would + S + have + V3 + if …?', 'What would you have done if the CMM had broken?', ''],
     ['Possible result', 'If + S + had + V3, S + could/might have + V3', 'If we had sent the parts earlier, they might have arrived on time.', 'could have = đã có thể; might have = có lẽ đã.']
   ],
-  ex: [['If I had known about the meeting, I would have come.', 'Nếu tôi biết về cuộc họp thì tôi đã đến (nhưng tôi không biết).'], ['If the tank had been tested, the disaster might not have happened.', 'Nếu bồn chứa được kiểm tra, có lẽ thảm họa đã không xảy ra.']],
+  ex: [['If I had known about the meeting, I would have come.', 'Nếu tôi biết về cuộc họp thì tôi đã đến (nhưng tôi không biết).'], ['If the tank had been tested, the disaster might not have happened.', 'Nếu bồn chứa được kiểm tra, có lẽ thảm họa đã không xảy ra.'], ['If he had seen the drawing move, he would not have lost the game.', 'Nếu ông nhìn ra nước cầm hòa, ông đã không thua ván đó.', 'b1-p1-29']],
   errors: [['If I would have known, I would have helped.', 'If I had known, I would have helped.', 'Không dùng would trong vế if: If + had + V3.'], ['If he had came earlier, he would have seen it.', 'If he had come earlier, he would have seen it.', 'Sau had dùng V3: come – came – come.'], ['If we had left on time, we would catch the train.', 'If we had left on time, we would have caught the train.', 'Kết quả trong quá khứ: would have + V3.']],
   note: '6 câu: hai vế đều lùi về quá khứ; lỗi hay gặp là đặt would vào vế if.',
   q: [
@@ -194,7 +194,7 @@ EI.grammar({ id: 'relative-non-defining', n: 10, level: 'B1', title: 'Relative c
     ['Place', 'N, where + S + V …,', 'Da Nang, where my brother lives, has a beautiful beach.', 'where = in/at which.'],
     ['Whole idea', '…, which + V', 'The delivery was late, which made the customer angry.', 'which chỉ cả mệnh đề trước.']
   ],
-  ex: [['Gustave Eiffel, who built the tower, also made the frame of the Statue of Liberty.', 'Gustave Eiffel, người xây ngọn tháp, cũng làm bộ khung của tượng Nữ thần Tự do.'], ['The report, which has twelve pages, is ready.', 'Bản báo cáo, dài mười hai trang, đã xong.']],
+  ex: [['Gustave Eiffel, who built the tower, also made the frame of the Statue of Liberty.', 'Gustave Eiffel, người xây ngọn tháp, cũng làm bộ khung của tượng Nữ thần Tự do.'], ['The report, which has twelve pages, is ready.', 'Bản báo cáo, dài mười hai trang, đã xong.'], ['Richard Seddon, who headed the government from April 1893, was a friend of the alcohol trade, and he tried to stop the law.', 'Richard Seddon, người đứng đầu chính phủ từ tháng 4 năm 1893, là bạn của ngành buôn bán rượu, và ông tìm cách chặn đạo luật.', 'b1-p1-24']],
   errors: [['Hanoi, that is the capital, is very old.', 'Hanoi, which is the capital, is very old.', 'Mệnh đề có dấu phẩy không dùng that.'], ['My sister who lives in Hue is a teacher.', 'My sister, who lives in Hue, is a teacher.', 'Nếu tôi chỉ có một chị gái, thông tin là phụ: cần dấu phẩy.'], ['The man, who his car was stolen, called the police.', 'The man, whose car was stolen, called the police.', 'Sở hữu: whose + danh từ, không dùng who his.']],
   note: '6 câu: dấu phẩy, không dùng that, phân biệt who/which/whose/where.',
   q: [
@@ -252,7 +252,7 @@ EI.grammar({ id: 'so-such', n: 13, level: 'B1', title: 'So and such', vi: 'so v�
     ['such (plural)', 'such + adj + N (số nhiều/không đếm được)', 'They make such good coffee.', 'Không có a/an.'],
     ['so many / much', 'so many + N số nhiều; so much + N không đếm được', 'We had so much work that we stayed late.', '']
   ],
-  ex: [['The wave was so strong that it pushed a truck into a building.', 'Con sóng mạnh đến mức đẩy một chiếc xe tải vào một tòa nhà.'], ['It was such a small mistake, but it cost a lot of money.', 'Đó là một lỗi rất nhỏ, nhưng tốn rất nhiều tiền.']],
+  ex: [['The wave was so strong that it pushed a truck into a building.', 'Con sóng mạnh đến mức đẩy một chiếc xe tải vào một tòa nhà.'], ['It was such a small mistake, but it cost a lot of money.', 'Đó là một lỗi rất nhỏ, nhưng tốn rất nhiều tiền.'], ['The Great Hall was such a busy place that on many days more than 5,000 people walked through it.', 'Đại sảnh đông đúc đến mức nhiều ngày có hơn 5.000 người đi qua.', 'b1-p1-26']],
   errors: [['It was so a long meeting.', 'It was such a long meeting.', 'Có danh từ (meeting): dùng such a.'], ['She is such kind.', 'She is so kind.', 'Chỉ có tính từ: dùng so.'], ['There were such many people.', 'There were so many people.', 'so many + danh từ số nhiều.']],
   note: '5 câu: có danh từ thì dùng such, chỉ có tính từ thì dùng so.',
   q: [
@@ -271,7 +271,7 @@ EI.grammar({ id: 'question-tags', n: 14, level: 'B1', title: 'Question tags', vi
     ['Negative sentence', 'S + aux + not …, aux + S?', 'You haven’t sent it yet, have you?', 'Câu phủ định → đuôi khẳng định.'],
     ['Special', 'I am …, aren’t I? / Let’s …, shall we?', 'Let’s start the meeting, shall we?', 'Hai trường hợp đặc biệt.']
   ],
-  ex: [['You’re the new engineer, aren’t you?', 'Anh là kỹ sư mới phải không?'], ['The parts didn’t pass, did they?', 'Các chi tiết đã không đạt, đúng không?']],
+  ex: [['You’re the new engineer, aren’t you?', 'Anh là kỹ sư mới phải không?'], ['The parts didn’t pass, did they?', 'Các chi tiết đã không đạt, đúng không?'], ['Still, it was a mad plan, wasn’t it?', 'Dù vậy, đó vẫn là một kế hoạch điên rồ, phải không?', 'b1-p1-30']],
   errors: [['You like coffee, isn’t it?', 'You like coffee, don’t you?', 'Đuôi phải hợp với động từ và chủ ngữ của câu, không dùng “isn’t it” cho mọi câu.'], ['He can swim, can he?', 'He can swim, can’t he?', 'Câu khẳng định → đuôi phủ định.'], ['Nobody called, didn’t they?', 'Nobody called, did they?', 'Nobody mang nghĩa phủ định → đuôi khẳng định.']],
   note: '5 câu: đổi khẳng định/phủ định và mượn do/does/did.',
   q: [
@@ -290,7 +290,7 @@ EI.grammar({ id: 'too-enough', n: 15, level: 'B1', title: 'Too and enough', vi: 
     ['enough + noun', 'enough + N', 'We don’t have enough samples for the test.', 'enough đứng trước danh từ.'],
     ['too much/many', 'too much + N không đếm được; too many + N số nhiều', 'There are too many mistakes in this report.', '']
   ],
-  ex: [['The wall was too thin to hold the weight.', 'Vách quá mỏng để chịu được sức nặng.'], ['Is the room warm enough for the measurement?', 'Phòng có đủ ấm để đo không?']],
+  ex: [['The wall was too thin to hold the weight.', 'Vách quá mỏng để chịu được sức nặng.'], ['Is the room warm enough for the measurement?', 'Phòng có đủ ấm để đo không?'], ['Herdwicks are strong enough to live on the high hills all year, and their grey wool is rough and hard-wearing.', 'Cừu Herdwick đủ khỏe để sống trên đồi cao quanh năm, và lông len màu xám của chúng thô ráp và rất bền.', 'b1-p1-31']],
   errors: [['The box is enough big.', 'The box is big enough.', 'enough đứng sau tính từ.'], ['It is too much hot today.', 'It is too hot today.', 'too + tính từ, không thêm much.'], ['We don’t have time enough.', 'We don’t have enough time.', 'enough đứng trước danh từ.']],
   note: '5 câu: vị trí của enough và nghĩa “quá … đến mức không” của too.',
   q: [
@@ -309,7 +309,7 @@ EI.grammar({ id: 'causative-have', n: 16, level: 'B1', title: 'Have something do
     ['Future', 'S + will have / is going to have + O + V3', 'I am going to have the drawing translated.', ''],
     ['get', 'S + get + O + V3', 'You should get your eyes tested.', 'Thân mật hơn have.']
   ],
-  ex: [['The company had the tank painted brown.', 'Công ty cho sơn bồn chứa màu nâu.'], ['We need to get the CMM repaired before Monday.', 'Chúng ta cần cho sửa máy CMM trước thứ Hai.']],
+  ex: [['The company had the tank painted brown.', 'Công ty cho sơn bồn chứa màu nâu.'], ['We need to get the CMM repaired before Monday.', 'Chúng ta cần cho sửa máy CMM trước thứ Hai.'], ['Many men had their boots repaired for free.', 'Nhiều người được sửa giày ống miễn phí.', 'b1-p1-25']],
   errors: [['I repaired my car at the garage.', 'I had my car repaired at the garage.', 'Nếu thợ sửa chứ không phải bạn: have + O + V3.'], ['She had cut her hair.', 'She had her hair cut.', 'Trật tự: have + tân ngữ + V3.'], ['We have the parts measure every week.', 'We have the parts measured every week.', 'Sau tân ngữ dùng V3 (measured).']],
   note: '5 câu: trật tự have + vật + V3, và nghĩa “người khác làm cho mình”.',
   q: [

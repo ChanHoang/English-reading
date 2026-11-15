@@ -1,0 +1,130 @@
+EI.words('B1', `
+# ---- b1-p1-41 Dolly, the Sheep With Three Mothers
+age~v|v|/eɪdʒ/|to become older, or to start to look or seem older|My father has {aged} a lot this year.|age quickly/well|già đi|2|age (n) = tuổi (A1).|age (n)
+average~v|v|/ˈævərɪdʒ/|to have a particular number or amount as the usual figure when you add all of them together and divide|Our test results {average} 95 points.|average + number|trung bình là|2|average (adj, n) = trung bình (A2).|average (adj, n)
+chest|n|/tʃest/|the front part of the body between the neck and the stomach|He had a pain in his {chest}.|a chest pain; a chest X-ray|ngực|2||
+clear~v|v|/klɪr/|to remove something that is not wanted from a place|Please {clear} the table after dinner.|clear something (of something); clear the table/road|dọn sạch, lấy hết ra|2|clear (adj) = rõ ràng (A2).|clear (adj)
+deep~adv|adv|/diːp/|far into or below something|The miners worked {deep} under the ground.|deep inside/under/into something|sâu (vào bên trong)|2|deep (adj) = sâu (A2).|deep (adj)
+next~n|n|/nekst/|the person or thing that comes after this one|One day it was sunny, and {the next} it was raining.|one day/year …, the next …; from one day to the next|cái tiếp theo, người tiếp theo|2|next (adj) = tiếp theo (A1).|next (adj)
+normal~n|n|/ˈnɔːrml/|the usual state or level|After the storm, life went back to {normal}.|back to normal; above/below normal; more than normal|mức bình thường, trạng thái bình thường|2|normal (adj) = bình thường (A2).|normal (adj)
+sexual|adj|/ˈsekʃuəl/|connected with the way in which a male and a female animal or plant together make babies or seeds|Most animals use {sexual} reproduction.|sexual reproduction|(thuộc) giới tính, hữu tính|2|Ở bài này: sinh sản hữu tính (có bố và mẹ).|sex (n)
+`);
+EI.reading({
+  id: 'b1-p1-41', level: 'B1', pass: 1, n: 41,
+  title: 'Dolly, the Sheep With Three Mothers',
+  topic: 'science', era: '1996–2017', year: 1996, region: 'United Kingdom',
+  predict: { q: 'Cừu Dolly (1996) đặc biệt vì sao?', o: ['Là động vật có vú đầu tiên được nhân bản từ tế bào của một con vật trưởng thành', 'Là con cừu sống lâu nhất thế giới', 'Là con cừu đầu tiên được đưa vào vũ trụ'] },
+  targets: ['age~v', 'average~v', 'chest', 'clear~v', 'deep~adv', 'next~n', 'normal~n', 'sexual'],
+  text: [
+    [
+      ["On July 5, 1996, a lamb was born at the Roslin Institute, near Edinburgh in Scotland.", "Ngày 5 tháng 7 năm 1996, một chú cừu non ra đời ở Viện Roslin, gần Edinburgh, Scotland."],
+      ["She looked like any other lamb, but she was the first mammal ever cloned from a cell of an adult animal.", "Trông nó giống mọi chú cừu non khác, nhưng nó là động vật có vú đầu tiên được nhân bản từ một tế bào của một con vật trưởng thành."],
+      ["The scientists named her Dolly, after the American country singer Dolly Parton.", "Các nhà khoa học đặt tên nó là Dolly, theo tên ca sĩ nhạc đồng quê người Mỹ Dolly Parton."],
+      ["She was not the first cloned animal: at Roslin, two sheep called Megan and Morag had been cloned in 1995 from the cells of embryos.", "Nó không phải con vật nhân bản đầu tiên: ở Roslin, hai con cừu tên Megan và Morag đã được nhân bản năm 1995 từ tế bào phôi."],
+      ["But nobody had made a mammal from an adult cell before.", "Nhưng trước đó chưa ai tạo ra động vật có vú từ một tế bào trưởng thành."],
+      ["In a way, Dolly had three mothers and no father.", "Theo một nghĩa nào đó, Dolly có ba người mẹ và không có bố."]
+    ],
+    [
+      ["Most animals come from {sexual} reproduction.", "Hầu hết động vật sinh ra từ sinh sản hữu tính."],
+      ["In {sexual} reproduction, a baby gets half of its genes from its mother and half from its father.", "Trong sinh sản hữu tính, con non nhận một nửa gen từ mẹ và một nửa từ bố."],
+      ["The instructions for building an animal are kept {deep=deep~adv} inside each cell, in a small part called the nucleus.", "Bản hướng dẫn để tạo nên một con vật được cất giữ sâu bên trong mỗi tế bào, trong một phần nhỏ gọi là nhân tế bào."],
+      ["The Roslin team, led by Ian Wilmut, wanted to find out if one adult cell could make a whole new animal without a father.", "Nhóm ở Roslin, do Ian Wilmut dẫn đầu, muốn tìm hiểu xem một tế bào trưởng thành có thể tạo ra cả một con vật mới mà không cần bố hay không."],
+      ["First, they took a cell from the part of a sheep’s body that makes milk; this sheep was a Finn Dorset, and she was six years old.", "Đầu tiên, họ lấy một tế bào từ bộ phận tạo sữa của một con cừu; đó là một con cừu Finn Dorset sáu tuổi."],
+      ["Then they took an egg cell from a Scottish Blackface sheep and {cleared=clear~v} it of its own nucleus.", "Sau đó, họ lấy một tế bào trứng của một con cừu Scottish Blackface và lấy hết nhân của chính nó ra."],
+      ["They put the nucleus of the milk cell into the empty egg, and the new cell began to grow into an embryo.", "Họ đưa nhân của tế bào sữa vào quả trứng rỗng, và tế bào mới bắt đầu phát triển thành phôi."],
+      ["Finally, the embryo was put into a third sheep, another Scottish Blackface, which carried the baby until it was born.", "Cuối cùng, phôi được đưa vào con cừu thứ ba, cũng là một con Scottish Blackface, con này mang thai cho tới khi chú cừu non ra đời."]
+    ],
+    [
+      ["It was not easy.", "Việc này không hề dễ."],
+      ["The team tried 277 times, and only 29 of these new cells grew into early embryos.", "Nhóm đã thử 277 lần, và chỉ 29 tế bào mới trong số đó phát triển thành phôi sớm."],
+      ["The 29 embryos were put into 13 mothers, so the number for each mother {averaged=average~v} just over two.", "29 phôi được đưa vào 13 cừu mẹ, nên số phôi cho mỗi cừu mẹ trung bình là hơn hai một chút."],
+      ["Only one of the mothers gave birth, after 148 days.", "Chỉ một cừu mẹ sinh con, sau 148 ngày."],
+      ["Dolly had a white face like a Finn Dorset, but the mother who gave birth to her had a black face, so it was easy to see that Dolly was not a copy of the sheep that carried her.", "Dolly có mặt trắng như cừu Finn Dorset, nhưng con cừu mẹ sinh ra nó lại có mặt đen, nên dễ thấy Dolly không phải bản sao của con cừu đã mang thai nó."]
+    ],
+    [
+      ["The team kept Dolly a secret until their research paper came out.", "Nhóm giữ bí mật về Dolly cho tới khi bài báo nghiên cứu của họ được công bố."],
+      ["When the news broke on February 22, 1997, the institute received about 100 calls an hour from reporters around the world.", "Khi tin tức được tung ra ngày 22 tháng 2 năm 1997, viện nhận khoảng 100 cuộc gọi mỗi giờ từ các phóng viên khắp thế giới."],
+      ["TIME magazine put a question on its cover: “Will There Ever Be Another You?”", "Tạp chí TIME đặt một câu hỏi lên trang bìa: “Liệu sẽ có một bạn khác không?”"],
+      ["Many people were afraid that scientists would try to copy humans.", "Nhiều người sợ rằng các nhà khoa học sẽ thử sao chép con người."],
+      ["Wilmut spoke to the US Congress and made it clear that he was against using the method on people.", "Wilmut phát biểu trước Quốc hội Mỹ và nói rõ ông phản đối việc dùng phương pháp này trên người."],
+      ["In June 1997, President Bill Clinton asked Congress to stop human cloning by law.", "Tháng 6 năm 1997, Tổng thống Bill Clinton đề nghị Quốc hội cấm nhân bản người bằng luật."]
+    ],
+    [
+      ["Dolly never left Roslin: from one year to the {next=next~n}, her home was a flock of sheep at the institute.", "Dolly không bao giờ rời Roslin: năm này qua năm khác, nhà của nó là một đàn cừu ở viện."],
+      ["With a Welsh Mountain ram called David, she had six lambs in the usual {sexual} way.", "Với một chú cừu đực Welsh Mountain tên David, Dolly sinh sáu cừu con theo cách hữu tính thông thường."],
+      ["Her first lamb, Bonny, was born in 1998.", "Cừu con đầu tiên, Bonny, ra đời năm 1998."],
+      ["One year she had one lamb, and the {next=next~n} she had two, Sally and Rosie.", "Năm này nó sinh một con, năm sau sinh hai con, Sally và Rosie."],
+      ["In 2000, she had three more: Lucy, Darcy and Cotton.", "Năm 2000, nó sinh thêm ba con: Lucy, Darcy và Cotton."]
+    ],
+    [
+      ["But there was a worry.", "Nhưng có một mối lo."],
+      ["Dolly’s nucleus came from a sheep that was already six years old.", "Nhân tế bào của Dolly đến từ một con cừu đã sáu tuổi."],
+      ["So would Dolly {age=age~v} faster than other sheep?", "Vậy liệu Dolly có già nhanh hơn những con cừu khác không?"],
+      ["In autumn 2001, X-rays showed that she had arthritis, a disease that makes the joints painful.", "Mùa thu năm 2001, ảnh chụp X-quang cho thấy nó bị viêm khớp, một bệnh làm các khớp đau nhức."],
+      ["Daily medicine {cleared=clear~v} the signs of the disease within a few months, and she looked back to {normal=normal~n}.", "Thuốc dùng hằng ngày làm hết các dấu hiệu bệnh trong vài tháng, và trông nó trở lại bình thường."],
+      ["No one ever found out the cause of the arthritis.", "Không ai tìm ra nguyên nhân bệnh viêm khớp."]
+    ],
+    [
+      ["In January 2000, another cloned sheep at Roslin, Cedric, had died of a lung disease that is caused by a virus.", "Trước đó, tháng 1 năm 2000, một con cừu nhân bản khác ở Roslin là Cedric đã chết vì một bệnh phổi do virus gây ra."],
+      ["The virus makes tumors grow in the lungs, inside the {chest}.", "Virus này làm khối u mọc trong phổi, bên trong lồng ngực."],
+      ["On February 10, 2003, a worker noticed that Dolly was coughing.", "Ngày 10 tháng 2 năm 2003, một nhân viên để ý thấy Dolly bị ho."],
+      ["Four days later, a scan looked {deep=deep~adv} inside her {chest} and found tumors there.", "Bốn ngày sau, một lần chụp cắt lớp nhìn sâu vào ngực nó và phát hiện khối u ở đó."],
+      ["The scan needed drugs that put her to sleep, and the team decided that she should not wake up again.", "Lần chụp cần thuốc gây mê, và nhóm quyết định không để nó tỉnh lại nữa."],
+      ["She was six years old, and a Finn Dorset sheep’s life {averages=average~v} about 10 to 12 years, so Dolly died young.", "Nó sáu tuổi, trong khi đời một con cừu Finn Dorset trung bình khoảng 10 đến 12 năm, nên Dolly chết khi còn trẻ."]
+    ],
+    [
+      ["Was cloning the cause?", "Có phải nhân bản là nguyên nhân không?"],
+      ["In 2016, scientists studied four sheep that were made from the same line of milk cells as Dolly: Debbie, Denise, Dianna and Daisy.", "Năm 2016, các nhà khoa học nghiên cứu bốn con cừu được tạo ra từ cùng dòng tế bào sữa với Dolly: Debbie, Denise, Dianna và Daisy."],
+      ["They were born 11 years after Dolly, and the study found that they had {aged=age~v} normally.", "Chúng ra đời 11 năm sau Dolly, và nghiên cứu cho thấy chúng già đi bình thường."],
+      ["At the age of nine, none of them had more arthritis than {normal=normal~n} for their age, and all of them had normal blood pressure.", "Ở tuổi chín, không con nào bị viêm khớp nhiều hơn mức bình thường so với tuổi, và tất cả đều có huyết áp bình thường."],
+      ["In 2017, the team looked at X-rays of Dolly’s own bones and said that the old fears were wrong: cloning had not made her arthritis start early.", "Năm 2017, nhóm xem ảnh X-quang xương của chính Dolly và nói rằng những nỗi lo cũ là sai: nhân bản không làm bệnh viêm khớp của nó đến sớm."],
+      ["Today, some farmers pay about $20,000 to clone a very good bull or pig, but in the UK and the US, people are not allowed to sell cloned animals for food.", "Ngày nay, một số nông dân trả khoảng 20.000 đô la để nhân bản một con bò đực hay con lợn rất tốt, nhưng ở Anh và Mỹ, người ta không được phép bán động vật nhân bản làm thực phẩm."],
+      ["And Dolly herself is still in Edinburgh, in the National Museum of Scotland, where visitors have been able to see her since 2003.", "Còn chính Dolly vẫn ở Edinburgh, trong Bảo tàng Quốc gia Scotland, nơi khách tham quan có thể xem nó từ năm 2003."]
+    ]
+  ],
+  gloss: { institute: 'viện (nghiên cứu)', mammal: 'động vật có vú', cloned: 'được nhân bản', cloning: 'nhân bản (vô tính)', reproduction: 'sự sinh sản', genes: 'gen', nucleus: 'nhân tế bào', embryo: 'phôi', embryos: 'phôi', flock: 'đàn (cừu, chim)', ram: 'cừu đực', arthritis: 'viêm khớp', joints: 'khớp', lung: 'phổi', lungs: 'phổi', virus: 'virus', tumors: 'khối u', coughing: 'ho', scan: 'lần chụp (cắt lớp)', pressure: 'áp lực, áp suất (blood pressure = huyết áp)', congress: 'Quốc hội (Mỹ)', cell: 'tế bào', cells: 'tế bào', lamb: 'cừu non', lambs: 'cừu non', clone: 'nhân bản', bull: 'bò đực' },
+  grammar: [
+    ['passive-tenses', 'the embryo was put into a third sheep'],
+    ['past-perfect', 'Cedric, had died of a lung disease'],
+    ['reported-speech', 'said that the old fears were wrong'],
+    ['gerund-infinitive', 'he was against using the method on people'],
+    ['relative-non-defining', 'in the National Museum of Scotland, where visitors have been able to see her since 2003']
+  ],
+  practiceNote: 'Bài về cừu Dolly: sinh ngày 5/7/1996 ở Viện Roslin (Scotland), động vật có vú đầu tiên nhân bản từ tế bào trưởng thành; ba “mẹ” (cừu cho tế bào sữa, cừu cho trứng, cừu mang thai); 277 lần thử, 29 phôi, 13 cừu mẹ, một ca sinh; tin công bố 22/2/1997; sáu cừu con; viêm khớp năm 2001; chết năm 2003 vì bệnh phổi; nghiên cứu 2016–2017 cho thấy nhân bản không làm cừu già sớm. Từ vựng: cơ thể và sức khỏe (chest, age, normal), khoa học (sexual, clear, deep), số liệu (average), thời gian (the next). Ngữ pháp: bị động, quá khứ hoàn thành, câu tường thuật, giới từ + V-ing, mệnh đề quan hệ có dấu phẩy.',
+  practice: [
+    { t: 'mc', k: 'c:main', q: 'What is the main idea of the story?', o: ['Dolly was the first mammal cloned from an adult cell, and later studies showed that cloning did not make her old early.', 'Dolly was a famous sheep that lived for 20 years.', 'Dolly was born in the usual way, with a mother and a father.'], a: 0, why: 'Nhân bản từ tế bào trưởng thành; nghiên cứu sau cho thấy không già sớm.', ref: 'the first mammal ever cloned from a cell of an adult animal' },
+    { t: 'mc', k: 'c:method', q: 'What did the team put into the empty egg?', o: ['The nucleus of the milk cell', 'A whole lamb', 'Milk from a Finn Dorset sheep'], a: 0, why: 'Nhân của tế bào sữa.', ref: 'They put the nucleus of the milk cell into the empty egg' },
+    { t: 'mc', k: 'c:attempts', q: 'How many times did the team try?', o: ['277', '29', '13'], a: 0, why: '277 lần thử; 29 phôi; 13 cừu mẹ.', ref: 'The team tried 277 times' },
+    { t: 'mc', k: 'c:news', q: 'What happened when the news broke?', o: ['The institute received about 100 calls an hour.', 'Nobody was interested.', 'Dolly was sent to America.'], a: 0, why: 'Khoảng 100 cuộc gọi mỗi giờ.', ref: 'the institute received about 100 calls an hour' },
+    { t: 'mc', k: 'c:infer', q: 'Why was Dolly’s white face important?', o: ['It showed that she was not a copy of the black-faced sheep that carried her.', 'It showed that she was ill.', 'It showed that she had a father.'], a: 0, why: 'Mặt trắng như cừu Finn Dorset, khác cừu mẹ mặt đen.', ref: 'it was easy to see that Dolly was not a copy of the sheep that carried her' },
+    { t: 'mc', k: 'c:tf', q: 'True or false? “Dolly’s own lambs were also clones.”', o: ['True', 'False'], a: 1, why: 'Sai: Dolly sinh con theo cách hữu tính thông thường với cừu đực David.', ref: 'she had six lambs in the usual sexual way' },
+    { t: 'mc', k: 'c:study', q: 'What did the 2016 study find about the four sheep?', o: ['They had aged normally.', 'They all died young.', 'They had no lambs.'], a: 0, why: 'Bốn con cừu già đi bình thường.', ref: 'they had aged normally' },
+    { t: 'order', k: 'c:sequence', a: 'In a way, Dolly had three mothers and no father.', why: 'in a way = theo một nghĩa nào đó.', ref: 'In a way, Dolly had three mothers and no father' },
+    { t: 'dict', k: 'c:listen', a: 'It was not easy.', why: 'not easy = không dễ.' },
+    { t: 'mc', k: 'w:sexual', q: 'In ______ reproduction, a baby gets half of its genes from its mother and half from its father.', o: ['sexual', 'normal', 'deep'], a: 0, why: 'sexual reproduction = sinh sản hữu tính.', ref: 'In sexual reproduction, a baby gets half of its genes' },
+    { t: 'mc', k: 'w:deep~adv', q: 'The instructions for building an animal are kept ______ inside each cell.', o: ['deep', 'clear', 'next'], a: 0, why: 'deep inside = sâu bên trong.', ref: 'are kept deep inside each cell' },
+    { t: 'gap', k: 'w:clear~v', q: 'They took an egg cell and ______ it of its own nucleus.', a: ['cleared'], why: 'clear something of something = lấy hết cái gì ra khỏi đâu.', ref: 'cleared it of its own nucleus' },
+    { t: 'mc', k: 'w:average~v', q: 'A Finn Dorset sheep’s life ______ about 10 to 12 years.', o: ['averages', 'clears', 'ages'], a: 0, why: 'average (v) = trung bình là.', ref: 'a Finn Dorset sheep’s life averages about 10 to 12 years' },
+    { t: 'match', k: 'w:set-dolly', q: 'Match the words with their meanings.', pairs: [['chest', 'the front of the body between the neck and the stomach'], ['age', 'to become older'], ['normal', 'the usual state or level'], ['the next', 'the one that comes after this one']], why: 'chest = ngực; age (v) = già đi; normal (n) = mức bình thường; the next = cái tiếp theo.', ref: 'a scan looked deep inside her chest' },
+    { t: 'mc', k: 'w:age~v', q: 'Would Dolly ______ faster than other sheep?', o: ['age', 'average', 'clear'], a: 0, why: 'age (v) = già đi.', ref: 'So would Dolly age faster than other sheep?' },
+    { t: 'gap', k: 'w:normal~n', q: 'Daily medicine cleared the signs, and she looked back to ______.', a: ['normal'], why: 'back to normal = trở lại bình thường.', ref: 'she looked back to normal' },
+    { t: 'mc', k: 'w:next~n', q: 'One year she had one lamb, and the ______ she had two.', o: ['next', 'normal', 'chest'], a: 0, why: 'one year …, the next … = năm này …, năm sau …', ref: 'and the next she had two' },
+    { t: 'mc', k: 'w:chest', q: 'The virus makes tumors grow in the lungs, inside the ______.', o: ['chest', 'egg', 'face'], a: 0, why: 'chest = lồng ngực.', ref: 'inside the chest' },
+    { t: 'mc', k: 'g:passive-tenses', q: 'Finally, the embryo ______ into a third sheep.', o: [['was put', 'Đúng: bị động quá khứ, phôi được đưa vào.'], ['put', 'Sai: phôi không tự đưa mình vào.'], ['has put', 'Sai thì và sai dạng.']], a: 0, why: 'was/were + V3.', ref: 'the embryo was put into a third sheep' },
+    { t: 'mc', k: 'g:past-perfect', q: 'In 2003, the team knew that Cedric ______ of a lung disease in 2000.', o: [['had died', 'Đúng: việc xảy ra trước một mốc quá khứ khác.'], ['has died', 'Sai: không dùng hiện tại hoàn thành với mốc quá khứ.'], ['dies', 'Sai thì.']], a: 0, why: 'had + V3.', ref: 'Cedric, had died of a lung disease' },
+    { t: 'error', k: 'g:gerund-infinitive', q: 'He was against use the method on people.', wrong: 'use', fix: 'using', why: 'Sau giới từ (against) dùng V-ing.', ref: 'he was against using the method on people' },
+    { t: 'mc', k: 'g:reported-speech', q: 'The team said that the old fears ______ wrong.', o: [['were', 'Đúng: lùi thì trong câu tường thuật (are → were).'], ['are being', 'Sai dạng.'], ['be', 'Sai: thiếu chia động từ.']], a: 0, why: 'said that + lùi thì.', ref: 'said that the old fears were wrong' }
+  ],
+  extra: [],
+  write: { vi: 'Viết 3–5 câu tiếng Anh về một chi tiết hoặc một mẫu đo mà kết quả trở lại bình thường sau khi sửa (ví dụ sau khi chỉnh khuôn). Cố dùng các từ dưới đây.', use: ['normal', 'average', 'clear', 'the next', 'deep'], model: 'At T1, the hole depth was too small, because there was plastic deep inside the hole. The toolmaker cleared the vent, and at T2 the depth went back to normal. The five samples average 12.02 mm now. One trial had problems, but the next was much better.' },
+  fact: { card: 'Cừu Dolly ra đời ngày 5/7/1996 ở Viện Roslin (Scotland), là động vật có vú đầu tiên được nhân bản từ tế bào của một con vật trưởng thành. Nhân tế bào lấy từ tuyến vú của một con cừu Finn Dorset sáu tuổi, đưa vào trứng đã bỏ nhân của một con cừu Scottish Blackface, rồi phôi được cấy vào một cừu mẹ Blackface khác. Từ 277 lần thử chỉ có một ca sinh. Dolly sinh sáu cừu con, bị viêm khớp năm 2001 và được cho “ngủ” vĩnh viễn ngày 14/2/2003 khi phát hiện khối u phổi.',
+    bonus: 'When the news broke, one scientist remembered: “We were getting 100 calls an hour from media outlets around the world.”', bonusSrc: 'History.com — Dolly the Sheep (Dave Roos)' },
+  sources: [
+    { t: 'National Museums Scotland — The story of Dolly the sheep', u: 'https://www.nms.ac.uk/discover-catalogue/the-story-of-dolly-the-sheep' },
+    { t: 'History.com — Dolly the Sheep (Dave Roos)', u: 'https://www.history.com/articles/dolly-the-sheep-cloning' },
+    { t: 'Understanding Animal Research — Animal cloning', u: 'https://www.understandinganimalresearch.org.uk/animal-research-case-studies/animal-cloning' },
+    { t: 'The Citizen (AFP) — Dolly the cloned sheep was not old before her time: study', u: 'https://www.citizen.co.za/news/news-world/science-cloning-dolly-disease-animals/' }
+  ],
+  note: 'National Museums Scotland: Dolly sinh ngày 5/7/1996; đặt theo tên ca sĩ nhạc đồng quê Dolly Parton; nhân lấy từ tế bào tuyến vú của cừu Finn Dorset, đưa vào trứng rỗng của cừu Scottish Blackface; Dolly được giữ bí mật đến khi Roslin công bố bài báo, công bố ngày 22/2/1997; sống cả đời trong một đàn cừu ở Viện Roslin; sáu con với cừu đực Welsh Mountain tên David: Bonny (1998), Sally và Rosie (1999), Lucy, Darcy và Cotton (2000); X-quang xác nhận viêm khớp mùa thu 2001, thuốc chống viêm hằng ngày làm hết dấu hiệu nhìn thấy được trong vài tháng, nguyên nhân không bao giờ xác định được; cừu nhân bản Cedric chết tháng 1/2000 vì bệnh u tuyến phổi do virus; ngày 10/2/2003 người chăm sóc thấy Dolly ho; ngày 14/2/2003 chụp CT thấy khối u trong ngực; vì phải gây mê toàn thân nên nhóm quyết định không cho Dolly tỉnh lại; sáu tuổi; được tặng cho bảo tàng và trưng bày từ năm 2003. History.com: Viện Roslin thuộc Đại học Edinburgh; Ian Wilmut là nhà khoa học dẫn đầu dự án; phôi được nuôi tới giai đoạn phôi nang rồi cấy vào cừu mang thai hộ Scottish Blackface; Dolly là con vật đầu tiên nhân bản từ tế bào của con vật trưởng thành (không phải con vật nhân bản đầu tiên); câu “We were getting 100 calls an hour from media outlets around the world” (Whitelaw); bìa TIME “Will There Ever Be Another You?”; Wilmut điều trần trước Quốc hội Mỹ, phản đối dùng kỹ thuật này để nhân bản người; tháng 6/1997 Tổng thống Clinton đề nghị Quốc hội cấm nhân bản người; History.com viết tên con đầu là “Bonnie”, NMS viết “Bonny” (bài theo NMS). Understanding Animal Research: “the only lamb born from 277 attempts”; 277 lần dung hợp tế bào cho 29 phôi sớm, cấy vào 13 cừu mẹ; chỉ một ca mang thai đủ tháng; sinh sau 148 ngày; tế bào từ cừu Finn Dorset sáu tuổi; cừu cho trứng và cừu mang thai đều là Scottish Blackface, Dolly mặt trắng; trang này nói Dolly “aged six and a half” và cho rằng việc già sớm “có thể” do nhân lấy từ cừu sáu tuổi — điều mà các nghiên cứu năm 2016–2017 (The Citizen) không ủng hộ. The Citizen (AFP, 2017): các nhà khoa học xem ảnh X-quang bộ xương Dolly và kết luận “The original concerns that cloning had caused early-onset OA in Dolly were unfounded”; nghiên cứu năm trước (2016) cho thấy bốn bản sao Debbie, Denise, Dianna và Daisy, sinh 11 năm sau Dolly từ cùng dòng tế bào tuyến vú, già đi bình thường; ở tuổi chín không con nào bị tiểu đường, huyết áp đều bình thường, không con nào bị viêm khớp bất thường so với tuổi; Dolly chết lúc “sáu năm tám tháng” (theo ngày tháng của NMS thì là sáu năm bảy tháng); giống Finn Dorset thường sống khoảng 10–12 năm. Bài đơn giản hóa “tuyến vú” thành “the part of a sheep’s body that makes milk”, “gây mê toàn thân” thành “drugs that put her to sleep”, “chụp CT” thành “a scan”. Số phôi trung bình mỗi cừu mẹ (29 : 13 ≈ 2,2) là phép tính của bài. History.com cũng ghi: Megan và Morag (1995) được nhân bản từ tế bào phôi; Dolly không phải con vật nhân bản đầu tiên; một số nhà chăn nuôi nhân bản bò đực hoặc lợn giống quý với giá khoảng 20.000 đô la, nhưng bán động vật nhân bản làm thực phẩm là bất hợp pháp ở Anh và Mỹ. Kiến thức phổ thông: Megan và Morag được tạo ra ở Roslin; sinh sản hữu tính (một nửa gen từ mẹ, một nửa từ bố); thông tin di truyền nằm trong nhân tế bào; Roslin ở gần Edinburgh. Các câu “theo một nghĩa nào đó, Dolly có ba mẹ và không có bố”, “dễ thấy Dolly không phải bản sao của con cừu mang thai nó”, “Dolly không bao giờ rời Roslin”, “nhưng có một mối lo”, “Dolly chết khi còn trẻ” là nhận xét của bài.',
+  verified: '2026-11-15'
+});

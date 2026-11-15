@@ -12,8 +12,8 @@ Số bài và số từ của các giai đoạn chưa làm là **ước tính** 
 | v0.1 | A2 · Pass 1 | 54 bài đọc, 846 từ A2, 16 bài ngữ pháp A2, đồng bộ bằng mã, giọng AI Kokoro | Xong |
 | v0.2 | A2 · Pass 2 | 29 chuyện mới **không thêm từ mới** (24 bài ở v0.2, 5 bài ở v0.2.3): các từ A2 mới gặp một lần được gặp lại trong ngữ cảnh khác (`tasks/v0.2.md`) | Xong |
 | v0.3 | B1 · Pass 1, phần 1 | 16 bài (800–1.000 từ/bài), 364 từ B1, 8 bài ngữ pháp B1 nhóm 1 (`tasks/v0.3.md`) | Xong |
-| v0.4 | B1 · Pass 1, phần 2 | Khoảng 15 bài, khoảng 370 từ B1 còn lại: đủ bộ từ B1; ngữ pháp B1 nhóm 2 | Chưa làm |
-| v0.5 | B1 · Pass 2 | Khoảng 15 chuyện mới ôn từ B1, không thêm từ | Chưa làm |
+| v0.4 | B1 · Pass 1, phần 2 | 16 bài, 283 từ B1, 8 bài ngữ pháp B1 nhóm 2 (`tasks/v0.4.md`) | Xong |
+| v0.5 | B1 · Pass 1, phần 3 và B1 · Pass 2 | Khoảng 3–4 bài cho khoảng 57 từ B1 còn lại (đủ bộ từ B1); rồi khoảng 15 chuyện mới ôn từ B1, không thêm từ | Chưa làm |
 | v0.6 | B2 · Pass 1, phần 1 | Khoảng 19 bài (1.000–1.300 từ/bài), khoảng 460 từ B2, ngữ pháp B2 nhóm 1 | Chưa làm |
 | v0.7 | B2 · Pass 1, phần 2 | Khoảng 19 bài, khoảng 460 từ B2 | Chưa làm |
 | v0.8 | B2 · Pass 1, phần 3 | Khoảng 19 bài, khoảng 450 từ B2 còn lại: đủ bộ từ B2; ngữ pháp B2 nhóm 2 | Chưa làm |
@@ -34,3 +34,4 @@ Sau v1.0 (tùy chọn): Pass 2 cho B2 và C1, theo cùng cách đánh số (v1.1
 - **v0.2.2** (2026-11-14): phím tắt do người học tự chọn (Settings → Audio: bấm “Set key” rồi nhấn phím) cho Play/pause, lùi, tiến, nghe lại câu; nút −Ns / +Ns và ô chọn số giây (2–30 s) trên thanh phát; cột bài đọc rộng 800 px và nằm giữa vùng đọc, khung nghĩa từ nằm ở khoảng trống bên trái. Xem `DECISIONS.md` §23.
 - **v0.2.3** (2026-11-15): thêm 5 bài A2 · Pass 2 (a2-p2-25 … 29: Jackie Robinson, buổi chiếu phim đầu tiên của anh em Lumière, tìm ra virus cúm năm 1933, đánh golf trên Mặt Trăng, trẻ em được gửi qua bưu điện). Số từ A2 mới chỉ gặp ở một bài giảm từ 103 xuống 47. Không thêm từ mới. Xem `DECISIONS.md` §24.
 - **v0.3** (2026-11-15): B1 · Pass 1, phần 1: 16 bài đọc B1 (b1-p1-01 … 16, từ Gutenberg đến lụt mật mía Boston 1919), 364 từ B1 mới (20–25 từ mỗi bài, khai báo ở đầu file bài), 8 bài ngữ pháp B1 nhóm 1 (`data/grammar-b1.js`). Mỗi bài 800–1.000 từ, có 2–3 nguồn đã mở trong phiên. Sửa kèm: vài câu ở bài B1 đầu bị gắn sai chủ điểm ngữ pháp; bài “must/might” thêm dạng quá khứ (might have + V3); Info cập nhật số từ, số bài theo cấp độ; công cụ kiểm tra báo lỗi khi chủ đề bài không có trong danh sách. Xem `DECISIONS.md` §25.
+- **v0.4** (2026-11-15): B1 · Pass 1, phần 2: 16 bài đọc B1 (b1-p1-17 … 32, từ “The War of the Worlds” trên radio 1938 đến Stanislav Petrov 1983), 283 từ B1 mới (8–24 từ mỗi bài), 8 bài ngữ pháp B1 nhóm 2 (câu điều kiện loại 3, mệnh đề quan hệ có dấu phẩy, wish, tương lai tiếp diễn và hoàn thành, so/such, câu hỏi đuôi, too/enough, have something done). Bộ từ B1 đã phủ 726/802 mục; còn khoảng 57 từ dùng được, để cho v0.5. Sửa kèm: vài thẻ từ trần ở bài cũ bị từ B1 mới “chiếm” (`{expected}`, `{involved}`, ví dụ của retire/injure/frighten) được gắn lại đúng mục từ. Xem `DECISIONS.md` §26.

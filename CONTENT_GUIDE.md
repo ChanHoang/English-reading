@@ -142,6 +142,9 @@ EI.grammar({ id: 'past-simple', n: 1, level: 'A2', title: 'Past simple', vi: 'Th
 - **in≥2 sent.**: số từ mục tiêu có mặt ở ít nhất hai câu.
 - **test items (c/w/g)**: tổng số mục của bài kiểm tra và số mục từng phần (hiểu bài / từ vựng / ngữ pháp).
 - **above-level / incidental**: tỷ lệ lượt từ vượt cấp; cột sau đã trừ “từ chủ đề” (từ có trong `gloss` và dùng ≥ 3 lần). Giữ cột sau dưới 5%.
+  - Mọi từ có trong `gloss` đều bị tính là vượt cấp, kể cả từ A1–B1. Chỉ gloss từ B2 trở lên, từ không có trong bảng tham chiếu, hoặc từ dùng khác nghĩa mục từ (ví dụ draw = “ván hòa” trong cờ vua).
+  - Từ có dấu nháy trong lời trích (don’t, couldn’t, wasn’t) không có trong bảng tham chiếu: thêm gloss ngắn kiểu `'don’t': '= do not'`.
+  - Thêm từ B1 là dạng -ed/-ing của từ thấp hơn (expected, involved, retired…) có thể “chiếm” thẻ trần `{expected}` ở bài cũ: sau mỗi bài, chạy kiểm tra toàn bộ và đổi thẻ cũ thành `{expected=expect}` nếu cần.
 - **ERROR**: từ mục tiêu không xuất hiện (đã đánh dấu), từ dùng lại trong cùng lượt, thiếu nguồn, `ref`/`grammar`/`dict` không khớp bài, câu thiếu bản dịch, ví dụ ngữ pháp không có trong bài…
 - **warn**: từ mục tiêu xuất hiện mà chưa đánh dấu (kiểm tra nghĩa!), từ chỉ ở một câu, từ lạ chưa chú thích, định nghĩa dùng từ vượt cấp, cấp độ lệch với bảng tham chiếu.
 

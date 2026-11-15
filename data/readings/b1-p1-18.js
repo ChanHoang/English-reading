@@ -3,7 +3,7 @@ EI.words('B1', `
 childhood|n|/ˈtʃaɪldhʊd/|the time when you are a child|She spent her {childhood} in a small village near Hue.|in childhood; a happy childhood; childhood memories|thời thơ ấu|2||child (n)
 embarrassed|adj|/ɪmˈbærəst/|feeling shy, uncomfortable or a little bad about yourself in front of other people|I was {embarrassed} when I forgot his name.|feel embarrassed; embarrassed about something|ngượng, xấu hổ|2|embarrassed (cảm thấy) khác embarrassing (gây ngượng).|embarrass (v)
 embarrassing|adj|/ɪmˈbærəsɪŋ/|making you feel shy or uncomfortable in front of other people|It was {embarrassing} to make the same mistake twice.|an embarrassing mistake; an embarrassing moment|đáng xấu hổ, gây ngượng|2||embarrass (v)
-frighten|v|/ˈfraɪtn/|to make somebody feel afraid|The loud noise {frightened} the children.|frighten somebody; frighten somebody away|làm sợ hãi|2||frightened (adj)
+frighten|v|/ˈfraɪtn/|to make somebody feel afraid|The loud noise {frightened=frighten} the children.|frighten somebody; frighten somebody away|làm sợ hãi|2||frightened (adj)
 hand|v|/hænd/|to pass something to somebody so that they can hold it|Please {hand} me that caliper.|hand something to somebody; hand something in/over|đưa, trao (bằng tay)|2|hand in = nộp (bài, báo cáo).|hand (n)
 honest|adj|/ˈɑːnɪst/|always telling the truth, and never cheating or stealing|To be {honest}, I do not like the new design.|an honest answer; be honest with somebody; to be honest|thật thà, trung thực|2|Âm h câm: /ˈɑːnɪst/.|honesty (n)
 indicate|v|/ˈɪndɪkeɪt/|to show that something is true or exists|The test results {indicate} a problem with the mold.|indicate that …; clearly indicate|cho thấy, chỉ ra|2||

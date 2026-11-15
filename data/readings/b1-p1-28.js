@@ -1,0 +1,140 @@
+EI.words('B1', `
+# ---- b1-p1-28 Water in One Hand
+confuse|v|/kənˈfjuːz/|to mix up one person or thing with another; also to make somebody unable to understand|People often {confuse} the two words.|confuse A with B; be confused|nhầm lẫn; làm bối rối|2||confusion (n)
+continuous|adj|/kənˈtɪnjuəs/|happening for a long time without stopping|The machine needs {continuous} cooling.|continuous work/practice; continuous rain|liên tục|2||continue (v)
+cottage|n|/ˈkɑːtɪdʒ/|a small house, usually in the country|They spent the summer in a {cottage} by the lake.|a little/small cottage; a country cottage|nhà nhỏ (ở nông thôn)|2||
+definition|n|/ˌdefɪˈnɪʃn/|a statement of what a word or an idea means|Look up the {definition} in a dictionary.|a clear definition; the definition of something|định nghĩa|2||define (v)
+dislike|v|/dɪsˈlaɪk/|to not like somebody or something|I {dislike} cold weather.|dislike doing something; strongly dislike|không thích|2|dislike cũng là danh từ.|like (v)
+educate|v|/ˈedʒukeɪt/|to teach somebody over a long time, usually at a school|The school {educates} 500 children.|be educated at …; educate somebody about something|giáo dục, dạy dỗ|2||education (n)
+educated|adj|/ˈedʒukeɪtɪd/|having had a good education|She is a highly {educated} woman.|highly/well educated|có học thức|2||educate (v)
+happiness|n|/ˈhæpinəs/|the feeling of being happy|Money does not always bring {happiness}.|great happiness; full of happiness|niềm hạnh phúc|2||happy (adj)
+intelligence|n|/ɪnˈtelɪdʒəns/|the ability to learn, understand and think|She is a person of great {intelligence}.|high intelligence; human intelligence|trí thông minh|2||intelligent (adj)
+kick|v|/kɪk/|to hit somebody or something with your foot|He {kicked} the ball into the goal.|kick a ball; kick and scream|đá|2|kick cũng là danh từ: cú đá.|kick (n)
+lip|n|/lɪp/|either of the two soft edges of your mouth|She put her finger to her {lips}.|upper/lower lip; read somebody’s lips|môi|2|lip-read = đọc khẩu hình.|
+place|v|/pleɪs/|to put something in a particular position|{Place} the part carefully on the table.|place something on/in/under something|đặt, để|2|place cũng là danh từ (A1).|place (n)
+pleasure|n|/ˈpleʒər/|a feeling of being happy because you enjoy something; also a thing that gives you this feeling|Reading is one of my greatest {pleasures}.|give somebody pleasure; a great pleasure|niềm vui thích|2||please (v)
+spoken|adj|/ˈspoʊkən/|said with your voice, not written|She is good at {spoken} English.|spoken language/English/words|(thuộc) lời nói, nói|2||speak (v)
+throat|n|/θroʊt/|the front part of your neck; also the inside of your neck|I have a sore {throat}.|a sore throat; clear your throat|cổ họng|2||
+tongue|n|/tʌŋ/|the soft part inside your mouth that moves when you speak or eat|The doctor looked at my {tongue}.|bite your tongue; mother tongue|cái lưỡi|2|mother tongue = tiếng mẹ đẻ.|
+will|n|/wɪl/|the strong wish and ability to do what you want, even when it is hard|She has a very strong {will}.|a strong will; against somebody’s will|ý chí|2|will cũng là danh từ: di chúc.|
+`);
+EI.reading({
+  id: 'b1-p1-28', level: 'B1', pass: 1, n: 28,
+  title: 'Water in One Hand',
+  topic: 'language', era: '1880–1968', year: 1887, region: 'United States',
+  predict: { q: 'Helen Keller bị mù và điếc từ khi 19 tháng tuổi. Bạn đoán cô hiểu ra “mọi thứ đều có tên” nhờ thứ gì?', o: ['Nước chảy qua tay', 'Một cuốn sách in nổi', 'Một bản nhạc'] },
+  targets: ['confuse', 'continuous', 'cottage', 'definition', 'dislike', 'educate', 'educated', 'happiness', 'intelligence', 'kick', 'lip', 'place', 'pleasure', 'spoken', 'throat', 'tongue', 'will'],
+  text: [
+    [
+      ["Helen Keller was born in Tuscumbia, Alabama, on June 27, 1880.", "Helen Keller sinh ở Tuscumbia, bang Alabama, ngày 27 tháng 6 năm 1880."],
+      ["When she was 19 months old, an illness left her deaf and blind.", "Khi cô mới 19 tháng tuổi, một trận bệnh khiến cô bị điếc và mù."],
+      ["She could not see or hear, so she could not learn {spoken} words like other children.", "Cô không nhìn, không nghe được, nên không thể học những từ nói ra như những đứa trẻ khác."],
+      ["As she grew older, she became wild and difficult: when she did not get what she wanted, she screamed and {kicked=kick}.", "Lớn lên, cô trở nên hoang dã và khó bảo: khi không được điều mình muốn, cô gào thét và đá lung tung."],
+      ["Her family could see her {intelligence}, but they did not know how to reach it.", "Gia đình thấy được trí thông minh của cô, nhưng không biết làm sao chạm tới nó."]
+    ],
+    [
+      ["When Helen was six, Alexander Graham Bell, the man who invented the telephone, examined her.", "Khi Helen sáu tuổi, Alexander Graham Bell, người phát minh ra điện thoại, đã khám cho cô."],
+      ["He helped the family to find a teacher from the Perkins Institution in Boston, a school where blind children were {educated=educate}.", "Ông giúp gia đình tìm một giáo viên từ Viện Perkins ở Boston, một ngôi trường nơi trẻ em mù được giáo dục."],
+      ["The teacher was Anne Sullivan, who was 20 years old and had serious problems with her own eyes.", "Cô giáo là Anne Sullivan, khi ấy 20 tuổi và chính cô cũng có vấn đề nghiêm trọng về mắt."],
+      ["She had grown up very poor, and she had entered Perkins at the age of 14.", "Cô lớn lên trong cảnh rất nghèo, và vào trường Perkins năm 14 tuổi."],
+      ["She arrived in Tuscumbia on March 3, 1887.", "Cô đến Tuscumbia ngày 3 tháng 3 năm 1887."]
+    ],
+    [
+      ["Helen had a strong {will}, and at first she did not accept her new teacher.", "Helen có ý chí rất mạnh, và lúc đầu cô không chấp nhận cô giáo mới."],
+      ["Anne believed that a child had to learn to listen and do as she was told before she could learn anything else.", "Anne tin rằng một đứa trẻ phải học cách nghe lời trước khi có thể học bất cứ điều gì khác."],
+      ["So, within a week, she took Helen to live alone with her in a small {cottage}, a little garden house about a quarter of a mile from the family home.", "Vì vậy, chưa đầy một tuần, cô đưa Helen đến sống riêng với mình trong một căn nhà nhỏ, một ngôi nhà vườn cách nhà chính khoảng một phần tư dặm."],
+      ["The {cottage} had one large room with a fireplace and a big window.", "Căn nhà nhỏ có một phòng lớn với lò sưởi và một ô cửa sổ lớn."],
+      ["When they first went there, Helen {kicked=kick} and screamed until she was too tired to move.", "Khi mới đến đó, Helen đá và gào thét cho đến khi mệt lả không cử động nổi."],
+      ["Anne’s {will} was just as strong, and she did not give up.", "Ý chí của Anne cũng mạnh không kém, và cô không bỏ cuộc."]
+    ],
+    [
+      ["Anne {educated=educate} Helen through her hands.", "Anne dạy Helen qua đôi bàn tay."],
+      ["She spelled words into Helen’s hand with her fingers, letter by letter.", "Cô dùng ngón tay đánh vần từng chữ cái vào lòng bàn tay Helen."],
+      ["Helen learned to copy the letters quickly, but she did not understand that they were words, or that everything has a name.", "Helen học bắt chước các chữ cái rất nhanh, nhưng không hiểu rằng đó là những từ, hay rằng mọi thứ đều có tên."],
+      ["She {confused=confuse} the words “mug” and “milk” with the word “drink.”", "Cô nhầm lẫn các từ “mug” (cốc) và “milk” (sữa) với từ “drink” (uống)."],
+      ["For Helen, the letters were only a game, and the new words {confused=confuse} her.", "Với Helen, các chữ cái chỉ là một trò chơi, và những từ mới khiến cô bối rối."],
+      ["Anne did not try to give her a {definition} of each word; she wanted Helen to connect the word with the thing itself.", "Anne không cố đưa cho cô định nghĩa của từng từ; cô muốn Helen nối từ với chính sự vật."]
+    ],
+    [
+      ["The big moment came on April 5, 1887, at the water pump.", "Khoảnh khắc lớn đến vào ngày 5 tháng 4 năm 1887, bên chiếc máy bơm nước."],
+      ["Anne {placed=place} one of Helen’s hands under the cold water and spelled “w-a-t-e-r” into the other hand.", "Anne đặt một tay của Helen dưới dòng nước lạnh và đánh vần “w-a-t-e-r” vào bàn tay kia."],
+      ["Suddenly Helen understood: these letters meant the cool thing that was running over her hand.", "Đột nhiên Helen hiểu ra: những chữ cái này chính là thứ mát lạnh đang chảy qua tay cô."],
+      ["In Anne’s words, “A new light came into her face.”", "Theo lời Anne, “Một nguồn sáng mới hiện lên trên gương mặt em.”"],
+      ["Now each word had a meaning, and that was better than any {definition}.", "Giờ đây mỗi từ đều có nghĩa, và điều đó tốt hơn bất kỳ định nghĩa nào."],
+      ["Helen wanted to know the names of everything around her: the pump, the plants and her teacher.", "Helen muốn biết tên của mọi thứ quanh mình: máy bơm, cây cối và cô giáo."],
+      ["In a few hours, she learned 30 new words.", "Trong vài giờ, cô học được 30 từ mới."],
+      ["Later, Helen kissed Anne for the first time, and Anne wrote that her heart was so full of {happiness} that she thought it would burst.", "Sau đó, Helen hôn Anne lần đầu tiên, và Anne viết rằng tim cô tràn ngập hạnh phúc đến mức cô tưởng nó sẽ vỡ tung."]
+    ],
+    [
+      ["After that, Helen learned very fast, and she soon learned to read raised letters and Braille.", "Sau đó, Helen học rất nhanh, và chẳng bao lâu cô học đọc chữ in nổi và chữ Braille."],
+      ["In 1890, when she was ten, she asked to learn to speak.", "Năm 1890, khi mười tuổi, cô xin được học nói."],
+      ["Anne took her to Sarah Fuller, the head of a school for deaf children in Boston.", "Anne đưa cô đến gặp Sarah Fuller, hiệu trưởng một trường dành cho trẻ điếc ở Boston."],
+      ["Miss Fuller {placed=place} Helen’s hand on her face, so that Helen could feel the position of her {tongue} and {lips=lip} when she made a sound.", "Cô Fuller đặt tay Helen lên mặt mình, để Helen cảm nhận được vị trí của lưỡi và môi khi cô phát ra một âm."],
+      ["Helen copied each movement, with one hand on her own {throat} while the other hand felt the movements of her teacher’s {lips=lip}.", "Helen bắt chước từng cử động, một tay đặt lên cổ họng mình trong khi tay kia cảm nhận cử động của môi cô giáo."],
+      ["Getting the {tongue} into the right position for each sound was very hard.", "Đặt lưỡi đúng vị trí cho từng âm là việc rất khó."],
+      ["After eleven lessons, her first sentence was “It is warm.”", "Sau mười một buổi học, câu đầu tiên của cô là “It is warm.” (Trời ấm.)"],
+      ["The speaking needed {continuous} practice, and Helen often practiced for hours.", "Việc học nói cần luyện tập liên tục, và Helen thường luyện hàng giờ liền."],
+      ["Even so, few people could understand her at first, and she always {disliked=dislike} her {spoken} voice.", "Dù vậy, lúc đầu ít người hiểu được cô, và cô luôn không thích giọng nói của mình."],
+      ["Many people {dislike} the sound of their own voice, but for Helen it was a much bigger problem.", "Nhiều người không thích giọng của chính mình, nhưng với Helen đó là một vấn đề lớn hơn nhiều."],
+      ["She also learned to understand people by feeling their {lips=lip} and {throat} as they spoke.", "Cô cũng học cách hiểu người khác bằng cách sờ môi và cổ họng họ khi họ nói."],
+      ["She had always found it a {pleasure} to feel the movements of her teacher’s face.", "Cô vẫn luôn thấy thích thú khi cảm nhận cử động trên gương mặt cô giáo."],
+      ["Her {continuous} hard work, and Anne’s, never really stopped.", "Sự cố gắng liên tục của cô, và của Anne, thật ra chưa bao giờ ngừng."]
+    ],
+    [
+      ["In 1900, Helen entered Radcliffe College, and in 1904 she finished her degree with very good results.", "Năm 1900, Helen vào học Đại học Radcliffe, và năm 1904 cô tốt nghiệp với kết quả rất tốt."],
+      ["She was the first deaf and blind person to earn this degree, and she became a highly {educated} woman.", "Cô là người vừa điếc vừa mù đầu tiên giành được bằng này, và trở thành một phụ nữ có học thức cao."],
+      ["Anne went to the classes with her and spelled the lessons into her hand.", "Anne đi học cùng cô và đánh vần bài giảng vào tay cô."],
+      ["Books gave Helen great {pleasure}, and she wrote many of her own, starting with The Story of My Life in 1903.", "Sách mang lại cho Helen niềm vui lớn, và cô tự viết nhiều cuốn, bắt đầu với Câu chuyện đời tôi năm 1903."],
+      ["As an {educated} speaker and writer, she worked for the American Foundation for the Blind for more than 40 years and visited 35 countries.", "Là một diễn giả và nhà văn có học thức, bà làm việc cho Quỹ Người mù Hoa Kỳ hơn 40 năm và đến thăm 35 quốc gia."],
+      ["Anne stayed with her until Anne’s death in 1936.", "Anne ở bên bà cho đến khi Anne qua đời năm 1936."],
+      ["The writer Mark Twain once said that the two most interesting people of the 1800s were Napoleon and Helen Keller.", "Nhà văn Mark Twain từng nói rằng hai nhân vật thú vị nhất của thế kỷ 19 là Napoleon và Helen Keller."],
+      ["Helen Keller died on June 1, 1968, and her story is still told in books, plays and films.", "Helen Keller mất ngày 1 tháng 6 năm 1968, và câu chuyện của bà vẫn được kể trong sách, kịch và phim."],
+      ["Her {intelligence} was always there; Anne Sullivan simply found the way to reach it, and she brought {happiness} into both their lives.", "Trí thông minh của bà vẫn luôn ở đó; Anne Sullivan chỉ tìm ra con đường để chạm tới nó, và mang hạnh phúc vào cuộc đời cả hai người."]
+    ]
+  ],
+  gloss: { deaf: 'điếc', blind: 'mù', screamed: 'gào thét', fireplace: 'lò sưởi', mug: 'cái cốc (có quai)', pump: 'máy bơm', burst: 'vỡ tung' },
+  grammar: [
+    ['so-such', 'her heart was so full of happiness that she thought it would burst'],
+    ['relative-non-defining', 'The teacher was Anne Sullivan, who was 20 years old'],
+    ['past-perfect', 'she had entered Perkins at the age of 14'],
+    ['passive-tenses', 'a school where blind children were educated'],
+    ['gerund-infinitive', 'she asked to learn to speak']
+  ],
+  practiceNote: 'Bài về Helen Keller và cô giáo Anne Sullivan: Helen mù và điếc từ 19 tháng tuổi; Anne đến ngày 3/3/1887, đưa Helen về sống riêng trong căn nhà vườn nhỏ và đánh vần chữ vào tay em; ngày 5/4/1887 ở máy bơm nước, Helen hiểu “w-a-t-e-r” là nước và học 30 từ trong vài giờ; năm 1890 em học nói bằng cách sờ môi, lưỡi và cổ họng; năm 1904 tốt nghiệp Radcliffe. Từ vựng: cơ thể và lời nói (lip, tongue, throat, spoken), học tập (educate, educated, intelligence, definition, confuse, continuous), cảm xúc và tính cách (happiness, pleasure, dislike, will, kick), khác (cottage, place). Ngữ pháp: so … that, mệnh đề quan hệ có dấu phẩy, quá khứ hoàn thành, bị động, ask + to V.',
+  practice: [
+    { t: 'mc', k: 'c:main', q: 'What is the main idea of the story?', o: ['Anne Sullivan found a way to teach Helen Keller, who was deaf and blind, and Helen became a highly educated woman.', 'Helen Keller became a teacher at the Perkins Institution.', 'Alexander Graham Bell taught Helen Keller to speak.'], a: 0, why: 'Anne tìm ra cách dạy; Helen trở thành người có học thức cao.', ref: 'Anne Sullivan simply found the way to reach it' },
+    { t: 'mc', k: 'c:illness', q: 'What happened when Helen was 19 months old?', o: ['An illness left her deaf and blind.', 'She learned her first word.', 'She met Anne Sullivan.'], a: 0, why: 'Một trận bệnh làm cô mù và điếc.', ref: 'an illness left her deaf and blind' },
+    { t: 'mc', k: 'c:cottage', q: 'Why did Anne take Helen to live in the cottage?', o: ['She wanted Helen to learn to listen and do as she was told first.', 'The family home was too small.', 'Helen wanted to live alone.'], a: 0, why: 'Muốn Helen học nghe lời trước.', ref: 'a child had to learn to listen and do as she was told' },
+    { t: 'mc', k: 'c:pump', q: 'What did Helen understand at the water pump?', o: ['That the letters “w-a-t-e-r” meant the thing on her hand', 'That the pump was broken', 'That Anne was leaving'], a: 0, why: 'Các chữ cái chính là thứ nước chảy qua tay.', ref: 'these letters meant the cool thing that was running over her hand' },
+    { t: 'mc', k: 'c:speak', q: 'How did Helen learn to speak?', o: ['By feeling the position of her teacher’s tongue and lips', 'By listening to the radio', 'By reading books about sounds'], a: 0, why: 'Sờ vị trí lưỡi và môi của cô giáo.', ref: 'feel the position of her tongue and lips' },
+    { t: 'mc', k: 'c:infer', q: 'Why does the story say that a meaning was “better than any definition”?', o: ['Helen understood the word by touching the real thing, not by being told what it meant.', 'Helen did not like dictionaries.', 'Anne did not know any definitions.'], a: 0, why: 'Hiểu nhờ chạm vào chính sự vật.', ref: 'Now each word had a meaning, and that was better than any definition' },
+    { t: 'mc', k: 'c:tf', q: 'True or false? “Helen was happy with the sound of her spoken voice.”', o: ['True', 'False'], a: 1, why: 'Sai: cô luôn không thích giọng nói của mình.', ref: 'she always disliked her spoken voice' },
+    { t: 'order', k: 'c:sequence', a: 'In a few hours, she learned 30 new words.', why: 'Cụm thời gian đầu câu.', ref: 'In a few hours, she learned 30 new words' },
+    { t: 'dict', k: 'c:listen', a: 'Helen had a strong will.', why: 'will (n) = ý chí.' },
+    { t: 'mc', k: 'w:kick', q: 'When she did not get what she wanted, she screamed and ______.', o: ['kicked', 'placed', 'educated'], a: 0, why: 'kick = đá.', ref: 'she screamed and kicked' },
+    { t: 'mc', k: 'w:cottage', q: 'Anne took Helen to live alone with her in a small ______.', o: ['cottage', 'throat', 'definition'], a: 0, why: 'cottage = căn nhà nhỏ.', ref: 'live alone with her in a small cottage' },
+    { t: 'mc', k: 'w:confuse', q: 'She ______ the words “mug” and “milk” with the word “drink.”', o: ['confused', 'disliked', 'kicked'], a: 0, why: 'confuse A with B = nhầm A với B.', ref: 'She confused the words' },
+    { t: 'gap', k: 'w:place', q: 'Anne ______ one of Helen’s hands under the cold water.', a: ['placed'], why: 'place = đặt.', ref: 'Anne placed one of Helen’s hands under the cold water' },
+    { t: 'match', k: 'w:set-mouth', q: 'Match the words with their meanings.', pairs: [['lip', 'one of the two soft edges of your mouth'], ['tongue', 'the soft part inside your mouth that moves when you speak'], ['throat', 'the front part of your neck'], ['spoken', 'said with your voice, not written']], why: 'lip = môi; tongue = lưỡi; throat = cổ họng; spoken = được nói ra.', ref: 'feel the position of her tongue and lips' },
+    { t: 'mc', k: 'w:continuous', q: 'The speaking needed ______ practice.', o: ['continuous', 'educated', 'spoken'], a: 0, why: 'continuous = liên tục.', ref: 'The speaking needed continuous practice' },
+    { t: 'mc', k: 'w:intelligence', q: 'Her family could see her ______, but they did not know how to reach it.', o: ['intelligence', 'pleasure', 'cottage'], a: 0, why: 'intelligence = trí thông minh.', ref: 'Her family could see her intelligence' },
+    { t: 'mc', k: 'w:educated', q: 'She became a highly ______ woman.', o: ['educated', 'continuous', 'confused'], a: 0, why: 'highly educated = có học thức cao.', ref: 'she became a highly educated woman' },
+    { t: 'gap', k: 'w:pleasure', q: 'Books gave Helen great ______.', a: ['pleasure'], why: 'give somebody pleasure = mang lại niềm vui.', ref: 'Books gave Helen great pleasure' },
+    { t: 'mc', k: 'g:so-such', q: 'Anne wrote that her heart was ______ full of happiness that she thought it would burst.', o: [['so', 'Đúng: so + tính từ + that.'], ['such', 'Sai: such đi với (a) + tính từ + danh từ.'], ['too', 'Sai: too không đi với that.']], a: 0, why: 'so + adj + that.', ref: 'her heart was so full of happiness that' },
+    { t: 'mc', k: 'g:relative-non-defining', q: 'The teacher was Anne Sullivan, ______ was 20 years old.', o: [['who', 'Đúng: người, mệnh đề có dấu phẩy.'], ['that', 'Sai: không dùng that sau dấu phẩy.'], ['which', 'Sai: which chỉ vật.']], a: 0, why: 'N, who + V.', ref: 'Anne Sullivan, who was 20 years old' },
+    { t: 'error', k: 'g:passive-tenses', q: 'It was a school where blind children were educate.', wrong: 'educate', fix: 'educated', why: 'Bị động: were + V3.', ref: 'a school where blind children were educated' },
+    { t: 'mc', k: 'g:gerund-infinitive', q: 'In 1890, when she was ten, she asked ______ to speak.', o: [['to learn', 'Đúng: ask + to V.'], ['learning', 'Sai: ask không đi với V-ing.'], ['learn', 'Sai: thiếu to.']], a: 0, why: 'ask to do something.', ref: 'she asked to learn to speak' }
+  ],
+  extra: [],
+  write: { vi: 'Viết 3–5 câu tiếng Anh về một người thầy, cô (hoặc người hướng dẫn ở công ty) đã giúp bạn học một điều khó. Cố dùng các từ dưới đây.', use: ['educate', 'confuse', 'continuous', 'pleasure', 'will'], model: 'When I started in the QC team, GD&T symbols confused me. My leader educated me with real parts and drawings, not only books. It needed continuous practice, but she never gave up, and her strong will helped me too. Now reading a drawing is a pleasure for me.' },
+  fact: { card: 'Helen Keller (1880–1968) bị mù và điếc từ 19 tháng tuổi. Anne Sullivan, 20 tuổi, cựu học sinh trường Perkins, đến Tuscumbia (Alabama) ngày 3/3/1887. Ngày 5/4/1887, ở máy bơm nước, Anne đánh vần “w-a-t-e-r” vào tay Helen trong khi nước chảy qua tay kia; trong vài giờ Helen học 30 từ. Năm 1890, cô học nói với Sarah Fuller (11 buổi). Năm 1904, cô tốt nghiệp Radcliffe, là người điếc mù đầu tiên có bằng cử nhân. Anne ở bên cô đến khi mất năm 1936.',
+    bonus: 'Helen’s first spoken sentence, after her lessons with Sarah Fuller, was “It is warm.”', bonusSrc: 'Helen Keller, The Story of My Life (1903), chapter XIII' },
+  sources: [
+    { t: 'American Foundation for the Blind — Helen Keller Biography', u: 'https://afb.org/about-afb/history/helen-keller/biography-and-chronology/biography' },
+    { t: 'American Foundation for the Blind — Anne Sullivan: Teaching Helen', u: 'https://afb.org/about-afb/history/online-museums/anne-sullivan-miracle-worker/anne-teacher/teaching-helen' },
+    { t: 'Encyclopaedia Britannica — Helen Keller', u: 'https://www.britannica.com/biography/Helen-Keller' },
+    { t: 'Helen Keller, The Story of My Life (1903), chapter XIII (Holloway edition)', u: 'https://holloway.com/g/helen-keller-the-story-of-my-life/sections/chapter-xiii' }
+  ],
+  note: 'AFB (Biography): sinh ngày 27/6/1880 ở Tuscumbia, Alabama; 19 tháng tuổi bị điếc và mù vì một bệnh chưa rõ (có thể là rubella hoặc sốt tinh hồng nhiệt); Anne Sullivan đến ngày 3/3/1887, lúc 20 tuổi, là học sinh tốt nghiệp trường Perkins, vào trường năm 14 tuổi sau bốn năm ở trại tế bần Tewksbury, mắt kém nặng; ngày 5/4/1887 ở máy bơm, Anne đánh vần “w-a-t-e-r” vào tay Helen khi nước chảy qua tay kia, đến tối Helen học được 30 từ; năm 1890, lúc 10 tuổi, xin học nói, Anne đưa đến Sarah Fuller ở trường Horace Mann dành cho người điếc, Fuller dạy 11 buổi; Helen không hài lòng với giọng nói khó nghe của mình; vào Radcliffe năm 1900, tốt nghiệp cử nhân loại giỏi (cum laude) năm 1904, là người điếc mù đầu tiên có bằng này; The Story of My Life xuất bản năm 1903; làm việc cho AFB hơn 40 năm; thăm 35 nước; mất ngày 1/6/1968; câu của Mark Twain về Napoleon và Helen Keller. AFB (Teaching Helen): Anne đến lúc 21 tuổi; Helen là đứa trẻ bướng bỉnh, được nuông chiều nhưng rất sáng dạ, hay nổi cơn tam bành; chưa đầy một tuần Anne xin đưa Helen ra sống riêng trong một ngôi nhà nhỏ gần đó, “a little garden-house” cách nhà chính khoảng một phần tư dặm, có một phòng lớn với lò sưởi và cửa sổ lồi; khi mới chuyển đến, Helen đá và gào thét đến kiệt sức; Anne dạy vâng lời trước (“obedience is the gateway…”); Helen nhầm “mug” và “milk” với “drink”; ở máy bơm “A new light came into her face”; Helen hỏi tên máy bơm, giàn cây, cô giáo; thêm 30 từ trong vài giờ; Helen hôn Anne lần đầu, Anne viết “I thought my heart would burst, so full was it of joy”. Britannica: Bell khám Helen lúc 6 tuổi và lo liệu để Anne Sullivan, 20 tuổi, từ Viện Perkins ở Boston đến dạy; Anne ở bên Helen từ 1887 đến khi mất tháng 10/1936; Helen học chữ Braille ở Perkins các mùa đông 1888–90; học đọc khẩu hình bằng cách sờ môi và cổ họng người nói; vào Radcliffe năm 1900, tốt nghiệp loại giỏi năm 1904; kịch và phim The Miracle Worker. The Story of My Life, chương XIII: bài học bắt đầu ngày 26/3/1890; cô Fuller đặt tay Helen lên mặt mình để Helen cảm nhận vị trí lưỡi và môi khi phát âm; Helen đặt một tay lên cổ họng mình, tay kia cảm nhận cử động môi; 11 buổi học; câu đầu tiên “It is warm”; luyện tập liên tục, thường hàng giờ; Helen thích sờ cử động môi cô giáo (“it amused me to feel the motions of her lips”). Khác biệt: tuổi của Anne khi đến là 20 (AFB Biography, Britannica) hay 21 (AFB Teaching Helen) — bài dùng 20. Kiến thức phổ thông: Bell là người phát minh ra điện thoại; Anne đi học cùng Helen ở Radcliffe và đánh vần bài giảng vào tay Helen. “Kết quả rất tốt” là cách diễn đạt của bài cho “cum laude”; “nghe lời” là cách diễn đạt của bài cho “obedience”; “hạnh phúc” diễn đạt “joy”. Các câu “gia đình thấy trí thông minh của cô”, “ý chí của Anne cũng mạnh”, “các chữ cái chỉ là trò chơi và khiến cô bối rối”, “Anne không đưa định nghĩa”, “mỗi từ có nghĩa, tốt hơn mọi định nghĩa”, “đặt lưỡi đúng vị trí rất khó”, “nhiều người không thích giọng mình”, “sự cố gắng chưa bao giờ ngừng”, “sách mang lại niềm vui lớn” và câu kết là nhận xét của bài.',
+  verified: '2026-11-15'
+});

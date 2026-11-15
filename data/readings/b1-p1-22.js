@@ -14,7 +14,7 @@ prepared|adj|/prɪˈperd/|ready and willing to do something|I am {prepared} to w
 prisoner|n|/ˈprɪznər/|a person who is kept in prison|The {prisoner} was released after two years.|a political prisoner; take somebody prisoner|tù nhân|2||prison (n)
 quit|v|/kwɪt/|to stop doing something; also to leave a job|He {quit} his job last month.|quit your job; quit doing something|bỏ, từ bỏ, nghỉ (việc)|2|quit – quit – quit.|
 repeated|adj|/rɪˈpiːtɪd/|done or happening many times|After {repeated} tests, the problem was found.|repeated tests; repeated failures|lặp đi lặp lại|2||repeat (v)
-retire|v|/rɪˈtaɪər/|to stop working because you have reached a certain age|My father {retired} at 60.|retire from work; retire at 60|nghỉ hưu|2||retirement (n)
+retire|v|/rɪˈtaɪər/|to stop working because you have reached a certain age|My father {retired=retire} at 60.|retire from work; retire at 60|nghỉ hưu|2||retirement (n)
 spicy|adj|/ˈspaɪsi/|having a strong, hot taste|I love {spicy} food.|spicy food; very spicy|cay|1||spice (n)
 tax|n|/tæks/|money that you must pay to the government|We pay {tax} on our income.|pay tax; income tax; tax on something|thuế|2|tax cũng là động từ: đánh thuế.|tax (v)
 union|n|/ˈjuːniən/|an organization or a group that joins people or groups together|A credit {union} is a kind of small bank owned by its members.|a credit union; a trade union; the European Union|hiệp hội, liên minh, công đoàn|2||

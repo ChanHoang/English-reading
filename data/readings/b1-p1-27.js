@@ -7,7 +7,7 @@ champion|n|/ˈtʃæmpiən/|a person or a team that has won a competition|She is 
 current|adj|/ˈkɜːrənt/|happening or existing now|What is your {current} job?|the current record; the current situation|hiện tại, hiện hành|2||currently (adv)
 expected|adj|/ɪkˈspektɪd/|that people think will happen|The {expected} result was 5 defects, but we found 12.|the expected result/winner/time|được dự kiến, được chờ đợi|2||expect (v)
 friendship|n|/ˈfrendʃɪp/|a relationship between friends|Their {friendship} started at school.|a close friendship; a lifelong friendship|tình bạn|2||friend (n)
-injure|v|/ˈɪndʒər/|to hurt somebody or a part of their body|He {injured} his knee playing football.|be badly injured; injure your back|làm bị thương|2||injury (n)
+injure|v|/ˈɪndʒər/|to hurt somebody or a part of their body|He {injured=injure} his knee playing football.|be badly injured; injure your back|làm bị thương|2||injury (n)
 outdoor|adj|/ˈaʊtdɔːr/|happening or used outside, not in a building|The town has an {outdoor} swimming pool.|outdoor activities; an outdoor track|ngoài trời|2|Tính từ đứng trước danh từ; trạng từ là outdoors.|
 outdoors|adv|/ˌaʊtˈdɔːrz/|outside, not in a building|In summer, we eat {outdoors}.|go/play/work outdoors|ở ngoài trời|2||outdoor (adj)
 painful|adj|/ˈpeɪnfl/|causing you to feel pain|My back is still {painful}.|a painful injury; painful memories|đau, gây đau đớn|2||pain (n)

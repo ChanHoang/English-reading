@@ -1,0 +1,115 @@
+EI.words('B1', `
+# ---- b1-p1-52 Your Body Moves Before You Think
+knock~n|n|/nɑːk/|a short hit on something, or the sound of somebody hitting a door or a hard surface|There was a {knock} at the door.|a knock at/on the door; give something a knock|cú gõ, tiếng gõ|2|knock (v) = gõ (A2).|knock (v)
+toe|n|/toʊ/|one of the five small parts at the end of each foot|I hurt my {toe} on the table leg.|big toe; little toe|ngón chân|2|Ngón tay là finger.|
+water~v|v|/ˈwɔːtər/|(of the eyes) to become wet, for example because of smoke or wind; also to give plants something to drink|The smoke made my eyes {water}.|eyes water; water the plants|chảy nước mắt; tưới nước|2|water (n) = nước (A1).|water (n)
+`);
+EI.reading({
+  id: 'b1-p1-52', level: 'B1', pass: 1, n: 52,
+  title: 'Your Body Moves Before You Think',
+  topic: 'body', era: '1875–today', year: 1888, region: 'Europe and the United States',
+  predict: { q: 'Khi bác sĩ gõ nhẹ dưới đầu gối, chân bạn tự đá lên. Tín hiệu đó được xử lý ở đâu?', o: ['Ở tủy sống', 'Ở não, sau khi bạn suy nghĩ', 'Ngay trong đầu gối'] },
+  targets: ['knock~n', 'toe', 'water~v'],
+  text: [
+    [
+      ["You sit on the edge of a table, and the doctor gives your knee a small {knock=knock~n} with a rubber hammer.", "Bạn ngồi trên mép bàn, và bác sĩ gõ nhẹ vào đầu gối bạn bằng một chiếc búa cao su."],
+      ["Before you can think about it, your leg kicks out.", "Trước khi bạn kịp nghĩ, chân bạn đã đá ra."],
+      ["This is a reflex: a quick movement that the body makes without thinking.", "Đó là một phản xạ: một cử động nhanh mà cơ thể làm mà không cần suy nghĩ."],
+      ["Your body has many reflexes, and doctors test some of them because they show how well your nerves are working.", "Cơ thể bạn có nhiều phản xạ, và bác sĩ kiểm tra một vài phản xạ vì chúng cho thấy hệ thần kinh của bạn hoạt động tốt đến đâu."],
+      ["Reflexes protect you and help with balance and movement: for example, blinking protects your eyes, and shaking with cold helps to keep your body warm.", "Phản xạ bảo vệ bạn và giúp giữ thăng bằng, cử động: ví dụ, chớp mắt bảo vệ đôi mắt, còn run lên vì lạnh giúp giữ ấm cơ thể."]
+    ],
+    [
+      ["How does it work?", "Nó hoạt động thế nào?"],
+      ["The {knock=knock~n} hits a tendon just below the kneecap, and this stretches the big muscle at the front of the leg a little.", "Cú gõ chạm vào một sợi gân ngay dưới xương bánh chè, và việc đó làm cơ lớn ở mặt trước đùi giãn ra một chút."],
+      ["Nerves in the muscle feel this and send a message to the spinal cord, the long bundle of nerves inside your back.", "Dây thần kinh trong cơ cảm nhận điều này và gửi tín hiệu tới tủy sống, bó dây thần kinh dài nằm trong lưng bạn."],
+      ["The spinal cord sends a message straight back to the muscle, and the muscle pulls, so the leg kicks.", "Tủy sống gửi tín hiệu ngay trở lại cơ, và cơ co lại, nên chân đá lên."],
+      ["The message does not need to go to the brain first, and that is why it happens so fast.", "Tín hiệu không cần lên não trước, và đó là lý do nó xảy ra nhanh như vậy."],
+      ["Your brain only hears about it after your leg has moved.", "Não bạn chỉ biết chuyện sau khi chân đã cử động."],
+      ["The test is quick and it does not hurt, and it works best when you are relaxed.", "Bài kiểm tra diễn ra nhanh, không đau, và có kết quả tốt nhất khi bạn thả lỏng."],
+      ["This reflex is useful in daily life too: when you lean back while you are standing, the same muscle pulls and stops you from falling.", "Phản xạ này cũng có ích trong đời sống: khi bạn ngả người ra sau lúc đang đứng, chính cơ đó co lại và giữ bạn không bị ngã."]
+    ],
+    [
+      ["Doctors have tested this reflex for about 150 years.", "Các bác sĩ đã kiểm tra phản xạ này khoảng 150 năm."],
+      ["In 1875, two German doctors, Wilhelm Erb and Carl Westphal, described it at the same time.", "Năm 1875, hai bác sĩ người Đức, Wilhelm Erb và Carl Westphal, cùng lúc mô tả nó."],
+      ["At first, doctors gave the tendon a {knock=knock~n} with a finger, the side of the hand or even the rubber edge of a stethoscope.", "Lúc đầu, bác sĩ gõ vào gân bằng ngón tay, cạnh bàn tay hoặc thậm chí mép cao su của ống nghe."],
+      ["Some used small hammers that had been made for listening to the chest, but these were often too light.", "Một số người dùng những chiếc búa nhỏ vốn làm để gõ nghe vùng ngực, nhưng chúng thường quá nhẹ."],
+      ["In 1888, John Madison Taylor, a doctor in Philadelphia, designed the first real reflex hammer, with a rubber head in the shape of a triangle, and people called it the “tomahawk.”", "Năm 1888, John Madison Taylor, một bác sĩ ở Philadelphia, thiết kế chiếc búa phản xạ thực sự đầu tiên, có đầu cao su hình tam giác, và người ta gọi nó là “cái rìu tomahawk”."],
+      ["Later came many other hammers, and in 1925 a nurse in London, known as “Sister Electrical,” made one from a metal ring on a bamboo stick.", "Sau đó có thêm nhiều loại búa khác, và năm 1925 một y tá ở London, có biệt danh “Sister Electrical”, làm một chiếc búa từ một vòng kim loại gắn trên cây tre."],
+      ["Today, doctors often give each reflex a grade from 0 to 4: 0 means that there is no reflex, and 2 is normal.", "Ngày nay, bác sĩ thường cho mỗi phản xạ một mức từ 0 đến 4: 0 nghĩa là không có phản xạ, còn 2 là bình thường."]
+    ],
+    [
+      ["Some healthy people have reflexes that are hard to find, and after about the age of 60, it is normal to lose the reflex at the back of the foot.", "Một số người khỏe mạnh có phản xạ khó tìm, và sau khoảng 60 tuổi, mất phản xạ ở gót chân là bình thường."],
+      ["Your feet have reflexes too.", "Bàn chân bạn cũng có phản xạ."],
+      ["In another test, the doctor runs the end of a hammer or a key along the bottom of your foot.", "Trong một bài kiểm tra khác, bác sĩ vuốt đầu búa hoặc một chiếc chìa khóa dọc lòng bàn chân bạn."],
+      ["In a healthy adult, all five {toes=toe} curl down, as if they are trying to hold something.", "Ở người lớn khỏe mạnh, cả năm ngón chân co xuống, như thể đang cố nắm lấy thứ gì đó."],
+      ["In a baby, the big {toe} goes up, and the other {toes=toe} open out like a fan.", "Ở em bé, ngón chân cái hướng lên, và các ngón còn lại xòe ra như chiếc quạt."],
+      ["This is normal in babies and young children, up to about two years old, and in some children it goes away after their first birthday.", "Điều này là bình thường ở em bé và trẻ nhỏ, cho đến khoảng hai tuổi, và ở một số trẻ nó mất đi sau sinh nhật đầu tiên."],
+      ["The doctor must do the test in the right way, because a bad test can give a wrong answer.", "Bác sĩ phải làm đúng cách, vì làm sai có thể cho kết quả sai."],
+      ["But if the big {toe} goes up in an adult, it can be a sign of a problem with the nerves, so the doctor will look for the reason.", "Nhưng nếu ngón chân cái hướng lên ở người lớn, đó có thể là dấu hiệu của vấn đề thần kinh, nên bác sĩ sẽ tìm nguyên nhân."],
+      ["The test is named after a French doctor, Joseph Babinski, who described it in the 1890s, and in 1912 he also made his own reflex hammer.", "Bài kiểm tra được đặt theo tên một bác sĩ Pháp, Joseph Babinski, người mô tả nó vào những năm 1890, và năm 1912 ông cũng làm chiếc búa phản xạ của riêng mình."]
+    ],
+    [
+      ["Some of the fastest reflexes protect your eyes from bright light and dust.", "Một số phản xạ nhanh nhất bảo vệ đôi mắt bạn khỏi ánh sáng mạnh và bụi."],
+      ["When something touches the front of your eye, you blink at once, and both eyes close even if only one of them was touched.", "Khi có gì đó chạm vào phía trước mắt, bạn chớp mắt ngay lập tức, và cả hai mắt cùng nhắm dù chỉ một mắt bị chạm."],
+      ["A doctor can test this by touching the eye very gently with a piece of cotton.", "Bác sĩ có thể kiểm tra điều này bằng cách chạm rất nhẹ vào mắt bằng một miếng bông."],
+      ["Most people blink about 15 to 20 times a minute without noticing it.", "Phần lớn mọi người chớp mắt khoảng 15 đến 20 lần mỗi phút mà không để ý."],
+      ["Your eyes also {water=water~v} to protect themselves.", "Mắt bạn cũng chảy nước để tự bảo vệ."],
+      ["A strong wind, a freshly cut onion or the juice of a hot chili can make your eyes {water=water~v} in a second.", "Một cơn gió mạnh, một củ hành vừa cắt hay nước của quả ớt cay có thể làm mắt bạn chảy nước chỉ trong một giây."],
+      ["The tears wash dirt away from the eye, and they also carry substances that fight infection.", "Nước mắt rửa trôi bụi bẩn khỏi mắt, và chúng còn mang những chất chống nhiễm trùng."],
+      ["Even when you are not crying, a thin layer of tears covers your eyes all the time and keeps them wet.", "Ngay cả khi bạn không khóc, một lớp nước mắt mỏng vẫn luôn phủ mắt và giữ cho mắt ẩm."],
+      ["Your eyes can even {water=water~v} when you cough or try to stop a yawn, because the muscles of your face press together and the tears cannot drain away.", "Mắt bạn thậm chí có thể chảy nước khi bạn ho hoặc cố nén một cái ngáp, vì các cơ trên mặt ép lại và nước mắt không thoát đi được."]
+    ],
+    [
+      ["Reflexes are small, but they tell doctors a lot about the whole body.", "Phản xạ thì nhỏ, nhưng chúng cho bác sĩ biết rất nhiều về toàn bộ cơ thể."],
+      ["A normal kick of the leg shows that one part of the spinal cord and its nerves are working well.", "Một cú đá chân bình thường cho thấy một phần tủy sống và các dây thần kinh của nó đang hoạt động tốt."],
+      ["Testing several reflexes gives a picture of the health of the whole nervous system.", "Kiểm tra nhiều phản xạ cho ta một bức tranh về sức khỏe của toàn bộ hệ thần kinh."],
+      ["So the next time a doctor gives your knee a little {knock=knock~n}, or your eyes {water=water~v} over an onion, remember that your body has acted before you had time to think.", "Vì vậy lần tới khi bác sĩ gõ nhẹ vào đầu gối bạn, hay mắt bạn chảy nước vì củ hành, hãy nhớ rằng cơ thể bạn đã hành động trước khi bạn kịp nghĩ."]
+    ]
+  ],
+  gloss: { edge: 'mép, cạnh', rubber: 'cao su', hammer: 'búa', kicks: 'đá', reflex: 'phản xạ', reflexes: 'phản xạ', nerves: 'dây thần kinh, hệ thần kinh', tendon: 'gân', kneecap: 'xương bánh chè', stretches: 'kéo giãn', spinal: '(thuộc) cột sống (spinal cord = tủy sống)', cord: 'dây (spinal cord = tủy sống)', bundle: 'bó', lean: 'ngả người', stethoscope: 'ống nghe', triangle: 'hình tam giác', tomahawk: 'rìu tomahawk (rìu nhỏ của người da đỏ)', adult: 'người lớn', curl: 'cuộn, co lại', blink: 'chớp mắt', gently: 'nhẹ nhàng', cotton: 'bông', onion: 'củ hành', chili: 'quả ớt', tears: 'nước mắt', substances: 'chất', infection: 'nhiễm trùng', cough: 'ho', yawn: 'cái ngáp', drain: 'thoát (nước)', nervous: '(thuộc) thần kinh (nervous system = hệ thần kinh)', 'freshly': 'vừa mới', shaking: 'run rẩy', relaxed: 'thả lỏng', nurse: 'y tá', bamboo: 'tre', crying: 'khóc', layer: 'lớp' },
+  grammar: [
+    ['passive-tenses', 'The test is named after a French doctor'],
+    ['past-perfect', 'small hammers that had been made for listening to the chest'],
+    ['relative-non-defining', 'Joseph Babinski, who described it in the 1890s'],
+    ['too-enough', 'but these were often too light'],
+    ['gerund-infinitive', 'Testing several reflexes gives a picture']
+  ],
+  practiceNote: 'Bài về phản xạ: phản xạ đầu gối (gõ dưới xương bánh chè, tín hiệu đi qua tủy sống chứ không qua não); lịch sử: Erb và Westphal (1875), búa phản xạ “tomahawk” của John Madison Taylor (1888), thang điểm 0–4; phản xạ gan bàn chân (ngón chân co xuống ở người lớn, ngón cái hướng lên ở trẻ dưới khoảng hai tuổi, đặt theo tên Joseph Babinski); phản xạ chớp mắt và chảy nước mắt. Từ vựng: knock (n), toe, water (v: chảy nước mắt). Ngữ pháp: bị động, thì hoàn thành, mệnh đề quan hệ có dấu phẩy, too + tính từ, hiện tại hoàn thành với for.',
+  practice: [
+    { t: 'mc', k: 'c:main', q: 'What is the main idea of the story?', o: ['Reflexes are quick movements the body makes without thinking, and doctors test them to check the nerves.', 'Doctors use hammers to fix knees.', 'Babies have no reflexes.'], a: 0, why: 'Phản xạ là cử động tự động; bác sĩ kiểm tra để biết hệ thần kinh.', ref: 'a quick movement that the body makes without thinking' },
+    { t: 'mc', k: 'c:where', q: 'Where does the message for the knee reflex go?', o: ['To the spinal cord and straight back to the muscle', 'To the brain first', 'To the eyes'], a: 0, why: 'Tới tủy sống rồi trở lại cơ; không cần lên não trước.', ref: 'The spinal cord sends a message straight back to the muscle' },
+    { t: 'mc', k: 'c:hammer', q: 'Who designed the first real reflex hammer?', o: ['John Madison Taylor', 'Wilhelm Erb', 'Joseph Babinski'], a: 0, why: 'John Madison Taylor, năm 1888.', ref: 'John Madison Taylor, a doctor in Philadelphia, designed the first real reflex hammer' },
+    { t: 'mc', k: 'c:grade', q: 'What does a grade of 2 mean?', o: ['The reflex is normal.', 'There is no reflex.', 'The reflex is very strong.'], a: 0, why: '2 là bình thường; 0 là không có phản xạ.', ref: '2 is normal' },
+    { t: 'mc', k: 'c:infer', q: 'Why is it a problem if an adult’s big toe goes up in the foot test?', o: ['It is normal only in babies, so in adults it can be a sign of a nerve problem.', 'It means the adult is very strong.', 'It means the shoes are too small.'], a: 0, why: 'Chỉ bình thường ở trẻ nhỏ; ở người lớn có thể là dấu hiệu bệnh thần kinh.', ref: 'it can be a sign of a problem with the nerves' },
+    { t: 'mc', k: 'c:tf', q: 'True or false? “If something touches one eye, only that eye blinks.”', o: ['True', 'False'], a: 1, why: 'Sai: cả hai mắt cùng nhắm.', ref: 'both eyes close even if only one of them was touched' },
+    { t: 'mc', k: 'c:tears', q: 'What do tears do for the eyes?', o: ['They wash dirt away and fight infection.', 'They make the eyes see better at night.', 'They keep the eyes warm.'], a: 0, why: 'Rửa bụi và chống nhiễm trùng.', ref: 'The tears wash dirt away from the eye' },
+    { t: 'order', k: 'c:sequence', a: 'Before you can think about it, your leg kicks out.', why: 'before you can think = trước khi kịp nghĩ.', ref: 'Before you can think about it, your leg kicks out' },
+    { t: 'dict', k: 'c:listen', a: 'Your feet have reflexes too.', why: 'reflexes = các phản xạ.' },
+    { t: 'mc', k: 'w:knock~n', q: 'The doctor gives your knee a small ______ with a rubber hammer.', o: ['knock', 'toe', 'water'], a: 0, why: 'give something a knock = gõ vào cái gì.', ref: 'the doctor gives your knee a small knock' },
+    { t: 'mc', k: 'w:toe', q: 'In a baby, the big ______ goes up.', o: ['toe', 'knee', 'knock'], a: 0, why: 'big toe = ngón chân cái.', ref: 'the big toe goes up' },
+    { t: 'gap', k: 'w:water~v', q: 'A freshly cut onion can make your eyes ______.', a: ['water'], why: 'eyes water = mắt chảy nước.', ref: 'can make your eyes water' },
+    { t: 'match', k: 'w:set-body', q: 'Match the words with their meanings.', pairs: [['toe', 'one of the five small parts at the end of the foot'], ['knock', 'a short hit on something'], ['water', '(of the eyes) to fill with tears'], ['blink', 'to close and open your eyes quickly']], why: 'toe = ngón chân; knock = cú gõ; water (v) = chảy nước mắt; blink = chớp mắt.', ref: 'you blink at once' },
+    { t: 'gap', k: 'w:toe', q: 'In a healthy adult, all five ______ curl down.', a: ['toes'], why: 'toe → toes.', ref: 'all five toes curl down' },
+    { t: 'mc', k: 'w:knock~n', q: 'At first, doctors gave the tendon a ______ with a finger.', o: ['knock', 'toe', 'grade'], a: 0, why: 'knock (n) = cú gõ.', ref: 'doctors gave the tendon a knock with a finger' },
+    { t: 'mc', k: 'w:water~v', q: 'Your eyes can even ______ when you cough.', o: ['water', 'knock', 'curl'], a: 0, why: 'water (v) = chảy nước (mắt).', ref: 'Your eyes can even water when you cough' },
+    { t: 'mc', k: 'g:passive-tenses', q: 'The foot test ______ after a French doctor, Joseph Babinski.', o: [['is named', 'Đúng: bị động hiện tại, be named after.'], ['names', 'Sai: bài kiểm tra không tự đặt tên.'], ['is naming', 'Sai dạng.']], a: 0, why: 'be named after = được đặt theo tên.', ref: 'The test is named after a French doctor' },
+    { t: 'mc', k: 'g:too-enough', q: 'Small chest hammers were often ______ light for the test.', o: [['too', 'Đúng: too + tính từ = quá.'], ['enough', 'Sai vị trí: light enough.'], ['very much', 'Sai: không dùng với tính từ như vậy.']], a: 0, why: 'too + adj.', ref: 'these were often too light' },
+    { t: 'error', k: 'g:relative-non-defining', q: 'The test is named after Joseph Babinski, which described it in the 1890s.', wrong: 'which', fix: 'who', why: 'Chỉ người dùng who.', ref: 'Joseph Babinski, who described it in the 1890s' },
+    { t: 'mc', k: 'g:gerund-infinitive', q: '______ several reflexes gives a picture of the health of the whole nervous system.', o: [['Testing', 'Đúng: V-ing làm chủ ngữ.'], ['Test', 'Sai: động từ nguyên mẫu không làm chủ ngữ như vậy.'], ['Tested', 'Sai dạng.']], a: 0, why: 'V-ing đứng đầu câu làm chủ ngữ.', ref: 'Testing several reflexes gives a picture' }
+  ],
+  extra: [],
+  write: { vi: 'Viết 3–5 câu tiếng Anh về một lần đi khám sức khỏe định kỳ ở công ty. Cố dùng các từ dưới đây.', use: ['knock', 'toe', 'water', 'grade'], model: 'Last month, our company had a health check. The doctor gave my knee a small knock, and my leg kicked. She also checked my toes and my eyes. The bright light made my eyes water. My reflexes got a normal grade.' },
+  fact: { card: 'Phản xạ đầu gối được Wilhelm Erb và Carl Westphal mô tả cùng lúc năm 1875: cú gõ dưới xương bánh chè làm cơ đùi giãn, tín hiệu đi tới tủy sống và trở lại ngay, không cần qua não. Năm 1888, John Madison Taylor ở Philadelphia làm chiếc búa phản xạ “tomahawk” đầu tiên. Ở phản xạ gan bàn chân (mang tên Joseph Babinski), người lớn khỏe mạnh co cả năm ngón chân xuống, còn trẻ dưới khoảng hai tuổi thì ngón cái hướng lên.',
+    bonus: 'A normal knee jerk shows that “a section of your spinal cord, and the nerves extending from it, are working properly.”', bonusSrc: 'Indiana Public Media — A Moment of Science: The Knee-Jerk Reflex' },
+  sources: [
+    { t: 'Cleveland Clinic — Reflexes', u: 'https://my.clevelandclinic.org/health/articles/reflexes' },
+    { t: 'Indiana Public Media — A Moment of Science: The Knee-Jerk Reflex', u: 'https://indianapublicmedia.org/amomentofscience/the-knee-jerk-reflex/' },
+    { t: 'Past Medical History — The story of the tendon hammer', u: 'https://www.pastmedicalhistory.co.uk/the-story-of-the-tendon-hammer' },
+    { t: 'Healthline — Babinski sign', u: 'https://healthline.com/health/babinski-sign' },
+    { t: 'Cleveland Clinic — Corneal Reflex', u: 'https://my.clevelandclinic.org/health/articles/corneal-reflex' },
+    { t: 'Indiana Public Media — A Moment of Science: Reflex Tears', u: 'https://indianapublicmedia.org/amomentofscience/reflex-tears.php' },
+    { t: 'Teach Neurology — Tendon reflexes you need to know', u: 'https://teachneurology.substack.com/p/tendon-reflexes-you-need-to-know' }
+  ],
+  note: 'Cleveland Clinic (Reflexes): “A reflex is a quick, automatic movement your body makes. You do it without thinking about it”; cung phản xạ: thụ thể → nơ-ron cảm giác → tủy sống (hoặc thân não) → dây thần kinh vận động; “skips the thinking part in your brain”, não chỉ nhận tin sau khi phản ứng đã xảy ra; bác sĩ dùng búa phản xạ gõ ngay dưới xương bánh chè, chân đá ra ngay; kiểm tra phản xạ cho thấy hệ thần kinh hoạt động tốt đến đâu. Indiana Public Media (The Knee-Jerk Reflex): cú gõ vào gân dưới xương bánh chè làm cơ tứ đầu đùi giãn nhẹ, dây thần kinh cảm giác gửi xung tới tủy sống, xung đi ngay trở lại cơ; “A split second later”; phản xạ xảy ra trong tủy sống; một cú đá bình thường cho thấy “a section of your spinal cord, and the nerves extending from it, are working properly”; kiểm tra nhiều phản xạ cho thấy sức khỏe toàn bộ hệ thần kinh; phản xạ giúp giữ thăng bằng khi ngả người ra sau. Past Medical History: Wilhelm Heinrich Erb và Karl Friedrich Otto Westphal cùng mô tả phản xạ căng cơ năm 1875 (bài viết “Carl Westphal”); ban đầu gõ gân bằng ngón tay; William Gowers đề nghị dùng cạnh bàn tay hoặc mép cao su của ống nghe; búa gõ ngực đầu nhỏ, thường quá nhẹ; năm 1888 John Madison Taylor ở Philadelphia thiết kế búa phản xạ thật sự đầu tiên, đầu cao su hình tam giác, cán kim loại dẹt, biệt danh “tomahawk”; Joseph Babinski làm búa có vòng cao su năm 1912; năm 1925 một y tá có biệt danh “Sister Electrical” (cô Wintle) ở Queen Square, London, làm búa từ một vòng gắn trên bánh xe đồng và cán tre (bài viết gọn “a metal ring on a bamboo stick”; nguồn không nói thẳng là ở London — Queen Square là bệnh viện thần kinh ở London, kiến thức phổ thông). Bài viết “a small knock” cho các chữ “tap/strike” của nguồn. Teach Neurology: thang điểm phản xạ 0 (không có), 1+ (yếu), 2+ (bình thường), 3+, 4+; một số người bình thường có phản xạ khó gợi; mất phản xạ gót (ankle jerk) là bình thường sau khoảng 60 tuổi. Cleveland Clinic cũng ghi: phản xạ bảo vệ và giúp giữ thăng bằng, cử động; ví dụ chớp mắt bảo vệ mắt, run giúp điều hòa thân nhiệt; bài kiểm tra nhanh, không đau, thả lỏng giúp phản xạ dễ xảy ra. Healthline: dấu hiệu Babinski (phản xạ gan bàn chân) mang tên nhà thần kinh học Pháp Joseph Babinski; bác sĩ vuốt lòng bàn chân bằng búa phản xạ hoặc chìa khóa; ở người lớn bình thường “All five toes should flex, or curl downward, as if they’re trying to grab something”; dấu hiệu dương tính (ngón cái hướng lên, các ngón khác xòe ra) bình thường ở trẻ đến khoảng hai tuổi, có khi mất sau 12 tháng; “The Babinski reflex is never a normal finding in adults”; làm sai kỹ thuật có thể cho kết quả dương tính hoặc âm tính giả. Kiến thức phổ thông: Babinski mô tả dấu hiệu này năm 1896 (bài viết “in the 1890s”); “khoảng 150 năm” tính từ năm 1875. Cleveland Clinic (Corneal Reflex): chớp mắt tự động khi có gì chạm vào giác mạc; cả hai mắt phản ứng dù chỉ một mắt bị chạm; bác sĩ kiểm tra bằng tăm bông; người ta chớp mắt khoảng 15–20 lần mỗi phút; phản xạ chảy nước mắt làm nước mắt tràn ra, rửa trôi bụi khỏi giác mạc. Indiana Public Media (Reflex Tears): gió mạnh, củ hành, nén cái ngáp có thể làm chảy nước mắt; nước mắt phản xạ “can spout up in an instant”; axit của ớt vừa cắt; ho, ngáp làm cơ mặt co, tăng tiết nước mắt và chặn lỗ thoát nên nước mắt tràn ra; nước mắt phản xạ chứa kháng thể và enzym chống nhiễm trùng; lớp màng nước mắt có ba lớp và luôn giữ mắt ẩm. Cleveland Clinic (Corneal Reflex) cũng ghi phản xạ bảo vệ mắt khỏi ánh sáng mạnh và bụi. Bài viết gọn “cornea” thành “the front of your eye”, “quadriceps” thành “the big muscle at the front of the leg”.',
+  verified: '2026-11-15'
+});

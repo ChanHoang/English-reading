@@ -335,10 +335,13 @@ function lVocab() {
 function vRows() {
   const c = S.cur, all = vFilter(), per = c.per || 20, pages = Math.max(1, Math.ceil(all.length / per)), pg = Math.min(pages, Math.max(1, c.pg || 1));
   if (!Object.values(EI.W).some(e => e.level === (c.lv || 'A2'))) return '<p class="vi">Chưa có bộ từ ' + (c.lv) + '. Xem Info → Not available yet.</p>';
-  return '<p class="small muted">' + all.length + ' words</p>' + all.slice((pg - 1) * per, pg * per).map(e => '<button class="wrow' + (c.w === e.w ? ' on' : '') + '" data-a="word" data-w="' + esc(e.w) + '"><i class="st ' + EI.status(e.w) + '"></i><b>' + esc(e.hw) + '</b><span class="pos">' + esc(c.sl === 'vi' && (c.q || '').trim() ? e.vi : e.pos) + '</span></button>').join('') +
+  const sm = !!S.settings.vmean;   // quick view: Vietnamese meaning under each word (Settings are kept on this device only)
+  return '<div class="vtools"><span class="small muted">' + all.length + ' words</span><button class="btn small ghost' + (sm ? ' on' : '') + '" data-a="vMean" aria-pressed="' + sm + '">' + ic('eye') + (sm ? 'Hide meanings' : 'Show meanings') + '</button></div>' +
+    all.slice((pg - 1) * per, pg * per).map(e => '<div class="wrow' + (c.w === e.w ? ' on' : '') + '"><button class="wmain" data-a="word" data-w="' + esc(e.w) + '"><i class="st ' + EI.status(e.w) + '"></i><span class="wt"><b>' + esc(e.hw) + '</b>' + (sm ? '<span class="wm">' + esc(e.vi) + '</span>' : '') + '</span><span class="pos">' + esc(c.sl === 'vi' && (c.q || '').trim() ? e.vi : e.pos) + '</span></button><button class="btn icon ghost wsay" data-a="say" data-t="' + esc(e.hw) + '" aria-label="Hear ' + esc(e.hw) + '">' + ic('phones') + '</button></div>').join('') +
     '<div class="pager">Page <input type="number" id="vpg" min="1" max="' + pages + '" value="' + pg + '" aria-label="Page number"> of ' + pages + ' · <select id="vper" aria-label="Words per page">' + [20, 50, 100].map(n => '<option' + (per === n ? ' selected' : '') + '>' + n + '</option>').join('') + '</select> per page</div>';
 }
 A.vlevel = d => { S.cur.lv = d.l; S.cur.pg = 1; EI.save(); render(); };
+A.vMean = () => { S.settings.vmean = !S.settings.vmean; EI.save(); $('#vrows').innerHTML = vRows(); };
 A.word = d => go(Object.assign({}, S.cur, { v: 'vocab', w: d.w }));
 function vWord(e) {
   const r = S.words[e.w], st = EI.status(e.w);
@@ -912,7 +915,10 @@ document.addEventListener('keydown', e => {
 setInterval(() => { if (document.visibilityState === 'visible' && S) { EI.log('t', 15); EI.save(); } }, 15000);
 
 /* ================= boot ================= */
-function loadScripts(files) { return files.reduce((p, f) => p.then(() => new Promise((res, rej) => { const s = document.createElement('script'); s.src = f; s.onload = res; s.onerror = () => f.startsWith('audio/') ? res() : rej(new Error('Could not load ' + f)); /* the voice list is optional */ document.head.appendChild(s); })), Promise.resolve()); }
+// All files download at the same time; async = false keeps them running in list order (words before the stories that use them).
+// On the published site, EI.bundle (added by tools/bundle.js) replaces the long file list with one file.
+function loadScripts(files) { return Promise.all(files.map(f => new Promise((res, rej) => { const s = document.createElement('script'); s.src = f; s.async = false; s.onload = res; s.onerror = () => f.startsWith('audio/') ? res() : rej(new Error('Could not load ' + f)); /* the voice list is optional */ document.head.appendChild(s); }))); }
+const AUDIO_LIST = 'audio/index.js', dataFiles = () => EI.bundle ? [EI.bundle] : (EI.files || []).filter(f => f !== AUDIO_LIST);
 function boot() {
   EI.index(); EI.load(); S = EI.S; EI.audio.init();
   const c = S.cur || {}; // reopen exactly where the learner left off
@@ -923,13 +929,14 @@ function boot() {
   EI.sync.start(r => { if (r.ok && r.changed && ['today', 'progress'].includes(S.cur.v)) keep(); else if (S.cur.v === 'settings') keep(); },
     () => { const L = S.cur.v === 'reading' && S.cur.rid && S.lessons[S.cur.rid]; return !!(L && !L.doneDay) || !!run; });
   setTimeout(() => { if (EI.audio.ok && $('.audiolabel, .player .lab')) keep(); }, 700);   // voices load late in some browsers; keep() so the page does not jump to the top
+  if (!EI.inlined) loadScripts([AUDIO_LIST]).then(() => { if (EI.audioIndex && $('.audiolabel, .player .lab, #i-audio')) keep(); });   // the list of recorded voice files (about 240 KB) is not needed to show the first page
   if (!EI.inlined && 'serviceWorker' in navigator && /^https?:$/.test(location.protocol)) {
     navigator.serviceWorker.register('sw.js').then(() => navigator.serviceWorker.ready).then(reg => {
-      const urls = ['./', 'index.html', 'css/app.css', 'js/core.js', 'js/ui.js', 'data/manifest.js', 'manifest.webmanifest', 'icons/icon-192.png', 'icons/icon-512.png', ...EI.files];
+      const urls = ['./', 'index.html', 'css/app.css', 'js/core.js', 'js/ui.js', 'data/manifest.js', 'manifest.webmanifest', 'icons/icon-192.png', 'icons/icon-512.png', ...dataFiles(), AUDIO_LIST];
       if (reg.active) reg.active.postMessage({ cache: urls });
     }).catch(() => {});
   }
 }
-(EI.inlined ? Promise.resolve() : loadScripts(EI.files)).then(boot).catch(e => { $('#app').innerHTML = '<p class="boot">' + esc(e.message) + '. Reload the page while online.</p>'; });
+(EI.inlined ? Promise.resolve() : loadScripts(dataFiles())).then(boot).catch(e => { $('#app').innerHTML = '<p class="boot">' + esc(e.message) + '. Reload the page while online.</p>'; });
 window.EIui = { go, render, A, cur: () => run || [...runs.values()].find(x => !x.done) || null };
 })();

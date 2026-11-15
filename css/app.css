@@ -91,8 +91,17 @@ label.f{display:flex;flex-direction:column;gap:.25rem;font-size:.9em;font-weight
 .li.on{background:var(--surface);border-color:var(--line)}
 .li .t{font-weight:600;line-height:1.3}
 .li .m{font-size:.8em;color:var(--muted);display:flex;flex-wrap:wrap;gap:.2rem .6rem;align-items:center}
-.wrow{display:flex;align-items:center;gap:.5rem;padding:.45rem .6rem;border:0;border-radius:.45rem;background:none;text-align:left;cursor:pointer;width:100%}
+.wrow{display:flex;align-items:center;gap:.1rem;border-radius:.45rem;width:100%}
 .wrow:hover,.wrow.on{background:var(--surface)}
+.wmain{display:flex;align-items:center;gap:.5rem;flex:1;min-width:0;padding:.45rem .6rem;border:0;background:none;text-align:left;cursor:pointer;color:inherit}
+.wt{display:flex;flex-direction:column;gap:.05rem;min-width:0}
+.wm{font-size:.82em;color:var(--muted);overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical}
+.wsay{min-height:2.3rem;min-width:2.3rem;padding:.3rem;flex:none}
+.vtools{display:flex;align-items:center;justify-content:space-between;gap:.5rem}
+.btn.small{min-height:2.1rem;padding:.25rem .6rem;font-size:.88em}
+/* items in the list column must keep their own height: some phone browsers squeezed the state filter so its text was cut */
+.list>*{flex-shrink:0}
+.list>select{height:2.6rem}
 .wrow .pos{font-size:.78em;color:var(--muted);margin-left:auto}
 .pager{display:flex;gap:.4rem;align-items:center;font-size:.85em}
 .pager input,.pager select{width:auto;min-height:2.2rem;padding:.25rem .4rem}

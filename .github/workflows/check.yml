@@ -34,5 +34,15 @@ jobs:
       - name: Run tests
         run: |
           python -m http.server 8765 >/dev/null 2>&1 &
+          SRV=$!
+          sleep 2
+          python tools/e2e-test.py http://localhost:8765/
+          kill $SRV
+      - name: Run tests on the published form (content joined into one file)
+        run: |
+          mkdir _site
+          cp -r index.html sw.js manifest.webmanifest css js data icons audio _site/
+          node tools/bundle.js _site
+          (cd _site && python -m http.server 8765 >/dev/null 2>&1 &)
           sleep 2
           python tools/e2e-test.py http://localhost:8765/

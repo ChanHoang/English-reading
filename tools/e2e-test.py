@@ -183,6 +183,13 @@ with sync_playwright() as pw:
     p.select_option('#vsl', 'en'); p.fill('#vq', 'disc'); p.click('.wrow >> nth=0'); p.wait_for_selector('.word-h')
     ok('Word entry: definition, example, hidden Vietnamese, Cambridge link, audio label', p.locator('.def').count() == 1 and p.locator('[data-a=showVi]').count() == 1 and 'dictionary.cambridge.org' in p.locator('.audiolabel a').get_attribute('href'))
     p.click('[data-a=showVi]'); p.fill('#vq', ''); p.click('.wrow >> nth=1'); ok('Vietnamese meaning closes when the word changes', p.locator('.vibox').count() == 0)
+    p.fill('#vq', 'engineer'); n_rows = p.locator('.wrow').count()
+    ok('Word list: every row has its own listen button', n_rows >= 1 and p.locator('.wrow .wsay').count() == n_rows, n_rows)
+    w_before = p.evaluate("() => EI.S.cur.w"); p.click('.wrow .wsay >> nth=0')
+    ok('Word list: the listen button plays the word without opening it', p.evaluate("() => EI.S.cur.w") == w_before)
+    p.click('[data-a=vMean]')
+    ok('Word list: Show meanings puts the Vietnamese meaning under each word', p.locator('.wrow .wm').count() == n_rows and 'kỹ sư' in p.inner_text('.wrow >> nth=0'))
+    p.click('[data-a=vMean]'); ok('Word list: Hide meanings hides them again', p.locator('.wrow .wm').count() == 0); p.fill('#vq', '')
     # ---- export, erase, import
     before = state(p); txt = p.evaluate("() => EI.exportText()")
     p.evaluate("() => EIui.go({v:'settings'})"); p.click('[data-a=resetAsk]'); p.click('[data-a=resetDo]')

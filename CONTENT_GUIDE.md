@@ -52,6 +52,12 @@ Một cấp có thể có nhiều file từ (`data/words-a2.js` cho bài 1–8, 
 - **Độ khó** (ước tính, không ghi là đã kiểm chứng): 1 = cụ thể, dễ đoán; 2 = trung bình; 3 = trừu tượng, nhiều nghĩa, dễ nhầm với người Việt. Độ khó quyết định khoảng cách ôn và lượng luyện tập.
 - **Ghi chú**: chỉ khi từ dễ nhầm (discover/invent, raise/rise), không đếm được (evidence, equipment, research), hoặc người Việt hay đọc sai (recipe, purpose, height).
 - `pos` nhiều loại viết `n, v`. Dạng bất quy tắc trong bài viết `{rose=rise}`, `{discoveries=discovery}`.
+- **Khóa nghĩa (từ v0.5).** Khi một từ đã có mục từ ở cấp thấp hơn (hoặc là từ A1 không nằm trong bộ từ) mà cần thêm một nghĩa hay từ loại ở cấp này, dùng khóa `từ~loại` ở trường đầu: `award~v`, `that~adv`, `once~conj`, `it~n`, `water~v`.
+  - Trong bài: `{awarded=award~v}`, `{Once=once~conj}`; trong `targets` và khóa câu hỏi: `'award~v'`, `k: 'w:award~v'`.
+  - Người học chỉ thấy phần trước dấu `~`; nghe, liên kết Cambridge và ô gõ đáp án đều dùng từ gốc.
+  - Chữ không đánh dấu ở bài khác vẫn tra như cũ, nên nghĩa mới không “chiếm” chữ ở bài khác. Vì vậy dùng khóa nghĩa cho mọi từ còn có nghĩa thấp hơn hay gặp (water danh từ, age danh từ, key danh từ, covered động từ, used động từ, killing động từ, tire động từ…).
+  - Định nghĩa không được dùng lại từ gốc (công cụ so với phần trước `~`).
+- **Cách viết Anh trong bảng tham chiếu** (analyse, centre, coloured, favour, neighbourhood, tyre): viết chính tả Mỹ (analyze, center, colored, favor, neighborhood, tire); `unused-words.js` và `check-content.js` hiểu hai cách viết.
 
 ## 3. File bài đọc — `data/readings/<level>-p<pass>-<nn>.js`
 
@@ -145,6 +151,7 @@ EI.grammar({ id: 'past-simple', n: 1, level: 'A2', title: 'Past simple', vi: 'Th
   - Mọi từ có trong `gloss` đều bị tính là vượt cấp, kể cả từ A1–B1. Chỉ gloss từ B2 trở lên, từ không có trong bảng tham chiếu, hoặc từ dùng khác nghĩa mục từ (ví dụ draw = “ván hòa” trong cờ vua).
   - Từ có dấu nháy trong lời trích (don’t, couldn’t, wasn’t) không có trong bảng tham chiếu: thêm gloss ngắn kiểu `'don’t': '= do not'`.
   - Thêm từ B1 là dạng -ed/-ing của từ thấp hơn (expected, involved, retired…) có thể “chiếm” thẻ trần `{expected}` ở bài cũ: sau mỗi bài, chạy kiểm tra toàn bộ và đổi thẻ cũ thành `{expected=expect}` nếu cần.
+  - Chỉ đánh dấu `{…}` từ mục tiêu của chính bài đó (và từ cấp thấp hơn để ôn). Từ mục tiêu của một bài khác cùng cấp thì viết thường, không đánh dấu; mọi chỗ dùng từ mục tiêu có khóa thường (không có `~`) của chính bài thì phải đánh dấu hết, nếu không công cụ sẽ cảnh báo.
 - **ERROR**: từ mục tiêu không xuất hiện (đã đánh dấu), từ dùng lại trong cùng lượt, thiếu nguồn, `ref`/`grammar`/`dict` không khớp bài, câu thiếu bản dịch, ví dụ ngữ pháp không có trong bài…
 - **warn**: từ mục tiêu xuất hiện mà chưa đánh dấu (kiểm tra nghĩa!), từ chỉ ở một câu, từ lạ chưa chú thích, định nghĩa dùng từ vượt cấp, cấp độ lệch với bảng tham chiếu.
 

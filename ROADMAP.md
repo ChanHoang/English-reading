@@ -13,12 +13,13 @@ Số bài và số từ của các giai đoạn chưa làm là **ước tính** 
 | v0.2 | A2 · Pass 2 | 29 chuyện mới **không thêm từ mới** (24 bài ở v0.2, 5 bài ở v0.2.3): các từ A2 mới gặp một lần được gặp lại trong ngữ cảnh khác (`tasks/v0.2.md`) | Xong |
 | v0.3 | B1 · Pass 1, phần 1 | 16 bài (800–1.000 từ/bài), 364 từ B1, 8 bài ngữ pháp B1 nhóm 1 (`tasks/v0.3.md`) | Xong |
 | v0.4 | B1 · Pass 1, phần 2 | 16 bài, 283 từ B1, 8 bài ngữ pháp B1 nhóm 2 (`tasks/v0.4.md`) | Xong |
-| v0.5 | B1 · Pass 1, phần 3 và B1 · Pass 2 | Khoảng 3–4 bài cho khoảng 57 từ B1 còn lại (đủ bộ từ B1); rồi khoảng 15 chuyện mới ôn từ B1, không thêm từ | Chưa làm |
-| v0.6 | B2 · Pass 1, phần 1 | Khoảng 19 bài (1.000–1.300 từ/bài), khoảng 460 từ B2, ngữ pháp B2 nhóm 1 | Chưa làm |
-| v0.7 | B2 · Pass 1, phần 2 | Khoảng 19 bài, khoảng 460 từ B2 | Chưa làm |
-| v0.8 | B2 · Pass 1, phần 3 | Khoảng 19 bài, khoảng 450 từ B2 còn lại: đủ bộ từ B2; ngữ pháp B2 nhóm 2 | Chưa làm |
-| v0.9 | C1 · Pass 1, phần 1 | Khoảng 18 bài (1.300–1.600 từ/bài), khoảng 440 từ C1 | Chưa làm |
-| v0.10 | C1 · Pass 1, phần 2 | Khoảng 18 bài, khoảng 440 từ C1 | Chưa làm |
+| v0.5 | B1 · Pass 1, phần 3 | 20 bài, 155 mục từ B1 còn lại (86 mục dùng khóa nghĩa): **đủ 802/802 mục B1** (`tasks/v0.5.md`) | Xong |
+| v0.6 | B1 · Pass 2 | Khoảng 15 chuyện mới ôn từ B1, không thêm từ | Chưa làm |
+| v0.7 | B2 · Pass 1, phần 1 | Khoảng 19 bài (1.000–1.300 từ/bài), khoảng 460 từ B2, ngữ pháp B2 nhóm 1 | Chưa làm |
+| v0.8 | B2 · Pass 1, phần 2 | Khoảng 19 bài, khoảng 460 từ B2 | Chưa làm |
+| v0.9 | B2 · Pass 1, phần 3 | Khoảng 19 bài, khoảng 450 từ B2 còn lại: đủ bộ từ B2; ngữ pháp B2 nhóm 2 | Chưa làm |
+| v0.10 | C1 · Pass 1, phần 1 | Khoảng 18 bài (1.300–1.600 từ/bài), khoảng 440 từ C1 | Chưa làm |
+| v0.11 | C1 · Pass 1, phần 2 | Khoảng 18 bài, khoảng 440 từ C1 | Chưa làm |
 | v1.0 | C1 · Pass 1, phần 3 | Khoảng 18 bài, khoảng 430 từ C1 còn lại: **đủ bộ từ A2–C1** | Chưa làm |
 
 Sau v1.0 (tùy chọn): Pass 2 cho B2 và C1, theo cùng cách đánh số (v1.1, v1.2…).
@@ -35,3 +36,4 @@ Sau v1.0 (tùy chọn): Pass 2 cho B2 và C1, theo cùng cách đánh số (v1.1
 - **v0.2.3** (2026-11-15): thêm 5 bài A2 · Pass 2 (a2-p2-25 … 29: Jackie Robinson, buổi chiếu phim đầu tiên của anh em Lumière, tìm ra virus cúm năm 1933, đánh golf trên Mặt Trăng, trẻ em được gửi qua bưu điện). Số từ A2 mới chỉ gặp ở một bài giảm từ 103 xuống 47. Không thêm từ mới. Xem `DECISIONS.md` §24.
 - **v0.3** (2026-11-15): B1 · Pass 1, phần 1: 16 bài đọc B1 (b1-p1-01 … 16, từ Gutenberg đến lụt mật mía Boston 1919), 364 từ B1 mới (20–25 từ mỗi bài, khai báo ở đầu file bài), 8 bài ngữ pháp B1 nhóm 1 (`data/grammar-b1.js`). Mỗi bài 800–1.000 từ, có 2–3 nguồn đã mở trong phiên. Sửa kèm: vài câu ở bài B1 đầu bị gắn sai chủ điểm ngữ pháp; bài “must/might” thêm dạng quá khứ (might have + V3); Info cập nhật số từ, số bài theo cấp độ; công cụ kiểm tra báo lỗi khi chủ đề bài không có trong danh sách. Xem `DECISIONS.md` §25.
 - **v0.4** (2026-11-15): B1 · Pass 1, phần 2: 16 bài đọc B1 (b1-p1-17 … 32, từ “The War of the Worlds” trên radio 1938 đến Stanislav Petrov 1983), 283 từ B1 mới (8–24 từ mỗi bài), 8 bài ngữ pháp B1 nhóm 2 (câu điều kiện loại 3, mệnh đề quan hệ có dấu phẩy, wish, tương lai tiếp diễn và hoàn thành, so/such, câu hỏi đuôi, too/enough, have something done). Bộ từ có 647/802 mục B1 (62 mục khác là nghĩa B1 của từ đã có ở A2, 17 mục là từ chức năng); còn khoảng 57 từ dùng được, để cho v0.5. Sửa kèm: vài thẻ từ trần ở bài cũ bị từ B1 mới “chiếm” (`{expected}`, `{involved}`, ví dụ của retire/injure/frighten) được gắn lại đúng mục từ. Xem `DECISIONS.md` §26.
+- **v0.5** (2026-11-15): B1 · Pass 1, phần 3: 20 bài đọc B1 (b1-p1-33 … 52, từ vụ bắt bác sĩ Crippen nhờ điện báo vô tuyến 1910 đến phản xạ đầu gối và ngón chân), 155 mục từ B1 mới, đủ 802/802 mục B1 của bảng tham chiếu. Mới: **khóa nghĩa** `từ~loại` (ví dụ `award~v`, `that~adv`, `water~v`) để dạy nghĩa B1 của từ đã có ở A1–A2 mà không “chiếm” chữ ở bài khác; người học chỉ thấy từ gốc. Sáu mục có cách viết Anh trong bảng tham chiếu được dạy theo chính tả Mỹ (analyze, center, colored, favor, neighborhood, tire). Không thêm bài ngữ pháp. Lộ trình dời: B1 · Pass 2 là v0.6, B2 là v0.7–v0.9, C1 là v0.10, v0.11 và v1.0. Xem `DECISIONS.md` §27.

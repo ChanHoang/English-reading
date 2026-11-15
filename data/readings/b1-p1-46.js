@@ -1,0 +1,120 @@
+EI.words('B1', `
+# ---- b1-p1-46 The Pack of Gum That Changed Shopping
+discount|n|/ˈdɪskaʊnt/|an amount of money that is taken off the usual price|Students get a 10% {discount} at the cinema.|a discount on something; give/get a discount|sự giảm giá|2||
+key~v|v|/kiː/|to put words or numbers into a computer or machine by pressing the buttons on it|Please {key} in your password.|key something in; key in a number|nhập (bằng bàn phím)|2|key (n) = chìa khóa, phím (A1).|key (n)
+pack~n|n|/pæk/|a small box, bag or paper cover with several things of the same kind inside|She bought a {pack} of six bottles of water.|a pack of gum/cards/batteries|gói, hộp, vỉ|2|pack (v) = đóng gói, xếp đồ (A2).|pack (v), packet (n)
+tube|n|/tuːb/|a long, thin, round piece of glass, metal or plastic that is empty inside; also a soft container that you press to get the thing inside out|Squeeze the {tube} from the bottom.|a glass tube; a tube of toothpaste|ống; tuýp|2||
+`);
+EI.reading({
+  id: 'b1-p1-46', level: 'B1', pass: 1, n: 46,
+  title: 'The Pack of Gum That Changed Shopping',
+  topic: 'engineering', era: '1949–1989', year: 1974, region: 'United States',
+  predict: { q: 'Món hàng đầu tiên được quét mã vạch ở siêu thị (năm 1974) là gì?', o: ['Một gói kẹo cao su', 'Một chai sữa', 'Một hộp ngũ cốc'] },
+  targets: ['discount', 'key~v', 'pack~n', 'tube'],
+  text: [
+    [
+      ["On the morning of June 26, 1974, a man stood at a checkout in a Marsh supermarket in Troy, Ohio.", "Sáng ngày 26 tháng 6 năm 1974, một người đàn ông đứng ở quầy thanh toán trong một siêu thị Marsh ở Troy, bang Ohio."],
+      ["His name was Clyde Dawson, and he was Marsh’s head of research.", "Ông tên là Clyde Dawson, trưởng bộ phận nghiên cứu của Marsh."],
+      ["From the things he was buying, he took a {pack=pack~n} of Wrigley’s Juicy Fruit gum, a {pack=pack~n} of ten.", "Từ những món đang mua, ông lấy ra một gói kẹo cao su Juicy Fruit của Wrigley, loại gói mười thanh."],
+      ["The cashier, Sharon Buchanan, passed it over a new machine, and the machine read the black lines on the {pack=pack~n}.", "Cô thu ngân Sharon Buchanan đưa nó qua một chiếc máy mới, và chiếc máy đọc những vạch đen trên gói kẹo."],
+      ["The price, 67 cents, appeared on the screen.", "Giá tiền, 67 xu, hiện lên màn hình."],
+      ["It was the first time a product had been sold by scanning a barcode.", "Đó là lần đầu tiên một sản phẩm được bán bằng cách quét mã vạch."],
+      ["Many years later, Buchanan remembered, “I was a little bit nervous at the time. But it worked just fine.”", "Nhiều năm sau, Buchanan nhớ lại: “Lúc đó tôi hơi run. Nhưng nó chạy rất ổn.”"]
+    ],
+    [
+      ["Before that day, shopping was slower.", "Trước ngày đó, việc mua sắm chậm hơn."],
+      ["Every item in the shop had a small price label, and the cashier had to {key=key~v} in each price by hand on the cash register.", "Mọi món hàng trong cửa hàng đều có một nhãn giá nhỏ, và thu ngân phải bấm từng giá bằng tay vào máy tính tiền."],
+      ["When a cashier {keyed=key~v} in hundreds of prices a day, mistakes were easy.", "Khi một thu ngân bấm hàng trăm mức giá mỗi ngày, sai sót là chuyện dễ xảy ra."],
+      ["The manager of the Marsh store said that the new system would stop these mistakes.", "Người quản lý cửa hàng Marsh nói hệ thống mới sẽ chấm dứt những sai sót này."],
+      ["It would also make sure that customers got their {discount} when a product was cheaper if they bought several of it together.", "Nó cũng bảo đảm khách hàng được giảm giá khi một sản phẩm rẻ hơn nếu mua nhiều cái cùng lúc."],
+      ["A busy cashier could forget a {discount}, but the computer could not.", "Một thu ngân bận rộn có thể quên giảm giá, nhưng máy tính thì không."]
+    ],
+    [
+      ["The idea was older than the machine.", "Ý tưởng này có trước chiếc máy rất lâu."],
+      ["In 1949, two young engineers from Philadelphia, Norman Joseph Woodland and Bernard Silver, who had studied at Drexel, were looking for a way to give each product a code.", "Năm 1949, hai kỹ sư trẻ ở Philadelphia, Norman Joseph Woodland và Bernard Silver, đang tìm cách gán cho mỗi sản phẩm một mã."],
+      ["Woodland had learned Morse code as a Boy Scout, and he later said, “The only code I knew of was Morse code.”", "Woodland đã học mã Morse khi còn là hướng đạo sinh, và sau này ông nói: “Mã duy nhất tôi biết là mã Morse.”"],
+      ["One day at the beach, he ran his fingers through the sand and saw that thick and thin lines could carry information, like the dots and dashes of Morse code.", "Một ngày ở bãi biển, ông lùa ngón tay qua cát và nhận ra những vạch có độ rộng khác nhau có thể mang thông tin, giống chấm và gạch của mã Morse."],
+      ["That same year, they asked for a patent on their idea.", "Cũng năm đó, họ nộp đơn xin cấp bằng sáng chế cho ý tưởng của mình."],
+      ["Their first code was a round one, with circles inside circles.", "Mã đầu tiên của họ có dạng tròn, gồm các vòng tròn lồng nhau."],
+      ["To read it, they needed a very strong light and a special {tube} that changed the light into a code.", "Để đọc được, họ cần một ngọn đèn rất mạnh và một chiếc ống đặc biệt biến ánh sáng thành mã."]
+    ],
+    [
+      ["For many years, nobody used it in shops.", "Nhiều năm liền, không cửa hàng nào dùng nó."],
+      ["In 1967, American trains tried barcodes in different colors, but the idea failed, partly because snow and mud covered the codes.", "Năm 1967, ngành đường sắt Mỹ thử mã vạch nhiều màu, nhưng ý tưởng thất bại, một phần vì tuyết và bùn che mất mã."],
+      ["Then, in 1969, the company IBM asked a team to work on a code for supermarkets.", "Rồi năm 1969, công ty IBM giao cho một nhóm nghiên cứu mã cho siêu thị."],
+      ["One engineer, George Laurer, wanted straight lines, not circles.", "Một kỹ sư, George Laurer, muốn dùng vạch thẳng, không dùng vòng tròn."],
+      ["Circles took up more space, and when they were printed, their edges were often not clear.", "Vòng tròn chiếm nhiều chỗ hơn, và khi in ra, mép của chúng thường bị nhòe."],
+      ["With straight lines and a scanner window in the shape of an X, the lines could be read from any direction.", "Với vạch thẳng và ô kính quét hình chữ X, các vạch có thể được đọc từ mọi hướng."],
+      ["In 1970, the big food shop companies started a group to study the idea, and seven companies sent their designs, including one with circles.", "Năm 1970, các công ty cửa hàng thực phẩm lớn lập một nhóm để nghiên cứu ý tưởng này, và bảy công ty gửi thiết kế, trong đó có một thiết kế hình tròn."],
+      ["In 1972, the group chose IBM’s design for all food shops.", "Năm 1972, nhóm chọn thiết kế của IBM cho tất cả cửa hàng thực phẩm."]
+    ],
+    [
+      ["Why a {pack=pack~n} of gum?", "Tại sao lại là một gói kẹo cao su?"],
+      ["Dawson later explained that he chose it to thank Wrigley for helping to print the barcodes.", "Sau này Dawson giải thích ông chọn nó để cảm ơn Wrigley đã giúp in mã vạch."],
+      ["He also wanted to show people who did not believe in the system that even a small {pack=pack~n} could carry a barcode.", "Ông cũng muốn cho những người nghi ngờ hệ thống thấy rằng ngay cả một gói nhỏ cũng có thể mang mã vạch."],
+      ["The night before, the shop workers and a team from the machine company had put barcodes on the products and set up the system.", "Đêm hôm trước, nhân viên cửa hàng và một nhóm từ công ty làm máy đã dán mã vạch lên các sản phẩm và lắp đặt hệ thống."],
+      ["Marsh had ten of these machines, and each scanner cost $4,000, which is about $25,000 today.", "Marsh có mười chiếc máy như vậy, và mỗi máy quét tốn 4.000 đô la, tương đương khoảng 25.000 đô la ngày nay."],
+      ["One of these early scanners is now in the National Museum of American History in Washington, D.C.", "Một trong những máy quét đầu tiên ấy nay nằm ở Bảo tàng Quốc gia Lịch sử Mỹ tại Washington, D.C."],
+      ["A museum expert says that the steel box is mostly full of air, because the real work is done by light.", "Một chuyên gia của bảo tàng nói chiếc hộp thép hầu như chỉ chứa không khí, vì phần việc thật sự do ánh sáng làm."]
+    ],
+    [
+      ["Not everyone was happy.", "Không phải ai cũng vui."],
+      ["Some workers were afraid that they would lose their jobs, and in Virginia a union stopped IBM engineers from entering a shop.", "Một số người lao động sợ mất việc, và ở bang Virginia một công đoàn đã chặn kỹ sư IBM vào một cửa hàng."],
+      ["Many customers wanted to see a price on every item, not only on the shelf, and a few of them missed the old price labels.", "Nhiều khách hàng muốn thấy giá trên từng món hàng, không chỉ trên kệ, và một số người còn tiếc những nhãn giá cũ."],
+      ["One woman from a group that spoke for customers, Carol Tucker-Foreman, fought against barcodes across the country.", "Một phụ nữ thuộc một nhóm đại diện cho người tiêu dùng, Carol Tucker-Foreman, đã đấu tranh chống mã vạch trên khắp nước."],
+      ["Eighteen states made laws that stopped shops from using scanners without price labels on the products.", "Mười tám bang ra luật cấm cửa hàng dùng máy quét mà không dán nhãn giá trên sản phẩm."],
+      ["But slowly, the barcode won, and in the early 1980s many more shops began to use it.", "Nhưng dần dần, mã vạch đã thắng, và đầu những năm 1980 nhiều cửa hàng hơn bắt đầu dùng nó."],
+      ["By 1989, barcodes were used in more than half of the grocery sales in the United States.", "Đến năm 1989, mã vạch được dùng trong hơn một nửa doanh số bán thực phẩm ở Mỹ."]
+    ],
+    [
+      ["Today, almost everything in a shop, from a {pack=pack~n} of gum to a {tube} of toothpaste, has a barcode.", "Ngày nay, hầu như mọi thứ trong cửa hàng, từ gói kẹo cao su đến tuýp kem đánh răng, đều có mã vạch."],
+      ["The group that looks after most of the world’s barcodes has members in more than 110 countries, and its leader says that a barcode “can be read in any country in any language.”", "Tổ chức quản lý phần lớn mã vạch trên thế giới có thành viên ở hơn 110 quốc gia, và người đứng đầu tổ chức nói mã vạch “có thể được đọc ở bất kỳ nước nào, bằng bất kỳ ngôn ngữ nào”."],
+      ["He once asked people to imagine a world without barcodes, where workers would have to {key=key~v} in every number by hand again.", "Người đứng đầu tổ chức ấy từng bảo mọi người hãy tưởng tượng một thế giới không có mã vạch, nơi nhân viên lại phải bấm tay từng con số."],
+      ["Nobody became rich from the barcode itself, and Laurer died in 2019.", "Không ai giàu lên nhờ chính mã vạch, và Laurer mất năm 2019."],
+      ["As for Sharon Buchanan, she said, “It was quite my 15 minutes of fame, I suppose.”", "Còn Sharon Buchanan thì nói: “Chắc đó là 15 phút nổi tiếng của tôi.”"]
+    ]
+  ],
+  gloss: { checkout: 'quầy thanh toán', supermarket: 'siêu thị', gum: 'kẹo cao su', cashier: 'thu ngân', scanning: 'quét', barcode: 'mã vạch', barcodes: 'mã vạch', nervous: 'hồi hộp, run', label: 'nhãn', labels: 'nhãn', register: 'máy tính tiền (cash register)', engineers: 'kỹ sư', morse: 'Morse (mã điện báo)', scout: 'hướng đạo sinh (Boy Scout)', sand: 'cát', patent: 'bằng sáng chế', snow: 'tuyết', mud: 'bùn', steel: 'thép', dots: 'dấu chấm', dashes: 'dấu gạch', circle: 'vòng tròn', circles: 'vòng tròn', ibm: 'IBM (công ty máy tính)', printed: 'được in', edges: 'mép, cạnh', scanner: 'máy quét', scanners: 'máy quét', union: 'công đoàn', grocery: 'thực phẩm, tạp hóa', toothpaste: 'kem đánh răng', fame: 'sự nổi tiếng', 'it’s': '= it is' },
+  grammar: [
+    ['past-perfect', 'Woodland had learned Morse code as a Boy Scout'],
+    ['reported-speech', 'said that the new system would stop these mistakes'],
+    ['passive-tenses', 'barcodes were used in more than half of the grocery sales'],
+    ['gerund-infinitive', 'he chose it to thank Wrigley for helping to print the barcodes'],
+    ['relative-non-defining', 'each scanner cost $4,000, which is about $25,000 today']
+  ],
+  practiceNote: 'Bài về mã vạch: lần quét đầu tiên ngày 26/6/1974 ở siêu thị Marsh (Troy, Ohio) với một gói kẹo cao su Juicy Fruit 10 thanh giá 67 xu; trước đó thu ngân phải bấm tay từng giá; năm 1949 Woodland và Silver nghĩ ra mã hình tròn lấy ý từ mã Morse; George Laurer ở IBM dùng vạch thẳng; nhiều người phản đối nhưng đến năm 1989 mã vạch đã phổ biến. Từ vựng: mua sắm (pack, discount), máy móc (key in, tube). Ngữ pháp: quá khứ hoàn thành, câu tường thuật với would, bị động, to V chỉ mục đích và giới từ + V-ing, mệnh đề which bổ sung.',
+  practice: [
+    { t: 'mc', k: 'c:main', q: 'What is the main idea of the story?', o: ['A pack of gum was the first product sold with a barcode scan, and barcodes slowly changed shopping.', 'Barcodes were invented in 1974 by a cashier.', 'Shops stopped using barcodes after 1989.'], a: 0, why: 'Gói kẹo đầu tiên được quét mã; mã vạch dần thay đổi việc mua sắm.', ref: 'It was the first time a product had been sold by scanning a barcode' },
+    { t: 'mc', k: 'c:before', q: 'How did cashiers work before barcodes?', o: ['They keyed in each price by hand.', 'They guessed the prices.', 'They used a computer to read the price.'], a: 0, why: 'Bấm tay từng giá vào máy tính tiền.', ref: 'the cashier had to key in each price by hand' },
+    { t: 'mc', k: 'c:idea', q: 'Where did Woodland get the idea of lines of different widths?', o: ['From Morse code, while he was at the beach', 'From a book about shops', 'From a pack of gum'], a: 0, why: 'Từ mã Morse, khi lùa tay qua cát ở bãi biển.', ref: 'he ran his fingers through the sand' },
+    { t: 'mc', k: 'c:laurer', q: 'Why did George Laurer want straight lines?', o: ['Circles took up more space and were often printed unclearly.', 'Straight lines were prettier.', 'Circles were too cheap.'], a: 0, why: 'Vòng tròn chiếm chỗ và hay bị in nhòe.', ref: 'Circles took up more space' },
+    { t: 'mc', k: 'c:infer', q: 'Why did Dawson choose a small pack of gum to show the system?', o: ['To show that even a small item could carry a barcode', 'Because gum was the most expensive item', 'Because he did not like gum'], a: 0, why: 'Chứng minh gói nhỏ cũng mang được mã vạch.', ref: 'even a small pack could carry a barcode' },
+    { t: 'mc', k: 'c:tf', q: 'True or false? “Everyone was happy when barcodes came to shops.”', o: ['True', 'False'], a: 1, why: 'Sai: người lao động sợ mất việc, 18 bang ra luật.', ref: 'Not everyone was happy' },
+    { t: 'mc', k: 'c:1989', q: 'What was true by 1989?', o: ['Barcodes were used in more than half of US grocery sales.', 'Every shop in the world used barcodes.', 'Barcodes were not allowed in 18 states.'], a: 0, why: 'Hơn một nửa doanh số thực phẩm ở Mỹ.', ref: 'more than half of the grocery sales' },
+    { t: 'order', k: 'c:sequence', a: 'The idea was older than the machine.', why: 'older than = cũ hơn, có trước.', ref: 'The idea was older than the machine' },
+    { t: 'dict', k: 'c:listen', a: 'Not everyone was happy.', why: 'not everyone = không phải ai cũng.' },
+    { t: 'mc', k: 'w:pack~n', q: 'From his basket, he took a ______ of Juicy Fruit gum.', o: ['pack', 'tube', 'discount'], a: 0, why: 'a pack of gum = một gói kẹo cao su.', ref: 'he took a pack of Wrigley’s Juicy Fruit gum' },
+    { t: 'mc', k: 'w:key~v', q: 'The cashier had to ______ in each price by hand.', o: ['key', 'pack', 'tube'], a: 0, why: 'key in = bấm, nhập.', ref: 'the cashier had to key in each price by hand' },
+    { t: 'gap', k: 'w:discount', q: 'A busy cashier could forget a ______, but the computer could not.', a: ['discount'], why: 'discount = sự giảm giá.', ref: 'A busy cashier could forget a discount' },
+    { t: 'mc', k: 'w:tube', q: 'They needed a strong light and a special ______ that changed the light into a code.', o: ['tube', 'pack', 'label'], a: 0, why: 'tube = ống.', ref: 'a special tube that changed the light into a code' },
+    { t: 'match', k: 'w:set-shop', q: 'Match the words with their meanings.', pairs: [['discount', 'money taken off the usual price'], ['pack', 'a small box or paper cover with several things inside'], ['tube', 'a soft container for toothpaste'], ['key in', 'to put numbers into a machine by pressing buttons']], why: 'discount = giảm giá; pack = gói; tube = tuýp; key in = nhập.', ref: 'from a pack of gum to a tube of toothpaste' },
+    { t: 'gap', k: 'w:key~v', q: 'When a cashier ______ in hundreds of prices a day, mistakes were easy.', a: ['keyed'], why: 'key → keyed.', ref: 'When a cashier keyed in hundreds of prices a day' },
+    { t: 'mc', k: 'w:tube', q: 'Today almost everything, from a pack of gum to a ______ of toothpaste, has a barcode.', o: ['tube', 'discount', 'checkout'], a: 0, why: 'a tube of toothpaste = một tuýp kem đánh răng.', ref: 'a tube of toothpaste' },
+    { t: 'mc', k: 'g:past-perfect', q: 'In 1949, Woodland already knew Morse code, because he ______ it as a Boy Scout.', o: [['had learned', 'Đúng: việc học xảy ra trước năm 1949.'], ['has learned', 'Sai: không dùng hiện tại hoàn thành với mốc quá khứ.'], ['learns', 'Sai thì.']], a: 0, why: 'had + V3.', ref: 'Woodland had learned Morse code as a Boy Scout' },
+    { t: 'mc', k: 'g:reported-speech', q: 'The manager said that the new system ______ stop these mistakes.', o: [['would', 'Đúng: will lùi thành would sau said.'], ['will', 'Sai: phải lùi thì.'], ['can be', 'Sai nghĩa.']], a: 0, why: 'said that + would.', ref: 'said that the new system would stop these mistakes' },
+    { t: 'error', k: 'g:gerund-infinitive', q: 'He chose it to thank Wrigley for help to print the barcodes.', wrong: 'help', fix: 'helping', why: 'Sau giới từ for dùng V-ing.', ref: 'for helping to print the barcodes' },
+    { t: 'mc', k: 'g:relative-non-defining', q: 'Each scanner cost $4,000, ______ is about $25,000 today.', o: [['which', 'Đúng: which bổ sung cho cả con số phía trước.'], ['who', 'Sai: who chỉ người.'], ['what', 'Sai: what không dùng sau dấu phẩy như vậy.']], a: 0, why: ', which + V.', ref: 'which is about $25,000 today' }
+  ],
+  extra: [],
+  write: { vi: 'Viết 3–5 câu tiếng Anh về cách bạn nhập dữ liệu đo (ví dụ nhập kết quả CMM vào Excel) và một lỗi có thể xảy ra. Cố dùng các từ dưới đây.', use: ['key in', 'pack', 'tube', 'discount'], model: 'After measuring, I key in the results for each cavity in Excel. If I key in a wrong number, the report shows Fail. The samples come in a pack of five. Our supplier gave us a discount on new pin gauges, which come in a plastic tube.' },
+  fact: { card: 'Sáng 26/6/1974 ở siêu thị Marsh tại Troy, Ohio, thu ngân Sharon Buchanan quét gói kẹo cao su Juicy Fruit 10 thanh (67 xu) của Clyde Dawson — sản phẩm đầu tiên được bán bằng cách quét mã vạch. Ý tưởng mã vạch có từ năm 1949 (Woodland và Silver, lấy cảm hứng từ mã Morse); George Laurer ở IBM thiết kế vạch thẳng, được ngành thực phẩm chọn năm 1972. Đến năm 1989, mã vạch được dùng trong hơn một nửa doanh số thực phẩm ở Mỹ.',
+    bonus: 'Barcode inventor Norman Woodland said: “The only code I knew of was Morse code.”', bonusSrc: 'Tasting Table — Why The World’s First Scanned Barcode Was On A Pack Of Gum (quoting Fortune, 2004)' },
+  sources: [
+    { t: 'Smithsonian Magazine — The Supermarket Scanner Changed the Way We Buy Groceries Forever', u: 'https://www.smithsonianmag.com/smithsonian-institution/supermarket-scanner-changed-way-we-buy-groceries-forever-180984293/' },
+    { t: 'History.com — The Invention of the UPC Barcode (Yara Simón)', u: 'https://www.history.com/articles/upc-barcode-invention-ibm-laurer' },
+    { t: 'GS1 — Marsh holds place of honor in history of GS1 barcode', u: 'https://www.gs1.org/articles/marsh-holds-place-honor-history-gs1-barcode' },
+    { t: 'Tasting Table — Why The World’s First Scanned Barcode Was On A Pack Of Gum', u: 'https://tastingtable.com/1236964/why-the-worlds-first-scanned-barcode-was-on-a-pack-of-gum' }
+  ],
+  note: 'Bài viết gọn “bull’s-eye” thành “circles inside circles”. Smithsonian Magazine: sáng 26/6/1974 ở siêu thị Marsh tại Troy, Ohio, thu ngân Sharon Buchanan quét một gói kẹo Juicy Fruit của Wrigley; người mua là Clyde Dawson, trưởng bộ phận nghiên cứu phát triển của Marsh; trước đó thu ngân nhập tay giá từng món vào máy tính tiền, hàng có nhãn giá dán tay; mỗi máy quét tốn 4.000 đô la (khoảng 25.000 đô la ngày nay); quản lý cửa hàng nói hệ thống sẽ “eliminate cashier error” và bảo đảm khách được “price breaks” khi mua nhiều món cùng loại (bài gọi là discount); Woodland và Silver, tốt nghiệp Drexel ở Philadelphia, phát minh năm 1949 dựa trên chấm gạch của mã Morse, Woodland thích Morse từ thời hướng đạo sinh; máy quét năm 1974 nằm trong bộ sưu tập của Bảo tàng Quốc gia Lịch sử Mỹ, Hal Wallace, người phụ trách bộ sưu tập, nói chiếc máy bằng thép chủ yếu chứa không khí, phần việc thật do ánh sáng làm; Marsh có mười máy; vài khách hàng tiếc nhãn giá cũ. History.com: năm 1949 Woodland và Silver nộp đơn sáng chế mã “bull’s-eye” hình vòng tròn đồng tâm; Woodland nảy ý khi lùa ngón tay qua cát ở bãi biển; hệ thống cần đèn 500 oát và một ống đặc biệt biến ánh sáng thành mã; năm 1967 hệ thống KarTrak theo dõi toa tàu bằng mã vạch nhiều màu nhưng thất bại, một phần vì tuyết và bùn che mã; năm 1970 Hiệp hội Chuỗi Thực phẩm Quốc gia lập ủy ban, bảy đề xuất vào chung kết, kể cả mã bull’s-eye của RCA; năm 1969 IBM lập nhóm; George Laurer chọn vạch thẳng và ô quét hình chữ X để đọc được ở mọi hướng; vòng tròn chiếm nhiều chỗ, khó in, hay bị nhòe mép; năm 1972 ủy ban của Hiệp hội Chuỗi Thực phẩm Quốc gia chọn thiết kế của IBM; công đoàn biểu tình ở Tysons Corner, Virginia, chặn kỹ sư IBM; Carol Tucker-Foreman của Liên đoàn Người tiêu dùng Mỹ đấu tranh trên toàn quốc chống mã vạch; 18 bang ra luật cấm dùng máy quét mà bỏ nhãn giá; đầu những năm 1980 các cửa hàng dùng rộng rãi hơn; đến năm 1989 mã vạch dùng trong hơn một nửa doanh số thực phẩm ở Mỹ; không ai giàu lên nhờ bằng sáng chế, IBM có lời từ việc bán máy; Laurer mất năm 2019. GS1: gói Juicy Fruit 10 thanh giá 67 xu; GS1 có tổ chức thành viên ở hơn 110 quốc gia và quản lý phần lớn mã vạch thế giới; câu của CEO Miguel Lopera “Imagine if there was no barcode” và “the label can be read in any country in any language” và ví dụ nhân viên phải nhập tay từng mã nếu máy quét ngừng chạy. Tasting Table: Dawson chọn Juicy Fruit để cảm ơn Wrigley đã giúp phát triển và in mã vạch, và để chứng minh với người hoài nghi rằng món nhỏ cũng mang được mã; đêm trước, nhân viên siêu thị và một nhóm của National Cash Register dán mã và lắp hệ thống; câu của Woodland (Fortune, 2004) “The only code I knew of was Morse code”; các câu của Buchanan (New York Times, 2009) “I was a little bit nervous at the time”, “But it worked just fine”, “It was quite my 15 minutes of fame, I suppose”. Bài viết gọn “National Cash Register” thành “the machine company”, “Drexel Institute of Technology” thành “Drexel”. Kiến thức phổ thông: ngày nay hầu hết hàng hóa, kể cả tuýp kem đánh răng, có mã vạch. Câu “một thu ngân bận rộn có thể quên giảm giá, nhưng máy tính thì không” là nhận xét của bài dựa trên lời người quản lý.',
+  verified: '2026-11-15'
+});

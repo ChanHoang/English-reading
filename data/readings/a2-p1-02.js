@@ -8,7 +8,7 @@ EI.reading({
     [
       ["In the year 938, a {huge} group of {ships} {sailed} toward the {coast} of northern Vietnam.", "Năm 938, một đoàn tàu khổng lồ giương buồm tiến về bờ biển miền bắc Việt Nam."],
       ["The {ships} carried an {army} from the Southern Han, a kingdom in the south of China.", "Những con tàu chở một đội quân của Nam Hán, một vương quốc ở miền nam Trung Quốc."],
-      ["The {soldiers} on the {ships} {expected} an easy {war}.", "Binh lính trên tàu nghĩ rằng đây sẽ là một cuộc chiến dễ dàng."],
+      ["The {soldiers} on the {ships} {expected=expect} an easy {war}.", "Binh lính trên tàu nghĩ rằng đây sẽ là một cuộc chiến dễ dàng."],
       ["They did not know that the river in front of them was {hiding=hide} something.", "Họ không biết rằng con sông trước mặt đang giấu một thứ."]
     ],
     [
@@ -25,7 +25,7 @@ EI.reading({
       ["When the tide is high, the river is {deep}, and big {ships} can {sail} in.", "Khi triều lên, sông sâu và tàu lớn có thể đi vào."],
       ["When the tide is {low}, the river is not {deep}, and you can see the {bottom} in some places.", "Khi triều xuống, sông không còn sâu, và ở một số chỗ có thể nhìn thấy đáy."],
       ["Ngô Quyền knew this river well, but the enemy did not.", "Ngô Quyền hiểu rõ con sông này, còn quân địch thì không."],
-      ["No enemy {expected} that the most dangerous thing on this {coast} was the water.", "Không kẻ địch nào ngờ rằng thứ nguy hiểm nhất ở vùng bờ biển này lại chính là nước."]
+      ["No enemy {expected=expect} that the most dangerous thing on this {coast} was the water.", "Không kẻ địch nào ngờ rằng thứ nguy hiểm nhất ở vùng bờ biển này lại chính là nước."]
     ],
     [
       ["He told his {soldiers} to make thousands of long {wooden} stakes.", "Ông bảo quân lính làm hàng nghìn chiếc cọc gỗ dài."],
@@ -49,7 +49,7 @@ EI.reading({
       ["The big {ships} tried to turn back to the sea, but it was too late.", "Những con tàu lớn tìm cách quay ra biển, nhưng đã quá muộn."],
       ["The stakes came up from the {bottom} of the river and held the {ships}.", "Bãi cọc nhô lên từ đáy sông và giữ chặt các con tàu."],
       ["The {ships} could not move, so they could not {fight} well or {protect} themselves.", "Tàu không di chuyển được, nên không thể chiến đấu tốt hay tự bảo vệ."],
-      ["The easy win that the enemy {expected} {disappeared} with the water.", "Chiến thắng dễ dàng mà quân địch mong đợi biến mất cùng con nước."],
+      ["The easy win that the enemy {expected=expect} {disappeared} with the water.", "Chiến thắng dễ dàng mà quân địch mong đợi biến mất cùng con nước."],
       ["Ngô Quyền's men {destroyed} many of the {ships}.", "Quân của Ngô Quyền phá hủy nhiều tàu."],
       ["About half of the Southern Han {soldiers} died, and Liu Hongcao died with them.", "Khoảng một nửa quân Nam Hán thiệt mạng, và Lưu Hoằng Tháo chết cùng họ."]
     ],

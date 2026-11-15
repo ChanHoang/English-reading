@@ -1,0 +1,124 @@
+EI.words('B1', `
+# ---- b1-p1-43 The Real Family Behind The Sound of Music
+act~n|n|/ækt/|a short performance in a show; also the person or group who gives it|The band was the best {act} of the night.|a comedy/music act; a double act|tiết mục, nhóm biểu diễn|2|act (v) = hành động, đóng vai (A2).|act (v), actor (n)
+album|n|/ˈælbəm/|a collection of pieces of music on one record, CD or online; also a book for photos|The band’s new {album} has twelve songs.|a new album; a photo album|album (nhạc, ảnh)|2||
+curtain|n|/ˈkɜːrtn/|a piece of cloth that hangs over a window or in front of a stage|She opened the {curtains} and looked outside.|open/close the curtains; the curtain goes up|rèm cửa; màn sân khấu|2||
+following~n|n|/ˈfɑːloʊɪŋ/|a group of people who like and support somebody or something|The singer has a big {following} in Asia.|a big/large following|người hâm mộ, người ủng hộ|2|following (adj) = tiếp theo (A2).|follow (v)
+gentleman|n|/ˈdʒentlmən/|a man who is polite and behaves well; also a polite word for any man|He was a real {gentleman} and always helped people.|a real gentleman|quý ông|2|Số nhiều: gentlemen.|
+musical~n|n|/ˈmjuːzɪkl/|a play or film in which part of the story is told with songs and often dancing|We saw a {musical} in London.|a Broadway musical; a stage musical|vở nhạc kịch, phim ca nhạc|2|musical (adj) = (thuộc) âm nhạc (A2).|music (n)
+`);
+EI.reading({
+  id: 'b1-p1-43', level: 'B1', pass: 1, n: 43,
+  title: 'The Real Family Behind The Sound of Music',
+  topic: 'culture', era: '1905–1987', year: 1938, region: 'Austria',
+  predict: { q: 'Trong phim “The Sound of Music”, gia đình von Trapp trốn khỏi Áo bằng cách vượt núi. Ngoài đời thật, họ rời đi bằng cách nào?', o: ['Đi tàu hỏa', 'Đi máy bay', 'Đi bộ qua núi, giống trong phim'] },
+  targets: ['act~n', 'album', 'curtain', 'following~n', 'gentleman', 'musical~n'],
+  text: [
+    [
+      ["In 1959, the {curtain} went up on a new Broadway {musical=musical~n} called The Sound of Music.", "Năm 1959, màn nhung kéo lên cho một vở nhạc kịch Broadway mới tên là The Sound of Music."],
+      ["The {musical=musical~n} was by Richard Rodgers and Oscar Hammerstein, and its star, Mary Martin, played a young woman called Maria.", "Vở nhạc kịch do Richard Rodgers và Oscar Hammerstein viết, và ngôi sao Mary Martin đóng vai một cô gái trẻ tên Maria."],
+      ["Six years later, in 1965, it became a film with Julie Andrews, and the film won five Oscars, including Best Picture.", "Sáu năm sau, năm 1965, nó thành phim với Julie Andrews, và bộ phim giành năm giải Oscar, gồm cả giải Phim hay nhất."],
+      ["For a time, it was the film that had earned the most money in history.", "Có một thời, đây là bộ phim thu nhiều tiền nhất trong lịch sử."],
+      ["But the story came from a real family, and the real story was quite different.", "Nhưng câu chuyện đến từ một gia đình có thật, và chuyện thật khá khác."]
+    ],
+    [
+      ["Georg von Trapp was born in 1880, and he was an Austrian navy captain who won medals in the First World War.", "Georg von Trapp sinh năm 1880, là một thuyền trưởng hải quân Áo từng nhận huân chương trong Thế chiến thứ nhất."],
+      ["His first wife, Agathe Whitehead, died in 1922, and he was left with seven children.", "Người vợ đầu, Agathe Whitehead, mất năm 1922, để lại ông với bảy đứa con."],
+      ["Maria Kutschera was born in Vienna in 1905, and she lost her parents when she was young.", "Maria Kutschera sinh ở Vienna năm 1905 và mồ côi cha mẹ từ nhỏ."],
+      ["She went to Nonnberg Abbey in Salzburg because she wanted to become a nun.", "Bà vào tu viện Nonnberg ở Salzburg vì muốn trở thành nữ tu."],
+      ["She later described herself as “horrid, the worst you can imagine”: she spoke when she had to be silent, and she even climbed onto the roof.", "Sau này bà tự tả mình là “tệ hại, tệ nhất mà bạn có thể tưởng tượng”: bà nói chuyện khi phải im lặng, thậm chí còn trèo lên mái nhà."],
+      ["Her health was not good, because she did not get enough exercise or fresh air.", "Sức khỏe của bà không tốt vì không được vận động và hít thở không khí trong lành đủ."],
+      ["When Georg asked the abbey for a teacher for one of his daughters, who was ill, the nuns sent Maria.", "Khi Georg nhờ tu viện cử một cô giáo cho một cô con gái bị ốm, các nữ tu đã cử Maria."],
+      ["She came to teach one child, not to look after all seven.", "Bà đến để dạy một đứa trẻ, không phải để trông cả bảy."]
+    ],
+    [
+      ["In 1927, Maria married Georg, a {gentleman} 25 years older than her.", "Năm 1927, Maria cưới Georg, một quý ông hơn bà 25 tuổi."],
+      ["It was not a love story at first.", "Lúc đầu, đó không phải là một chuyện tình."],
+      ["Maria wrote, “I really and truly was not in love. I liked him but didn’t love him.”", "Maria viết: “Thật lòng tôi không yêu. Tôi quý ông nhưng không yêu ông.”"],
+      ["She said that she had loved the children first.", "Bà nói bà đã yêu bọn trẻ trước."],
+      ["Georg and Maria had three more children, so in the end there were ten children, not seven as in the film.", "Georg và Maria có thêm ba con, nên cuối cùng có mười đứa trẻ, không phải bảy như trong phim."],
+      ["The film also changed the children’s names: Rupert, the oldest, became a girl called Liesl.", "Phim còn đổi tên các con: Rupert, con cả, trở thành một cô gái tên Liesl."]
+    ],
+    [
+      ["In the early 1930s, the family lost most of its money when a bank failed.", "Đầu những năm 1930, gia đình mất gần hết tiền khi một ngân hàng sụp đổ."],
+      ["Maria sent most of the servants away, and the family let paying guests live in their home.", "Maria cho phần lớn người hầu nghỉ việc, và gia đình cho khách trả tiền ở trong nhà."],
+      ["The family had always loved singing, and now they turned it into a professional {act=act~n}.", "Cả nhà vốn luôn thích ca hát, và giờ họ biến nó thành một tiết mục biểu diễn chuyên nghiệp."],
+      ["Georg did not like the idea at first.", "Lúc đầu Georg không thích ý tưởng này."],
+      ["His daughter Eleonore later said, “It almost hurt my father to have his family on stage.”", "Con gái ông, Eleonore, sau này kể: “Việc để gia đình lên sân khấu gần như làm bố tôi đau lòng.”"],
+      ["A priest, Franz Wasner, became the family’s music director for more than 20 years.", "Một linh mục, Franz Wasner, làm chỉ huy âm nhạc của gia đình hơn 20 năm."],
+      ["In 1936, their {act=act~n} won first place at a music festival in Salzburg.", "Năm 1936, tiết mục của họ giành giải nhất ở một liên hoan âm nhạc tại Salzburg."]
+    ],
+    [
+      ["In 1938, Germany took over Austria.", "Năm 1938, Đức sáp nhập nước Áo."],
+      ["Georg refused to fly the Nazi flag, and he said no when he was asked to lead ships in the German navy.", "Georg từ chối treo cờ Quốc xã, và ông nói không khi được đề nghị chỉ huy tàu trong hải quân Đức."],
+      ["The family also said no to a request to sing at Hitler’s birthday party.", "Gia đình cũng từ chối lời mời hát ở tiệc sinh nhật của Hitler."],
+      ["In the film, the family climbs over the mountains to Switzerland.", "Trong phim, gia đình trèo qua núi sang Thụy Sĩ."],
+      ["In real life, they left by train, and one daughter remembered, “We left by train in broad daylight, pretending nothing.”", "Ngoài đời, họ đi tàu hỏa, và một cô con gái nhớ lại: “Chúng tôi đi tàu giữa ban ngày, giả vờ như không có gì.”"],
+      ["Maria later complained to a reporter, “Don’t they know geography in Hollywood?”, because Salzburg is not next to Switzerland.", "Sau này Maria phàn nàn với một phóng viên: “Ở Hollywood người ta không biết địa lý à?”, vì Salzburg không nằm cạnh Thụy Sĩ."],
+      ["They went to Italy and London, and in September 1939 they sailed to New York.", "Họ sang Ý, rồi London, và tháng 9 năm 1939 họ đi tàu biển tới New York."],
+      ["Nine of the children traveled with them, and the last one, Johannes, was born in America in 1939.", "Chín người con đi cùng họ, còn người thứ mười, Johannes, sinh ở Mỹ năm 1939."]
+    ],
+    [
+      ["At one point, they were held at Ellis Island in New York because of a problem with their visas.", "Có lúc họ bị giữ lại ở đảo Ellis, New York, vì vấn đề thị thực."],
+      ["In America, they toured as the Trapp Family Singers, and their music soon had a {following=following~n} across the country.", "Ở Mỹ, họ đi biểu diễn với tên Nhóm hát Gia đình Trapp, và âm nhạc của họ sớm có người hâm mộ khắp nước."],
+      ["In the early 1940s, they bought a farm in Stowe, Vermont, and in 1950 they opened the Trapp Family Lodge, a hotel that is still open today.", "Đầu những năm 1940, họ mua một trang trại ở Stowe, bang Vermont, và năm 1950 mở khách sạn Trapp Family Lodge, đến nay vẫn hoạt động."],
+      ["The family stopped touring in 1955, Georg died in 1947, and Maria died in 1987.", "Gia đình ngừng đi lưu diễn năm 1955; Georg mất năm 1947, còn Maria mất năm 1987."]
+    ],
+    [
+      ["In 1949, Maria wrote a book about the family, and the {musical=musical~n} and the film were based on it.", "Năm 1949, Maria viết một cuốn sách về gia đình, và vở nhạc kịch cùng bộ phim được dựa trên cuốn sách ấy."],
+      ["The {album} of the Broadway songs was number one in the US for 16 weeks, and the film’s {album} stayed on the charts for 233 weeks.", "Album các bài hát Broadway đứng đầu ở Mỹ trong 16 tuần, còn album của bộ phim nằm trên bảng xếp hạng 233 tuần."],
+      ["Julie Andrews sang on the film’s {album}, and for a month in 1965 she was the main singer on the two best-selling {albums=album} in America, The Sound of Music and Mary Poppins.", "Julie Andrews hát trong album của phim, và trong một tháng năm 1965 bà là ca sĩ chính của cả hai album bán chạy nhất nước Mỹ, The Sound of Music và Mary Poppins."],
+      ["Maria had sold the rights to the story, so the family had little say in the {musical=musical~n} or the film.", "Maria đã bán bản quyền câu chuyện, nên gia đình hầu như không có tiếng nói trong vở nhạc kịch hay bộ phim."],
+      ["Some changes hurt them.", "Có những thay đổi làm họ buồn."],
+      ["In the film, Georg is a cold man who does not let his children sing, but his son Johannes remembered him as a charming, generous {gentleman}.", "Trong phim, Georg là một người lạnh lùng không cho con hát, nhưng con trai ông là Johannes nhớ về ông như một quý ông dễ mến, hào phóng."],
+      ["One detail in the film is true: Georg really did have a special whistle call for each child.", "Có một chi tiết trong phim là thật: Georg đúng là có một kiểu thổi còi riêng để gọi từng đứa con."],
+      ["In one famous scene, Maria makes play clothes for the children from the old {curtains=curtain} in her room.", "Trong một cảnh nổi tiếng, Maria may quần áo chơi cho bọn trẻ từ những tấm rèm cũ trong phòng mình."],
+      ["The Maria of the film is sweet and gentle, but the real Maria had a strong temper.", "Maria trong phim ngọt ngào, dịu dàng, còn Maria thật thì rất nóng tính."],
+      ["Johannes said that the real story was “less glamorous but more interesting than the myth.”", "Johannes nói chuyện thật “kém hào nhoáng hơn nhưng thú vị hơn câu chuyện huyền thoại”."],
+      ["Still, the film has a huge {following=following~n} around the world today.", "Dù vậy, bộ phim ngày nay vẫn có rất đông người hâm mộ khắp thế giới."]
+    ]
+  ],
+  gloss: { broadway: 'Broadway (khu nhà hát ở New York)', navy: 'hải quân', medals: 'huân chương', abbey: 'tu viện', nun: 'nữ tu', nuns: 'các nữ tu', horrid: 'tệ hại', silent: 'im lặng', servants: 'người hầu', priest: 'linh mục', festival: 'liên hoan', flag: 'lá cờ', daylight: 'ánh sáng ban ngày (in broad daylight = giữa ban ngày)', pretending: 'giả vờ', geography: 'địa lý', toured: 'đi lưu diễn', touring: 'đi lưu diễn', lodge: 'nhà nghỉ, khách sạn nhỏ', charts: 'bảng xếp hạng', rights: 'bản quyền', charming: 'dễ mến', generous: 'hào phóng', temper: 'tính khí (a strong temper = nóng tính)', glamorous: 'hào nhoáng', myth: 'huyền thoại', von: 'von (một phần của họ, tiếng Đức)', 'didn’t': '= did not', broad: 'rộng (in broad daylight = giữa ban ngày)', visas: 'thị thực, visa', whistle: 'cái còi; tiếng huýt sáo' },
+  grammar: [
+    ['gerund-infinitive', 'Georg refused to fly the Nazi flag'],
+    ['passive-tenses', 'the musical and the film were based on it'],
+    ['reported-speech', 'Johannes said that the real story was'],
+    ['past-perfect', 'Maria had sold the rights to the story'],
+    ['relative-non-defining', 'for one of his daughters, who was ill']
+  ],
+  practiceNote: 'Bài về gia đình von Trapp thật đứng sau “The Sound of Music”: Georg, thuyền trưởng hải quân góa vợ với bảy con; Maria, người tập sự ở tu viện Nonnberg, đến dạy một cô con gái ốm, cưới Georg năm 1927; gia đình mất tiền, biến việc hát thành tiết mục chuyên nghiệp; năm 1938 rời Áo bằng tàu hỏa, không phải vượt núi; nhạc kịch Broadway 1959 và phim 1965 thay đổi nhiều chi tiết. Từ vựng: biểu diễn (musical, act, curtain, album, following), con người (gentleman). Ngữ pháp: refuse to V, bị động, câu tường thuật, quá khứ hoàn thành, mệnh đề quan hệ có dấu phẩy.',
+  practice: [
+    { t: 'mc', k: 'c:main', q: 'What is the main idea of the story?', o: ['The Sound of Music came from a real family, but the real story was quite different.', 'The von Trapp family wrote the songs for The Sound of Music.', 'The film tells the real story of the family exactly.'], a: 0, why: 'Gia đình có thật, nhưng chuyện thật khác phim.', ref: 'the real story was quite different' },
+    { t: 'mc', k: 'c:maria', q: 'Why did Maria first come to the von Trapp house?', o: ['To teach one daughter who was ill', 'To look after all seven children', 'To marry Georg'], a: 0, why: 'Dạy một cô con gái bị ốm.', ref: 'She came to teach one child, not to look after all seven' },
+    { t: 'mc', k: 'c:children', q: 'How many children were there in the real family in the end?', o: ['Ten', 'Seven', 'Three'], a: 0, why: 'Bảy con của Georg và ba con chung.', ref: 'in the end there were ten children' },
+    { t: 'mc', k: 'c:money', q: 'Why did the family turn their singing into a professional act?', o: ['They had lost most of their money.', 'Hitler asked them to.', 'Georg loved being on stage.'], a: 0, why: 'Mất tiền khi ngân hàng sụp đổ.', ref: 'the family lost most of its money when a bank failed' },
+    { t: 'mc', k: 'c:infer', q: 'Why did Maria complain about geography in Hollywood?', o: ['In the film, the family walks from Salzburg to Switzerland, but Salzburg is not next to Switzerland.', 'The film was made in Switzerland.', 'Hollywood changed the name of Salzburg.'], a: 0, why: 'Salzburg không giáp Thụy Sĩ, nên cảnh vượt núi sang Thụy Sĩ là sai.', ref: 'because Salzburg is not next to Switzerland' },
+    { t: 'mc', k: 'c:tf', q: 'True or false? “The real family left Austria by train.”', o: ['True', 'False'], a: 0, why: 'Đúng: “We left by train in broad daylight”.', ref: 'In real life, they left by train' },
+    { t: 'mc', k: 'c:georg', q: 'How did Johannes remember his father?', o: ['As a charming, generous gentleman', 'As a cold man who hated music', 'As a man who never smiled'], a: 0, why: 'Johannes nhớ ông là người dễ mến, hào phóng.', ref: 'his son Johannes remembered him as a charming, generous gentleman' },
+    { t: 'order', k: 'c:sequence', a: 'It was not a love story at first.', why: 'at first = lúc đầu.', ref: 'It was not a love story at first' },
+    { t: 'dict', k: 'c:listen', a: 'Some changes hurt them.', why: 'hurt (quá khứ) = làm tổn thương.' },
+    { t: 'mc', k: 'w:musical~n', q: 'In 1959, the curtain went up on a new Broadway ______.', o: ['musical', 'album', 'gentleman'], a: 0, why: 'musical (n) = vở nhạc kịch.', ref: 'a new Broadway musical' },
+    { t: 'mc', k: 'w:curtain', q: 'Maria makes play clothes for the children from the old ______ in her room.', o: ['curtains', 'albums', 'acts'], a: 0, why: 'curtain = rèm cửa.', ref: 'from the old curtains in her room' },
+    { t: 'gap', k: 'w:act~n', q: 'They turned their singing into a professional ______.', a: ['act'], why: 'act (n) = tiết mục, nhóm biểu diễn.', ref: 'they turned it into a professional act' },
+    { t: 'mc', k: 'w:album', q: 'The ______ of the Broadway songs was number one in the US for 16 weeks.', o: ['album', 'act', 'curtain'], a: 0, why: 'album = album nhạc.', ref: 'The album of the Broadway songs was number one' },
+    { t: 'match', k: 'w:set-music', q: 'Match the words with their meanings.', pairs: [['gentleman', 'a polite man who behaves well'], ['following', 'people who like and support somebody'], ['musical', 'a play or film with many songs'], ['curtain', 'cloth that hangs in front of a window or stage']], why: 'gentleman = quý ông; following = người hâm mộ; musical = nhạc kịch; curtain = rèm, màn.', ref: 'a gentleman 25 years older than her' },
+    { t: 'mc', k: 'w:following~n', q: 'The film has a huge ______ around the world today.', o: ['following', 'gentleman', 'curtain'], a: 0, why: 'a huge following = rất đông người hâm mộ.', ref: 'the film has a huge following around the world today' },
+    { t: 'gap', k: 'w:gentleman', q: 'In 1927, Maria married Georg, a ______ 25 years older than her.', a: ['gentleman'], why: 'gentleman = quý ông.', ref: 'a gentleman 25 years older than her' },
+    { t: 'mc', k: 'g:gerund-infinitive', q: 'Georg refused ______ the Nazi flag.', o: [['to fly', 'Đúng: refuse + to V.'], ['flying', 'Sai: refuse không đi với V-ing.'], ['fly', 'Sai: thiếu to.']], a: 0, why: 'refuse to do something.', ref: 'Georg refused to fly the Nazi flag' },
+    { t: 'mc', k: 'g:passive-tenses', q: 'The musical and the film ______ on Maria’s book.', o: [['were based', 'Đúng: bị động quá khứ, be based on.'], ['based', 'Sai: thiếu be.'], ['have basing', 'Sai dạng.']], a: 0, why: 'be based on = được dựa trên.', ref: 'were based on it' },
+    { t: 'error', k: 'g:past-perfect', q: 'The family had little say in the film, because Maria has sold the rights.', wrong: 'has', fix: 'had', why: 'Việc bán bản quyền xảy ra trước: had + V3.', ref: 'Maria had sold the rights to the story' },
+    { t: 'mc', k: 'g:relative-non-defining', q: 'Georg asked for a teacher for one of his daughters, ______ was ill.', o: [['who', 'Đúng: chỉ người, sau dấu phẩy.'], ['which', 'Sai: which chỉ vật.'], ['that', 'Sai: không dùng that sau dấu phẩy.']], a: 0, why: 'N, who + V.', ref: 'one of his daughters, who was ill' }
+  ],
+  extra: [],
+  write: { vi: 'Viết 3–5 câu tiếng Anh về một bộ phim hoặc vở diễn bạn thích. Cố dùng các từ dưới đây.', use: ['musical', 'album', 'act', 'following'], model: 'My favorite musical is The Sound of Music. I listen to the album when I drive to work. The best act in the film is the song in the mountains. The film still has a big following in Vietnam.' },
+  fact: { card: 'Gia đình von Trapp có thật: Georg, thuyền trưởng hải quân Áo góa vợ có bảy con, cưới Maria năm 1927; họ có thêm ba con. Sau khi mất tiền đầu những năm 1930, gia đình biến việc hát thành nghề, giành giải nhất ở Salzburg năm 1936. Năm 1938 họ rời Áo bằng tàu hỏa (không vượt núi như trong phim), rồi định cư ở Stowe, Vermont. Cuốn sách năm 1949 của Maria là nền cho vở nhạc kịch Broadway 1959 của Rodgers và Hammerstein và bộ phim năm 1965 với Julie Andrews.',
+    bonus: 'Johannes von Trapp said the real story was “less glamorous but more interesting than the myth.”', bonusSrc: 'National Archives (Prologue) — Movie vs. Reality: The Real Story of the von Trapp Family' },
+  sources: [
+    { t: 'National Archives (Prologue, 2005) — Movie vs. Reality: The Real Story of the von Trapp Family', u: 'https://archives.gov/publications/prologue/2005/winter/von-trapps.html' },
+    { t: 'Biography.com — The real von Trapp family', u: 'https://www.biography.com/news/real-von-trapp-family-sound-of-music' },
+    { t: 'Mental Floss — The Sound of Music: real history', u: 'https://www.mentalfloss.com/entertainment/movies/the-sound-of-music-real-history' },
+    { t: 'Rodgers & Hammerstein — The Charts Are Alive With The Sound of Music', u: 'https://rodgersandhammerstein.com/the-sound-of-music-the-charts-are-alive-with-the-sound-of-music/' }
+  ],
+  note: 'National Archives (Prologue): Georg von Trapp sinh năm 1880, thuyền trưởng hải quân Áo được trao huân chương trong Thế chiến I; vợ đầu Agathe Whitehead mất năm 1922 vì bệnh ban đỏ; bảy con Rupert, Agathe, Maria, Werner, Hedwig, Johanna, Martina; Maria Augusta Kutschera sinh ở Vienna năm 1905, vào tu viện Benedictine Nonnberg ở Salzburg làm người tập sự; sức khỏe kém vì thiếu vận động và không khí trong lành; Georg xin tu viện một cô giáo cho cô con gái ốm, Maria được chọn — bà dạy một đứa trẻ chứ không làm gia sư cho cả nhà; câu “I really and truly was not in love. I liked him but didn’t love him”; bà nói đã yêu bọn trẻ trước; cưới năm 1927, thêm ba con Rosmarie, Eleonore, Johannes; khủng hoảng và một ngân hàng sụp đổ đầu những năm 1930 làm gia đình mất phần lớn tài sản; Maria cho người hầu nghỉ và nhận khách ở trọ; hát vốn là thú vui gia đình, họ biến thành “a professional act”, Georg lúc đầu miễn cưỡng; linh mục Franz Wasner làm chỉ huy âm nhạc hơn 20 năm; giải nhất Liên hoan Âm nhạc Salzburg năm 1936; sau khi Đức sáp nhập Áo năm 1938, Georg từ chối treo cờ Quốc xã, từ chối chức chỉ huy hải quân và lời mời hát trong tiệc sinh nhật Hitler; gia đình rời đi bằng tàu hỏa sang Ý, rồi London, đi tàu Bergensfjord tới New York; định cư ở trang trại tại Stowe, Vermont, đầu những năm 1940; Trapp Family Lodge mở năm 1950 và vẫn hoạt động; ngừng lưu diễn năm 1955; Georg mất năm 1947, Maria mất năm 1987; sách “The Story of the Trapp Family Singers” (1949); Maria bán bản quyền nên gia đình ít được góp ý cho vở kịch và phim; cách phim miêu tả Georg lạnh lùng làm gia đình buồn; con riêng của chồng nói Maria “had a terrible temper”; Johannes: “less glamorous but more interesting than the myth”. Biography.com: Maria tự tả mình “horrid, the worst you can imagine”, từng nói chuyện trong giờ im lặng và trèo lên mái tu viện; Georg hơn Maria 25 tuổi; câu của Eleonore (Washington Post, 1978) “It almost hurt [my father] to have his family on stage”; câu của con gái Maria (2003) “We left by train in broad daylight, pretending nothing”; câu của Maria với phóng viên năm 1967 “Don’t they know geography in Hollywood? Salzburg does not border on Switzerland!” (bài giữ vế đầu và diễn đạt lại vế sau); phim do Robert Wise đạo diễn, giành năm giải Oscar, gồm Phim hay nhất. Mental Floss: Johannes gọi bố là “a very charming man, generous, open” (bài diễn đạt thành “a charming, generous gentleman”); phim là bản dựng lại vở nhạc kịch năm 1959 của Rodgers và Hammerstein; gia đình rời đi tháng 9/1939 bằng tàu Bergensfjord tới New York. Rodgers & Hammerstein: Mary Martin đóng vai chính trên Broadway; album dàn diễn viên Broadway đứng số một 16 tuần, nằm trên bảng xếp hạng 276 tuần; album nhạc phim nằm trên bảng xếp hạng 233 tuần; phim là “the highest grossing movie of its time”. Biography.com cũng ghi: phim đổi tên và giới tính của các con, Rupert thành Liesl; chín người con có mặt khi gia đình rời đi, người thứ mười là Johannes sinh ở Mỹ năm 1939. Prologue cũng ghi: thị thực du lịch hết hạn nên gia đình bị giữ ở đảo Ellis để thẩm vấn. Mental Floss: Georg thật sự nghĩ ra kiểu huýt còi riêng để gọi từng đứa con. Rodgers & Hammerstein: trong một tháng năm 1965, Julie Andrews là người hát chính của cả album số một và số hai ở Mỹ (The Sound of Music và Mary Poppins). Kiến thức phổ thông: trong phim, gia đình vượt núi sang Thụy Sĩ và Maria may quần áo cho bọn trẻ từ rèm cửa cũ; phim ngày nay vẫn rất nhiều người hâm mộ. Câu “âm nhạc của họ sớm có người hâm mộ khắp nước” là cách bài tóm lại việc họ lưu diễn ở Mỹ với tên Trapp Family Singers đến năm 1955; “chuyện tình” lúc đầu không có là nhận xét của bài dựa trên câu của Maria.',
+  verified: '2026-11-15'
+});

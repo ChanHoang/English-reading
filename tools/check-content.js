@@ -71,7 +71,13 @@ function checkItem(where, it, r, grammar) {
   if (!['mc', 'gap', 'order', 'error', 'match', 'dict', 'write'].includes(it.t)) return E(where, 'unknown type ' + it.t);
   if (it.t === 'mc') {
     if (!(it.a >= 0 && it.a < it.o.length)) E(where, 'answer index out of range');
-    if (grammar && !it.o.every(o => Array.isArray(o) && o[1])) E(where, 'grammar options need an explanation for every option');
+    // every option explains itself: the right one starts with “Đúng”, a wrong one says why it is wrong (CONTENT_GUIDE §4)
+    if (!it.o.every(o => Array.isArray(o) && o[1] && String(o[1]).trim())) E(where, 'every option needs an explanation: [text, explanation]');
+    else {
+      if (it.a >= 0 && it.a < it.o.length && !/^Đúng/.test(it.o[it.a][1])) E(where, 'the right option’s explanation must start with “Đúng”');
+      it.o.forEach((o, j) => { if (j !== it.a && /^Đúng/.test(o[1])) E(where, 'option ' + j + ' is wrong but its explanation starts with “Đúng”'); });
+    }
+    if (new Set(it.o.map(o => (Array.isArray(o) ? o[0] : o).trim().toLowerCase())).size !== it.o.length) E(where, 'two options have the same text');
   }
   if (it.t === 'gap' && !/_{3,}/.test(it.q)) E(where, 'gap question has no blank');
   if (it.t === 'error') { const n = it.q.split(' ').filter(w => w.replace(/[^\p{L}']/gu, '').toLowerCase() === it.wrong.toLowerCase()).length; if (n !== 1 && !it.head2) E(where, 'wrong word "' + it.wrong + '" must appear exactly once (found ' + n + ')'); if (n < 1) E(where, 'wrong word not in sentence'); }

@@ -236,8 +236,15 @@ EI.reviewItem = key => {
     return { t: 'gap', q: s.cloze, a: [s.surf, e.hw], why: e.hw + ' — ' + e.def, rv, hard, audio: ty === 'C' ? s.plain : null,
       head: ty === 'A' ? 'From “' + s.title + '” · type the missing word' : ty === 'B' ? 'A new sentence · type the missing word' : 'Listen, then type the missing word' };
   if (ty === 'D') {
-    const others = Object.values(EI.W).filter(x => x.hw !== e.hw).sort((a, b) => (b.pos === e.pos) - (a.pos === e.pos) || hash(a.w + w) - hash(b.w + w)).slice(0, 2);
-    const o = [e.def, ...others.map(x => x.def)], ord = [0, 1, 2].sort((a, b) => hash(o[a] + rec.h.length) - hash(o[b] + rec.h.length));
+    // Wrong options are the meanings of words that could be confused with this one: same part of speech first,
+    // then words from the same story, then words of the same level. Every option says whose meaning it is.
+    const story = s.kind === 'r' ? (EI.rById(s.rid) || {}).targets || [] : [];
+    const near = x => (x.pos === e.pos ? 4 : 0) + (story.includes(x.w) ? 2 : 0) + (x.level === e.level ? 1 : 0);
+    const others = Object.values(EI.W).filter(x => x.hw !== e.hw && x.def !== e.def)
+      .sort((a, b) => near(b) - near(a) || hash(a.w + w + rec.h.length) - hash(b.w + w + rec.h.length)).slice(0, 2);
+    const o = [[e.def, 'Đúng: ở câu này “' + s.surf + '” là ' + e.hw + ' (' + e.pos + ') = ' + e.vi + '.'],
+      ...others.map(x => [x.def, 'Sai: đây là nghĩa của ' + x.hw + ' (' + x.pos + ') = ' + x.vi + ', không phải của “' + s.surf + '”.'])];
+    const ord = [0, 1, 2].sort((a, b) => hash(o[a][0] + rec.h.length) - hash(o[b][0] + rec.h.length));
     return { t: 'mc', q: s.plain, mark: s.surf, sub: 'In this sentence, “' + s.surf + '” means…', o: ord.map(i => o[i]), a: ord.indexOf(0), why: e.hw + ' — ' + e.def, rv, hard, head: 'Meaning in context', fixed: true };
   }
   return { t: 'write', q: 'Write your own sentence with “' + e.hw + '”.', model: e.exPlain, self: true, rv, hard, head: 'Use the word' };

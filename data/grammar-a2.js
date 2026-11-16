@@ -13,12 +13,12 @@ EI.grammar({ id: 'past-simple', n: 1, level: 'A2', title: 'Past simple', vi: 'Th
   errors: [['He did not went home.', 'He did not go home.', 'Sau did not / Did…? luôn là động từ nguyên mẫu.'], ['Yesterday I go to the factory.', 'Yesterday I went to the factory.', 'Có mốc thời gian quá khứ thì động từ phải ở dạng quá khứ; tiếng Việt không đổi động từ nên rất dễ quên.'], ['Did he was at work?', 'Was he at work?', 'Với be, đảo was/were lên đầu; không dùng did.']],
   note: '7 câu: bốn dạng câu, động từ bất quy tắc và động từ be — chủ điểm rộng và là thì dùng nhiều nhất trong các bài đọc.',
   q: [
-    { t: 'mc', q: 'The soldiers ______ about the stakes.', o: [['did not know', 'Đúng: did not + V nguyên mẫu.'], ['did not knew', 'Sai: sau did not không dùng V2.'], ['not knew', 'Sai: thiếu trợ động từ did.']], a: 0 },
+    { t: 'mc', q: 'The soldiers ______ about the stakes.', o: [['did not know', 'Đúng: phủ định quá khứ = did not + V nguyên mẫu; chỉ did mang dấu quá khứ.'], ['did not knew', 'Sai: quá khứ đã nằm ở did, nên động từ sau did not phải về nguyên mẫu (know), không dùng V2.'], ['not knew', 'Sai: tiếng Anh không đặt not thẳng trước động từ thường; cần trợ động từ did. Lỗi hay gặp vì tiếng Việt chỉ cần thêm “không”.']], a: 0 },
     { t: 'gap', q: 'Fleming ______ (leave) the plate on a table in the lab.', a: 'left', why: 'leave – left – left (bất quy tắc).' },
-    { t: 'mc', q: '______ the experiment work?', o: [['Did', 'Đúng: Did + S + V?'], ['Was', 'Sai: work là động từ thường, không đi với was ở đây.'], ['Does', 'Sai thì: chuyện ở quá khứ.']], a: 0 },
+    { t: 'mc', q: '______ the experiment work yesterday?', o: [['Did', 'Đúng: câu hỏi Yes/No ở quá khứ với động từ thường: Did + S + V nguyên mẫu (work).'], ['Was', 'Sai: was đi với tính từ, danh từ hoặc V-ing (Was it working?); với động từ thường ở dạng nguyên mẫu phải dùng Did.'], ['Does', 'Sai thì: does là hiện tại; “yesterday” cho thấy câu hỏi về quá khứ → Did.']], a: 0 },
     { t: 'error', q: 'When did Ando invented instant noodles?', wrong: 'invented', fix: 'invent', why: 'Trong câu hỏi đã có did, động từ chính về nguyên mẫu: When did Ando invent…?' },
     { t: 'order', a: 'Why did the big ships follow the small boats?', why: 'Wh- + did + S + V + tân ngữ.' },
-    { t: 'mc', q: 'Who ______ penicillin?', o: [['discovered', 'Đúng: hỏi về chủ ngữ (Who) thì dùng thẳng V2, không cần did.'], ['did discover', 'Chưa đúng: chỉ dùng did khi Who là tân ngữ hoặc khi cần nhấn mạnh.'], ['did discovered', 'Sai: không dùng did cùng V2.']], a: 0 },
+    { t: 'mc', q: 'Who ______ penicillin?', o: [['discovered', 'Đúng: Who là CHỦ NGỮ (ai khám phá) → không cần did, dùng thẳng V2 như câu khẳng định.'], ['did discovered', 'Sai: did không bao giờ đi cùng V2; và khi Who là chủ ngữ thì không cần did.'], ['discover', 'Sai: chuyện năm 1928 cần quá khứ discovered; “Who discover” sai cả thì lẫn ngôi.']], a: 0 },
     { t: 'write', q: 'Make it negative: “The first oven was small.”', model: 'The first oven was not small.', why: 'Với be: was/were + not. Không dùng did.', okLabel: 'Mine matches', badLabel: 'Mine was different' }
   ] });
 
@@ -34,11 +34,11 @@ EI.grammar({ id: 'past-continuous', n: 2, level: 'A2', title: 'Past continuous',
   errors: [['He standing next to the machine.', 'He was standing next to the machine.', 'Không được bỏ was/were. Tiếng Việt chỉ cần “đang” nên hay quên.'], ['I was knowing the answer.', 'I knew the answer.', 'Động từ chỉ trạng thái (know, want, like, own, exist) không dùng thì tiếp diễn.']],
   note: '5 câu: bốn dạng câu và một câu về động từ trạng thái.',
   q: [
-    { t: 'mc', q: 'A third man ______ for them above the Moon.', o: [['was waiting', 'Đúng: he + was + V-ing.'], ['were waiting', 'Sai: chủ ngữ số ít (a third man) dùng was.'], ['was wait', 'Sai: sau was phải là V-ing.']], a: 0 },
+    { t: 'mc', q: 'A third man ______ for them above the Moon.', o: [['was waiting', 'Đúng: việc đang diễn ra tại một lúc trong quá khứ → was + V-ing; chủ ngữ số ít dùng was.'], ['were waiting', 'Sai: a third man là số ít → was; were dùng cho you, we, they và danh từ số nhiều.'], ['was wait', 'Sai: thì tiếp diễn cần V-ing sau was; “was wait” thiếu -ing.']], a: 0 },
     { t: 'gap', q: 'The enemy thought they ______ (win).', a: 'were winning', why: 'they + were + V-ing; win → winning (gấp đôi n).' },
     { t: 'order', a: 'What was Spencer doing when the chocolate melted?', why: 'Wh- + was + S + V-ing + when + quá khứ đơn.' },
     { t: 'error', q: 'The king was owning a lot of gold.', wrong: 'owning', fix: 'owned (The king owned…)', why: 'own là động từ trạng thái, không dùng thì tiếp diễn.', head2: 'One word makes this sentence wrong. Tap it.' },
-    { t: 'mc', q: '______ the soldiers expecting an easy war?', o: [['Were', 'Đúng: soldiers là số nhiều → Were.'], ['Was', 'Sai: chủ ngữ số nhiều.'], ['Did', 'Sai: thì tiếp diễn dùng was/were, không dùng did.']], a: 0 }
+    { t: 'mc', q: '______ the soldiers expecting an easy war?', o: [['Were', 'Đúng: câu hỏi quá khứ tiếp diễn: Was/Were + S + V-ing; the soldiers số nhiều → Were.'], ['Was', 'Sai: chủ ngữ the soldiers là số nhiều → Were.'], ['Did', 'Sai: có V-ing (expecting) thì trợ động từ phải là was/were; did đi với V nguyên mẫu (Did they expect…?).']], a: 0 }
   ] });
 
 EI.grammar({ id: 'past-simple-vs-continuous', n: 3, level: 'A2', title: 'Past simple or past continuous?', vi: 'So sánh: quá khứ đơn và quá khứ tiếp diễn', mins: 6,
@@ -52,8 +52,8 @@ EI.grammar({ id: 'past-simple-vs-continuous', n: 3, level: 'A2', title: 'Past si
   errors: [['When I was arriving, he cooked.', 'When I arrived, he was cooking.', 'Việc ngắn (arrive) ở quá khứ đơn; việc đang dở (cook) ở quá khứ tiếp diễn.'], ['While he walked, he was finding a pen.', 'While he was walking, he found a pen.', 'Sau while thường là việc dài (tiếp diễn).']],
   note: '4 câu: bài so sánh, mỗi câu buộc phải chọn giữa hai thì trong cùng một tình huống.',
   q: [
-    { t: 'mc', q: 'When Fleming came back, some mold ______ on the plate.', o: [['was growing', 'Đúng: lúc ông về, nấm mốc đang mọc dở.'], ['grew', 'Chưa đúng: “grew” sẽ nghĩa là ông về rồi nấm mới mọc.']], a: 0 },
-    { t: 'mc', q: 'Aldrin looked down and ______ a small broken thing on the floor.', o: [['saw', 'Đúng: hai việc ngắn nối tiếp nhau → cả hai ở quá khứ đơn.'], ['was seeing', 'Sai: see ở đây là việc xảy ra tức thì, và hiếm khi dùng tiếp diễn.']], a: 0 },
+    { t: 'mc', q: 'When Fleming came back, some mold ______ on the plate.', o: [['was growing', 'Đúng: việc đang diễn ra (nấm mọc dần) khi một việc ngắn xen vào (ông về) → quá khứ tiếp diễn.'], ['grew', 'Chưa đúng ở đây: hai động từ quá khứ đơn nối bằng when thường hiểu là việc này xảy ra SAU việc kia — như thể ông về rồi nấm mới mọc.'], ['is growing', 'Sai thì: câu kể quá khứ (came back), không dùng hiện tại tiếp diễn.']], a: 0 },
+    { t: 'mc', q: 'Aldrin looked down and ______ a small broken thing on the floor.', o: [['saw', 'Đúng: hai việc ngắn nối tiếp nhau (nhìn xuống rồi thấy) → cả hai ở quá khứ đơn.'], ['was seeing', 'Sai: see (nhìn thấy) là động từ chỉ nhận thức, thường không dùng tiếp diễn; và “thấy” xảy ra ngay, không kéo dài.'], ['sees', 'Sai thì: looked ở quá khứ, động từ nối bằng and cũng phải ở quá khứ.']], a: 0 },
     { t: 'gap', q: 'While Ando ______ (watch) his wife, he got an idea.', a: 'was watching', why: 'while + was/were + V-ing cho việc dài làm nền.' },
     { t: 'write', q: 'Join the two sentences with “when”: “Spencer was testing a magnetron. The chocolate melted.”', model: 'Spencer was testing a magnetron when the chocolate melted.', why: 'Nền (was testing) + when + sự kiện (melted).', okLabel: 'Mine matches', badLabel: 'Mine was different' }
   ] });
@@ -70,9 +70,9 @@ EI.grammar({ id: 'comparatives', n: 4, level: 'A2', title: 'Comparatives and sup
   errors: [['more bigger than', 'bigger than', 'Không dùng more cùng với -er.'], ['He is taller that me.', 'He is taller than me.', 'So sánh hơn đi với than, không phải that.'], ['the most big city', 'the biggest city', 'Tính từ ngắn dùng -est.']],
   note: '5 câu: ngắn/dài, bất quy tắc, và lỗi “more + -er”.',
   q: [
-    { t: 'mc', q: 'The first microwave oven was ______ a fridge.', o: [['taller than', 'Đúng: tall → taller + than.'], ['more tall than', 'Sai: tính từ một âm tiết không dùng more.'], ['tallest than', 'Sai: -est không đi với than.']], a: 0 },
+    { t: 'mc', q: 'The first microwave oven was ______ a fridge.', o: [['taller than', 'Đúng: tall (một âm tiết) → taller + than.'], ['more tall than', 'Sai: tính từ một âm tiết thêm -er, không dùng more.'], ['tallest than', 'Sai: -est là so sánh nhất (đi với the), không đi với than.']], a: 0 },
     { t: 'gap', q: 'Chicken Ramen was ______ (expensive) than fresh noodles.', a: 'more expensive', why: 'Tính từ dài: more + adj + than.' },
-    { t: 'mc', q: 'Mali was perhaps ______ producer of gold in the world.', o: [['the biggest', 'Đúng: the + adj-est; big → biggest.'], ['the bigger', 'Sai: so sánh nhất trong cả thế giới.'], ['most big', 'Sai: thiếu the và dùng sai dạng.']], a: 0 },
+    { t: 'mc', q: 'Mali was perhaps ______ producer of gold in the world.', o: [['the biggest', 'Đúng: so với cả thế giới → so sánh nhất: the + adj-est; big → biggest (gấp đôi g).'], ['the bigger', 'Sai: so sánh hơn chỉ dùng khi so hai thứ (bigger than); “in the world” là so với tất cả.'], ['most big', 'Sai: big là tính từ một âm tiết → biggest, và so sánh nhất cần the.']], a: 0 },
     { t: 'error', q: 'He understood the river more better than the enemy.', wrong: 'more', fix: '(bỏ more) better than', why: 'better đã là so sánh hơn của well/good; không thêm more.' },
     { t: 'write', q: 'Compare them with “heavy”: “The 1947 oven: 340 kg. The 1967 oven: much less.”', model: 'The 1947 oven was heavier than the 1967 oven.', why: 'heavy → heavier (y → i + er) + than.', okLabel: 'Mine matches', badLabel: 'Mine was different' }
   ] });
@@ -89,8 +89,8 @@ EI.grammar({ id: 'modals-obligation', n: 5, level: 'A2', title: 'have to, had to
   errors: [['He must to go.', 'He must go.', 'Sau must, can, could không có to.'], ['Yesterday I must work late.', 'Yesterday I had to work late.', 'must không có dạng quá khứ; dùng had to.'], ['You don’t have to smoke here. (ý: cấm)', 'You must not smoke here.', 'don’t have to = không cần; must not = cấm.']],
   note: '5 câu: had to, could not, và cặp dễ nhầm don’t have to / must not.',
   q: [
-    { t: 'mc', q: 'There was no tool, so Aldrin ______ fix the switch himself.', o: [['had to', 'Đúng: bắt buộc trong quá khứ.'], ['must', 'Sai thì: must chỉ dùng cho hiện tại/tương lai.'], ['had', 'Sai: thiếu to — had to + V.']], a: 0 },
-    { t: 'mc', q: 'The sign says “No entry”. You ______ go in.', o: [['must not', 'Đúng: cấm.'], ['do not have to', 'Sai nghĩa: “không cần vào” chứ không phải “cấm vào”.']], a: 0 },
+    { t: 'mc', q: 'There was no tool, so Aldrin ______ fix the switch himself.', o: [['had to', 'Đúng: bắt buộc trong quá khứ (vì không có dụng cụ) → had to + V.'], ['must', 'Sai thì: must không có dạng quá khứ; sự bắt buộc trong quá khứ dùng had to.'], ['had', 'Sai: thiếu to — had to + V; “had fix” không có nghĩa.']], a: 0 },
+    { t: 'mc', q: 'The sign says “No entry”. You ______ go in.', o: [['must not', 'Đúng: must not = không được phép (cấm) — đúng ý biển “No entry”.'], ['do not have to', 'Sai nghĩa: do not have to = không cần (nếu muốn vẫn được vào); biển cấm thì dùng must not.'], ['have not to', 'Sai: phủ định của have to là do not have to (và nghĩa là không cần), không nói “have not to”.']], a: 0 },
     { t: 'gap', q: 'The big ships ______ (not / can) turn back to the sea.', a: ['could not', "couldn't", 'couldn’t'], why: 'Quá khứ của cannot là could not.' },
     { t: 'error', q: 'Nobody on a ship could to see the stakes.', wrong: 'to', fix: '(bỏ to) could see', why: 'could + động từ nguyên mẫu không to.' },
     { t: 'write', q: 'Put it in the past: “He has to work every day.”', model: 'He had to work every day.', why: 'has to → had to.', okLabel: 'Mine matches', badLabel: 'Mine was different' }
@@ -108,11 +108,11 @@ EI.grammar({ id: 'passive', n: 6, level: 'A2', title: 'Passive: is made, was bui
   errors: [['The oven was invent in 1945.', 'The oven was invented in 1945.', 'Sau be phải là V3 (thường có -ed). Tiếng Việt không đổi động từ nên hay quên.'], ['The accident was happened yesterday.', 'The accident happened yesterday.', 'happen, die, arrive, appear không có bị động.'], ['It made in Vietnam.', 'It is made in Vietnam.', 'Không được bỏ be.']],
   note: '6 câu: bị động khác hẳn tiếng Việt (“bị/được”) và là cấu trúc người Việt sai nhiều nhất trong báo cáo, nên luyện đủ hiện tại, quá khứ, câu hỏi và động từ không có bị động.',
   q: [
-    { t: 'mc', q: 'The first microwave oven ______ the Radarange.', o: [['was called', 'Đúng: was + V3.'], ['called', 'Sai: như vậy nghĩa là cái lò tự gọi ai đó.'], ['was call', 'Sai: sau was phải là V3.']], a: 0 },
+    { t: 'mc', q: 'The first microwave oven ______ the Radarange.', o: [['was called', 'Đúng: cái lò ĐƯỢC người ta gọi tên (bị động) → was + V3.'], ['called', 'Sai: chủ động nghĩa là cái lò đã gọi (ai đó) là Radarange; lò là vật được đặt tên.'], ['was call', 'Sai: sau was trong câu bị động phải là V3 (called).']], a: 0 },
     { t: 'gap', q: 'Cup Noodles ______ (make) in about 80 countries today.', a: 'are made', why: 'Hiện tại, chủ ngữ số nhiều: are + made.' },
     { t: 'error', q: 'The patient was die when the drug ran out.', wrong: 'was', fix: '(bỏ was) The patient died', why: 'die không có bị động.' },
     { t: 'order', a: 'When was the microwave oven invented?', why: 'Wh- + was + S + V3?' },
-    { t: 'mc', q: 'Penicillin ______ by Alexander Fleming in 1928.', o: [['was discovered', 'Đúng: bị động quá khứ + by + người làm.'], ['discovered', 'Sai: penicillin không tự khám phá.'], ['is discover', 'Sai thì và sai dạng.']], a: 0 },
+    { t: 'mc', q: 'Penicillin ______ by Alexander Fleming in 1928.', o: [['was discovered', 'Đúng: bị động quá khứ (was + V3) + by + người làm.'], ['discovered', 'Sai: chủ động nghĩa là penicillin tự khám phá (cái gì); có “by Alexander Fleming” → bị động.'], ['has been discovered', 'Sai thì: có năm cụ thể 1928 → quá khứ đơn; hiện tại hoàn thành không đi với mốc thời gian đã qua.']], a: 0 },
     { t: 'write', q: 'Make it passive: “Ngô Quyền’s men destroyed most of the ships.”', model: 'Most of the ships were destroyed by Ngô Quyền’s men.', why: 'Tân ngữ lên làm chủ ngữ + were + V3 + by…', okLabel: 'Mine matches', badLabel: 'Mine was different' }
   ] });
 
@@ -127,8 +127,8 @@ EI.grammar({ id: 'relative-clauses', n: 7, level: 'A2', title: 'who, which, that
   errors: [['The man who he invented it was an engineer.', 'The man who invented it was an engineer.', 'who đã là chủ ngữ; không thêm he.'], ['The machine who makes the parts…', 'The machine that makes the parts…', 'who chỉ dùng cho người.'], ['This is the report that I wrote it.', 'This is the report that I wrote.', 'that đã thay cho it; không lặp lại.']],
   note: '5 câu: who/that, bỏ đại từ lặp, và ghép câu.',
   q: [
-    { t: 'mc', q: 'An octopus is an animal ______ has three hearts.', o: [['that', 'Đúng: that thay cho vật/con vật.'], ['who', 'Sai: who dùng cho người.'], ['it', 'Sai: it không nối được hai mệnh đề.']], a: 0 },
-    { t: 'mc', q: 'The researchers ______ developed penicillin worked at Oxford.', o: [['who', 'Đúng: researchers là người.'], ['which', 'Sai: which dùng cho vật.']], a: 0 },
+    { t: 'mc', q: 'An octopus is an animal ______ has three hearts.', o: [['that', 'Đúng: that (hoặc which) thay cho vật, con vật, và làm chủ ngữ cho has.'], ['who', 'Sai: who dùng cho người; bạch tuộc là con vật, dù rất thông minh.'], ['it', 'Sai: it là đại từ, không nối được hai mệnh đề; câu sẽ có hai mệnh đề chính đứng cạnh nhau.']], a: 0 },
+    { t: 'mc', q: 'The researchers ______ developed penicillin worked at Oxford.', o: [['who', 'Đúng: researchers là người, làm chủ ngữ cho developed → who.'], ['which', 'Sai: which dùng cho vật, con vật; các nhà nghiên cứu là người.'], ['whose', 'Sai: whose + danh từ chỉ sở hữu (whose lab…); ở đây cần chủ ngữ cho developed.']], a: 0 },
     { t: 'error', q: 'Aldrin used the pen that he kept it in his pocket.', wrong: 'it', fix: '(bỏ it)', why: 'that đã thay cho the pen.' },
     { t: 'order', a: 'Ando watched the people who were waiting for noodles.', why: 'danh từ chỉ người + who + động từ.' },
     { t: 'write', q: 'Join with “that”: “This is the switch. It sent power to the engine.”', model: 'This is the switch that sent power to the engine.', why: 'that thay cho It.', okLabel: 'Mine matches', badLabel: 'Mine was different' }
@@ -145,7 +145,7 @@ EI.grammar({ id: 'purpose-and-patterns', n: 8, level: 'A2', title: 'to + verb: w
   errors: [['I use a caliper for measure the part.', 'I use a caliper to measure the part.', '“để” + động từ = to + V, không phải for + V.'], ['He went there for to sell noodles.', 'He went there to sell noodles.', 'Không ghép for với to.']],
   note: '4 câu: chủ điểm hẹp, một quy tắc chính và một lỗi rất phổ biến (for + V).',
   q: [
-    { t: 'mc', q: 'We use a height gauge ______ the part.', o: [['to measure', 'Đúng: to + V chỉ mục đích.'], ['for measure', 'Sai: không dùng for + V nguyên mẫu.'], ['for to measure', 'Sai: không ghép for với to.']], a: 0 },
+    { t: 'mc', q: 'We use a height gauge ______ the part.', o: [['to measure', 'Đúng: to + V chỉ mục đích (dùng thước đo cao ĐỂ đo chi tiết).'], ['for measure', 'Sai: sau for phải là danh từ hoặc V-ing (for measuring); lỗi hay gặp vì tiếng Việt nói “để đo”.'], ['for to measure', 'Sai: không ghép for với to; chỉ mục đích dùng to + V.']], a: 0 },
     { t: 'gap', q: 'Ngô Quyền sent small boats ______ (attack) the enemy.', a: 'to attack', why: 'to + V: để tấn công.' },
     { t: 'error', q: 'He built a shed for work on his idea.', wrong: 'for', fix: 'to', why: 'work ở đây là động từ → to work on his idea.' },
     { t: 'write', q: 'Answer with “to + verb”: “Why did Spencer put popcorn near the magnetron?” (He wanted to test his idea.)', model: 'He put popcorn near the magnetron to test his idea.', why: 'to + V trả lời câu hỏi Why… (để làm gì).', okLabel: 'Mine matches', badLabel: 'Mine was different' }
@@ -163,9 +163,9 @@ EI.grammar({ id: 'linking', n: 9, level: 'A2', title: 'because, so, but, althoug
   errors: [['Because it was late, so I went home.', 'Because it was late, I went home. / It was late, so I went home.', 'Không dùng because và so trong cùng một câu.'], ['Although it was expensive, but people bought it.', 'Although it was expensive, people bought it.', 'Không dùng although cùng với but.']],
   note: '4 câu, tập trung vào hai lỗi “vì… nên” và “tuy… nhưng”.',
   q: [
-    { t: 'mc', q: 'An octopus has no bones, ______ it can go through a small gap.', o: [['so', 'Đúng: vế sau là kết quả.'], ['because', 'Sai: vế sau không phải nguyên nhân.'], ['although', 'Sai nghĩa: không có sự đối lập.']], a: 0 },
+    { t: 'mc', q: 'An octopus has no bones, ______ it can go through a small gap.', o: [['so', 'Đúng: vế sau là KẾT QUẢ của vế trước (không có xương → chui lọt khe nhỏ).'], ['because', 'Sai: because đứng trước NGUYÊN NHÂN; “it can go through a small gap” là kết quả.'], ['although', 'Sai nghĩa: although nối hai ý trái ngược; ở đây hai ý cùng chiều.']], a: 0 },
     { t: 'error', q: 'Because the drug ran out, so the patient died.', wrong: 'so', fix: '(bỏ so)', why: 'Đã có because thì không dùng so.' },
-    { t: 'mc', q: '______ Fleming discovered penicillin, he could not make it into a medicine.', o: [['Although', 'Đúng: hai ý đối lập, although đứng đầu câu.'], ['Because', 'Sai nghĩa.'], ['But', 'Sai: but không đứng đầu để nối kiểu này.']], a: 0 },
+    { t: 'mc', q: '______ Fleming discovered penicillin, he could not make it into a medicine.', o: [['Although', 'Đúng: hai ý trái ngược (khám phá ra nhưng không làm thành thuốc); although đứng đầu mệnh đề phụ.'], ['Because', 'Sai nghĩa: việc khám phá không phải nguyên nhân khiến ông không làm được thuốc.'], ['But', 'Sai: but nối hai mệnh đề ở GIỮA câu (…, but he could not…); không đặt but ở đầu mệnh đề phụ rồi thêm dấu phẩy như vậy.']], a: 0 },
     { t: 'write', q: 'Join with “because”: “Aldrin used a pen. A finger was not safe.”', model: 'Aldrin used a pen because a finger was not safe.', why: 'kết quả + because + nguyên nhân.', okLabel: 'Mine matches', badLabel: 'Mine was different' }
   ] });
 
@@ -181,12 +181,12 @@ EI.grammar({ id: 'present-perfect', n: 10, level: 'A2', title: 'Present perfect'
   errors: [['I have seen him yesterday.', 'I saw him yesterday.', 'Có mốc thời gian quá khứ cụ thể (yesterday, in 2020) thì dùng quá khứ đơn.'], ['I work here since 2022.', 'I have worked here since 2022.', 'Việc kéo dài từ quá khứ đến nay: hiện tại hoàn thành, không dùng hiện tại đơn.'], ['He have finished.', 'He has finished.', 'he/she/it + has.']],
   note: '7 câu: bốn dạng câu, for/since, V3 bất quy tắc và ever/never/yet.',
   q: [
-    { t: 'mc', q: 'People ______ 50 billion cups of these noodles.', o: [['have bought', 'Đúng: tính đến nay, không nêu thời điểm.'], ['has bought', 'Sai: people là số nhiều.'], ['have buy', 'Sai: cần V3 (bought).']], a: 0 },
+    { t: 'mc', q: 'People ______ 50 billion cups of these noodles.', o: [['have bought', 'Đúng: tính đến nay, không nêu thời điểm → hiện tại hoàn thành; people số nhiều → have.'], ['has bought', 'Sai: people là danh từ số nhiều → have.'], ['have buy', 'Sai: sau have cần V3 (bought).']], a: 0 },
     { t: 'gap', q: 'I ______ (never / see) an octopus in the wild.', a: 'have never seen', why: 'have + never + V3; see – saw – seen.' },
-    { t: 'mc', q: 'I have worked here ______ three years.', o: [['for', 'Đúng: for + khoảng thời gian.'], ['since', 'Sai: since + mốc thời gian (since 2023).'], ['in', 'Sai giới từ.']], a: 0 },
+    { t: 'mc', q: 'I have worked here ______ three years.', o: [['for', 'Đúng: for + KHOẢNG thời gian (three years).'], ['since', 'Sai: since + MỐC thời gian (since 2023, since I was 20); three years là một khoảng.'], ['in', 'Sai: “in three years” thường nghĩa là ba năm nữa; kéo dài đến nay dùng for.']], a: 0 },
     { t: 'order', a: 'Have you finished the report yet?', why: 'Have + S + V3 … yet? (yet đứng cuối câu hỏi và câu phủ định).' },
     { t: 'error', q: 'She has send the samples already.', wrong: 'send', fix: 'sent', why: 'send – sent – sent.' },
-    { t: 'mc', q: '______ you ever visited Japan?', o: [['Have', 'Đúng: Have + you + V3.'], ['Did', 'Sai: Did + V nguyên mẫu (Did you ever visit…).'], ['Are', 'Sai trợ động từ.']], a: 0 },
+    { t: 'mc', q: '______ you ever visited Japan?', o: [['Have', 'Đúng: câu hỏi hiện tại hoàn thành: Have + you + (ever) + V3 (visited).'], ['Did', 'Sai: Did đi với V nguyên mẫu (Did you ever visit…?); ở đây động từ là V3 visited.'], ['Are', 'Sai: “Are you visited” là bị động — bạn được (ai đó) đến thăm; hỏi kinh nghiệm dùng Have.']], a: 0 },
     { t: 'write', q: 'Say it in English: “Tôi đã học tiếng Anh được hai năm.” (and you still study it)', model: 'I have studied English for two years.', why: 'Việc còn tiếp tục đến nay: have + V3 + for.', okLabel: 'Mine matches', badLabel: 'Mine was different' }
   ] });
 
@@ -201,8 +201,8 @@ EI.grammar({ id: 'present-perfect-vs-past-simple', n: 11, level: 'A2', title: 'P
   errors: [['When have you arrived?', 'When did you arrive?', 'Hỏi When → quá khứ đơn.'], ['Fleming has discovered penicillin in 1928.', 'Fleming discovered penicillin in 1928.', 'Có năm cụ thể → quá khứ đơn.']],
   note: '4 câu: bài so sánh, mỗi câu là một lựa chọn giữa hai thì.',
   q: [
-    { t: 'mc', q: 'Inky ______ from the aquarium in 2016.', o: [['escaped', 'Đúng: có mốc 2016 → quá khứ đơn.'], ['has escaped', 'Sai: không dùng hiện tại hoàn thành với năm cụ thể.']], a: 0 },
-    { t: 'mc', q: 'I ______ this story before. I know how it ends.', o: [['have read', 'Đúng: kinh nghiệm, không nói lúc nào, liên quan đến hiện tại.'], ['read it yesterday before', 'Sai: câu gốc không có mốc thời gian.']], a: 0 },
+    { t: 'mc', q: 'Inky ______ from the aquarium in 2016.', o: [['escaped', 'Đúng: có mốc năm cụ thể (2016) → quá khứ đơn.'], ['has escaped', 'Sai: hiện tại hoàn thành không đi với thời điểm quá khứ cụ thể (in 2016).'], ['escapes', 'Sai thì: chuyện năm 2016 đã qua.']], a: 0 },
+    { t: 'mc', q: 'I ______ this story before. I know how it ends.', o: [['have read', 'Đúng: kinh nghiệm tính đến nay, không nói lúc nào, và kết quả còn ở hiện tại (biết kết thúc).'], ['am reading', 'Sai nghĩa: đang đọc thì chưa chắc biết kết thúc; “before” cho thấy việc đọc đã xảy ra rồi.'], ['had read', 'Sai: quá khứ hoàn thành cần một mốc quá khứ; câu sau ở hiện tại (I know) → hiện tại hoàn thành.']], a: 0 },
     { t: 'error', q: 'When has Mansa Musa visited Cairo?', wrong: 'has', fix: 'did (When did Mansa Musa visit Cairo?)', why: 'Hỏi When → did + V.' },
     { t: 'gap', q: 'She ______ (work) here since 2022, and she still does.', a: 'has worked', why: 'Còn tiếp tục đến nay + since → hiện tại hoàn thành.' }
   ] });
@@ -218,8 +218,8 @@ EI.grammar({ id: 'will-vs-going-to', n: 12, level: 'A2', title: 'will or be goin
   errors: [['I will to call you.', 'I will call you.', 'Sau will không có to.'], ['I going to buy it.', 'I am going to buy it.', 'Không được bỏ am/is/are.'], ['(đã lên kế hoạch) I will visit my parents this weekend.', 'I am going to visit my parents this weekend.', 'Kế hoạch có sẵn → be going to.']],
   note: '5 câu: phân biệt kế hoạch / quyết định tức thì / dự đoán, và hai lỗi hình thức.',
   q: [
-    { t: 'mc', q: 'A: This box is heavy. B: Wait, I ______ you.', o: [['will help', 'Đúng: quyết định ngay lúc nói, đề nghị giúp.'], ['am going to help', 'Chưa tự nhiên: B không có kế hoạch từ trước.']], a: 0 },
-    { t: 'mc', q: 'We already have the tickets. We ______ to Đà Nẵng in July.', o: [['are going to fly', 'Đúng: kế hoạch đã có.'], ['will fly', 'Chưa đúng: không phải quyết định tức thì.']], a: 0 },
+    { t: 'mc', q: 'A: This box is heavy. B: Wait, I ______ you.', o: [['will help', 'Đúng: quyết định ngay lúc nói, lời đề nghị giúp → will.'], ['am going to help', 'Chưa đúng ở đây: be going to dùng cho kế hoạch đã có từ trước; B vừa mới nghĩ ra khi thấy hộp nặng.'], ['help', 'Sai: hiện tại đơn không dùng để đề nghị giúp ngay; “Wait, I help you” sai.']], a: 0 },
+    { t: 'mc', q: 'We already have the tickets. We ______ to Đà Nẵng in July.', o: [['are going to fly', 'Đúng: kế hoạch đã có (vé đã mua) → be going to + V; We đi với are.'], ['is going to fly', 'Sai: chủ ngữ We đi với are, không dùng is.'], ['going to fly', 'Sai: thiếu be — phải là are going to fly.']], a: 0 },
     { t: 'error', q: 'She going to start a new job next month.', wrong: 'going', fix: 'is going', why: 'Thiếu be: She is going to start…' },
     { t: 'gap', q: 'I think the new mold ______ (work) well.', a: ['will work', "'ll work", '’ll work'], why: 'Dự đoán chung với I think → will.' },
     { t: 'order', a: 'What are you going to do after work?', why: 'Wh- + are + you + going to + V?' }
@@ -236,9 +236,9 @@ EI.grammar({ id: 'first-conditional', n: 13, level: 'A2', title: 'if / when + pr
   errors: [['If it will rain, I will stay home.', 'If it rains, I will stay home.', 'Không dùng will trong mệnh đề if.'], ['When I will arrive, I will call you.', 'When I arrive, I will call you.', 'Sau when (tương lai) dùng hiện tại đơn.']],
   note: '4 câu: một quy tắc chính (không dùng will sau if/when) và phân biệt if / when.',
   q: [
-    { t: 'mc', q: 'If the part ______ the test, we will check the mold.', o: [['fails', 'Đúng: mệnh đề if dùng hiện tại đơn.'], ['will fail', 'Sai: không dùng will sau if.'], ['failed', 'Sai thì: đang nói về tương lai.']], a: 0 },
+    { t: 'mc', q: 'If the part ______ the test, we will check the mold.', o: [['fails', 'Đúng: điều kiện loại 1 — vế If dùng hiện tại đơn (the part → fails), vế chính dùng will.'], ['will fail', 'Sai: không dùng will trong vế If, dù nói về tương lai.'], ['failed', 'Sai thì: failed là quá khứ (hoặc điều kiện loại 2); vế chính will check cho thấy đây là loại 1.']], a: 0 },
     { t: 'error', q: 'I will tell you when the customer will reply.', wrong: 'will', fix: '(bỏ will thứ hai) when the customer replies', why: 'Sau when dùng hiện tại đơn. (Chạm vào “will” thứ hai.)', head2: 'One “will” is wrong. Tap the wrong one.' },
-    { t: 'mc', q: 'I am sure he is coming. ______ he arrives, we will start.', o: [['When', 'Đúng: chắc chắn sẽ xảy ra → when.'], ['If', 'Chưa đúng: if dùng khi không chắc.']], a: 0 },
+    { t: 'mc', q: 'I am sure he is coming. ______ he arrives, we will start.', o: [['When', 'Đúng: when dùng cho việc chắc chắn sẽ xảy ra (“I am sure he is coming”).'], ['If', 'Chưa đúng ở đây: if dùng khi không chắc có xảy ra hay không; câu trước nói rõ là chắc chắn.'], ['Until', 'Sai nghĩa: until = cho đến khi; bắt đầu khi anh ấy đến, không phải “cho đến khi” anh ấy đến.']], a: 0 },
     { t: 'write', q: 'Finish it in your own way: “If I study English every day, …”', model: 'If I study English every day, I will understand my customers better.', why: 'Mệnh đề chính: will + V.', okLabel: 'I used will + verb', badLabel: 'I was not sure' }
   ] });
 
@@ -254,12 +254,12 @@ EI.grammar({ id: 'articles', n: 14, level: 'A2', title: 'a / an, the, or nothing
   errors: [['He is engineer.', 'He is an engineer.', 'Nghề nghiệp số ít cần a/an.'], ['I measured part with caliper.', 'I measured the part with a caliper.', 'Danh từ đếm được số ít không đứng một mình.'], ['The gold is expensive.', 'Gold is expensive.', 'Nói chung về một chất → không dùng the.'], ['a hour / an university', 'an hour / a university', 'Chọn theo âm đầu: hour bắt đầu bằng âm /aʊ/, university bằng âm /j/.']],
   note: '7 câu — nhiều hơn các bài khác, vì đây là điểm người Việt sai nhiều nhất và có nhiều trường hợp dùng khác nhau.',
   q: [
-    { t: 'mc', q: 'Percy Spencer was ______ engineer.', o: [['an', 'Đúng: nghề nghiệp + âm nguyên âm đầu.'], ['a', 'Sai: engineer bắt đầu bằng âm /e/.'], ['(nothing)', 'Sai: danh từ đếm được số ít cần mạo từ.']], a: 0 },
-    { t: 'mc', q: 'Two men landed on ______ Moon in 1969.', o: [['the', 'Đúng: chỉ có một.'], ['a', 'Sai: không phải “một mặt trăng nào đó”.'], ['(nothing)', 'Sai: the Moon luôn có the.']], a: 0 },
-    { t: 'mc', q: '______ octopuses are very intelligent.', o: [['(nothing)', 'Đúng: nói chung về cả loài, danh từ số nhiều.'], ['The', 'Sai: “the octopuses” là những con cụ thể đã nhắc.'], ['An', 'Sai: an không đi với số nhiều.']], a: 0 },
+    { t: 'mc', q: 'Percy Spencer was ______ engineer.', o: [['an', 'Đúng: nói nghề nghiệp cần a/an; engineer bắt đầu bằng ÂM nguyên âm /e/ → an.'], ['a', 'Sai: chọn a hay an theo âm đầu; engineer đọc bắt đầu bằng nguyên âm → an.'], ['(nothing)', 'Sai: nói nghề nghiệp với danh từ số ít phải có a/an; tiếng Việt nói “là kỹ sư” nên dễ bỏ.']], a: 0 },
+    { t: 'mc', q: 'Two men landed on ______ Moon in 1969.', o: [['the', 'Đúng: Mặt Trăng của Trái Đất chỉ có một → the Moon.'], ['a', 'Sai: “a moon” là một mặt trăng nào đó (như của sao Mộc); ở đây là Mặt Trăng ai cũng biết.'], ['(nothing)', 'Sai: Moon (Mặt Trăng của Trái Đất) luôn đi với the.']], a: 0 },
+    { t: 'mc', q: '______ octopuses are very intelligent.', o: [['(nothing)', 'Đúng: nói chung về cả loài bằng danh từ số nhiều → không dùng mạo từ.'], ['The', 'Sai nghĩa: “The octopuses” là những con cụ thể đã nhắc (như mấy con trong bể này), không phải cả loài.'], ['An', 'Sai: an chỉ đi với danh từ đếm được số ít; octopuses là số nhiều.']], a: 0 },
     { t: 'gap', q: 'Aldrin saw ___ small broken thing on the floor. ___ thing was the end of a switch. (two words, with a space)', a: ['a the', 'a, the', 'a The'], why: 'Lần đầu: a. Nhắc lại: the.' },
     { t: 'error', q: 'I checked height of the part with a gauge.', wrong: 'height', fix: 'the height', why: 'Có “of the part” xác định → the height of the part. (Chạm vào từ thiếu mạo từ phía trước.)', head2: 'One noun is missing its article. Tap that noun.' },
-    { t: 'mc', q: 'We will send ______ FAI report tomorrow. (the customer does not know which one yet)', o: [['an', 'Đúng: F đọc là /ef/, bắt đầu bằng âm nguyên âm.'], ['a', 'Sai: chọn theo âm, không theo chữ cái.'], ['the', 'Chưa đúng: người nghe chưa biết báo cáo nào.']], a: 0 },
+    { t: 'mc', q: 'We will send ______ FAI report tomorrow. (the customer does not know which one yet)', o: [['an', 'Đúng: nhắc lần đầu (khách chưa biết báo cáo nào) và F đọc là /ef/ — bắt đầu bằng âm nguyên âm → an.'], ['a', 'Sai: chọn a/an theo ÂM, không theo chữ cái; F đọc là /ef/ nên dùng an.'], ['the', 'Chưa đúng ở đây: the dùng khi người nghe đã biết báo cáo nào; ghi chú nói khách chưa biết.']], a: 0 },
     { t: 'write', q: 'Say it in English: “Vàng là một kim loại.”', model: 'Gold is a metal.', why: 'Gold nói chung: không mạo từ. a metal: một loại kim loại.', okLabel: 'Mine matches', badLabel: 'Mine was different' }
   ] });
 
@@ -275,11 +275,11 @@ EI.grammar({ id: 'quantifiers', n: 15, level: 'A2', title: 'much, many, a few, a
   errors: [['many equipments', 'a lot of equipment', 'equipment không đếm được: không thêm s, không dùng many.'], ['How much parts did you measure?', 'How many parts did you measure?', 'parts đếm được → How many.'], ['I have few time.', 'I have little time.', 'time (thời gian) không đếm được → little.'], ['a large amount of people', 'a large number of people', 'amount cho không đếm được; number cho đếm được.']],
   note: '6 câu: phải nắm cả quy tắc lẫn danh sách danh từ không đếm được hay gặp trong công việc (equipment, information, evidence, research).',
   q: [
-    { t: 'mc', q: 'How ______ samples do we need for the FAI report?', o: [['many', 'Đúng: samples đếm được.'], ['much', 'Sai: much dùng cho không đếm được.']], a: 0 },
-    { t: 'mc', q: 'There is not ______ evidence from people.', o: [['much', 'Đúng: evidence không đếm được.'], ['many', 'Sai: many cần danh từ số nhiều.'], ['a few', 'Sai: a few đi với danh từ đếm được.']], a: 0 },
+    { t: 'mc', q: 'How ______ samples do we need for the FAI report?', o: [['many', 'Đúng: samples đếm được, số nhiều → How many.'], ['much', 'Sai: How much dùng cho danh từ không đếm được (How much time / money).'], ['lot', 'Sai: không có “How lot”; a lot of không đứng sau How.']], a: 0 },
+    { t: 'mc', q: 'There is not ______ evidence from people.', o: [['much', 'Đúng: evidence không đếm được; câu phủ định → not much.'], ['many', 'Sai: many đi với danh từ đếm được số nhiều (many samples); evidence không đếm được.'], ['a few', 'Sai: a few đi với danh từ đếm được số nhiều (a few parts).']], a: 0 },
     { t: 'error', q: 'The lab bought two new equipments last month.', wrong: 'equipments', fix: 'pieces of equipment', why: 'equipment không đếm được → two new pieces of equipment.' },
     { t: 'gap', q: 'A large ______ of people traveled with Mansa Musa. (amount / number)', a: 'number', why: 'people đếm được → a number of.' },
-    { t: 'mc', q: 'I have ______ time before the meeting, so we can talk for ten minutes.', o: [['a little', 'Đúng: một ít, đủ để làm gì đó.'], ['little', 'Sai nghĩa: little = gần như không có.'], ['a few', 'Sai: time không đếm được.']], a: 0 },
+    { t: 'mc', q: 'I have ______ time before the meeting, so we can talk for ten minutes.', o: [['a little', 'Đúng: a little + danh từ không đếm được = một ít (đủ dùng) — đủ để nói chuyện mười phút.'], ['little', 'Sai nghĩa: little (không có a) = rất ít, gần như không có — mâu thuẫn với vế sau “so we can talk”.'], ['a few', 'Sai: a few đi với danh từ đếm được (a few minutes); time ở đây không đếm được.']], a: 0 },
     { t: 'write', q: 'Correct it: “She gave me many informations.”', model: 'She gave me a lot of information.', why: 'information không đếm được: không thêm s, không dùng many.', okLabel: 'Mine matches', badLabel: 'Mine was different' }
   ] });
 
@@ -296,8 +296,8 @@ EI.grammar({ id: 'present-simple-vs-continuous', n: 0, level: 'A2', title: 'Pres
   errors: [['He work in a factory.', 'He works in a factory.', 'Ngôi thứ ba số ít phải thêm -s. Tiếng Việt không chia động từ nên đây là lỗi rất phổ biến.'], ['I am knowing the answer.', 'I know the answer.', 'know là động từ trạng thái.'], ['She is work now.', 'She is working now.', 'Sau be phải là V-ing.'], ['Does he works here?', 'Does he work here?', 'Sau does, động từ về nguyên mẫu.']],
   note: '6 câu: hai thì, ngôi thứ ba số ít, câu hỏi với does và động từ trạng thái.',
   q: [
-    { t: 'mc', q: 'An octopus ______ three hearts.', o: [['has', 'Đúng: sự thật, hiện tại đơn; have → has với it.'], ['is having', 'Sai: have (sở hữu) là động từ trạng thái.'], ['have', 'Sai: an octopus là ngôi thứ ba số ít.']], a: 0 },
-    { t: 'mc', q: 'Be quiet, please. I ______ the part right now.', o: [['am measuring', 'Đúng: việc đang diễn ra lúc nói.'], ['measure', 'Chưa đúng: “right now” cần thì tiếp diễn.']], a: 0 },
+    { t: 'mc', q: 'An octopus ______ three hearts.', o: [['has', 'Đúng: sự thật luôn đúng → hiện tại đơn; chủ ngữ ngôi ba số ít → has.'], ['is having', 'Sai: have với nghĩa sở hữu là động từ trạng thái, không dùng tiếp diễn.'], ['have', 'Sai: an octopus là ngôi thứ ba số ít → has.']], a: 0 },
+    { t: 'mc', q: 'Be quiet, please. I ______ the part right now.', o: [['am measuring', 'Đúng: việc đang diễn ra ngay lúc nói (right now) → hiện tại tiếp diễn.'], ['measure', 'Chưa đúng ở đây: hiện tại đơn nói thói quen (I measure parts every day); “right now” cần tiếp diễn.'], ['am measure', 'Sai: sau am phải là V-ing (measuring).']], a: 0 },
     { t: 'gap', q: 'The line ______ (produce) two thousand parts every day.', a: 'produces', why: 'Việc lặp lại + chủ ngữ số ít → thêm -s.' },
     { t: 'error', q: 'Does the water rises every day?', wrong: 'rises', fix: 'rise', why: 'Sau does, động từ về nguyên mẫu.' },
     { t: 'order', a: 'What are you doing at the moment?', why: 'Wh- + are + you + V-ing?' },

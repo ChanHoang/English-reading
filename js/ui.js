@@ -4,6 +4,9 @@
 const EI = window.EI, A = {}, $ = s => document.querySelector(s);
 let runs = new Map();   // story practice: every item of the current part is open at once (sig -> item state)
 let S, run = null, sh = null, viOpen = false, openVi = new Set(), toastT = 0, lp = { t: 0, fired: false };
+let vmOpen = new Set(), lastLv = null;   // word list: words whose Vietnamese meaning is open (this visit only); the level last shown
+/* one button that stays in the same place: the meaning opens beside it, the same button closes it */
+const viT = (open, vi, a, w) => '<div class="vit"><button class="btn small' + (open ? ' on' : '') + '" data-a="' + a + '"' + (w ? ' data-w="' + esc(w) + '"' : '') + ' aria-pressed="' + open + '">' + ic(open ? 'eyeoff' : 'eye') + (open ? 'Hide meaning' : 'Show meaning') + '</button>' + (open ? '<b class="vim">' + esc(vi) + '</b>' : '') + '</div>';
 const P = { on: false, i: 0, seq: 0, rid: null };                 // reading player
 const rec = { mr: null, chunks: [], url: null, on: false, err: '' }; // speak-along recorder (memory only)
 const LV = ['A2', 'B1', 'B2', 'C1'];
@@ -14,6 +17,7 @@ const ICON = {
   prev: '<path d="M18 6l-8 6 8 6zM7 6v12"/>', next: '<path d="M6 6l8 6-8 6zM17 6v12"/>',
   again: '<path d="M4 4v6h6"/><path d="M4.5 10a8 8 0 1 1-.5 4"/>',
   eye: '<path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/>',
+  eyeoff: '<path d="M3 3l18 18"/><path d="M10.6 5.1A9.7 9.7 0 0 1 12 5c6 0 10 7 10 7a17 17 0 0 1-3.2 3.9M6.3 6.3C3.6 8.1 2 12 2 12s4 7 10 7a9.6 9.6 0 0 0 5.7-1.9"/><path d="M9.9 9.9a3 3 0 0 0 4.2 4.2"/>',
   mic: '<rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/>',
   star: '<path d="M12 3l2.7 5.6 6.1.8-4.5 4.3 1.1 6.1L12 16.9 6.6 19.8l1.1-6.1L3.2 9.4l6.1-.8z"/>',
   x: '<path d="M6 6l12 12M18 6L6 18"/>', check: '<path d="M5 12l5 5 9-10"/>', back: '<path d="M15 5l-7 7 7 7"/>', fwd: '<path d="M9 5l7 7-7 7"/>',
@@ -47,9 +51,11 @@ window.addEventListener('popstate', e => {
   const st = e.state && e.state.ei; if (!st || !S) return;
   NAVI = e.state.i || 0; NAVMAX = Math.max(NAVMAX, NAVI);
   EI.audio.stop(); P.on = false; closeSheet(); run = null; runs.clear(); viOpen = false; openVi = new Set();
+  const same = S.cur.v === st.cur.v, l0 = $('.list'), lt = l0 ? l0.scrollTop : 0;
   S.cur = st.cur; const L = S.cur.v === 'reading' && S.cur.rid && S.lessons[S.cur.rid];
   if (L && st.stage) { let g = st.stage; if (['practice', 'write', 'done'].includes(g)) g = L.pst || g; if (g === 'predict' && L.guess != null) g = 'learn'; L.stage = g; }
   EI.save(); render(); const m = $('#main'); if (m && !(L && L.stage === 'read' && L.scroll)) m.scrollTop = 0;
+  const l2 = $('.list'); if (same && l2) l2.scrollTop = lt;
 });
 
 /* ================= shell ================= */
@@ -58,9 +64,10 @@ function applyTheme() {
   if (st.theme === 'system') root.removeAttribute('data-theme'); else root.setAttribute('data-theme', st.theme);
   root.style.setProperty('--fs', st.fs);
 }
-function go(cur) {
+function go(cur) {   // same section (a word, a lesson or a story picked from the list): the list stays where it was
+  const same = S.cur && S.cur.v === cur.v, l0 = $('.list'), lt = l0 ? l0.scrollTop : 0;
   EI.audio.stop(); P.on = false; closeSheet(); keyCap = null; S.cur = cur; run = null; runs.clear(); viOpen = false; openVi = new Set();
-  EI.save(); render(); const m = $('#main'); if (m) m.scrollTop = 0; pushNav();
+  EI.save(); render(); const m = $('#main'); if (m) m.scrollTop = 0; const l2 = $('.list'); if (same && l2) l2.scrollTop = lt; pushNav();
 }
 function keep() { /* re-render without losing the scroll position (show/hide meaning, Known…) */
   const m = $('#main'), l = $('.list'), mt = m ? m.scrollTop : 0, lt = l ? l.scrollTop : 0;
@@ -76,18 +83,18 @@ function render() {
   const focus = v === 'reading' && c.rid && c.focus;
   const canBack = (v === 'vocab' && c.w) || (v === 'grammar' && c.gid) || (v === 'reading' && c.rid) || v === 'scan' || v === 'settings' || v === 'info';
   $('#app').innerHTML =
-    '<div class="shell' + (noList ? ' no-list' : '') + (detail ? ' detail' : '') + (focus ? ' focus' : '') + '">' +
+    '<div class="shell s-' + sec + (noList ? ' no-list' : '') + (detail ? ' detail' : '') + (focus ? ' focus' : '') + '">' +
     '<header class="topbar">' + (canBack ? '<button class="btn ghost small" data-a="back" aria-label="Up to the list">List</button>' : '') +
       '<div class="brand">English <span>Improve</span></div>' + navHTML() +
       '<button class="btn icon ghost" data-a="go" data-v="settings" aria-label="Settings">' + ic('gear') + '</button>' +
       '<button class="btn icon ghost" data-a="go" data-v="info" aria-label="Info">' + ic('info') + '</button><span class="ver" title="Version of the app">' + EI.VERSION + '</span></header>' +
-    '<nav class="rail" aria-label="Main menu"><div class="brand">English <span>Improve</span></div>' + navHTML() +
+    '<nav class="rail" aria-label="Main menu"><div class="brand">English <span>Improve</span></div>' +
       NAV.map(([k, t]) => '<button class="nav' + (sec === k ? ' on' : '') + '" data-a="go" data-v="' + k + '">' + ic(k) + t + '</button>').join('') +
       '<div class="grow"></div>' +
       '<button class="nav' + (v === 'settings' ? ' on' : '') + '" data-a="go" data-v="settings">' + ic('gear') + 'Settings</button>' +
       '<button class="nav' + (v === 'info' ? ' on' : '') + '" data-a="go" data-v="info">' + ic('info') + 'Info<span class="ver">' + EI.VERSION + '</span></button></nav>' +
-    '<aside class="list">' + (noList ? '' : listHTML()) + '</aside>' +
-    '<main class="main" id="main">' + mainHTML() + '</main>' +
+    '<aside class="list" aria-label="List">' + (noList ? '' : '<div class="lbar desk-only">' + navHTML() + '</div>' + listHTML()) + '</aside>' +
+    '<main class="main" id="main">' + (noList ? '<div class="lbar mbar desk-only">' + navHTML() + '</div>' : '') + mainHTML() + '</main>' +
     '<nav class="tabs" aria-label="Main menu">' + NAV.map(([k, t]) => '<button class="tab' + (sec === k ? ' on' : '') + '" data-a="go" data-v="' + k + '">' + ic(k) + t + '</button>').join('') + '</nav></div>';
   const L = v === 'reading' && c.rid && S.lessons[c.rid];
   if (L && L.stage === 'read') { const m = $('#main'); if (L.scroll) m.scrollTop = L.scroll; m.onscroll = () => { L.scroll = m.scrollTop; }; paintPlayer(); if (sh) drawSheet(); }
@@ -99,12 +106,11 @@ function listHTML() {
   if (v === 'grammar') return lGrammar();
   if (v === 'reading') return lReading();
   const jump = (id, t) => '<button class="li" data-a="jump" data-id="' + id + '"><span class="t">' + t + '</span></button>';
-  if (v === 'today') { const st = EI.streak(), p = EI.plan();
-    return '<h2>Today</h2><p class="m muted">' + new Date().toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric' }) + '</p>' +
-      '<div class="stat"><b class="num">' + p.dueAll + '</b><span>words due for review</span></div><p class="eyebrow">Last three weeks</p>' + calHTML(21); }
-  if (v === 'progress') return '<h2>Progress</h2>' + [['p-week', 'This week'], ['p-score', 'Practice scores'], ['p-cover', 'Coverage'], ['p-mem', 'Memory'], ['p-cal', 'Study days'], ['p-err', 'Mistakes'], ['p-facts', 'Fact collection'], ['p-mine', 'My words'], ['p-sent', 'My sentences']].map(x => jump(x[0], x[1])).join('');
-  if (v === 'settings') return '<h2>Settings</h2>' + [['s-look', 'Display'], ['s-study', 'Study'], ['s-audio', 'Audio'], ['s-topics', 'Topic mix'], ...(EI.sync.available() ? [['s-sync', 'Sync']] : []), ['s-data', 'Backup']].map(x => jump(x[0], x[1])).join('');
-  if (v === 'info') return '<h2>Info</h2>' + [['i-how', 'How to use'], ['i-srs', 'How review works'], ['i-data', 'Data sources'], ['i-src', 'Sources for each story'], ['i-audio', 'Audio'], ['i-missing', 'Not available yet']].map(x => jump(x[0], x[1])).join('');
+  if (v === 'today') {
+    return '<p class="eyebrow">Last three weeks</p>' + calHTML(21); }
+  if (v === 'progress') return [['p-week', 'This week'], ['p-score', 'Practice scores'], ['p-cover', 'Coverage'], ['p-mem', 'Memory'], ['p-cal', 'Study days'], ['p-err', 'Mistakes'], ['p-facts', 'Fact collection'], ['p-mine', 'My words'], ['p-sent', 'My sentences']].map(x => jump(x[0], x[1])).join('');
+  if (v === 'settings') return [['s-look', 'Display'], ['s-study', 'Study'], ['s-audio', 'Audio'], ['s-topics', 'Topic mix'], ...(EI.sync.available() ? [['s-sync', 'Sync']] : []), ['s-data', 'Backup']].map(x => jump(x[0], x[1])).join('');
+  if (v === 'info') return [['i-how', 'How to use'], ['i-srs', 'How review works'], ['i-data', 'Data sources'], ['i-src', 'Sources for each story'], ['i-audio', 'Audio'], ['i-missing', 'Not available yet']].map(x => jump(x[0], x[1])).join('');
   return '';
 }
 function mainHTML() {
@@ -136,7 +142,7 @@ function vToday() {
   const inMem = Object.values(S.words).filter(r => r.s === 'srs').length;
   const lastX = S.lastExport == null ? S.created : S.lastExport, needBackup = Object.keys(S.lessons).length && t - lastX >= 14 && !EI.sync.on();   // with sync on, the online copy covers this; the file stays optional
   const sc = Object.values(S.scores), avg = sc.length ? Math.round(sc.reduce((a, x) => a + x.last, 0) / sc.length) : null;
-  let h = '<div class="ph"><p class="eyebrow">' + new Date().toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric' }) + '</p><h1>Today</h1></div>';
+  let h = '<div class="ph"><h1>' + new Date().toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric' }) + '</h1></div>';
   h += '<section class="card"><h2>' + (ls ? (ls.kind === 'reading' ? (ls.again ? 'Read again' : ls.resume ? 'Continue your story' : 'Today’s story') : 'Today’s grammar') : 'Nothing new to study') + '</h2>';
   if (ls) h += '<p class="def">' + esc(ls.title) + '</p>' + (ls.kind === 'reading' ? '<p class="vi">Learn words → Read &amp; listen → Grammar in this story → Practice (có chấm điểm). ' + (ls.again ? 'Đây là bài có điểm thấp nhất của bạn; đọc lại và làm lại phần Practice.' : 'Thoát giữa chừng vẫn được lưu đúng bước.') + '</p>' : '');
   else h += '<p class="vi">Bạn đã học hết nội dung hiện có. Lô bài mới sẽ được thêm sau — xem Info.</p>';
@@ -167,7 +173,7 @@ function itemHTML() {
   const A1 = run.multi ? ' data-ans' : ' id="ans" data-ans';
   let h = '<div class="qcard" data-q="' + esc(run.sig || '') + '">' + (it.head ? '<p class="eyebrow">' + esc(it.head) + '</p>' : '');
   if (it.vi) h += '<p class="vi">' + esc(it.vi) + '</p>';
-  const listen = it.audio || it.t === 'dict' ? '<div class="rowg"><button class="btn icon" data-a="hear" aria-label="Play the sentence">' + ic('phones') + '</button><span class="audiolabel">' + esc(EI.audio.label()) + '</span></div>' : '';
+  const listen = it.audio || it.t === 'dict' ? '<div class="rowg"><button class="btn icon" data-a="hear" aria-label="Play the sentence">' + ic('phones') + '</button></div>' : '';
   if (it.t === 'mc') {
     h += '<p class="qtext">' + (it.mark ? mark(it.q, it.mark) : esc(it.q)) + '</p>' + (it.sub ? '<p>' + esc(it.sub) + '</p>' : '') + '<div class="opts">' +
       run.ord.map(i => { const o = it.o[i], txt = Array.isArray(o) ? o[0] : o, why = Array.isArray(o) ? o[1] : '';
@@ -238,9 +244,10 @@ function finish(res) {
       if (it.k && it.k.startsWith('w:') && EI.W[it.k.slice(2)]) { L.miss[it.k.slice(2)] = 1; addFu(wordFu(it.k.slice(2))); }
       if (it.k && it.k.startsWith('g:') && !it.fu) { const g = EI.gById(it.k.slice(2)); if (g) { const i = g.q.findIndex((x, i) => x.t !== 'write' && !L.q.includes('g|' + g.id + '|' + i) && !L.q.includes('Fg|' + g.id + '|' + i)); if (i >= 0) addFu('g|' + g.id + '|' + i); } }
     }
-  } else if (ctx.kind === 'gram') {
-    if (!S.gram[ctx.g.id]) S.gram[ctx.g.id] = { i: ctx.i };   // the lesson counts as started once a question is answered
-    const key = 'g|' + ctx.g.id + '|' + ctx.i;
+  } else if (ctx.kind === 'gram') {   // the lesson counts as started once a question is answered, and done when every question is
+    const st = S.gram[ctx.g.id] || (S.gram[ctx.g.id] = { i: 0 }), key = 'g|' + ctx.g.id + '|' + ctx.i;
+    (st.a || (st.a = {}))[ctx.i] = snapRun(run); st.i = Object.keys(st.a).length;
+    if (st.i >= ctx.g.q.length && !st.done) { st.done = EI.today(); S.lastKind = 'grammar'; EI.log('l', 1); }
     if (res === 'bad') { logErr('grammar', ctx.g.id); if (!S.gq[key]) S.gq[key] = { step: 1, due: t + 1, m: 1, lap: 1, h: [[t, 'G', 'bad']] }; }
   } else if (ctx.kind === 'review' && it.rv) EI.answer(it.rv.key, res || 'hint', it.rv.ty, it.rv.si);
   EI.save(); render();
@@ -296,9 +303,8 @@ A.next = () => {
       L.stage = L.pst = L.doneDay ? 'done' : 'write';
     }
   }
-  else if (ctx.kind === 'gram') { const st = S.gram[ctx.g.id] || (S.gram[ctx.g.id] = { i: ctx.i }); st.i++; if (st.i >= ctx.g.q.length) { st.done = EI.today(); S.lastKind = 'grammar'; EI.log('l', 1); } }
   else if (ctx.kind === 'review') S.cur.i++;
-  EI.save(); render(); const m = $('#main'); if (m && ctx.kind !== 'gram') m.scrollTop = 0;
+  EI.save(); render(); const m = $('#main'); if (m) m.scrollTop = 0;
 };
 const dots = (n, i) => '<div class="dots" aria-label="Question ' + (i + 1) + ' of ' + n + '">' + Array.from({ length: n }, (_, k) => '<i class="' + (k < i ? 'd' : k === i ? 'c' : '') + '"></i>').join('') + '</div>';
 
@@ -325,33 +331,33 @@ function vFilter() {
   return Object.values(EI.W).filter(e => e.level === lv && (!q || (vi ? fold(e.vi).includes(q) : e.w.includes(q))) && (st === 'all' || EI.status(e.w) === st)).sort((a, b) => a.w.localeCompare(b.w));
 }
 function lVocab() {
-  const c = S.cur, vi = c.sl === 'vi';
-  return '<h2>Vocabulary</h2><div class="rowg" style="flex-wrap:nowrap"><input type="search" id="vq" style="flex:1;min-width:0" placeholder="' + (vi ? 'Gõ nghĩa tiếng Việt, vd: ky su' : 'Search a word') + '" aria-label="Search" value="' + esc(c.q || '') + '">' +
+  const c = S.cur, vi = c.sl === 'vi'; lastLv = c.lv || 'A2';
+  return '<div class="rowg" style="flex-wrap:nowrap"><input type="search" id="vq" style="flex:1;min-width:0" placeholder="' + (vi ? 'Gõ nghĩa tiếng Việt, vd: ky su' : 'Search a word') + '" aria-label="Search" value="' + esc(c.q || '') + '">' +
     '<select id="vsl" style="width:auto" aria-label="Search language"><option value="en"' + (vi ? '' : ' selected') + '>English</option><option value="vi"' + (vi ? ' selected' : '') + '>Tiếng Việt</option></select></div>' +
     '<div class="rowg">' + LV.map(l => '<button class="chip' + ((c.lv || 'A2') === l ? ' on' : '') + '" data-a="vlevel" data-l="' + l + '">' + l + '</button>').join('') + '</div>' +
     '<select id="vst" aria-label="Filter by memory state">' + ['all', 'New', 'Learning', 'Familiar', 'Strong', 'Mastered', 'Known'].map(s => '<option value="' + s + '"' + ((c.st || 'all') === s ? ' selected' : '') + '>' + (s === 'all' ? 'All states' : s) + '</option>').join('') + '</select>' +
-    '<button class="btn" data-a="go" data-v="scan">Quick scan: tick words you know</button><div id="vrows">' + vRows() + '</div>';
+    '<button class="btn" data-a="go" data-v="scan">Quick scan</button><div id="vrows">' + vRows() + '</div>';
 }
 function vRows() {
   const c = S.cur, all = vFilter(), per = c.per || 20, pages = Math.max(1, Math.ceil(all.length / per)), pg = Math.min(pages, Math.max(1, c.pg || 1));
   if (!Object.values(EI.W).some(e => e.level === (c.lv || 'A2'))) return '<p class="vi">Chưa có bộ từ ' + (c.lv) + '. Xem Info → Not available yet.</p>';
-  const sm = !!S.settings.vmean;   // quick view: Vietnamese meaning under each word (Settings are kept on this device only)
-  return '<div class="vtools"><span class="small muted">' + all.length + ' words</span><button class="btn small ghost' + (sm ? ' on' : '') + '" data-a="vMean" aria-pressed="' + sm + '">' + ic('eye') + (sm ? 'Hide meanings' : 'Show meanings') + '</button></div>' +
-    all.slice((pg - 1) * per, pg * per).map(e => '<div class="wrow' + (c.w === e.w ? ' on' : '') + '"><button class="wmain" data-a="word" data-w="' + esc(e.w) + '"><i class="st ' + EI.status(e.w) + '"></i><span class="wt"><b>' + esc(e.hw) + '</b>' + (sm ? '<span class="wm">' + esc(e.vi) + '</span>' : '') + '</span><span class="pos">' + esc(c.sl === 'vi' && (c.q || '').trim() ? e.vi : e.pos) + '</span></button><button class="btn icon ghost wsay" data-a="say" data-t="' + esc(e.hw) + '" aria-label="Hear ' + esc(e.hw) + '">' + ic('phones') + '</button></div>').join('') +
+  const viQ = c.sl === 'vi' && (c.q || '').trim();   // searching by Vietnamese: the meaning is what matched, so it shows on every row
+  return '<div class="vtools"><span class="small muted">' + all.length + ' words</span></div>' +
+    all.slice((pg - 1) * per, pg * per).map(e => { const op = viQ || vmOpen.has(e.w);   // the eye on each row opens that word’s meaning on the same line
+      return '<div class="wrow' + (c.w === e.w ? ' on' : '') + '"><button class="wmain" data-a="word" data-w="' + esc(e.w) + '"><i class="st ' + EI.status(e.w) + '"></i><b class="ww">' + esc(e.hw) + '</b>' + (op ? '<span class="wm"><i>' + esc(e.pos) + '</i> ' + esc(e.vi) + '</span>' : '') + '</button>' +
+        (viQ ? '' : '<button class="btn icon ghost wsay weye' + (op ? ' on' : '') + '" data-a="vEye" data-w="' + esc(e.w) + '" aria-pressed="' + op + '" aria-label="' + (op ? 'Hide' : 'Show') + ' the meaning of ' + esc(e.hw) + '">' + ic(op ? 'eyeoff' : 'eye') + '</button>') +
+        '<button class="btn icon ghost wsay" data-a="say" data-t="' + esc(e.hw) + '" aria-label="Hear ' + esc(e.hw) + '">' + ic('phones') + '</button></div>'; }).join('') +
     '<div class="pager">Page <input type="number" id="vpg" min="1" max="' + pages + '" value="' + pg + '" aria-label="Page number"> of ' + pages + ' · <select id="vper" aria-label="Words per page">' + [20, 50, 100].map(n => '<option' + (per === n ? ' selected' : '') + '>' + n + '</option>').join('') + '</select> per page</div>';
 }
-A.vlevel = d => { S.cur.lv = d.l; S.cur.pg = 1; EI.save(); render(); };
-A.vMean = () => { S.settings.vmean = !S.settings.vmean; EI.save(); $('#vrows').innerHTML = vRows(); };
+A.vlevel = d => { S.cur.lv = lastLv = d.l; S.cur.pg = 1; EI.save(); render(); };
+A.vEye = d => { if (vmOpen.has(d.w)) vmOpen.delete(d.w); else vmOpen.add(d.w); $('#vrows').innerHTML = vRows(); };
 A.word = d => go(Object.assign({}, S.cur, { v: 'vocab', w: d.w }));
 function vWord(e) {
   const r = S.words[e.w], st = EI.status(e.w);
   let h = '<div class="ph"><p class="eyebrow">' + e.level + ' · ' + esc(e.pos) + '</p><div class="word-h"><h1>' + esc(e.hw) + '</h1><span class="ipa">' + esc(e.ipa) + '</span>' +
-    '<button class="btn icon" data-a="say" data-t="' + esc(e.hw) + '" aria-label="Hear the word">' + ic('phones') + '</button><span class="chip"><i class="st ' + st + '"></i>' + st + '</span></div>' +
-    '<p class="audiolabel">' + esc(EI.audio.label()) + ' · ' + cambA(e.w, 'Open “' + esc(e.hw) + '” in Cambridge Dictionary') + ' (human US recording)</p></div>';
-  h += '<p class="def">' + esc(e.def) + '</p><p class="exq">' + mark(e.exPlain, e.exSurf) + ' <button class="btn icon ghost" data-a="say" data-t="' + esc(e.exPlain) + '" aria-label="Hear the example">' + ic('phones') + '</button></p>';
-  h += '<dl class="kv">' + (e.col.length ? '<dt>Often with</dt><dd>' + esc(e.col.join(' · ')) + '</dd>' : '') + (e.fam ? '<dt>Word family</dt><dd>' + esc(e.fam) + '</dd>' : '') +
-    '<dt>Difficulty</dt><dd>' + ['', 'easier', 'medium', 'harder'][e.diff] + ' <span class="muted small">(estimate)</span></dd></dl>';
-  h += viOpen ? '<div class="vibox"><b>' + esc(e.vi) + '</b> <button class="btn ghost small" data-a="hideVi">Hide meaning</button></div>' : '<div><button class="btn" data-a="showVi">Show Vietnamese meaning</button></div>';
+    '<button class="btn icon" data-a="say" data-t="' + esc(e.hw) + '" aria-label="Hear the word">' + ic('phones') + '</button><span class="chip"><i class="st ' + st + '"></i>' + st + '</span><span class="small">' + cambA(e.w, 'Cambridge Dictionary') + '</span></div></div>';
+  h += '<p class="def">' + esc(e.def) + '</p>' + viT(viOpen, e.vi, 'showVi') + '<p class="exq">' + mark(e.exPlain, e.exSurf) + ' <button class="btn icon ghost" data-a="say" data-t="' + esc(e.exPlain) + '" aria-label="Hear the example">' + ic('phones') + '</button></p>';
+  if (e.col.length || e.fam) h += '<dl class="kv">' + (e.col.length ? '<dt>Often with</dt><dd>' + esc(e.col.join(' · ')) + '</dd>' : '') + (e.fam ? '<dt>Word family</dt><dd>' + esc(e.fam) + '</dd>' : '') + '</dl>';
   if (e.note) h += '<p class="note vi">' + esc(e.note) + '</p>';
   h += '<div class="rowg"><button class="btn" data-a="wReview" data-w="' + esc(e.w) + '">Review</button><button class="btn' + (st === 'Known' ? ' on' : '') + '" data-a="wKnown" data-w="' + esc(e.w) + '">' + (st === 'Known' ? 'Known ✓ (tap to undo)' : 'Known') + '</button></div>' +
     '<p class="vi">Review: đưa từ vào hàng ôn ngay hôm nay. Known: bỏ từ khỏi hàng ôn.</p>';
@@ -362,22 +368,21 @@ function vWord(e) {
   else h += '<p class="vi">' + (st === 'Known' ? 'Bạn đã đánh dấu Known, từ này không nằm trong hàng ôn.' : 'Từ này chưa vào hàng ôn. Nó sẽ vào khi bạn học xong một bài đọc có nó, hoặc khi bạn bấm Review.') + '</p>';
   return page(h + '</section>');
 }
-A.showVi = () => { viOpen = true; keep(); };
-A.hideVi = () => { viOpen = false; keep(); };
+A.showVi = () => { viOpen = !viOpen; keep(); };
 A.say = d => EI.audio.say(d.t);
 A.wReview = d => { const r = EI.enroll(d.w); r.due = EI.today(); EI.save(); render(); toast('Added to today’s review.'); };
 A.wKnown = d => { EI.setKnown(d.w, EI.status(d.w) !== 'Known'); EI.save(); keep(); };
 A.openR = d => { const r = EI.rById(d.id); go({ v: 'reading', level: r.level, rid: r.id }); };
 function vScan() {
-  const lv = S.cur.lv || 'A2', ws = Object.values(EI.W).filter(e => e.level === lv).sort((a, b) => a.w.localeCompare(b.w));
+  const lv = S.cur.lv || lastLv || 'A2', ws = Object.values(EI.W).filter(e => e.level === lv).sort((a, b) => a.w.localeCompare(b.w));
   return page('<div class="ph"><p class="eyebrow">Vocabulary · ' + lv + '</p><h1>Quick scan</h1></div><p class="vi">Đánh dấu những từ bạn đã biết chắc (hiểu nghĩa và dùng được). Chúng sẽ được lướt qua trong bài đọc và không vào hàng ôn. Có thể bỏ đánh dấu bất cứ lúc nào.</p>' +
     '<div class="scan">' + ws.map(e => '<label><input type="checkbox" data-scan="' + esc(e.w) + '"' + (EI.status(e.w) === 'Known' ? ' checked' : '') + '> ' + esc(e.hw) + '</label>').join('') + '</div>' +
-    '<div class="rowg"><button class="btn primary" data-a="go" data-v="vocab">Done</button></div>');
+    '<div class="rowg"><button class="btn primary" data-a="back">Done</button></div>');
 }
 
 /* ================= Grammar ================= */
 function lGrammar() {
-  let h = '<h2>Grammar</h2>';
+  let h = '';
   for (const lv of LV) {
     const gs = EI.G.filter(g => g.level === lv);
     h += '<p class="eyebrow">' + lv + ' path</p>' + (gs.length ? gs.map(g => { const st = S.gram[g.id];
@@ -394,22 +399,29 @@ function vGram(g) {
   h += '<section class="plain"><h2>Examples</h2><ul class="exl">' + g.ex.map(x => '<li>' + esc(x[0]) + '<span>' + esc(x[1]) + (x[2] && EI.rById(x[2]) ? ' · from “' + esc(EI.rById(x[2]).title) + '”' : '') + '</span></li>').join('') + '</ul></section>';
   h += '<section class="plain"><h2>Common mistakes</h2><p class="vi">Lỗi người Việt hay mắc:</p>' + g.errors.map(e => '<div class="err"><s>' + esc(e[0]) + '</s><b>' + esc(e[1]) + '</b><span class="vi">' + esc(e[2]) + '</span></div>').join('') + '</section>';
   h += '<section class="plain" id="gprac"><h2>Practice</h2>';
-  if (st.i >= g.q.length) {
-    const ng = EI.nextGrammar();
-    h += '<div class="fb ok"><p class="ttl">' + ic('check') + 'Lesson complete</p><p class="vi">Những câu bạn làm sai sẽ quay lại trong phần Review theo lịch cách quãng.</p><div class="rowg"><button class="btn primary" data-a="go" data-v="today">Back to Today</button>' + (ng ? '<button class="btn" data-a="gram" data-id="' + ng.id + '">Next: ' + esc(ng.title) + '</button>' : '') + '<button class="btn ghost" data-a="gAgain" data-id="' + g.id + '">Practice again</button></div></div>';
-  } else {
-    const sig = 'g|' + g.id + '|' + st.i;
-    if (!run || run.sig !== sig) startItem(g.q[st.i], { kind: 'gram', g, i: st.i }, sig);
-    h += dots(g.q.length, st.i) + itemHTML();
+  /* every question is on the page at once; an answered one stays where it is, with its feedback, so it can be read again later */
+  const n = g.q.length, ans = st.a || {}, got = Object.keys(ans).length, all = got >= n;
+  h += '<p class="eyebrow">' + n + ' questions · ' + (all ? 'all answered' : (n - got) + ' left') + '</p><div class="meter"><i style="width:' + Math.round(got / n * 100) + '%"></i></div>' +
+    (got ? '' : '<p class="vi">Làm theo thứ tự nào cũng được. Câu đã làm vẫn nằm nguyên chỗ, kèm giải thích, để xem lại.</p>');
+  for (let i = 0; i < n; i++) {
+    const sig = 'g|' + g.id + '|' + i;
+    if (!runs.has(sig)) { const x = startItem(Object.assign({}, g.q[i], { head: 'Question ' + (i + 1) + ' of ' + n }), { kind: 'gram', g, i }, sig); x.multi = true; if (ans[i]) Object.assign(x, ans[i], { done: true }); runs.set(sig, x); }
+    run = runs.get(sig); h += itemHTML();
   }
+  run = null;
+  if (all || (st.done && !st.a)) { const ng = EI.nextGrammar();
+    h += '<div class="fb ok"><p class="ttl">' + ic('check') + 'Lesson complete</p><p class="vi">Những câu bạn làm sai sẽ quay lại trong phần Review theo lịch cách quãng.</p><div class="rowg"><button class="btn primary" data-a="go" data-v="today">Back to Today</button>' + (ng ? '<button class="btn" data-a="gram" data-id="' + ng.id + '">Next: ' + esc(ng.title) + '</button>' : '') + '<button class="btn ghost" data-a="gAgain" data-id="' + g.id + '">Practice again</button></div></div>'; }
   return page(h + '</section>');
 }
-A.gAgain = d => { S.gram[d.id] = { i: 0 }; EI.save(); render(); };
+A.gAgain = d => { const o = S.gram[d.id] || {}; S.gram[d.id] = o.done ? { i: 0, done: o.done } : { i: 0 }; runs.clear(); EI.save(); render(); const e = document.getElementById('gprac'); if (e) e.scrollIntoView({ block: 'start' }); };
+/* what an answered question needs to be shown again exactly as it was (the choice, the order, the feedback) */
+const SNAP = ['res', 'pick', 'val', 'sel', 'pool', 'ord', 'right', 'fill', 'title', 'ansText', 'noteText', 'shown', 'hint'];
+const snapRun = r => { const o = {}; SNAP.forEach(k => { if (r[k] != null && r[k] !== '') o[k] = r[k]; }); return JSON.parse(JSON.stringify(o)); };
 
 /* ================= Reading ================= */
 function lReading() {
   const c = S.cur;
-  let h = '<h2>Reading</h2><div class="rowg">' + LV.map(l => '<button class="chip' + (c.level === l ? ' on' : '') + '" data-a="level" data-l="' + l + '">' + l + '</button>').join('') + '</div>';
+  let h = '<div class="rowg">' + LV.map(l => '<button class="chip' + (c.level === l ? ' on' : '') + '" data-a="level" data-l="' + l + '">' + l + '</button>').join('') + '</div>';
   if (!c.level) return h + '<p class="vi">Chọn một cấp độ để xem các lượt (pass) và danh sách bài.</p>';
   const cr = c.rid && EI.rById(c.rid), pass = c.pass || (cr && cr.level === c.level ? cr.pass : 1);
   h += '<div class="rowg">' + [1, 2].map(n => '<button class="chip' + (pass === n ? ' on' : '') + '" data-a="pass" data-n="' + n + '">Pass ' + n + ' <span class="muted small num">' + EI.R.filter(r => r.level === c.level && r.pass === n).length + '</span></button>').join('') + '</div>';
@@ -453,8 +465,8 @@ function vLesson(r) {
       const e = EI.W[w]; if (!e) return '';
       if (EI.status(w) === 'Known') return '<div class="lw known"><div class="rowg"><b>' + esc(e.hw) + '</b><span class="chip">Known</span><button class="btn ghost" data-a="lKnown" data-w="' + esc(w) + '">undo</button></div></div>';
       return '<div class="lw"><div class="rowg"><b class="def">' + esc(e.hw) + '</b><span class="small muted">' + esc(e.pos) + '</span><span class="ipa">' + esc(e.ipa) + '</span><button class="btn icon ghost" data-a="say" data-t="' + esc(e.hw) + '" aria-label="Hear the word">' + ic('phones') + '</button><span class="small">' + cambA(w, 'Cambridge') + '</span><button class="btn ghost" style="margin-left:auto" data-a="lKnown" data-w="' + esc(w) + '">Known</button></div>' +
-        '<p>' + esc(e.def) + '</p><p class="exq">' + mark(e.exPlain, e.exSurf) + '</p>' + (openVi.has(w) ? '<div class="vibox"><b>' + esc(e.vi) + '</b> <button class="btn ghost small" data-a="lViHide" data-w="' + esc(w) + '">Hide meaning</button></div>' : '<div><button class="btn ghost" data-a="lVi" data-w="' + esc(w) + '">Show Vietnamese meaning</button></div>') + '</div>'; }).join('') + '</section>' +
-      '<p class="audiolabel">' + esc(EI.audio.label()) + '</p><div class="rowg"><button class="btn primary" data-a="stage" data-s="read">Start reading</button></div>';
+        '<p>' + esc(e.def) + '</p>' + viT(openVi.has(w), e.vi, 'lVi', w) + '<p class="exq">' + mark(e.exPlain, e.exSurf) + '</p></div>'; }).join('') + '</section>' +
+      '<div class="rowg"><button class="btn primary" data-a="stage" data-s="read">Start reading</button></div>';
   } else if (L.stage === 'read') {
     const c = S.cur;
     h += '<div class="tools"><button class="chip' + (S.settings.hl ? ' on' : '') + '" data-a="tHl">Target words</button><button class="chip' + (c.gr ? ' on' : '') + '" data-a="tGr">Grammar</button><button class="chip' + (c.veil ? ' on' : '') + '" data-a="tVeil">' + ic('phones') + ' first, text after</button><button class="chip' + (c.focus ? ' on' : '') + '" data-a="tFocus">Focus</button></div>' +
@@ -531,8 +543,7 @@ function readerHTML(r) {
   return h + '</p>';
 }
 A.guess = d => { const L = S.lessons[S.cur.rid]; L.guess = +d.i; L.stage = 'learn'; EI.save(); render(); $('#main').scrollTop = 0; };
-A.lVi = d => { openVi.add(d.w); keep(); };
-A.lViHide = d => { openVi.delete(d.w); keep(); };
+A.lVi = d => { if (openVi.has(d.w)) openVi.delete(d.w); else openVi.add(d.w); keep(); };
 A.lKnown = d => { EI.setKnown(d.w, EI.status(d.w) !== 'Known'); EI.save(); keep(); };
 A.stage = d => {
   const r = EI.rById(S.cur.rid), L = S.lessons[r.id]; let s = d.s;
@@ -596,8 +607,7 @@ function playerHTML() {
     '<span class="pseekg"><button class="btn small" data-a="pBack" aria-label="Go back ' + step() + ' seconds">−' + step() + 's</button>' +
     '<select id="pstep" aria-label="How far back or forward">' + STEPS.map(x => '<option value="' + x + '"' + (step() === x ? ' selected' : '') + '>' + x + ' s</option>').join('') + '</select>' +
     '<button class="btn small" data-a="pFwd" aria-label="Go forward ' + step() + ' seconds">+' + step() + 's</button></span>' +
-    '<select id="prate" aria-label="Speed">' + [0.5, 0.75, 1, 1.25, 1.5, 2].map(x => '<option value="' + x + '"' + (S.settings.rate === x ? ' selected' : '') + '>' + x + '×</option>').join('') + '</select>' +
-    '<span class="lab">' + esc(EI.audio.label()) + '</span></div></div>';
+    '<select id="prate" aria-label="Speed">' + [0.5, 0.75, 1, 1.25, 1.5, 2].map(x => '<option value="' + x + '"' + (S.settings.rate === x ? ' selected' : '') + '>' + x + '×</option>').join('') + '</select></div></div>';
 }
 function paintPlayer() {
   const b = $('#pplay'); if (!b) return;
@@ -655,10 +665,10 @@ function drawSheet() {
     h += '<div class="rowg"><span class="sw">' + esc(t.t) + '</span>' + (e ? '<span class="ipa">' + esc(e.ipa) + '</span>' : '') + '<button class="btn icon" data-a="say" data-t="' + esc(e ? e.hw : t.t) + '" aria-label="Hear the word">' + ic('phones') + '</button></div>';
     if (ctx) h += '<p class="small muted">Nghĩa trong câu này:</p><p class="vibox">' + esc(ctx) + '</p>';
     if (e) h += (e.hw !== t.t.toLowerCase() ? '<p class="small muted">form of <b>' + esc(e.hw) + '</b> · ' + esc(e.pos) + '</p>' : '<p class="small muted">' + esc(e.pos) + '</p>') + '<p class="def">' + esc(e.def) + '</p>' +
-      (sh.viW ? '<div class="vibox"><b>' + esc(e.vi) + '</b> <button class="btn ghost small" data-a="shViHide">Hide meaning</button></div>' : '<div><button class="btn" data-a="shViW">Show Vietnamese meaning</button></div>') +
+      viT(sh.viW, e.vi, 'shViW') +
       (t.tg ? '' : '<p class="small muted">' + (ctx ? 'Trên đây là nghĩa thường gặp của <b>' + esc(e.hw) + '</b>; trong câu này từ mang nghĩa khác (xem ô phía trên).' : 'Nghĩa trong từ điển của từ này; trong câu có thể khác đôi chút — xem bản dịch câu.') + '</p>');
     else h += gl ? '<p class="vibox">' + esc(gl) + '</p>' : '<p class="vi">Chưa có mục cho từ này. Xem bản dịch cả câu bên dưới, hoặc mở từ điển.</p>';
-    h += '<p class="audiolabel">' + esc(EI.audio.label()) + ' · ' + cambA(e ? e.w : t.t) + (e ? ' · <a href="#" data-a="word" data-w="' + esc(e.w) + '">full entry</a>' : '') + '</p>';
+    h += '<p class="small">' + cambA(e ? e.w : t.t) + (e ? ' · <a href="#" data-a="word" data-w="' + esc(e.w) + '">full entry</a>' : '') + '</p>';
     const mk = t.t.toLowerCase(), stt = e ? EI.status(e.w) : null;   // any word can go into the review plan, with this sentence as its context
     if (e) h += stt === 'New' ? '<div><button class="btn" data-a="shAdd">' + ic('star') + 'Add to my review</button></div>' : '<p class="small muted"><i class="st ' + stt + '"></i> ' + (stt === 'Known' ? 'Marked as Known' : 'In your review plan · ' + stt) + '</p>';
     else h += S.mine[mk] ? '<div class="rowg"><span class="chip">In your review plan ✓</span><button class="btn ghost" data-a="shRm">remove</button></div>' : '<div><button class="btn" data-a="shAdd">' + ic('star') + 'Add to my review</button></div>';
@@ -692,8 +702,7 @@ A.mineRm = d => { delete S.mine[d.k]; EI.save(); render(); };
 const recRedraw = () => { if (sh) drawSheet(); else render(); };
 A.rtPlay = () => { if (rec.url) new Audio(rec.url).play().catch(() => {}); };
 A.rtModel = () => { const r = EI.rById(S.cur.rid), L = S.lessons[r.id], w = $('#wr'); if (w) L.text = w.value; L.shown = true; EI.save(); render(); EI.audio.say(r.write.model); };
-A.shViW = () => { sh.viW = true; drawSheet(); };
-A.shViHide = () => { sh.viW = false; drawSheet(); };
+A.shViW = () => { sh.viW = !sh.viW; drawSheet(); };
 A.shVi = () => { sh.vi = !sh.vi; drawSheet(); };
 A.shSay = () => { P.seq++; P.on = false; paintPlayer(); EI.audio.say(sh.o.plain); };
 A.shSave = () => { const en = sh.o.plain, i = S.sentences.findIndex(x => x.kind === 'saved' && x.en === en); if (i >= 0) S.sentences.splice(i, 1); else S.sentences.push({ en, vi: sh.o.vi, kind: 'saved', d: EI.today(), src: sh.r.title }); EI.save(); drawSheet(); };
@@ -835,8 +844,9 @@ function vInfo() {
 }
 
 /* ================= events ================= */
-A.go = d => go(d.v === 'vocab' ? { v: 'vocab', lv: 'A2', per: 20, pg: 1 } : d.v === 'reading' ? { v: 'reading', level: (S.cur.v === 'reading' && S.cur.level) || null } : { v: d.v });
-A.back = () => { const c = S.cur; if (c.v === 'vocab') go(Object.assign({}, c, { w: null })); else if (c.v === 'grammar') go({ v: 'grammar' }); else if (c.v === 'reading') go({ v: 'reading', level: c.level }); else if (c.v === 'scan') go({ v: 'vocab' }); else go({ v: 'today' }); };
+const vLv = () => ((S.cur.v === 'vocab' || S.cur.v === 'scan') && S.cur.lv) || lastLv || 'A2';
+A.go = d => go(d.v === 'vocab' ? { v: 'vocab', lv: vLv(), per: 20, pg: 1 } : d.v === 'scan' ? { v: 'scan', lv: vLv() } : d.v === 'reading' ? { v: 'reading', level: (S.cur.v === 'reading' && S.cur.level) || null } : { v: d.v });
+A.back = () => { const c = S.cur; if (c.v === 'vocab') go(Object.assign({}, c, { w: null })); else if (c.v === 'grammar') go({ v: 'grammar' }); else if (c.v === 'reading') go({ v: 'reading', level: c.level }); else if (c.v === 'scan') go({ v: 'vocab', lv: vLv(), per: 20, pg: 1 }); else go({ v: 'today' }); };
 const runOf = el => { const qc = el.closest && el.closest('.qcard[data-q]'); return qc ? runs.get(qc.dataset.q) || null : null; };
 document.addEventListener('click', e => {
   if (lp.fired) { lp.fired = false; e.preventDefault(); return; }
@@ -928,8 +938,8 @@ function boot() {
   paintNav();
   EI.sync.start(r => { if (r.ok && r.changed && ['today', 'progress'].includes(S.cur.v)) keep(); else if (S.cur.v === 'settings') keep(); },
     () => { const L = S.cur.v === 'reading' && S.cur.rid && S.lessons[S.cur.rid]; return !!(L && !L.doneDay) || !!run; });
-  setTimeout(() => { if (EI.audio.ok && $('.audiolabel, .player .lab')) keep(); }, 700);   // voices load late in some browsers; keep() so the page does not jump to the top
-  if (!EI.inlined) loadScripts([AUDIO_LIST]).then(() => { if (EI.audioIndex && $('.audiolabel, .player .lab, #i-audio')) keep(); });   // the list of recorded voice files (about 240 KB) is not needed to show the first page
+  setTimeout(() => { if (EI.audio.ok && $('#s-audio')) keep(); }, 700);   // voices load late in some browsers; keep() so the page does not jump to the top
+  if (!EI.inlined) loadScripts([AUDIO_LIST]).then(() => { if (EI.audioIndex && $('#s-audio, #i-audio')) keep(); });   // the list of recorded voice files (about 240 KB) is not needed to show the first page
   if (!EI.inlined && 'serviceWorker' in navigator && /^https?:$/.test(location.protocol)) {
     navigator.serviceWorker.register('sw.js').then(() => navigator.serviceWorker.ready).then(reg => {
       const urls = ['./', 'index.html', 'css/app.css', 'js/core.js', 'js/ui.js', 'data/manifest.js', 'manifest.webmanifest', 'icons/icon-192.png', 'icons/icon-512.png', ...dataFiles(), AUDIO_LIST];

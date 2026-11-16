@@ -497,3 +497,17 @@ Yêu cầu của chủ dự án và cách làm:
 - Câu ôn “Meaning in context”: nghĩa sai giờ lấy từ những từ dễ nhầm nhất — cùng từ loại, cùng bài đọc với câu đang ôn, cùng cấp — và mỗi phương án ghi rõ đó là nghĩa của từ nào, kèm nghĩa tiếng Việt. Trước đây chỉ ưu tiên cùng từ loại, chọn ngẫu nhiên trong cả bộ từ, và không có giải thích.
 - `tools/check-content.js` giờ báo **lỗi** (không chỉ cảnh báo) khi một câu `mc` có phương án thiếu giải thích, khi giải thích của đáp án không bắt đầu bằng “Đúng”, khi phương án sai lại bắt đầu bằng “Đúng”, hoặc khi hai phương án trùng chữ. Thêm `tools/mc-review.js` (status, dump, apply) để rà và sửa hàng loạt.
 - Không thêm từ hay bài đọc, nên là v0.5.2.
+
+## 30. v0.5.3: sửa giao diện theo góp ý (2026-11-16)
+
+- Chủ dự án góp ý 9 điểm (kèm ảnh chụp trang từ “accept” và trang Today). Đã sửa cả 9.
+- Quick scan: mở ở B1 lại hiện bảng A2, vì nút “Quick scan” mở trang không mang theo cấp đang xem. Giờ trang mở đúng cấp trên màn hình, nút “Done” quay lại đúng cấp đó, và mục Vocabulary nhớ cấp xem gần nhất (chỉ trong lần mở app này). Nút chỉ ghi “Quick scan”.
+- Nút lùi/tiến: chuyển từ cột menu sang đầu cột danh sách (cột 2), dính ở trên khi cuộn danh sách. Trang không có cột danh sách (Review, Quick scan) đặt nút ngay trên trang. Trên điện thoại vẫn ở thanh trên cùng.
+- Danh sách từ: bỏ nút “Show meanings” hiện nghĩa mọi từ (thay quyết định ở §28); mỗi dòng có một con mắt riêng, nghĩa mở **cùng hàng** với từ, kèm loại từ. Loại từ không còn hiện ở dòng khi chưa mở. Cột danh sách của Vocabulary rộng hơn (20 → 23rem; 21rem ở màn hình 821–1100 px); các cột khác giữ nguyên để khung bên cạnh bài đọc vẫn hiện ở màn hình 1920 px. Khi tìm theo nghĩa tiếng Việt, nghĩa hiện ở mọi dòng (đó là thứ vừa tìm), không có con mắt.
+- Nút hiện nghĩa (trang từ, bước Learn words, khung từ khi đọc): trước đây bấm “Show” ở bên trái, rồi nút “Hide” lại nằm tận bên phải. Giờ chỉ có một nút, đứng yên một chỗ; nghĩa mở ngay bên cạnh nó, bấm lại nút đó để ẩn. Nút đặt ngay dưới định nghĩa.
+- Bỏ ghi chú nguồn giọng (Kokoro, giọng trình duyệt, “human US recording”) ở trang từ, bước Learn words, khung từ, câu hỏi nghe và thanh phát. Ghi chú này chỉ còn ở Settings → Audio và Info → Audio. Liên kết Cambridge Dictionary giữ lại, ngắn hơn.
+- Bỏ dòng “Difficulty” ở trang từ (dữ liệu độ khó vẫn dùng nội bộ để chọn từ cho Quick recall).
+- Chọn một từ ở dưới danh sách làm danh sách nhảy lên đầu, vì cả trang được vẽ lại. Giờ khi ở cùng một mục (chọn từ, chọn bài ngữ pháp, chọn chuyện, hay nút lùi/tiến), danh sách giữ nguyên vị trí cuộn.
+- Practice của bài ngữ pháp: trước đây mỗi lần một câu, làm xong không xem lại được. Giờ hiện tất cả câu cùng lúc (như Practice của bài đọc), làm theo thứ tự nào cũng được; câu đã làm giữ nguyên lựa chọn và giải thích. Lựa chọn được lưu (`S.gram[id].a`), nên tải lại trang vẫn xem được. Bài xong khi mọi câu đã trả lời. “Practice again” xóa câu trả lời nhưng giữ trạng thái “done”. Tiến độ dở dang kiểu cũ (chỉ có số câu) không giữ được lựa chọn cũ, nên các câu đó hiện lại như chưa làm.
+- Today: chữ “Today” hiện ba lần (menu, đầu cột 2, tiêu đề trang) và ngày hiện hai lần. Giờ “Today” chỉ còn ở menu, tiêu đề trang là ngày, cột 2 chỉ còn lịch ba tuần. Số từ đến hạn chỉ còn ở trang chính (cạnh nút Review now). Cùng lý do, bỏ tiêu đề mục ở đầu cột 2 của mọi mục (Vocabulary, Grammar, Reading, Progress, Settings, Info): menu đã cho biết đang ở mục nào.
+- Kiểm thử giao diện thêm các kiểm tra cho từng điểm trên (122 kiểm tra).

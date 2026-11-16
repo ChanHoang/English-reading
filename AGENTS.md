@@ -13,6 +13,7 @@ data/words-*.js, data/grammar-*.js                bộ từ, bài ngữ pháp
 data/readings/<level>-p<pass>-<nn>.js             mỗi bài đọc một file
 tools/check-content.js                            kiểm tra nội dung — phải 0 error
 tools/tag-targets.js                              tìm từ mục tiêu chưa đánh dấu
+tools/mc-review.js                                rà và sửa giải thích từng phương án trắc nghiệm (status, dump, apply)
 tools/e2e-test.py                                 kiểm thử giao diện (Playwright)
 tools/bundle.js                                   khi đăng web: gộp file nội dung thành một file (không dùng khi viết bài)
 tools/sync-test.mjs, tools/sync-dev-server.mjs   kiểm thử và chạy thử máy chủ đồng bộ

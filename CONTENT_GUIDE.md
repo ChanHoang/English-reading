@@ -111,7 +111,7 @@ Mỗi câu có `k` (điểm kiến thức), và chữ đầu của `k` quyết �
 
 | `t` | Trường | Ghi chú |
 |---|---|---|
-| `mc` | `q`, `o` (mảng chữ, hoặc `[chữ, giải thích]`), `a` (chỉ số đáp án) | Câu ngữ pháp **bắt buộc** giải thích từng phương án |
+| `mc` | `q`, `o` (mảng `[chữ, giải thích]`), `a` (chỉ số đáp án) | **Mọi** câu `mc` (bài đọc và ngữ pháp) giải thích từng phương án — xem “Giải thích phương án” bên dưới |
 | `gap` | `q` có `______`, `a` (chữ hoặc mảng; phần tử đầu là dạng đúng trong câu) | gõ từ còn thiếu |
 | `match` | `q`, `pairs: [[từ, nghĩa], …]` | 4–5 cặp |
 | `order` | `a` (câu đúng) | sắp xếp câu; ≤ 12 từ |
@@ -120,6 +120,19 @@ Mỗi câu có `k` (điểm kiến thức), và chữ đầu của `k` quyết �
 | `write` | `q`, `model` | viết lại/viết câu, tự so với mẫu |
 
 Thêm `why` (giải thích tiếng Việt) và `ref` (một đoạn chữ có trong bài; ứng dụng hiện nguyên câu đó) cho mọi câu.
+
+### Giải thích phương án (`mc`)
+
+Mục đích: người học đọc xong biết **vì sao** phương án đó sai để lần sau không mắc lại — không phải chỉ biết là nó sai. Ứng dụng hiện giải thích ngay dưới từng phương án sau khi trả lời.
+
+- Phương án đúng bắt đầu bằng **“Đúng:”** rồi dẫn câu trong bài (trong ngoặc kép “…”) hoặc nêu quy tắc. Câu hỏi NOT: “Đúng (đây là điều KHÔNG …): …”.
+- Phương án sai bắt đầu bằng nhãn cho biết loại lỗi: “Sai:”, “Sai nghĩa:”, “Sai từ loại:”, “Sai thì:”, “Sai trật tự:”, “Sai vị trí:”, “Sai giới từ:”, “Sai dạng:”, “Sai ngược:” (ngược với bài), “Sai vì chỉ đúng một phần:” (nửa đúng), “Chưa đúng ở đây:” (đúng ngữ pháp nhưng không hợp ngữ cảnh này).
+- Giải thích nói **chỗ dễ nhầm cụ thể**: chi tiết đó thật ra thuộc phần nào của bài (con số khác, người khác, năm khác), điều bài nói ngược lại, nghĩa thật của từ gần nghĩa hoặc gần chữ (attention/intention, site/sight), từ cùng họ đứng sai chỗ (valuable/value), hay lỗi người Việt hay mắc (for + V, “mention about”, thiếu was trong was born, less/fewer, -ed/-ing).
+- **Không** viết kiểu “Sai: không đúng”, “Sai: bài không nói vậy.” đứng một mình. Nếu phương án là điều bài không nhắc, phải nói bài thật ra nói gì; tốt hơn là thay bằng một phương án dựng từ chi tiết khác của bài.
+- Phương án sai phải **hợp lý** — người đọc lướt có thể chọn nhầm. Bỏ phương án vô lý (“The shields are made of food”) và phương án sai chính tả hiển nhiên. Câu đúng/sai (`c:tf`) nên là bẫy thật: đổi tên, đổi số, đổi năm, “only”, “both”, “always”, một vế đúng một vế sai; có `ref` là một câu trong bài.
+- **Không** để hai phương án cùng chấp nhận được. Nếu một phương án sai cũng dùng được (ví dụ “recently” bên cạnh “previously”, “less” với danh từ đếm được, “who” cho con vật), đổi phương án hoặc đổi câu hỏi.
+- `node tools/check-content.js` báo lỗi khi một phương án thiếu giải thích, khi giải thích của đáp án không bắt đầu bằng “Đúng”, khi một phương án sai lại bắt đầu bằng “Đúng”, hoặc khi hai phương án trùng chữ. `node tools/mc-review.js` (status, dump, apply) giúp rà và sửa hàng loạt.
+- Câu ôn “Meaning in context” (ứng dụng tự tạo) lấy nghĩa sai từ những từ dễ nhầm — cùng từ loại, cùng bài đọc, cùng cấp — và mỗi phương án ghi rõ đó là nghĩa của từ nào.
 
 ## 5. File ngữ pháp — `data/grammar-<level>.js`
 

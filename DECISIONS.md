@@ -486,3 +486,14 @@ Yêu cầu của chủ dự án và cách làm:
 - Đây là bước gộp file khi đăng web, không phải bước build khi phát triển: người viết bài vẫn chỉ sửa file trong `data/`. CI chạy kiểm thử giao diện hai lần: với từng file và với bản đã gộp.
 - Đo bằng Playwright, mạng giả lập độ trễ 120 ms, tải xuống 4 Mbps, CPU chậm 4 lần, máy chủ có nén gzip như GitHub Pages: lần mở đầu 23,2 giây → 5,2 giây (chỉ tải song song) → 4,1 giây (thêm file gộp); mở lại 1,4–2,8 giây → khoảng 0,9 giây. Đây là số đo giả lập, không phải đo trên điện thoại của chủ dự án.
 - Còn có thể làm nếu vẫn chậm: file gộp khoảng 3 MB (1,1 MB khi nén); phần lớn là câu chữ, bản dịch và câu hỏi của 135 bài. Có thể tách nội dung từng bài ra và chỉ tải khi mở bài, nhưng đó là thay đổi lớn hơn (danh sách từ, “In stories” và ôn tập đang dùng toàn bộ bài), chưa làm.
+
+## 29. v0.5.2: giải thích từng phương án trắc nghiệm (2026-11-16)
+
+- Chủ dự án yêu cầu: viết giải thích cho phương án sai và rà lại giải thích của phương án đúng; giải thích phải cho người đọc biết **vì sao** sai để tránh lần sau, không phải kiểu “sai vì không đúng”; tránh phương án hiển nhiên sai (“như 1+1=3”); câu nào không đạt thì được đổi luôn câu hỏi.
+- Phạm vi: toàn bộ 1.990 câu `mc` trong 135 bài đọc (gồm 123 câu đúng/sai), 74 câu `mc` trong 32 bài ngữ pháp A2–B1, và câu ôn tự tạo “Meaning in context”.
+- Chuẩn viết giải thích ghi ở `CONTENT_GUIDE.md` mục 4 (“Giải thích phương án”): nhãn mở đầu cho biết loại lỗi (Sai nghĩa, Sai từ loại, Sai thì, Sai vì chỉ đúng một phần, Chưa đúng ở đây…), dẫn câu trong bài, nói rõ chỗ dễ nhầm.
+- Đã thay phần lớn phương án vô lý hoặc chỉ giải thích được bằng “bài không nói vậy” bằng phương án dựng từ chi tiết khác của chính bài (con số khác, người khác, năm khác, nguyên nhân khác, điều bài nói ngược lại). Nhiều câu đúng/sai được viết lại thành bẫy thật (đổi số, đổi người, “both”, “always”, một vế đúng một vế sai), có `ref`. Câu từ vựng và ngữ pháp dùng phương án là từ cùng họ, từ gần chữ, từ gần nghĩa hoặc lỗi người Việt hay mắc.
+- Bỏ các phương án có thể chấp nhận được bên cạnh đáp án (ví dụ “recently/previously”, “less” với danh từ đếm được, “who” cho con vật, “needs” trong câu tường thuật vẫn còn đúng, “very” thay cho “too”), bằng cách đổi phương án hoặc thêm ngữ cảnh vào câu hỏi.
+- Câu ôn “Meaning in context”: nghĩa sai giờ lấy từ những từ dễ nhầm nhất — cùng từ loại, cùng bài đọc với câu đang ôn, cùng cấp — và mỗi phương án ghi rõ đó là nghĩa của từ nào, kèm nghĩa tiếng Việt. Trước đây chỉ ưu tiên cùng từ loại, chọn ngẫu nhiên trong cả bộ từ, và không có giải thích.
+- `tools/check-content.js` giờ báo **lỗi** (không chỉ cảnh báo) khi một câu `mc` có phương án thiếu giải thích, khi giải thích của đáp án không bắt đầu bằng “Đúng”, khi phương án sai lại bắt đầu bằng “Đúng”, hoặc khi hai phương án trùng chữ. Thêm `tools/mc-review.js` (status, dump, apply) để rà và sửa hàng loạt.
+- Không thêm từ hay bài đọc, nên là v0.5.2.

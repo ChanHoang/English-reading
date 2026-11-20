@@ -14,7 +14,7 @@ Số bài và số từ của các giai đoạn chưa làm là **ước tính** 
 | v0.3 | B1 · Pass 1, phần 1 | 16 bài (800–1.000 từ/bài), 364 từ B1, 8 bài ngữ pháp B1 nhóm 1 (`tasks/v0.3.md`) | Xong |
 | v0.4 | B1 · Pass 1, phần 2 | 16 bài, 283 từ B1, 8 bài ngữ pháp B1 nhóm 2 (`tasks/v0.4.md`) | Xong |
 | v0.5 | B1 · Pass 1, phần 3 | 20 bài, 155 mục từ B1 còn lại (86 mục dùng khóa nghĩa): **đủ 802/802 mục B1** (`tasks/v0.5.md`) | Xong |
-| v0.6 | B1 · Pass 2 | Khoảng 15 chuyện mới ôn từ B1, không thêm từ (`tasks/v0.6.md`) | Đang làm (5/15) |
+| v0.6 | B1 · Pass 2 | Khoảng 15 chuyện mới ôn từ B1, không thêm từ (`tasks/v0.6.md`) | Đang làm (10/15) |
 | v0.7 | B2 · Pass 1, phần 1 | Khoảng 19 bài (1.000–1.300 từ/bài), khoảng 460 từ B2, ngữ pháp B2 nhóm 1 | Chưa làm |
 | v0.8 | B2 · Pass 1, phần 2 | Khoảng 19 bài, khoảng 460 từ B2 | Chưa làm |
 | v0.9 | B2 · Pass 1, phần 3 | Khoảng 19 bài, khoảng 450 từ B2 còn lại: đủ bộ từ B2; ngữ pháp B2 nhóm 2 | Chưa làm |
@@ -41,3 +41,4 @@ Sau v1.0 (tùy chọn): Pass 2 cho B2 và C1, theo cùng cách đánh số (v1.1
 - **v0.5.2** (2026-11-16): mọi câu trắc nghiệm giải thích từng phương án, không thêm từ hay bài. Rà lại 1.990 câu `mc` trong 135 bài đọc và 74 câu trong các bài ngữ pháp: phương án sai nào cũng nói rõ vì sao sai (chi tiết đó thuộc phần nào của bài, từ dễ nhầm nghĩa là gì, lỗi người Việt hay mắc); phương án vô lý được thay bằng phương án dựng từ chi tiết khác của bài; nhiều câu đúng/sai được viết lại thành bẫy thật. Câu ôn “Meaning in context” lấy nghĩa sai từ từ dễ nhầm (cùng từ loại, cùng bài, cùng cấp) và ghi rõ đó là nghĩa của từ nào. Công cụ kiểm tra báo lỗi khi thiếu giải thích. Xem `DECISIONS.md` §29.
 - **v0.5.3** (2026-11-16): sửa giao diện theo góp ý. Quick scan mở đúng cấp đang xem; nút lùi/tiến chuyển sang đầu cột danh sách; danh sách từ có con mắt riêng từng từ, nghĩa mở cùng hàng, bỏ loại từ ở dòng, cột rộng hơn; nút hiện/ẩn nghĩa đứng yên một chỗ; bỏ ghi chú nguồn giọng và dòng Difficulty; chọn từ không làm danh sách nhảy lên đầu; Practice ngữ pháp hiện hết các câu và giữ câu đã làm để xem lại; Today không lặp tiêu đề và ngày. Xem `DECISIONS.md` §30.
 - **v0.5.4** (2026-11-20): B1 · Pass 2, đợt 1: 5 bài đọc mới (b1-p2-01 … 05: Valentina Tereshkova, anh em Wright, Nellie Bly, phiến đá Rosetta, hang Lascaux), ôn lại 87 từ B1 trong chuyện mới, không thêm từ. Kế hoạch 15 bài ở `tasks/v0.6.md`; hai chuyện dự kiến (Apollo 13, Hưu chiến Giáng sinh) được thay vì đã có ở Pass 1.
+- **v0.5.5** (2026-11-20): B1 · Pass 2, đợt 2: 5 bài đọc mới (b1-p2-06 … 10: Edward Jenner và vắc-xin đậu mùa, Đại hỏa hoạn London 1666, Emily Roebling và cầu Brooklyn, Clarence Birdseye và thực phẩm đông lạnh, Jesse Owens và Luz Long), ôn lại 84 từ B1, không thêm từ.

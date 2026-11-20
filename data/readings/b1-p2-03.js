@@ -70,7 +70,7 @@ EI.reading({
       ["But people remembered her, a woman with one small bag who had taken a story from a book and made it real, with New York as her {destination} at both ends.", "Nhưng người ta nhớ đến cô, một người phụ nữ với một chiếc túi nhỏ đã lấy một câu chuyện trong sách và biến nó thành thật, với New York là điểm đến ở cả hai đầu chuyến đi."]
     ]
   ],
-  gloss: { novel: 'tiểu thuyết', hero: 'nhân vật chính', reporter: 'phóng viên', mentally: 'về mặt tâm thần (mentally ill = bị bệnh tâm thần)', ill: 'ốm, bệnh', treated: 'đối xử', 'mad-house': 'nhà thương điên (cách gọi cũ, không lịch sự)', underwear: 'đồ lót', coat: 'áo khoác', pounds: 'bảng Anh (tiền)', neck: 'cổ', seasick: 'say sóng', canal: 'kênh đào', monkey: 'con khỉ', surprising: 'đáng ngạc nhiên', magazine: 'tạp chí', opposite: 'ngược lại', direction: 'hướng', contest: 'cuộc thi', guess: 'đoán', prize: 'giải thưởng', owner: 'chủ', crowds: 'đám đông', cheer: 'cổ vũ, reo hò', stations: 'nhà ga', record: 'kỷ lục', dollars: 'đô la', rickshaw: 'xe kéo', horse: 'con ngựa', donkey: 'con lừa', toward: 'về phía', intelligent: 'thông minh', tempered: '(bad tempered) khó tính, dễ cáu', concern: 'việc (của ai), mối quan tâm', interested: 'quan tâm' },
+  gloss: { 'mad-house': 'nhà thương điên (cách gọi cũ, không lịch sự)', pounds: 'bảng Anh (tiền)', seasick: 'say sóng', canal: 'kênh đào', contest: 'cuộc thi', cheer: 'cổ vũ, reo hò', rickshaw: 'xe kéo', donkey: 'con lừa', tempered: '(bad tempered) khó tính, dễ cáu', concern: 'việc (của ai), mối quan tâm' },
   grammar: [
     ['past-perfect', 'In 1887, she had pretended to be mentally ill'],
     ['passive-tenses', 'how badly the women in the mental hospital were treated'],

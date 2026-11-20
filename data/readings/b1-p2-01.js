@@ -74,7 +74,7 @@ EI.reading({
       ["Valentina Tereshkova {remains=remain} the only woman who has flown alone on a space mission.", "Valentina Tereshkova vẫn là người phụ nữ duy nhất từng bay một mình trong một chuyến bay vào vũ trụ."]
     ]
   ],
-  gloss: { spacecraft: 'tàu vũ trụ', soviet: '(thuộc) Liên Xô', rocket: 'tên lửa', tractor: 'máy kéo', tire: 'lốp xe', textile: 'dệt (nhà máy dệt)', technical: 'kỹ thuật', parachute: 'cái dù', parachutist: 'người nhảy dù', parachutists: 'người nhảy dù', unusual: 'khác thường', diary: 'nhật ký', weightless: 'không trọng lượng', spun: 'quay (spin – spun – spun)', jet: 'phản lực', launch: 'vụ phóng (tàu, tên lửa)', seagull: 'chim hải âu', astronauts: 'phi hành gia', photographs: 'ảnh chụp', academy: 'học viện', mission: 'sứ mệnh, chuyến bay (vào vũ trụ)', meal: 'bữa ăn', hero: 'người hùng', allow: 'cho phép', control: 'điều khiển', layers: 'lớp', sick: 'buồn nôn, ốm', pilot: 'phi công', closed: 'kín, đóng', northeast: 'đông bắc', chosen: 'được chọn (choose – chose – chosen)' },
+  gloss: { spacecraft: 'tàu vũ trụ', soviet: '(thuộc) Liên Xô', rocket: 'tên lửa', tractor: 'máy kéo', textile: 'dệt (nhà máy dệt)', parachute: 'cái dù', parachutist: 'người nhảy dù', parachutists: 'người nhảy dù', weightless: 'không trọng lượng', spun: 'quay (spin – spun – spun)', jet: 'phản lực', launch: 'vụ phóng (tàu, tên lửa)', seagull: 'chim hải âu', astronauts: 'phi hành gia', academy: 'học viện', mission: 'sứ mệnh, chuyến bay (vào vũ trụ)', northeast: 'đông bắc', chosen: 'được chọn (choose – chose – chosen)' },
   grammar: [
     ['past-perfect', 'she had been an ordinary factory worker'],
     ['passive-tenses', 'she was one of five women who were chosen'],

@@ -34,7 +34,7 @@ ROADMAP.md                                        lộ trình và số phiên b�
 3. Không flashcard, không bài kiểm tra rời, không bảng xếp hạng, không đồng hồ đếm ngược. Mọi câu hỏi gắn với một bài đọc hoặc một chủ điểm ngữ pháp.
 4. Mỗi bài học xong trong một lần ngồi: bài A2 ước tính 25–32 phút (cột `lesson` của công cụ kiểm tra).
 
-**Codex / ChatGPT và các AI chạy trong máy ảo:** cần bật truy cập Internet cho môi trường (để mở nguồn). Repo không cần cài gì thêm ngoài Node và Python có sẵn; nếu không có Playwright thì bỏ qua `tools/e2e-test.py` và ghi trong PR (CI chạy). Đợt việc gần nhất: `tasks/v0.5.md` (B1 · Pass 1, phần 3: đủ 802/802 mục B1), đã xong; đợt kế tiếp v0.6 (B1 · Pass 2, ôn từ B1, không thêm từ) chưa có file việc. Từ v0.5 có **khóa nghĩa** `từ~loại` (xem `CONTENT_GUIDE.md` mục 2).
+**Codex / ChatGPT và các AI chạy trong máy ảo:** cần bật truy cập Internet cho môi trường (để mở nguồn). Repo không cần cài gì thêm ngoài Node và Python có sẵn; nếu không có Playwright thì bỏ qua `tools/e2e-test.py` và ghi trong PR (CI chạy). Đợt việc gần nhất: `tasks/v0.6.md` (B1 · Pass 2: 15 bài ôn 241 từ B1, không thêm từ), đã xong; đợt kế tiếp v0.7 (B2 · Pass 1, phần 1) chưa có file việc. Từ v0.5 có **khóa nghĩa** `từ~loại` (xem `CONTENT_GUIDE.md` mục 2).
 
 **Nếu bạn không truy cập được web**, đừng viết bài đọc. Ghi vào PR/issue: “Không tra cứu được nguồn, dừng lại”. Việc mã và kiểm thử thì vẫn làm được.
 

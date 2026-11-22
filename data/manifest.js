@@ -301,7 +301,7 @@ EI.files = [
   // b2-p1-24 (tasks/v0.8.md)
   'data/readings/b2-p1-24.js',
   // b2-p1-25 (tasks/v0.8.md)
-  // 'data/readings/b2-p1-25.js',
+  'data/readings/b2-p1-25.js',
   // b2-p1-26 (tasks/v0.8.md)
   // 'data/readings/b2-p1-26.js',
   // b2-p1-27 (tasks/v0.8.md)

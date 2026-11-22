@@ -251,5 +251,44 @@ EI.files = [
   'data/readings/b1-p2-14.js',
   // b1-p2-15 (tasks/v0.6.md)
   'data/readings/b1-p2-15.js',
+  'data/grammar-b2.js',
+  // b2-p1-01 (tasks/v0.7.md)
+  // 'data/readings/b2-p1-01.js',
+  // b2-p1-02 (tasks/v0.7.md)
+  // 'data/readings/b2-p1-02.js',
+  // b2-p1-03 (tasks/v0.7.md)
+  // 'data/readings/b2-p1-03.js',
+  // b2-p1-04 (tasks/v0.7.md)
+  // 'data/readings/b2-p1-04.js',
+  // b2-p1-05 (tasks/v0.7.md)
+  // 'data/readings/b2-p1-05.js',
+  // b2-p1-06 (tasks/v0.7.md)
+  // 'data/readings/b2-p1-06.js',
+  // b2-p1-07 (tasks/v0.7.md)
+  // 'data/readings/b2-p1-07.js',
+  // b2-p1-08 (tasks/v0.7.md)
+  // 'data/readings/b2-p1-08.js',
+  // b2-p1-09 (tasks/v0.7.md)
+  // 'data/readings/b2-p1-09.js',
+  // b2-p1-10 (tasks/v0.7.md)
+  // 'data/readings/b2-p1-10.js',
+  // b2-p1-11 (tasks/v0.7.md)
+  // 'data/readings/b2-p1-11.js',
+  // b2-p1-12 (tasks/v0.7.md)
+  // 'data/readings/b2-p1-12.js',
+  // b2-p1-13 (tasks/v0.7.md)
+  // 'data/readings/b2-p1-13.js',
+  // b2-p1-14 (tasks/v0.7.md)
+  // 'data/readings/b2-p1-14.js',
+  // b2-p1-15 (tasks/v0.7.md)
+  // 'data/readings/b2-p1-15.js',
+  // b2-p1-16 (tasks/v0.7.md)
+  // 'data/readings/b2-p1-16.js',
+  // b2-p1-17 (tasks/v0.7.md)
+  // 'data/readings/b2-p1-17.js',
+  // b2-p1-18 (tasks/v0.7.md)
+  // 'data/readings/b2-p1-18.js',
+  // b2-p1-19 (tasks/v0.7.md)
+  // 'data/readings/b2-p1-19.js',
   'audio/index.js'
 ];

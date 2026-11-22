@@ -1,7 +1,7 @@
 EI.words('B2', `
 # ---- b2-p1-41 The Year Everyone Wanted Shares
 bargain|n|/ˈbɑːrɡən/|a thing bought for less than its usual price; also an agreement between people about what each will do|At that price, the car was a real {bargain}.|a real bargain; a bargain price; make a bargain|món hời; sự thỏa thuận|2||
-bet|n, v|/bet/|(n) money that you risk on the result of a race, a game or an event; (v) to risk money in this way|He lost his {bet} on the race.|place a bet; a safe bet; bet on something|vụ cá cược; cá cược|2||bet – bet – bet.|
+bet|n, v|/bet/|(n) money that you risk on the result of a race, a game or an event; (v) to risk money in this way|He lost his {bet} on the race.|place a bet; a safe bet; bet on something|vụ cá cược; cá cược|2|bet – bet – bet.|
 bias|n|/ˈbaɪəs/|a tendency to like or to dislike somebody or something, so that your opinion is not fair|The report showed a clear {bias} toward the cheaper supplier.|a bias against/toward…; without bias|sự thiên lệch, định kiến|2||biased (adj)
 certificate|n|/sərˈtɪfɪkət/|an official document that shows that something is true or that you own something|You need a {certificate} for every batch of material.|a birth/share certificate; a certificate of…|giấy chứng nhận|2||certify (v)
 conspiracy|n|/kənˈspɪrəsi/|a secret plan by a group of people to do something wrong or illegal|They were accused of a {conspiracy} to cheat the bank.|a conspiracy to do something; conspiracy theory|âm mưu|2||

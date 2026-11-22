@@ -357,19 +357,5 @@ EI.files = [
   'data/readings/b2-p1-51.js',
   // b2-p1-52 (tasks/v0.9.md)
   'data/readings/b2-p1-52.js',
-  // b2-p1-53 (tasks/v0.9.md)
-  // 'data/readings/b2-p1-53.js',
-  // b2-p1-54 (tasks/v0.9.md)
-  // 'data/readings/b2-p1-54.js',
-  // b2-p1-55 (tasks/v0.9.md)
-  // 'data/readings/b2-p1-55.js',
-  // b2-p1-56 (tasks/v0.9.md)
-  // 'data/readings/b2-p1-56.js',
-  // b2-p1-57 (tasks/v0.9.md)
-  // 'data/readings/b2-p1-57.js',
-  // b2-p1-58 (tasks/v0.9.md)
-  // 'data/readings/b2-p1-58.js',
-  // b2-p1-59 (tasks/v0.9.md)
-  // 'data/readings/b2-p1-59.js',
   'audio/index.js'
 ];

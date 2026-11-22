@@ -253,7 +253,7 @@ EI.files = [
   'data/readings/b1-p2-15.js',
   'data/grammar-b2.js',
   // b2-p1-01 (tasks/v0.7.md)
-  // 'data/readings/b2-p1-01.js',
+  'data/readings/b2-p1-01.js',
   // b2-p1-02 (tasks/v0.7.md)
   // 'data/readings/b2-p1-02.js',
   // b2-p1-03 (tasks/v0.7.md)

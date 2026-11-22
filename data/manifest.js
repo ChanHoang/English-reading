@@ -252,6 +252,7 @@ EI.files = [
   // b1-p2-15 (tasks/v0.6.md)
   'data/readings/b1-p2-15.js',
   'data/grammar-b2.js',
+  'data/grammar-b2-02.js',
   // b2-p1-01 (tasks/v0.7.md)
   'data/readings/b2-p1-01.js',
   // b2-p1-02 (tasks/v0.7.md)
@@ -330,5 +331,45 @@ EI.files = [
   'data/readings/b2-p1-38.js',
   // b2-p1-39 (tasks/v0.8.md)
   'data/readings/b2-p1-39.js',
+  // b2-p1-40 (tasks/v0.9.md)
+  // 'data/readings/b2-p1-40.js',
+  // b2-p1-41 (tasks/v0.9.md)
+  // 'data/readings/b2-p1-41.js',
+  // b2-p1-42 (tasks/v0.9.md)
+  // 'data/readings/b2-p1-42.js',
+  // b2-p1-43 (tasks/v0.9.md)
+  // 'data/readings/b2-p1-43.js',
+  // b2-p1-44 (tasks/v0.9.md)
+  // 'data/readings/b2-p1-44.js',
+  // b2-p1-45 (tasks/v0.9.md)
+  // 'data/readings/b2-p1-45.js',
+  // b2-p1-46 (tasks/v0.9.md)
+  // 'data/readings/b2-p1-46.js',
+  // b2-p1-47 (tasks/v0.9.md)
+  // 'data/readings/b2-p1-47.js',
+  // b2-p1-48 (tasks/v0.9.md)
+  // 'data/readings/b2-p1-48.js',
+  // b2-p1-49 (tasks/v0.9.md)
+  // 'data/readings/b2-p1-49.js',
+  // b2-p1-50 (tasks/v0.9.md)
+  // 'data/readings/b2-p1-50.js',
+  // b2-p1-51 (tasks/v0.9.md)
+  // 'data/readings/b2-p1-51.js',
+  // b2-p1-52 (tasks/v0.9.md)
+  // 'data/readings/b2-p1-52.js',
+  // b2-p1-53 (tasks/v0.9.md)
+  // 'data/readings/b2-p1-53.js',
+  // b2-p1-54 (tasks/v0.9.md)
+  // 'data/readings/b2-p1-54.js',
+  // b2-p1-55 (tasks/v0.9.md)
+  // 'data/readings/b2-p1-55.js',
+  // b2-p1-56 (tasks/v0.9.md)
+  // 'data/readings/b2-p1-56.js',
+  // b2-p1-57 (tasks/v0.9.md)
+  // 'data/readings/b2-p1-57.js',
+  // b2-p1-58 (tasks/v0.9.md)
+  // 'data/readings/b2-p1-58.js',
+  // b2-p1-59 (tasks/v0.9.md)
+  // 'data/readings/b2-p1-59.js',
   'audio/index.js'
 ];

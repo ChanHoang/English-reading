@@ -18,8 +18,9 @@ Số bài và số từ của các giai đoạn chưa làm là **ước tính** 
 | v0.7 | B2 · Pass 1, phần 1 | 19 bài (1.000–1.300 từ/bài), 456 từ B2, 8 bài ngữ pháp B2 nhóm 1 (`tasks/v0.7.md`) | Xong |
 | v0.8 | B2 · Pass 1, phần 2 | 20 bài, 480 từ B2 (`tasks/v0.8.md`) | Xong |
 | v0.9 | B2 · Pass 1, phần 3 | 13 bài, 253 từ B2; ngữ pháp B2 nhóm 2 (`tasks/v0.9.md`). Còn khoảng 235 mục B2, xem `DECISIONS.md` §34 | Xong |
-| v0.10 | C1 · Pass 1, phần 1 | Khoảng 18 bài (1.300–1.600 từ/bài), khoảng 440 từ C1 | Chưa làm |
-| v0.11 | C1 · Pass 1, phần 2 | Khoảng 18 bài, khoảng 440 từ C1 | Chưa làm |
+| v0.10 | B2 · Pass 1, phần 4 | 17 bài, 234 mục từ B2 còn lại (phần lớn dùng khóa nghĩa): **đủ 1.424/1.424 mục B2 nội dung** (`tasks/v0.10.md`) | Xong |
+| v0.11 | C1 · Pass 1, phần 1 | Khoảng 18 bài (1.300–1.600 từ/bài), khoảng 440 từ C1 | Chưa làm |
+| v0.12 | C1 · Pass 1, phần 2 | Khoảng 18 bài, khoảng 440 từ C1 | Chưa làm |
 | v1.0 | C1 · Pass 1, phần 3 | Khoảng 18 bài, khoảng 430 từ C1 còn lại: **đủ bộ từ A2–C1** | Chưa làm |
 
 Sau v1.0 (tùy chọn): Pass 2 cho B2 và C1, theo cùng cách đánh số (v1.1, v1.2…).
@@ -46,3 +47,4 @@ Sau v1.0 (tùy chọn): Pass 2 cho B2 và C1, theo cùng cách đánh số (v1.1
 - **v0.7** (2026-11-22): B2 · Pass 1, phần 1: 19 bài đọc B2 (b2-p1-01 … 19, 1.000–1.300 từ/bài: từ tàu Mars Climate Orbiter mất vì nhầm đơn vị đến giờ mùa hè ra đời), 456 từ B2 mới (24 từ/bài), 8 bài ngữ pháp B2 nhóm một (câu điều kiện hỗn hợp, quá khứ hoàn thành tiếp diễn, động từ khuyết thiếu quá khứ, bị động tường thuật, mệnh đề phân từ, câu chẻ, liên từ tương phản, động từ đổi nghĩa theo dạng theo sau). Còn 961 mục B2 cho v0.8–v0.9. Xem `DECISIONS.md` §32.
 - **v0.8** (2026-11-22): B2 · Pass 1, phần 2: 20 bài đọc B2 (b2-p1-20 … 39: từ Deming dạy người Nhật đo lường đến trận dịch nhảy múa ở Strasbourg năm 1518), 480 từ B2 mới (24 từ/bài), không thêm bài ngữ pháp. Nhiều bài về đo lường, tiêu chuẩn và nguyên nhân gốc (Deming, Titanic và SOLAS, bảng kiểm tra sau vụ Boeing 299, Penzias và Wilson, định nghĩa hành tinh, Công trình Delta). Còn khoảng 485 mục B2 và 8 bài ngữ pháp B2 nhóm hai cho v0.9. Xem `DECISIONS.md` §33.
 - **v0.9** (2026-11-23): B2 · Pass 1, phần 3: 13 bài đọc B2 (b2-p1-40 … 52: từ cầu Quebec sập hai lần đến Steamboat Willie), 253 từ B2 mới (24 từ/bài ở 6 bài đầu, giảm dần còn 10 ở bài cuối), 8 bài ngữ pháp B2 nhóm hai (đảo ngữ sau từ phủ định, động từ tường thuật, tương lai trong quá khứ, quá khứ giả định, mệnh đề quan hệ có giới từ, mệnh đề chỉ mục đích, both/either/neither/none/each, bị động với to V và V-ing). Dừng ở 13 bài thay vì 20 vì phần từ còn lại khó ghép vào chuyện thật; còn khoảng 235 mục B2 chưa dạy. Xem `DECISIONS.md` §34.
+- **v0.10** (2026-11-23): B2 · Pass 1, phần 4: 17 bài đọc B2 (b2-p1-53 … 69: từ biểu đồ kiểm soát của Shewhart đến Angkor và vòng gỗ cây pơ mu ở Lâm Đồng), 234 mục từ B2 mới; đủ 1.424/1.424 mục B2 nội dung của bảng tham chiếu. Phần lớn là nghĩa thứ hai của từ đã học (khóa nghĩa, ví dụ `account~v`, `close~n`, `seat~v`), 12 từ có chính tả Anh trong bảng tham chiếu dạy theo chính tả Mỹ (colorful, honor, labor…), và các từ nhạy cảm (gay, racist, terrorism…) dạy trung tính trong một bài về lịch sử nghĩa của từ. Số từ mục tiêu mỗi bài giảm dần (24 ở bài đầu, 5–8 ở các bài cuối). Không thêm bài ngữ pháp. Lộ trình dời: C1 là v0.11, v0.12 và v1.0. Xem `DECISIONS.md` §35.

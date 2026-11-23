@@ -16,7 +16,7 @@ const UK = { analyze: 'analyse', center: 'centre', colored: 'coloured', favor: '
 // --pos also lists words whose other parts of speech at this level have no entry yet (e.g. damage (v) when only damage (n) is taught).
 const byPos = process.argv.includes('--pos'), norm = p => ({ prep: 'preposition', conj: 'conjunction' }[p] || p);
 const taught = {};
-for (const e of Object.values(EI.W)) if (e.level === level) { const h = UK[e.hw] || e.hw; (taught[h] = taught[h] || new Set()); e.pos.split(',').forEach(p => taught[h].add(norm(p.trim()))); }
+for (const e of Object.values(EI.W)) if (e.level === level) for (const h of new Set([e.hw, UK[e.hw] || e.hw])) { (taught[h] = taught[h] || new Set()); e.pos.split(',').forEach(p => taught[h].add(norm(p.trim()))); }
 let total = 0, done = 0, hidden = 0; const out = [];
 for (const [w, o] of Object.entries(REF)) {
   const pos = Object.entries(o).filter(([, l]) => l === level).map(([p]) => p);

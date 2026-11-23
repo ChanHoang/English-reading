@@ -11,7 +11,7 @@ run('js/core.js'); run('data/manifest.js'); const EI = ctx.EI; EI.files.forEach(
 const REF = JSON.parse(fs.readFileSync(path.join(root, 'tools/cefr-reference.json'), 'utf8'));
 const FN = new Set(['pronoun', 'determiner', 'modal verb', 'auxiliary verb', 'conjunction', 'preposition', 'exclamation', 'number', 'indefinite article']);
 // US spellings used in the app for words the reference list has in British spelling
-const UK = { analyze: 'analyse', center: 'centre', colored: 'coloured', favor: 'favour', neighborhood: 'neighbourhood', tire: 'tyre' };
+const UK = { analyze: 'analyse', center: 'centre', colored: 'coloured', favor: 'favour', neighborhood: 'neighbourhood', tire: 'tyre', colorful: 'colourful', defense: 'defence', inquiry: 'enquiry', flavor: 'flavour', fulfill: 'fulfil', harbor: 'harbour', honor: 'honour', humor: 'humour', judgment: 'judgement', labor: 'labour', license: 'licence', liter: 'litre', offense: 'offence' };
 // A reference word counts as taught when the word list has an entry of this level for it (“award~v” is a B1 entry for “award”).
 // --pos also lists words whose other parts of speech at this level have no entry yet (e.g. damage (v) when only damage (n) is taught).
 const byPos = process.argv.includes('--pos'), norm = p => ({ prep: 'preposition', conj: 'conjunction' }[p] || p);

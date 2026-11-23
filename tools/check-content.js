@@ -48,7 +48,7 @@ for (const e of wl) {
   if (!/^\/.+\/$/.test(e.ipa)) E(e.w, 'IPA must be written between slashes: ' + e.ipa);
   if (!/\{[^}]+\}/.test(e.ex)) E(e.w, 'example must mark the word with {…}');
   if (new RegExp('\\b' + e.hw + '\\b', 'i').test(e.def)) Wn(e.w, 'definition uses the word itself');
-  const ro = REF[e.hw] || REF[IRR[e.hw]], poss = e.pos.split(',').map(x => x.trim());
+  const ro = (IRR[e.hw] && REF[IRR[e.hw]] && !(REF[e.hw] || {})[e.pos.split(',')[0].trim()] ? REF[IRR[e.hw]] : REF[e.hw] || REF[IRR[e.hw]]), poss = e.pos.split(',').map(x => x.trim());
   if (!ro) Wn(e.w, 'not found in the CEFR reference list');
   else if (!poss.some(p => ro[p] === e.level)) Wn(e.w, 'level in data is ' + e.level + ' (' + e.pos + ') but the reference list says ' + JSON.stringify(ro));
   const hard = e.def.replace(/\b[A-Z][a-z]+/g, (m, i) => i ? '' : m).toLowerCase().match(/[a-z]+/g).filter(x => { const l = levelOf(x); return !l || RANK[l] > RANK[e.level]; });

@@ -264,6 +264,12 @@
 "t": "Doll expected a study of five years.",
 "v": "h"
 },
+"107fn4o6dy": {
+"d": 7.19,
+"h": "306068245d",
+"t": "Engineers still model a process in the same way, as a stable system plus an occasional special cause.",
+"v": "h"
+},
 "107sq40o3td": {
 "d": 3.44,
 "h": "1fd0b2344e",
@@ -461,6 +467,12 @@
 "d": 2.48,
 "h": "a99da13b29",
 "t": "One doctor did not agree.",
+"v": "h"
+},
+"10ftxr6b1tg": {
+"d": 5.75,
+"h": "484393d148",
+"t": "They tracked the quality of parts over weeks and months instead of judging each part alone.",
 "v": "h"
 },
 "10fusjf88yc": {
@@ -2170,6 +2182,12 @@
 "t": "Now here are some real work words.",
 "v": "h"
 },
+"120g62sag57": {
+"d": 5.68,
+"h": "233e4ab84e",
+"t": "A chart does not tell you what the cause is; you still have to figure that out yourself.",
+"v": "h"
+},
 "120swdl77hy": {
 "d": 5.27,
 "h": "d0bc4a32a9",
@@ -2556,6 +2574,12 @@
 "d": 10.1,
 "h": "96ea5699d7",
 "t": "And with regular work and a fair price, a family can save a little cash, and that is a benefit for the future: it does not need a moneylender the next time.",
+"v": "h"
+},
+"12fzmymeq": {
+"d": 5.77,
+"h": "06658055c9",
+"t": "In a stable process, the weight may range by only a few hundredths of a gram.",
 "v": "h"
 },
 "12g2awrfdkk": {
@@ -3074,6 +3098,12 @@
 "t": "The machines in this part of the factory are very noisy.",
 "v": "b"
 },
+"12yhc6b6k0x": {
+"d": 0.9,
+"h": "312581cb31",
+"t": "address",
+"v": "h"
+},
 "12ykfpadwic": {
 "d": 6.25,
 "h": "21d1c642b6",
@@ -3278,6 +3308,12 @@
 "t": "But the prince was not there.",
 "v": "h"
 },
+"134cb2ln13p": {
+"d": 3.09,
+"h": "98efe94f48",
+"t": "Customers rate our service as excellent.",
+"v": "h"
+},
 "134f8756g8q": {
 "d": 5.04,
 "h": "68d6620c5d",
@@ -3324,6 +3360,12 @@
 "d": 2.27,
 "h": "2345c6465e",
 "t": "His face looks familiar.",
+"v": "h"
+},
+"1380cftaafv": {
+"d": 3.01,
+"h": "ec9dde7f06",
+"t": "I can’t figure out why the machine stopped.",
 "v": "h"
 },
 "1381bbcsq7s": {
@@ -4119,6 +4161,12 @@
 "t": "But she did not stop learning: she studied by mail, and in 1960 she finished a technical course.",
 "v": "h"
 },
+"13xd6otppic": {
+"d": 8.22,
+"h": "264da37796",
+"t": "On May 16, 1924, Shewhart issued a short memorandum to his boss, George Edwards.",
+"v": "h"
+},
 "13xwyf12daq": {
 "d": 4.17,
 "h": "591ee275f4",
@@ -4707,6 +4755,12 @@
 "t": "Maybe you have an alternative in your pocket, and maybe a bag that you do not take will not end up in a river, in a fish, or on a truck to a mountain of waste.",
 "v": "h"
 },
+"14i39pgyyfh": {
+"d": 7.93,
+"h": "2de3392d2d",
+"t": "Edwards later remembered that it was “only about a page in length,” and that about a third of the page was a simple diagram.",
+"v": "h"
+},
 "14i9pra6sz5": {
 "d": 2.48,
 "h": "37988bcea4",
@@ -5075,6 +5129,12 @@
 "t": "independence",
 "v": "h"
 },
+"14sp7vg9r6q": {
+"d": 3.8,
+"h": "65f411d323",
+"t": "Engineers modeled the flow of plastic in the mold.",
+"v": "h"
+},
 "14t00yy8h42": {
 "d": 4.94,
 "h": "14d4797c45",
@@ -5241,6 +5301,12 @@
 "d": 6.28,
 "h": "9875c64683",
 "t": "At first, NASA did not believe that a company that made underwear could do the job.",
+"v": "h"
+},
+"14z849bf2jl": {
+"d": 2.33,
+"h": "17baf54a55",
+"t": "The price fell to a new low.",
 "v": "h"
 },
 "14zse8l7pk2": {
@@ -7209,6 +7275,12 @@
 "t": "About 1,600 people died at once, and hundreds more died later from their injuries; it is estimated that the final number was close to 2,000.",
 "v": "h"
 },
+"16my8ghpj33": {
+"d": 6.34,
+"h": "ce11674b63",
+"t": "The first is looking for a cause that does not exist, and the second is missing a cause that does.",
+"v": "h"
+},
 "16myc2qobig": {
 "d": 4.96,
 "h": "d1aa6f8da6",
@@ -8308,10 +8380,22 @@
 "t": "To see it better, she made the paper move much faster, but for a month the signal did not come back.",
 "v": "h"
 },
+"17mp3p9p5hq": {
+"d": 6.34,
+"h": "3e41479b4c",
+"t": "Engineers who chart their data can see a slow change long before parts go out of tolerance.",
+"v": "h"
+},
 "17mp8pw03j8": {
 "d": 0.91,
 "h": "105ca8fe92",
 "t": "taste",
+"v": "h"
+},
+"17mxhq28bq4": {
+"d": 7.81,
+"h": "7613a8e974",
+"t": "The second kind comes from a specific cause that can be found and removed; he called it assignable-cause variation.",
 "v": "h"
 },
 "17nbh2q32w4": {
@@ -9539,6 +9623,12 @@
 "t": "The morning was calm, and at first she even sang songs with the people on the boat.",
 "v": "h"
 },
+"18oxfrj7ema": {
+"d": 7.07,
+"h": "cac83eb6bf",
+"t": "The same machine may process several batches of material in a day, and each batch can behave a little differently.",
+"v": "h"
+},
 "18oxxsh4yc7": {
 "d": 8.98,
 "h": "4dc1cbeb16",
@@ -10152,6 +10242,12 @@
 "t": "Then the lights went out, the room was all dark, and the blank screen came to life.",
 "v": "h"
 },
+"199hq14l0kt": {
+"d": 3.35,
+"h": "a1d47bd15d",
+"t": "The team charts the weight of the parts every hour.",
+"v": "h"
+},
 "199r6fs7xux": {
 "d": 7.14,
 "h": "83c1c2c8e3",
@@ -10318,6 +10414,12 @@
 "d": 8.69,
 "h": "2350e959f3",
 "t": "In many ways, yes: after 1914, far fewer workers quit, and the company kept its staff.",
+"v": "h"
+},
+"19f1o1rzogy": {
+"d": 4.46,
+"h": "3e3147167a",
+"t": "It tells you when to look, and then you have to address the problem.",
 "v": "h"
 },
 "19f30pahz33": {
@@ -11677,6 +11779,12 @@
 "d": 7.51,
 "h": "68c5282384",
 "t": "He did not like to be called a man of peace either: “What kind of soldier can be a pacifist?” he asked.",
+"v": "h"
+},
+"1ap6gmpnor3": {
+"d": 10.26,
+"h": "e5f3a59c0a",
+"t": "Chance causes account for the normal spread of results, while an assignable cause accounts for a real change, such as a worn tool or a new batch of material.",
 "v": "h"
 },
 "1apbmffmev1": {
@@ -13088,6 +13196,12 @@
 "t": "The answer came from the kitchen.",
 "v": "h"
 },
+"1bufkpa6xkk": {
+"d": 3.95,
+"h": "038fe7f678",
+"t": "A single new high or low is not always a problem.",
+"v": "h"
+},
 "1buzngoegje": {
 "d": 8.64,
 "h": "eecf9007ec",
@@ -13236,6 +13350,12 @@
 "d": 6.46,
 "h": "94377b7382",
 "t": "Before any project begins, the biggest obstacle is not always the one that looks the biggest.",
+"v": "h"
+},
+"1byxxesnywe": {
+"d": 6.18,
+"h": "14d5bb66c7",
+"t": "After a new mold is installed, the measurements often change for a while and then level off.",
 "v": "h"
 },
 "1bz3jsod8qv": {
@@ -13633,6 +13753,12 @@
 "d": 1.05,
 "h": "2a95a60831",
 "t": "species",
+"v": "h"
+},
+"1c8c4i4c3fx": {
+"d": 2.43,
+"h": "9bee1f0533",
+"t": "The change was for the worse.",
 "v": "h"
 },
 "1c8d88d0t2z": {
@@ -15251,6 +15377,12 @@
 "d": 4.82,
 "h": "c84251f5a5",
 "t": "With this mechanism, the plates could move smoothly round each curve.",
+"v": "h"
+},
+"1dm838wfu3m": {
+"d": 5.2,
+"h": "f506414ffe",
+"t": "In the same way, a new low inside the limits is usually just chance.",
 "v": "h"
 },
 "1dmcopidic8": {
@@ -17153,6 +17285,12 @@
 "t": "The shock wave broke windows hundreds of miles away, and instruments around the globe recorded it like an earthquake.",
 "v": "h"
 },
+"1fe0rmhs63u": {
+"d": 7.11,
+"h": "89212d51f3",
+"t": "The first kind comes from many small causes that are always present; he called it chance-cause variation.",
+"v": "h"
+},
 "1feeicwiaex": {
 "d": 0.83,
 "h": "32677a19eb",
@@ -17515,6 +17653,12 @@
 "t": "Then the soldiers’ health got better, so the cleaning was for the good of everybody.",
 "v": "h"
 },
+"1fquimgy2fm": {
+"d": 6.51,
+"h": "4b0ec7d5a4",
+"t": "A good report details what was measured, how many parts were checked and which cavity they came from.",
+"v": "h"
+},
 "1fqy1t5hg21": {
 "d": 0.99,
 "h": "d62f84b300",
@@ -17856,6 +18000,12 @@
 "d": 6.12,
 "h": "8fab0d6b3e",
 "t": "Lake Nyos had suddenly released a vast cloud of it, perhaps hundreds of thousands of tons.",
+"v": "h"
+},
+"1g0wfsyg5qv": {
+"d": 7.38,
+"h": "a5d142bd74",
+"t": "If a customer complains a year later, the charts that were filed at the time can show exactly when something changed.",
 "v": "h"
 },
 "1g16xy2mnpg": {
@@ -18265,6 +18415,12 @@
 "d": 0.87,
 "h": "a381d3d749",
 "t": "weapon",
+"v": "h"
+},
+"1gelypehuaa": {
+"d": 6.87,
+"h": "9c9253e30d",
+"t": "Shewhart wanted to figure out when a change was really needed and when it was better to leave the process alone.",
 "v": "h"
 },
 "1gemgt8ab3n": {
@@ -19886,6 +20042,12 @@
 "t": "We expect the new mold next week.",
 "v": "h"
 },
+"1hvua216ymm": {
+"d": 9.28,
+"h": "fcb5324a82",
+"t": "In 1931 he published a book, Economic Control of Quality of Manufactured Product, which detailed his ideas.",
+"v": "h"
+},
 "1hvxawy32tr": {
 "d": 7.56,
 "h": "a5c4c042e4",
@@ -20408,6 +20570,12 @@
 "h": "8b7bb5a5a8",
 "s": "The accuracy of the C M M is checked every year.",
 "t": "The accuracy of the CMM is checked every year.",
+"v": "h"
+},
+"1idsyyt94tt": {
+"d": 5.3,
+"h": "3fd6c56104",
+"t": "Its main factory was the Hawthorne Works, a huge plant near Chicago.",
 "v": "h"
 },
 "1iel5y3w8s8": {
@@ -23244,6 +23412,12 @@
 "t": "The number of new cases fell, although many people had already left the area.",
 "v": "h"
 },
+"1kyqjst1tdw": {
+"d": 2.95,
+"h": "0c48e56275",
+"t": "The chart protects against two mistakes.",
+"v": "h"
+},
 "1kyrisz2ue7": {
 "d": 2.11,
 "h": "90c0b4ccca",
@@ -24018,6 +24192,12 @@
 "d": 2.78,
 "h": "5d8d618fbd",
 "t": "He gave a poor excuse for being late.",
+"v": "h"
+},
+"1lornmooicg": {
+"d": 7.27,
+"h": "c4bfdd76b3",
+"t": "At that time, quality control meant one thing: inspect the finished products and remove the bad ones.",
 "v": "h"
 },
 "1lp569e31fn": {
@@ -25077,6 +25257,12 @@
 "t": "This song reminds me of my school days.",
 "v": "h"
 },
+"1mp8e575s5t": {
+"d": 3.26,
+"h": "3aa2c18ab8",
+"t": "Bad weather accounts for most of the delays.",
+"v": "h"
+},
 "1mpbn716v3t": {
 "d": 5.51,
 "h": "61fdffdb2f",
@@ -25646,6 +25832,12 @@
 "d": 3.08,
 "h": "018a3b5ad5",
 "t": "He is the chief engineer of the project.",
+"v": "h"
+},
+"1nah5mivhaw": {
+"d": 6.14,
+"h": "4d7f9f39d0",
+"t": "Before mass production starts, engineers schedule trial runs to collect enough data.",
 "v": "h"
 },
 "1narsm1yqf2": {
@@ -28058,6 +28250,12 @@
 "t": "spiritual",
 "v": "h"
 },
+"1pfu66betei": {
+"d": 8.23,
+"h": "753cb3367b",
+"t": "Limits are not the same as specifications: the extremes of a stable process can still be outside what the customer needs.",
+"v": "h"
+},
 "1pfze8mn2ag": {
 "d": 2.75,
 "h": "af9009464e",
@@ -28092,6 +28290,12 @@
 "d": 3.75,
 "h": "a8566eb5cf",
 "t": "The city was rebuilt after the occupation ended.",
+"v": "h"
+},
+"1pgifat14od": {
+"d": 6.4,
+"h": "61969759ca",
+"t": "Instead of reacting to every new high, the engineer asks whether the point is outside the limits.",
 "v": "h"
 },
 "1pgql9sh7yl": {
@@ -29030,6 +29234,12 @@
 "d": 1.02,
 "h": "9502b4b6e3",
 "t": "novelist",
+"v": "h"
+},
+"1qddel8zfi5": {
+"d": 3.91,
+"h": "5f977837ed",
+"t": "A well-meant correction becomes a change for the worse.",
 "v": "h"
 },
 "1qdwb0ehxyc": {
@@ -30668,6 +30878,12 @@
 "t": "doubt",
 "v": "h"
 },
+"1rruqrzmbue": {
+"d": 0.9,
+"h": "425bd5740c",
+"t": "detail",
+"v": "h"
+},
 "1rs2rckn3ec": {
 "d": 6.76,
 "h": "12fa80ce0c",
@@ -31105,6 +31321,12 @@
 "d": 8.6,
 "h": "d6883b000b",
 "t": "Sullenberger took control and flew the plane, and Skiles tried to start the engines again by following the checklist for engine problems.",
+"v": "h"
+},
+"1s2zrvt8pxy": {
+"d": 6.89,
+"h": "ef0163e428",
+"t": "One page and one picture, written a hundred years ago, are still helping engineers to avoid it.",
 "v": "h"
 },
 "1s326qx46pm": {
@@ -32038,6 +32260,12 @@
 "d": 6.08,
 "h": "f371248583",
 "t": "Coptic was no longer a spoken language in daily life, but it was still used in church.",
+"v": "h"
+},
+"1svfngt9mvj": {
+"d": 8.02,
+"h": "f73e11d64d",
+"t": "In an injection molding plant, for example, the weight of a part may be sampled every hour and plotted on a chart.",
 "v": "h"
 },
 "1svgz5nfet3": {
@@ -34760,6 +34988,12 @@
 "d": 8.72,
 "h": "12f186087c",
 "t": "In 1617, a Portuguese priest named Francisco de Pina came to Hội An.",
+"v": "h"
+},
+"1ve6fx5mdeg": {
+"d": 5.06,
+"h": "02ba4c2539",
+"t": "Once they have leveled off, the engineer can study the process properly.",
 "v": "h"
 },
 "1vec73vvmyg": {
@@ -37993,6 +38227,12 @@
 "t": "It was one of the biggest disasters in the history of volcanoes.",
 "v": "h"
 },
+"1y6uql1g7wo": {
+"d": 7.84,
+"h": "8545ee7e14",
+"t": "In 1918 he joined Western Electric, the company that made the equipment for the Bell Telephone System.",
+"v": "h"
+},
 "1y7all71tsp": {
 "d": 3.73,
 "h": "1ce7c74418",
@@ -38770,6 +39010,12 @@
 "t": "chemical",
 "v": "h"
 },
+"1yypb0p1aly": {
+"d": 12.72,
+"h": "85ba59fa5f",
+"t": "Walter Shewhart was born in Illinois in 1891, and in 1917 he received a doctorate in physics from the University of California, Berkeley.",
+"v": "h"
+},
 "1yz2j5qouab": {
 "d": 7.68,
 "h": "d80d2b6b2e",
@@ -39046,6 +39292,12 @@
 "t": "ethic",
 "v": "h"
 },
+"1z6834sshmf": {
+"d": 3.82,
+"h": "aead22b3ee",
+"t": "The results shifted after the new material arrived.",
+"v": "h"
+},
 "1z6ljpx2jcm": {
 "d": 4.46,
 "h": "46ef3891d2",
@@ -39302,6 +39554,12 @@
 "d": 5.25,
 "h": "40daf9a909",
 "t": "It was one of the most important things that science found in the 1900s.",
+"v": "h"
+},
+"1zg4uz6xrj9": {
+"d": 7.45,
+"h": "82e7ba7791",
+"t": "Many customers rate suppliers partly on process capability, which is calculated from the same kind of data.",
 "v": "h"
 },
 "1zg8l5t7ftk": {
@@ -40194,6 +40452,12 @@
 "t": "Making a fake that could fool the experts was not easy.",
 "v": "h"
 },
+"205t8sba2qj": {
+"d": 3.69,
+"h": "14837ff740",
+"t": "The factory processes ten tonnes of plastic a day.",
+"v": "h"
+},
 "2065i0a20d0": {
 "d": 3.42,
 "h": "9f610750b0",
@@ -40838,6 +41102,12 @@
 "t": "length",
 "v": "h"
 },
+"20p7atx22km": {
+"d": 6.91,
+"h": "56de09e59f",
+"t": "A chart that tracks one dimension over time is often more useful than a thousand single measurements.",
+"v": "h"
+},
 "20pagfva4yo": {
 "d": 7.0,
 "h": "29690654b3",
@@ -40951,6 +41221,12 @@
 "d": 8.25,
 "h": "5afb49d2d1",
 "t": "Every storm, every cloud and every red sunset in the sky has a story, and sometimes the story becomes fiction.",
+"v": "h"
+},
+"20sp4x44llu": {
+"d": 5.32,
+"h": "af3dc175fc",
+"t": "The machine is not getting better; it is being pushed from one extreme to the other.",
 "v": "h"
 },
 "20svd9eh7g": {
@@ -42341,6 +42617,12 @@
 "t": "Lifeboat drills became compulsory, and the crew had to be trained to load the boats and put them into the sea.",
 "v": "h"
 },
+"22147qtjlwq": {
+"d": 6.41,
+"h": "1dc6afffad",
+"t": "If the data shows a problem, another trial is scheduled after the mold has been corrected.",
+"v": "h"
+},
 "221appolhhh": {
 "d": 0.98,
 "h": "1c1cdbcb45",
@@ -42720,6 +43002,12 @@
 "t": "Their discovery is one of the most important in the history of art, and its beauty still surprises people today.",
 "v": "h"
 },
+"22bnykqs40y": {
+"d": 6.89,
+"h": "a76b22f675",
+"t": "Western Electric adopted the method, and its engineers began to chart the results of their processes.",
+"v": "h"
+},
 "22bon3myuwp": {
 "d": 0.95,
 "h": "0b5b4fd88f",
@@ -42796,6 +43084,12 @@
 "d": 5.79,
 "h": "48ec81f762",
 "t": "Brown himself did not complain, and he remained loyal to Mrs. Pretty throughout.",
+"v": "h"
+},
+"22duma0p281": {
+"d": 7.18,
+"h": "0fed4bbf54",
+"t": "Each new result is plotted on the graph, and the chart shows at once whether the process is behaving normally.",
 "v": "h"
 },
 "22erkokc1cw": {
@@ -43006,6 +43300,12 @@
 "d": 4.3,
 "h": "ea2cc2fd59",
 "t": "Then the chocolate became soft, but nobody had cooked it.",
+"v": "h"
+},
+"22lrzgw6w8h": {
+"d": 7.25,
+"h": "d7d07a4765",
+"t": "Charts and reports are filed with the inspection records, so that anyone can see the history of a process.",
 "v": "h"
 },
 "22ls3gpqh0c": {
@@ -43504,6 +43804,12 @@
 "d": 0.9,
 "h": "d9a04b65d9",
 "t": "usage",
+"v": "h"
+},
+"234p2e012ui": {
+"d": 7.61,
+"h": "1512e4cb95",
+"t": "A point beyond a limit is a signal: an assignable cause has probably appeared, and someone must find it.",
 "v": "h"
 },
 "234x72eznck": {
@@ -45351,6 +45657,12 @@
 "t": "unique",
 "v": "h"
 },
+"24o1bynsmhg": {
+"d": 3.68,
+"h": "9b86fe9b00",
+"t": "We must address this problem before the next delivery.",
+"v": "h"
+},
 "24o8ovbuf6": {
 "d": 3.37,
 "h": "675e9de1ea",
@@ -45422,6 +45734,12 @@
 "d": 7.36,
 "h": "f7e9213629",
 "t": "In America, they toured as the Trapp Family Singers, and their music soon had a following across the country.",
+"v": "h"
+},
+"24q6qun5xr3": {
+"d": 6.25,
+"h": "f8e22fa559",
+"t": "Without a chart, small problems can go from bad to worse before anyone notices.",
 "v": "h"
 },
 "24qakn71hwr": {
@@ -45981,6 +46299,12 @@
 "d": 8.07,
 "h": "fcd90d5bf0",
 "t": "Instead of copying a whole page, why not make every letter separately, in metal, and use the letters again and again?",
+"v": "h"
+},
+"2573ik4skr4": {
+"d": 5.66,
+"h": "54641f04a4",
+"t": "The worst is not one bad part but a thousand bad parts that nobody noticed.",
 "v": "h"
 },
 "2574kexf3nx": {
@@ -47119,6 +47443,12 @@
 "t": "runner",
 "v": "b"
 },
+"266v42xe9hv": {
+"d": 3.05,
+"h": "e4a9274bc1",
+"t": "The report is structured in three parts.",
+"v": "h"
+},
 "266xv6mihb1": {
 "d": 11.05,
 "h": "4c3261a857",
@@ -47671,6 +48001,12 @@
 "t": "What he did was to bring the two together, and in doing so he changed who could eat sushi.",
 "v": "h"
 },
+"26oasl0ssme": {
+"d": 5.09,
+"h": "ed4b6745fd",
+"t": "Shewhart’s method also showed managers which problems to address first.",
+"v": "h"
+},
 "26osd9f60bp": {
 "d": 7.05,
 "h": "9e1d4900d7",
@@ -47970,6 +48306,12 @@
 "d": 4.92,
 "h": "86d69c2ffd",
 "t": "If any one of them had been missing, the result might have been very different.",
+"v": "h"
+},
+"26xpj4pf88w": {
+"d": 8.1,
+"h": "549a0605ec",
+"t": "Modern quality systems are structured around the same idea: measure, plot and react only to real signals.",
 "v": "h"
 },
 "26y1pepwv10": {
@@ -49149,6 +49491,12 @@
 "h": "06ae3f0134",
 "t": "A minute later they are gone, and your skin looks normal again.",
 "v": "b"
+},
+"28094yla74b": {
+"d": 8.24,
+"h": "ebba74ec31",
+"t": "The chart was structured in a simple way: time ran from left to right, and each point showed a result for a small group of parts.",
+"v": "h"
 },
 "280k1amxlr0": {
 "d": 3.26,
@@ -51815,6 +52163,12 @@
 "t": "Part of the base had been turned into a racing track, and on that very evening, families and racers were there for a car race.",
 "v": "h"
 },
+"2acz6ayqddq": {
+"d": 6.7,
+"h": "7d9280b8bf",
+"t": "When customers rate a supplier, a stable process often matters more than a few perfect parts.",
+"v": "h"
+},
 "2ad3jvocdt8": {
 "d": 3.91,
 "h": "fbe386764d",
@@ -53076,6 +53430,12 @@
 "d": 6.08,
 "h": "c017ae985c",
 "t": "In Lind’s time, there was no such delivery, and no way to keep fruit from going bad.",
+"v": "h"
+},
+"2bf1lzl9p74": {
+"d": 0.86,
+"h": "d070774eab",
+"t": "chart",
 "v": "h"
 },
 "2bfs20js2is": {
@@ -54745,6 +55105,12 @@
 "t": "The completion of the new factory is planned for June.",
 "v": "h"
 },
+"2cxhswtm0xx": {
+"d": 4.11,
+"h": "cbe7dcb605",
+"t": "It was Deming who became Shewhart’s most famous supporter.",
+"v": "h"
+},
 "2cxs9loaen7": {
 "d": 5.62,
 "h": "73fb3e421e",
@@ -54967,6 +55333,12 @@
 "h": "b5a66f35a2",
 "t": "program",
 "v": "b"
+},
+"2d4qjnf3fmh": {
+"d": 8.34,
+"h": "442f092439",
+"t": "Two young men at Hawthorne in those years became famous in quality themselves: Joseph Juran and W. Edwards Deming.",
+"v": "h"
 },
 "2d4skkbaarw": {
 "d": 10.0,
@@ -55362,6 +55734,12 @@
 "d": 3.86,
 "h": "152bf25e6b",
 "t": "The rebels took London, and the king had to talk.",
+"v": "h"
+},
+"2dhfwpsqjoq": {
+"d": 10.26,
+"h": "f23194206e",
+"t": "It is easy to see why: if a worker corrects a machine after one part that is a little too large, the next parts may shift too far in the other direction.",
 "v": "h"
 },
 "2dhhspla76b": {
@@ -57725,6 +58103,12 @@
 "t": "Despite this early success, his own chain later became much smaller: by 2001, the year he died, it had only eleven restaurants.",
 "v": "h"
 },
+"2fefeot63rz": {
+"d": 3.53,
+"h": "76fcd20726",
+"t": "He concluded that there are two kinds of variation.",
+"v": "h"
+},
 "2fegiencv41": {
 "d": 3.28,
 "h": "1a31c450c8",
@@ -59065,6 +59449,12 @@
 "t": "In 1912, a young American named Clarence Birdseye went to Labrador, a remote part of northeastern Canada.",
 "v": "h"
 },
+"2gg6bgzacbo": {
+"d": 14.39,
+"h": "bdaac277c8",
+"t": "From 1950, Deming taught Shewhart’s methods in Japan, and he called the cycle of planning, doing, studying and acting the Shewhart cycle; today it is known as PDSA, or PDCA.",
+"v": "h"
+},
 "2gg9s04edwb": {
 "d": 4.4,
 "h": "51d42f2570",
@@ -59989,6 +60379,12 @@
 "d": 8.46,
 "h": "a36300ed36",
 "t": "Today, Vietnamese children learn the alphabet in their first year at school, and many already know some letters before they start.",
+"v": "h"
+},
+"32tpuue0yx": {
+"d": 0.85,
+"h": "8e09b55243",
+"t": "model",
 "v": "h"
 },
 "331chchq1q": {
@@ -62118,6 +62514,12 @@
 "t": "wait",
 "v": "b"
 },
+"4serxwumlp": {
+"d": 3.33,
+"h": "7d3204ce56",
+"t": "All test reports are filed by part number.",
+"v": "h"
+},
 "4swohc0xgg": {
 "d": 4.26,
 "h": "24fcf91da3",
@@ -63610,6 +64012,12 @@
 "t": "In December 1913, he wrote to an art dealer in Florence, Alfredo Geri, and then took the painting there by train.",
 "v": "b"
 },
+"64nohcif2q": {
+"d": 5.38,
+"h": "ec23286884",
+"t": "The idea began with a single page, written in 1924.",
+"v": "h"
+},
 "64owqptfl5": {
 "d": 0.94,
 "h": "bb69ec28f5",
@@ -64902,6 +65310,12 @@
 "t": "I have a good memory for faces.",
 "v": "b"
 },
+"77kb3gele8": {
+"d": 3.19,
+"h": "0da68cdf21",
+"t": "The report details every step of the test.",
+"v": "h"
+},
 "77lszzwlf9": {
 "d": 7.55,
 "h": "7448411e46",
@@ -65546,6 +65960,12 @@
 "t": "Next time you take a plate from a moving belt, remember that the idea did not come from a kitchen; it came from a beer factory.",
 "v": "h"
 },
+"7vaiybbi0t": {
+"d": 3.18,
+"h": "7432f3e5a5",
+"t": "At worst, we will lose one day.",
+"v": "h"
+},
 "7vddgo8otk": {
 "d": 0.83,
 "h": "1e022d0511",
@@ -66133,6 +66553,12 @@
 "d": 3.38,
 "h": "18e8e78b72",
 "t": "Two people were seriously hurt in the accident.",
+"v": "h"
+},
+"8f0m4oem8e": {
+"d": 3.31,
+"h": "eacf6d9827",
+"t": "We value honest feedback from our customers.",
 "v": "h"
 },
 "8fjtq5miui": {
@@ -67435,6 +67861,12 @@
 "t": "It showed a girl reaching for a red balloon shaped like a heart, painted with spray paint in black and red.",
 "v": "h"
 },
+"9mwgrrwru7": {
+"d": 9.53,
+"h": "1634302650",
+"t": "Every quality engineer today knows the control chart: a simple graph with a line in the middle and two limits, one above it and one below it.",
+"v": "h"
+},
 "9myl8i7ruv": {
 "d": 9.88,
 "h": "1f06b01ffe",
@@ -67643,6 +68075,12 @@
 "d": 4.44,
 "h": "bdaf5dced7",
 "t": "Their open eye looks away from the group, toward danger.",
+"v": "h"
+},
+"9txoakwgvc": {
+"d": 3.76,
+"h": "23ebe862d0",
+"t": "After a few days, the prices leveled off.",
 "v": "h"
 },
 "9u23ghoxyn": {
@@ -68334,6 +68772,12 @@
 "d": 3.14,
 "h": "0fcfcedc13",
 "t": "Inflation is now 4% a year.",
+"v": "h"
+},
+"af0la619za": {
+"d": 6.49,
+"h": "fa83bb9780",
+"t": "Today, software processes the data automatically, but the logic is still Shewhart’s.",
 "v": "h"
 },
 "afcdk45s5a": {
@@ -70821,6 +71265,12 @@
 "t": "Many families lost all their property in four days.",
 "v": "h"
 },
+"cpt41uff8o": {
+"d": 2.59,
+"h": "0287b40ed6",
+"t": "We plotted the results on a graph.",
+"v": "h"
+},
 "cq4x1wxvp6": {
 "d": 5.76,
 "h": "2671b2242e",
@@ -71393,6 +71843,12 @@
 "t": "Life in space puts a lot of stress on the body.",
 "v": "h"
 },
+"d705c67ghr": {
+"d": 3.09,
+"h": "4e687aae86",
+"t": "The trial run is scheduled for Monday.",
+"v": "h"
+},
 "d7np8l17ve": {
 "d": 0.94,
 "h": "f670d4d0ef",
@@ -71717,6 +72173,12 @@
 "t": "It was 27 meters long and up to 4.4 meters wide, with room for perhaps 40 men to row it.",
 "v": "h"
 },
+"diyrtxrsym": {
+"d": 6.64,
+"h": "092136586a",
+"t": "Small changes in temperature and in the material account for most of that normal variation.",
+"v": "h"
+},
 "diz46f0vf3": {
 "d": 2.63,
 "h": "a8d98758e3",
@@ -71961,6 +72423,12 @@
 "d": 5.79,
 "h": "07b800306e",
 "t": "When they saw others dancing, they entered a kind of trance and began to dance as well.",
+"v": "h"
+},
+"drohls4ryo": {
+"d": 9.82,
+"h": "9be7c39f47",
+"t": "In 1925 Shewhart moved to the new Bell Telephone Laboratories, where he worked until his retirement in 1956.",
 "v": "h"
 },
 "ds05g2edje": {
@@ -75462,6 +75930,12 @@
 "t": "In the 1860s, there was no bridge between Manhattan and Brooklyn, two parts of what is now New York City.",
 "v": "h"
 },
+"h5abjivw8g": {
+"d": 2.7,
+"h": "5d6f590573",
+"t": "Sales reached a new high last month.",
+"v": "h"
+},
 "h5gdlxdzul": {
 "d": 5.09,
 "h": "27f95c871b",
@@ -78632,6 +79106,12 @@
 "t": "Follow the safety guidelines carefully.",
 "v": "h"
 },
+"k2mzly8oo7": {
+"d": 3.14,
+"h": "343fc492fa",
+"t": "That diagram was the first control chart.",
+"v": "h"
+},
 "k3gwrj8hu8": {
 "d": 0.96,
 "h": "187ee1d7b4",
@@ -80256,6 +80736,12 @@
 "t": "Kamikatsu is in Tokushima, about an hour by car from Tokushima city.",
 "v": "b"
 },
+"lmxym5ewg": {
+"d": 6.03,
+"h": "eb9d9b2b2a",
+"t": "When a process is stable, the points range between the two limits in a random pattern.",
+"v": "h"
+},
 "ln1v8ehhwm": {
 "d": 4.93,
 "h": "cdff82c050",
@@ -81481,6 +81967,12 @@
 "t": "alcohol",
 "v": "h"
 },
+"mqmitgpdg0": {
+"d": 8.6,
+"h": "6bbf70e8b3",
+"t": "When a point falls outside the limits, many companies issue a nonconformance report and stop shipping until the cause is found.",
+"v": "h"
+},
 "mrfux8xnyc": {
 "d": 4.85,
 "h": "7b1df10f8f",
@@ -82693,6 +83185,12 @@
 "t": "People thought his idea was crazy, but it worked.",
 "v": "h"
 },
+"nsleyxxvf0": {
+"d": 6.41,
+"h": "82abaadb3f",
+"t": "A hundred years later, the control chart is still one of the basic tools in every factory.",
+"v": "h"
+},
 "nsu4sww4be": {
 "d": 4.42,
 "h": "e9707720de",
@@ -83438,6 +83936,12 @@
 "t": "According to the historian Michael Vann, the sewers in the Vietnamese parts of the city were little more than drains, even though Vietnamese taxpayers helped to pay for the modernization.",
 "v": "h"
 },
+"ogidgh5zck": {
+"d": 6.46,
+"h": "191908ae07",
+"t": "Shewhart chose the limits so that a stable process would very rarely produce a point outside them.",
+"v": "h"
+},
 "ogn8dbx5o9": {
 "d": 3.04,
 "h": "02064b02f6",
@@ -83857,6 +84361,12 @@
 "d": 3.17,
 "h": "6a2f7a243a",
 "t": "He wears a black belt with his work trousers.",
+"v": "h"
+},
+"ovk9l9anbj": {
+"d": 10.9,
+"h": "bc0c048797",
+"t": "Whenever a result was outside the specification, workers adjusted the process, and this continual adjustment actually increased variation and lowered quality.",
 "v": "h"
 },
 "ovrz4y34qk": {
@@ -84848,6 +85358,12 @@
 "d": 4.0,
 "h": "57d44c89e8",
 "t": "Penzias and Wilson checked everything they could think of.",
+"v": "h"
+},
+"prdsxm9595": {
+"d": 3.1,
+"h": "50628747b7",
+"t": "We sample five parts from each cavity.",
 "v": "h"
 },
 "prhd4qps20": {
@@ -86276,6 +86792,12 @@
 "t": "On the fourth floor, there is a room with photographs from 1979 and an old TV.",
 "v": "b"
 },
+"r7rio3xkhl": {
+"d": 2.76,
+"h": "cefaa052ba",
+"t": "Shewhart noticed a strange problem.",
+"v": "h"
+},
 "r7she757n5": {
 "d": 2.71,
 "h": "19c95c4a45",
@@ -86456,10 +86978,22 @@
 "t": "It was hard for a small child: she began to have bad dreams, and sometimes she hid the sandwiches that her mother made for her.",
 "v": "h"
 },
+"refr1i9wmq": {
+"d": 3.61,
+"h": "346e67a1b1",
+"t": "We track every order until it reaches the customer.",
+"v": "h"
+},
 "rek1lh228p": {
 "d": 4.62,
 "h": "06e4071200",
 "t": "By 1649, he was back in Rome.",
+"v": "h"
+},
+"reph4rn0cx": {
+"d": 5.15,
+"h": "1c2c1f9100",
+"t": "A good engineer values a stable process more than a lucky result.",
 "v": "h"
 },
 "reqrxuyiq0": {
@@ -87707,6 +88241,12 @@
 "t": "The researchers asked five hundred people the same questions.",
 "v": "h"
 },
+"sh9nglctu2": {
+"d": 7.29,
+"h": "28c66d6ef7",
+"t": "The telephone network was growing fast, and the company valued reliability above almost everything else.",
+"v": "h"
+},
 "shago8wlmb": {
 "d": 0.82,
 "h": "f2b311f9ed",
@@ -88493,6 +89033,12 @@
 "d": 2.38,
 "h": "e32b86305e",
 "t": "Please speak more slowly.",
+"v": "h"
+},
+"t6q6mjj527": {
+"d": 5.36,
+"h": "d29365bd04",
+"t": "The results range from 9.95 to 10.05 mm.",
 "v": "h"
 },
 "t6sakg8te4": {
@@ -92303,6 +92849,12 @@
 "t": "You can use informal English in a chat with a friend.",
 "v": "b"
 },
+"wojrs47d1d": {
+"d": 3.29,
+"h": "14754b682b",
+"t": "The temperature moves between two extremes.",
+"v": "h"
+},
 "wowt24izrp": {
 "d": 9.8,
 "h": "2d82d10e14",
@@ -93157,6 +93709,12 @@
 "t": "Look at your shoes, your bag or your jacket.",
 "v": "h"
 },
+"xgjaekf9m1": {
+"d": 9.18,
+"h": "016f4f1df0",
+"t": "To test his models, he marked numbers on sets of metal tags and drew them out again and again, as if he were sampling parts from a machine.",
+"v": "h"
+},
 "xgmbio2fqe": {
 "d": 3.22,
 "h": "8e15d1b4c4",
@@ -93901,6 +94459,18 @@
 "d": 4.71,
 "h": "09a3d36016",
 "t": "That commitment was expensive, but Burke believed that it was right.",
+"v": "h"
+},
+"y4w3mocy62": {
+"d": 4.24,
+"h": "d1ab20c47e",
+"t": "At worst, a hidden problem reaches the customer.",
+"v": "h"
+},
+"y4xfjs1fl9": {
+"d": 9.11,
+"h": "98bb6b2c05",
+"t": "If the points suddenly shift upward, the cause must be found: a new batch of plastic, a different setting or a worn part of the mold.",
 "v": "h"
 },
 "y541x79brf": {
@@ -95568,6 +96138,12 @@
 "t": "educate",
 "v": "h"
 },
+"zjc16ywwgx": {
+"d": 3.72,
+"h": "4507040f96",
+"t": "He modeled the problem with the mathematics of chance.",
+"v": "h"
+},
 "zjgavu9o5b": {
 "d": 3.86,
 "h": "bf2745dfa8",
@@ -95742,6 +96318,12 @@
 "d": 6.83,
 "h": "7c65628b65",
 "t": "Today it stands in the museum’s gallery of Egyptian sculpture, among statues of kings and gods.",
+"v": "h"
+},
+"zqrhu5h1vo": {
+"d": 2.71,
+"h": "b0bc6409d1",
+"t": "The company issued a new report.",
 "v": "h"
 },
 "zqspm0sim1": {

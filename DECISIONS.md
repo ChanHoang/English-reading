@@ -585,3 +585,12 @@ Yêu cầu của chủ dự án và cách làm:
 - 5 bài làm thử: a2-p1-09 (tàu Vasa trong bảo tàng, Peter Isotalo, CC BY-SA 3.0), b2-p1-40 (cầu Quebec đang xây năm 1907, F. E. Cudworth, phạm vi công cộng), b2-p1-46 (trang sổ nhật ký Mark II có con bướm đêm, Naval Surface Warfare Center, phạm vi công cộng), b2-p1-56 (trang bìa cuốn Fabrica 1543, phạm vi công cộng; Commons không ghi tác giả), b2-p1-69 (Angkor Wat, Satdeep Gill, CC BY-SA 4.0). Hai ảnh đầu chọn thẳng theo tên file đã tra; ba ảnh sau chọn từ bảng ảnh. Tên file ảnh con bướm đêm trên Commons ghi “1945” nhưng ngày đúng là 9/9/1947 (Smithsonian); chú thích trong app ghi 1947.
 - Dung lượng: 5 ảnh khoảng 0,5 MB. Ước tính cho 219 bài khoảng 20–30 MB, dưới mức dừng 200 MB của repo (§15) khi cộng với âm thanh.
 - Mã: `js/ui.js` (`heroHTML`, tải `img/index.js`), `css/app.css` (`.hero`), `sw.js` (bộ nhớ đệm v30), `pages.yml` và `check.yml` chép thêm `img/`. Kiểm thử giao diện thêm 3 kiểm tra (125/125). `check-content` 0 lỗi (9 cảnh báo cũ).
+
+## 37. v0.10.2: xem lại câu hỏi “Before you read” (2026-11-27)
+
+- Chủ dự án báo: câu hỏi Before you read chỉ hiện lần đầu; đoán xong thì không có chỗ nào xem lại. Đúng là vậy: chọn một phương án thì bài chuyển sang Learn words, và nút bước “Learn words” không đưa về câu hỏi.
+- Sửa: câu hỏi, các phương án và lựa chọn của người học hiện ở hai chỗ:
+  - đầu bước Learn words, thu gọn, tiêu đề có dòng “your guess: …”;
+  - ngay sau bài đọc ở bước Read & listen, mở sẵn, để đọc xong đối chiếu với dự đoán.
+- Bấm phương án khác thì đổi lựa chọn, không chuyển bước, vẫn không tính điểm. Dữ liệu bài đọc không có đáp án cho câu đoán (đây là câu đoán, không phải câu hỏi chấm điểm), nên app không nói đúng hay sai; người học tự đối chiếu với bài.
+- Mã: `js/ui.js` (`predictRev`, `A.reguess`), `css/app.css` (`.prev`, `.opt.picked`), `sw.js` (bộ nhớ đệm v31). Kiểm thử giao diện thêm 2 kiểm tra (127/127).

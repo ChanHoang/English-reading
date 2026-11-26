@@ -444,6 +444,14 @@ function heroHTML(r) {
   return '<figure class="hero"><img src="img/' + esc(m.f) + '?v=' + esc(m.v) + '" width="' + m.w + '" height="' + m.h + '" alt="' + esc(im.alt || im.cap || '') + '" decoding="async"><figcaption>' + (im.cap ? '<span>' + esc(im.cap) + '</span>' : '') +
     '<small>Image: ' + who + (m.lu ? '<a href="' + esc(m.lu) + '" target="_blank" rel="noopener">' + esc(m.lic) + '</a>' : esc(m.lic)) + ' · <a href="' + esc(m.src) + '" target="_blank" rel="noopener">Wikimedia Commons</a></small></figcaption></figure>';
 }
+// "Before you read" stays available after the first guess: the question, the options and the learner's guess.
+// No right answer is stored (it is a quick guess, not scored); the learner checks it against the story.
+function predictRev(r, L, open) {
+  const g = L.guess, has = g != null && r.predict.o[g] != null;
+  return '<details class="card prev"' + (open ? ' open' : '') + '><summary><b>Before you read</b> <span class="small muted">· ' + (has ? 'your guess: ' + esc(r.predict.o[g]) : 'no guess yet') + '</span></summary><p>' + esc(r.predict.q) + '</p><div class="opts">' +
+    r.predict.o.map((o, i) => '<button class="btn opt' + (i === g ? ' picked' : '') + '" aria-pressed="' + (i === g) + '" data-a="reguess" data-i="' + i + '">' + esc(o) + (i === g ? '<small>Your guess</small>' : '') + '</button>').join('') +
+    '</div><p class="vi">Đây là câu đoán trước khi đọc, không tính điểm. Đọc xong, xem lại dự đoán của mình có đúng không; muốn đổi lựa chọn thì bấm vào phương án khác.</p></details>';
+}
 const STAGES = [['learn', 'Learn words'], ['read', 'Read & listen'], ['gram', 'Grammar'], ['practice', 'Practice']];
 const SEC = { c: 'Understanding the story', w: 'Vocabulary of this story', g: 'Grammar of this story' };
 const freshSc = () => ({ c: [0, 0], w: [0, 0], g: [0, 0] });
@@ -469,7 +477,7 @@ function vLesson(r) {
   if (L.stage === 'predict') {
     h += heroHTML(r) + '<section class="card"><h2>Before you read</h2><p>' + esc(r.predict.q) + '</p><div class="opts">' + r.predict.o.map((o, i) => '<button class="btn opt" data-a="guess" data-i="' + i + '">' + esc(o) + '</button>').join('') + '</div><p class="vi">Đoán nhanh thôi, không tính đúng sai. Đoán trước giúp bạn đọc có mục đích. Bạn có thể dừng ở bất kỳ bước nào và quay lại sau.</p></section>';
   } else if (L.stage === 'learn') {
-    h += '<p class="vi">' + (r.pass === 2 ? 'Ôn lại ' + r.targets.length + ' từ bạn đã gặp ở Pass 1, lần này trong một chuyện mới. Từ nào biết chắc rồi thì bấm Known.' : 'Xem lướt ' + r.targets.length + ' từ mục tiêu. Chưa cần thuộc: bạn sẽ gặp lại từng từ trong câu chuyện. Từ nào biết chắc rồi thì bấm Known.') + '</p><section class="card">' + r.targets.map(w => {
+    h += predictRev(r, L, !!L.prevOpen) + '<p class="vi">' + (r.pass === 2 ? 'Ôn lại ' + r.targets.length + ' từ bạn đã gặp ở Pass 1, lần này trong một chuyện mới. Từ nào biết chắc rồi thì bấm Known.' : 'Xem lướt ' + r.targets.length + ' từ mục tiêu. Chưa cần thuộc: bạn sẽ gặp lại từng từ trong câu chuyện. Từ nào biết chắc rồi thì bấm Known.') + '</p><section class="card">' + r.targets.map(w => {
       const e = EI.W[w]; if (!e) return '';
       if (EI.status(w) === 'Known') return '<div class="lw known"><div class="rowg"><b>' + esc(e.hw) + '</b><span class="chip">Known</span><button class="btn ghost" data-a="lKnown" data-w="' + esc(w) + '">undo</button></div></div>';
       return '<div class="lw"><div class="rowg"><b class="def">' + esc(e.hw) + '</b><span class="small muted">' + esc(e.pos) + '</span><span class="ipa">' + esc(e.ipa) + '</span><button class="btn icon ghost" data-a="say" data-t="' + esc(e.hw) + '" aria-label="Hear the word">' + ic('phones') + '</button><span class="small">' + cambA(w, 'Cambridge') + '</span><button class="btn ghost" style="margin-left:auto" data-a="lKnown" data-w="' + esc(w) + '">Known</button></div>' +
@@ -479,7 +487,7 @@ function vLesson(r) {
     const c = S.cur;
     h += '<div class="tools"><button class="chip' + (S.settings.hl ? ' on' : '') + '" data-a="tHl">Target words</button><button class="chip' + (c.gr ? ' on' : '') + '" data-a="tGr">Grammar</button><button class="chip' + (c.veil ? ' on' : '') + '" data-a="tVeil">' + ic('phones') + ' first, text after</button><button class="chip' + (c.focus ? ' on' : '') + '" data-a="tFocus">Focus</button></div>' +
       '<p class="vi">Bấm vào một từ để xem nghĩa và nghe; bấm vào một câu để nghe và xem bản dịch. Khi đang phát, bấm vào câu nào thì đọc ngay từ câu đó. Bấm giữ một câu để hiện bản dịch ngay dưới câu.</p>' +
-      heroHTML(r) + '<article class="reader' + (S.settings.hl ? ' hl' : '') + (c.gr ? ' gr' : '') + (c.veil ? ' veil' : '') + '" id="reader">' + readerHTML(r) + '</article>' +
+      heroHTML(r) + '<article class="reader' + (S.settings.hl ? ' hl' : '') + (c.gr ? ' gr' : '') + (c.veil ? ' veil' : '') + '" id="reader">' + readerHTML(r) + '</article>' + predictRev(r, L, L.prevOpen !== false) +
       '<div class="rowg"><button class="btn primary" data-a="stage" data-s="gram">Next: grammar in this story</button><button class="btn" data-a="stage" data-s="practice">Go to practice</button></div>';
     return '<div class="rdgrid"><aside class="side" id="side" aria-label="Word and sentence">' + SIDE0 + '</aside>' + page(h) + '</div>' + playerHTML();
   } else if (L.stage === 'gram') {
@@ -550,6 +558,7 @@ function readerHTML(r) {
   });
   return h + '</p>';
 }
+A.reguess = d => { const L = S.lessons[S.cur.rid]; L.guess = +d.i; L.prevOpen = true; EI.save(); keep(); };
 A.guess = d => { const L = S.lessons[S.cur.rid]; L.guess = +d.i; L.stage = 'learn'; EI.save(); render(); $('#main').scrollTop = 0; };
 A.lVi = d => { if (openVi.has(d.w)) openVi.delete(d.w); else openVi.add(d.w); keep(); };
 A.lKnown = d => { EI.setKnown(d.w, EI.status(d.w) !== 'Known'); EI.save(); keep(); };

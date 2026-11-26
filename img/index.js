@@ -35,9 +35,9 @@ EI.imgIndex = {
 },
 "b2-p1-56": {
 "f": "b2-p1-56.webp",
-"v": "6a7fd763",
-"w": 960,
-"h": 1361,
+"v": "3a3fcdfc",
+"w": 640,
+"h": 907,
 "t": "Vesalius Fabrica fronticepiece.jpg",
 "by": "",
 "lic": "Public domain",

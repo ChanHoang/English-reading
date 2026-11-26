@@ -232,6 +232,11 @@ span.blank{cursor:default;font-weight:600;color:var(--ink)}
 .cal i.t{outline:2px solid var(--ink)}
 .meter{height:.55rem;border-radius:99px;background:var(--soft);overflow:hidden}
 .meter i{display:block;height:100%;background:var(--accent)}
+.hero{margin:0 0 1rem;display:flex;flex-direction:column;gap:.35rem}
+.hero img{display:block;width:100%;height:auto;max-height:26rem;object-fit:contain;background:var(--soft);border-radius:.6rem}
+.hero figcaption{display:flex;flex-direction:column;gap:.15rem;font-size:.92em}
+.hero figcaption small{color:var(--muted);font-size:.85em}
+.hero figcaption a{color:inherit}
 .fact{border:1px solid var(--line);border-radius:.6rem;padding:.75rem .9rem;background:var(--surface);display:flex;flex-direction:column;gap:.3rem}
 .fact .y{font-weight:700;font-variant-numeric:tabular-nums;color:var(--accent)}
 .tl{border-left:2px solid var(--line);margin-left:.4rem;padding-left:1rem;display:flex;flex-direction:column;gap:.7rem}

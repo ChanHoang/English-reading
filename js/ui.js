@@ -436,6 +436,14 @@ function lReading() {
 }
 A.level = d => go({ v: 'reading', level: d.l });
 A.pass = d => { S.cur.pass = +d.n; EI.save(); keep(); };
+// Picture for a reading: img/<id>.webp, credit from img/index.js (tools/fetch-images.py). Nothing shows until the file exists.
+function heroHTML(r) {
+  const m = !EI.inlined && EI.imgIndex && EI.imgIndex[r.id], im = r.image || {};
+  if (!m) return '';
+  const who = m.by && !/^unknown/i.test(m.by) ? esc(m.by) + ' · ' : '';
+  return '<figure class="hero"><img src="img/' + esc(m.f) + '?v=' + esc(m.v) + '" width="' + m.w + '" height="' + m.h + '" alt="' + esc(im.alt || im.cap || '') + '" decoding="async"><figcaption>' + (im.cap ? '<span>' + esc(im.cap) + '</span>' : '') +
+    '<small>Image: ' + who + (m.lu ? '<a href="' + esc(m.lu) + '" target="_blank" rel="noopener">' + esc(m.lic) + '</a>' : esc(m.lic)) + ' · <a href="' + esc(m.src) + '" target="_blank" rel="noopener">Wikimedia Commons</a></small></figcaption></figure>';
+}
 const STAGES = [['learn', 'Learn words'], ['read', 'Read & listen'], ['gram', 'Grammar'], ['practice', 'Practice']];
 const SEC = { c: 'Understanding the story', w: 'Vocabulary of this story', g: 'Grammar of this story' };
 const freshSc = () => ({ c: [0, 0], w: [0, 0], g: [0, 0] });
@@ -459,7 +467,7 @@ function vLesson(r) {
   let h = '<div class="ph"><p class="eyebrow">' + r.level + ' · Pass ' + r.pass + ' · ' + EI.TOPICS[r.topic] + ' · ' + esc(r.era) + '</p><h1>' + esc(r.title) + '</h1>' +
     '<div class="stages" role="tablist" aria-label="Lesson steps">' + STAGES.map(s => '<button role="tab" aria-selected="' + (s[0] === sKey) + '" class="' + (s[0] === sKey ? 'on' : '') + '" data-a="stage" data-s="' + s[0] + '">' + s[1] + '</button>').join('') + '</div></div>';
   if (L.stage === 'predict') {
-    h += '<section class="card"><h2>Before you read</h2><p>' + esc(r.predict.q) + '</p><div class="opts">' + r.predict.o.map((o, i) => '<button class="btn opt" data-a="guess" data-i="' + i + '">' + esc(o) + '</button>').join('') + '</div><p class="vi">Đoán nhanh thôi, không tính đúng sai. Đoán trước giúp bạn đọc có mục đích. Bạn có thể dừng ở bất kỳ bước nào và quay lại sau.</p></section>';
+    h += heroHTML(r) + '<section class="card"><h2>Before you read</h2><p>' + esc(r.predict.q) + '</p><div class="opts">' + r.predict.o.map((o, i) => '<button class="btn opt" data-a="guess" data-i="' + i + '">' + esc(o) + '</button>').join('') + '</div><p class="vi">Đoán nhanh thôi, không tính đúng sai. Đoán trước giúp bạn đọc có mục đích. Bạn có thể dừng ở bất kỳ bước nào và quay lại sau.</p></section>';
   } else if (L.stage === 'learn') {
     h += '<p class="vi">' + (r.pass === 2 ? 'Ôn lại ' + r.targets.length + ' từ bạn đã gặp ở Pass 1, lần này trong một chuyện mới. Từ nào biết chắc rồi thì bấm Known.' : 'Xem lướt ' + r.targets.length + ' từ mục tiêu. Chưa cần thuộc: bạn sẽ gặp lại từng từ trong câu chuyện. Từ nào biết chắc rồi thì bấm Known.') + '</p><section class="card">' + r.targets.map(w => {
       const e = EI.W[w]; if (!e) return '';
@@ -471,7 +479,7 @@ function vLesson(r) {
     const c = S.cur;
     h += '<div class="tools"><button class="chip' + (S.settings.hl ? ' on' : '') + '" data-a="tHl">Target words</button><button class="chip' + (c.gr ? ' on' : '') + '" data-a="tGr">Grammar</button><button class="chip' + (c.veil ? ' on' : '') + '" data-a="tVeil">' + ic('phones') + ' first, text after</button><button class="chip' + (c.focus ? ' on' : '') + '" data-a="tFocus">Focus</button></div>' +
       '<p class="vi">Bấm vào một từ để xem nghĩa và nghe; bấm vào một câu để nghe và xem bản dịch. Khi đang phát, bấm vào câu nào thì đọc ngay từ câu đó. Bấm giữ một câu để hiện bản dịch ngay dưới câu.</p>' +
-      '<article class="reader' + (S.settings.hl ? ' hl' : '') + (c.gr ? ' gr' : '') + (c.veil ? ' veil' : '') + '" id="reader">' + readerHTML(r) + '</article>' +
+      heroHTML(r) + '<article class="reader' + (S.settings.hl ? ' hl' : '') + (c.gr ? ' gr' : '') + (c.veil ? ' veil' : '') + '" id="reader">' + readerHTML(r) + '</article>' +
       '<div class="rowg"><button class="btn primary" data-a="stage" data-s="gram">Next: grammar in this story</button><button class="btn" data-a="stage" data-s="practice">Go to practice</button></div>';
     return '<div class="rdgrid"><aside class="side" id="side" aria-label="Word and sentence">' + SIDE0 + '</aside>' + page(h) + '</div>' + playerHTML();
   } else if (L.stage === 'gram') {
@@ -927,8 +935,8 @@ setInterval(() => { if (document.visibilityState === 'visible' && S) { EI.log('t
 /* ================= boot ================= */
 // All files download at the same time; async = false keeps them running in list order (words before the stories that use them).
 // On the published site, EI.bundle (added by tools/bundle.js) replaces the long file list with one file.
-function loadScripts(files) { return Promise.all(files.map(f => new Promise((res, rej) => { const s = document.createElement('script'); s.src = f; s.async = false; s.onload = res; s.onerror = () => f.startsWith('audio/') ? res() : rej(new Error('Could not load ' + f)); /* the voice list is optional */ document.head.appendChild(s); }))); }
-const AUDIO_LIST = 'audio/index.js', dataFiles = () => EI.bundle ? [EI.bundle] : (EI.files || []).filter(f => f !== AUDIO_LIST);
+function loadScripts(files) { return Promise.all(files.map(f => new Promise((res, rej) => { const s = document.createElement('script'); s.src = f; s.async = false; s.onload = res; s.onerror = () => (f.startsWith('audio/') || f.startsWith('img/')) ? res() : rej(new Error('Could not load ' + f)); /* the voice list is optional */ document.head.appendChild(s); }))); }
+const AUDIO_LIST = 'audio/index.js', IMG_LIST = 'img/index.js', dataFiles = () => EI.bundle ? [EI.bundle] : (EI.files || []).filter(f => f !== AUDIO_LIST);
 function boot() {
   EI.index(); EI.load(); S = EI.S; EI.audio.init();
   const c = S.cur || {}; // reopen exactly where the learner left off
@@ -939,10 +947,11 @@ function boot() {
   EI.sync.start(r => { if (r.ok && r.changed && ['today', 'progress'].includes(S.cur.v)) keep(); else if (S.cur.v === 'settings') keep(); },
     () => { const L = S.cur.v === 'reading' && S.cur.rid && S.lessons[S.cur.rid]; return !!(L && !L.doneDay) || !!run; });
   setTimeout(() => { if (EI.audio.ok && $('#s-audio')) keep(); }, 700);   // voices load late in some browsers; keep() so the page does not jump to the top
-  if (!EI.inlined) loadScripts([AUDIO_LIST]).then(() => { if (EI.audioIndex && $('#s-audio, #i-audio')) keep(); });   // the list of recorded voice files (about 240 KB) is not needed to show the first page
+  if (!EI.inlined) loadScripts([AUDIO_LIST]).then(() => { if (EI.audioIndex && $('#s-audio, #i-audio')) keep(); });
+  if (!EI.inlined) loadScripts([IMG_LIST]).then(() => { if (EI.imgIndex && S.cur.v === 'reading' && !$('figure.hero')) keep(); });   // pictures for readings (Wikimedia Commons); optional   // the list of recorded voice files (about 240 KB) is not needed to show the first page
   if (!EI.inlined && 'serviceWorker' in navigator && /^https?:$/.test(location.protocol)) {
     navigator.serviceWorker.register('sw.js').then(() => navigator.serviceWorker.ready).then(reg => {
-      const urls = ['./', 'index.html', 'css/app.css', 'js/core.js', 'js/ui.js', 'data/manifest.js', 'manifest.webmanifest', 'icons/icon-192.png', 'icons/icon-512.png', ...dataFiles(), AUDIO_LIST];
+      const urls = ['./', 'index.html', 'css/app.css', 'js/core.js', 'js/ui.js', 'data/manifest.js', 'manifest.webmanifest', 'icons/icon-192.png', 'icons/icon-512.png', ...dataFiles(), AUDIO_LIST, IMG_LIST];
       if (reg.active) reg.active.postMessage({ cache: urls });
     }).catch(() => {});
   }

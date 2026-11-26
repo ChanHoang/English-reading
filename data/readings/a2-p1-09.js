@@ -1,6 +1,7 @@
 EI.reading({
   id: 'a2-p1-09', level: 'A2', pass: 1, n: 9,
   title: 'The Warship That Sank on Its First Day',
+  image: { file: 'Vasa above bow1.jpg', cap: 'The Vasa today, in the Vasa Museum in Stockholm.', alt: 'The old wooden warship Vasa inside a museum hall' },
   topic: 'history', era: '1628', year: 1628, region: 'Sweden',
   predict: { q: 'Năm 1628, con tàu chiến mạnh nhất Thụy Điển chìm chỉ khoảng 20 phút sau khi ra khơi lần đầu. Theo bạn, vì sao?', o: ['Tàu địch tấn công nó', 'Thiết kế của chính con tàu có vấn đề', 'Một cơn bão rất lớn'] },
   targets: ['wind', 'wood', 'side', 'top', 'officer', 'disaster', 'designer', 'heavy', 'wide', 'weak', 'whole', 'careful', 'unusual', 'necessary', 'nearly', 'slowly', 'finally', 'completely', 'allow', 'avoid', 'continue', 'prevent', 'arrange', 'hold'],

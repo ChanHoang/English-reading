@@ -1,0 +1,55 @@
+name: Fetch images
+
+# Pictures for readings come from Wikimedia Commons (tools/fetch-images.py). A reading with image.q gets a review
+# sheet in tools/img-review/; a reading with image.file gets img/<id>.webp and a credit line in img/index.js.
+# A push made with GITHUB_TOKEN does not start other workflows, so this job starts "Publish site" itself.
+
+on:
+  push:
+    branches: [main]
+    paths: ['data/readings/**', 'tools/image-items.js', 'tools/fetch-images.py', '.github/workflows/images.yml']
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  actions: write
+
+concurrency:
+  group: images
+  cancel-in-progress: false
+
+jobs:
+  images:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Anything to fetch?
+        id: need
+        run: |
+          if python3 tools/fetch-images.py --check; then echo "make=no" >> "$GITHUB_OUTPUT"; else echo "make=yes" >> "$GITHUB_OUTPUT"; fi
+      - name: Fetch
+        if: steps.need.outputs.make == 'yes'
+        run: |
+          pip install -q pillow
+          python3 tools/fetch-images.py
+      - name: Commit and publish
+        if: steps.need.outputs.make == 'yes'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A img tools/img-review
+          if git diff --cached --quiet; then echo "no change"; exit 0; fi
+          git commit -m "Fetch images for readings (Wikimedia Commons)"
+          for i in 1 2 3; do git pull --rebase -q origin main && git push -q origin HEAD:main && break; sleep 5; done
+          gh workflow run pages.yml --ref main

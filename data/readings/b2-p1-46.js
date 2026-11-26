@@ -26,6 +26,7 @@ thesis|n|/ˈθiːsɪs/|a long piece of writing on a subject, done for a universi
 EI.reading({
   id: 'b2-p1-46', level: 'B2', pass: 1, n: 46,
   title: 'The Moth in the Machine',
+  image: { file: 'First Computer Bug, 1945.jpg', cap: 'The page from the Mark II logbook, 9 September 1947, with the moth taped to it.', alt: 'A logbook page with a dead moth taped to it' },
   topic: 'engineering', era: '1901–2000', year: 1947, region: 'United States (Harvard, Massachusetts)',
   predict: { q: 'Năm 1947, máy tính Mark II ở Đại học Harvard đột nhiên ngừng chạy. Nhóm kỹ thuật mở máy ra kiểm tra. Theo bạn, họ tìm thấy gì?', o: ['Một con bướm đêm kẹt trong rơ-le', 'Một dây điện bị chuột cắn', 'Một lỗi trong bản vẽ thiết kế'] },
   targets: ['agenda', 'amusing', 'apology', 'bug', 'circuit', 'database', 'delete', 'electronics', 'flash', 'forgive', 'gender', 'interact', 'interaction', 'monster', 'neat', 'programming', 'recruitment', 'reserve', 'scratch', 'slogan', 'specialize', 'thesis'],

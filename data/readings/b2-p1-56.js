@@ -28,7 +28,7 @@ wrist|n|/rɪst/|the part of the body between the hand and the arm|She wears her 
 EI.reading({
   id: 'b2-p1-56', level: 'B2', pass: 1, n: 56,
   title: 'The Book That Opened the Body',
-  image: { q: 'Vesalius Fabrica 1543' },
+  image: { file: 'Vesalius Fabrica fronticepiece.jpg', cap: 'The title page of the Fabrica (1543): Vesalius cuts the body himself, in front of a crowd.', alt: 'An old printed picture of a crowded room around a table with a body on it' },
   topic: 'science', era: '1543', year: 1543, region: 'Padua (Italy), Basel (Switzerland)',
   predict: { q: 'Galen là thầy thuốc La Mã, sách của ông được dạy hơn 1.300 năm. Năm 1543, một bác sĩ trẻ 28 tuổi chứng minh ông sai nhiều chỗ. Vì sao Galen sai?', o: ['Ông chủ yếu mổ xác động vật như khỉ, không phải người', 'Ông không biết đọc tiếng Latin', 'Ông viết sách khi đã quá già'] },
   targets: ['amount~v', 'bombing', 'border~v', 'breast', 'challenge~v', 'cheek', 'date~v', 'elbow', 'fabric', 'found~v', 'graphic', 'graphics', 'heel', 'hip', 'lung', 'map~v', 'medium~n', 'mistake~v', 'naked', 'object~v', 'picture~v', 'progress~v', 'shape~v', 'wrist'],

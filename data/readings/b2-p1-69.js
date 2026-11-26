@@ -12,7 +12,7 @@ wind~v|v|/waɪnd/|(of a road or a river) to have many bends and turns; also to t
 EI.reading({
   id: 'b2-p1-69', level: 'B2', pass: 1, n: 69,
   title: 'What the Trees Remember',
-  image: { q: 'Angkor Wat' },
+  image: { file: 'Angkor Wat with its reflection (cropped).jpg', cap: 'Angkor Wat in Cambodia today, with its five towers.', alt: 'A stone temple with tall towers, reflected in a pool of water' },
   topic: 'history', era: '12th–15th century · 2010 · today', year: 2010, region: 'Angkor (Cambodia), Lâm Đồng (Vietnam)',
   predict: { q: 'Các nhà khoa học tìm thấy bằng chứng về những đợt hạn hán dài làm suy yếu thành Angkor (Campuchia) ở đâu?', o: ['Trong vòng gỗ của những cây bách cổ ở cao nguyên Việt Nam', 'Trong một cuốn sách của nhà vua', 'Dưới đáy biển'] },
   targets: ['bat', 'complex~n', 'desert~v', 'emission', 'greenhouse', 'mosque', 'temple', 'wind~v'],

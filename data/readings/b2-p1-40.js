@@ -28,7 +28,7 @@ workplace|n|/ˈwɜːrkpleɪs/|the place where people work, such as an office or 
 EI.reading({
   id: 'b2-p1-40', level: 'B2', pass: 1, n: 40,
   title: 'The Bridge That Fell Twice',
-  image: { q: 'Quebec Bridge 1907' },
+  image: { file: 'Quebec bridge (HS85-10-18815).jpg', cap: 'The first Quebec Bridge under construction in 1907, before it fell.', alt: 'A long steel bridge, only half built, over a wide river' },
   topic: 'engineering', era: '1901–1945', year: 1907, region: 'Canada (Quebec)',
   predict: { q: 'Năm 1907, cây cầu Quebec ở Canada sập khi đang xây, làm chết 75 công nhân. Theo bạn, nguyên nhân chính là gì?', o: ['Trọng lượng thực của cầu lớn hơn tính toán, và các cảnh báo về thanh thép bị cong không được xử lý kịp', 'Một trận động đất', 'Một con tàu đâm vào chân cầu'] },
   targets: ['actual', 'basically', 'bent', 'consult', 'firm', 'headquarters', 'inch', 'insert', 'joint', 'lane', 'manufacture', 'margin', 'outstanding', 'participant', 'pause', 'prime', 'pursuit', 'rail', 'satisfied', 'tone', 'useless', 'via', 'instance', 'workplace'],

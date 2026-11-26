@@ -58,8 +58,10 @@ def api(**p):
 
 
 def text(v):
-    v = re.sub(r'<[^>]+>', '', html.unescape(v or ''))
-    return re.sub(r'\s+', ' ', v).strip()
+    v = re.sub(r'<[^>]+>', ' ', html.unescape(v or ''))
+    v = re.sub(r'\s+', ' ', v).strip()
+    h = len(v) // 2
+    return v[:h].strip() if len(v) > 1 and v[:h].strip() == v[h:].strip() else v   # Commons repeats some names ("Unknown authorUnknown author")
 
 
 def meta(page):

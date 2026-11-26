@@ -15,6 +15,7 @@ tools/check-content.js                            kiểm tra nội dung — ph�
 tools/tag-targets.js                              tìm từ mục tiêu chưa đánh dấu
 tools/mc-review.js                                rà và sửa giải thích từng phương án trắc nghiệm (status, dump, apply)
 tools/e2e-test.py                                 kiểm thử giao diện (Playwright)
+tools/fetch-images.py, tools/image-items.js       ảnh bài đọc từ Wikimedia Commons (chạy trên GitHub Actions; img/, tools/img-review/)
 tools/bundle.js                                   khi đăng web: gộp file nội dung thành một file (không dùng khi viết bài)
 tools/sync-test.mjs, tools/sync-dev-server.mjs   kiểm thử và chạy thử máy chủ đồng bộ
 sync/worker.js, sync/README.md                    máy chủ đồng bộ (Cloudflare Worker + KV) và cách cài

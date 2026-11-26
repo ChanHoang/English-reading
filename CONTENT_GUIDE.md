@@ -88,6 +88,14 @@ EI.reading({
 });
 ```
 
+### Ảnh của bài đọc (trường `image`, từ v0.10.1)
+
+- Mỗi bài tối đa một ảnh, lấy từ **Wikimedia Commons**, chỉ ảnh phạm vi công cộng, CC0, CC BY hoặc CC BY-SA (không NC, ND). Ưu tiên ảnh tài liệu thật của chính sự kiện (ảnh chụp thời đó, trang sách gốc) hơn ảnh minh họa. Không dùng ảnh do AI tạo cho chuyện có thật.
+- Bước 1, tìm: thêm `image: { q: 'từ khóa tìm' }` vào bài rồi đẩy lên `main`. Workflow “Fetch images” tạo `tools/img-review/<id>.jpg` (12 ảnh đánh số) và `<id>.json` (tên file, tác giả, giấy phép).
+- Bước 2, chọn: xem bảng ảnh, thay bằng `image: { file: '<tên file trên Commons>', cap: '…', alt: '…' }`. Workflow tải ảnh về `img/<id>.webp` (rộng tối đa 960 px, dưới khoảng 250 KB), ghi tác giả và giấy phép mà Commons báo vào `img/index.js`, rồi xóa bảng ảnh của bài đó.
+- `cap`: một câu tiếng Anh ngắn, đúng sự thật, ở trình độ của bài; chỉ nói điều bài hoặc trang ảnh trên Commons nói (không đoán ngày, không đoán người trong ảnh). `alt`: tả ảnh cho người không nhìn thấy.
+- Không sửa `img/` bằng tay. Shell của phiên Claude không vào được Commons, nên mọi việc tải ảnh chạy trên GitHub.
+
 ## 4. Practice: bài kiểm tra ba phần, có chấm điểm
 
 Ứng dụng tự ghép bài kiểm tra của mỗi bài đọc từ `practice` **và** `extra` (cả hai đều được hỏi), theo ba phần:

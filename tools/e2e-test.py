@@ -300,6 +300,21 @@ with sync_playwright() as pw:
     ok('No JavaScript errors with recorded audio', not aerr, aerr[:3])
     cx.close()
 
+    # ---- picture for a reading (img/index.js, made by tools/fetch-images.py)
+    cx = b.new_context(viewport={'width': 1280, 'height': 860}); pi = cx.new_page(); perr = []; pi.on('pageerror', lambda x: perr.append(str(x)))
+    pi.goto(URL); pi.wait_for_selector('.shell'); pi.wait_for_function("() => !!window.EI && !!EI.imgIndex", timeout=5000)
+    rid = pi.evaluate("() => Object.keys(EI.imgIndex)[0] || ''")
+    if rid:
+        pi.evaluate("id => EIui.go({v:'reading', level: EI.rById(id).level, rid: id})", rid); pi.wait_for_selector('figure.hero img')
+        pi.wait_for_function("() => { const i = document.querySelector('figure.hero img'); return i && i.complete && i.naturalWidth > 0; }", timeout=5000)
+        ok('Picture: a reading with a picture shows it, with the licence and a Commons link', 'Wikimedia Commons' in pi.inner_text('figure.hero figcaption'))
+        pi.click('.stages [data-s=read]'); pi.wait_for_selector('#reader')
+        ok('Picture: it also shows above the story text', pi.locator('figure.hero + #reader').count() == 1)
+    else:
+        ok('Picture: img/index.js has no pictures yet (skipped)', True)
+    ok('No JavaScript errors with pictures', not perr, perr[:3])
+    cx.close()
+
     # ---- wide screen: word and sentence beside the story, back / forward arrows
     cx = b.new_context(viewport={'width': 1920, 'height': 1000}); wd = cx.new_page(); werr = []; wd.on('pageerror', lambda x: werr.append(str(x)))
     wd.goto(URL); wd.wait_for_selector('.shell')

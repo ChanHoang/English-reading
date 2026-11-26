@@ -127,9 +127,14 @@ def fetch(it, ix):
     im = Image.open(io.BytesIO(get(m['thumb']))).convert('RGB')
     if im.width > WIDTH:
         im = im.resize((WIDTH, round(im.height * WIDTH / im.width)), Image.LANCZOS)
-    buf = io.BytesIO()
-    im.save(buf, 'WEBP', quality=72, method=6)
-    data = buf.getvalue()
+    for w, q in ((WIDTH, 72), (WIDTH, 60), (800, 55), (640, 50)):   # keep each file under about 250 KB (fine woodcuts compress badly)
+        cur = im if im.width <= w else im.resize((w, round(im.height * w / im.width)), Image.LANCZOS)
+        buf = io.BytesIO()
+        cur.save(buf, 'WEBP', quality=q, method=6)
+        data = buf.getvalue()
+        if len(data) <= 250 * 1024:
+            break
+    im = cur
     os.makedirs(IMG, exist_ok=True)
     open(os.path.join(IMG, it['id'] + '.webp'), 'wb').write(data)
     ix[it['id']] = {'f': it['id'] + '.webp', 'v': hashlib.sha1(data).hexdigest()[:8], 'w': im.width, 'h': im.height,
